@@ -5,13 +5,13 @@ pipeline{
 	stage("Clone Code"){
 	 steps{
 	 echo "Cloning the codde"
-	 git url:"https://github.com/vidhi-git/VPC.git", branch: "main"
+	 git url:"https://github.com/prabhats2/a1training.git", branch: "main"
 	 } 
 	}
 	 stage("build"){
 	 steps{
 	 echo "Building the image"
-	 sh "docker build -t my-vpc-training ."
+	 sh "docker build -t a1-training ."
 	 }
 	 }
 	 stage("Push to Docker Hub"){
@@ -20,9 +20,9 @@ pipeline{
 	 withCredentials([usernamePassword(credentialsId:"DockerHub",passwordVariable:"dockerHubPass",usernameVariable:"dockerHubUser")])
 		{
 		sh "docker login -u ${env.dockerHubUser} -p ${env.dockerHubPass}"
-		 sh "docker tag my-vpc-training ${env.dockerHubUser}/my-vpc-training:latest"
+		 sh "docker tag a1-training ${env.dockerHubUser}/a1-training:latest"
 		 sh "docker login -u ${env.dockerHubUser} -p ${env.dockerHubPass}"
-		 sh "docker push ${env.dockerHubUser}/my-vpc-training:latest"
+		 sh "docker push ${env.dockerHubUser}/a1-training:latest"
 
 
 		}
