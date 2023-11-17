@@ -30,7 +30,7 @@ document.write(`  <!-- Sub Header -->
                 <nav class="main-nav">
                     <!-- ***** Logo Start ***** -->
                     <a href="index.html"class="logo">
-                    A1Training
+                        <img src="assets/images/logo1.png" style="height:70px; width:250px"/>
                     </a>
                     <!-- ***** Logo End ***** -->
 
@@ -38,7 +38,6 @@ document.write(`  <!-- Sub Header -->
                     <ul class="nav">
                         <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
                         <li><a href="meetings.html">Meetings</a></li>
-                        <li class="scroll-to-section"><a href="#apply">Apply Now</a></li>
                         <li class="has-sub">
                             <a href="javascript:void(0)">Services</a>
                             <ul class="sub-menu">
@@ -53,7 +52,7 @@ document.write(`  <!-- Sub Header -->
                                 <li><a href="junior_geeks_coding.html">Junior Geeks Courses</a></li>
                             </ul>
                         </li>
-                        <li class="scroll-to-section"><a href="#courses">Other Courses</a></li> 
+                     
                         <li class="scroll-to-section"><a href="#contact">Contact Us</a></li> 
                     </ul>        
                     <a class='menu-trigger'>
