@@ -37,19 +37,19 @@ document.write(`  <!-- Sub Header -->
                     <!-- ***** Menu Start ***** -->
                     <ul class="nav">
                         <li><a href="index.html">Home</a></li>
+                        <li class="has-sub">
+                            <a href="javascript:void(0)">Courses</a>
+                            <ul class="sub-menu">
+                                <li><a href="professional-courses.html">Professional Courses</a></li>
+                                <li><a href="junior_geeks_coding.html">Junior Geeks Courses</a></li>
+                            </ul>
+                        </li>
                         <li><a href="meetings.html">Meetings</a></li>
                         <li class="has-sub">
                             <a href="javascript:void(0)">Services</a>
                             <ul class="sub-menu">
                                 <li><a href="meetings.html">Upcoming Meetings</a></li>
                                 <li><a href="meeting-details.html">Meeting Details</a></li>
-                            </ul>
-                        </li>
-                        <li class="has-sub">
-                            <a href="javascript:void(0)">Courses</a>
-                            <ul class="sub-menu">
-                                <li><a href="professional-courses.html">Professional Courses</a></li>
-                                <li><a href="junior_geeks_coding.html">Junior Geeks Courses</a></li>
                             </ul>
                         </li>
                      
