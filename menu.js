@@ -36,7 +36,7 @@ document.write(`  <!-- Sub Header -->
 
                     <!-- ***** Menu Start ***** -->
                     <ul class="nav">
-                        <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
+                        <li><a href="index.html">Home</a></li>
                         <li><a href="meetings.html">Meetings</a></li>
                         <li class="has-sub">
                             <a href="javascript:void(0)">Services</a>
@@ -48,7 +48,7 @@ document.write(`  <!-- Sub Header -->
                         <li class="has-sub">
                             <a href="javascript:void(0)">Courses</a>
                             <ul class="sub-menu">
-                                <li><a href="meetings.html">Professional Courses</a></li>
+                                <li><a href="professional-courses.html">Professional Courses</a></li>
                                 <li><a href="junior_geeks_coding.html">Junior Geeks Courses</a></li>
                             </ul>
                         </li>
