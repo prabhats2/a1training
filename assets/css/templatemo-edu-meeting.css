@@ -1505,10 +1505,15 @@ section.meetings-page .filters {
   margin-bottom: 60px;
 }
 
+
+
+ 
+
 section.meetings-page .filters li {
   font-size: 13px;
   color: #a12c2f;
-  background-color: #fff;
+  
+  
   padding: 11px 30px;
   display: inline-block;
   border-radius: 22px;
@@ -1516,7 +1521,9 @@ section.meetings-page .filters li {
   text-transform: uppercase;
   transition: all .3s;
   cursor: pointer;
-  margin: 0px 3px;
+  margin: 7px 7px;
+  background-color: #a12c2f;
+  color: #fff;
 }
 
 section.meetings-page .filters ul li.active,
