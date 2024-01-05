@@ -1,10 +1,11 @@
+
 document.write(`  <!-- Sub Header -->
 <div class="sub-header">
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-sm-8">
         <div class="left-content">
-          <p>This is a coding institute <em>A1 Training Institute</em> coding all sessions are avaliable here</p>
+          <p style="text-transform:capitalize"><em>A1 Training</em> is the best IT software training institute.</p>
         </div>
       </div>
       <div class="col-lg-4 col-sm-4">
