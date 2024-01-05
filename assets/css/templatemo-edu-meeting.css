@@ -1,28 +1,4 @@
-/*
 
-TemplateMo 569 Edu Meeting
-
-https://templatemo.com/tm-569-edu-meeting
-
-*/
-
-/* ---------------------------------------------
-Table of contents
-------------------------------------------------
-01. font & reset css
-02. reset
-03. global styles
-04. header
-05. banner
-06. features
-07. testimonials
-08. contact
-09. footer
-10. preloader
-11. search
-12. portfolio
-
---------------------------------------------- */
 /* 
 ---------------------------------------------
 font & reset css
@@ -779,7 +755,7 @@ services
 }
 
 .services .item {
-  background-image: url(../images/service-item-bg.jpg);
+  /*background-image: url(../images/service-item-bg.jpg);*/
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -787,6 +763,7 @@ services
   text-align: center;
   color: #fff;
   padding: 40px;
+  background-color: rgb(40, 89, 153);
 }
 
 .services .item .icon {
@@ -1498,6 +1475,7 @@ section.meetings-page {
   background-size: cover;
   padding-top: 140px;
   padding-bottom: 0px;
+  padding: 50px;
 }
 
 section.meetings-page .filters {
@@ -1505,6 +1483,10 @@ section.meetings-page .filters {
   margin-bottom: 60px;
 }
 
+div.ex1 {
+  height: 200px;
+  overflow: auto;
+}
 
 
  
