@@ -20,6 +20,27 @@ figure, header, nav, section, article, aside, footer, figcaption {
   outline: 0;
 }
 
+
+.testimonial {
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.testimonial img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.testimonial p {
+  font-size: 16px;
+  color: #fff;
+}
+
 .clearfix:after {
   content: ".";
   display: block;
