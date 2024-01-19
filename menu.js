@@ -44,12 +44,13 @@ document.write(`  <!-- Sub Header -->
                                 <li><a href="junior_geeks_coding.html">Junior Geeks Courses</a></li>
                             </ul>
                         </li>
-                        <li><a href="meetings.html">Meetings</a></li>
+                        <li><a href="batches.html">Batches</a></li>
                         <li class="has-sub">
-                            <a href="javascript:void(0)">Services</a>
+                            <a href="javascript:void(0)">More</a>
                             <ul class="sub-menu">
-                                <li><a href="meetings.html">Upcoming Meetings</a></li>
-                                <li><a href="meeting-details.html">Meeting Details</a></li>
+                                <li><a href="testimonials.html">Testimonial</a></li>
+                                <li><a href="our_students.html">Our Students</a></li>
+                                <li><a href="notes.html">Notes</a></li>
                             </ul>
                         </li>
                      
