@@ -62,42 +62,40 @@
     </section>
 
     <section class="meetings-page" id="meetings">
-        <div class="container" id="products1">
-            <div class="row">
-                <div class="col-lg-12">
-                </div>
-
-                <div class="container">
-                    <div class="row">
-                        <div id="products1">
-                        <script language = "javascript" >
+        <div class="container-fluid">
+                     <div class="row">
+                       <span id="products1">
+                        <script>
                             for(i = 0;i<books.col1.length;i++){
-                                document.write(`
-                            <div class="col-md-3">
-                                <div class="well">
+                                document.write(`                             
+                            <div class="col-md-3" style="float:left;">
+                                <div class="well" style="margin:5px;">
                                 <h5 style="margin-top: 23px;">${books.col1[i].name}</h5>
                                 <p><span> Author -${books.col1[i].Author}</span>
                                 </p>
                                 <a href="assets/pdf/${books.col1[i].pdf}" target="_blank" style="margin-left:75px;" title="Download CSS Pdf"><img
                                         src="assets/images/download1.png" alt="" style="width: 15%;"></a>
                             </div>
+                        
                         </div>`)
                             }
                         </script>
-                        </div>
+                      </span>
+                
                     </div>
-                </div>
-                <hr style="color: white;width: 100%;">
+        
+            
+        </div>
+              
+        <hr style="color: white;width: 100%;">
 
                 
-                <marquee behavior="scroll" direction="left">
-                    <p style="color: #fff;"><b>DISCLAIMER-</b>THESE BOOKS AND NOTES ARE NOT FOR COMMERCIAL SALE</p>
+        <marquee behavior="scroll" direction="left">
+            <p style="color: #fff;"><b>DISCLAIMER-</b>THESE BOOKS AND NOTES ARE NOT FOR COMMERCIAL SALE</p>
 
-                    <br />
-                </marquee>
-                <hr style="color: white;width: 100%;">
-            </div>
-        </div>
+            <br />
+        </marquee>
+        <hr style="color: white;width: 100%;">
 
     </section>
     <!--footer-->
@@ -165,7 +163,7 @@
     </script>
 <!--search for notes-->
 <script>
-    function myFunction() {
+/* function myFunction() {
     var input, filter, ul, li, a, i, x, y ,z;
     input = document.getElementById("myInput");
 	filter = input.value.toUpperCase();
@@ -187,12 +185,27 @@
 			y.parentNode.style.display = "none";
         }
     }
+} */
+
+function myFunction() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("products1");
+    li = ul.getElementsByTagName("div");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("h5")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+            li[i].style.float = "left";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
 }
 </script>
     
-
-</body>
-
 
 </body>
 
