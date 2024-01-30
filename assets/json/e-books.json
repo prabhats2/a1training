@@ -1,0 +1,17 @@
+var books = { "col1" : [ 
+            {"name" : "Html/HTML5",  "Author" : "A1Training Institute","pdf":"git ebook.pdf" },
+			{"name" : "CSS/CSS3",  "Author" : "A1Training Institute","pdf":"git ebook.pdf" },
+			{"name" : "C Programmming",  "Author" : "E Balagurusamy","pdf":"C_Programming_E.Balagurusamy.pdf"  },
+			{"name" : "C++ Programmming",  "Author" : "E Balagurusamy","pdf":"C_Programming_E.Balagurusamy.pdf"  },
+			{"name" : "Javascript",  "Author" : "javascript.jpg" ,"pdf":"" },
+			{"name" : "Git",  "Author" : "A1Training Institute" ,"pdf":"git ebook.pdf" },
+			{"name" : "Python",  "Author" : "A1Training Institute","pdf":"git ebook.pdf" },
+			{"name" : "Java", "Author" : "A1Training Institute","pdf":"git ebook.pdf" },
+			
+			{"name" : "Jenkins", "Author" : "javascript.jpg" ,"pdf":"" },
+			{"name" : "AWS", "Author" : "A1Training Institute" ,"pdf":"git ebook.pdf" },
+			{"name" : "AZURE", "Author" : "A1Training Institute" ,"pdf":"git ebook.pdf" },
+			{"name" : "GCP", "Author" : "A1Training Institute" ,"pdf":"git ebook.pdf" },
+			{"name" : "Linux", "Author" : "cyber.jpg","pdf":"" }]
+         }  
+ var i = 0;
