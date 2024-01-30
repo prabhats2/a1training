@@ -44,6 +44,53 @@ figure, header, nav, section, article, aside, footer, figcaption {
   outline: 0;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+.row-photo {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media (max-width: 800px) {
+  .column {
+      flex: 50%;
+      max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  .column {
+      flex: 100%;
+      max-width: 100%;
+  }
+}
+
+.text-block {
+  position: absolute;
+  bottom: 95px;
+  right: 85px;
+  background-color: black;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+}
 
 .testimonial {
   text-align: center;
@@ -112,11 +159,11 @@ html, body {
 
 a {
   text-decoration: none !important;
-  color: #3CF;
+  color: blue;
 }
 
 a:hover {
-	color: #FC3;
+	color: #a12c2f;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -131,7 +178,7 @@ ul {
 p {
   font-size: 14px;
   line-height: 25px;
-  color: #2a2a2a;
+  color: #fff;
 }
 
 img {
