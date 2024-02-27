@@ -1575,8 +1575,9 @@ section.meetings-page .filters {
 }
 
 div.ex1 {
-  height: 200px;
-  overflow: auto;
+ max-height: 200px; 
+ overflow-y: auto;
+ list-style: none;
 }
 
 

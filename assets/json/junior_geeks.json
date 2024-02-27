@@ -1,0 +1,19 @@
+var courses = { "col1" : [ 
+   
+    { "course_name": "MS Office", "class": "soon","pdf":"MS Office.pdf","title":"MS Office", "image": "ms-office.jpg" },
+    { "course_name": "Coral Draw", "class": "soon","pdf":"Coral Draw.pdf","title":"Coral Draw","image": "coral-draw.png" },
+    { "course_name": "Tally", "class": "att","pdf":"Tally.pdf","title":"Tally","image": "tally.png" },
+    { "course_name": "Abode Photoshop", "class": "att","pdf":"Abode Photoshop.pdf","title":"Abode Photoshop","image": "photo-shop.png" },
+    { "course_name": "Adobe Illustrator", "class": "imp","pdf":"Adobe Illustrator.pdf","title":"Adobe Illustrator","image": "illustrator.png" },
+    { "course_name": "Web Development", "class": "att","pdf":"Web Development.pdf","title":"Web Development","image": "web-development.png" },
+    { "course_name": "Game Development ", "class": "imp","pdf":"Game Development.pdf","title":"Game Development","image": "game-development.png" },
+    { "course_name": "Robotics", "class": "soon","pdf":"Robotics.pdf","title":"Robotics","image": "robotics.png" },
+    { "course_name": "Python", "class": "soon","pdf":"Python.pdf","title":"Python","image": "python.png" },
+    { "course_name": "Java", "class": "att","pdf":"Java.pdf","title":"Java","image": "java.png" },
+    { "course_name": "C/C++ Programming", "class": "att","pdf":"C/C++ Programming.pdf","title":"C/C++ Programming","image": "cc+.png" },
+    { "course_name": "Canva Designing", "class": "att","pdf":"Canva Designing.pdf","title":"Canva Designing","image": "canva.png" },
+    { "course_name": "Database", "class": "att","pdf":"Database.pdf","title":"Database","image": "database.png" },
+    { "course_name": "Typing", "class": "imp","pdf":"Typing.pdf","title":"Typing","image": "typing.png" }
+]
+}  
+var i = 0;

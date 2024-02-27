@@ -253,10 +253,172 @@ function myFunction() {
                       <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#myModal" style="margin-right: 0px;">
                         More info
                       </button>
+                      <div class="modal" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Type your message</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        Modal body..
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
                       <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#contactModal">
                         Contact Us
                         
                       </button>
+                      <div class="modal fade" id="contactModal" tabindex="-1"
+                                    aria-labelledby="contactModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="contactModalLabel">LET'S GET IN TOUCH</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body" style="text-align: left;">
+                                                <!-- Contact Form -->
+                                                <form>
+                                                    <div class="mb-3">
+                                                        <label for="name" class="form-label">Name</label>
+                                                        <input type="text" class="form-control" id="name"
+                                                            placeholder="Your Name">
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="email" class="form-label">Email</label>
+                                                        <input type="email" class="form-control" id="email"
+                                                            placeholder="Your Email">
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="email" class="form-label">Subject</label>
+
+                                                        <label for="selectpickerGroups" class="form-label"></label>
+                                                        <select id="selectpickerGroups"
+                                                            class="form-select selectpicker w-100"
+                                                            data-style="btn-default"
+                                                            style="border: var(--bs-modal-border-width) solid var(--bs-modal-border-color);">
+                                                            <option>Choose Subject</option>
+                                                            <optgroup label="Web Designing">
+
+                                                                <option>Angular Js</option>
+                                                                <option>React Js</option>
+                                                                <option>Web Designing</option>
+                                                                <option>UI & UX</option>
+                                                                <option>PHP Experts</option>
+                                                                <option>PHP Full Stack</option>
+                                                            </optgroup>
+                                                            <optgroup label="Cloud Computing">
+                                                                <option>AWS Training</option>
+                                                                <option>AZURE Training</option>
+                                                                <option>GCP</option>
+                                                            </optgroup>
+                                                            <optgroup label="Devops">
+                                                                <option>Kubemetes Training</option>
+                                                                <option>Docker Certification Training</option>
+                                                                <option>Ansible Training</option>
+                                                                <option>Devops Training</option>
+                                                                <option>Jenkins</option>
+                                                                <option>Terraform</option>
+                                                                <option>Linux</option>
+                                                                <option>Git</option>
+                                                                <option>Shell Scripting</option>
+                                                            </optgroup>
+                                                            <optgroup label="Programming">
+                                                                <option>Python Training</option>
+                                                                <option>JavaScript Training</option>
+                                                                <option>Unix Shell Scripting Training</option>
+                                                                <option>Java Certification</option>
+                                                                <option>C And C++ Training</option>
+                                                                <option>.NET Training</option>
+                                                            </optgroup>
+                                                            <optgroup label="Database Developer">
+                                                                <option>MySQL Training</option>
+                                                                <option>MongoDB Training</option>
+                                                                <option>SQL Server DBA Training</option>
+                                                            </optgroup>
+                                                            <optgroup label="Mobile App Development">
+                                                                <option>Android</option>
+                                                                <option>I-Phone</option>
+                                                            </optgroup>
+                                                            <optgroup label="Data Science & AI">
+                                                                <option>Machine Learning Training</option>
+                                                                <option>Data Science Training</option>
+                                                                <option>Data Science With Python Training</option>
+                                                                <option>Deep Learning Course</option>
+                                                                <option>Artificial Intelligence Course</option>
+                                                            </optgroup>
+                                                            <optgroup label="MIS-Advanced Excel-BI Tools">
+                                                                <option>Power Bi</option>
+                                                                <option>Advanced Microsoft Excel</option>
+                                                                <option>MIS</option>
+                                                            </optgroup>
+                                                            <optgroup label="Digital Marketing">
+                                                                <option>Advanced Digital Marketing</option>
+                                                                <option>Digital Marketing</option>
+                                                            </optgroup>
+                                                            <optgroup label="Industrial Training">
+                                                                <option>6 Weeks Summer Training</option>
+                                                                <option>6 Months Industrial Training</option>
+                                                            </optgroup>
+                                                            <optgroup label="Multimedia Animation-Graphics">
+                                                                <option>Graphic Designing</option>
+                                                                <option>Graphic Designing Pro</option>
+                                                                <option>Motion Graphic Course </option>
+                                                                <option>Multimedia & Animation </option>
+                                                                <option>Graphic Motion Pro Course</option>
+                                                                <option>Multimedia & Animation (Diploma)</option>
+                                                                <option>Videograpy Course</option>
+                                                                <option>Scriptwriting & Story Boarding</option>
+                                                                <option>Film Making</option>
+                                                            </optgroup>
+                                                            <optgroup label="Software Testing">
+                                                                <option>Manual Testing</option>
+                                                                <option>Manual + Selenium</option>
+                                                                <option>Full Stack QA</option>
+                                                                <option>Java With Selenium </option>
+                                                                <option>REST Assured API</option>
+                                                                <option>Appium Testing</option>
+                                                                <option>API Testing</option>
+                                                            </optgroup>
+                                                            <optgroup label="Project Management">
+                                                                <option>Primavera P6 Testing</option>
+                                                                <option>Agile Testing</option>
+                                                                <option>Microsoft Excel Training</option>
+                                                                <option>Scrum Master Training</option>
+
+                                                            </optgroup>
+                                                            <optgroup label="Full Stack Development">
+                                                                <option>MEAN Stack</option>
+                                                                <option>Mern Stack</option>
+                                                            </optgroup>
+                                                        </select>
+                                                    </div>
+
+                                                    <div class="mb-3">
+                                                        <label for="message" class="form-label">Message</label>
+                                                        <textarea class="form-control" id="message" rows="3"
+                                                            placeholder="Your Message"></textarea>
+                                                    </div>
+                                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                                    <button type="submit" class="btn btn-danger">Cancel</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                     </div>
                   </div>
                 </div>`)}
