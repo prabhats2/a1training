@@ -18,7 +18,26 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-GLhlTQ8iNl7lqyiYbNE3u5zHMHp0UA+POD4t1itd16u7jOFEL76P0DHS9tN8+OHL" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.gallery-item').fancybox();
+    });
+  </script>
+  <style>
+    .n {
+      overflow: scroll;
+      height: 800px
+    }
 
+    .m {
+      margin-top: 100px;
+      height: 900px;
+    }
+  </style>
 
   <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
   <!-- Additional CSS Files -->
@@ -123,35 +142,95 @@ https://templatemo.com/tm-569-edu-meeting
                                 </button>
                                 <div class="modal fade" id="contactModal" tabindex="-1"
                                     aria-labelledby="contactModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog">
+                                    <div class="modal-dialog modal-xl">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <h5 class="modal-title" id="contactModalLabel">LET'S GET IN TOUCH</h5>
+                                              <h5 class="modal-title" id="contactModalLabel">LET'S GET IN TOUCH</h5>
                                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
                                                     aria-label="Close"></button>
                                             </div>
                                             <div class="modal-body" style="text-align: left;">
                                                 <!-- Contact Form -->
-                                                <form>
-                                                    <div class="mb-3">
-                                                        <label for="name" class="form-label">Name</label>
-                                                        <input type="text" class="form-control" id="name"
-                                                            placeholder="Your Name">
-                                                    </div>
-                                                    <div class="mb-3">
-                                                        <label for="email" class="form-label">Email</label>
-                                                        <input type="email" class="form-control" id="email"
-                                                            placeholder="Your Email">
-                                                    </div>
-                                                    <div class="mb-3">
-                                                        <label for="email" class="form-label">Subject</label>
-
-                                                        <label for="selectpickerGroups" class="form-label"></label>
-                                                        <select id="selectpickerGroups"
-                                                            class="form-select selectpicker w-100"
-                                                            data-style="btn-default"
-                                                            style="border: var(--bs-modal-border-width) solid var(--bs-modal-border-color);">
-                                                            <option>Choose Subject</option>
+                                                <div class="row">
+                                                    <div class="col-sm-3 m d-none d-sm-block"> 
+                                                        <div class="container-fluid">
+                                                            <div class="row n">
+                                                                <div>
+                                                                    <a href="images/img 21.png" class="d-block mb-3 gallery-item" data-fancybox="gallery"
+                                                                        data-caption="Image 1">
+                                                                        <img src="images/img 21.png" class="img-fluid" alt="Image 1">
+                                                                    </a>
+                                                                </div>
+                                                                <div>
+                                                                    <a href="images/img 22.png" class="d-block mb-3 gallery-item" data-fancybox="gallery"
+                                                                        data-caption="Image 2">
+                                                                        <img src="images/img 22.png" class="img-fluid" alt="Image 2">
+                                                                    </a>
+                                                                </div>
+                                                                <div>
+                                                                    <a href="images/img 23.png" class="d-block mb-3 gallery-item" data-fancybox="gallery"
+                                                                        data-caption="Image 3">
+                                                                        <img src="images/img 23.png" class="img-fluid" alt="Image 3">
+                                                                    </a>
+                                                                </div>
+                                                                <div>
+                                                                    <a href="images/img 24.png" class="d-block mb-3 gallery-item" data-fancybox="gallery"
+                                                                        data-caption="Image 3">
+                                                                        <img src="images/img 24.png" class="img-fluid" alt="Image 3">
+                                                                    </a>
+                                                                </div>
+                                                                <div>
+                                                                    <a href="images/img 25.png" class="d-block mb-3 gallery-item" data-fancybox="gallery"
+                                                                        data-caption="Image 3">
+                                                                        <img src="images/img 25.png" class="img-fluid" alt="Image 3">
+                                                                    </a>
+                                                                </div>
+                                                                <div>
+                                                                    <a href="images/img 26.png" class="d-block mb-3 gallery-item" data-fancybox="gallery"
+                                                                        data-caption="Image 3">
+                                                                        <img src="images/img 26.png" class="img-fluid" alt="Image 3">
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>  
+                                                    <div class="col-sm-6">
+                                                        <div class="container text-center">
+                                                            <img src="images/img.png" alt="" class="img-fluid col-md-4">
+                                                        </div>
+                                                        <h1 class=" text-center">INQUIRY FORM</h1>
+                                                        <div class="container">
+                                                            <form action="/action_page.php">
+                                                                <div class="form-group">
+                                                                    <label for="email">Email:</label>
+                                                                    <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="Name">Name:</label>
+                                                                    <input type="Name" class="form-control" id="Name" placeholder="Enter Name" name="Name">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="DOB">DOB:</label>
+                                                                    <input type="date" class="form-control" id="DOB" placeholder="Enter DOB" name="DOB">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="Mobile No">Mobile No:</label>
+                                                                    <input type="number" class="form-control" id="Mobile No" placeholder="Enter Mobile No"
+                                                                        name="Mobile No">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="Address">Address:</label>
+                                                                    <textarea class="form-control" rows="2" id="Address" placeholder="Enter Address"
+                                                                        name="text"></textarea>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="name">How did you learn about us?:</label>
+                                                                    <input type="text" class="form-control" id="name" placeholder="Enter name" name="name">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="sel1">Select Subject:</label>
+                                                                    <select class="form-control" id="sel1" name="sellist1">
+                                                                      <option>Choose Subject</option>
                                                             <optgroup label="Web Designing">
 
                                                                 <option>Angular Js</option>
@@ -245,17 +324,250 @@ https://templatemo.com/tm-569-edu-meeting
                                                                 <option>MEAN Stack</option>
                                                                 <option>Mern Stack</option>
                                                             </optgroup>
-                                                        </select>
+                                                                    </select>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="sel1">Select Mode of Course (select one):</label>
+                                                                    <select class="form-control" id="sel1" name="sellist1">
+                                                                        <option>Select Mode of Course</option>
+                                                                        <option>Online</option>
+                                                                        <option>Offline</option>
+                                                                    </select>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="name">Other Courses Not Included in list:</label>
+                                                                    <input type="text" class="form-control" id="name" placeholder="Enter name" name="name">
+                                                                </div>
+                                                                <!----- <h2 class=" text-center">For office Use Only</h2>
+                                                                <div class="form-group">
+                                                                  <label for="name">Date</label>
+                                                                  <input type="Date" class="form-control" id="Date" placeholder="Enter Date" name="Date">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                  <label for="Registration No">Registration No</label>
+                                                                  <input type="number" class="form-control" id="Registration No" placeholder="Enter Registration No" name="Registration No">
+                                                              </div>----->
+                                                                <button type="submit" class="btn btn-primary">Submit</button>
+                                                            </form>
+                                                        </div>
                                                     </div>
-
-                                                    <div class="mb-3">
-                                                        <label for="message" class="form-label">Message</label>
-                                                        <textarea class="form-control" id="message" rows="3"
-                                                            placeholder="Your Message"></textarea>
+                                                    <div class="col-sm-3 m ">
+                                                        <h1 class=" text-center">Course</h1>
+                                                        <div class="n">
+                                                            <div class="card" style="width:100%">
+                                                                <img class="card-img-top" src="images/img 1.jpg" alt="Card image" style="width:100%">
+                                                                <div class="card-body text-center">
+                                                                    <h4 class="card-title">MEAN/MERN Stack</h4>
+                                                                    <a href="tel:+918368979712" class="btn btn-primary "><i class="fa fa-phone" id="phone"><img
+                                                                                src="images/call_icon.png" alt=""></i></a>
+                                                                    <a href="https://wa.me/8368979712" class="btn btn-success "><img src="images/logo.png"
+                                                                            alt="" class="bg-success"></a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="card" style="width:100%">
+                                                                <img class="card-img-top" src="images/img 2.jpg" alt="Card image" style="width:100%">
+                                                                <div class="card-body text-center">
+                                                                    <h4 class="card-title">AI/Maching learning</h4>
+                                                                    <a href="tel:+918368979712" class="btn btn-primary "><i class="fa fa-phone" id="phone"><img
+                                                                                src="images/call_icon.png" alt=""></i></a>
+                                                                    <a href="https://wa.me/8368979712" class="btn btn-success "><img src="images/logo.png"
+                                                                            alt="" class="bg-success"></a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="card" style="width:100%">
+                                                                <img class="card-img-top" src="images/img 3.jpg" alt="Card image" style="width:100%">
+                                                                <div class="card-body text-center">
+                                                                    <h4 class="card-title">Android Training</h4>
+                                                                    <a href="tel:+918368979712" class="btn btn-primary "><i class="fa fa-phone" id="phone"><img
+                                                                                src="images/call_icon.png" alt=""></i></a>
+                                                                    <a href="https://wa.me/8368979712" class="btn btn-success "><img src="images/logo.png"
+                                                                            alt="" class="bg-success"></a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="card" style="width:100%">
+                                                                <img class="card-img-top" src="images/img 4.jpg" alt="Card image" style="width:100%">
+                                                                <div class="card-body text-center">
+                                                                    <h4 class="card-title">UI Development</h4>
+                                                                    <a href="tel:+918368979712" class="btn btn-primary "><i class="fa fa-phone" id="phone"><img
+                                                                                src="images/call_icon.png" alt=""></i></a>
+                                                                    <a href="https://wa.me/8368979712" class="btn btn-success "><img src="images/logo.png"
+                                                                            alt="" class="bg-success"></a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="card" style="width:100%">
+                                                                <img class="card-img-top" src="images/img 5.jpg" alt="Card image" style="width:100%">
+                                                                <div class="card-body text-center">
+                                                                    <h4 class="card-title">Graphic designing</h4>
+                                                                    <a href="tel:+918368979712" class="btn btn-primary "><i class="fa fa-phone" id="phone"><img
+                                                                                src="images/call_icon.png" alt=""></i></a>
+                                                                    <a href="https://wa.me/8368979712" class="btn btn-success "><img src="images/logo.png"
+                                                                            alt="" class="bg-success"></a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="card" style="width:100%">
+                                                                <img class="card-img-top" src="images/img 6.jpg" alt="Card image" style="width:100%">
+                                                                <div class="card-body text-center">
+                                                                    <h4 class="card-title">Angular/React Training</h4>
+                                                                    <a href="tel:+918368979712" class="btn btn-primary "><i class="fa fa-phone" id="phone"><img
+                                                                                src="images/call_icon.png" alt=""></i></a>
+                                                                    <a href="https://wa.me/8368979712" class="btn btn-success "><img src="images/logo.png"
+                                                                            alt="" class="bg-success"></a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="card" style="width:100%">
+                                                                <img class="card-img-top" src="images/img 7.jpg" alt="Card image" style="width:100%">
+                                                                <div class="card-body text-center">
+                                                                    <h4 class="card-title">AWS/Azure</h4>
+                                                                    <a href="tel:+918368979712" class="btn btn-primary "><i class="fa fa-phone" id="phone"><img
+                                                                                src="images/call_icon.png" alt=""></i></a>
+                                                                    <a href="https://wa.me/8368979712" class="btn btn-success "><img src="images/logo.png"
+                                                                            alt="" class="bg-success"></a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="card" style="width:100%">
+                                                                <img class="card-img-top" src="images/img 8.jpg" alt="Card image" style="width:100%">
+                                                                <div class="card-body text-center">
+                                                                    <h4 class="card-title">Excel Training</h4>
+                                                                    <a href="tel:+918368979712" class="btn btn-primary "><i class="fa fa-phone" id="phone"><img
+                                                                                src="images/call_icon.png" alt=""></i></a>
+                                                                    <a href="https://wa.me/8368979712" class="btn btn-success "><img src="images/logo.png"
+                                                                            alt="" class="bg-success"></a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="card" style="width:100%">
+                                                                <img class="card-img-top" src="images/img 9.jpg" alt="Card image" style="width:100%">
+                                                                <div class="card-body text-center">
+                                                                    <h4 class="card-title">Digital Marketing</h4>
+                                                                    <a href="tel:+918368979712" class="btn btn-primary "><i class="fa fa-phone" id="phone"><img
+                                                                                src="images/call_icon.png" alt=""></i></a>
+                                                                    <a href="https://wa.me/8368979712" class="btn btn-success "><img src="images/logo.png"
+                                                                            alt="" class="bg-success"></a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="card" style="width:100%">
+                                                                <img class="card-img-top" src="images/img 10.jpg" alt="Card image" style="width:100%">
+                                                                <div class="card-body text-center">
+                                                                    <h4 class="card-title">Python Training</h4>
+                                                                    <a href="tel:+918368979712" class="btn btn-primary "><i class="fa fa-phone" id="phone"><img
+                                                                                src="images/call_icon.png" alt=""></i></a>
+                                                                    <a href="https://wa.me/8368979712" class="btn btn-success "><img src="images/logo.png"
+                                                                            alt="" class="bg-success"></a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="card" style="width:100%">
+                                                                <img class="card-img-top" src="images/img 11.jpg" alt="Card image" style="width:100%">
+                                                                <div class="card-body text-center">
+                                                                    <h4 class="card-title"> Sap Training</h4>
+                                                                    <a href="tel:+918368979712" class="btn btn-primary "><i class="fa fa-phone" id="phone"><img
+                                                                                src="images/call_icon.png" alt=""></i></a>
+                                                                    <a href="https://wa.me/8368979712" class="btn btn-success "><img src="images/logo.png"
+                                                                            alt="" class="bg-success"></a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="card" style="width:100%">
+                                                                <img class="card-img-top" src="images/img 12.jpg" alt="Card image" style="width:100%">
+                                                                <div class="card-body text-center">
+                                                                    <h4 class="card-title"> Automation Training</h4>
+                                                                    <a href="tel:+918368979712" class="btn btn-primary "><i class="fa fa-phone" id="phone"><img
+                                                                                src="images/call_icon.png" alt=""></i></a>
+                                                                    <a href="https://wa.me/8368979712" class="btn btn-success "><img src="images/logo.png"
+                                                                            alt="" class="bg-success"></a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="card" style="width:100%">
+                                                                <img class="card-img-top" src="images/img 13.jpg" alt="Card image" style="width:100%">
+                                                                <div class="card-body text-center">
+                                                                    <h4 class="card-title"> Core & Advanced Java</h4>
+                                                                    <a href="tel:+918368979712" class="btn btn-primary "><i class="fa fa-phone" id="phone"><img
+                                                                                src="images/call_icon.png" alt=""></i></a>
+                                                                    <a href="https://wa.me/8368979712" class="btn btn-success "><img src="images/logo.png"
+                                                                            alt="" class="bg-success"></a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="card" style="width:100%">
+                                                                <img class="card-img-top" src="images/img 14.jpg" alt="Card image" style="width:100%">
+                                                                <div class="card-body text-center">
+                                                                    <h4 class="card-title"> .NET Training</h4>
+                                                                    <a href="tel:+918368979712" class="btn btn-primary "><i class="fa fa-phone" id="phone"><img
+                                                                                src="images/call_icon.png" alt=""></i></a>
+                                                                    <a href="https://wa.me/8368979712" class="btn btn-success "><img src="images/logo.png"
+                                                                            alt="" class="bg-success"></a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="card" style="width:100%">
+                                                                <img class="card-img-top" src="images/img 15.jpg" alt="Card image" style="width:100%">
+                                                                <div class="card-body text-center">
+                                                                    <h4 class="card-title"> Software Testing</h4>
+                                                                    <a href="tel:+918368979712" class="btn btn-primary "><i class="fa fa-phone" id="phone"><img
+                                                                                src="images/call_icon.png" alt=""></i></a>
+                                                                    <a href="https://wa.me/8368979712" class="btn btn-success "><img src="images/logo.png"
+                                                                            alt="" class="bg-success"></a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="card" style="width:100%">
+                                                                <img class="card-img-top" src="images/img 16.jpg" alt="Card image" style="width:100%">
+                                                                <div class="card-body text-center">
+                                                                    <h4 class="card-title"> Data Science</h4>
+                                                                    <a href="tel:+918368979712" class="btn btn-primary "><i class="fa fa-phone" id="phone"><img
+                                                                                src="images/call_icon.png" alt=""></i></a>
+                                                                    <a href="https://wa.me/8368979712" class="btn btn-success "><img src="images/logo.png"
+                                                                            alt="" class="bg-success"></a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="card" style="width:100%">
+                                                                <img class="card-img-top" src="images/img 17.jpg" alt="Card image" style="width:100%">
+                                                                <div class="card-body text-center">
+                                                                    <h4 class="card-title"> DevOps Training</h4>
+                                                                    <a href="tel:+918368979712" class="btn btn-primary "><i class="fa fa-phone" id="phone"><img
+                                                                                src="images/call_icon.png" alt=""></i></a>
+                                                                    <a href="https://wa.me/8368979712" class="btn btn-success "><img src="images/logo.png"
+                                                                            alt="" class="bg-success"></a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="card" style="width:100%">
+                                                                <img class="card-img-top" src="images/img 18.jpg" alt="Card image" style="width:100%">
+                                                                <div class="card-body text-center">
+                                                                    <h4 class="card-title"> C/C++</h4>
+                                                                    <a href="tel:+918368979712" class="btn btn-primary "><i class="fa fa-phone" id="phone"><img
+                                                                                src="images/call_icon.png" alt=""></i></a>
+                                                                    <a href="https://wa.me/8368979712" class="btn btn-success "><img src="images/logo.png"
+                                                                            alt="" class="bg-success"></a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="card" style="width:100%">
+                                                                <img class="card-img-top" src="images/img 19.jpg" alt="Card image" style="width:100%">
+                                                                <div class="card-body text-center">
+                                                                    <h4 class="card-title"> Computer Science 11th</h4>
+                                                                    <a href="tel:+918368979712" class="btn btn-primary "><i class="fa fa-phone" id="phone"><img
+                                                                                src="images/call_icon.png" alt=""></i></a>
+                                                                    <a href="https://wa.me/8368979712" class="btn btn-success "><img src="images/logo.png"
+                                                                            alt="" class="bg-success"></a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="card" style="width:100%">
+                                                                <img class="card-img-top" src="images/img 19.jpg" alt="Card image" style="width:100%">
+                                                                <div class="card-body text-center">
+                                                                    <h4 class="card-title"> Computer Science 12th</h4>
+                                                                    <a href="tel:+918368979712" class="btn btn-primary "><i class="fa fa-phone" id="phone"><img
+                                                                                src="images/call_icon.png" alt=""></i></a>
+                                                                    <a href="https://wa.me/8368979712" class="btn btn-success "><img src="images/logo.png"
+                                                                            alt="" class="bg-success"></a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="card" style="width:100%">
+                                                                <img class="card-img-top" src="images/img 20.jpg" alt="Card image" style="width:100%">
+                                                                <div class="card-body text-center">
+                                                                    <h4 class="card-title">Basic Computer</h4>
+                                                                    <a href="tel:+918368979712" class="btn btn-primary "><i class="fa fa-phone" id="phone"><img
+                                                                                src="images/call_icon.png" alt=""></i></a>
+                                                                    <a href="https://wa.me/8368979712" class="btn btn-success "><img src="images/logo.png"
+                                                                            alt="" class="bg-success"></a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                     </div>
-                                                    <button type="submit" class="btn btn-primary">Submit</button>
-                                                    <button type="submit" class="btn btn-danger">Cancel</button>
-                                                </form>
+                                                    
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
