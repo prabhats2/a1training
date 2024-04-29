@@ -25,10 +25,91 @@
   <link rel="stylesheet" href="assets/css/templatemo-edu-meeting.css">
   <link rel="stylesheet" href="assets/css/owl.css">
   <link rel="stylesheet" href="assets/css/lightbox.css">
+  <style>
+    /* Styles for the modal */
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0,0,0,0.5);
+    }
+    
+    /* Modal content */
+    .modal-content {
+        background-color: #fefefe;
+        margin: 15% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        max-width: 400px;
+        text-align: center;
+        border-radius: 5px;
+    }
+    
+    /* Close button */
+      .close {
+    position: absolute;
+    top: -18px;
+    right: -6px; /* Adjust the position to the right */
+    color: #000; /* Set the color of the close button */
+    font-size: 28px; /* Adjust the font size */
+    font-weight: bold; /* Optionally, adjust the font weight */
+    padding: 10px; /* Add padding for better clickability */
+    cursor: pointer; /* Set cursor to pointer to indicate it's clickable */
+  }
+    
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
 
+</style>
 </head>
 
 <body>
+  <!-- The Modal -->
+<div id="myModal" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+      <span class="close">&times;</span>
+      <video width="100%" controls autoplay>
+        <source src="video/VID-20240426-WA0004.mp4" type="video/mp4">
+      </video>
+  </div>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the close button
+var closeBtn = document.querySelector('.close');
+
+// When the page loads
+window.onload = function() {
+  // Show the modal
+  modal.style.display = 'block';
+};
+
+// When the user clicks on the close button, close the modal
+closeBtn.onclick = function() {
+  modal.style.display = 'none';
+};
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+      modal.style.display = 'none';
+  }
+};
+</script>
   <!--menu-->
   <script type="text/javascript" src="menu.js"></script>
   <!--menu end-->
