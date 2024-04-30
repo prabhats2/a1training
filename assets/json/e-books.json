@@ -1,4 +1,5 @@
-var books = { "col1" : [ 
+var books = { "col1" : [
+			{"name" : "MS-DOS",  "Author" : "Azad","pdf":"git ebook.pdf" }, 
             {"name" : "Html/HTML5",  "Author" : "A1Training Institute","pdf":"git ebook.pdf" },
 			{"name" : "CSS/CSS3",  "Author" : "A1Training Institute","pdf":"git ebook.pdf" },
 			{"name" : "C Programmming",  "Author" : "E Balagurusamy","pdf":"C_Programming_E.Balagurusamy.pdf"  },

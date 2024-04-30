@@ -27,7 +27,7 @@
   <link rel="stylesheet" href="assets/css/lightbox.css">
   <style>
     /* Styles for the modal */
-    .modal {
+    .modal_pop {
         display: none;
         position: fixed;
         z-index: 1000;
@@ -40,7 +40,7 @@
     }
     
     /* Modal content */
-    .modal-content {
+    .modal-content-pop {
         background-color: #fefefe;
         margin: 15% auto;
         padding: 20px;
@@ -52,7 +52,7 @@
     }
     
     /* Close button */
-      .close {
+      .close{
     position: absolute;
     top: -18px;
     right: -6px; /* Adjust the position to the right */
@@ -75,11 +75,11 @@
 
 <body>
   <!-- The Modal -->
-<div id="myModal" class="modal">
+<div id="myModal" class="modal_pop">
   <!-- Modal content -->
-  <div class="modal-content">
-      <span class="close">&times;</span>
-      <video width="100%" controls autoplay>
+  <div class="modal-content-pop">
+      <span class="close1">&times;</span>
+      <video width="100%" controls>
         <source src="video/VID-20240426-WA0004.mp4" type="video/mp4">
       </video>
   </div>
@@ -90,7 +90,7 @@
 var modal = document.getElementById('myModal');
 
 // Get the close button
-var closeBtn = document.querySelector('.close');
+var closeBtn = document.querySelector('.close1');
 
 // When the page loads
 window.onload = function() {
@@ -171,7 +171,7 @@ window.onclick = function(event) {
               <div class="down-content">
                 <h4>MERN Stack</h4>
                 <p>Starting Date: 01-01-2024</p>
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal1">
+                <button type="button" class="btn btn-primary" data-bs-toggle="mymodal" data-bs-target="#myModal1">
                   Request a call back>>
                 </button>
               </div>
@@ -197,7 +197,8 @@ window.onclick = function(event) {
               <div class="down-content">
                 <h4>Devops Training</h4>
                 <p>Starting Date: 01-01-2024</p>
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal1">
+
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#mymodal"> 
                   Request a call back>>
                 </button>
               </div>
@@ -952,12 +953,12 @@ window.onclick = function(event) {
 
             </div>
 
-            <button class="carousel-control-prev" type="button" data-bs-target="#testimonialSlider"
+            <button  style="margin-left:-59px" class="carousel-control-prev" type="button" data-bs-target="#testimonialSlider"
               data-bs-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#testimonialSlider"
+            <button style="margin-right:-59px" class="carousel-control-next" type="button" data-bs-target="#testimonialSlider"
               data-bs-slide="next">
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Next</span>

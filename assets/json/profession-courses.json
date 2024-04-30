@@ -24,7 +24,7 @@ var courses = { "col1" : [
     { "course_name": "Python Training", "class": "programming","pdf":"Python Training.pdf","title":"Python Training","image": "python.png" },
     { "course_name": "Unix Shell Scripting Training", "class": "programming","pdf":"Unix Shell Scripting Training.pdf","title":"Unix Shell Scripting Training","image": "unix shell scripting training.png" },
     { "course_name": "C And C++ Training", "class": "programming","pdf":"C And C++ Training.pdf","title":"C And C++ Training","image": "c c++.png.png" },
-    { "course_name": ".NET Training", "class": "programming","pdf":"NET Training.pdf","title":"NET Training","image": "net training.png.png" },
+    { "course_name": ".NET Training", "class": "programming","pdf":"NET Training.pdf","title":"NET Training","image": "net-training.png" },
     { "course_name": "JavaScript Training", "class": "programming","pdf":"JavaScript Training.pdf","title":"JavaScript Training","image": "javaScript.png.png" },
     { "course_name": "MySQL Training", "class": "Database","pdf":"MySQL Training.pdf","title":"MySQL Training","image": "My-Sql.jpg" },
     { "course_name": "SQL Server DBA Training", "class": "Database","pdf":"SQL Server DBA Training.pdf","title":"SQL Server DBA Training","image": "sql-server-dba-training.png" },
