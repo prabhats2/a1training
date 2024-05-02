@@ -43,7 +43,10 @@
     .modal-content-pop {
         background-color: #fefefe;
         margin: 15% auto;
-        padding: 20px;
+        padding-top: auto;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
         border: 1px solid #888;
         width: 80%;
         max-width: 400px;
@@ -78,7 +81,7 @@
 <div id="myModal" class="modal_pop">
   <!-- Modal content -->
   <div class="modal-content-pop">
-      <span class="close1">&times;</span>
+      <span  style="margin-left:360px;"class="close1">&times;</span>
       <video width="100%" controls>
         <source src="video/VID-20240426-WA0004.mp4" type="video/mp4">
       </video>
@@ -171,7 +174,7 @@ window.onclick = function(event) {
               <div class="down-content">
                 <h4>MERN Stack</h4>
                 <p>Starting Date: 01-01-2024</p>
-                <button type="button" class="btn btn-primary" data-bs-toggle="mymodal" data-bs-target="#myModal1">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal1">
                   Request a call back>>
                 </button>
               </div>
@@ -197,8 +200,7 @@ window.onclick = function(event) {
               <div class="down-content">
                 <h4>Devops Training</h4>
                 <p>Starting Date: 01-01-2024</p>
-
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#mymodal"> 
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal1"> 
                   Request a call back>>
                 </button>
               </div>
@@ -211,6 +213,7 @@ window.onclick = function(event) {
               <div class="down-content">
                 <h4>Python Training</h4>
                 <p>Starting Date: 01-01-2024</p>
+
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal1">
                   Request a call back>>
                 </button>
