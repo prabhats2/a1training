@@ -85,8 +85,8 @@ padding-left: 180px;
                                                             
                             <div class="col-sm-3" style="float:left;">
                                 <div class="well" style="margin:3px;">
-                                <h5 style="margin-top: 23px; " >${books.col1[i].name}</h5>
-                                <p style="color:black;"> Author -${books.col1[i].Author} 
+                                <h5 style="margin-top: 10px;" >${books.col1[i].name}</h5>
+                                <p style="color:black;"> <span style="font-size:20px;">Author</span> -${books.col1[i].Author} 
                                 </p>
 
                                     <img src="assets/images/download1.png" alt="" style="width: 15%;margin-right:24px;margin-left: 10px;" data-bs-toggle="modal" data-bs-target="#myModal${i}">
@@ -99,21 +99,16 @@ padding-left: 180px;
 
       <!-- Modal Header -->
       <div class="modal-header">
-        ${books.col1[i].name}
-        <h4 class="modal-title">MS Dos</h4>
+      
+        <h4 class="modal-title">  ${books.col1[i].name}</h4>
         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
       </div>
 
       <!-- Modal body -->
       <div class="modal-body">
        
-        <ul id="pdfList${i}"></ul>
+        <ul id="pdfList${i}" align="left"></ul>
 
-               <img src="assets/images/ms-dos.png">  
-               
-        <a href="assets/pdf/${books.col1[i].pdf}" target="blank" style="margin-left:75px;" title="Download CSS Pdf">
-                         
-                         <img src="assets/images/download1.png" alt="" style="width: 32%;margin-right :15px;margin-top:-4px;" data-bs-toggle="modal" data-bs-target="#myModal"></a>
       </div>
 
       <!-- Modal footer -->
