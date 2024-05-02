@@ -1,18 +1,18 @@
 var books = { "col1" : [
-			{"name" : "MS-DOS",  "Author" : "Azad","pdf":"git ebook.pdf" }, 
-            {"name" : "Html/HTML5",  "Author" : "A1Training Institute","pdf":"git ebook.pdf" },
-			{"name" : "CSS/CSS3",  "Author" : "A1Training Institute","pdf":"git ebook.pdf" },
-			{"name" : "C Programmming",  "Author" : "E Balagurusamy","pdf":"C_Programming_E.Balagurusamy.pdf"  },
-			{"name" : "C++ Programmming",  "Author" : "E Balagurusamy","pdf":"C_Programming_E.Balagurusamy.pdf"  },
-			{"name" : "Javascript",  "Author" : "javascript.jpg" ,"pdf":"" },
-			{"name" : "Git",  "Author" : "A1Training Institute" ,"pdf":"git ebook.pdf" },
-			{"name" : "Python",  "Author" : "A1Training Institute","pdf":"git ebook.pdf" },
-			{"name" : "Java", "Author" : "A1Training Institute","pdf":"git ebook.pdf" },
+			{"name" : "MS-DOS",  "Author" : ["LP Editorial Board","Noel Kantaris","Peter Freese"],"pdf":["https://amzn.in/d/eeW0gGK", "https://amzn.in/d/76hrmRz", "https://amzn.in/d/4Jzj8A2"] }, 
+            {"name" : "Html/HTML5",  "Author" : "A1Training Institute","pdf":["https://amzn.in/d/eeW0gGK", "https://amzn.in/d/76hrmRz", "https://amzn.in/d/4Jzj8A2"]},
+			{"name" : "CSS/CSS3",  "Author" : "A1Training Institute","pdf":["https://amzn.in/d/eeW0gGK", "https://amzn.in/d/76hrmRz", "https://amzn.in/d/4Jzj8A2"] },
+			{"name" : "C Programmming",  "Author" : "E Balagurusamy","pdf":["https://amzn.in/d/eeW0gGK", "https://amzn.in/d/76hrmRz", "https://amzn.in/d/4Jzj8A2"] },
+			{"name" : "C++ Programmming",  "Author" : "E Balagurusamy","pdf":["https://amzn.in/d/eeW0gGK", "https://amzn.in/d/76hrmRz", "https://amzn.in/d/4Jzj8A2"] },
+			{"name" : "Javascript",  "Author" : "javascript.jpg" ,"pdf":["https://amzn.in/d/eeW0gGK", "https://amzn.in/d/76hrmRz", "https://amzn.in/d/4Jzj8A2"] },
+			{"name" : "Git",  "Author" : "A1Training Institute" ,"pdf":["https://amzn.in/d/eeW0gGK", "https://amzn.in/d/76hrmRz", "https://amzn.in/d/4Jzj8A2"] },
+			{"name" : "Python",  "Author" : "A1Training Institute","pdf":["https://amzn.in/d/eeW0gGK", "https://amzn.in/d/76hrmRz", "https://amzn.in/d/4Jzj8A2"] },
+			{"name" : "Java", "Author" : "A1Training Institute","pdf":["https://amzn.in/d/eeW0gGK", "https://amzn.in/d/76hrmRz", "https://amzn.in/d/4Jzj8A2"] },
 			
-			{"name" : "Jenkins", "Author" : "javascript.jpg" ,"pdf":"" },
-			{"name" : "AWS", "Author" : "A1Training Institute" ,"pdf":"git ebook.pdf" },
-			{"name" : "AZURE", "Author" : "A1Training Institute" ,"pdf":"git ebook.pdf" },
-			{"name" : "GCP", "Author" : "A1Training Institute" ,"pdf":"git ebook.pdf" },
-			{"name" : "Linux", "Author" : "cyber.jpg","pdf":"" }]
+			{"name" : "Jenkins", "Author" : "javascript.jpg" ,"pdf":["https://amzn.in/d/eeW0gGK", "https://amzn.in/d/76hrmRz", "https://amzn.in/d/4Jzj8A2"] },
+			{"name" : "AWS", "Author" : "A1Training Institute" ,"pdf":["https://amzn.in/d/eeW0gGK", "https://amzn.in/d/76hrmRz", "https://amzn.in/d/4Jzj8A2"]},
+			{"name" : "AZURE", "Author" : "A1Training Institute" ,"pdf":["https://amzn.in/d/eeW0gGK", "https://amzn.in/d/76hrmRz", "https://amzn.in/d/4Jzj8A2"] },
+			{"name" : "GCP", "Author" : "A1Training Institute" ,"pdf":["https://amzn.in/d/eeW0gGK", "https://amzn.in/d/76hrmRz", "https://amzn.in/d/4Jzj8A2"] },
+			{"name" : "Linux", "Author" : "cyber.jpg","pdf":["https://amzn.in/d/eeW0gGK", "https://amzn.in/d/76hrmRz", "https://amzn.in/d/4Jzj8A2"] }]
          }  
  var i = 0;

@@ -89,16 +89,17 @@ padding-left: 180px;
                                 <p style="color:black;"> Author -${books.col1[i].Author} 
                                 </p>
 
-                                    <img src="assets/images/download1.png" alt="" style="width: 15%;margin-right:24px;margin-left: 10px;" data-bs-toggle="modal" data-bs-target="#myModal">
+                                    <img src="assets/images/download1.png" alt="" style="width: 15%;margin-right:24px;margin-left: 10px;" data-bs-toggle="modal" data-bs-target="#myModal${i}">
                            
                                <!--created on 01/05/24 by manish-->
                                <!-- The Modal -->
-<div class="modal" id="myModal">
+<div class="modal" id="myModal${i}">
   <div class="modal-dialog">
     <div class="modal-content">
 
       <!-- Modal Header -->
       <div class="modal-header">
+        ${books.col1[i].name}
         <h4 class="modal-title">MS Dos</h4>
         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
       </div>
@@ -106,9 +107,9 @@ padding-left: 180px;
       <!-- Modal body -->
       <div class="modal-body">
        
-                
+        <ul id="pdfList${i}"></ul>
 
-               <img src="assets/images/ms-dos.png" "width:   ;"  height:;">  
+               <img src="assets/images/ms-dos.png">  
                
         <a href="assets/pdf/${books.col1[i].pdf}" target="blank" style="margin-left:75px;" title="Download CSS Pdf">
                          
@@ -126,8 +127,23 @@ padding-left: 180px;
                             </div>
                         
                         </div>`)
-                        }
-
+                      
+ // Dynamically populate the PDF list in the modal
+ const pdfList = document.getElementById(`pdfList${i}`);
+        books.col1[i].pdf.forEach((pdf, index) => {
+            const listItem = document.createElement('li');
+            const anchor = document.createElement('a');
+            anchor.href = pdf;
+           // anchor.href = `assets/pdf/${pdf}`;
+            //listItem.textContent = pdf;
+            //anchor.textContent = pdf;
+             anchor.textContent = `Download E-Book of ${books.col1[i].name} - Author: ${books.col1[i].Author[index]}`;
+            anchor.target = "_blank";
+            listItem.appendChild(anchor);
+            pdfList.appendChild(listItem);
+       });
+            
+    }
                     </script>
                 </span>
 
