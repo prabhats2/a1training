@@ -81,12 +81,11 @@ padding-left: 180px;
                 <span id="products1">
                     <script>
                         for (i = 0; i < books.col1.length; i++) {
-                            document.write(` 
-                                                            
+                            document.write(`                                                            
                             <div class="col-sm-3" style="float:left;">
                                 <div class="well" style="margin:3px;">
                                 <h5 style="margin-top: 10px;" >${books.col1[i].name}</h5>
-                                <p style="color:black;"> <span style="font-size:20px;">Author</span> -${books.col1[i].Author} 
+                                <p style="color:black;"> <span style="font-size:20px;">Author</span> -${books.col1[i].Author} ${books.col1[i].ebbokAuthor} 
                                 </p>
 
                                     <img src="assets/images/download1.png" alt="" style="width: 15%;margin-right:24px;margin-left: 10px;" data-bs-toggle="modal" data-bs-target="#myModal${i}">
@@ -106,8 +105,10 @@ padding-left: 180px;
 
       <!-- Modal body -->
       <div class="modal-body">
-       
+        <h2 align="left">Download PDF</h2>
         <ul id="pdfList${i}" align="left"></ul>
+        <br>
+        <ul id="ebookList${i}" align="left"></ul>
 
       </div>
 
@@ -123,20 +124,34 @@ padding-left: 180px;
                         
                         </div>`)
                       
- // Dynamically populate the PDF list in the modal
- const pdfList = document.getElementById(`pdfList${i}`);
-        books.col1[i].pdf.forEach((pdf, index) => {
-            const listItem = document.createElement('li');
-            const anchor = document.createElement('a');
-            anchor.href = pdf;
-           // anchor.href = `assets/pdf/${pdf}`;
-            //listItem.textContent = pdf;
-            //anchor.textContent = pdf;
-             anchor.textContent = `Download E-Book of ${books.col1[i].name} - Author: ${books.col1[i].Author[index]}`;
-            anchor.target = "_blank";
-            listItem.appendChild(anchor);
-            pdfList.appendChild(listItem);
-       });
+// Dynamically populate the PDF list in the modal
+const pdfList = document.getElementById(`pdfList${i}`);
+books.col1[i].pdf.forEach((pdf, index) => {
+    const listItem = document.createElement('li');
+    const anchor = document.createElement('a');
+    anchor.href = pdf;
+    anchor.textContent = `Download E-Book of ${books.col1[i].name} - Author: ${books.col1[i].Author[index]}`;
+    anchor.target = "_blank";
+    listItem.appendChild(anchor);
+    pdfList.appendChild(listItem);
+});
+
+// Dynamically populate the ebook list in the modal
+const ebookList = document.getElementById(`ebookList${i}`);
+const ebookHeading = document.createElement('h2');
+ebookHeading.textContent = "Buy From Online Stores";
+ebookList.appendChild(ebookHeading);
+
+books.col1[i].ebook.forEach((ebookLink, index) => {
+    const ebookListItem = document.createElement('li');
+    const ebookAnchor = document.createElement('a');
+    ebookAnchor.href = ebookLink;
+    ebookAnchor.textContent = `Buy ${books.col1[i].name} - Author: ${books.col1[i].ebookAuthor[index]}`;
+    ebookAnchor.target = "_blank";
+    ebookListItem.appendChild(ebookAnchor);
+    ebookList.appendChild(ebookListItem);
+});
+
             
     }
                     </script>
