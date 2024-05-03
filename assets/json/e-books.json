@@ -1,4 +1,4 @@
-var books = { "col1" : [
+let books = { "col1" : [
 			{"name" : "MS-DOS", 
 			 "Author" : ["Azad","Shivam"],
 			 "ebookAuthor" : ["LP Editorial Board","Noel Kantaris","Peter Freese","Azad","Shivam"],
@@ -16,20 +16,63 @@ var books = { "col1" : [
 			 "ebookAuthor" : ["Code Academy","Noel Kantaris","Peter Freese","Azad","Shivam"],
 			 "ebook" : ["https://amzn.in/d/dTDTKwy", "https://amzn.in/d/76hrmRz", "https://amzn.in/d/4Jzj8A2"],
 			 "pdf":["assets/pdf/ms_dos_by_azad.pdf","assets/pdf/msdosbyshivambhati.pdf"] 
-			},  
-            {"name" : "Html/HTML5",  "Author" : "A1Training Institute","pdf":["https://amzn.in/d/eeW0gGK", "https://amzn.in/d/76hrmRz", "https://amzn.in/d/4Jzj8A2"]},
-			{"name" : "CSS/CSS3",  "Author" : "A1Training Institute","pdf":["https://amzn.in/d/eeW0gGK", "https://amzn.in/d/76hrmRz", "https://amzn.in/d/4Jzj8A2"] },
-			{"name" : "C Programmming",  "Author" : "E Balagurusamy","pdf":["https://amzn.in/d/eeW0gGK", "https://amzn.in/d/76hrmRz", "https://amzn.in/d/4Jzj8A2"] },
-			{"name" : "C++ Programmming",  "Author" : "E Balagurusamy","pdf":["https://amzn.in/d/eeW0gGK", "https://amzn.in/d/76hrmRz", "https://amzn.in/d/4Jzj8A2"] },
-			{"name" : "Javascript",  "Author" : "javascript.jpg" ,"pdf":["https://amzn.in/d/eeW0gGK", "https://amzn.in/d/76hrmRz", "https://amzn.in/d/4Jzj8A2"] },
-			{"name" : "Git",  "Author" : "A1Training Institute" ,"pdf":["https://amzn.in/d/eeW0gGK", "https://amzn.in/d/76hrmRz", "https://amzn.in/d/4Jzj8A2"] },
-			{"name" : "Python",  "Author" : "A1Training Institute","pdf":["https://amzn.in/d/eeW0gGK", "https://amzn.in/d/76hrmRz", "https://amzn.in/d/4Jzj8A2"] },
-			{"name" : "Java", "Author" : "A1Training Institute","pdf":["https://amzn.in/d/eeW0gGK", "https://amzn.in/d/76hrmRz", "https://amzn.in/d/4Jzj8A2"] },
-			
-			{"name" : "Jenkins", "Author" : "javascript.jpg" ,"pdf":["https://amzn.in/d/eeW0gGK", "https://amzn.in/d/76hrmRz", "https://amzn.in/d/4Jzj8A2"] },
-			{"name" : "AWS", "Author" : "A1Training Institute" ,"pdf":["https://amzn.in/d/eeW0gGK", "https://amzn.in/d/76hrmRz", "https://amzn.in/d/4Jzj8A2"]},
-			{"name" : "AZURE", "Author" : "A1Training Institute" ,"pdf":["https://amzn.in/d/eeW0gGK", "https://amzn.in/d/76hrmRz", "https://amzn.in/d/4Jzj8A2"] },
-			{"name" : "GCP", "Author" : "A1Training Institute" ,"pdf":["https://amzn.in/d/eeW0gGK", "https://amzn.in/d/76hrmRz", "https://amzn.in/d/4Jzj8A2"] },
-			{"name" : "Linux", "Author" : "cyber.jpg","pdf":["https://amzn.in/d/eeW0gGK", "https://amzn.in/d/76hrmRz", "https://amzn.in/d/4Jzj8A2"] }]
+			},
+			{"name" : "C & C++", 
+			 "Author" : ["Azad","Shivam"],
+			 "ebookAuthor" : ["Code Academy","Noel Kantaris","Peter Freese","Azad","Shivam"],
+			 "ebook" : ["https://amzn.in/d/dTDTKwy", "https://amzn.in/d/76hrmRz", "https://amzn.in/d/4Jzj8A2"],
+			 "pdf":["assets/pdf/ms_dos_by_azad.pdf","assets/pdf/msdosbyshivambhati.pdf"] 
+			}, 
+			{"name" : "Javascript", 
+			 "Author" : ["Azad","Shivam"],
+			 "ebookAuthor" : ["Code Academy","Noel Kantaris","Peter Freese","Azad","Shivam"],
+			 "ebook" : ["https://amzn.in/d/dTDTKwy", "https://amzn.in/d/76hrmRz", "https://amzn.in/d/4Jzj8A2"],
+			 "pdf":["assets/pdf/ms_dos_by_azad.pdf","assets/pdf/msdosbyshivambhati.pdf"] 
+			},
+			{"name" : "Python", 
+			 "Author" : ["Azad","Shivam"],
+			 "ebookAuthor" : ["Code Academy","Noel Kantaris","Peter Freese","Azad","Shivam"],
+			 "ebook" : ["https://amzn.in/d/dTDTKwy", "https://amzn.in/d/76hrmRz", "https://amzn.in/d/4Jzj8A2"],
+			 "pdf":["assets/pdf/ms_dos_by_azad.pdf","assets/pdf/msdosbyshivambhati.pdf"] 
+			},
+			{"name" : "Java", 
+			 "Author" : ["Azad","Shivam"],
+			 "ebookAuthor" : ["Code Academy","Noel Kantaris","Peter Freese","Azad","Shivam"],
+			 "ebook" : ["https://amzn.in/d/dTDTKwy", "https://amzn.in/d/76hrmRz", "https://amzn.in/d/4Jzj8A2"],
+			 "pdf":["assets/pdf/ms_dos_by_azad.pdf","assets/pdf/msdosbyshivambhati.pdf"] 
+			},
+			{"name" : "Jenkins", 
+			 "Author" : ["Azad","Shivam"],
+			 "ebookAuthor" : ["Code Academy","Noel Kantaris","Peter Freese","Azad","Shivam"],
+			 "ebook" : ["https://amzn.in/d/dTDTKwy", "https://amzn.in/d/76hrmRz", "https://amzn.in/d/4Jzj8A2"],
+			 "pdf":["assets/pdf/ms_dos_by_azad.pdf","assets/pdf/msdosbyshivambhati.pdf"] 
+			}, 
+			{"name" : "AWS", 
+			 "Author" : ["Azad","Shivam"],
+			 "ebookAuthor" : ["Code Academy","Noel Kantaris","Peter Freese","Azad","Shivam"],
+			 "ebook" : ["https://amzn.in/d/dTDTKwy", "https://amzn.in/d/76hrmRz", "https://amzn.in/d/4Jzj8A2"],
+			 "pdf":["assets/pdf/ms_dos_by_azad.pdf","assets/pdf/msdosbyshivambhati.pdf"] 
+			},
+			{"name" : "AZURE", 
+			 "Author" : ["Azad","Shivam"],
+			 "ebookAuthor" : ["Code Academy","Noel Kantaris","Peter Freese","Azad","Shivam"],
+			 "ebook" : ["https://amzn.in/d/dTDTKwy", "https://amzn.in/d/76hrmRz", "https://amzn.in/d/4Jzj8A2"],
+			 "pdf":["assets/pdf/ms_dos_by_azad.pdf","assets/pdf/msdosbyshivambhati.pdf"] 
+			},
+			{"name" : "GCP", 
+			 "Author" : ["Azad","Shivam"],
+			 "ebookAuthor" : ["Code Academy","Noel Kantaris","Peter Freese","Azad","Shivam"],
+			 "ebook" : ["https://amzn.in/d/dTDTKwy", "https://amzn.in/d/76hrmRz", "https://amzn.in/d/4Jzj8A2"],
+			 "pdf":["assets/pdf/ms_dos_by_azad.pdf","assets/pdf/msdosbyshivambhati.pdf"] 
+			},
+			{"name" : "Linux", 
+			 "Author" : ["Azad","Shivam"],
+			 "ebookAuthor" : ["Code Academy","Noel Kantaris","Peter Freese","Azad","Shivam"],
+			 "ebook" : ["https://amzn.in/d/dTDTKwy", "https://amzn.in/d/76hrmRz", "https://amzn.in/d/4Jzj8A2"],
+			 "pdf":["assets/pdf/ms_dos_by_azad.pdf","assets/pdf/msdosbyshivambhati.pdf"] 
+			}
+			 
+		]
          }  
  var i = 0;
+ 

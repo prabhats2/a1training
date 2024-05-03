@@ -43,11 +43,7 @@
     width: 39%;
     margin-left: 20PX;
 }
-h4{
 
-padding-left: 180px;
-
-}
     </style>
 
 </head>
@@ -82,7 +78,7 @@ padding-left: 180px;
                     <script>
                         for (i = 0; i < books.col1.length; i++) {
                             document.write(`                                                            
-                            <div class="col-sm-3" style="float:left;">
+                            <div class="col-sm-3" style="float:left;" data-bs-toggle="modal" data-bs-target="#myModal${i}">
                                 <div class="well" style="margin:3px;">
                                 <h5 style="margin-top: 10px;" >${books.col1[i].name}</h5>
                                 <p style="color:black;"> <span style="font-size:20px;">Author</span> -${books.col1[i].Author} ${books.col1[i].ebookAuthor} 
@@ -99,7 +95,7 @@ padding-left: 180px;
       <!-- Modal Header -->
       <div class="modal-header">
       
-        <h4 class="modal-title">  ${books.col1[i].name}</h4>
+        <h4 class="modal-title" align="center">  ${books.col1[i].name}</h4>
         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
       </div>
 
@@ -261,7 +257,7 @@ books.col1[i].ebook.forEach((ebookLink, index) => {
                     y.parentNode.style.display = "none";
                 }
             }
-        } */
+        } 
 
         function myFunction() {
             var input, filter, ul, li, a, i, txtValue;
@@ -279,7 +275,27 @@ books.col1[i].ebook.forEach((ebookLink, index) => {
                     li[i].style.display = "none";
                 }
             }
+        }*/
+
+    function myFunction() {
+        var input, filter, ul, li, a, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        ul = document.getElementById("products1");
+        li = ul.getElementsByTagName("div");
+        for (i = 0; i < li.length; i++) {
+            a = li[i].getElementsByTagName("h5")[0];
+            txtValue = a.textContent || a.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                li[i].style.display = "block"; // Show the div
+                li[i].parentNode.style.float = "left"; // Adjust the float
+            } else {
+                li[i].style.display = "none"; // Hide the div
+            }
         }
+    }
+
+
     </script>
 
 
