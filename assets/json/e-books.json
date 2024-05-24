@@ -70,6 +70,12 @@ let books = { "col1" : [
 			 "ebookAuthor" : ["Code Academy","Noel Kantaris","Peter Freese","Azad","Shivam"],
 			 "ebook" : ["https://amzn.in/d/dTDTKwy", "https://amzn.in/d/76hrmRz", "https://amzn.in/d/4Jzj8A2"],
 			 "pdf":["assets/pdf/ms_dos_by_azad.pdf","assets/pdf/msdosbyshivambhati.pdf"] 
+			},
+			{"name" : "SQL", 
+			 "Author" : ["Virat"],
+			 "ebookAuthor" : ["Code Quickly","Noel Kantaris","Peter Freese","Azad","Shivam"],
+			 "ebook" : ["https://amzn.in/d/g39ktgR", "https://amzn.in/d/76hrmRz", "https://amzn.in/d/4Jzj8A2"],
+			 "pdf":["assets/pdf/ms_dos_by_azad.pdf","assets/pdf/msdosbyshivambhati.pdf"] 
 			}
 			 
 		]
