@@ -1,4 +1,18 @@
 let books = { "col1" : [
+	      
+	       {"name" : "Kubernetes", 
+			 "Author" : ["Mayank Rana","Mayank Rana","Mayank Rana","Mayank Rana"],
+			 "ebookAuthor" : ["Amazon"],
+			 "ebook" : ["https://amzn.in/d/eeW0gGK", "https://amzn.in/d/76hrmRz", "https://amzn.in/d/4Jzj8A2"],
+			 "pdf":["assets/pdf/Kubernetes_Commands_Overview.pdf","assets/pdf/Kubernetes_Manifest_file.pdf" ,
+			        "assets/pdf/Kubernetes_Interview_Questions.pdf","assets/pdf/Kubernetes_Cluster_Setup_Guide.pdf"] 
+			},
+			{"name" : "Docker", 
+            "Author" : ["Mayank Rana"],
+	        "ebookAuthor" : ["Amazon"],
+	        "ebook" : ["https://amzn.in/d/eeW0gGK", "https://amzn.in/d/76hrmRz", "https://amzn.in/d/4Jzj8A2"],
+	        "pdf":["assets/pdf/ms_dos_by_azad.pdf","assets/pdf/msdosbyshivambhati.pdf"] 
+           },
 			{"name" : "MS-DOS", 
 			 "Author" : ["Azad","Shivam"],
 			 "ebookAuthor" : ["LP Editorial Board","Noel Kantaris","Peter Freese","Azad","Shivam"],
