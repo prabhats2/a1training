@@ -101,7 +101,7 @@
                                                         <ul id="pdfList${i}" align="left"></ul>
                                                         <br>
                                                         <ul id="ebookList${i}" align="left"></ul>
-                                                            <img src="assets/images/download1.png" alt="" style="width: 32%;margin-right :15px;margin-top:-4px;" data-bs-toggle="modal" data-bs-target="#myModal"></a>
+                                                            
                                                     </div>
                                                 
                                                     <!-- Modal footer -->
@@ -119,7 +119,7 @@
                                     const listItem = document.createElement('li');
                                     const anchor = document.createElement('a');
                                     anchor.href = pdf;
-                                    anchor.textContent = `Download E-Book of ${books.col1[i].name} - Author: ${books.col1[i].Author[index]}`;
+                                    anchor.textContent = `${books.col1[i].pdf_name[i]} - Author: ${books.col1[i].Author[index]}`;
                                     anchor.target = "_blank";
                                     listItem.appendChild(anchor);
                                     pdfList.appendChild(listItem);
