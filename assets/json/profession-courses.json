@@ -20,9 +20,9 @@ var courses = {
             "course_name": "AWS Training",
             "class": "cloud",
             "pdf": "cloud.pdf",
-            "title": "AWS Training",
+            "title": "AWS_Training",
             "image": "aws.png",
-            "description": "AWS03"
+            "description": "AWS_03"
         },
         {
             "course_name": "GCP",
@@ -30,413 +30,472 @@ var courses = {
             "pdf": "cloud.pdf",
             "title": "GCP",
             "image": "GCP.png",
-            "description": "gcp04"
+            "description": "gcp"
         },
         {
             "course_name": "AZURE Training",
             "class": "cloud",
             "pdf": "cloud.pdf",
-            "title": "AZURE Training",
-            "image": "azure.png"
+            "title": "AZURE_Training",
+            "image": "azure.png",
+                "description": "Azure_Training"
         },
         {
             "course_name": "React Js",
             "class": "Web",
             "pdf": "React Js.pdf",
-            "title": "React Js",
-            "image": "react-js-training.png"
+            "title": "React_Js",
+            "image": "react-js-training.png",
+            "description": "react_js"
         },
         {
             "course_name": "Web Designing",
             "class": "Web",
             "pdf": "Web Designing.pdf",
-            "title": "Web Designing",
-            "image": "web-design.png"
+            "title": "Web_Designing",
+            "image": "web-design.png",
+            "description": "Web_Designing"
         },
         {
             "course_name": "UI/UX",
             "class": "Web",
             "pdf": "UI/UX .pdf",
-            "title": "UI/UX",
-            "image": "UI-Development.jpg"
+            "title": "UI_UX",
+            "image": "UI-Development.jpg",
+            "description": "UI/UX_01"
         },
         {
             "course_name": "PHP Full Stack",
             "class": "Web",
             "pdf": "PHP Full Stack .pdf",
-            "title": "PHP Full Stack",
-            "image": "php-full-stack.jpg"
+            "title": "PHP_Full_Stack",
+            "image": "php-full-stack.jpg",
+            "description": "PHP_Full_Stack"
         },
         {
             "course_name": "PHP Experts",
             "class": "Web",
             "pdf": "PHP Experts .pdf",
-            "title": "PHP Experts",
-            "image": "php-Experts.jpg"
+            "title": "PHP_Experts",
+            "image": "php-Experts.jpg",
+            "description": "PHP_Experts"
         },
         {
             "course_name": "Angular Js",
             "class": "Web",
             "pdf": "Angular.pdf",
-            "title": "Angular Js",
-            "image": "Angular-training.png"
+            "title": "Angular_Js",
+            "image": "Angular-training.png",
+            "description": "Angular_Js"
         },
         {
             "course_name": "Docker Training",
             "class": "Devops",
             "pdf": "Docker Training.pdf",
-            "title": "Docker Certification Training",
-            "image": "Docker-Certification-Training.jpg"
+            "title": "Docker_Certification_Training",
+            "image": "Docker-Certification-Training.jpg",
+            "description": "Docker_Training"
         },
         {
             "course_name": "Ansible Training",
             "class": "Devops",
             "pdf": "Ansible Training.pdf",
-            "title": "Ansible Training",
-            "image": "ansible.png"
+            "title": "Ansible_Training",
+            "image": "ansible.png",
+            "description": "Ansible_Training"
         },
         {
             "course_name": "Devops Training",
             "class": "Devops",
             "pdf": "Devops Training.pdf",
-            "title": "Devops Training",
-            "image": "Devops training.jpg"
+            "title": "Devops_Training",
+            "image": "Devops training.jpg",
+            "description": "Devops_Training"
         },
         {
             "course_name": "Jenkins",
             "class": "Devops",
             "pdf": "Jenkins.pdf",
             "title": "Jenkins",
-            "image": "Jenkins-training.jpg"
+            "image": "Jenkins-training.jpg",
+            "description": "Jenkins_01"
         },
         {
             "course_name": "Terraform",
             "class": "Devops",
             "pdf": "Terraform.pdf",
             "title": "Terraform",
-            "image": "terraform.png"
+            "image": "terraform.png",
+            "description": "Terraform"
         },
         {
             "course_name": "Linux",
             "class": "Devops",
             "pdf": "Linux.pdf",
             "title": "Linux",
-            "image": "Linux.jpg"
+            "image": "Linux.jpg",
+            "description": "Linux"
         },
         {
             "course_name": "Git",
             "class": "Devops",
             "pdf": "Git.pdf",
             "title": "Git",
-            "image": "Git.jpg"
+            "image": "Git.jpg",
+            "description": "Git"
         },
         {
             "course_name": "Shell Scripting",
             "class": "Devops",
             "pdf": "Shell Scripting.pdf",
-            "title": "Shell Scripting",
-            "image": "Shell Scripting.jpg"
+            "title": "Shell_Scripting",
+            "image": "Shell Scripting.jpg",
+            "description": "Shell_Scripting"
         },
         {
             "course_name": "Kubemetes Training",
             "class": "Devops",
             "pdf": "Kubemetes Training.pdf",
-            "title": "Kubemetes Training",
-            "image": "Kubernetes.png"
+            "title": "Kubemetes_Training",
+            "image": "Kubernetes.png",
+            "description": "Kubemetes_Training"
         },
         {
             "course_name": "Python Training",
             "class": "programming",
             "pdf": "Python Training.pdf",
-            "title": "Python Training",
-            "image": "python.png"
+            "title": "Python_Training",
+            "image": "python.png",
+            "description": "gcp04"
         },
         {
             "course_name": "Unix Shell Scripting Training",
             "class": "programming",
             "pdf": "Unix Shell Scripting Training.pdf",
-            "title": "Unix Shell Scripting Training",
-            "image": "unix shell scripting training.png"
+            "title": "Unix_Shell_Scripting_.369Training",
+            "image": "unix shell scripting training.png",
+            "description": "Unix_Shell_Scripting_Training"
         },
         {
             "course_name": "C And C++ Training",
             "class": "programming",
             "pdf": "C And C++ Training.pdf",
-            "title": "C And C++ Training",
-            "image": "c c++.png.png"
+            "title": "C_And_C++_Training",
+            "image": "c c++.png.png",
+            "description": "C_And_C++_Training"
         },
         {
             "course_name": ".NET Training",
             "class": "programming",
             "pdf": "NET Training.pdf",
-            "title": "NET Training",
-            "image": "net-training.png"
+            "title": "NET_Training",
+            "image": "net-training.png",
+            "description": "NET_Training"
         },
         {
             "course_name": "JavaScript Training",
             "class": "programming",
             "pdf": "JavaScript Training.pdf",
-            "title": "JavaScript Training",
-            "image": "javaScript.png.png"
+            "title": "JavaScript_Training",
+            "image": "javaScript.png.png",
+            "description": "JavaScript_Training"
         },
         {
             "course_name": "MySQL Training",
+            
             "class": "Database",
             "pdf": "MySQL Training.pdf",
-            "title": "MySQL Training",
-            "image": "My-Sql.jpg"
+            "title": "MySQL_Training",
+            "image": "My-Sql.jpg",
+            "description": "MySQL_Training"
         },
         {
             "course_name": "SQL Server DBA Training",
             "class": "Database",
             "pdf": "SQL Server DBA Training.pdf",
-            "title": "SQL Server DBA Training",
-            "image": "sql-server-dba-training.png"
+            "title": "SQL_Server_DBA_Training",
+            "image": "sql-server-dba-training.png",
+            "description": "SQL_Server_DBA_Training"
         },
         {
             "course_name": "MongoDB Training",
             "class": "Database",
             "pdf": "MongoDB Training.pdf",
-            "title": "MongoDB Training",
-            "image": "mongodb.jpg"
+            "title": "MongoDB_Training",
+            "image": "mongodb.jpg",
+            "description": "MongoDB_Training"
         },
         {
             "course_name": "Android",
             "class": "mobile",
             "pdf": "Android.pdf",
             "title": "Android",
-            "image": "Android-Training.jpg"
+            "image": "Android-Training.jpg",
+            "description": "Android"
         },
         {
             "course_name": "I-Phone",
             "class": "mobile",
             "pdf": "I-Phone.pdf",
-            "title": "I-Phone",
-            "image": "I-Phone.jpg"
+            "title": "I_Phone",
+            "image": "I-Phone.jpg",
+            "description": "I_Phone"
         },
         {
             "course_name": "Machine Learning Training",
             "class": "Data",
             "pdf": "Machine Learning Training.pdf",
-            "title": "Machine Learning Training",
-            "image": "ai-machine-learning.png"
+            "title": "Machine_Learning_Training",
+            "image": "ai-machine-learning.png",
+            "description": "Machine_Learning_Training"
         },
         {
             "course_name": "Data Science Training",
             "class": "Data",
             "pdf": "Data Science Training.pdf",
-            "title": "Data Science Training",
-            "image": "data-science.jpg"
+            "title": "Data_Science_Training",
+            "image": "data-science.jpg",
+            "description": "Data_Science_Training"
         },
         {
             "course_name": "Deep Learning Course",
             "class": "Data",
             "pdf": "Deep Learning Course.pdf",
-            "title": "Deep Learning Course",
-            "image": "Deep-learning-courses.jpg"
+            "title": "Deep_Learning_Course",
+            "image": "Deep-learning-courses.jpg",
+            "description": "Deep_Learning_Course"
         },
         {
             "course_name": "Artificial Intelligence Course",
             "class": "Data",
             "pdf": "Artificial Intelligence Course.pdf",
-            "title": "Artificial Intelligence Course",
-            "image": "artificial intelligence.jpg"
+            "title": "Artificial_Intelligence_Course",
+            "image": "artificial intelligence.jpg",
+            "description": "Artificial_Intelligence_Course"
         },
         {
             "course_name": "Data Science With Python",
             "class": "Data",
             "pdf": "Data Science With .pdf",
-            "title": "Data Science With Python",
-            "image": "data-science-with-python.png"
+            "title": "Data_Science_With_Python",
+            "image": "data-science-with-python.png",
+            "description": "Data_Science_With_Python"
         },
         {
             "course_name": "Power Bi",
             "class": "MIS",
             "pdf": "Power Bi .pdf",
-            "title": "Power BI",
-            "image": "power-bi.jpg"
+            "title": "Power_BI",
+            "image": "power-bi.jpg",
+            "description": "Power_BI"
         },
         {
             "course_name": "MIS",
             "class": "MIS",
             "pdf": "MIS.pdf",
             "title": "MIS",
-            "image": "mis.png"
+            "image": "mis.png",
+            "description": "MIS"
         },
         {
             "course_name": "Advanced Microsoft Excel",
             "class": "MIS",
             "pdf": "Advanced Microsoft Excel .pdf",
-            "title": "Advanced Microsoft Excel",
-            "image": "microsoft Excel testing.jpg"
+            "title": "Advanced_Microsoft_Excel",
+            "image": "microsoft Excel testing.jpg",
+            "description": "Advanced_Microsoft_Excel"
         },
         {
             "course_name": "Advanced Digital Marketing",
             "class": "Digital",
             "pdf": "Advanced Digital Marketing .pdf",
-            "title": "Advanced Digital Marketing",
-            "image": "advanced-digital-marketing.jpg"
+            "title": "Advanced_Digital_Marketing",
+            "image": "advanced-digital-marketing.jpg",
+            "description": "Advanced_Digital_Marketing"
         },
         {
             "course_name": "Digital Marketing",
             "class": "Digital",
             "pdf": "Digital Marketing.pdf",
-            "title": "Digital Marketing",
-            "image": "digital-marketing.jpg"
+            "title": "Digital_Marketing",
+            "image": "digital-marketing.jpg",
+            "description": "Digital_Marketing"
         },
         {
             "course_name": "6 Weeks Summer Training",
             "class": "Industrial",
             "pdf": "6 Weeks Summer Training.pdf",
-            "title": "6 Weeks Summer Training",
-            "image": "6 week.jpg"
+            "title": "6_Weeks_Summer_Training",
+            "image": "6 week.jpg",
+            "description": "6_Weeks_Summer_Training"
         },
         {
             "course_name": "6 Months Industrial Training",
             "class": "Industrial",
             "pdf": "6 Months Industrial Training.pdf",
-            "title": "6 Months Industrial Training",
-            "image": "6 Months.jpg"
+            "title": "6_Months_Industrial_Training",
+            "image": "6 Months.jpg",
+            "description": "6_Months_Industrial_Training"
         },
         {
             "course_name": "Graphic Designing",
             "class": "Multimedia",
             "pdf": "Graphic Designing.pdf",
-            "title": "Graphic Designing",
-            "image": "Graphic-Design.jpg"
+            "title": "Graphic_Designing",
+            "image": "Graphic-Design.jpg",
+            "description": "Graphic_Designing"
         },
         {
             "course_name": "Motion Graphic Course",
             "class": "Multimedia",
             "pdf": "Motion Graphic Course.pdf",
-            "title": "Motion Graphic Course",
-            "image": "motion.jpg"
+            "title": "Motion_Graphic_Course",
+            "image": "motion.jpg",
+            "description": "Motion_Graphic_Course"
         },
         {
             "course_name": "Multimedia & Animation",
             "class": "Multimedia",
             "pdf": "Multimedia & Animation.pdf",
-            "title": "Multimedia & Animation",
-            "image": "multimedia-ana animation diploma.jpg"
+            "title": "Multimedia_&_Animation",
+            "image": "multimedia-ana animation diploma.jpg",
+            "description": "Multimedia_&_Animation"
         },
         {
             "course_name": "Graphic Motion Pro Course",
             "class": "Multimedia",
             "pdf": "Graphic Motion Pro Course.pdf",
-            "title": "Graphic Motion Pro Course",
-            "image": "graphic motion pro course.jpg"
+            "title": "Graphic_Motion_Pro_Course",
+            "image": "graphic motion pro course.jpg",
+            "description": "Graphic_Motion_Pro_Course"
         },
         {
             "course_name": "Multimedia & Animation (Diploma)",
             "class": "Multimedia",
             "pdf": "Multimedia & Animation (Diploma).pdf",
-            "title": "Multimedia & Animation (Diploma)",
-            "image": "Animation.jpg"
+            "title": "Multimedia_&_Animation_(Diploma)",
+            "image": "Animation.jpg",
+            "description": "Multimedia_&_Animation_(Diploma)"
         },
         {
             "course_name": "Videograpy Course",
             "class": "Multimedia",
             "pdf": "Videograpy Course.pdf",
-            "title": "Videograpy Course",
-            "image": "Videograpy course.jpg"
+            "title": "Videograpy_Course",
+            "image": "Videograpy course.jpg",
+            "description": "Videograpy_Course"
         },
         {
             "course_name": "Scriptwriting & Story Boarding",
             "class": "Multimedia",
             "pdf": "Scriptwriting & Story Boarding.pdf",
-            "title": "Scriptwriting & Story Boarding",
-            "image": "scriptwriting.png"
+            "title": "Scriptwriting_&_Story_Boarding",
+            "image": "scriptwriting.png",
+            "description": "Scriptwriting_&_Story_Boarding"
         },
         {
             "course_name": "Film Making",
             "class": "Multimedia",
             "pdf": "Film Making.pdf",
-            "title": "Film Making",
-            "image": "Film Making.jpg"
+            "title": "Film_Making",
+            "image": "Film Making.jpg",
+            "description": "Film_Making"
         },
         {
             "course_name": "Graphic Designing Pro",
             "class": "Multimedia",
             "pdf": "Graphic Designing Pro.pdf",
-            "title": "Graphic Designing Pro",
-            "image": "Graphic Designing Pro.jpg"
+            "title": "Graphic_Designing_Pro",
+            "image": "Graphic Designing Pro.jpg",
+            "description": "Graphic_Designing_Pro"
         },
         {
             "course_name": "Manual + Selenium",
             "class": "Software",
             "pdf": "Manual + Selenium.pdf",
-            "title": "Manual + Selenium",
-            "image": "Manual + Selenium.jpg"
+            "title": "Manual_+_Selenium",
+            "image": "Manual + Selenium.jpg",
+            "description": "Manual_+_Selenium"
         },
         {
             "course_name": "Full Stack QA",
             "class": "Software",
             "pdf": "Full Stack QA.pdf",
-            "title": "Full Stack QA",
-            "image": "Full Stack QA.png"
+            "title": "Full_Stack_QA",
+            "image": "Full Stack QA.png",
+            "description": "Full_Stack_QA"
         },
         {
             "course_name": "Java With Selenium ",
             "class": "Software",
             "pdf": "Java With Selenium .pdf",
-            "title": "Java With Selenium ",
-            "image": "java with selenium.jpg"
+            "title": "Java_With_Selenium ",
+            "image": "java with selenium.jpg",
+            "description": "Java_With_Selenium "
         },
         {
             "course_name": "REST Assured API",
             "class": "Software",
             "pdf": "REST Assured API.pdf",
-            "title": "REST Assured API",
-            "image": "Rest Assured Api.jpg"
+            "title": "REST_Assured_API",
+            "image": "Rest Assured Api.jpg",
+            "description": "REST_Assured_API"
         },
         {
             "course_name": "Appium Testing",
             "class": "Software",
             "pdf": "Appium Testing.pdf",
-            "title": "Appium Testing",
-            "image": "Appium testing.png"
+            "title": "Appium_Testing",
+            "image": "Appium testing.png",
+            "description": "Appium_Testing"
         },
         {
             "course_name": "API Testing",
             "class": "Software",
             "pdf": "API Testing.pdf",
-            "title": "API Testing",
-            "image": "api testing.jpg"
+            "title": "API_Testing",
+            "image": "api_testing.jpg",
+            "description": "API_Testing"
         },
         {
             "course_name": "Manual Testing",
             "class": "Software",
             "pdf": "Manual Testing.pdf",
-            "title": "Manual Testing",
-            "image": "manual testing.jpg"
+            "title": "Manual_Testing",
+            "image": "manual testing.jpg",
+            "description": "Manual_Testing"
         },
         {
             "course_name": "Primavera P6 Testing",
             "class": "Project",
             "pdf": "Primavera P6 Testing.pdf",
-            "title": "Primavera P6 Testing",
-            "image": "Primavera P6 Testing.jpg"
+            "title": "Primavera_P6_Testing",
+            "image": "Primavera P6 Testing.jpg",
+            "description": "Primavera_P6_Testing"
         },
         {
             "course_name": "Agile Testing",
             "class": "Project",
             "pdf": "Agile Testing.pdf",
-            "title": "Agile Testing",
-            "image": "Agile-Testing.jpg"
+            "title": "Agile_Testing",
+            "image": "Agile-Testing.jpg",
+            "description": "Agile_Testing"
         },
         {
             "course_name": "Microsoft Excel Training",
             "class": "Project",
             "pdf": "Microsoft Excel Training.pdf",
-            "title": "Microsoft Excel Training",
-            "image": "Excel-Training.jpg"
+            "title": "Microsoft_Excel_Training",
+            "image": "Excel-Training.jpg",
+            "description": "Microsoft_Excel_Training"
         },
         {
             "course_name": "Scrum Master Training",
             "class": "Project",
             "pdf": "Scrum Master Training.pdf",
-            "title": "Scrum Master Training",
-            "image": "Scrum Master Traing.jpg"
+            "title": "Scrum_Master_Training",
+            "image": "Scrum Master Traing.jpg",
+            "description": "Scrum_Master_Training"
         }
     ]
 }  

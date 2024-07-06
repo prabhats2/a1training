@@ -48,6 +48,15 @@ let books = { "col1" : [
 			 "pdf":["assets/pdf/ms_dos_by_azad.pdf","assets/pdf/msdosbyshivambhati.pdf"] ,
 			 "pdf_name":["Ms Dos ","Ms Dos "]	 
 			}, 
+			//terraform
+			{"name" : "Terraform", 
+			"Author" : ["Azad","Shivam"],
+			"ebookAuthor" : ["Code Academy","Noel Kantaris","Peter Freese","Azad","Shivam"],
+			"ebook" : ["https://amzn.in/d/dTDTKwy", "https://amzn.in/d/76hrmRz", "https://amzn.in/d/4Jzj8A2"],
+			"ebook_name" : ["Guide to MS DOS", "MS-DOS 6 Explained (BP S.): 341", "MS-DOS Up to and Including Version 6.2"],
+			"pdf":["assets/pdf/ms_dos_by_azad.pdf","assets/pdf/msdosbyshivambhati.pdf"] ,
+			"pdf_name":["Ms Dos ","Ms Dos "]	 
+		   }, 
 					  //AWS 
 			{"name" : "AWS", 
 			 "Author" : ["Azad","Shivam"],
