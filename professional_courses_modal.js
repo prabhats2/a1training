@@ -7,7 +7,7 @@ for (let i = 0; i < courses.col1.length; i++) {
             <!-- what is mean stack -->
             The MEAN stack is a popular technology stack used for building full-stack JavaScript applications. 
             The acronym "MEAN" stands for MongoDB, Express.js, Angular, and Node.js. Here's a brief overview of each component:
-            
+            <br>
             <strong>MongoDB:</strong> A NoSQL database that uses a document-oriented data model. It stores data in flexible, JSON-like documents, 
             which makes it easy to work with and scale.<br>
             
@@ -61,7 +61,11 @@ for (let i = 0; i < courses.col1.length; i++) {
     }
 
 
+// Example text with underscores
+let textWithUnderscores = courses.col1[i].title;
 
+// Remove underscores using replace() with regex
+let textWithoutUnderscores = textWithUnderscores.replace(/_/g, ' ');
 
     document.write(`
     <div class="modal" id="${courses.col1[i].title}">
@@ -69,7 +73,7 @@ for (let i = 0; i < courses.col1.length; i++) {
             <div class="modal-content">
                 <!-- Modal Header -->
                 <div class="modal-header">
-                    <h4 class="modal-title">${courses.col1[i].title}</h4>
+                    <h4 class="modal-title">${textWithoutUnderscores}</h4>
                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
                 <!-- Modal body -->
