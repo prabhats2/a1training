@@ -6,7 +6,12 @@ var courses = {
             "pdf": "git ebook.pdf",
             "title": "MEAN_Stack",
             "image": "Mean Stack.png",
-            "description": "MEAN_Stack01"
+            "description": "MEAN_Stack01",
+            "download": "course_1",
+           "interview_pdf" : ["https://amzn.in/d/eeW0gGK", "https://amzn.in/d/76hrmRz", "https://amzn.in/d/4Jzj8A2"],
+           "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["Mean Stack Syllabus "]	 
+
         },
         {
             "course_name": "MERN Stack",
@@ -14,7 +19,9 @@ var courses = {
             "pdf": "mern.pdf",
             "title": "MERN_Stack",
             "image": "Mern Stack.jpg",
-            "description": "MERN_Stack02"
+            "description": "MERN_Stack02",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["Mern Stack Syllabus "]	
         },
         {
             "course_name": "AWS Training",
@@ -22,7 +29,9 @@ var courses = {
             "pdf": "cloud.pdf",
             "title": "AWS_Training",
             "image": "aws.png",
-            "description": "AWS_03"
+            "description": "AWS_03",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["AWS Training Syllabus "]	
         },
         {
             "course_name": "GCP",
@@ -30,7 +39,9 @@ var courses = {
             "pdf": "cloud.pdf",
             "title": "GCP",
             "image": "GCP.png",
-            "description": "gcp"
+            "description": "gcp",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["GCP Syllabus "]	
         },
         {
             "course_name": "AZURE Training",
@@ -38,7 +49,9 @@ var courses = {
             "pdf": "cloud.pdf",
             "title": "AZURE_Training",
             "image": "azure.png",
-                "description": "Azure_Training"
+             "description": "Azure_Training",
+             "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+            "syllabus_name":["AZURE Training Syllabus "]	
         },
         {
             "course_name": "React Js",
@@ -46,7 +59,9 @@ var courses = {
             "pdf": "React Js.pdf",
             "title": "React_Js",
             "image": "react-js-training.png",
-            "description": "react_js"
+            "description": "react_js",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["React Js Syllabus "]	
         },
         {
             "course_name": "Web Designing",
@@ -54,7 +69,9 @@ var courses = {
             "pdf": "Web Designing.pdf",
             "title": "Web_Designing",
             "image": "web-design.png",
-            "description": "Web_Designing"
+            "description": "Web_Designing",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["Web Designing Syllabus "]	
         },
         {
             "course_name": "UI/UX",
@@ -62,7 +79,9 @@ var courses = {
             "pdf": "UI/UX .pdf",
             "title": "UI_UX",
             "image": "UI-Development.jpg",
-            "description": "UI/UX_01"
+            "description": "UI/UX_01",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["UI/UX Syllabus "]	
         },
         {
             "course_name": "PHP Full Stack",
@@ -70,7 +89,9 @@ var courses = {
             "pdf": "PHP Full Stack .pdf",
             "title": "PHP_Full_Stack",
             "image": "php-full-stack.jpg",
-            "description": "PHP_Full_Stack"
+            "description": "PHP_Full_Stack",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["PHP Full Stack Syllabus "]	
         },
         {
             "course_name": "PHP Experts",
@@ -78,7 +99,9 @@ var courses = {
             "pdf": "PHP Experts .pdf",
             "title": "PHP_Experts",
             "image": "php-Experts.jpg",
-            "description": "PHP_Experts"
+            "description": "PHP_Experts",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["PHP Experts Syllabus "]	
         },
         {
             "course_name": "Angular Js",
@@ -86,7 +109,9 @@ var courses = {
             "pdf": "Angular.pdf",
             "title": "Angular_Js",
             "image": "Angular-training.png",
-            "description": "Angular_Js"
+            "description": "Angular_Js",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["Angular Js Syllabus "]	
         },
         {
             "course_name": "Docker Training",
@@ -94,7 +119,9 @@ var courses = {
             "pdf": "Docker Training.pdf",
             "title": "Docker_Certification_Training",
             "image": "Docker-Certification-Training.jpg",
-            "description": "Docker_Training"
+            "description": "Docker_Training",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["Docker Training Syllabus "]	
         },
         {
             "course_name": "Ansible Training",
@@ -102,7 +129,9 @@ var courses = {
             "pdf": "Ansible Training.pdf",
             "title": "Ansible_Training",
             "image": "ansible.png",
-            "description": "Ansible_Training"
+            "description": "Ansible_Training",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["Ansible Training Syllabus "]	
         },
         {
             "course_name": "Devops Training",
@@ -110,7 +139,9 @@ var courses = {
             "pdf": "Devops Training.pdf",
             "title": "Devops_Training",
             "image": "Devops training.jpg",
-            "description": "Devops_Training"
+            "description": "Devops_Training",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["Devops Training Syllabus "]	
         },
         {
             "course_name": "Jenkins",
@@ -118,7 +149,9 @@ var courses = {
             "pdf": "Jenkins.pdf",
             "title": "Jenkins",
             "image": "Jenkins-training.jpg",
-            "description": "Jenkins_01"
+            "description": "Jenkins_01",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["Jenkins Syllabus "]	
         },
         {
             "course_name": "Terraform",
@@ -126,7 +159,9 @@ var courses = {
             "pdf": "Terraform.pdf",
             "title": "Terraform",
             "image": "terraform.png",
-            "description": "Terraform"
+            "description": "Terraform",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["Terraform Syllabus "]	
         },
         {
             "course_name": "Linux",
@@ -134,7 +169,9 @@ var courses = {
             "pdf": "Linux.pdf",
             "title": "Linux",
             "image": "Linux.jpg",
-            "description": "Linux"
+            "description": "Linux",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["Linux Syllabus "]	
         },
         {
             "course_name": "Git",
@@ -142,7 +179,9 @@ var courses = {
             "pdf": "Git.pdf",
             "title": "Git",
             "image": "Git.jpg",
-            "description": "Git"
+            "description": "Git",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["Git Syllabus "]	
         },
         {
             "course_name": "Shell Scripting",
@@ -150,7 +189,9 @@ var courses = {
             "pdf": "Shell Scripting.pdf",
             "title": "Shell_Scripting",
             "image": "Shell Scripting.jpg",
-            "description": "Shell_Scripting"
+            "description": "Shell_Scripting",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["Shell Scripting Syllabus "]	
         },
         {
             "course_name": "Kubemetes Training",
@@ -158,7 +199,9 @@ var courses = {
             "pdf": "Kubemetes Training.pdf",
             "title": "Kubemetes_Training",
             "image": "Kubernetes.png",
-            "description": "Kubemetes_Training"
+            "description": "Kubemetes_Training",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["Kubemetes Trainingk Syllabus "]	
         },
         {
             "course_name": "Python Training",
@@ -166,7 +209,9 @@ var courses = {
             "pdf": "Python Training.pdf",
             "title": "Python_Training",
             "image": "python.png",
-            "description": "gcp04"
+            "description": "gcp04",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["Python Training Syllabus "]	
         },
         {
             "course_name": "Unix Shell Scripting Training",
@@ -174,7 +219,9 @@ var courses = {
             "pdf": "Unix Shell Scripting Training.pdf",
             "title": "Unix_Shell_Scripting_.369Training",
             "image": "unix shell scripting training.png",
-            "description": "Unix_Shell_Scripting_Training"
+            "description": "Unix_Shell_Scripting_Training",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["Unix Shell Scripting Training Syllabus "]	
         },
         {
             "course_name": "C And C++ Training",
@@ -182,7 +229,9 @@ var courses = {
             "pdf": "C And C++ Training.pdf",
             "title": "C_And_C++_Training",
             "image": "c c++.png.png",
-            "description": "C_And_C++_Training"
+            "description": "C_And_C++_Training",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["C And C++ Training Syllabus "]	
         },
         {
             "course_name": ".NET Training",
@@ -190,7 +239,9 @@ var courses = {
             "pdf": "NET Training.pdf",
             "title": "NET_Training",
             "image": "net-training.png",
-            "description": "NET_Training"
+            "description": "NET_Training",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":[".NET Training Syllabus "]	
         },
         {
             "course_name": "JavaScript Training",
@@ -198,7 +249,9 @@ var courses = {
             "pdf": "JavaScript Training.pdf",
             "title": "JavaScript_Training",
             "image": "javaScript.png.png",
-            "description": "JavaScript_Training"
+            "description": "JavaScript_Training",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["JavaScript Training Syllabus "]	
         },
         {
             "course_name": "MySQL Training",
@@ -207,7 +260,9 @@ var courses = {
             "pdf": "MySQL Training.pdf",
             "title": "MySQL_Training",
             "image": "My-Sql.jpg",
-            "description": "MySQL_Training"
+            "description": "MySQL_Training",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["MySQL Training Syllabus "]	
         },
         {
             "course_name": "SQL Server DBA Training",
@@ -215,7 +270,9 @@ var courses = {
             "pdf": "SQL Server DBA Training.pdf",
             "title": "SQL_Server_DBA_Training",
             "image": "sql-server-dba-training.png",
-            "description": "SQL_Server_DBA_Training"
+            "description": "SQL_Server_DBA_Training",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["SQL Server DBA Training Syllabus "]	
         },
         {
             "course_name": "MongoDB Training",
@@ -223,7 +280,9 @@ var courses = {
             "pdf": "MongoDB Training.pdf",
             "title": "MongoDB_Training",
             "image": "mongodb.jpg",
-            "description": "MongoDB_Training"
+            "description": "MongoDB_Training",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["MongoDB Training Syllabus "]	
         },
         {
             "course_name": "Android",
@@ -231,7 +290,9 @@ var courses = {
             "pdf": "Android.pdf",
             "title": "Android",
             "image": "Android-Training.jpg",
-            "description": "Android"
+            "description": "Android",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["Android Syllabus "]	
         },
         {
             "course_name": "I-Phone",
@@ -239,7 +300,9 @@ var courses = {
             "pdf": "I-Phone.pdf",
             "title": "I_Phone",
             "image": "I-Phone.jpg",
-            "description": "I_Phone"
+            "description": "I_Phone",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["I-Phone Syllabus "]	
         },
         {
             "course_name": "Machine Learning Training",
@@ -247,7 +310,9 @@ var courses = {
             "pdf": "Machine Learning Training.pdf",
             "title": "Machine_Learning_Training",
             "image": "ai-machine-learning.png",
-            "description": "Machine_Learning_Training"
+            "description": "Machine_Learning_Training",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["Machine Learning TrainingSyllabus "]	
         },
         {
             "course_name": "Data Science Training",
@@ -255,7 +320,9 @@ var courses = {
             "pdf": "Data Science Training.pdf",
             "title": "Data_Science_Training",
             "image": "data-science.jpg",
-            "description": "Data_Science_Training"
+            "description": "Data_Science_Training",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["Data Science Training Syllabus "]	
         },
         {
             "course_name": "Deep Learning Course",
@@ -263,7 +330,9 @@ var courses = {
             "pdf": "Deep Learning Course.pdf",
             "title": "Deep_Learning_Course",
             "image": "Deep-learning-courses.jpg",
-            "description": "Deep_Learning_Course"
+            "description": "Deep_Learning_Course",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["Deep Learning Course Syllabus "]	
         },
         {
             "course_name": "Artificial Intelligence Course",
@@ -271,7 +340,9 @@ var courses = {
             "pdf": "Artificial Intelligence Course.pdf",
             "title": "Artificial_Intelligence_Course",
             "image": "artificial intelligence.jpg",
-            "description": "Artificial_Intelligence_Course"
+            "description": "Artificial_Intelligence_Course",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["Artificial Intelligence Course "]	
         },
         {
             "course_name": "Data Science With Python",
@@ -279,7 +350,9 @@ var courses = {
             "pdf": "Data Science With .pdf",
             "title": "Data_Science_With_Python",
             "image": "data-science-with-python.png",
-            "description": "Data_Science_With_Python"
+            "description": "Data_Science_With_Python",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["Data Science With Python Syllabus "]	
         },
         {
             "course_name": "Power Bi",
@@ -287,7 +360,9 @@ var courses = {
             "pdf": "Power Bi .pdf",
             "title": "Power_BI",
             "image": "power-bi.jpg",
-            "description": "Power_BI"
+            "description": "Power_BI",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["Power Bi "]	
         },
         {
             "course_name": "MIS",
@@ -295,7 +370,9 @@ var courses = {
             "pdf": "MIS.pdf",
             "title": "MIS",
             "image": "mis.png",
-            "description": "MIS"
+            "description": "MIS",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["MIS Syllabus "]	
         },
         {
             "course_name": "Advanced Microsoft Excel",
@@ -303,7 +380,9 @@ var courses = {
             "pdf": "Advanced Microsoft Excel .pdf",
             "title": "Advanced_Microsoft_Excel",
             "image": "microsoft Excel testing.jpg",
-            "description": "Advanced_Microsoft_Excel"
+            "description": "Advanced_Microsoft_Excel",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["Advanced Microsoft Excel Syllabus "]	
         },
         {
             "course_name": "Advanced Digital Marketing",
@@ -311,7 +390,9 @@ var courses = {
             "pdf": "Advanced Digital Marketing .pdf",
             "title": "Advanced_Digital_Marketing",
             "image": "advanced-digital-marketing.jpg",
-            "description": "Advanced_Digital_Marketing"
+            "description": "Advanced_Digital_Marketing",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["Advanced Digital Marketing Syllabus "]	
         },
         {
             "course_name": "Digital Marketing",
@@ -319,7 +400,9 @@ var courses = {
             "pdf": "Digital Marketing.pdf",
             "title": "Digital_Marketing",
             "image": "digital-marketing.jpg",
-            "description": "Digital_Marketing"
+            "description": "Digital_Marketing",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["Digital Marketing Syllabus "]	
         },
         {
             "course_name": "6 Weeks Summer Training",
@@ -327,7 +410,9 @@ var courses = {
             "pdf": "6 Weeks Summer Training.pdf",
             "title": "6_Weeks_Summer_Training",
             "image": "6 week.jpg",
-            "description": "6_Weeks_Summer_Training"
+            "description": "6_Weeks_Summer_Training",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["6 Weeks Summer Training Syllabus "]	
         },
         {
             "course_name": "6 Months Industrial Training",
@@ -335,7 +420,9 @@ var courses = {
             "pdf": "6 Months Industrial Training.pdf",
             "title": "6_Months_Industrial_Training",
             "image": "6 Months.jpg",
-            "description": "6_Months_Industrial_Training"
+            "description": "6_Months_Industrial_Training",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["6 Months Industrial Training Syllabus "]	
         },
         {
             "course_name": "Graphic Designing",
@@ -343,7 +430,9 @@ var courses = {
             "pdf": "Graphic Designing.pdf",
             "title": "Graphic_Designing",
             "image": "Graphic-Design.jpg",
-            "description": "Graphic_Designing"
+            "description": "Graphic_Designing",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["Graphic Designing Syllabus "]	
         },
         {
             "course_name": "Motion Graphic Course",
@@ -351,7 +440,9 @@ var courses = {
             "pdf": "Motion Graphic Course.pdf",
             "title": "Motion_Graphic_Course",
             "image": "motion.jpg",
-            "description": "Motion_Graphic_Course"
+            "description": "Motion_Graphic_Course",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["Motion Graphic Course Syllabus "]	
         },
         {
             "course_name": "Multimedia & Animation",
@@ -359,7 +450,9 @@ var courses = {
             "pdf": "Multimedia & Animation.pdf",
             "title": "Multimedia_&_Animation",
             "image": "multimedia-ana animation diploma.jpg",
-            "description": "Multimedia_&_Animation"
+            "description": "Multimedia_&_Animation",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["Multimedia & Animation Syllabus "]	
         },
         {
             "course_name": "Graphic Motion Pro Course",
@@ -367,15 +460,19 @@ var courses = {
             "pdf": "Graphic Motion Pro Course.pdf",
             "title": "Graphic_Motion_Pro_Course",
             "image": "graphic motion pro course.jpg",
-            "description": "Graphic_Motion_Pro_Course"
+            "description": "Graphic_Motion_Pro_Course",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["Graphic Motion Pro CourseSyllabus "]	
         },
         {
-            "course_name": "Multimedia & Animation (Diploma)",
+            "course_name": "Multimedia & Animation ",
             "class": "Multimedia",
             "pdf": "Multimedia & Animation (Diploma).pdf",
             "title": "Multimedia_&_Animation_(Diploma)",
             "image": "Animation.jpg",
-            "description": "Multimedia_&_Animation_(Diploma)"
+            "description": "Multimedia_&_Animation_(Diploma)",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["Multimedia & Animation (Diploma) Syllabus "]	
         },
         {
             "course_name": "Videograpy Course",
@@ -383,7 +480,9 @@ var courses = {
             "pdf": "Videograpy Course.pdf",
             "title": "Videograpy_Course",
             "image": "Videograpy course.jpg",
-            "description": "Videograpy_Course"
+            "description": "Videograpy_Course",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["Videograpy Course Syllabus "]	
         },
         {
             "course_name": "Scriptwriting & Story Boarding",
@@ -391,7 +490,9 @@ var courses = {
             "pdf": "Scriptwriting & Story Boarding.pdf",
             "title": "Scriptwriting_&_Story_Boarding",
             "image": "scriptwriting.png",
-            "description": "Scriptwriting_&_Story_Boarding"
+            "description": "Scriptwriting_&_Story_Boarding",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["Scriptwriting & Story Boarding Syllabus "]	
         },
         {
             "course_name": "Film Making",
@@ -399,7 +500,9 @@ var courses = {
             "pdf": "Film Making.pdf",
             "title": "Film_Making",
             "image": "Film Making.jpg",
-            "description": "Film_Making"
+            "description": "Film_Making",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["Film Making Syllabus "]	
         },
         {
             "course_name": "Graphic Designing Pro",
@@ -407,7 +510,9 @@ var courses = {
             "pdf": "Graphic Designing Pro.pdf",
             "title": "Graphic_Designing_Pro",
             "image": "Graphic Designing Pro.jpg",
-            "description": "Graphic_Designing_Pro"
+            "description": "Graphic_Designing_Pro",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["Graphic Designing Pro Syllabus "]	
         },
         {
             "course_name": "Manual + Selenium",
@@ -415,7 +520,9 @@ var courses = {
             "pdf": "Manual + Selenium.pdf",
             "title": "Manual_+_Selenium",
             "image": "Manual + Selenium.jpg",
-            "description": "Manual_+_Selenium"
+            "description": "Manual_+_Selenium",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["Manual + Selenium Syllabus "]	
         },
         {
             "course_name": "Full Stack QA",
@@ -423,7 +530,9 @@ var courses = {
             "pdf": "Full Stack QA.pdf",
             "title": "Full_Stack_QA",
             "image": "Full Stack QA.png",
-            "description": "Full_Stack_QA"
+            "description": "Full_Stack_QA",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["Full Stack QA Syllabus "]	
         },
         {
             "course_name": "Java With Selenium ",
@@ -431,7 +540,9 @@ var courses = {
             "pdf": "Java With Selenium .pdf",
             "title": "Java_With_Selenium ",
             "image": "java with selenium.jpg",
-            "description": "Java_With_Selenium "
+            "description": "Java_With_Selenium ",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["Java With Selenium Syllabus "]	
         },
         {
             "course_name": "REST Assured API",
@@ -439,7 +550,9 @@ var courses = {
             "pdf": "REST Assured API.pdf",
             "title": "REST_Assured_API",
             "image": "Rest Assured Api.jpg",
-            "description": "REST_Assured_API"
+            "description": "REST_Assured_API",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["REST Assured API Syllabus "]	
         },
         {
             "course_name": "Appium Testing",
@@ -447,7 +560,9 @@ var courses = {
             "pdf": "Appium Testing.pdf",
             "title": "Appium_Testing",
             "image": "Appium testing.png",
-            "description": "Appium_Testing"
+            "description": "Appium_Testing",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["Appium Testing Syllabus "]	
         },
         {
             "course_name": "API Testing",
@@ -455,7 +570,9 @@ var courses = {
             "pdf": "API Testing.pdf",
             "title": "API_Testing",
             "image": "api_testing.jpg",
-            "description": "API_Testing"
+            "description": "API_Testing",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["API Testing Syllabus "]	
         },
         {
             "course_name": "Manual Testing",
@@ -463,7 +580,9 @@ var courses = {
             "pdf": "Manual Testing.pdf",
             "title": "Manual_Testing",
             "image": "manual testing.jpg",
-            "description": "Manual_Testing"
+            "description": "Manual_Testing",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["Manual Testing Syllabus "]	
         },
         {
             "course_name": "Primavera P6 Testing",
@@ -471,7 +590,9 @@ var courses = {
             "pdf": "Primavera P6 Testing.pdf",
             "title": "Primavera_P6_Testing",
             "image": "Primavera P6 Testing.jpg",
-            "description": "Primavera_P6_Testing"
+            "description": "Primavera_P6_Testing",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["Primavera P6 Testing Syllabus "]	
         },
         {
             "course_name": "Agile Testing",
@@ -479,7 +600,9 @@ var courses = {
             "pdf": "Agile Testing.pdf",
             "title": "Agile_Testing",
             "image": "Agile-Testing.jpg",
-            "description": "Agile_Testing"
+            "description": "Agile_Testing",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["MAgile Testing Syllabus "]	
         },
         {
             "course_name": "Microsoft Excel Training",
@@ -487,7 +610,9 @@ var courses = {
             "pdf": "Microsoft Excel Training.pdf",
             "title": "Microsoft_Excel_Training",
             "image": "Excel-Training.jpg",
-            "description": "Microsoft_Excel_Training"
+            "description": "Microsoft_Excel_Training",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["Microsoft Excel Training Syllabus "]	
         },
         {
             "course_name": "Scrum Master Training",
@@ -495,7 +620,9 @@ var courses = {
             "pdf": "Scrum Master Training.pdf",
             "title": "Scrum_Master_Training",
             "image": "Scrum Master Traing.jpg",
-            "description": "Scrum_Master_Training"
+            "description": "Scrum_Master_Training",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["Scrum Master Training Syllabus "]	
         }
     ]
 }  

@@ -1,19 +1,161 @@
-var courses = { "col1" : [ 
-   
-    { "course_name": "MS Office", "class": "soon","pdf":"MS Office.pdf","title":"MS Office", "image": "ms-office.jpg" },
-    { "course_name": "Coral Draw", "class": "soon","pdf":"Coral Draw.pdf","title":"Coral Draw","image": "coral-draw.png" },
-    { "course_name": "Tally", "class": "att","pdf":"Tally.pdf","title":"Tally","image": "tally.png" },
-    { "course_name": "Abode Photoshop", "class": "att","pdf":"Abode Photoshop.pdf","title":"Abode Photoshop","image": "photo-shop.png" },
-    { "course_name": "Adobe Illustrator", "class": "imp","pdf":"Adobe Illustrator.pdf","title":"Adobe Illustrator","image": "illustrator.png" },
-    { "course_name": "Web Development", "class": "att","pdf":"Web Development.pdf","title":"Web Development","image": "web-development.png" },
-    { "course_name": "Game Development ", "class": "imp","pdf":"Game Development.pdf","title":"Game Development","image": "game-development.png" },
-    { "course_name": "Robotics", "class": "soon","pdf":"Robotics.pdf","title":"Robotics","image": "robotics.png" },
-    { "course_name": "Python", "class": "soon","pdf":"Python.pdf","title":"Python","image": "python.png" },
-    { "course_name": "Java", "class": "att","pdf":"Java.pdf","title":"Java","image": "java.png" },
-    { "course_name": "C/C++ Programming", "class": "att","pdf":"C/C++ Programming.pdf","title":"C/C++ Programming","image": "cc+.png" },
-    { "course_name": "Canva Designing", "class": "att","pdf":"Canva Designing.pdf","title":"Canva Designing","image": "canva.png" },
-    { "course_name": "Database", "class": "att","pdf":"Database.pdf","title":"Database","image": "database.png" },
-    { "course_name": "Typing", "class": "imp","pdf":"Typing.pdf","title":"Typing","image": "typing.png" }
-]
+var courses = {
+    "col1": [
+        {
+            "course_name": "MS Office",
+            "class": "soon",
+            "pdf": "MS Office.pdf",
+            "title": "MS_Office",
+            "image": "ms-office.jpg",
+            "download": "course_1",
+            "description": "MS_Office_Course",
+            "syllabus" : ["assets/pdf/junior_geeks/ms_office.pdf"],
+           "syllabus_name":["MS Office Course Syllabus "]
+        },	
+
+
+        {
+            "course_name": "Corel Draw",
+            "class": "soon",
+            "pdf": "Corel Draw.pdf",
+            "title": "Corel Draw",
+            "image": "coral-draw.png",
+            "download": "course_1",
+            "description": "Corel_Draw_Course",
+            "syllabus" : ["assets/pdf/junior_geeks/corel_draw.pdf"],
+           "syllabus_name":["Coral Draw Syllabus "]
+        },
+        {
+            "course_name": "Tally",
+            "class": "att",
+            "pdf": "Tally.pdf",
+            "title": "Tally",
+            "image": "tally.png",
+            "download": "course_1",
+            "description": "Tally_Course",
+            "syllabus" : ["assets/pdf/junior_geeks/tally.pdf"],
+           "syllabus_name":["Tally Syllabus "]
+        },
+        {
+            "course_name": "Adobe Photoshop",
+            "class": "att",
+            "pdf": "Abode_Photoshop.pdf",
+            "title": "Abode Photoshop",
+            "image": "photo-shop.png",
+            "download": "course_1",
+            "description": "Abode_Photoshop_Course",
+            "syllabus" : ["assets/syllabus/Abode_Photoshop.pdf"],
+           "syllabus_name":["Abode Photoshop Syllabus "]
+        },
+        {
+            "course_name": "Adobe Illustrator",
+            "class": "imp",
+            "pdf": "Adobe Illustrator.pdf",
+            "title": "Adobe Illustrator",
+            "image": "illustrator.png",
+            "download": "course_1",
+            "description": "Adobe_Illustrator_Course",
+            "syllabus" : ["assets/syllabus/Adobe_Illustrator.pdf"],
+           "syllabus_name":["Adobe Illustrator Syllabus "]
+        },
+        {
+            "course_name": "Web Development",
+            "class": "att",
+            "pdf": "Web Development.pdf",
+            "title": "Web Development",
+            "image": "web-development.png",
+            "download": "course_1",
+            "description": "Web_Development_Course",
+            "syllabus" : ["assets/syllabus/Web_Development.pdf"],
+           "syllabus_name":["MS Office Course Syllabus "]
+        },
+        {
+            "course_name": "Game Development ",
+            "class": "imp",
+            "pdf": "Game Development.pdf",
+            "title": "Game Development",
+            "image": "game-development.png",
+            "download": "course_1",
+            "description": "Game_DevelopmentCourse",
+            "syllabus" : ["assets/syllabus/Game_Development.pdf"],
+           "syllabus_name":["Game Development Syllabus "]
+        },
+        {
+            "course_name": "Robotics",
+            "class": "soon",
+            "pdf": "Robotics.pdf",
+            "title": "Robotics",
+            "image": "robotics.png",
+            "download": "course_1",
+            "description": "Robotics_Course",
+            "syllabus" : ["assets/syllabus/Robotics.pdf"],
+           "syllabus_name":["Robotics Syllabus "]
+        },
+        {
+            "course_name": "Python",
+            "class": "soon",
+            "pdf": "Python.pdf",
+            "title": "Python",
+            "image": "python.png",
+            "download": "course_1",
+            "description": "Python_Course",
+            "syllabus" : ["assets/syllabus/Python.pdf"],
+           "syllabus_name":["Python Syllabus "]
+        },
+        {
+            "course_name": "Java",
+            "class": "att",
+            "pdf": "Java.pdf",
+            "title": "Java",
+            "image": "java.png",
+            "download": "course_1",
+            "description": "Java_Course",
+            "syllabus" : ["assets/syllabus/java.pdf"],
+           "syllabus_name":["Java Syllabus "]
+        },
+        {
+            "course_name": "C/C++ Programming",
+            "class": "att",
+            "pdf": "C/C++ Programming.pdf",
+            "title": "C/C++ Programming",
+            "image": "cc+.png",
+            "download": "course_1",
+            "description": "Motion_Graphic_Course",
+            "syllabus" : ["assets/syllabus/C/C++_Programming_Syllabus.pdf"],
+           "syllabus_name":["C/C++ Programming Syllabus "]
+        },
+        {
+            "course_name": "Canva Designing",
+            "class": "att",
+            "pdf": "Canva Designing.pdf",
+            "title": "Canva Designing",
+            "image": "canva.png",
+            "download": "course_1",
+            "description": "Canva_Designing_Course",
+            "syllabus" : ["assets/syllabus/Canva_Designing_Syllabus.pdf "],
+           "syllabus_name":["Canva Designing Syllabus "]
+        },
+        {
+            "course_name": "Database",
+            "class": "att",
+            "pdf": "Database.pdf",
+            "title": "Database",
+            "image": "database.png",
+            "download": "course_1",
+            "description": "Database_Course",
+            "syllabus" : ["assets/syllabus/Database_Syllabus.pdf "],
+           "syllabus_name":["Database Syllabus "]
+        },
+        {
+            "course_name": "Typing",
+            "class": "imp",
+            "pdf": "Typing.pdf",
+            "title": "Typing",
+            "image": "typing.png",
+            "download": "course_1",
+            "description": "Typing_Course",
+            "syllabus" : ["assets/syllabus/Typing_syllabus.pdf"],
+           "syllabus_name":["Typing Syllabus "]
+        }
+    ]
 }  
 var i = 0;

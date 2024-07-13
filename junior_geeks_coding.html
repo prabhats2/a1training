@@ -101,8 +101,38 @@ https://templatemo.com/tm-569-edu-meeting
                   <div class="meeting-item">
                     <div class="thumb">
                       <div class="price">
-                        <span  class="fa fa-cloud-download" style="font-size:23px;color:blue"></span>
-                      </div>
+                        <span  class="fa fa-cloud-download" data-bs-toggle="modal" data-bs-target="#syllabus${i}" style="font-size:23px;color:blue"></span>
+                        
+                                        <!-- The Modal -->
+                                        <div class="modal" id="syllabus${i}">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <!-- Modal Header -->
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title" align="center">  ${courses.col1[i].title.replace(/_/g, ' ')}</h4>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                                    </div>
+                                                    <!-- Modal body -->
+                                                    <div class="modal-body">
+                                                        
+                                                          <h2 align="left">Download Syllabus</h2>
+                                                        <ul id="pdfList${i}" align="left"></ul>
+                                                        <br>
+                                                        
+                                                            
+                                                    </div>
+                                                
+                                                    <!-- Modal footer -->
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                    
+                        </div>
+                         
                       <img src="assets/images/junior-geeks/${courses.col1[i].image}" >
                     </div>
                   
@@ -576,7 +606,20 @@ https://templatemo.com/tm-569-edu-meeting
                     </div>
                   </div>
                 </div>`)
-                  }
+              // Dynamically populate the PDF list in the modal
+              const pdfList = document.getElementById(`pdfList${i}`);
+                                courses.col1[i].syllabus.forEach((syllabus, index) => {
+                                    const listItem = document.createElement('li');
+                                    const anchor = document.createElement('a');
+                                    anchor.href = syllabus;
+                                    anchor.textContent = `${courses.col1[i].syllabus_name[index]} `;
+                                    anchor.target = "_blank";
+                                    listItem.appendChild(anchor);
+                                    pdfList.appendChild(listItem);
+                                });
+                
+              }
+                  
                 </script>
 
 
