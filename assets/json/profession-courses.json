@@ -1,27 +1,95 @@
 var courses = {
     "col1": [
         {
-            "course_name": "MEAN Stack",
-            "class": "Full",
-            "pdf": "git ebook.pdf",
-            "title": "MEAN_Stack",
-            "image": "Mean Stack.png",
-            "description": "MEAN_Stack01",
-            "download": "course_1",
-           "interview_pdf" : ["https://amzn.in/d/eeW0gGK", "https://amzn.in/d/76hrmRz", "https://amzn.in/d/4Jzj8A2"],
-           "syllabus" : ["assets/syllabus/mean_stack.pdf"],
-           "syllabus_name":["Mean Stack Syllabus "]	 
-
+            "course_name": "Linux",
+            "class": "Devops",
+            "pdf": "Linux.pdf",
+            "title": "Linux",
+            "image": "Linux.jpg",
+            "description": "Linux",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["Linux Syllabus "]	
         },
         {
-            "course_name": "MERN Stack",
-            "class": "Full",
-            "pdf": "mern.pdf",
-            "title": "MERN_Stack",
-            "image": "Mern Stack.jpg",
-            "description": "MERN_Stack02",
-            "syllabus" : ["assets/syllabus/mern_stack.pdf"],
-           "syllabus_name":["Mern Stack Syllabus "]	
+            "course_name": "Git",
+            "class": "Devops",
+            "pdf": "Git.pdf",
+            "title": "Git",
+            "image": "Git.jpg",
+            "description": "Git",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["Git Syllabus "]	
+        },
+         
+        {
+            "course_name": "Shell Scripting",
+            "class": "Devops",
+            "pdf": "Shell Scripting.pdf",
+            "title": "Shell_Scripting",
+            "image": "Shell Scripting.jpg",
+            "description": "Shell_Scripting",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["Shell Scripting Syllabus "]	
+        },
+        {
+            "course_name": "Python Training",
+            "class": "programming",
+            "pdf": "Python Training.pdf",
+            "title": "Python_Training",
+            "image": "python.png",
+            "description": "gcp04",
+            "syllabus" : ["assets/syllabus/python.pdf"],
+           "syllabus_name":["Python Training Syllabus "]	
+        },
+        {
+            "course_name": "Jenkins",
+            "class": "Devops",
+            "pdf": "Jenkins.pdf",
+            "title": "Jenkins",
+            "image": "Jenkins-training.jpg",
+            "description": "Jenkins_01",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["Jenkins Syllabus "]	
+        },
+        {
+            "course_name": "Docker Training",
+            "class": "Devops",
+            "pdf": "Docker Training.pdf",
+            "title": "Docker_Certification_Training",
+            "image": "Docker-Certification-Training.jpg",
+            "description": "Docker_Training",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["Docker Training Syllabus "]	
+        },
+        {
+            "course_name": "Kubenetes Training",
+            "class": "Devops",
+            "pdf": "Kubemetes Training.pdf",
+            "title": "Kubemetes_Training",
+            "image": "Kubernetes.png",
+            "description": "Kubemetes_Training",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["Kubemetes Training Syllabus "]	
+        },
+        {
+            "course_name": "Ansible Training",
+            "class": "Devops",
+            "pdf": "Ansible Training.pdf",
+            "title": "Ansible_Training",
+            "image": "ansible.png",
+            "description": "Ansible_Training",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["Ansible Training Syllabus "]	
+        },
+        {
+            "course_name": "Terraform",
+            "class": "Devops",
+            "pdf": "Terraform.pdf",
+            "title": "Terraform",
+            "image": "terraform.png",
+            "description": "Terraform",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["Terraform Syllabus "]	
         },
         {
             "course_name": "AWS Training",
@@ -53,6 +121,30 @@ var courses = {
              "syllabus" : ["assets/syllabus/AZURE_Training.pdf"],
             "syllabus_name":["AZURE Training Syllabus "]	
         },
+        {
+            "course_name": "MEAN Stack",
+            "class": "Full",
+            "pdf": "git ebook.pdf",
+            "title": "MEAN_Stack",
+            "image": "Mean Stack.png",
+            "description": "MEAN_Stack01",
+            "download": "course_1",
+           "interview_pdf" : ["https://amzn.in/d/eeW0gGK", "https://amzn.in/d/76hrmRz", "https://amzn.in/d/4Jzj8A2"],
+           "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["Mean Stack Syllabus "]	 
+
+        },
+        {
+            "course_name": "MERN Stack",
+            "class": "Full",
+            "pdf": "mern.pdf",
+            "title": "MERN_Stack",
+            "image": "Mern Stack.jpg",
+            "description": "MERN_Stack02",
+            "syllabus" : ["assets/syllabus/mern_stack.pdf"],
+           "syllabus_name":["Mern Stack Syllabus "]	
+        },
+       
         {
             "course_name": "React Js",
             "class": "Web",
@@ -113,26 +205,8 @@ var courses = {
             "syllabus" : ["assets/syllabus/mean_stack.pdf"],
            "syllabus_name":["Angular Js Syllabus "]	
         },
-        {
-            "course_name": "Docker Training",
-            "class": "Devops",
-            "pdf": "Docker Training.pdf",
-            "title": "Docker_Certification_Training",
-            "image": "Docker-Certification-Training.jpg",
-            "description": "Docker_Training",
-            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
-           "syllabus_name":["Docker Training Syllabus "]	
-        },
-        {
-            "course_name": "Ansible Training",
-            "class": "Devops",
-            "pdf": "Ansible Training.pdf",
-            "title": "Ansible_Training",
-            "image": "ansible.png",
-            "description": "Ansible_Training",
-            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
-           "syllabus_name":["Ansible Training Syllabus "]	
-        },
+       
+      
         {
             "course_name": "Devops Training",
             "class": "Devops",
@@ -140,79 +214,12 @@ var courses = {
             "title": "Devops_Training",
             "image": "Devops training.jpg",
             "description": "Devops_Training",
-            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+            "syllabus" : ["assets/syllabus/DevOps_with_AWS_l.pdf"],
            "syllabus_name":["Devops Training Syllabus "]	
         },
-        {
-            "course_name": "Jenkins",
-            "class": "Devops",
-            "pdf": "Jenkins.pdf",
-            "title": "Jenkins",
-            "image": "Jenkins-training.jpg",
-            "description": "Jenkins_01",
-            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
-           "syllabus_name":["Jenkins Syllabus "]	
-        },
-        {
-            "course_name": "Terraform",
-            "class": "Devops",
-            "pdf": "Terraform.pdf",
-            "title": "Terraform",
-            "image": "terraform.png",
-            "description": "Terraform",
-            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
-           "syllabus_name":["Terraform Syllabus "]	
-        },
-        {
-            "course_name": "Linux",
-            "class": "Devops",
-            "pdf": "Linux.pdf",
-            "title": "Linux",
-            "image": "Linux.jpg",
-            "description": "Linux",
-            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
-           "syllabus_name":["Linux Syllabus "]	
-        },
-        {
-            "course_name": "Git",
-            "class": "Devops",
-            "pdf": "Git.pdf",
-            "title": "Git",
-            "image": "Git.jpg",
-            "description": "Git",
-            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
-           "syllabus_name":["Git Syllabus "]	
-        },
-        {
-            "course_name": "Shell Scripting",
-            "class": "Devops",
-            "pdf": "Shell Scripting.pdf",
-            "title": "Shell_Scripting",
-            "image": "Shell Scripting.jpg",
-            "description": "Shell_Scripting",
-            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
-           "syllabus_name":["Shell Scripting Syllabus "]	
-        },
-        {
-            "course_name": "Kubemetes Training",
-            "class": "Devops",
-            "pdf": "Kubemetes Training.pdf",
-            "title": "Kubemetes_Training",
-            "image": "Kubernetes.png",
-            "description": "Kubemetes_Training",
-            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
-           "syllabus_name":["Kubemetes Trainingk Syllabus "]	
-        },
-        {
-            "course_name": "Python Training",
-            "class": "programming",
-            "pdf": "Python Training.pdf",
-            "title": "Python_Training",
-            "image": "python.png",
-            "description": "gcp04",
-            "syllabus" : ["assets/syllabus/python.pdf"],
-           "syllabus_name":["Python Training Syllabus "]	
-        },
+       
+       
+      
         {
             "course_name": "Unix Shell Scripting Training",
             "class": "programming",
@@ -230,7 +237,7 @@ var courses = {
             "title": "C_And_C++_Training",
             "image": "c c++.png.png",
             "description": "C_And_C++_Training",
-            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+            "syllabus" : ["assets/syllabus/C&C++.pdf"],
            "syllabus_name":["C And C++ Training Syllabus "]	
         },
         {
@@ -541,7 +548,7 @@ var courses = {
             "title": "Java_With_Selenium ",
             "image": "java with selenium.jpg",
             "description": "Java_With_Selenium ",
-            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+            "syllabus" : ["assets/syllabus/java.pdf"],
            "syllabus_name":["Java With Selenium Syllabus "]	
         },
         {

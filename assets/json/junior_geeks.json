@@ -109,7 +109,7 @@ var courses = {
             "image": "java.png",
             "download": "course_1",
             "description": "Java_Course",
-            "syllabus" : ["assets/pdf/junior_geeks/tally.pdf"],
+            "syllabus" : ["assets/pdf/junior_geeks/java.pdf"],
            "syllabus_name":["Java Syllabus "]
         },
         {
@@ -120,7 +120,7 @@ var courses = {
             "image": "cc+.png",
             "download": "course_1",
             "description": "Motion_Graphic_Course",
-            "syllabus" : ["assets/pdf/junior_geeks/tally.pdf"],
+            "syllabus" : ["assets/pdf/junior_geeks/C&C++.pdf"],
            "syllabus_name":["C/C++ Programming Syllabus "]
         },
         {
