@@ -92,7 +92,24 @@ let books = { "col1" : [
 			 "ebook_name" : ["Guide to MS DOS", "MS-DOS 6 Explained (BP S.): 341", "MS-DOS Up to and Including Version 6.2"],
 			 "pdf":["assets/pdf/ms_dos_by_azad.pdf","assets/pdf/msdosbyshivambhati.pdf"] ,
 			 "pdf_name":["Ms Dos ","Ms Dos "]	 
-			},
+			}, //shell Scripting
+			{"name" : "Shell Scripting", 
+			"Author" : ["Azad","Shivam"],
+			"ebookAuthor" : ["Code Academy","Noel Kantaris","Peter Freese","Azad","Shivam"],
+			"ebook" : ["https://amzn.in/d/dTDTKwy", "https://amzn.in/d/76hrmRz", "https://amzn.in/d/4Jzj8A2"],
+			"ebook_name" : ["Guide to MS DOS", "MS-DOS 6 Explained (BP S.): 341", "MS-DOS Up to and Including Version 6.2"],
+			"pdf":["assets/pdf/ms_dos_by_azad.pdf","assets/pdf/msdosbyshivambhati.pdf"] ,
+			"pdf_name":["Ms Dos ","Ms Dos "]	 
+		   },
+		    //Networking
+			{"name" : "Networking", 
+			"Author" : ["Azad","Shivam"],
+			"ebookAuthor" : ["Code Academy","Noel Kantaris","Peter Freese","Azad","Shivam"],
+			"ebook" : ["https://amzn.in/d/dTDTKwy", "https://amzn.in/d/76hrmRz", "https://amzn.in/d/4Jzj8A2"],
+			"ebook_name" : ["Guide to MS DOS", "MS-DOS 6 Explained (BP S.): 341", "MS-DOS Up to and Including Version 6.2"],
+			"pdf":["assets/pdf/ms_dos_by_azad.pdf","assets/pdf/msdosbyshivambhati.pdf"] ,
+			"pdf_name":["Ms Dos ","Ms Dos "]	 
+		   },
 		   //Ms Dos 
 		   {"name" : "MS Dos", 
 			"Author" : ["Azad","Shivam"],
@@ -142,7 +159,6 @@ let books = { "col1" : [
 			 "pdf_name":["Ms Dos ","Ms Dos "]	 
 			},
 					 
-			
 					  //Sql 
 			{"name" : "SQL", 
 			 "Author" : ["Virat"],
@@ -151,7 +167,46 @@ let books = { "col1" : [
 			 "ebook_name" : ["Guide to MS DOS", "MS-DOS 6 Explained (BP S.): 341", "MS-DOS Up to and Including Version 6.2"],
 			 "pdf":["assets/pdf/ms_dos_by_azad.pdf","assets/pdf/msdosbyshivambhati.pdf"] ,
 			 "pdf_name":["Ms Dos ","Ms Dos "]	 
-			}
+			},
+					 
+			//React
+			  {"name" : "React", 
+			   "Author" : ["Azad","Shivam"],
+			   "ebookAuthor" : ["Code Academy","Noel Kantaris","Peter Freese","Azad","Shivam"],
+			   "ebook" : ["https://amzn.in/d/dTDTKwy", "https://amzn.in/d/76hrmRz", "https://amzn.in/d/4Jzj8A2"],
+			   "ebook_name" : ["Guide to MS DOS", "MS-DOS 6 Explained (BP S.): 341", "MS-DOS Up to and Including Version 6.2"],
+			   "pdf":["assets/pdf/ms_dos_by_azad.pdf","assets/pdf/msdosbyshivambhati.pdf"] ,
+			   "pdf_name":["Ms Dos ","Ms Dos "]	 
+			  },
+					 
+			  //Angular
+				{"name" : "Angular", 
+				 "Author" : ["Azad","Shivam"],
+				 "ebookAuthor" : ["Code Academy","Noel Kantaris","Peter Freese","Azad","Shivam"],
+				 "ebook" : ["https://amzn.in/d/dTDTKwy", "https://amzn.in/d/76hrmRz", "https://amzn.in/d/4Jzj8A2"],
+				 "ebook_name" : ["Guide to MS DOS", "MS-DOS 6 Explained (BP S.): 341", "MS-DOS Up to and Including Version 6.2"],
+				 "pdf":["assets/pdf/ms_dos_by_azad.pdf","assets/pdf/msdosbyshivambhati.pdf"] ,
+				 "pdf_name":["Ms Dos ","Ms Dos "]	 
+				},
+					 
+				//node.js
+				  {"name" : "Node.Js", 
+				   "Author" : ["Azad","Shivam"],
+				   "ebookAuthor" : ["Code Academy","Noel Kantaris","Peter Freese","Azad","Shivam"],
+				   "ebook" : ["https://amzn.in/d/dTDTKwy", "https://amzn.in/d/76hrmRz", "https://amzn.in/d/4Jzj8A2"],
+				   "ebook_name" : ["Guide to MS DOS", "MS-DOS 6 Explained (BP S.): 341", "MS-DOS Up to and Including Version 6.2"],
+				   "pdf":["assets/pdf/ms_dos_by_azad.pdf","assets/pdf/msdosbyshivambhati.pdf"] ,
+				   "pdf_name":["Ms Dos ","Ms Dos "]	 
+				  },
+				  //C/C++
+				  {"name" : "C/C++", 
+				   "Author" : ["Azad","Shivam"],
+				   "ebookAuthor" : ["Code Academy","Noel Kantaris","Peter Freese","Azad","Shivam"],
+				   "ebook" : ["https://amzn.in/d/dTDTKwy", "https://amzn.in/d/76hrmRz", "https://amzn.in/d/4Jzj8A2"],
+				   "ebook_name" : ["Guide to MS DOS", "MS-DOS 6 Explained (BP S.): 341", "MS-DOS Up to and Including Version 6.2"],
+				   "pdf":["assets/pdf/ms_dos_by_azad.pdf","assets/pdf/msdosbyshivambhati.pdf"] ,
+				   "pdf_name":["Ms Dos ","Ms Dos "]	 
+				  }
 			 
 		]
          }  

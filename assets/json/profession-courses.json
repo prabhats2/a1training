@@ -20,7 +20,7 @@ var courses = {
             "title": "MERN_Stack",
             "image": "Mern Stack.jpg",
             "description": "MERN_Stack02",
-            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+            "syllabus" : ["assets/syllabus/mern_stack.pdf"],
            "syllabus_name":["Mern Stack Syllabus "]	
         },
         {
@@ -30,7 +30,7 @@ var courses = {
             "title": "AWS_Training",
             "image": "aws.png",
             "description": "AWS_03",
-            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+            "syllabus" : ["assets/syllabus/AWS_Amazon_Web_Services.pdf"],
            "syllabus_name":["AWS Training Syllabus "]	
         },
         {
@@ -40,7 +40,7 @@ var courses = {
             "title": "GCP",
             "image": "GCP.png",
             "description": "gcp",
-            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+            "syllabus" : ["assets/syllabus/GCP.pdf"],
            "syllabus_name":["GCP Syllabus "]	
         },
         {
@@ -50,7 +50,7 @@ var courses = {
             "title": "AZURE_Training",
             "image": "azure.png",
              "description": "Azure_Training",
-             "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+             "syllabus" : ["assets/syllabus/AZURE_Training.pdf"],
             "syllabus_name":["AZURE Training Syllabus "]	
         },
         {
@@ -210,7 +210,7 @@ var courses = {
             "title": "Python_Training",
             "image": "python.png",
             "description": "gcp04",
-            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+            "syllabus" : ["assets/syllabus/python.pdf"],
            "syllabus_name":["Python Training Syllabus "]	
         },
         {
