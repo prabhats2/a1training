@@ -65,8 +65,8 @@ var courses = {
             "image": "web-development.png",
             "download": "course_1",
             "description": "Web_Development_Course",
-            "syllabus" : ["assets/pdf/junior_geeks/tally.pdf"],
-           "syllabus_name":["MS Office Course Syllabus "]
+            "syllabus" : ["assets/pdf/junior_geeks/web_development.pdf"],
+           "syllabus_name":["Web Developent Course Syllabus "]
         },
         {
             "course_name": "Game Development ",

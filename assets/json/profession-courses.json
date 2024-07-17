@@ -548,7 +548,7 @@ var courses = {
             "title": "Java_With_Selenium ",
             "image": "java with selenium.jpg",
             "description": "Java_With_Selenium ",
-            "syllabus" : ["assets/syllabus/java.pdf"],
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
            "syllabus_name":["Java With Selenium Syllabus "]	
         },
         {
