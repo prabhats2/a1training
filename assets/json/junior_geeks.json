@@ -76,7 +76,7 @@ var courses = {
             "image": "game-development.png",
             "download": "course_1",
             "description": "Game_DevelopmentCourse",
-            "syllabus" : ["assets/pdf/junior_geeks/tally.pdf"],
+            "syllabus" : ["assets/pdf/junior_geeks/Game-Development.pdf"],
            "syllabus_name":["Game Development Syllabus "]
         },
         {
@@ -87,7 +87,7 @@ var courses = {
             "image": "robotics.png",
             "download": "course_1",
             "description": "Robotics_Course",
-            "syllabus" : ["assets/pdf/junior_geeks/tally.pdf"],
+            "syllabus" : ["assets/pdf/junior_geeks/robotics .pdf"],
            "syllabus_name":["Robotics Syllabus "]
         },
         {
@@ -131,7 +131,7 @@ var courses = {
             "image": "canva.png",
             "download": "course_1",
             "description": "Canva_Designing_Course",
-            "syllabus" : ["assets/pdf/junior_geeks/tally.pdf"],
+            "syllabus" : ["assets/pdf/junior_geeks/canva_designing.pdf"],
            "syllabus_name":["Canva Designing Syllabus "]
         },
         {
@@ -142,7 +142,7 @@ var courses = {
             "image": "database.png",
             "download": "course_1",
             "description": "Database_Course",
-            "syllabus" : ["assets/pdf/junior_geeks/tally.pdf"],
+            "syllabus" : ["assets/pdf/junior_geeks/database.pdf"],
            "syllabus_name":["Database Syllabus "]
         },
         ,
