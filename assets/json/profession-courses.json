@@ -6,7 +6,7 @@ var courses = {
             "pdf": "Linux.pdf",
             "title": "Linux",
             "image": "Linux.jpg",
-            "description": "Linux",
+            "description": "Linux_01",
             "syllabus" : ["assets/syllabus/Linux.pdf"],
            "syllabus_name":["Linux Syllabus "]	
         },
@@ -214,7 +214,7 @@ var courses = {
             "title": "Devops_Training",
             "image": "Devops training.jpg",
             "description": "Devops_Training",
-            "syllabus" : ["assets/syllabus/DevOps_with_AWS_l.pdf" , "assets/syllabus/AWS_Amazon_Web_Services.pdf"],
+            "syllabus" : ["assets/syllabus/DevOps_with_AWS_l.pdf" , "assets/syllabus/AWS_Amazon_Web_Segitrvices.pdf"],
            "syllabus_name":["Devops Training Syllabus ", "AWS Training Syllabus "]	
         },
        
