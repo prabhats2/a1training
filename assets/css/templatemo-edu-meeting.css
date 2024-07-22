@@ -1,4 +1,28 @@
+/*
 
+TemplateMo 569 Edu Meeting
+
+https://templatemo.com/tm-569-edu-meeting
+
+*/
+
+/* ---------------------------------------------
+Table of contents
+------------------------------------------------
+01. font & reset css
+02. reset
+03. global styles
+04. header
+05. banner
+06. features
+07. testimonials
+08. contact
+09. footer
+10. preloader
+11. search
+12. portfolio
+
+--------------------------------------------- */
 /* 
 ---------------------------------------------
 font & reset css
@@ -18,6 +42,74 @@ figure, header, nav, section, article, aside, footer, figcaption {
   padding: 0;
   border: 0;
   outline: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.row-photo {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media (max-width: 800px) {
+  .column {
+      flex: 50%;
+      max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  .column {
+      flex: 100%;
+      max-width: 100%;
+  }
+}
+
+.text-block {
+  position: absolute;
+  bottom: 95px;
+  right: 85px;
+  background-color: black;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.testimonial {
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.testimonial img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.testimonial p {
+  font-size: 16px;
+  color: #fff;
 }
 
 .clearfix:after {
@@ -67,11 +159,11 @@ html, body {
 
 a {
   text-decoration: none !important;
-  color: #3CF;
+  color: blue;
 }
 
 a:hover {
-	color: #FC3;
+	color: #a12c2f;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -86,7 +178,7 @@ ul {
 p {
   font-size: 14px;
   line-height: 25px;
-  color: #2a2a2a;
+  color: black;
 }
 
 img {
@@ -755,7 +847,7 @@ services
 }
 
 .services .item {
-  /*background-image: url(../images/service-item-bg.jpg);*/
+  background-image: url(../images/service-item-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -763,7 +855,6 @@ services
   text-align: center;
   color: #fff;
   padding: 40px;
-  background-color: rgb(40, 89, 153);
 }
 
 .services .item .icon {
@@ -1484,8 +1575,9 @@ section.meetings-page .filters {
 }
 
 div.ex1 {
-  height: 200px;
-  overflow: auto;
+ max-height: 200px; 
+ overflow-y: auto;
+ list-style: none;
 }
 
 
