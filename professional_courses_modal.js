@@ -424,10 +424,45 @@ Jenkins provides features for authentication, authorization, and access control 
                 <div class="button-container">
                    <button class="button">View / Download Syllabus</button>
                    <button class="button">Contact  Course Advisor</button>
+               </div>
+
+
+   <div class="container mt-5" >
+  <div class="row" >
+
+    <div class="col-sm-3"style="border:1px solid black; padding:20px; text-align:center; text-decoration:bold;">
+
+      <h3>40+ Hrs</h3>
+      <p>Hands On Training</p>
+    
+    </div>
+
+     <div class="col-sm-3"style="border:1px solid black; padding:20px; text-align:center; text-decoration:bold;">
+      <h3> 2 Live</h3>
+      <p>Project For Hands-On Learning</p>
+    
+    </div>
+
+     <div class="col-sm-3"style="border:1px solid black; padding:20px; text-align:center; text-decoration:bold;">
+      <h3> 50 Hrs</h3>        
+      <p>Practical Assignments</p>
+      
+    </div>
+
+     <div class="col-sm-3"style="border:1px solid black; padding:20px; text-align:center; text-decoration:bold;">
+        <h3>24/7</h3>        
+        <p>Lifetime Access To Support Team</p>
+        
+    </div>
+
   </div>
+</div>
+
+              
         </span>`;
     } 
 
+   
 
 // Example text with underscores
 let textWithUnderscores = courses.col1[i].title;
