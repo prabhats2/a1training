@@ -35,9 +35,68 @@
           margin-top: 100px;
           height: 900px;
       }
-     
-        
+     .contact-icons {
+    position: fixed;
+    bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% - 40px); /* Adjust width to account for the side margins */
+    max-width: 1200px; /* Ensure it doesn't stretch too wide */
+    left: 90px; /* Position container from left edge */
+}
+
+.contact-icons .whatsapp-icon {
+    background-color: #25d366; /* WhatsApp color */
+}
+
+.contact-icons .call-icon {
+    background-color: #357d9b; /* Call icon color */
+}
+
+.contact-icons div {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: bounce 2s infinite;
+}
+
+.contact-icons img {
+    width: 35px;
+    height: 35px;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Mobile-friendly adjustments */
+@media (max-width: 768px) {
+    .contact-icons {
+        flex-direction: column;
+        width: auto;
+        bottom: 20px;
+        left: 10px;
+        right: 10px;
+      
+    }
     
+    .contact-icons .whatsapp-icon {
+        margin-bottom: 10px; /* Add spacing between icons */
+    }
+}
+ 
   </style> 
   
    <!-- Additional CSS Files -->
@@ -309,7 +368,6 @@ function myFunction() {
                       <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#${courses.col1[i].title}" style="margin-right: 0px;">
                         More info
                       </button>
-
                       <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#contactModal">
                         Contact Us
                         
@@ -345,6 +403,19 @@ function myFunction() {
 
    <!--footer-->
    <script type="text/javascript" src="footer.js"></script>
+   <div class="contact-icons">
+    <div class="whatsapp-icon">
+        <a href="https://wa.me/8368979712" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+        </a>
+    </div>
+
+    <div class="call-icon">
+        <a href="tel:+91 8368979712">
+            <img src="images/call.png" alt="Call">
+        </a>
+    </div>
+</div>
    <!--footer end-->
 
 
