@@ -182,4 +182,18 @@ document.write(`  <section class="contact-us" id="contact" style="background-col
   </p>
 </div>
 </section>
+ <link rel="stylesheet" href="assets/css/icon-style.css">
+<div class="contact-icons">
+    <div class="whatsapp-icon">
+        <a href="https://wa.me/8368979712" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+        </a>
+    </div>
+
+    <div class="call-icon">
+        <a href="tel:+91 8368979712">
+            <img src="images/call.png" alt="Call">
+        </a>
+    </div>
+</div>
 `)
