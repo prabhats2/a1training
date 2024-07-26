@@ -30,14 +30,14 @@ document.write(`  <!-- Sub Header -->
             <div class="col-12">
                 <nav class="main-nav">
                     <!-- ***** Logo Start ***** -->
-                    <a href="index.html"class="logo">
+                    <a href="index.php"class="logo">
                         <img src="assets/images/logo1.png" style="height:70px; width:250px"/>
                     </a>
                     <!-- ***** Logo End ***** -->
 
                     <!-- ***** Menu Start ***** -->
                     <ul class="nav">
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.php">Home</a></li>
                         <li class="has-sub">
                             <a href="javascript:void(0)">Courses</a>
                             <ul class="sub-menu">
