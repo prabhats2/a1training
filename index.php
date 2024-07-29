@@ -162,9 +162,9 @@ window.onclick = function(event) {
               <div class="down-content">
                 <h4>MEAN Stack</h4>
                 <p>Starting Date: 01-01-2024</p>
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal1">
-                  Request a call back>>
-                </button>
+                <button  onclick="window.location.href='#targetDiv'"type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal1">
+          Request a call back>>
+        </button>
               </div>
             </div>
 
@@ -175,9 +175,9 @@ window.onclick = function(event) {
               <div class="down-content">
                 <h4>MERN Stack</h4>
                 <p>Starting Date: 01-01-2024</p>
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal1">
-                  Request a call back>>
-                </button>
+                <button  onclick="window.location.href='#targetDiv'" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal1">
+          Request a call back>>
+        </button>
               </div>
             </div>
 
@@ -188,9 +188,9 @@ window.onclick = function(event) {
               <div class="down-content">
                 <h4>AWS Training</h4>
                 <p>Starting Date: 01-01-2024</p>
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal1">
-                  Request a call back>>
-                </button>
+                <button  onclick="window.location.href='#targetDiv'"type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal1">
+          Request a call back>>
+        </button>
               </div>
             </div>
 
@@ -201,9 +201,9 @@ window.onclick = function(event) {
               <div class="down-content">
                 <h4>Devops Training</h4>
                 <p>Starting Date: 01-01-2024</p>
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal1"> 
-                  Request a call back>>
-                </button>
+                <button  onclick="window.location.href='#targetDiv'"type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal1">
+          Request a call back>>
+        </button>
               </div>
             </div>
 
@@ -214,10 +214,11 @@ window.onclick = function(event) {
               <div class="down-content">
                 <h4>Python Training</h4>
                 <p>Starting Date: 01-01-2024</p>
+                <button  onclick="window.location.href='#targetDiv'"type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal1">
+          Request a call back>>
+        </button>
 
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal1">
-                  Request a call back>>
-                </button>
+                
               </div>
             </div>
 
@@ -231,7 +232,7 @@ window.onclick = function(event) {
       <div class="modal-content">
           <div class="modal-header">
               <h5 class="modal-title" id="contactModalLabel">LET'S GET IN TOUCH</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal"
+             <a href=> </a> <button type="button" class="btn-close" data-bs-dismiss="modal"
                   aria-label="Close"></button>
           </div>
           <div class="modal-body" style="text-align: left;">
@@ -663,14 +664,18 @@ window.onclick = function(event) {
 
   <section class="upcoming-meetings" id="meetings" style="padding-bottom: 20px;">
     <div class="container">
-      <div class="row">
+      <div class="row"id="targetDiv">
+     
         <div class="col-lg-12">
           <div class="section-heading">
             <h2>Welcome to A1 Training Institute – Your Gateway to Excellence in Software Education!
             </h2>
           </div>
         </div>
+         <!-- Target div -->
+
         <div class="col-lg-4">
+        
         <div class="card">
             <div class="card-header">
                 <h4>Request a call Back</h4>
@@ -679,14 +684,20 @@ window.onclick = function(event) {
             <!-- Contact Form -->
 
             <form action="sendmail.php" method="POST">
-
+<!---Full Name--->
 <div class="mb-3">
     <label for="fullname">Full Name</label>
     <input type="text" name="full_name" id="fullname" required class="form-control" />
 </div>
+<!---E-mail Address--->
 <div class="mb-3">
     <label for="email_address">Email Address</label>
     <input type="email" name="email" id="email_address" required class="form-control" />
+</div>
+<!---mobileno--->
+<div class="mb-3">
+<label for="mobileno"> Mobile No.</label>
+<input type="number" name="mobileno" id="mobileno" pattern="\d{10}" maxlength="10" required class="form-control" />
 </div>
 <!--<div class="mb-3">
     <label for="subject">Subject</label>
@@ -789,11 +800,12 @@ style="border: 1 px solid black;">
 <option>Mern Stack</option>
 </optgroup>
 </select>
+<!------Message------->
 <div class="mb-3">
     <label for="message">Message</label>
     <textarea name="message" id="message" required class="form-control" rows="3"></textarea>
 </div>
-
+<!------Send MAil Button------->
 <div class="mb-3">
     <button type="submit" name="submitContact" class="btn btn-primary">Send Mail</button>
 </div>
@@ -803,8 +815,13 @@ style="border: 1 px solid black;">
 </div>
         </div>
     </div>
+    
 
-
+    <script>
+        document.getElementById('redirectButton').addEventListener('click', function() {
+            document.getElementById('targetDiv').scrollIntoView({ behavior: 'smooth' });
+        });
+    </script>
         <div class="col-lg-8">
           <div class="row">
             <div class="accordions is-first-expanded" style="margin: 0px;">
@@ -1153,6 +1170,7 @@ style="border: 1 px solid black;">
         }
 
     </script><!--created by manish for sweet alert -->
+  
   <script>
     //according to loftblog tut
     $('.nav li:first').addClass('active');
@@ -1200,6 +1218,17 @@ style="border: 1 px solid black;">
       checkSection();
     });
   </script>
+  <!----10 number limit in form ------->
+  <script>
+document.getElementById('mobileno').addEventListener('input', function (e) {
+    var x = e.target.value.replace(/\D/g, '');
+    if (x.length > 10) {
+        x = x.substring(0, 10);
+    }
+    e.target.value = x;
+});
+</script>
+
 </body>
 
 </body>

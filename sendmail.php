@@ -15,6 +15,7 @@ if(isset($_POST['submitContact']))
     $email = $_POST['email'];
     $subject = $_POST['subject'];
     $message = $_POST['message'];
+    $mobileno = $_POST['mobileno'];
 
 
     //Create an instance; passing `true` enables exceptions
@@ -45,6 +46,7 @@ if(isset($_POST['submitContact']))
         $bodyContent = '<div>Hello, you got a new enquiry</div>
             <div>Fullname: '.$fullname.'</div>
             <div>Email: '.$email.'</div>
+            <div>mobileno: '.$mobileno.'</div>
             <div>Subject: '.$subject.'</div>
             <div>Message: '.$message.'</div>
         ';
