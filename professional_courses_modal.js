@@ -1,6 +1,7 @@
 for (let i = 0; i < courses.col1.length; i++) {
     let descriptionContent = '';
 
+
     if (courses.col1[i].description === 'MEAN_Stack01') {
         descriptionContent = `
         <span id="MEAN_Stack01">
@@ -404,8 +405,66 @@ Security:
 
 Jenkins provides features for authentication, authorization, and access control to secure CI/CD pipelines and sensitive data. Integration with LDAP, Active Directory, and role-based access control (RBAC) ensures secure user management.
         </span>`;
-    }
+    } else if (courses.col1[i].description === 'Linux_01') {
+        descriptionContent = `
+        <span id="Linux_01">
+          <h1> Linux Training at A1 Training Institute  </h1><br>
+            <p>  Linux training provided by  A1 Training Institute can help you work more efficiently by giving you the skills and
+              knowledge needed to troubleshoot and resolve issues quickly. With Linux, many tasks can be automated, and by
+              learning how to use Linux tools and utilities, you can save time and increase your productivity.</p><br>
 
+              <ul>
+                  <li>&#10003; 40 hours of Instructor led Training</li>
+                  <li>&#10003; Comprehensive coverage of basic and advanced exercises on Linux</li>
+                  <li>&#10003; Hands-on assignments to support theoretical concepts</li>
+                  <li>&#10003; Interactive and project-oriented lab sessions on Linux</li>
+             </ul><br>
+                <h4>We provide the NO.1 Linux training program in Chennai .We offer different modes of training by 
+                providing classroom and online training .Our training centers are spread across Chennai at Adyar, OMR, 
+                Navalur, Porur, Annanagar, Velachery and Perumbakkam.</h4>
+                <div class="button-container">
+                   <button class="button">View / Download Syllabus</button>
+                   <button class="button">Contact  Course Advisor</button>
+               </div>
+
+
+   <div class="container mt-5" >
+  <div class="row" >
+
+    <div class="col-sm-3"style="border:1px solid black; padding:20px; text-align:center; text-decoration:bold;">
+
+      <h3>40+ Hrs</h3>
+      <p>Hands On Training</p>
+    
+    </div>
+
+     <div class="col-sm-3"style="border:1px solid black; padding:20px; text-align:center; text-decoration:bold;">
+      <h3> 2 Live</h3>
+      <p>Project For Hands-On Learning</p>
+    
+    </div>
+
+     <div class="col-sm-3"style="border:1px solid black; padding:20px; text-align:center; text-decoration:bold;">
+      <h3> 50 Hrs</h3>        
+      <p>Practical Assignments</p>
+      
+    </div>
+
+     <div class="col-sm-3"style="border:1px solid black; padding:20px; text-align:center; text-decoration:bold;">
+        <h3>24/7</h3>        
+        <p>Lifetime Access To Support Team</p>
+        
+    </div>
+
+  </div>
+</div>
+
+
+              
+        </span>`;
+    } 
+
+   
 
 // Example text with underscores
 let textWithUnderscores = courses.col1[i].title;

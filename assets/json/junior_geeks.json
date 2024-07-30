@@ -7,7 +7,7 @@ var courses = {
             "title": "MS_Office",
             "image": "ms-office.jpg",
             "download": "course_1",
-            "description": "MS_Office_Course",
+            "description": "Ms_Office",
             "syllabus" : ["assets/pdf/junior_geeks/ms_office.pdf"],
            "syllabus_name":["MS Office Course Syllabus "]
         },	

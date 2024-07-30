@@ -1,9 +1,9 @@
 for (let i = 0; i < courses.col1.length; i++) {
     let descriptionContent = '';
 
-    if (courses.col1[i].description === 'MEAN_Stack01') {
+    if (courses.col1[i].description === 'Ms_Office') {
         descriptionContent = `
-        <span id="MEAN_Stack01">
+        <span id="Ms_Office">
             <!-- what is mean stack -->
             The MEAN stack is a popular technology stack used for building full-stack JavaScript applications. 
             The acronym "MEAN" stands for MongoDB, Express.js, Angular, and Node.js. Here's a brief overview of each component:

@@ -6,8 +6,8 @@ var courses = {
             "pdf": "Linux.pdf",
             "title": "Linux",
             "image": "Linux.jpg",
-            "description": "Linux",
-            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+            "description": "Linux_01",
+            "syllabus" : ["assets/syllabus/Linux.pdf"],
            "syllabus_name":["Linux Syllabus "]	
         },
         {
@@ -17,7 +17,7 @@ var courses = {
             "title": "Git",
             "image": "Git.jpg",
             "description": "Git",
-            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+            "syllabus" : ["assets/syllabus/#"],
            "syllabus_name":["Git Syllabus "]	
         },
          
@@ -28,7 +28,7 @@ var courses = {
             "title": "Shell_Scripting",
             "image": "Shell Scripting.jpg",
             "description": "Shell_Scripting",
-            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+            "syllabus" : ["assets/syllabus/#.pdf"],
            "syllabus_name":["Shell Scripting Syllabus "]	
         },
         {
@@ -58,7 +58,7 @@ var courses = {
             "title": "Docker_Certification_Training",
             "image": "Docker-Certification-Training.jpg",
             "description": "Docker_Training",
-            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+            "syllabus" : ["assets/syllabus/#.pdf"],
            "syllabus_name":["Docker Training Syllabus "]	
         },
         {
@@ -68,8 +68,8 @@ var courses = {
             "title": "Kubemetes_Training",
             "image": "Kubernetes.png",
             "description": "Kubemetes_Training",
-            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
-           "syllabus_name":["Kubemetes Training Syllabus "]	
+            "syllabus" : ["assets/syllabus/Kubernetes_Cluster_Setup_Guide.pdf" , "assets/syllabus/Kubernetes_Commands_Overview.pdf"  , "assets/syllabus/Kubernetes_Interview_Questions.pdf"  , "assets/syllabus/Kubernetes_Manifest_file.pdf"] ,  
+           "syllabus_name":["Kubemetes Cluster Setup Syllabus " , "Kubernetes Commands Overview Syllabus " , "Kubernetes Interview Questions  ", "Kubernetes Manifest file Syllabus "]	
         },
         {
             "course_name": "Ansible Training",
@@ -88,8 +88,8 @@ var courses = {
             "title": "Terraform",
             "image": "terraform.png",
             "description": "Terraform",
-            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
-           "syllabus_name":["Terraform Syllabus "]	
+            "syllabus" : ["assets/syllabus/#.pdf"],
+           "syllabus_name":["Terraform Questions & Answes  "]	
         },
         {
             "course_name": "AWS Training",
@@ -118,7 +118,7 @@ var courses = {
             "title": "AZURE_Training",
             "image": "azure.png",
              "description": "Azure_Training",
-             "syllabus" : ["assets/syllabus/AZURE_Training.pdf"],
+             "syllabus" : ["assets/syllabus/Aurze_Devops_Syllabus.pdf"],
             "syllabus_name":["AZURE Training Syllabus "]	
         },
         {
@@ -152,7 +152,7 @@ var courses = {
             "title": "React_Js",
             "image": "react-js-training.png",
             "description": "react_js",
-            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+            "syllabus" : ["assets/syllabus/React_JS.pdf"],
            "syllabus_name":["React Js Syllabus "]	
         },
         {
@@ -214,8 +214,8 @@ var courses = {
             "title": "Devops_Training",
             "image": "Devops training.jpg",
             "description": "Devops_Training",
-            "syllabus" : ["assets/syllabus/DevOps_with_AWS_l.pdf"],
-           "syllabus_name":["Devops Training Syllabus "]	
+            "syllabus" : ["assets/syllabus/DevOps_with_AWS_l.pdf" , "assets/syllabus/AWS_Amazon_Web_Segitrvices.pdf"],
+           "syllabus_name":["Devops Training Syllabus ", "AWS Training Syllabus "]	
         },
        
        
