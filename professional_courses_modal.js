@@ -1,6 +1,7 @@
 for (let i = 0; i < courses.col1.length; i++) {
     let descriptionContent = '';
 
+
     if (courses.col1[i].description === 'MEAN_Stack01') {
         descriptionContent = `
         <span id="MEAN_Stack01">

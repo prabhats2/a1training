@@ -13,9 +13,14 @@ if(isset($_POST['submitContact']))
 {
     $fullname = $_POST['full_name'];
     $email = $_POST['email'];
+    $mobileno = $_POST['mobileno'];
     $subject = $_POST['subject'];
     $message = $_POST['message'];
-    $mobileno = $_POST['mobileno'];
+    $Learn_About_Us = $_POST ['About_us'];
+    $address = $_POST['Address'];
+    $dob =$_POST['Dob'];
+    $mode =$_POST['mode'];
+    
 
 
     //Create an instance; passing `true` enables exceptions
@@ -36,26 +41,31 @@ if(isset($_POST['submitContact']))
         $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
         //Recipients
-        $mail->setFrom('a1training167@gmail.com', 'Funda of Web IT');
-        $mail->addAddress('a1training167@gmail.com', 'Funda of Web IT');     //Add a recipient
+        $mail->setFrom('a1training167@gmail.com', 'Team A1 Training');
+        $mail->addAddress('a1training167@gmail.com', 'Team A1 Training');     //Add a recipient
 
         //Content
         $mail->isHTML(true);                                  //Set email format to HTML
-        $mail->Subject = 'New enquiry - Funda of web it Contact Form';
+        $mail->Subject = 'New enquiry - Team A1 Training Contact Form';
 
         $bodyContent = '<div>Hello, you got a new enquiry</div>
             <div>Fullname: '.$fullname.'</div>
             <div>Email: '.$email.'</div>
-            <div>mobileno: '.$mobileno.'</div>
+            <div>mobile no: '.$mobileno.'</div>
             <div>Subject: '.$subject.'</div>
             <div>Message: '.$message.'</div>
+            <div>Learn About Us:'.$Learn_About_Us.'</div>
+            <div>Address: '.$address.'</div>
+            <div>Dob:'.$dob.'</div>
+             <div>Course Mode :'.$mode.'</div>
         ';
+    
 
         $mail->Body = $bodyContent; 
         
         if($mail->send())
         {
-            $_SESSION['status'] = "Thank you contact us - Team Funda of Web IT";
+            $_SESSION['status'] = "Thank you contact us - Team A1 Training";
             header("Location: {$_SERVER["HTTP_REFERER"]}");
             exit(0);
         }
