@@ -13,7 +13,7 @@ document.write(`  <!-- Sub Header -->
           <ul>
             <li><a href="#"><i class="fa fa-facebook"></i></a></li>
             <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+            <li><a href="https://www.instagram.com/a1traininginstitute167/"><i class="fa fa-instagram"></i></a></li>
             <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
             <li><a href="#"><i class="fa fa-whatsapp"></i></a></li>
           </ul>
@@ -46,6 +46,8 @@ document.write(`  <!-- Sub Header -->
                             </ul>
                         </li>
                         <li><a href="batches.html">Batches</a></li>
+                       <li><a href="#">Events</a></li>
+
                         <li class="has-sub">
                             <a href="javascript:void(0)">More</a>
                             <ul class="sub-menu">

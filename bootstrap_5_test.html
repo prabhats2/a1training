@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar Example</title>
+    <style>
+        .container {
+            display: flex;
+        }
+
+        .left-sidebar {
+            width: 150px;
+            background-color: #e0e0e0;
+            padding: 10px;
+            margin-right: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .sidebar {
+            width: 250px;
+            background-color: #f7f8fa;
+            padding: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            position: -webkit-sticky; /* Safari */
+            position: sticky;
+            top: 0;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sidebar li {
+            position: relative;
+            padding: 10px;
+            color: #666;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            font-size: 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.3s;
+            cursor: pointer;
+        }
+
+        .sidebar li:hover {
+            background-color: #e9ecef;
+        }
+
+        .sidebar li.active {
+            color: #000000;
+        }
+
+        .sidebar li.active::before {
+            content: "";
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 5px;
+            background-color: #0056b3;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }
+
+        .sidebar li span {
+            background-color: #dee2e6;
+            color: #000;
+            padding: 2px 8px;
+            border-radius: 12px;
+        }
+
+        .sidebar li.active span {
+            background-color: #0056b3;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-sidebar">
+            <!-- Content for the new left-side div -->
+            <p>Left Side Content</p>
+        </div>
+        <div class="sidebar">
+            <ul>
+                <li class="active">All Resources <span>10</span></li>
+                <li>Articles <span>8</span></li>
+                <li>Ebooks <span>5</span></li>
+                <li>Free Practice Tests <span>3</span></li>
+                <li>On-demand Webinars <span>7</span></li>
+                <li>Tutorials <span>4</span></li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.sidebar li').forEach(function(item) {
+            item.addEventListener('click', function() {
+                document.querySelectorAll('.sidebar li').forEach(function(li) {
+                    li.classList.remove('active');
+                });
+                item.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
