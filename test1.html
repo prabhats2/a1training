@@ -3,113 +3,205 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Gallery</title>
-    <!-- Bootstrap 5 CSS -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <title>Course Filter</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
-        .gallery {
-            border: 1px solid #ccc;
+       .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content.show {
+            display: block;
+        }
+        .dropdown-content li {
+            padding: 8px 12px;
+            cursor: pointer;
+        }
+        .dropdown-content li:hover {
+            background-color: #ddd;
+        }
+        .show {
+            display: block;
         }
 
-        .gallery img {
+        .filters {
+            max-height: 200px;
+            overflow-y: auto;
+        }
+
+        input {
+            box-sizing: border-box;
             width: 100%;
-            height: auto;
+            padding: 12px 20px 12px 40px;
+            border: none;
+            border-bottom: 1px solid #ddd;
+        }
+        .well {
+            background-color: #343a40;
+            padding: 20px;
+            border-radius: 5px;
+            color: white;
         }
 
-        .desc {
-            padding: 15px;
-            text-align: center;
+        .more-text {
+            display: none;
         }
 
-        .left-sidebar {
-            margin-bottom: 20px;
+        .read-more-btn {
+            color: #007bff;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="row">
-            <div class="col-md-6 col-lg-4">
-                <div class="left-sidebar">
-                    <!-- Content for the new left-side div -->
-                    <div class="responsive">
-                        <div class="gallery">
-                            <a target="_blank" href="img_forest.jpg">
-                                <img src="https://ioflood.com/blog/wp-content/uploads/2023/10/Streamlined-display-of-Java-programming-keywords.jpg" alt="Forest">
-                            </a>
-                            <div class="desc">Java</div>
-                        </div>
-                    </div>
-                    <div>
-                        <h1>What is JAVA</h1>
-                        <p>Java is a multiplatform, object-oriented programming language and computing platform that's used for a variety of applications:</p>
-                        <ul>
-                            <li>Web applications: Java is a popular choice for coding web applications.</li>
-                            <li>Mobile apps: Java can be used to code mobile apps.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="left-sidebar">
-                    <!-- Content for the new left-side div -->
-                    <div class="responsive">
-                        <div class="gallery">
-                            <a target="_blank" href="img_forest.jpg">
-                                <img src="https://files.prepinsta.com/wp-content/uploads/2020/07/python-removebg-preview.webp" alt="Forest">
-                            </a>
-                            <div class="desc">Python</div>
-                        </div>
-                    </div>
-                    <div>
-                        <h1>What is Python</h1>
-                        <p>Python is a high-level, general-purpose programming language.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="left-sidebar">
-                    <!-- Content for the new left-side div -->
-                    <div class="responsive">
-                        <div class="gallery">
-                            <a target="_blank" href="img_forest.jpg">
-                                <img src="https://ioflood.com/blog/wp-content/uploads/2023/10/Streamlined-display-of-Java-programming-keywords.jpg" alt="Forest">
-                            </a>
-                            <div class="desc">Java</div>
-                        </div>
-                    </div>
-                    <div>
-                        <h1>What is JAVA</h1>
-                        <p>Java is a multiplatform, object-oriented programming language and computing platform that's used for a variety of applications:</p>
-                        <ul>
-                            <li>Web applications: Java is a popular choice for coding web applications.</li>
-                            <li>Mobile apps: Java can be used to code mobile apps.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="left-sidebar">
-                    <!-- Content for the new left-side div -->
-                    <div class="responsive">
-                        <div class="gallery">
-                            <a target="_blank" href="img_forest.jpg">
-                                <img src="https://files.prepinsta.com/wp-content/uploads/2020/07/python-removebg-preview.webp" alt="Forest" class="img-fluid">
-                            </a>
-                            <div class="desc">Python</div>
-                        </div>
-                    </div>
-                    <div>
-                        <h1>What is Python</h1>
-                        <p>Python is a high-level, general-purpose programming language.</p>
-                    </div>
+        <div class="dropdown mt-3">
+            <button onclick="toggleDropdown()" class="btn btn-primary dropbtn">Select Courses</button>
+            <div id="myDropdown" class="dropdown-content w-100" onclick="event.stopPropagation()">
+                <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()" class="form-control" autofocus>
+                <div class="filters">
+                    <ul class="list-unstyled">
+                        <li data-filter="*">All Courses</li>
+                        <li data-filter=".programming">Programming</li>
+                        <li data-filter=".cloud">Cloud</li>
+                        <li data-filter=".Devops">Devops</li>
+                        <li data-filter=".Data">Data Science & AI</li>
+                        <li data-filter=".mobile">Mobile Development</li>
+                        <li data-filter=".Database">Database</li>
+                        <li data-filter=".MIS">Advance Excel-BI Tools</li>
+                        <li data-filter=".Digital">Digital Marketing</li>
+                        <li data-filter=".Industrial">Industrial Training</li>
+                        <li data-filter=".Multimedia">Multimedia Animation-Graphics</li>
+                        <li data-filter=".Software">Software Testing</li>
+                        <li data-filter=".Project">Project Management</li>
+                        <li data-filter=".Full">Full Stack Development</li>
+                        <li data-filter=".Web">Web Designing</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Bootstrap 5 JS and dependencies -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+    <script>
+        function toggleDropdown() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        function filterFunction() {
+            var input, filter, ul, li, i, txtValue;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("myDropdown");
+            li = ul.getElementsByTagName("li");
+
+            for (i = 0; i < li.length; i++) {
+                txtValue = li[i].textContent || li[i].innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+        }
+
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+    
+
+<div class="container mt-4">
+    <div class="row justify-content">
+        <div class="col-md-8">
+            <div class="well row no-gutters">
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <img src="your-image-url.jpg" alt="UI Project Training" class="img-fluid rounded">
+                </div>
+
+                <div class="col-md-8">
+                    <h5>UI Project Training</h5>
+                    <p>
+                        <span>A project manager plays a stellar role in project management...</span>
+                        <span class="more-text">
+                            <span>where tasks, goals, deadlines and unpredictable circumstances are intertwined. However, managing a project effectively is usually not as easy as it sounds and requires more than one person’s supervision.</span>
+                        </span>
+                        <span class="read-more-btn" onclick="toggleReadMore()">Read More</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!----second 2 -->
+        <div class="col-md-8" style="margin-top: 10px;">
+            <div class="well row no-gutters">
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <img src="your-image-url.jpg" alt="UI Project Training" class="img-fluid rounded">
+                </div>
+
+                <div class="col-md-8">
+                    <h5>UI Project Training</h5>
+                    <p>
+                        <span>A project manager plays a stellar role in project management...</span>
+                        <span class="more-text">
+                            <span>where tasks, goals, deadlines and unpredictable circumstances are intertwined. However, managing a project effectively is usually not as easy as it sounds and requires more than one person’s supervision.</span>
+                        </span>
+                        <span class="read-more-btn" onclick="toggleReadMore()">Read More</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!----Third 3 -->
+        <div class="col-md-8" style="margin-top: 10px;">
+            <div class="well row no-gutters">
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <img src="your-image-url.jpg" alt="UI Project Training" class="img-fluid rounded">
+                </div>
+
+                <div class="col-md-8">
+                    <h5>UI Project Training</h5>
+                    <p>
+                        <span>A project manager plays a stellar role in project management...</span>
+                        <span class="more-text">
+                            <span>where tasks, goals, deadlines and unpredictable circumstances are intertwined. However, managing a project effectively is usually not as easy as it sounds and requires more than one person’s supervision.</span>
+                        </span>
+                        <span class="read-more-btn" onclick="toggleReadMore()">Read More</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function toggleReadMore() {
+        var moreText = document.querySelector('.more-text');
+        var btnText = document.querySelector('.read-more-btn');
+
+        if (moreText.style.display === "none") {
+            moreText.style.display = "inline";
+            btnText.textContent = "Read Less";
+        } else {
+            moreText.style.display = "none";
+            btnText.textContent = "Read More";
+        }
+    }
+
+    // Initialize the display state
+    document.addEventListener("DOMContentLoaded", function() {
+        document.querySelector('.more-text').style.display = "none";
+    });
+</script>
 </body>
 </html>
