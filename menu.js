@@ -1,4 +1,6 @@
 
+document.write(`<!-- Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=G-646096GCC0"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-646096GCC0'); </script>
+`)
 document.write(`  <!-- Sub Header -->
 <div class="sub-header">
   <div class="container">
@@ -13,7 +15,7 @@ document.write(`  <!-- Sub Header -->
           <ul>
             <li><a href="#"><i class="fa fa-facebook"></i></a></li>
             <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+            <li><a href="https://www.instagram.com/a1traininginstitute167/"><i class="fa fa-instagram"></i></a></li>
             <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
             <li><a href="#"><i class="fa fa-whatsapp"></i></a></li>
           </ul>
@@ -46,6 +48,8 @@ document.write(`  <!-- Sub Header -->
                             </ul>
                         </li>
                         <li><a href="batches.html">Batches</a></li>
+                       <li><a href="events.php">Events</a></li>
+
                         <li class="has-sub">
                             <a href="javascript:void(0)">More</a>
                             <ul class="sub-menu">

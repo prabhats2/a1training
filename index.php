@@ -311,7 +311,7 @@ window.onclick = function(event) {
                               </div>
                               <div class="form-group">
                                   <label for="name">How did you learn about us?:</label>
-                                  <input type="text" class="form-control" id="name" placeholder="Enter name" name="name">
+                                  <input type="text" class="form-control" id="name" placeholder="Instagram" name="name">
                               </div>
                               <div class="form-group">
                                   <label for="sel1">Select Subject:</label>
@@ -678,7 +678,7 @@ window.onclick = function(event) {
         
         <div class="card">
             <div class="card-header">
-                <h4>Request a call Back</h4>
+                <h4 style="text-align:center; ">Request A Call Back</h4>
             </div>
             <div class="card-body">
             <!-- Contact Form -->
@@ -687,40 +687,25 @@ window.onclick = function(event) {
 <!---Full Name--->
 <div class="mb-3">
         <label for="Name">Name:</label>
-        <input type="text" name="full_name" id="fullname" required class="form-control" >
+        <input type="text" name="full_name" id="fullname" required class="form-control" placeholder="Enter Name">
     </div>
 
 <!---E-mail Address--->
 <div class="mb-3">
       <label for="email_address">Email Address:</label>
-      <input type="email" name="email" id="email_address" required class="form-control" />
+      <input type="email" name="email" id="email_address" required class="form-control"placeholder="E-Mail Address" />
   </div>
-
-<!---Dob---> 
-<div class="mb-3">
-        <label for="DOB">DOB:</label>
-        <input type="date" name="Dob" id="dob" required class="form-control">
-    </div>
-
 <!---mobileno--->
 <div class="mb-3">
       <label for="mobileno"> Mobile No.</label>
-      <input type="number" name="mobileno" id="mobileno" pattern="\d{10}" maxlength="10" required class="form-control" />
+      <input type="number" name="mobileno" id="mobileno" pattern="\d{10}" maxlength="10" required class="form-control"placeholder=" Mobile No" />
     </div>
-<!---Address--->
-<div class="mb-3">
-        <label for="Address">Address:</label>
-       <textarea  name="Address" id="address" required class="form-control" rows="3" ></textarea>
-    </div>
-<!-------How did you learn about us?:--------> 
-<div class="mb-3">
-        <label for="Learn About Us" >How did you learn about us?:</label>
-        <input type="text" name="About_us" id="Learn_About_Us" placeholder="Enter name" class="form-control">
-    </div>
+ 
+
 <!---Select Subject:--->    
 <div class="mb-3">
         <label for="sel1">Select Subject:</label>
-        <select id="selectpickerGroups" name="subject" class="form-select selectpicker w-100" data-style="btn-default"
+        <select id="selectpickerGroups" name="subject" required  class="form-select selectpicker w-100" data-style="btn-default"placeholder=" Subject"
         style="border: 1 px solid black;">
 <option>Choose Subject</option>
 <optgroup label="Web Designing">
@@ -819,17 +804,32 @@ window.onclick = function(event) {
 </select>
     </div>
      <!------course mode ------->
-    <div class="mb-3">
+<div class="mb-3" >
         <label for="mode">Select Mode of Course (select one):</label><br>
         <input type="radio" id="mode" name="mode" value="Online">
   <label for="html">Online</label><br>
   <input type="radio" id="mode" name="mode" value="Offline">
   <label for="css">Offline</label><br>
+</div>
+       <!---Dob---> 
+<div class="mb-3">
+        <label for="DOB">DOB:</label>
+        <input type="date" name="Dob" id="dob"  class="form-control" placeholder=" DOB:">
+</div>
+    <!---Address--->
+<div class="mb-3">
+        <label for="Address">Address:</label>
+       <textarea  name="Address" id="address" class="form-control" rows="3" placeholder=" Address"></textarea>
+</div>
+<!-------How did you learn about us?:--------> 
+<div class="mb-3">
+        <label for="Learn About Us" >How did you learn about us?:</label>
+        <input type="text" name="About_us" id="Learn_About_Us" placeholder="Enter name" class="form-control" placeholder="Social Media ">
     </div>
     <!------courses not listed in list ------->
 <div class="mb-3">
   <label for="message">Other Courses Not Included in list:</label>
-  <textarea name="message" id="not listed " required class="form-control" rows="3"></textarea>
+  <textarea name="message" id="not listed "  class="form-control" rows="3"placeholder="Other Courses"></textarea>
 </div>
    <!------Submit------->
     <button  type="submit" name="submitContact" class="btn btn-primary">Submit</button>
@@ -957,8 +957,7 @@ window.onclick = function(event) {
     <div class="container">
       <div class="col-lg-12">
         <div class="section-heading">
-          <h2 style="text-align: center;">Our Students Review
-          </h2>
+          <h2 style="text-align: center;">Our Students Review</h2>
         </div>
       </div>
       <div class="row justify-content-center">

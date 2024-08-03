@@ -9,25 +9,8 @@
           height: 900px;
       }
      
-  .contact-icons {
-    position: fixed;
-    bottom: 20px;
-    display: flex;
-    justify-content: space-between;
-    width: calc(100% - 30px); /* Adjust width to account for the side margins */
-    max-width: 1200px; /* Ensure it doesn't stretch too wide */
-    left: 90px; /* Position container from left edge */
-}
-
-.contact-icons .whatsapp-icon {
-    background-color: #25d366; /* WhatsApp color */
-}
-
-.contact-icons .call-icon {
-    background-color: hsl(198, 49%, 41%); /* Call icon color */
-}
-
-.contact-icons div {
+   /* Base styles for both icons */
+   .icons {
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -38,7 +21,7 @@
     animation: bounce 2s infinite;
 }
 
-.contact-icons img {
+.icons img {
     width: 35px;
     height: 35px;
 }
@@ -55,19 +38,30 @@
     }
 }
 
+/* Desktop styles */
+.whatsapp-icon-right {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366; /* WhatsApp color */
+}
+
+.call-icon-left {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: hsl(198, 49%, 41%); /* Call icon color */
+}
+
 /* Mobile-friendly adjustments */
 @media (max-width: 768px) {
-    .contact-icons {
-        flex-direction: column;
-        width: auto;
-        bottom: 20px;
-        left: 10px;
-        right: 10px;
-      
+    .whatsapp-icon-right {
+       
+        left: 10px; /* Adjust right position for mobile */
     }
-    
-    .contact-icons .whatsapp-icon {
-        margin-bottom: 10px; /* Add spacing between icons */
+
+    .call-icon-left {
+        bottom: 90px; /* Position call icon above WhatsApp icon */
+        left: 10px; /* Adjust left position for mobile */
     }
 }
- 
