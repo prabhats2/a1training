@@ -1,3 +1,8 @@
+ 
+<?php
+// Set the session variable
+$_SESSION['status'] = 'Thank you for registering!';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -36,8 +41,6 @@
             margin-top: 100px;
             height: 800px;
         }
-    
-    </style><style>
        .dropdown-content {
             display: none;
             position: absolute;
@@ -74,10 +77,9 @@
         }
         .well {
             
-            padding: 10px;
             border-radius: 3px;
             color: white;
-            margin-top:-37px;
+            
         }
         .well-1 {
             padding: 15px;
@@ -99,10 +101,58 @@
             display: flex;
             flex-wrap: wrap;
             gap: 10px; /* Adjust gap between buttons */
+       
         }
-    </style>
+        .modal {
+  transition: all 0.5s;
+  transform: translateY(-50%);
+}
+
+.modal.show {
+  transform: translateY(0);
+}
+
+.modal-content {
+  animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.form{
+    color:black;
+}
+</style>
     
 
+<script>
+  $(document).ready(function() {
+    $('#exampleModal').on('shown.bs.modal', function () {
+      var messageText = '<?php echo $_SESSION['status']; ?>';
+      if(messageText != ''){
+        Swal.fire({
+          title: "Thank you!",
+          text: messageText,
+          icon: "success"
+        });
+      }
+
+      //-------10 numbers limit-//
+      document.getElementById('mobileno').addEventListener('input', function (e) {
+        var x = e.target.value.replace(/\D/g, '');
+        if (x.length > 10) {
+          x = x.substring(0, 10);
+        }
+        e.target.value = x;
+      });
+    });
+  });
+    </script>
 
 
     <!-- Additional CSS Files -->
@@ -176,15 +226,14 @@ https://templatemo.com/tm-569-edu-meeting
     
         <div class="container">
             <div class="row">
-                <div class="col-lg-12">
-                </div>
-
+                
+<!----- 1 ---->
                 <div class="container">
                     <div class="row">
 
-                        <div class="col-md-2">
+                        <div class="col-md-3">
                             <div class="well">
-                                <img src=" https://tektreeinc.com/wp-content/uploads/2021/09/ui-development-1024x1024.png">
+                                <img src="assets\images\events/webinar.avif">
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -197,31 +246,81 @@ https://templatemo.com/tm-569-edu-meeting
                             <span>where tasks, goals, deadlines and unpredictable circumstances are intertwined. However, managing a project effectively is usually not as easy as it sounds and requires more than one person’s supervision.</span>
                         </span>
                         <span class="read-more-btn" onclick="toggleReadMore(this)">Read More</span>
+                        
                     </p>
                 </div>
                         </div>
-                        <div class="col-md-4">
-                            <div class="well-1">
-                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#contactModal" style="margin-right: 10px;">
-                                    Contact Us
-                                  </button>
-                                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#myModal" style="margin-right: 0px;">
-                                    More info
-                                  </button>
+                        <div class="col-md-3">
                             
-                                 
+                            <div class="well-1" style="padding:0px">
+                            <div class="well">
+                                <button type="button" class="btn btn-danger btn-md">07<br>Feb, 2024</button>
+                                <a href=" assets\pdf\50_linux_commands.pdf " target="blank">
+                                    <button type="button" class="btn btn-danger btn-md" style="margin-left:10px;"><i class="fa fa-download" style="font-size:20px"></i><br><span style="margin-left:14px;margin-right:14px;">Notes</span> </button></a>
+                                <br><div style="color: white;margin:10px;margin-left:40px;">9:15 am-5:00 pm</div>
+                            </div>
+
+                                <!-- Button to trigger the modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+Book Now
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel" style="color:black; margin-left:150px;"> <strong>Register For Webinar</strong></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <!-- Contact Form -->
+        <form action="sendmail.php" method="POST" class="form-container">
+<!---Full Name--->
+<div class="mb-3">
+        <label for="Name"class="form">Name:</label>
+        <input type="text" name="full_name" id="fullname" required class="form-control" placeholder="Enter Name">
+    </div>
+
+<!---E-mail Address--->
+<div class="mb-3">
+      <label for="email_address"class="form">Email Address:</label>
+      <input type="email" name="email" id="email_address" required class="form-control"placeholder="E-Mail Address" />
+  </div>
+<!---mobileno--->
+<div class="mb-3">
+      <label for="mobileno"class="form"> Mobile No.</label>
+      <input type="number" name="mobileno" id="mobileno" pattern="\d{10}" maxlength="10" required class="form-control"placeholder=" Mobile No" />
+    </div>
+    <!---Address--->
+<div class="mb-3">
+        <label for="Address"class="form">Address:</label>
+       <textarea  name="Address" id="address" class="form-control" rows="3" placeholder=" Address"></textarea>
+</div>
+   <!------Submit------->
+    <button  type="submit" name="submitContact" class="btn btn-primary">Submit</button>
+</form>
+      </div>
+    </div>
+  </div>
+</div>
+                                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#myModal" style="margin-right: 0px;">
+                                    More info
+                                  </button>
                             </div>
                         </div>
                     </div>
                 </div>
                 <hr style="color: white;width: 1130px;">
-                <!---2---->
-                <div class="container">
+<!----- 2 ---->
+               <div class="container">
                     <div class="row">
 
-                        <div class="col-md-2">
+                        <div class="col-md-3">
                             <div class="well">
-                            <img src=" https://tektreeinc.com/wp-content/uploads/2021/09/ui-development-1024x1024.png">
+                                <img src="assets\images\events/webinar.avif">
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -237,51 +336,31 @@ https://templatemo.com/tm-569-edu-meeting
                     </p>
                 </div>
                         </div>
-                        <div class="col-md-4">
-                        <div class="well-1">
+                        <div class="col-md-3">
+                            
+                            <div class="well-1" style="padding:0px">
+                            <div class="well">
+                                <button type="button" class="btn btn-danger btn-md">07<br>Feb,2024</button>
+                                <div style="color: white;">9:15 am-5:00 pm</div>
+                            </div>
                                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#contactModal" style="margin-right: 10px;">
-                                    Contact Us
+                                    Book Now
                                   </button>
                                 <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#myModal" style="margin-right: 0px;">
                                     More info
                                   </button>
-                                      <!-- The Modal -->
-                      <div class="modal" id="myModal">
-                        <div class="modal-dialog">
-                          <div class="modal-content">
-                      
-                            <!-- Modal Header -->
-                            <div class="modal-header">
-                              <h4 class="modal-title">Modal Heading</h4>
-                              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                            </div>
-                      
-                            <!-- Modal body -->
-                            <div class="modal-body">
-                              Modal body..
-                            </div>
-                      
-                            <!-- Modal footer -->
-                            <div class="modal-footer">
-                              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-                            </div>
-                      
-                          </div>
-                        </div>
-                      </div>
-                                 
                             </div>
                         </div>
                     </div>
                 </div>
                 <hr style="color: white;width: 1130px;">
-                <!---3---->
-                <div class="container">
+<!----- 3 ---->
+               <div class="container">
                     <div class="row">
 
-                        <div class="col-md-2">
+                        <div class="col-md-3">
                             <div class="well">
-                            <img src=" https://tektreeinc.com/wp-content/uploads/2021/09/ui-development-1024x1024.png">
+                                <img src="assets\images\events/webinar.avif">
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -297,51 +376,31 @@ https://templatemo.com/tm-569-edu-meeting
                     </p>
                 </div>
                         </div>
-                        <div class="col-md-4">
-                        <div class="well-1">
+                        <div class="col-md-3">
+                            
+                            <div class="well-1" style="padding:0px">
+                            <div class="well">
+                                <button type="button" class="btn btn-danger btn-md">07<br>Feb,2024</button>
+                                <div style="color: white;">9:15 am-5:00 pm</div>
+                            </div>
                                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#contactModal" style="margin-right: 10px;">
-                                    Contact Us
+                                    Book Now
                                   </button>
                                 <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#myModal" style="margin-right: 0px;">
                                     More info
                                   </button>
-                                      <!-- The Modal -->
-                      <div class="modal" id="myModal">
-                        <div class="modal-dialog">
-                          <div class="modal-content">
-                      
-                            <!-- Modal Header -->
-                            <div class="modal-header">
-                              <h4 class="modal-title">Modal Heading</h4>
-                              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                            </div>
-                      
-                            <!-- Modal body -->
-                            <div class="modal-body">
-                              Modal body..
-                            </div>
-                      
-                            <!-- Modal footer -->
-                            <div class="modal-footer">
-                              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-                            </div>
-                      
-                          </div>
-                        </div>
-                      </div>
-                                 
                             </div>
                         </div>
                     </div>
                 </div>
                 <hr style="color: white;width: 1130px;">
-                <!---4---->
-                <div class="container">
+<!----- 4 ---->
+               <div class="container">
                     <div class="row">
 
-                        <div class="col-md-2">
+                        <div class="col-md-3">
                             <div class="well">
-                            <img src=" https://tektreeinc.com/wp-content/uploads/2021/09/ui-development-1024x1024.png">
+                                <img src="assets\images\events/webinar.avif">
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -357,40 +416,25 @@ https://templatemo.com/tm-569-edu-meeting
                     </p>
                 </div>
                         </div>
-                        
-                        <div class="col-md-4">
-                        <div class="well-1">
+                        <div class="col-md-3">
+                            
+                            <div class="well-1" style="padding:0px">
+                            <div class="well">
+                                <button type="button" class="btn btn-danger btn-md">07<br>Feb,2024</button>
+                                <div style="color: white;">9:15 am-5:00 pm</div>
+                            </div>
                                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#contactModal" style="margin-right: 10px;">
-                                    Contact Us
+                                    Book Now
                                   </button>
                                 <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#myModal" style="margin-right: 0px;">
                                     More info
                                   </button>
-
-                                      <!-- The Modal -->
-                     <div class="modal" id="myModal">
-                        <div class="modal-dialog">
-                          <div class="modal-content">
-                      
-                            <!-- Modal Header -->
-                            <div class="modal-header">
-                              <h4 class="modal-title">Modal Heading</h4>
-                              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                             </div>
-                      
-                            <!-- Modal body -->
-                            <div class="modal-body">
-                              Modal body..
-                            </div>
-                      
-                            <!-- Modal footer -->
-                            <div class="modal-footer">
-                              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-                            </div>
-                      
-                          </div>
                         </div>
-
+                    </div>
+                </div>
+                
+        
                       </div>
                                  
                             </div>
@@ -551,5 +595,5 @@ https://templatemo.com/tm-569-edu-meeting
 
 </body>
 
-</html>
+</html> 
 
