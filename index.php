@@ -688,18 +688,18 @@ window.onclick = function(event) {
 <div class="mb-3">
         <label for="Name">Name:</label>
         <input type="text" name="full_name" id="fullname" required class="form-control" placeholder="Enter Name">
-    </div>
+</div>
 
 <!---E-mail Address--->
 <div class="mb-3">
       <label for="email_address">Email Address:</label>
       <input type="email" name="email" id="email_address" required class="form-control"placeholder="E-Mail Address" />
-  </div>
+</div>
 <!---mobileno--->
 <div class="mb-3">
       <label for="mobileno"> Mobile No.</label>
       <input type="number" name="mobileno" id="mobileno" pattern="\d{10}" maxlength="10" required class="form-control"placeholder=" Mobile No" />
-    </div>
+</div>
  
 
 <!---Select Subject:--->    
