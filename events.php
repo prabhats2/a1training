@@ -30,9 +30,14 @@ session_start();
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
  <!-- Include SweetAlert CSS -->
  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.9/dist/sweetalert2.min.css">
+ <!-- Bootstrap JS and dependencies -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/js/bootstrap.min.js"></script>
  <!-- Include SweetAlert JavaScript -->
  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
- <script>
+
+
+<script>
 document.getElementById('mobileno').addEventListener('input', function (e) {
     var x = e.target.value.replace(/\D/g, '');
     if (x.length > 10) {
@@ -50,8 +55,8 @@ if (messageText !== '') {
     });
     <?php unset($_SESSION['status']); ?>
 }
-</script>
- <script>
+
+
   document.addEventListener('DOMContentLoaded', (event) => {
     const form = document.querySelector('.form');
 
@@ -79,14 +84,14 @@ if (messageText !== '') {
       });
     });
   });
+
+
+  $(document).ready(function () {
+            $('.gallery-item').fancybox();
+        });
 </script>
 
     
-    <script>
-        $(document).ready(function () {
-            $('.gallery-item').fancybox();
-        });
-    </script>
     <style>
         .n {
             overflow: scroll;
@@ -159,30 +164,83 @@ if (messageText !== '') {
             gap: 10px; /* Adjust gap between buttons */
        
         }
+        /* Default styling for web view */
+       .info-item {
+    display: inline-block;
+    margin-left: 40px;
+        }
+
+        /* Mobile view styling */
+        @media (max-width: 768px) {
+    .info-item {
+        display: block;
+        margin-right: 0;
+        margin-bottom: 10px;
+            }
+        }
+
         .modal {
-  transition: all 0.5s;
-  transform: translateY(-50%);
+           transition: all 0.5s;
+          transform: translateY(-50%);
+        }
+
+        .modal.show {
+          transform: translateY(0);
+        }
+
+        .modal-content {
+          animation: fadeIn 0.5s;
+        }
+
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+          }
+          to {
+            opacity: 1;
+          }
+        }
+        .form{
+            color:black;
+        }
+       
+    /* Flexbox container to center the button */
+.button-container {
+    display: flex;
+    justify-content: center; /* Horizontally center */
+    align-items: center; /* Vertically center if the div has a height */
+    width: 100%;
+    height:fix-mime_content_type; /* Full viewport height to center vertically as well */
 }
 
-.modal.show {
-  transform: translateY(0);
+.animated-button {
+    background-color: #4CAF50; /* Green background */
+    border: none; /* Remove borders */
+    color: white; /* White text */
+    padding: 15px 32px; /* Some padding */
+    text-align: center; /* Centered text */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Get the element to align correctly */
+    font-size: 16px; /* Increase font size */
+    margin: 4px 2px; /* Some margin */
+    transition: background-color 0.3s, transform 0.3s; /* Add transition for background and transform */
+    cursor: pointer; /* Add a pointer cursor on hover */
 }
 
-.modal-content {
-  animation: fadeIn 0.5s;
+.animated-button:hover {
+    background-color: red; /* Darker green on hover */
+    transform: scale(1.1); /* Scale the button on hover */
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+/* Media queries for responsive design */
+@media (max-width: 600px) {
+    .animated-button {
+        padding: 10px 20px; /* Adjust padding for smaller screens */
+        font-size: 14px; /* Adjust font size for smaller screens */
+        margin: 2px 1px; /* Adjust margin for smaller screens */
+    }
 }
-.form{
-    color:black;
-}
+
     
 </style>
     
@@ -284,8 +342,325 @@ https://templatemo.com/tm-569-edu-meeting
         <div class="container">
             <div class="row">
                 
-<!----- 1 ---->
-                <div class="container">
+                <!----- 1 ---->
+                 <div class="container">
+                    <div class="row">
+
+                        <div class="col-md-3">
+                            <div class="well">
+                                <img src="assets\images\events\AWS_WEBINAR.png">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                        
+                            <div class="col-lg ">
+                    <h5 style="margin-top: 23px; color: white;">AWS Webinar</h5>
+                    <p style="color:white;">
+                        <span>"Unlocking the Power of the Cloud: Join A1 Training Institute's AWS Masterclass!"</span>
+                        <span class="more-text">
+                            <span>
+                           <strong><br> Introduction to AWS </strong> <br>
+
+                           &#8226; Creating a free tier AWS account<br>
+                           &#8226; Launching an EC2 Instance<br>
+                           &#8226; AWS Networking (VPC)<br>
+                           &#8226; AWS Route 53<br>
+                           &#8226; Amazon S3 Bucket<br>
+                           &#8226; Live Q/A with AWS experts<br>
+                           &#8226; Live Project
+                                
+                            </span>
+                        </span>
+                        <span class="read-more-btn" onclick="toggleReadMore(this)">Read More</span>
+                        
+                    </p>
+                </div>
+                        </div>
+                        <div class="col-md-3">
+                            
+                            <div class="well-1" style="padding:0px">
+                            <div class="well">
+                                <button type="button" class="btn btn-danger btn-md">10-12<br>Aug, 2024</button>
+                                <a href=" assets\pdf\events\AWS-Webinar.pdf " target="blank">
+                                    <button type="button" class="btn btn-danger btn-md" ><i class="fa fa-download" style="font-size:20px"></i><br>
+                                    <span style="margin-left:14px;margin-right:14px;">Notes</span> </button>
+                                </a>
+                                <br><div style="color: white;margin:10px;margin-left:40px;">07:00 PM-08:00 PM</div>
+                            </div>
+
+                            <!-- Button trigger modal -->
+                             <!------<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#callbackModal">
+                        Book Now
+                        </button>------->
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfDzJJhzAuTsPkmVGtZ9VG3kTEwaYvOZj4xBiCy73GuBUgzBw/viewform" type="button" target="blank" class="btn btn-primary">
+                        Book Now
+                        </a>         
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#myModal">
+                            More info
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title mx-auto"  id="myModalLabel" style="color:black; "><strong>FREE AWS WEBINAR</strong></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" style="color:black;">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfDzJJhzAuTsPkmVGtZ9VG3kTEwaYvOZj4xBiCy73GuBUgzBw/viewform" target="_blank">
+                    <img src="assets/images/events/aws.jpeg" alt="AWS Webinar" class="img-fluid">
+                </a>
+                <div class="container my-3">
+                    <h1 class="text-center display-4"><strong>FREE <span class="text-warning">AWS</span> WEBINAR</strong></h1>
+                    <h4 class="text-center">LEARN ABOUT THE MOST POPULAR CLOUD SERVICE PROVIDER</h4><br>
+                    <h2>Introduction To AWS</h2>
+                    <ul>
+                        <li>&#8226; Creating a free tier AWS account</li>
+                        <li>&#8226; Launching an EC2 Instance</li>
+                        <li>&#8226; AWS Networking (VPC)</li>
+                        <li>&#8226; AWS Route 53</li>
+                        <li>&#8226; Amazon S3 Bucket</li>
+                        <li>&#8226; Live Q/A with AWS experts</li>
+                        <li>&#8226; Live Project</li>
+                    </ul>
+                    <h2>AWS Webinar Series: Getting Started With A1TI</h2><br>
+                    <p>
+                        <div class="info-item"><strong>Date:</strong> 10-12 August</div>
+                        <div class="info-item"><strong>Time:</strong> 7-8 PM</div>
+                        <div class="info-item"><strong>Location:</strong> Noida, Delhi, Bangalore, Pune</div>
+                    </p><br>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfDzJJhzAuTsPkmVGtZ9VG3kTEwaYvOZj4xBiCy73GuBUgzBw/viewform" target="_blank">
+                    <div class="text-center button-container ">
+                        <button type="button" class="btn btn-primary animated-button">Click To Enroll Now</button>
+                    </div>
+                </a>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="background-color:red;">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+    </div>
+                    </div>
+                </div>
+                <hr style="color: white;width: 1130px;">
+                 <!-----2 ---->
+                 <div class="container">
+                    <div class="row">
+
+                        <div class="col-md-3">
+                            <div class="well">
+                                <img src="assets\images\events\AWS_WEBINAR.png">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                        
+                            <div class="col-lg ">
+                    <h5 style="margin-top: 23px; color: white;">Mean Stack Webinar</h5>
+                    <p style="color:white;">
+                        <span>"Unlocking the Power of the Cloud: Join A1 Training Institute's AWS Masterclass!"</span>
+                        <span class="more-text">
+                            <span>
+                           <strong><br> Introduction to AWS </strong> <br>
+
+                           &#8226; Creating a free tier AWS account<br>
+                           &#8226; Launching an EC2 Instance<br>
+                           &#8226; AWS Networking (VPC)<br>
+                           &#8226; AWS Route 53<br>
+                           &#8226; Amazon S3 Bucket<br>
+                           &#8226; Live Q/A with AWS experts<br>
+                           &#8226; Live Project
+                                
+                            </span>
+                        </span>
+                        <span class="read-more-btn" onclick="toggleReadMore(this)">Read More</span>
+                        
+                    </p>
+                </div>
+                        </div>
+                        <div class="col-md-3">
+                            
+                            <div class="well-1" style="padding:0px">
+                            <div class="well">
+                                <button type="button" class="btn btn-danger btn-md">10-12<br>Aug, 2024</button>
+                                <a href=" assets\pdf\50_linux_commands.pdf " target="blank">
+                                    <button type="button" class="btn btn-danger btn-md" ><i class="fa fa-download" style="font-size:20px"></i><br><span style="margin-left:14px;margin-right:14px;">Notes</span> </button></a>
+                                <br><div style="color: white;margin:10px;margin-left:40px;">07:00 PM-08:00 PM</div>
+                            </div>
+
+                            <!-- Button trigger modal -->
+                             <!------<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#callbackModal">
+                        Book Now
+                        </button>------->
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfDzJJhzAuTsPkmVGtZ9VG3kTEwaYvOZj4xBiCy73GuBUgzBw/viewform" type="button" target="blank" class="btn btn-primary">
+                        Book Now
+                        </a>         
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#myModal">
+                            More info
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title mx-auto"  id="myModalLabel" style="color:black; "><strong>FREE Mean Stack WEBINAR</strong></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" style="color:black;">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfDzJJhzAuTsPkmVGtZ9VG3kTEwaYvOZj4xBiCy73GuBUgzBw/viewform" target="_blank">
+                    <img src="assets/images/events/aws.jpeg" alt="AWS Webinar" class="img-fluid">
+                </a>
+                <div class="container my-3">
+                    <h1 class="text-center display-4"><strong>FREE <span class="text-warning">Mean Stack</span> WEBINAR</strong></h1>
+                    <h4 class="text-center">LEARN ABOUT THE MOST POPULAR CLOUD SERVICE PROVIDER</h4><br>
+                    <h2>Introduction To AWS</h2>
+                    <ul>
+                        <li>&#8226; Creating a free tier AWS account</li>
+                        <li>&#8226; Launching an EC2 Instance</li>
+                        <li>&#8226; AWS Networking (VPC)</li>
+                        <li>&#8226; AWS Route 53</li>
+                        <li>&#8226; Amazon S3 Bucket</li>
+                        <li>&#8226; Live Q/A with AWS experts</li>
+                        <li>&#8226; Live Project</li>
+                    </ul>
+                    <h2>AWS Webinar Series: Getting Started With A1TI</h2><br>
+                    <p>
+                        <div class="info-item"><strong>Date:</strong> 10-12 August</div>
+                        <div class="info-item"><strong>Time:</strong> 7-8 PM</div>
+                        <div class="info-item"><strong>Location:</strong> Noida, Delhi, Bangalore, Pune</div>
+                    </p><br>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfDzJJhzAuTsPkmVGtZ9VG3kTEwaYvOZj4xBiCy73GuBUgzBw/viewform" target="_blank">
+                    <div class="text-center button-container ">
+                        <button type="button" class="btn btn-primary animated-button">Click To Enroll Now</button>
+                    </div>
+                </a>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="background-color:red;">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+    </div>
+                    </div>
+                </div>
+                <hr style="color: white;width: 1130px;">
+                 <!----- 3 ---->
+                 <div class="container">
+                    <div class="row">
+
+                        <div class="col-md-3">
+                            <div class="well">
+                                <img src="assets\images\events\AWS_WEBINAR.png">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                        
+                            <div class="col-lg ">
+                    <h5 style="margin-top: 23px; color: white;">HTML/CSS Webinar</h5>
+                    <p style="color:white;">
+                        <span>"Unlocking the Power of the Cloud: Join A1 Training Institute's AWS Masterclass!"</span>
+                        <span class="more-text">
+                            <span>
+                           <strong><br> Introduction to AWS </strong> <br>
+
+                           &#8226; Creating a free tier AWS account<br>
+                           &#8226; Launching an EC2 Instance<br>
+                           &#8226; AWS Networking (VPC)<br>
+                           &#8226; AWS Route 53<br>
+                           &#8226; Amazon S3 Bucket<br>
+                           &#8226; Live Q/A with AWS experts<br>
+                           &#8226; Live Project
+                                
+                            </span>
+                        </span>
+                        <span class="read-more-btn" onclick="toggleReadMore(this)">Read More</span>
+                        
+                    </p>
+                </div>
+                        </div>
+                        <div class="col-md-3">
+                            
+                            <div class="well-1" style="padding:0px">
+                            <div class="well">
+                                <button type="button" class="btn btn-danger btn-md">10-12<br>Aug, 2024</button>
+                                <a href=" assets\pdf\50_linux_commands.pdf " target="blank">
+                                    <button type="button" class="btn btn-danger btn-md" ><i class="fa fa-download" style="font-size:20px"></i><br><span style="margin-left:14px;margin-right:14px;">Notes</span> </button></a>
+                                <br><div style="color: white;margin:10px;margin-left:40px;">07:00 PM-08:00 PM</div>
+                            </div>
+
+                            <!-- Button trigger modal -->
+                             <!------<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#callbackModal">
+                        Book Now
+                        </button>------->
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfDzJJhzAuTsPkmVGtZ9VG3kTEwaYvOZj4xBiCy73GuBUgzBw/viewform" type="button" target="blank" class="btn btn-primary">
+                        Book Now
+                        </a>         
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#myModal">
+                            More info
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title mx-auto"  id="myModalLabel" style="color:black; "><strong>FREE AWS WEBINAR</strong></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" style="color:black;">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfDzJJhzAuTsPkmVGtZ9VG3kTEwaYvOZj4xBiCy73GuBUgzBw/viewform" target="_blank">
+                    <img src="assets/images/events/aws.jpeg" alt="AWS Webinar" class="img-fluid">
+                </a>
+                <div class="container my-3">
+                    <h1 class="text-center display-4"><strong>FREE <span class="text-warning">AWS</span> WEBINAR</strong></h1>
+                    <h4 class="text-center">LEARN ABOUT THE MOST POPULAR CLOUD SERVICE PROVIDER</h4><br>
+                    <h2>Introduction To AWS</h2>
+                    <ul>
+                        <li>&#8226; Creating a free tier AWS account</li>
+                        <li>&#8226; Launching an EC2 Instance</li>
+                        <li>&#8226; AWS Networking (VPC)</li>
+                        <li>&#8226; AWS Route 53</li>
+                        <li>&#8226; Amazon S3 Bucket</li>
+                        <li>&#8226; Live Q/A with AWS experts</li>
+                        <li>&#8226; Live Project</li>
+                    </ul>
+                    <h2>AWS Webinar Series: Getting Started With A1TI</h2><br>
+                    <p>
+                        <div class="info-item"><strong>Date:</strong> 10-12 August</div>
+                        <div class="info-item"><strong>Time:</strong> 7-8 PM</div>
+                        <div class="info-item"><strong>Location:</strong> Noida, Delhi, Bangalore, Pune</div>
+                    </p><br>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfDzJJhzAuTsPkmVGtZ9VG3kTEwaYvOZj4xBiCy73GuBUgzBw/viewform" target="_blank">
+                    <div class="text-center button-container ">
+                        <button type="button" class="btn btn-primary animated-button">Click To Enroll Now</button>
+                    </div>
+                </a>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="background-color:red;">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+    </div>
+                    </div>
+                </div>
+                <hr style="color: white;width: 1130px;">
+                 <!----- 4 ---->
+                 <div class="container">
                     <div class="row">
 
                         <div class="col-md-3">
@@ -330,348 +705,69 @@ https://templatemo.com/tm-569-edu-meeting
 
                             <!-- Button trigger modal -->
                              <!------<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#callbackModal">
-Book Now
-</button>------->
-<a href="https://docs.google.com/forms/d/e/1FAIpQLSfDzJJhzAuTsPkmVGtZ9VG3kTEwaYvOZj4xBiCy73GuBUgzBw/viewform" type="button" target="blank" class="btn btn-primary">
-Book Now
-</a>
+                        Book Now
+                        </button>------->
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfDzJJhzAuTsPkmVGtZ9VG3kTEwaYvOZj4xBiCy73GuBUgzBw/viewform" type="button" target="blank" class="btn btn-primary">
+                        Book Now
+                        </a>         
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#myModal">
+                            More info
+                        </button>
 
-<!-- Modal -->
-<div class="modal fade" id="callbackModal" tabindex="-1" aria-labelledby="callbackModalLabel" aria-hidden="true" >
+                        <!-- Modal -->
+                        <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="callbackModalLabel" style="color:red; margin-left:290px; font-size:30px;">Book Now</h5>
+                <h5 class="modal-title mx-auto"  id="myModalLabel" style="color:black; "><strong>FREE AWS WEBINAR</strong></h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body">
-                <!-- Contact Form -->
-               
-                <form class="form" action="sendmail.php" method="POST" class="form-container" style="height: 475px; overflow-y: scroll;">
-                    
-                <div class="mb-3">
-                        <label for="name" class="form-label">Name</label>
-                        <input type="text" class="form-control" id="name" placeholder="Your Name">
+            <div class="modal-body" style="color:black;">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfDzJJhzAuTsPkmVGtZ9VG3kTEwaYvOZj4xBiCy73GuBUgzBw/viewform" target="_blank">
+                    <img src="assets/images/events/aws.jpeg" alt="AWS Webinar" class="img-fluid">
+                </a>
+                <div class="container my-3">
+                    <h1 class="text-center display-4"><strong>FREE <span class="text-warning">AWS</span> WEBINAR</strong></h1>
+                    <h4 class="text-center">LEARN ABOUT THE MOST POPULAR CLOUD SERVICE PROVIDER</h4><br>
+                    <h2>Introduction To AWS</h2>
+                    <ul>
+                        <li>&#8226; Creating a free tier AWS account</li>
+                        <li>&#8226; Launching an EC2 Instance</li>
+                        <li>&#8226; AWS Networking (VPC)</li>
+                        <li>&#8226; AWS Route 53</li>
+                        <li>&#8226; Amazon S3 Bucket</li>
+                        <li>&#8226; Live Q/A with AWS experts</li>
+                        <li>&#8226; Live Project</li>
+                    </ul>
+                    <h2>AWS Webinar Series: Getting Started With A1TI</h2><br>
+                    <p>
+                        <div class="info-item"><strong>Date:</strong> 10-12 August</div>
+                        <div class="info-item"><strong>Time:</strong> 7-8 PM</div>
+                        <div class="info-item"><strong>Location:</strong> Noida, Delhi, Bangalore, Pune</div>
+                    </p><br>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfDzJJhzAuTsPkmVGtZ9VG3kTEwaYvOZj4xBiCy73GuBUgzBw/viewform" target="_blank">
+                    <div class="text-center button-container ">
+                        <button type="button" class="btn btn-primary animated-button">Click To Enroll Now</button>
                     </div>
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="email" placeholder="Your Email">
-                    </div>
-                    <div class="mb-3">
-                        <label for="subject" class="form-label">Subject</label>
-                        <select id="selectpickerGroups" class="form-select selectpicker w-100" data-style="btn-default" style="border: 1px solid black;">
-                            <option>Choose Subject</option>
-                            <optgroup label="Web Designing">
-                                <option>Angular Js</option>
-                                <option>React Js</option>
-                                <option>Web Designing</option>
-                                <option>UI & UX</option>
-                                <option>PHP Experts</option>
-                                <option>PHP Full Stack</option>
-                            </optgroup>
-                            <optgroup label="Cloud Computing">
-                                <option>AWS Training</option>
-                                <option>AZURE Training</option>
-                                <option>GCP</option>
-                            </optgroup>
-                            <optgroup label="Devops">
-                                <option>Kubemetes Training</option>
-                                <option>Docker Certification Training</option>
-                                <option>Ansible Training</option>
-                                <option>Devops Training</option>
-                                <option>Jenkins</option>
-                                <option>Terraform</option>
-                                <option>Linux</option>
-                                <option>Git</option>
-                                <option>Shell Scripting</option>
-                            </optgroup>
-                            <optgroup label="Programming">
-                                <option>Python Training</option>
-                                <option>JavaScript Training</option>
-                                <option>Unix Shell Scripting Training</option>
-                                <option>Java Certification</option>
-                                <option>C And C++ Training</option>
-                                <option>.NET Training</option>
-                            </optgroup>
-                            <optgroup label="Database Developer">
-                                <option>MySQL Training</option>
-                                <option>MongoDB Training</option>
-                                <option>SQL Server DBA Training</option>
-                            </optgroup>
-                            <optgroup label="Mobile App Development">
-                                <option>Android</option>
-                                <option>I-Phone</option>
-                            </optgroup>
-                            <optgroup label="Data Science & AI">
-                                <option>Machine Learning Training</option>
-                                <option>Data Science Training</option>
-                                <option>Data Science With Python Training</option>
-                                <option>Deep Learning Course</option>
-                                <option>Artificial Intelligence Course</option>
-                            </optgroup>
-                            <optgroup label="MIS-Advanced Excel-BI Tools">
-                                <option>Power Bi</option>
-                                <option>Advanced Microsoft Excel</option>
-                                <option>MIS</option>
-                            </optgroup>
-                            <optgroup label="Digital Marketing">
-                                <option>Advanced Digital Marketing</option>
-                                <option>Digital Marketing</option>
-                            </optgroup>
-                            <optgroup label="Industrial Training">
-                                <option>6 Weeks Summer Training</option>
-                                <option>6 Months Industrial Training</option>
-                            </optgroup>
-                            <optgroup label="Multimedia Animation-Graphics">
-                                <option>Graphic Designing</option>
-                                <option>Graphic Designing Pro</option>
-                                <option>Motion Graphic Course </option>
-                                <option>Multimedia & Animation </option>
-                                <option>Graphic Motion Pro Course</option>
-                                <option>Multimedia & Animation (Diploma)</option>
-                                <option>Videograpy Course</option>
-                                <option>Scriptwriting & Story Boarding</option>
-                                <option>Film Making</option>
-                            </optgroup>
-                            <optgroup label="Software Testing">
-                                <option>Manual Testing</option>
-                                <option>Manual + Selenium</option>
-                                <option>Full Stack QA</option>
-                                <option>Java With Selenium </option>
-                                <option>REST Assured API</option>
-                                <option>Appium Testing</option>
-                                <option>API Testing</option>
-                            </optgroup>
-                            <optgroup label="Project Management">
-                                <option>Primavera P6 Testing</option>
-                                <option>Agile Testing</option>
-                                <option>Microsoft Excel Training</option>
-                                <option>Scrum Master Training</option>
-                            </optgroup>
-                            <optgroup label="Full Stack Development">
-                                <option>MEAN Stack</option>
-                                <option>Mern Stack</option>
-                            </optgroup>
-                        </select>
-                    </div>
-                    <div class="mb-3">
-                        <label for="message" class="form-label">Message</label>
-                        <textarea class="form-control" id="message" rows="3" placeholder="Your Message"></textarea>
-                    </div>
-                    <div class="mb-3">
-        <label for="Address">Address:</label>
-       <textarea  name="Address" id="address" class="form-control" rows="3" placeholder=" Address"></textarea>
-</div>
-                    <button type="submit" name="submitContact" class="btn btn-primary">Submit</button>
-                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
-                   
-                </form>
+                </a>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="background-color:red;">Close</button>
             </div>
         </div>
     </div>
 </div>
-
-                                 <!-- Button trigger modal -->
-    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#myModal" style="margin-right: 0px;">
-        More info
-    </button>
-
-    <!-- Large Modal -->
-    <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-lg-custom">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="myModalLabel"style="color:black;margin-left:13pc;"><strong>FREE AWS WEBINAR - REGISTRATION</strong></h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body"style="color:black;">
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfDzJJhzAuTsPkmVGtZ9VG3kTEwaYvOZj4xBiCy73GuBUgzBw/viewform" target="blank">
-                        <img src="assets\images\events\aws.jpeg" alt="">
-                    </a>
-
-                    <div class="container my-5">
-        <h1 class="text-center">FREE AWS WEBINAR - REGISTRATION</h1>
-        <h4 class="text-center">LEARN ABOUT THE MOST POPULAR CLOUD SERVICE PROVIDER</h4>
-        
-        <h2>Introduction to AWS:</h2>
-        <ul>
-        <li>&#8226;  Creating a free tier AWS account</li>
-       <li> &#8226;  Launching an EC2 Instance</li>
-        </ul>
-
-        <h2>AWS Networking (VPC)</h2>
-        <h2>AWS Route 53</h2>
-        <h2>Amazon S3 Bucket</h2>
-        <h2>Live Q/A with AWS experts</h2>
-        <h2>Live Project</h2>
-
-        <h2>AWS Webinar Series: Getting Started With A1TI</h2>
-
-        <p><strong>Date:</strong> 10-12 August</p>
-        <p><strong>Time:</strong> 7-8 PM</p>
-        <p><strong>Location:</strong> Noida, Delhi, Bangalore, Pune</p>
+</div>
     </div>
-
+                    </div>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                   
-                </div>
-            </div>
-        </div>
+                <hr style="color: white;width: 1130px;">
+            
+                     
     </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <hr style="color: white;width: 1130px;">
-               
-<!----- 2 ---->
-               <div class="container">
-                    <div class="row">
-
-                        <div class="col-md-3">
-                            <div class="well">
-                                <img src="assets\images\events\html-css.jpeg">
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                        
-                            <div class="col-lg ">
-                    <h5 style="margin-top: 23px; color: white;">UI Project </h5>
-                    <p style="color:white;">
-                        <span>A project manager plays a stellar role in project management...</span>
-                        <span class="more-text">
-                            <span>where tasks, goals, deadlines and unpredictable circumstances are intertwined. However, managing a project effectively is usually not as easy as it sounds and requires more than one person’s supervision.</span>
-                        </span>
-                        <span class="read-more-btn" onclick="toggleReadMore(this)">Read More</span>
-                    </p>
-                </div>
-                        </div>
-                        <div class="col-md-3">
-                            
-                            <div class="well-1" style="padding:0px">
-                            <div class="well">
-                                <button type="button" class="btn btn-danger btn-md">07<br>Feb,2024</button>
-                                <div style="color: white;">9:15 am-5:00 pm</div>
-                            </div>
-                                      <!-- Button trigger modal -->
-                             <!------<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#callbackModal">
-Book Now
-</button>------->
-<a href="https://docs.google.com/forms/d/e/1FAIpQLSfDzJJhzAuTsPkmVGtZ9VG3kTEwaYvOZj4xBiCy73GuBUgzBw/viewform" type="button" target="blank" class="btn btn-primary">
-Book Now
-</a>
-                                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#myModal" style="margin-right: 0px;">
-                                    More info
-                                  </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <hr style="color: white;width: 1130px;">
-<!----- 3 ---->
-               <div class="container">
-                    <div class="row">
-
-                        <div class="col-md-3">
-                            <div class="well">
-                                <img src="assets\images\events/webinar.avif">
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                        
-                            <div class="col-lg ">
-                    <h5 style="margin-top: 23px; color: white;">UI Project </h5>
-                    <p style="color:white;">
-                        <span>A project manager plays a stellar role in project management...</span>
-                        <span class="more-text">
-                            <span>where tasks, goals, deadlines and unpredictable circumstances are intertwined. However, managing a project effectively is usually not as easy as it sounds and requires more than one person’s supervision.</span>
-                        </span>
-                        <span class="read-more-btn" onclick="toggleReadMore(this)">Read More</span>
-                    </p>
-                </div>
-                        </div>
-                        <div class="col-md-3">
-                            
-                            <div class="well-1" style="padding:0px">
-                            <div class="well">
-                                <button type="button" class="btn btn-danger btn-md">07<br>Feb,2024</button>
-                                <div style="color: white;">9:15 am-5:00 pm</div>
-                            </div>
-                                      <!-- Button trigger modal -->
-                             <!------<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#callbackModal">
-Book Now
-</button>------->
-<a href="https://docs.google.com/forms/d/e/1FAIpQLSfDzJJhzAuTsPkmVGtZ9VG3kTEwaYvOZj4xBiCy73GuBUgzBw/viewform" type="button" target="blank" class="btn btn-primary">
-Book Now
-</a>
-                                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#myModal" style="margin-right: 0px;">
-                                    More info
-                                  </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <hr style="color: white;width: 1130px;">
-<!----- 4 ---->
-               <div class="container">
-                    <div class="row">
-
-                        <div class="col-md-3">
-                            <div class="well">
-                                <img src="assets\images\events\webinar.avif">
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                        
-                            <div class="col-lg ">
-                    <h5 style="margin-top: 23px; color: white;">UI Project </h5>
-                    <p style="color:white;">
-                        <span>A project manager plays a stellar role in project management...</span>
-                        <span class="more-text">
-                            <span>where tasks, goals, deadlines and unpredictable circumstances are intertwined. However, managing a project effectively is usually not as easy as it sounds and requires more than one person’s supervision.</span>
-                        </span>
-                        <span class="read-more-btn" onclick="toggleReadMore(this)">Read More</span>
-                    </p>
-                </div>
-                        </div>
-                        <div class="col-md-3">
-                            
-                            <div class="well-1" style="padding:0px">
-                            <div class="well">
-                                <button type="button" class="btn btn-danger btn-md">07<br>Feb,2024</button>
-                                <div style="color: white;">9:15 am-5:00 pm</div>
-                            </div>
-                                     <!-- Button trigger modal -->
-                             <!------<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#callbackModal">
-Book Now
-</button>------->
-<a href="https://docs.google.com/forms/d/e/1FAIpQLSfDzJJhzAuTsPkmVGtZ9VG3kTEwaYvOZj4xBiCy73GuBUgzBw/viewform" type="button" target="blank" class="btn btn-primary">
-Book Now
-</a>
-                                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#myModal" style="margin-right: 0px;">
-                                    More info
-                                  </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-        
-                      </div>
-                                 
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-
-
-              </div>
-            </div>
-        </div>
-        </div>
+</div>
 
     </section>
      <!--footer-->
