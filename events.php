@@ -354,7 +354,7 @@ https://templatemo.com/tm-569-edu-meeting
         <!-- AWS Webinar Section -->
         <div class="col-md-3">
             <div class="well">
-                <img src="assets/images/events/AWS_WEBINAR.png" alt="AWS Webinar">
+                <img src="assets/images/events/aws.png" alt="AWS Webinar">
             </div>
         </div>
         <div class="col-md-6">
