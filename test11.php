@@ -67,8 +67,8 @@ https://templatemo.com/tm-569-edu-meeting
     <section class="meetings-page" id="meetings">
         <div class="container-fluid">
             <div class="row">
-                
-                <div class="col-md-3">
+              for(i = 0;i<books.col1.length;i++){	
+                document.writeln('<div class="col-md-3">');
                     <div class="polaroid">
                         <a href="images/img 21.png" class="d-block mb-4 gallery-item" data-fancybox="gallery"
                             data-caption="Image 1">
@@ -78,6 +78,23 @@ https://templatemo.com/tm-569-edu-meeting
                             </div>
                         </a>
                     </div>
+
+                    <div class="column"> 
+                      <script language = "javascript" >
+                      for(i = 0;i<books.col1.length;i++){	
+                       document.writeln('<div class="gallery-grid">');
+                       document.writeln('<a class="example-image-link glightbox gallery_product" href="images/student/'+ books.col1[i].Images+'" data-lightbox="example-set" data-title="'+ books.col1[i].Name+','+ books.col1[i].City+'">');
+                         document.writeln('<img src="images/student/'+ books.col1[i].Images+'" style="width:100%">');
+                       document.writeln('<div class="captn">');
+                                       document.writeln('<h4>'+ books.col1[i].Name+'</h4>');
+                                       document.writeln('<p>'+ books.col1[i].City+'</p>');
+                                     document.writeln('</div>');
+                                   document.writeln('</a>');
+                       document.writeln('</div>');
+                     
+                      }
+                       </script>
+                       
                     <div class="polaroid">
                         <a href="images/img 1.jpg" class="d-block mb-4 gallery-item" data-fancybox="gallery"
                             data-caption="Image 1">
