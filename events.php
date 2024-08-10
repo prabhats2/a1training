@@ -252,6 +252,9 @@ if (messageText !== '') {
   scroll-margin-top: 100px; /* Adjust as needed */
 }
 
+.hidden-div {
+  display: none; /* The div is hidden but still occupies space */
+}
     
 </style>
     
@@ -355,9 +358,9 @@ https://templatemo.com/tm-569-edu-meeting
 function scrollToElementWithOffset(elementId, offset) {
   const element = document.getElementById(elementId);
   if (element) {
-    const top = element.getBoundingClientRect().top + window.pageYOffset;
+    const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
     window.scrollTo({
-      top: top - offset,
+      top: elementPosition - offset,
       behavior: 'smooth'
     });
   }
@@ -366,17 +369,19 @@ function scrollToElementWithOffset(elementId, offset) {
 function showSectionFromHash() {
   const hash = window.location.hash.substring(1);
   if (hash) {
-    scrollToElementWithOffset(hash, 100); // Adjust offset as needed
+    scrollToElementWithOffset(hash, 100); // Adjust offset to fit your needs
   }
 }
 
 document.addEventListener('DOMContentLoaded', showSectionFromHash);
 window.addEventListener('hashchange', showSectionFromHash);
+
 </script>
 
     <section class="meetings-page" id="meetings">
-<!----- AWS---->    
-<div class="container item-container" data-title="aws" id="aws" class="section">
+<!----- AWS---->  
+<div id="aws" class="section ">
+   <div class="container item-container" data-title="aws" >
     <div class="row">
         <!-- AWS Webinar Section -->
         <div class="col-md-3">
@@ -386,7 +391,7 @@ window.addEventListener('hashchange', showSectionFromHash);
         </div>
         <div class="col-md-6">
             <div class="col-lg">
-                <h5 style="margin-top: 23px; color: white;" >AWS Webinar</h5>
+                <h5 style="margin-top: 23px; color: white;">AWS Webinar</h5>
                 <p style="color: white;">
                     <span>"Unlocking the Power of the Cloud: Join A1 Training Institute's AWS Masterclass!"</span>
                     <span class="more-text">
@@ -469,8 +474,10 @@ window.addEventListener('hashchange', showSectionFromHash);
         </div>
     </div>
     <hr style="color: white; width: 1130px;">
-</div>
+   </div>
+</div>  
 <!-----Html CSS---->
+<div id="html-css" class="section ">
 <div class="container item-container" data-title="html  css" >
     <div class="row">
         <!-- HTML/CSS Webinar Section -->
@@ -570,7 +577,9 @@ window.addEventListener('hashchange', showSectionFromHash);
     </div>
     <hr style="color: white; width: 1130px;">
 </div>
+</div>  
 <!-----Git  ---->
+<div id="git" class="section ">
 <div class="container item-container" data-title="git" >
     <div class="row">
         <!-- git Webinar Section -->
@@ -673,6 +682,7 @@ window.addEventListener('hashchange', showSectionFromHash);
     </div>
     <hr style="color: white; width: 1130px;">
 </div>
+</div>  
 
 <script>
         function filterItems() {
