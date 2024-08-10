@@ -246,6 +246,11 @@ if (messageText !== '') {
         margin: 2px 1px; /* Adjust margin for smaller screens */
     }
 }
+.section {
+  padding: 20px;
+  margin-top: 50px; /* Ensure space for fixed headers if needed */
+  scroll-margin-top: 100px; /* Adjust as needed */
+}
 
     
 </style>
@@ -337,7 +342,7 @@ https://templatemo.com/tm-569-edu-meeting
     </div>
 
     <div class="container my-4">
-        <input type="text" id="searchBar" class="form-control" placeholder="Search webinars..." onkeyup="filterItems()">
+        <input type="text" id="searchBar" class="search-bar" class="form-control" placeholder="Search webinars..." onkeyup="filterItems()">
     </div>
     
             </div>
@@ -346,10 +351,32 @@ https://templatemo.com/tm-569-edu-meeting
         
     </section>
 
-    
+    <script>
+function scrollToElementWithOffset(elementId, offset) {
+  const element = document.getElementById(elementId);
+  if (element) {
+    const top = element.getBoundingClientRect().top + window.pageYOffset;
+    window.scrollTo({
+      top: top - offset,
+      behavior: 'smooth'
+    });
+  }
+}
+
+function showSectionFromHash() {
+  const hash = window.location.hash.substring(1);
+  if (hash) {
+    scrollToElementWithOffset(hash, 100); // Adjust offset as needed
+  }
+}
+
+document.addEventListener('DOMContentLoaded', showSectionFromHash);
+window.addEventListener('hashchange', showSectionFromHash);
+</script>
+
     <section class="meetings-page" id="meetings">
 <!----- AWS---->    
-<div class="container item-container" data-title="aws">
+<div class="container item-container" data-title="aws" id="aws" class="section">
     <div class="row">
         <!-- AWS Webinar Section -->
         <div class="col-md-3">
@@ -359,7 +386,7 @@ https://templatemo.com/tm-569-edu-meeting
         </div>
         <div class="col-md-6">
             <div class="col-lg">
-                <h5 style="margin-top: 23px; color: white;">AWS Webinar</h5>
+                <h5 style="margin-top: 23px; color: white;" >AWS Webinar</h5>
                 <p style="color: white;">
                     <span>"Unlocking the Power of the Cloud: Join A1 Training Institute's AWS Masterclass!"</span>
                     <span class="more-text">
@@ -444,7 +471,7 @@ https://templatemo.com/tm-569-edu-meeting
     <hr style="color: white; width: 1130px;">
 </div>
 <!-----Html CSS---->
-<div class="container item-container" data-title="html  css">
+<div class="container item-container" data-title="html  css" >
     <div class="row">
         <!-- HTML/CSS Webinar Section -->
         <div class="col-md-3">
@@ -452,7 +479,7 @@ https://templatemo.com/tm-569-edu-meeting
                 <img src="assets/images/events/html-css.png" alt="AWS Webinar">
             </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6" >
             <div class="col-lg">
                 <h5 style="margin-top: 23px; color: white;">HTML / CSS Webinar</h5>
                 <p style="color: white;">
@@ -544,7 +571,7 @@ https://templatemo.com/tm-569-edu-meeting
     <hr style="color: white; width: 1130px;">
 </div>
 <!-----Git  ---->
-<div class="container item-container" data-title="git">
+<div class="container item-container" data-title="git" >
     <div class="row">
         <!-- git Webinar Section -->
         <div class="col-md-3">
@@ -646,6 +673,7 @@ https://templatemo.com/tm-569-edu-meeting
     </div>
     <hr style="color: white; width: 1130px;">
 </div>
+
 <script>
         function filterItems() {
             const searchTerm = document.getElementById('searchBar').value.toLowerCase();
