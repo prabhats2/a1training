@@ -54,7 +54,7 @@ document.write(`  <!-- Sub Header -->
                             <a href="javascript:void(0)">More</a>
                             <ul class="sub-menu">
                                 <li><a href="testimonials.html">Testimonial</a></li>
-                                <li><a href="our_students.html">Our Students</a></li>
+                                <li><a href="Our-Students.html">Our Students</a></li>
                                 <li><a href="notes.html">Notes</a></li>
                             </ul>
                         </li>

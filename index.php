@@ -26,6 +26,7 @@
   <link rel="stylesheet" href="assets/css/templatemo-edu-meeting.css">
   <link rel="stylesheet" href="assets/css/owl.css">
   <link rel="stylesheet" href="assets/css/lightbox.css">
+  
   <style>
     /* Styles for the modal */
     .modal_pop {
@@ -89,6 +90,7 @@
   </div>
 </div>
 
+
 <script>
 // Get the modal
 var modal = document.getElementById('myModal');
@@ -148,7 +150,8 @@ window.onclick = function(event) {
     </div>
   </section>
   <!-- ***** Main Banner Area End ***** -->
-
+  <?php include 'callout.html'; ?>
+  
   <section class="services">
     <div class="container">
       <div class="row">
@@ -1249,6 +1252,7 @@ document.getElementById('mobileno').addEventListener('input', function (e) {
     e.target.value = x;
 });
 </script>
+
 
 </body>
 

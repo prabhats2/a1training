@@ -246,7 +246,15 @@ if (messageText !== '') {
         margin: 2px 1px; /* Adjust margin for smaller screens */
     }
 }
+.section {
+  padding: 20px;
+  margin-top: 50px; /* Ensure space for fixed headers if needed */
+  scroll-margin-top: 100px; /* Adjust as needed */
+}
 
+.hidden-div {
+  display: none; /* The div is hidden but still occupies space */
+}
     
 </style>
     
@@ -337,7 +345,7 @@ https://templatemo.com/tm-569-edu-meeting
     </div>
 
     <div class="container my-4">
-        <input type="text" id="searchBar" class="form-control" placeholder="Search webinars..." onkeyup="filterItems()">
+        <input type="text" id="searchBar" class="search-bar" class="form-control" placeholder="Search webinars..." onkeyup="filterItems()">
     </div>
     
             </div>
@@ -346,10 +354,34 @@ https://templatemo.com/tm-569-edu-meeting
         
     </section>
 
-    
+    <script>
+function scrollToElementWithOffset(elementId, offset) {
+  const element = document.getElementById(elementId);
+  if (element) {
+    const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+    window.scrollTo({
+      top: elementPosition - offset,
+      behavior: 'smooth'
+    });
+  }
+}
+
+function showSectionFromHash() {
+  const hash = window.location.hash.substring(1);
+  if (hash) {
+    scrollToElementWithOffset(hash, 100); // Adjust offset to fit your needs
+  }
+}
+
+document.addEventListener('DOMContentLoaded', showSectionFromHash);
+window.addEventListener('hashchange', showSectionFromHash);
+
+</script>
+
     <section class="meetings-page" id="meetings">
-<!----- AWS---->    
-<div class="container item-container" data-title="aws">
+<!----- AWS---->  
+<div id="aws" class="section ">
+   <div class="container item-container" data-title="aws" >
     <div class="row">
         <!-- AWS Webinar Section -->
         <div class="col-md-3">
@@ -442,9 +474,11 @@ https://templatemo.com/tm-569-edu-meeting
         </div>
     </div>
     <hr style="color: white; width: 1130px;">
-</div>
+   </div>
+</div>  
 <!-----Html CSS---->
-<div class="container item-container" data-title="html  css">
+<div id="html-css" class="section ">
+<div class="container item-container" data-title="html  css" >
     <div class="row">
         <!-- HTML/CSS Webinar Section -->
         <div class="col-md-3">
@@ -452,7 +486,7 @@ https://templatemo.com/tm-569-edu-meeting
                 <img src="assets/images/events/html-css.png" alt="AWS Webinar">
             </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6" >
             <div class="col-lg">
                 <h5 style="margin-top: 23px; color: white;">HTML / CSS Webinar</h5>
                 <p style="color: white;">
@@ -543,8 +577,10 @@ https://templatemo.com/tm-569-edu-meeting
     </div>
     <hr style="color: white; width: 1130px;">
 </div>
+</div>  
 <!-----Git  ---->
-<div class="container item-container" data-title="git">
+<div id="git" class="section ">
+<div class="container item-container" data-title="git" >
     <div class="row">
         <!-- git Webinar Section -->
         <div class="col-md-3">
@@ -646,6 +682,8 @@ https://templatemo.com/tm-569-edu-meeting
     </div>
     <hr style="color: white; width: 1130px;">
 </div>
+</div>  
+
 <script>
         function filterItems() {
             const searchTerm = document.getElementById('searchBar').value.toLowerCase();
