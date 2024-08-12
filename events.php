@@ -356,32 +356,44 @@ https://templatemo.com/tm-569-edu-meeting
 
     <script>
 function scrollToElementWithOffset(elementId, offset) {
-  const element = document.getElementById(elementId);
-  if (element) {
-    const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
-    window.scrollTo({
-      top: elementPosition - offset,
-      behavior: 'smooth'
-    });
+  window.onload = () => { // Ensures the page is fully loaded
+    const element = document.getElementById(elementId);
+    if (element) {
+      const elementTop = element.getBoundingClientRect().top;
+      const absoluteElementTop = elementTop + window.pageYOffset;
+      const finalPosition = absoluteElementTop - offset;
+
+      window.scrollTo({
+        top: finalPosition,
+        behavior: 'smooth'
+      });
+    }
   }
 }
 
 function showSectionFromHash() {
   const hash = window.location.hash.substring(1);
   if (hash) {
-    scrollToElementWithOffset(hash, 100); // Adjust offset to fit your needs
+    scrollToElementWithOffset(hash, calculateDynamicOffset());
   }
 }
 
-document.addEventListener('DOMContentLoaded', showSectionFromHash);
+function calculateDynamicOffset() {
+  const header = document.querySelector('header'); // Adjust selector as needed
+  return header ? header.offsetHeight : 100; // Default to 100 if no header
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  showSectionFromHash();
+});
+
 window.addEventListener('hashchange', showSectionFromHash);
 
 </script>
 
     <section class="meetings-page" id="meetings">
 <!----- AWS---->  
-<div id="aws" class="section ">
-   <div class="container item-container" data-title="aws" >
+   <div class="container item-container" data-title="aws"id="aws" class="section " >
     <div class="row">
         <!-- AWS Webinar Section -->
         <div class="col-md-3">
@@ -475,10 +487,8 @@ window.addEventListener('hashchange', showSectionFromHash);
     </div>
     <hr style="color: white; width: 1130px;">
    </div>
-</div>  
 <!-----Html CSS---->
-<div id="html-css" class="section ">
-<div class="container item-container" data-title="html  css" >
+<div class="container item-container" data-title="html  css"id="html-css" class="section " >
     <div class="row">
         <!-- HTML/CSS Webinar Section -->
         <div class="col-md-3">
@@ -577,10 +587,9 @@ window.addEventListener('hashchange', showSectionFromHash);
     </div>
     <hr style="color: white; width: 1130px;">
 </div>
-</div>  
+  
 <!-----Git  ---->
-<div id="git" class="section ">
-<div class="container item-container" data-title="git" >
+<div class="container item-container" data-title="git" id="git" class="section ">
     <div class="row">
         <!-- git Webinar Section -->
         <div class="col-md-3">
@@ -682,7 +691,7 @@ window.addEventListener('hashchange', showSectionFromHash);
     </div>
     <hr style="color: white; width: 1130px;">
 </div>
-</div>  
+
 
 <script>
         function filterItems() {
