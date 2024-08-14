@@ -1,69 +1,636 @@
-var courses = { "col1" : [ 
-   
-    { "course_name": "MEAN Stack", "class": "Full","pdf":"git ebook.pdf","title":"MEAN Stack", "image": "Mean Stack.png" },
-    { "course_name": "MERN Stack", "class": "Full","pdf":"mern.pdf","title":"MERN Stack","image": "Mern Stack.jpg"  },
-    
-    { "course_name": "AWS Training", "class": "cloud","pdf":"cloud.pdf","title":"AWS Training","image": "aws.png" },
-    { "course_name": "GCP", "class": "cloud","pdf":"cloud.pdf","title":"GCP","image": "GCP.png" },
-    { "course_name": "AZURE Training", "class": "cloud","pdf":"cloud.pdf","title":"AZURE Training","image": "azure.png" },
-    { "course_name": "React Js", "class": "Web","pdf":"React Js.pdf","title":"React Js","image": "react-js-training.png" },
-    { "course_name": "Web Designing", "class": "Web","pdf":"Web Designing.pdf","title":"Web Designing","image": "web-design.png" },
-    { "course_name": "UI/UX", "class": "Web","pdf":"UI/UX .pdf","title":"UI/UX","image": "UI-Development.jpg" },
-    { "course_name": "PHP Full Stack", "class": "Web","pdf":"PHP Full Stack .pdf","title":"PHP Full Stack","image": "php-full-stack.jpg" },
-    { "course_name": "PHP Experts", "class": "Web","pdf":"PHP Experts .pdf","title":"PHP Experts","image": "php-Experts.jpg" },
-    { "course_name": "Angular Js", "class": "Web","pdf":"Angular.pdf","title":"Angular Js","image": "Angular-training.png" },
-    { "course_name": "Docker Training", "class": "Devops","pdf":"Docker Training.pdf","title":"Docker Certification Training","image": "Docker-Certification-Training.jpg" },
-    { "course_name": "Ansible Training", "class": "Devops","pdf":"Ansible Training.pdf","title":"Ansible Training","image": "ansible.png" },
-    { "course_name": "Devops Training", "class": "Devops","pdf":"Devops Training.pdf","title":"Devops Training","image": "Devops training.jpg" },
-    { "course_name": "Jenkins", "class": "Devops","pdf":"Jenkins.pdf","title":"Jenkins","image": "Jenkins-training.jpg" },
-    { "course_name": "Terraform", "class": "Devops","pdf":"Terraform.pdf","title":"Terraform","image": "terraform.png" },
-    { "course_name": "Linux", "class": "Devops","pdf":"Linux.pdf","title":"Linux","image": "Linux.jpg" },
-    { "course_name": "Git", "class": "Devops","pdf":"Git.pdf","title":"Git","image": "Git.jpg" },
-    { "course_name": "Shell Scripting", "class": "Devops","pdf":"Shell Scripting.pdf","title":"Shell Scripting","image": "Shell Scripting.jpg" },
-    { "course_name": "Kubemetes Training", "class": "Devops","pdf":"Kubemetes Training.pdf","title":"Kubemetes Training","image": "Kubernetes.png" },
-    { "course_name": "Python Training", "class": "programming","pdf":"Python Training.pdf","title":"Python Training","image": "python.png" },
-    { "course_name": "Unix Shell Scripting Training", "class": "programming","pdf":"Unix Shell Scripting Training.pdf","title":"Unix Shell Scripting Training","image": "unix shell scripting training.png" },
-    { "course_name": "C And C++ Training", "class": "programming","pdf":"C And C++ Training.pdf","title":"C And C++ Training","image": "c c++.png.png" },
-    { "course_name": ".NET Training", "class": "programming","pdf":"NET Training.pdf","title":"NET Training","image": "net-training.png" },
-    { "course_name": "JavaScript Training", "class": "programming","pdf":"JavaScript Training.pdf","title":"JavaScript Training","image": "javaScript.png.png" },
-    { "course_name": "MySQL Training", "class": "Database","pdf":"MySQL Training.pdf","title":"MySQL Training","image": "My-Sql.jpg" },
-    { "course_name": "SQL Server DBA Training", "class": "Database","pdf":"SQL Server DBA Training.pdf","title":"SQL Server DBA Training","image": "sql-server-dba-training.png" },
-    { "course_name": "MongoDB Training", "class": "Database","pdf":"MongoDB Training.pdf","title":"MongoDB Training","image": "mongodb.jpg" },
-    { "course_name": "Android", "class": "mobile","pdf":"Android.pdf","title":"Android","image": "Android-Training.jpg" },
-    { "course_name": "I-Phone", "class": "mobile","pdf":"I-Phone.pdf","title":"I-Phone","image": "I-Phone.jpg" },
-    { "course_name": "Machine Learning Training", "class": "Data","pdf":"Machine Learning Training.pdf","title":"Machine Learning Training","image": "ai-machine-learning.png" },
-    { "course_name": "Data Science Training", "class": "Data","pdf":"Data Science Training.pdf","title":"Data Science Training","image": "data-science.jpg" },
-    { "course_name": "Deep Learning Course", "class": "Data","pdf":"Deep Learning Course.pdf","title":"Deep Learning Course","image": "Deep-learning-courses.jpg" },
-    { "course_name": "Artificial Intelligence Course", "class": "Data","pdf":"Artificial Intelligence Course.pdf","title":"Artificial Intelligence Course","image": "artificial intelligence.jpg" },
-    { "course_name": "Data Science With Python", "class": "Data","pdf":"Data Science With .pdf","title":"Data Science With Python","image": "data-science-with-python.png" },
-    { "course_name": "Power Bi", "class": "MIS","pdf":"Power Bi .pdf","title":"Power BI","image": "power-bi.jpg" },
-    { "course_name": "MIS", "class": "MIS","pdf":"MIS.pdf","title":"MIS","image": "mis.png" },
-    { "course_name": "Advanced Microsoft Excel", "class": "MIS","pdf":"Advanced Microsoft Excel .pdf","title":"Advanced Microsoft Excel","image": "microsoft Excel testing.jpg" },
-    { "course_name": "Advanced Digital Marketing", "class": "Digital","pdf":"Advanced Digital Marketing .pdf","title":"Advanced Digital Marketing","image": "advanced-digital-marketing.jpg" },
-    { "course_name": "Digital Marketing", "class": "Digital","pdf":"Digital Marketing.pdf","title":"Digital Marketing","image": "digital-marketing.jpg" },
-    { "course_name": "6 Weeks Summer Training", "class": "Industrial","pdf":"6 Weeks Summer Training.pdf","title":"6 Weeks Summer Training","image": "6 week.jpg" },
-    { "course_name": "6 Months Industrial Training", "class": "Industrial","pdf":"6 Months Industrial Training.pdf","title":"6 Months Industrial Training","image": "6 Months.jpg" },
-    { "course_name": "Graphic Designing", "class": "Multimedia","pdf":"Graphic Designing.pdf","title":"Graphic Designing","image": "Graphic-Design.jpg" },
-    { "course_name": "Motion Graphic Course", "class": "Multimedia","pdf":"Motion Graphic Course.pdf","title":"Motion Graphic Course","image": "motion.jpg" },
-    { "course_name": "Multimedia & Animation", "class": "Multimedia","pdf":"Multimedia & Animation.pdf","title":"Multimedia & Animation","image": "multimedia-ana animation diploma.jpg" },
-    { "course_name": "Graphic Motion Pro Course", "class": "Multimedia","pdf":"Graphic Motion Pro Course.pdf","title":"Graphic Motion Pro Course","image": "graphic motion pro course.jpg" },
-    { "course_name": "Multimedia & Animation (Diploma)", "class": "Multimedia","pdf":"Multimedia & Animation (Diploma).pdf","title":"Multimedia & Animation (Diploma)","image": "Animation.jpg" },
-    { "course_name": "Videograpy Course", "class": "Multimedia","pdf":"Videograpy Course.pdf","title":"Videograpy Course","image": "Videograpy course.jpg" },
-    { "course_name": "Scriptwriting & Story Boarding", "class": "Multimedia","pdf":"Scriptwriting & Story Boarding.pdf","title":"Scriptwriting & Story Boarding","image": "scriptwriting.png" },
-    { "course_name": "Film Making", "class": "Multimedia","pdf":"Film Making.pdf","title":"Film Making","image": "Film Making.jpg" },
-    { "course_name": "Graphic Designing Pro", "class": "Multimedia","pdf":"Graphic Designing Pro.pdf","title":"Graphic Designing Pro","image": "Graphic Designing Pro.jpg" },
-    { "course_name": "Manual + Selenium", "class": "Software","pdf":"Manual + Selenium.pdf","title":"Manual + Selenium","image": "Manual + Selenium.jpg" },
-    { "course_name": "Full Stack QA", "class": "Software","pdf":"Full Stack QA.pdf","title":"Full Stack QA","image": "Full Stack QA.png" },
-    { "course_name": "Java With Selenium ", "class": "Software","pdf":"Java With Selenium .pdf","title":"Java With Selenium ","image": "java with selenium.jpg" },
-    { "course_name": "REST Assured API", "class": "Software","pdf":"REST Assured API.pdf","title":"REST Assured API","image": "Rest Assured Api.jpg" },
-    { "course_name": "Appium Testing", "class": "Software","pdf":"Appium Testing.pdf","title":"Appium Testing","image": "Appium testing.png" },
-    { "course_name": "API Testing", "class": "Software","pdf":"API Testing.pdf","title":"API Testing","image": "api testing.jpg" },
-    { "course_name": "Manual Testing", "class": "Software","pdf":"Manual Testing.pdf","title":"Manual Testing","image": "manual testing.jpg" },
-    { "course_name": "Primavera P6 Testing", "class": "Project","pdf":"Primavera P6 Testing.pdf","title":"Primavera P6 Testing","image": "Primavera P6 Testing.jpg" },
-    { "course_name": "Agile Testing", "class": "Project","pdf":"Agile Testing.pdf","title":"Agile Testing","image": "Agile-Testing.jpg" },
-    { "course_name": "Microsoft Excel Training", "class": "Project","pdf":"Microsoft Excel Training.pdf","title":"Microsoft Excel Training","image": "Excel-Training.jpg" },
-    { "course_name": "Scrum Master Training", "class": "Project","pdf":"Scrum Master Training.pdf","title":"Scrum Master Training","image": "Scrum Master Traing.jpg" }
-    
-]
+var courses = {
+    "col1": [
+        {
+            "course_name": "Linux",
+            "class": "Devops",
+            "pdf": "Linux.pdf",
+            "title": "Linux",
+            "image": "Linux.jpg",
+            "description": "Linux_01",
+            "syllabus" : ["assets/syllabus/Linux.pdf"],
+           "syllabus_name":["Linux Syllabus "]	
+        },
+        {
+            "course_name": "Git",
+            "class": "Devops",
+            "pdf": "Git.pdf",
+            "title": "Git",
+            "image": "Git.jpg",
+            "description": "Git",
+            "syllabus" : ["assets/syllabus/#"],
+           "syllabus_name":["Git Syllabus "]	
+        },
+         
+        {
+            "course_name": "Shell Scripting",
+            "class": "Devops",
+            "pdf": "Shell Scripting.pdf",
+            "title": "Shell_Scripting",
+            "image": "Shell Scripting.jpg",
+            "description": "Shell_Scripting",
+            "syllabus" : ["assets/syllabus/#.pdf"],
+           "syllabus_name":["Shell Scripting Syllabus "]	
+        },
+        {
+            "course_name": "Python Training",
+            "class": "programming",
+            "pdf": "Python Training.pdf",
+            "title": "Python_Training",
+            "image": "python.png",
+            "description": "gcp04",
+            "syllabus" : ["assets/syllabus/python.pdf"],
+           "syllabus_name":["Python Training Syllabus "]	
+        },
+        {
+            "course_name": "Jenkins",
+            "class": "Devops",
+            "pdf": "Jenkins.pdf",
+            "title": "Jenkins",
+            "image": "Jenkins-training.jpg",
+            "description": "Jenkins_01",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["Jenkins Syllabus "]	
+        },
+        {
+            "course_name": "Docker Training",
+            "class": "Devops",
+            "pdf": "Docker Training.pdf",
+            "title": "Docker_Certification_Training",
+            "image": "Docker-Certification-Training.jpg",
+            "description": "Docker_Training",
+            "syllabus" : ["assets/syllabus/#.pdf"],
+           "syllabus_name":["Docker Training Syllabus "]	
+        },
+        {
+            "course_name": "Kubenetes Training",
+            "class": "Devops",
+            "pdf": "Kubemetes Training.pdf",
+            "title": "Kubemetes_Training",
+            "image": "Kubernetes.png",
+            "description": "Kubemetes_Training",
+            "syllabus" : ["assets/syllabus/Kubernetes_Cluster_Setup_Guide.pdf" , "assets/syllabus/Kubernetes_Commands_Overview.pdf"  , "assets/syllabus/Kubernetes_Interview_Questions.pdf"  , "assets/syllabus/Kubernetes_Manifest_file.pdf"] ,  
+           "syllabus_name":["Kubemetes Cluster Setup Syllabus " , "Kubernetes Commands Overview Syllabus " , "Kubernetes Interview Questions  ", "Kubernetes Manifest file Syllabus "]	
+        },
+        {
+            "course_name": "Ansible Training",
+            "class": "Devops",
+            "pdf": "Ansible Training.pdf",
+            "title": "Ansible_Training",
+            "image": "ansible.png",
+            "description": "Ansible_Training",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["Ansible Training Syllabus "]	
+        },
+        {
+            "course_name": "Terraform",
+            "class": "Devops",
+            "pdf": "Terraform.pdf",
+            "title": "Terraform",
+            "image": "terraform.png",
+            "description": "Terraform",
+            "syllabus" : ["assets/syllabus/#.pdf"],
+           "syllabus_name":["Terraform Questions & Answes  "]	
+        },
+        {
+            "course_name": "AWS Training",
+            "class": "cloud",
+            "pdf": "cloud.pdf",
+            "title": "AWS_Training",
+            "image": "aws.png",
+            "description": "AWS_03",
+            "syllabus" : ["assets/syllabus/AWS_Amazon_Web_Services.pdf"],
+           "syllabus_name":["AWS Training Syllabus "]	
+        },
+        {
+            "course_name": "GCP",
+            "class": "cloud",
+            "pdf": "cloud.pdf",
+            "title": "GCP",
+            "image": "GCP.png",
+            "description": "gcp",
+            "syllabus" : ["assets/syllabus/GCP.pdf"],
+           "syllabus_name":["GCP Syllabus "]	
+        },
+        {
+            "course_name": "AZURE Training",
+            "class": "cloud",
+            "pdf": "cloud.pdf",
+            "title": "AZURE_Training",
+            "image": "azure.png",
+             "description": "Azure_Training",
+             "syllabus" : ["assets/syllabus/Aurze_Devops_Syllabus.pdf"],
+            "syllabus_name":["AZURE Training Syllabus "]	
+        },
+        {
+            "course_name": "MEAN Stack",
+            "class": "Full",
+            "pdf": "git ebook.pdf",
+            "title": "MEAN_Stack",
+            "image": "Mean Stack.png",
+            "description": "MEAN_Stack01",
+            "download": "course_1",
+           "interview_pdf" : ["https://amzn.in/d/eeW0gGK", "https://amzn.in/d/76hrmRz", "https://amzn.in/d/4Jzj8A2"],
+           "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["Mean Stack Syllabus "]	 
+
+        },
+        {
+            "course_name": "MERN Stack",
+            "class": "Full",
+            "pdf": "mern.pdf",
+            "title": "MERN_Stack",
+            "image": "Mern Stack.jpg",
+            "description": "MERN_Stack02",
+            "syllabus" : ["assets/syllabus/mern_stack.pdf"],
+           "syllabus_name":["Mern Stack Syllabus "]	
+        },
+       
+        {
+            "course_name": "React Js",
+            "class": "Web",
+            "pdf": "React Js.pdf",
+            "title": "React_Js",
+            "image": "react-js-training.png",
+            "description": "react_js",
+            "syllabus" : ["assets/syllabus/React_JS.pdf"],
+           "syllabus_name":["React Js Syllabus "]	
+        },
+        {
+            "course_name": "Web Designing",
+            "class": "Web",
+            "pdf": "Web Designing.pdf",
+            "title": "Web_Designing",
+            "image": "web-design.png",
+            "description": "Web_Designing",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["Web Designing Syllabus "]	
+        },
+        {
+            "course_name": "UI/UX",
+            "class": "Web",
+            "pdf": "UI/UX .pdf",
+            "title": "UI_UX",
+            "image": "UI-Development.jpg",
+            "description": "UI/UX_01",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["UI/UX Syllabus "]	
+        },
+        {
+            "course_name": "PHP Full Stack",
+            "class": "Web",
+            "pdf": "PHP Full Stack .pdf",
+            "title": "PHP_Full_Stack",
+            "image": "php-full-stack.jpg",
+            "description": "PHP_Full_Stack",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["PHP Full Stack Syllabus "]	
+        },
+        {
+            "course_name": "PHP Experts",
+            "class": "Web",
+            "pdf": "PHP Experts .pdf",
+            "title": "PHP_Experts",
+            "image": "php-Experts.jpg",
+            "description": "PHP_Experts",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["PHP Experts Syllabus "]	
+        },
+        {
+            "course_name": "Angular Js",
+            "class": "Web",
+            "pdf": "Angular.pdf",
+            "title": "Angular_Js",
+            "image": "Angular-training.png",
+            "description": "Angular_Js",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["Angular Js Syllabus "]	
+        },
+       
+      
+        {
+            "course_name": "Devops Training",
+            "class": "Devops",
+            "pdf": "Devops Training.pdf",
+            "title": "Devops_Training",
+            "image": "Devops training.jpg",
+            "description": "Devops_Training",
+            "syllabus" : ["assets/syllabus/DevOps_with_AWS_l.pdf" , "assets/syllabus/AWS_Amazon_Web_Segitrvices.pdf"],
+           "syllabus_name":["Devops Training Syllabus ", "AWS Training Syllabus "]	
+        },
+       
+       
+      
+        {
+            "course_name": "Unix Shell Scripting Training",
+            "class": "programming",
+            "pdf": "Unix Shell Scripting Training.pdf",
+            "title": "Unix_Shell_Scripting_.369Training",
+            "image": "unix shell scripting training.png",
+            "description": "Unix_Shell_Scripting_Training",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["Unix Shell Scripting Training Syllabus "]	
+        },
+        {
+            "course_name": "C And C++ Training",
+            "class": "programming",
+            "pdf": "C And C++ Training.pdf",
+            "title": "C_And_C++_Training",
+            "image": "c c++.png.png",
+            "description": "C_And_C++_Training",
+            "syllabus" : ["assets/syllabus/C&C++.pdf"],
+           "syllabus_name":["C And C++ Training Syllabus "]	
+        },
+        {
+            "course_name": ".NET Training",
+            "class": "programming",
+            "pdf": "NET Training.pdf",
+            "title": "NET_Training",
+            "image": "net-training.png",
+            "description": "NET_Training",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":[".NET Training Syllabus "]	
+        },
+        {
+            "course_name": "JavaScript Training",
+            "class": "programming",
+            "pdf": "JavaScript Training.pdf",
+            "title": "JavaScript_Training",
+            "image": "javaScript.png.png",
+            "description": "JavaScript_Training",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["JavaScript Training Syllabus "]	
+        },
+        {
+            "course_name": "MySQL Training",
+            
+            "class": "Database",
+            "pdf": "MySQL Training.pdf",
+            "title": "MySQL_Training",
+            "image": "My-Sql.jpg",
+            "description": "MySQL_Training",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["MySQL Training Syllabus "]	
+        },
+        {
+            "course_name": "SQL Server DBA Training",
+            "class": "Database",
+            "pdf": "SQL Server DBA Training.pdf",
+            "title": "SQL_Server_DBA_Training",
+            "image": "sql-server-dba-training.png",
+            "description": "SQL_Server_DBA_Training",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["SQL Server DBA Training Syllabus "]	
+        },
+        {
+            "course_name": "MongoDB Training",
+            "class": "Database",
+            "pdf": "MongoDB Training.pdf",
+            "title": "MongoDB_Training",
+            "image": "mongodb.jpg",
+            "description": "MongoDB_Training",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["MongoDB Training Syllabus "]	
+        },
+        {
+            "course_name": "Android",
+            "class": "mobile",
+            "pdf": "Android.pdf",
+            "title": "Android",
+            "image": "Android-Training.jpg",
+            "description": "Android",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["Android Syllabus "]	
+        },
+        {
+            "course_name": "I-Phone",
+            "class": "mobile",
+            "pdf": "I-Phone.pdf",
+            "title": "I_Phone",
+            "image": "I-Phone.jpg",
+            "description": "I_Phone",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["I-Phone Syllabus "]	
+        },
+        {
+            "course_name": "Machine Learning Training",
+            "class": "Data",
+            "pdf": "Machine Learning Training.pdf",
+            "title": "Machine_Learning_Training",
+            "image": "ai-machine-learning.png",
+            "description": "Machine_Learning_Training",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["Machine Learning TrainingSyllabus "]	
+        },
+        {
+            "course_name": "Data Science Training",
+            "class": "Data",
+            "pdf": "Data Science Training.pdf",
+            "title": "Data_Science_Training",
+            "image": "data-science.jpg",
+            "description": "Data_Science_Training",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["Data Science Training Syllabus "]	
+        },
+        {
+            "course_name": "Deep Learning Course",
+            "class": "Data",
+            "pdf": "Deep Learning Course.pdf",
+            "title": "Deep_Learning_Course",
+            "image": "Deep-learning-courses.jpg",
+            "description": "Deep_Learning_Course",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["Deep Learning Course Syllabus "]	
+        },
+        {
+            "course_name": "Artificial Intelligence Course",
+            "class": "Data",
+            "pdf": "Artificial Intelligence Course.pdf",
+            "title": "Artificial_Intelligence_Course",
+            "image": "artificial intelligence.jpg",
+            "description": "Artificial_Intelligence_Course",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["Artificial Intelligence Course "]	
+        },
+        {
+            "course_name": "Data Science With Python",
+            "class": "Data",
+            "pdf": "Data Science With .pdf",
+            "title": "Data_Science_With_Python",
+            "image": "data-science-with-python.png",
+            "description": "Data_Science_With_Python",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["Data Science With Python Syllabus "]	
+        },
+        {
+            "course_name": "Power Bi",
+            "class": "MIS",
+            "pdf": "Power Bi .pdf",
+            "title": "Power_BI",
+            "image": "power-bi.jpg",
+            "description": "Power_BI",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["Power Bi "]	
+        },
+        {
+            "course_name": "MIS",
+            "class": "MIS",
+            "pdf": "MIS.pdf",
+            "title": "MIS",
+            "image": "mis.png",
+            "description": "MIS",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["MIS Syllabus "]	
+        },
+        {
+            "course_name": "Advanced Microsoft Excel",
+            "class": "MIS",
+            "pdf": "Advanced Microsoft Excel .pdf",
+            "title": "Advanced_Microsoft_Excel",
+            "image": "microsoft Excel testing.jpg",
+            "description": "Advanced_Microsoft_Excel",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["Advanced Microsoft Excel Syllabus "]	
+        },
+        {
+            "course_name": "Advanced Digital Marketing",
+            "class": "Digital",
+            "pdf": "Advanced Digital Marketing .pdf",
+            "title": "Advanced_Digital_Marketing",
+            "image": "advanced-digital-marketing.jpg",
+            "description": "Advanced_Digital_Marketing",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["Advanced Digital Marketing Syllabus "]	
+        },
+        {
+            "course_name": "Digital Marketing",
+            "class": "Digital",
+            "pdf": "Digital Marketing.pdf",
+            "title": "Digital_Marketing",
+            "image": "digital-marketing.jpg",
+            "description": "Digital_Marketing",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["Digital Marketing Syllabus "]	
+        },
+        {
+            "course_name": "6 Weeks Summer Training",
+            "class": "Industrial",
+            "pdf": "6 Weeks Summer Training.pdf",
+            "title": "6_Weeks_Summer_Training",
+            "image": "6 week.jpg",
+            "description": "6_Weeks_Summer_Training",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["6 Weeks Summer Training Syllabus "]	
+        },
+        {
+            "course_name": "6 Months Industrial Training",
+            "class": "Industrial",
+            "pdf": "6 Months Industrial Training.pdf",
+            "title": "6_Months_Industrial_Training",
+            "image": "6 Months.jpg",
+            "description": "6_Months_Industrial_Training",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["6 Months Industrial Training Syllabus "]	
+        },
+        {
+            "course_name": "Graphic Designing",
+            "class": "Multimedia",
+            "pdf": "Graphic Designing.pdf",
+            "title": "Graphic_Designing",
+            "image": "Graphic-Design.jpg",
+            "description": "Graphic_Designing",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["Graphic Designing Syllabus "]	
+        },
+        {
+            "course_name": "Motion Graphic Course",
+            "class": "Multimedia",
+            "pdf": "Motion Graphic Course.pdf",
+            "title": "Motion_Graphic_Course",
+            "image": "motion.jpg",
+            "description": "Motion_Graphic_Course",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["Motion Graphic Course Syllabus "]	
+        },
+        {
+            "course_name": "Multimedia & Animation",
+            "class": "Multimedia",
+            "pdf": "Multimedia & Animation.pdf",
+            "title": "Multimedia_&_Animation",
+            "image": "multimedia-ana animation diploma.jpg",
+            "description": "Multimedia_&_Animation",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["Multimedia & Animation Syllabus "]	
+        },
+        {
+            "course_name": "Graphic Motion Pro Course",
+            "class": "Multimedia",
+            "pdf": "Graphic Motion Pro Course.pdf",
+            "title": "Graphic_Motion_Pro_Course",
+            "image": "graphic motion pro course.jpg",
+            "description": "Graphic_Motion_Pro_Course",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["Graphic Motion Pro CourseSyllabus "]	
+        },
+        {
+            "course_name": "Multimedia & Animation ",
+            "class": "Multimedia",
+            "pdf": "Multimedia & Animation (Diploma).pdf",
+            "title": "Multimedia_&_Animation_(Diploma)",
+            "image": "Animation.jpg",
+            "description": "Multimedia_&_Animation_(Diploma)",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["Multimedia & Animation (Diploma) Syllabus "]	
+        },
+        {
+            "course_name": "Videograpy Course",
+            "class": "Multimedia",
+            "pdf": "Videograpy Course.pdf",
+            "title": "Videograpy_Course",
+            "image": "Videograpy course.jpg",
+            "description": "Videograpy_Course",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["Videograpy Course Syllabus "]	
+        },
+        {
+            "course_name": "Scriptwriting & Story Boarding",
+            "class": "Multimedia",
+            "pdf": "Scriptwriting & Story Boarding.pdf",
+            "title": "Scriptwriting_&_Story_Boarding",
+            "image": "scriptwriting.png",
+            "description": "Scriptwriting_&_Story_Boarding",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["Scriptwriting & Story Boarding Syllabus "]	
+        },
+        {
+            "course_name": "Film Making",
+            "class": "Multimedia",
+            "pdf": "Film Making.pdf",
+            "title": "Film_Making",
+            "image": "Film Making.jpg",
+            "description": "Film_Making",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["Film Making Syllabus "]	
+        },
+        {
+            "course_name": "Graphic Designing Pro",
+            "class": "Multimedia",
+            "pdf": "Graphic Designing Pro.pdf",
+            "title": "Graphic_Designing_Pro",
+            "image": "Graphic Designing Pro.jpg",
+            "description": "Graphic_Designing_Pro",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["Graphic Designing Pro Syllabus "]	
+        },
+        {
+            "course_name": "Manual + Selenium",
+            "class": "Software",
+            "pdf": "Manual + Selenium.pdf",
+            "title": "Manual_+_Selenium",
+            "image": "Manual + Selenium.jpg",
+            "description": "Manual_+_Selenium",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["Manual + Selenium Syllabus "]	
+        },
+        {
+            "course_name": "Full Stack QA",
+            "class": "Software",
+            "pdf": "Full Stack QA.pdf",
+            "title": "Full_Stack_QA",
+            "image": "Full Stack QA.png",
+            "description": "Full_Stack_QA",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["Full Stack QA Syllabus "]	
+        },
+        {
+            "course_name": "Java With Selenium ",
+            "class": "Software",
+            "pdf": "Java With Selenium .pdf",
+            "title": "Java_With_Selenium ",
+            "image": "java with selenium.jpg",
+            "description": "Java_With_Selenium ",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["Java With Selenium Syllabus "]	
+        },
+        {
+            "course_name": "REST Assured API",
+            "class": "Software",
+            "pdf": "REST Assured API.pdf",
+            "title": "REST_Assured_API",
+            "image": "Rest Assured Api.jpg",
+            "description": "REST_Assured_API",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["REST Assured API Syllabus "]	
+        },
+        {
+            "course_name": "Appium Testing",
+            "class": "Software",
+            "pdf": "Appium Testing.pdf",
+            "title": "Appium_Testing",
+            "image": "Appium testing.png",
+            "description": "Appium_Testing",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["Appium Testing Syllabus "]	
+        },
+        {
+            "course_name": "API Testing",
+            "class": "Software",
+            "pdf": "API Testing.pdf",
+            "title": "API_Testing",
+            "image": "api_testing.jpg",
+            "description": "API_Testing",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["API Testing Syllabus "]	
+        },
+        {
+            "course_name": "Manual Testing",
+            "class": "Software",
+            "pdf": "Manual Testing.pdf",
+            "title": "Manual_Testing",
+            "image": "manual testing.jpg",
+            "description": "Manual_Testing",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["Manual Testing Syllabus "]	
+        },
+        {
+            "course_name": "Primavera P6 Testing",
+            "class": "Project",
+            "pdf": "Primavera P6 Testing.pdf",
+            "title": "Primavera_P6_Testing",
+            "image": "Primavera P6 Testing.jpg",
+            "description": "Primavera_P6_Testing",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["Primavera P6 Testing Syllabus "]	
+        },
+        {
+            "course_name": "Agile Testing",
+            "class": "Project",
+            "pdf": "Agile Testing.pdf",
+            "title": "Agile_Testing",
+            "image": "Agile-Testing.jpg",
+            "description": "Agile_Testing",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["MAgile Testing Syllabus "]	
+        },
+        {
+            "course_name": "Microsoft Excel Training",
+            "class": "Project",
+            "pdf": "Microsoft Excel Training.pdf",
+            "title": "Microsoft_Excel_Training",
+            "image": "Excel-Training.jpg",
+            "description": "Microsoft_Excel_Training",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["Microsoft Excel Training Syllabus "]	
+        },
+        {
+            "course_name": "Scrum Master Training",
+            "class": "Project",
+            "pdf": "Scrum Master Training.pdf",
+            "title": "Scrum_Master_Training",
+            "image": "Scrum Master Traing.jpg",
+            "description": "Scrum_Master_Training",
+            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus_name":["Scrum Master Training Syllabus "]	
+        }
+    ]
 }  
 var i = 0;

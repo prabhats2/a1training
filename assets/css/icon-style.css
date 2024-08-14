@@ -1,0 +1,67 @@
+
+      .n {
+          overflow: scroll;
+          height: 800px
+      }
+
+      .m {
+          margin-top: 100px;
+          height: 900px;
+      }
+     
+   /* Base styles for both icons */
+   .icons {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: bounce 2s infinite;
+}
+
+.icons img {
+    width: 35px;
+    height: 35px;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Desktop styles */
+.whatsapp-icon-right {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366; /* WhatsApp color */
+}
+
+.call-icon-left {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: hsl(198, 49%, 41%); /* Call icon color */
+}
+
+/* Mobile-friendly adjustments */
+@media (max-width: 768px) {
+    .whatsapp-icon-right {
+       
+        left: 10px; /* Adjust right position for mobile */
+    }
+
+    .call-icon-left {
+        bottom: 90px; /* Position call icon above WhatsApp icon */
+        left: 10px; /* Adjust left position for mobile */
+    }
+}

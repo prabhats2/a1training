@@ -3,24 +3,410 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PDF Viewer Example</title>
+    <title>Responsive Image Gallery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        /* Reset CSS */
+        * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
 
-        iframe {
-            width: 100vw;
-            height: 100vh;
-            border: none;
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
         }
+
+        .header {
+            text-align: center;
+            padding: 30px 15px;
+            background-color: #444;
+            color: #fff;
+        }
+
+        .header h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1rem;
+            font-weight: 300;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -4px;
+            justify-content: center;
+            padding: 15px 0;
+        }
+
+        .column {
+            flex: 1 1 25%;
+            max-width: 25%;
+            padding: 0 4px;
+        }
+
+        .column img {
+            margin-top: 8px;
+            width: 100%;
+            vertical-align: middle;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .column img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 1200px) {
+            .column {
+                flex: 1 1 33.33%;
+                max-width: 33.33%;
+            }
+        }
+
+        @media (max-width: 800px) {
+            .column {
+                flex: 1 1 50%;
+                max-width: 50%;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .column {
+                flex: 1 1 100%;
+                max-width: 100%;
+            }
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.9);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content-container {
+            position: relative;
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 10px;
+            max-width: 90%;
+            max-height: 90%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .modal-content {
+            width: 100%;
+            height: auto;
+            max-height: 80vh;
+            object-fit: contain;
+            border-radius: 10px;
+        }
+
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            color: #444;
+            font-size: 24px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            cursor: pointer;
+        }
+
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 15px;
+            color: white;
+            font-weight: bold;
+            font-size: 24px;
+            user-select: none;
+            border-radius: 50%;
+            background-color: rgba(0, 0, 0, 0.5);
+            transition: background-color 0.3s ease;
+        }
+
+        .prev {
+            left: 20px;
+            transform: translateY(-50%);
+        }
+
+        .next {
+            right: 20px;
+            transform: translateY(-50%);
+        }
+
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        @media (max-width: 600px) {
+            .header h1 {
+                font-size: 1.5rem;
+            }
+
+            .header p {
+                font-size: 0.9rem;
+            }
+
+            .prev,
+            .next {
+                padding: 10px;
+                font-size: 20px;
+            }
+        }
+        /* Container for the image and overlay */
+.container {
+    position: relative;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 8px;
+}
+
+/* Image styles */
+.image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Overlay styles */
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 140, 186, 0.7);
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    transform: scale(0);
+    transition: .3s ease;
+}
+
+/* Show overlay on hover */
+.container:hover .overlay {
+    transform: scale(1);
+}
+
+/* Text inside overlay */
+.text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
     </style>
 </head>
 <body>
 
-<iframe src="https://drive.google.com/viewerng/viewer?embedded=true&url=assets/pdf/C_Programming_E.Balagurusamy.pdf" title="PDF Viewer"></iframe>
+<!-- Header -->
+<div class="header">
+    <h1>Responsive Image Gallery</h1>
+    <p>Explore beautiful images in this responsive gallery. Click an image to view it in full size.</p>
+</div>
+
+<!-- Photo Grid -->
+<div class="row"> 
+    <div class="column">
+      <div class="container" >
+        <img src="https://www.w3schools.com/w3images/wedding.jpg" class="gallery-item" alt="Paris Image">
+        <div class="overlay">
+          <div class="text">10</div>
+        </div>
+      </div>
+
+      <div class="container" >
+        <img src="https://www.w3schools.com/w3images/rocks.jpg" class="gallery-item" alt="Paris Image">
+        <div class="overlay">
+          <div class="text">10</div>
+        </div>
+      </div>
+
+      <div class="container" >
+        <img src="https://www.w3schools.com/w3images/falls2.jpg"class="gallery-item" alt="Paris Image">
+        <div class="overlay">
+          <div class="text">10</div>
+        </div>
+      </div>
+
+      <div class="container" >
+        <img src="https://www.w3schools.com/w3images/paris.jpg" class="gallery-item" alt="Paris Image">
+        <div class="overlay">
+          <div class="text">10</div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="column">
+      <div class="container" >
+        <img src="https://www.w3schools.com/w3images/rocks.jpg" class="gallery-item" alt="Paris Image">
+        <div class="overlay">
+          <div class="text">10</div>
+        </div>
+      </div>
+
+      <div class="container" >
+        <img src="https://www.w3schools.com/w3images/paris.jpg" class="gallery-item" alt="Paris Image">
+        <div class="overlay">
+          <div class="text">10</div>
+        </div>
+      </div>
+
+      <div class="container" >
+        <img src="https://www.w3schools.com/w3images/falls2.jpg"class="gallery-item" alt="Paris Image">
+        <div class="overlay">
+          <div class="text">10</div>
+        </div>
+      </div>
+    </div> 
+
+    <div class="column">
+
+      
+      <div class="container" >
+        <img src="https://www.w3schools.com/w3images/falls2.jpg"class="gallery-item" alt="Paris Image">
+        <div class="overlay">
+          <div class="text">10</div>
+        </div>
+      </div>
+      
+      <div class="container" >
+        <img src="https://www.w3schools.com/w3images/rocks.jpg" class="gallery-item" alt="Paris Image">
+        <div class="overlay">
+          <div class="text">10</div>
+        </div>
+      </div>
+
+      <div class="container" >
+        <img src="https://www.w3schools.com/w3images/paris.jpg" class="gallery-item" alt="Paris Image">
+        <div class="overlay">
+          <div class="text">10</div>
+        </div>
+      </div>
+
+      <div class="container" >
+        <img src="https://www.w3schools.com/w3images/falls2.jpg"class="gallery-item" alt="Paris Image">
+        <div class="overlay">
+          <div class="text">10</div>
+        </div>
+      </div>
+    </div> 
+    
+    <div class="column">
+      <div class="container" >
+        <img src="https://www.w3schools.com/w3images/rocks.jpg" class="gallery-item" alt="Paris Image">
+        <div class="overlay">
+          <div class="text">10</div>
+        </div>
+      </div>
+
+      <div class="container" >
+        <img src="https://www.w3schools.com/w3images/paris.jpg" class="gallery-item" alt="Paris Image">
+        <div class="overlay">
+          <div class="text">10</div>
+        </div>
+      </div>
+
+      
+    </div> 
+</div>
+
+<!-- Modal -->
+<div id="modal" class="modal">
+    <div class="modal-content-container">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modal-image" alt="Modal Image">
+        <a class="prev">&#10094;</a>
+        <a class="next">&#10095;</a>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var modal = document.getElementById("modal");
+        var modalImg = document.getElementById("modal-image");
+        var images = document.getElementsByClassName("gallery-item");
+        var currentIndex;
+
+        // Function to open modal
+        function openModal(index) {
+            currentIndex = index;
+            modal.style.display = "flex";
+            modalImg.src = images[index].src;
+        }
+
+        // Function to close modal
+        function closeModal() {
+            modal.style.display = "none";
+        }
+
+        // Function to show previous image
+        function showPrev() {
+            currentIndex = (currentIndex === 0) ? images.length - 1 : currentIndex - 1;
+            modalImg.src = images[currentIndex].src;
+        }
+
+        // Function to show next image
+        function showNext() {
+            currentIndex = (currentIndex === images.length - 1) ? 0 : currentIndex + 1;
+            modalImg.src = images[currentIndex].src;
+        }
+
+        // Event listeners for opening modal
+        for (let i = 0; i < images.length; i++) {
+            images[i].addEventListener("click", function () {
+                openModal(i);
+            });
+        }
+
+        // Event listener for closing modal
+        document.querySelector(".close").addEventListener("click", closeModal);
+
+        // Event listeners for navigation
+        document.querySelector(".prev").addEventListener("click", showPrev);
+        document.querySelector(".next").addEventListener("click", showNext);
+
+        // Close modal when clicking outside the modal-content-container
+        modal.addEventListener("click", function (e) {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+    });
+</script>
 
 </body>
 </html>

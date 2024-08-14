@@ -1,94 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PDF Reader Example</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
 
-        canvas {
-            display: block;
-            margin: auto;
-        }
-    </style>
+.callout {
+  position: fixed;
+  bottom: 35px;
+  right: 20px; /* Position the first callout to the right */
+  max-width: 300px;
+}
+
+.callout-header {
+  padding: 25px 15px;
+  background: #555;
+  font-size: 30px;
+  color: white;
+}
+
+.callout-container {
+  padding: 15px;
+  background-color: #ccc;
+  color: black;
+}
+
+.closebtn {
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.closebtn:hover {
+  color: lightgrey;
+}
+
+/* Style for the left-side callout */
+.callout1 {
+  position: fixed;
+  bottom: 35px;
+  left: 20px; /* Position the second callout to the left */
+  max-width: 300px;
+}
+
+.callout1-header {
+  padding: 25px 15px;
+  background: #555;
+  font-size: 30px;
+  color: white;
+}
+
+.callout1-container {
+  padding: 15px;
+  background-color: #ccc;
+  color: black;
+}
+</style>
 </head>
 <body>
 
-<canvas id="pdfCanvas"></canvas>
+<!-- Callout on the right side -->
+<div class="callout">
+  <div class="callout-header">Callout Header</div>
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">×</span>
+  <div class="callout-container">
+   
+    <p>Some text to describe the callout message. <a href="#">Learn more</a> or close it if it is in your way.</p>
+    <p>Some text to describe the callout message. <a href="#">Learn more</a> or close it if it is in your way.</p> 
+    <p>Some text to describe the callout message. <a href="#">Learn more</a> or close it if it is in your way.</p> 
+  </div>
+</div>
 
-<script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
-<script>
-    // Specify the path to your PDF file
-    const pdfPath = 'assets/pdf/C_Programming_E.Balagurusamy.pdf';
-
-    // Set up the PDF.js viewer
-    pdfjsLib.getDocument(pdfPath).promise.then(pdfDoc => {
-        const totalPages = pdfDoc.numPages;
-        let currentPage = 1;
-
-        // Display the first page
-        pdfDoc.getPage(currentPage).then(page => {
-            const scale = 1.5;
-            const viewport = page.getViewport({ scale });
-
-            const canvas = document.getElementById('pdfCanvas');
-            const context = canvas.getContext('2d');
-            canvas.height = viewport.height;
-            canvas.width = viewport.width;
-
-            const renderContext = {
-                canvasContext: context,
-                viewport: viewport,
-            };
-
-            page.render(renderContext);
-        });
-
-        // Handle navigation
-        function renderPage(num) {
-            pdfDoc.getPage(num).then(page => {
-                const scale = 1.5;
-                const viewport = page.getViewport({ scale });
-
-                const canvas = document.getElementById('pdfCanvas');
-                const context = canvas.getContext('2d');
-                canvas.height = viewport.height;
-                canvas.width = viewport.width;
-
-                const renderContext = {
-                    canvasContext: context,
-                    viewport: viewport,
-                };
-
-                page.render(renderContext);
-            });
-        }
-
-        // Previous page button
-        document.getElementById('prevPage').addEventListener('click', () => {
-            if (currentPage > 1) {
-                currentPage--;
-                renderPage(currentPage);
-            }
-        });
-
-        // Next page button
-        document.getElementById('nextPage').addEventListener('click', () => {
-            if (currentPage < totalPages) {
-                currentPage++;
-                renderPage(currentPage);
-            }
-        });
-    });
-</script>
-
-<button id="prevPage">Previous Page</button>
-<button id="nextPage">Next Page</button>
+<!-- Callout on the left side -->
+<div class="callout1">
+  <div class="callout1-header">Callout Header</div>
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">×</span>
+  <div class="callout1-container">
+    <p>Some text to describe the callout message. <a href="#">Learn more</a> or close it if it is in your way.</p>
+  </div>
+</div>
 
 </body>
 </html>

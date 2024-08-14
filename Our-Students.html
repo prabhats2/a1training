@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Template Mo">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <title>Our Students test</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.gallery-item').fancybox();
+        });
+        /* mouse over link */
+    </script>
+    <style>
+        .container {
+  position: relative;
+  width: 100%; /* Adjusted to match the column width */
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container:hover .image {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: #575757b7;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+
+</style>
+
+        </style>
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-edu-meeting.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/lightbox.css">
+
+    <!--
+
+TemplateMo 569 Edu Meeting
+
+https://templatemo.com/tm-569-edu-meeting
+
+-->
+</head>
+
+<body>
+    <!--menu-->
+    <script type="text/javascript" src="menu.js"></script>
+    <script type="text/javascript" src="assets/json/students.json"></script>
+    <!--menu end-->
+
+
+    <section class="heading-page header-text" id="top">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <h6>Our Students</h6>
+                    <h2>Hundreds of Happy Students</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="meetings-page" id="meetings">
+
+        <div class="container-fluid">
+            <div class="row">
+<!--- First  section ---->
+<script lang="javascript">
+    document.writeln('<div class="col-md-3">');
+    for (i = 0; i < students.col1.length; i++) {	
+        document.writeln('<div class="polaroid">');
+        document.writeln('<a href="images/student/'+ students.col1[i].Images +'" class="d-block mb-4 gallery-item" data-fancybox="gallery" data-caption="' + students.col1[i].Name + '">');
+        
+        // Container div for image and overlay
+        document.writeln('<div class="container" style="width: 100%;">');
+        document.writeln('<img src="images/student/'+ students.col1[i].Images +'" class="img-fluid image" alt="' + students.col1[i].Name + '" style="width:100%">');
+        
+        // Middle div with student name
+        document.writeln('<div class="middle">');
+        document.writeln('<div class="text">' + students.col1[i].Name + '<br><span style="font-size:10px;">' + students.col1[i].City + '</span></div>');
+        document.writeln('</div>');
+        
+        document.writeln('</div>'); // Closing container div
+        document.writeln('</a>');
+        document.writeln('</div>');
+    }
+    document.writeln('</div>');
+</script>
+
+<!--- Second section ---->
+<script lang="javascript">
+    document.writeln('<div class="col-md-3">');
+    for (i = 0; i < students.col2.length; i++) {	
+        document.writeln('<div class="polaroid">');
+        document.writeln('<a href="images/student/'+ students.col2[i].Images +'" class="d-block mb-4 gallery-item" data-fancybox="gallery" data-caption="' + students.col2[i].Name + '">');
+        
+        // Container div for image and overlay
+        document.writeln('<div class="container" style="width: 100%;">');
+        document.writeln('<img src="images/student/'+ students.col2[i].Images +'" class="img-fluid image" alt="' + students.col2[i].Name + '" style="width:100%">');
+        
+        // Middle div with student name
+        document.writeln('<div class="middle">');
+        document.writeln('<div class="text">' + students.col2[i].Name + '<br><span style="font-size:10px;">' + students.col2[i].City + '</span></div>');
+        document.writeln('</div>');
+        
+        document.writeln('</div>'); // Closing container div
+        document.writeln('</a>');
+        document.writeln('</div>');
+    }
+    document.writeln('</div>');
+</script>
+<!--- Third section ---->
+<script lang="javascript">
+    document.writeln('<div class="col-md-3">');
+    for (i = 0; i < students.col3.length; i++) {	
+        document.writeln('<div class="polaroid">');
+        document.writeln('<a href="images/student/'+ students.col3[i].Images +'" class="d-block mb-4 gallery-item" data-fancybox="gallery" data-caption="' + students.col3[i].Name + '">');
+        
+        // Container div for image and overlay
+        document.writeln('<div class="container" style="width: 100%;">');
+        document.writeln('<img src="images/student/'+ students.col3[i].Images +'" class="img-fluid image" alt="' + students.col3[i].Name + '" style="width:100%">');
+        
+        // Middle div with student name
+        document.writeln('<div class="middle">');
+        document.writeln('<div class="text">' + students.col3[i].Name + '<br><span style="font-size:10px;">' + students.col3[i].City + '</span></div>');
+        document.writeln('</div>');
+        
+        document.writeln('</div>'); // Closing container div
+        document.writeln('</a>');
+        document.writeln('</div>');
+    }
+    document.writeln('</div>');
+</script>
+                <!--- Fourth section ---->
+                <script lang="javascript">
+                    document.writeln('<div class="col-md-3">');
+                    for (i = 0; i < students.col4.length; i++) {	
+                        document.writeln('<div class="polaroid">');
+                        document.writeln('<a href="images/student/'+ students.col4[i].Images +'" class="d-block mb-4 gallery-item" data-fancybox="gallery" data-caption="' + students.col4[i].Name + '">');
+                        
+                        // Container div for image and overlay
+                        document.writeln('<div class="container" style="width: 100%;">');
+                        document.writeln('<img src="images/student/'+ students.col4[i].Images +'" class="img-fluid image" alt="' + students.col4[i].Name + '" style="width:100%">');
+                        
+                        // Middle div with student name
+                        document.writeln('<div class="middle">');
+                        document.writeln('<div class="text">' + students.col4[i].Name + '<br><span style="font-size:10px;">' + students.col4[i].City + '</span></div>');
+                        document.writeln('</div>');
+                        
+                        document.writeln('</div>'); // Closing container div
+                        document.writeln('</a>');
+                        document.writeln('</div>');
+                    }
+                    document.writeln('</div>');
+                </script>
+                
+                   
+            </div>
+
+       
+        </div>
+        </div>
+        </div>
+   
+    </section>
+    <!--footer-->
+  <script type="text/javascript" src="footer.js"></script>
+  <!--footer end-->
+  
+    
+    <!-- Scripts -->
+    <!-- Bootstrap core JavaScript -->
+
+
+    </div>
+    </div>
+    </div>
+    </div>
+    <script type="text/javascript" src="assets/js/student.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="assets/js/isotope.min.js"></script>
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/lightbox.js"></script>
+    <script src="assets/js/tabs.js"></script>
+    <script src="assets/js/isotope.js"></script>
+    <script src="assets/js/video.js"></script>
+    <script src="assets/js/slick-slider.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script>
+        //according to loftblog tut
+        $('.nav li:first').addClass('active');
+
+        var showSection = function showSection(section, isAnimate) {
+            var
+                direction = section.replace(/#/, ''),
+                reqSection = $('.section').filter('[data-section="' + direction + '"]'),
+                reqSectionPos = reqSection.offset().top - 0;
+
+            if (isAnimate) {
+                $('body, html').animate({
+                    scrollTop: reqSectionPos
+                },
+                    800);
+            } else {
+                $('body, html').scrollTop(reqSectionPos);
+            }
+
+        };
+
+        var checkSection = function checkSection() {
+            $('.section').each(function () {
+                var
+                    $this = $(this),
+                    topEdge = $this.offset().top - 80,
+                    bottomEdge = topEdge + $this.height(),
+                    wScroll = $(window).scrollTop();
+                if (topEdge < wScroll && bottomEdge > wScroll) {
+                    var
+                        currentId = $this.data('section'),
+                        reqLink = $('a').filter('[href*=\\#' + currentId + ']');
+                    reqLink.closest('li').addClass('active').
+                        siblings().removeClass('active');
+                }
+            });
+        };
+
+        $('.main-menu, .responsive-menu, .scroll-to-section').on('click', 'a', function (e) {
+            e.preventDefault();
+            showSection($(this).attr('href'), true);
+        });
+
+        $(window).scroll(function () {
+            checkSection();
+        });
+    </script>
+
+</body>
+
+
+</body>
+
+</html>
