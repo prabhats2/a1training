@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text1 Page</title>
+    <!-- Include Bootstrap CSS if you are using Bootstrap modals -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Modals in text1.html -->
+<div id="pythonModal" class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Python Course</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Details about the Python course...</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="canvaModal" class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Canva Course</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Details about the Canva course...</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="tallyModal" class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Tally Course</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Details about the Tally course...</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Check localStorage for the modal to show
+  document.addEventListener("DOMContentLoaded", function() {
+    const modalToShow = localStorage.getItem('modalToShow');
+    if (modalToShow) {
+      const modalElement = document.getElementById(modalToShow);
+      if (modalElement) {
+        const myModal = new bootstrap.Modal(modalElement);
+        myModal.show();
+      }
+      localStorage.removeItem('modalToShow');
+    }
+  });
+</script>
+
+
+<!-- Include Bootstrap JS and dependencies if using Bootstrap modals -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

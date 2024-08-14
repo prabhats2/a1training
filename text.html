@@ -1,11 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Simple Test</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Page</title>
+    <style>
+        body { font-family: Arial, Helvetica, sans-serif; }
+
+        /* Callout styles, image slider styles, button styles, etc., as before */
+        .callout {
+            position: fixed;
+            bottom: 35px;
+            right: 20px;
+            max-width: 350px;
+            z-index: 99;
+        }
+        /* Additional styles as previously defined */
+    </style>
 </head>
 <body>
-  <h1>Hello, World!</h1>
+    <!-- Callout on the left side -->
+    <div class="callout1">
+        <a href="#"><div class="callout1-header">Coding 4 Junior Geeks</div></a>
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">×</span>
+        <div class="callout1-container">
+            <!-- Image slider -->
+            <div class="slider1">
+              <a href="#" onclick="openModalOnText1('tallyModal');"><img class="slides1" src="assets/images/junior-geeks/tally.png" alt="python"></a>  
+              <a href="#" onclick="openModalOnText1('pythonModal');"><img class="slides1" src="assets/images/junior-geeks/python.png" alt="python"></a>
+                <!-- Additional images as before -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openModalOnText1(modalId) {
+            localStorage.setItem('modalToShow', modalId);
+            window.open('text1.html', '_blank');
+        }
+
+        // Additional scripts to handle the sliders as before
+    </script>
+
+    <!-- Additional scripts for handling navigation and modals as before -->
 </body>
 </html>

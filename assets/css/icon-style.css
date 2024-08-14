@@ -19,6 +19,7 @@
     align-items: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     animation: bounce 2s infinite;
+    z-index: 99;
 }
 
 .icons img {
@@ -41,7 +42,7 @@
 /* Desktop styles */
 .whatsapp-icon-right {
     position: fixed;
-    bottom: 20px;
+    bottom: 92px;
     right: 20px;
     background-color: #25d366; /* WhatsApp color */
 }
@@ -61,7 +62,7 @@
     }
 
     .call-icon-left {
-        bottom: 90px; /* Position call icon above WhatsApp icon */
+        bottom: 5px; /* Position call icon above WhatsApp icon */
         left: 10px; /* Adjust left position for mobile */
     }
 }
