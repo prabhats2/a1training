@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Courses</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Callout Image -->
+  <img id="calloutImage" src="https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg" alt="Callout Image" style="cursor: pointer;">
+
+  <!-- Courses Container (where modals will be inserted) -->
+  <div id="courses-container"></div>
+
+  <!-- Bootstrap JS and Popper.js -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const courses = {
+        "col1": [
+          {
+            "course_name": "MS Office",
+            "class": "soon",
+            "pdf": "MS Office.pdf",
+            "title": "MS_Office",
+            "image": "ms-office.jpg",
+            "download": "course_1",
+            "description": "MS_Office",
+            "syllabus": ["assets/pdf/junior_geeks/ms_office.pdf"],
+            "syllabus_name": ["MS Office Course Syllabus "]
+          },
+          {
+            "course_name": "Corel Draw",
+            "class": "soon",
+            "pdf": "Corel Draw.pdf",
+            "title": "Corel_Draw",
+            "image": "coral-draw.png",
+            "download": "course_1",
+            "description": "Corel_Draw",
+            "syllabus": ["assets/pdf/junior_geeks/corel_draw.pdf"],
+            "syllabus_name": ["Coral Draw Syllabus "]
+          }
+        ]
+      };
+
+      const coursesContainer = document.getElementById('courses-container');
+
+      courses.col1.forEach((course) => {
+        let descriptionContent = '';
+
+        if (course.description === 'MS_Office') {
+          descriptionContent = `
+            <h1 class="training-title">MS Office Training at A1 Training Institute</h1>
+            <p class="training-description">MS Office training provided by A1 Training Institute helps you master essential Office applications. Gain proficiency in Word, Excel, and PowerPoint, boosting your productivity and career prospects.</p>
+            <ul class="training-features">
+              <li>&#10003; 40 hours of Instructor-led Training</li>
+              <li>&#10003; Comprehensive coverage of MS Office applications</li>
+              <li>&#10003; Hands-on assignments to support theoretical concepts</li>
+              <li>&#10003; Interactive and project-oriented lab sessions</li>
+            </ul>
+            <h4 class="training-info">We offer different modes of training, including classroom and online sessions. Our centers are conveniently located.</h4>
+            <div class="button-container">
+              <button class="button view-syllabus">View / Download Syllabus</button>
+              <button class="button contact-advisor">Contact Course Advisor</button>
+            </div>
+            <div class="container mt-5">
+              <div class="row">
+                <div class="col-sm-3 training-box">
+                  <h3>40+ Hrs</h3>
+                  <p>Hands-On Training</p>
+                </div>
+                <div class="col-sm-3 training-box">
+                  <h3>2 Live</h3>
+                  <p>Project For Hands-On Learning</p>
+                </div>
+                <div class="col-sm-3 training-box">
+                  <h3>50 Hrs</h3>        
+                  <p>Practical Assignments</p>
+                </div>
+                <div class="col-sm-3 training-box">
+                  <h3>24/7</h3>        
+                  <p>Lifetime Access To Support Team</p>
+                </div>
+              </div>
+            </div>`;
+        }
+
+        let textWithoutUnderscores = course.title.replace(/_/g, ' ');
+
+        const modalHTML = `
+          <div class="modal fade" id="${course.title}" tabindex="-1" role="dialog" aria-labelledby="${course.title}Label" aria-hidden="true">
+            <div class="modal-dialog modal-xl" role="document">
+              <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                  <h4 class="modal-title" id="${course.title}Label">${textWithoutUnderscores}</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <!-- Modal body -->
+                <div class="modal-body">
+                  ${descriptionContent}
+                </div>
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>`;
+
+        document.body.insertAdjacentHTML('beforeend', modalHTML);
+      });
+
+      const calloutImage = document.getElementById('calloutImage');
+      calloutImage.addEventListener('click', function() {
+        // Open the "MS Office" modal on image click
+        const msOfficeModal = document.getElementById('MS_Office');
+        if (msOfficeModal) {
+          const modalInstance = new bootstrap.Modal(msOfficeModal);
+          modalInstance.show();
+        }
+      });
+    });
+  </script>
+</body>
+</html>
