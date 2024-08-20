@@ -3,45 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Text Page</title>
+    <title>Linux Training at A1 Training Institute</title>
     <style>
-        body { font-family: Arial, Helvetica, sans-serif; }
-
-        /* Callout styles, image slider styles, button styles, etc., as before */
-        .callout {
-            position: fixed;
-            bottom: 35px;
-            right: 20px;
-            max-width: 350px;
-            z-index: 99;
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
         }
-        /* Additional styles as previously defined */
+        h1 {
+            color: #007BFF;
+            text-align: center;
+            padding: 20px;
+            font-size: 2.5em;
+        }
+        p {
+            text-align: center;
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin: 0 15px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+            margin: 20px 0;
+        }
+        li {
+            font-size: 1.2em;
+            color: #007BFF;
+            margin: 10px 0;
+        }
+        h4 {
+            text-align: center;
+            font-size: 1.2em;
+            margin: 20px 0;
+            color: #555;
+        }
+        .button-container {
+            text-align: center;
+            margin: 20px;
+        }
+        .button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+        .container {
+            margin: 30px auto;
+            max-width: 1200px;
+        }
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .col-sm-3 {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            flex: 1;
+            max-width: 22%;
+            text-align: center;
+            padding: 20px;
+        }
+        .col-sm-3 h3 {
+            color: #007BFF;
+            font-size: 2em;
+            margin: 0;
+        }
+        .col-sm-3 p {
+            font-size: 1.1em;
+            margin: 10px 0 0;
+        }
     </style>
 </head>
 <body>
-    <!-- Callout on the left side -->
-    <div class="callout1">
-        <a href="#"><div class="callout1-header">Coding 4 Junior Geeks</div></a>
-        <span class="closebtn" onclick="this.parentElement.style.display='none';">×</span>
-        <div class="callout1-container">
-            <!-- Image slider -->
-            <div class="slider1">
-              <a href="#" onclick="openModalOnText1('tallyModal');"><img class="slides1" src="assets/images/junior-geeks/tally.png" alt="python"></a>  
-              <a href="#" onclick="openModalOnText1('pythonModal');"><img class="slides1" src="assets/images/junior-geeks/python.png" alt="python"></a>
-                <!-- Additional images as before -->
+
+    <h1>Linux Training at A1 Training Institute</h1>
+
+    <p>Linux training provided by A1 Training Institute can help you work more efficiently by giving you the skills and
+      knowledge needed to troubleshoot and resolve issues quickly. With Linux, many tasks can be automated, and by
+      learning how to use Linux tools and utilities, you can save time and increase your productivity.</p>
+
+    <ul>
+        <li>&#10003; 40 hours of Instructor led Training</li>
+        <li>&#10003; Comprehensive coverage of basic and advanced exercises on Linux</li>
+        <li>&#10003; Hands-on assignments to support theoretical concepts</li>
+        <li>&#10003; Interactive and project-oriented lab sessions on Linux</li>
+    </ul>
+
+    <h4>We provide the NO.1 Linux training program in Chennai. We offer different modes of training by 
+    providing classroom and online training. Our training centers are spread across Chennai at Adyar, OMR, 
+    Navalur, Porur, Annanagar, Velachery and Perumbakkam.</h4>
+
+    <div class="button-container">
+        <button class="button">View / Download Syllabus</button>
+        <button class="button">Contact Course Advisor</button>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-sm-3">
+                <h3>40+ Hrs</h3>
+                <p>Hands On Training</p>
+            </div>
+            <div class="col-sm-3">
+                <h3>2 Live</h3>
+                <p>Project For Hands-On Learning</p>
+            </div>
+            <div class="col-sm-3">
+                <h3>50 Hrs</h3>        
+                <p>Practical Assignments</p>
+            </div>
+            <div class="col-sm-3">
+                <h3>24/7</h3>        
+                <p>Lifetime Access To Support Team</p>
             </div>
         </div>
     </div>
 
-    <script>
-        function openModalOnText1(modalId) {
-            localStorage.setItem('modalToShow', modalId);
-            window.open('text1.html', '_blank');
-        }
-
-        // Additional scripts to handle the sliders as before
-    </script>
-
-    <!-- Additional scripts for handling navigation and modals as before -->
 </body>
 </html>
