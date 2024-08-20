@@ -17,126 +17,114 @@
   <!-- Bootstrap JS and Popper.js -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
-  <script src="script.js"></script>
-</body>
-</html>
-
-
-<script>document.addEventListener('DOMContentLoaded', function () {
-  const courses = {
-      "col1": [
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const courses = {
+        "col1": [
           {
-              "course_name": "MS Office",
-              "class": "soon",
-              "pdf": "MS Office.pdf",
-              "title": "MS_Office",
-              "image": "ms-office.jpg",
-              "download": "course_1",
-              "description": "MS_Office",
-              "syllabus": ["assets/pdf/junior_geeks/ms_office.pdf"],
-              "syllabus_name": ["MS Office Course Syllabus "]
+            "course_name": "MS Office",
+            "class": "soon",
+            "pdf": "MS Office.pdf",
+            "title": "MS_Office",
+            "image": "ms-office.jpg",
+            "download": "course_1",
+            "description": "MS_Office",
+            "syllabus": ["assets/pdf/junior_geeks/ms_office.pdf"],
+            "syllabus_name": ["MS Office Course Syllabus "]
           },
           {
-              "course_name": "Corel Draw",
-              "class": "soon",
-              "pdf": "Corel Draw.pdf",
-              "title": "Corel_Draw",
-              "image": "coral-draw.png",
-              "download": "course_1",
-              "description": "Corel_Draw",
-              "syllabus": ["assets/pdf/junior_geeks/corel_draw.pdf"],
-              "syllabus_name": ["Coral Draw Syllabus "]
+            "course_name": "Corel Draw",
+            "class": "soon",
+            "pdf": "Corel Draw.pdf",
+            "title": "Corel_Draw",
+            "image": "coral-draw.png",
+            "download": "course_1",
+            "description": "Corel_Draw",
+            "syllabus": ["assets/pdf/junior_geeks/corel_draw.pdf"],
+            "syllabus_name": ["Coral Draw Syllabus "]
           }
-      ]
-  };
+        ]
+      };
 
-  const coursesContainer = document.getElementById('courses-container');
+      const coursesContainer = document.getElementById('courses-container');
 
-  courses.col1.forEach((course, index) => {
-      let descriptionContent = '';
+      courses.col1.forEach((course) => {
+        let descriptionContent = '';
 
-      // Customize description content based on course description
-      if (course.description === 'MS_Office') {
+        if (course.description === 'MS_Office') {
           descriptionContent = `
-              <span id="MS_Office">
-                  <h1 class="training-title">Linux Training at A1 Training Institute</h1>
-                  <p class="training-description">Linux training provided by A1 Training Institute can help you work more efficiently by giving you the skills and
-                  knowledge needed to troubleshoot and resolve issues quickly. With Linux, many tasks can be automated, and by
-                  learning how to use Linux tools and utilities, you can save time and increase your productivity.</p>
-                  <ul class="training-features">
-                      <li>&#10003; 40 hours of Instructor led Training</li>
-                      <li>&#10003; Comprehensive coverage of basic and advanced exercises on Linux</li>
-                      <li>&#10003; Hands-on assignments to support theoretical concepts</li>
-                      <li>&#10003; Interactive and project-oriented lab sessions on Linux</li>
-                  </ul>
-                  <h4 class="training-info">We provide the NO.1 Linux training program in Chennai. We offer different modes of training by 
-                  providing classroom and online training. Our training centers are spread across Chennai at Adyar, OMR, 
-                  Navalur, Porur, Annanagar, Velachery and Perumbakkam.</h4>
-                  <div class="button-container">
-                      <button class="button view-syllabus">View / Download Syllabus</button>
-                      <button class="button contact-advisor">Contact Course Advisor</button>
-                  </div>
-                  <div class="container mt-5">
-                      <div class="row">
-                          <div class="col-sm-3 training-box">
-                              <h3>40+ Hrs</h3>
-                              <p>Hands On Training</p>
-                          </div>
-                          <div class="col-sm-3 training-box">
-                              <h3>2 Live</h3>
-                              <p>Project For Hands-On Learning</p>
-                          </div>
-                          <div class="col-sm-3 training-box">
-                              <h3>50 Hrs</h3>        
-                              <p>Practical Assignments</p>
-                          </div>
-                          <div class="col-sm-3 training-box">
-                              <h3>24/7</h3>        
-                              <p>Lifetime Access To Support Team</p>
-                          </div>
-                      </div>
-                  </div>
-              </span>`;
-      }
-
-      // Convert title with underscores to spaces
-      let textWithoutUnderscores = course.title.replace(/_/g, ' ');
-
-      // Create modal
-      const modalHTML = `
-          <div class="modal fade" id="${course.title}" tabindex="-1" role="dialog" aria-labelledby="${course.title}Label" aria-hidden="true">
-              <div class="modal-dialog modal-xl" role="document">
-                  <div class="modal-content">
-                      <!-- Modal Header -->
-                      <div class="modal-header">
-                          <h4 class="modal-title" id="${course.title}Label">${textWithoutUnderscores}</h4>
-                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                      </div>
-                      <!-- Modal body -->
-                      <div class="modal-body">
-                          ${descriptionContent}
-                      </div>
-                      <!-- Modal footer -->
-                      <div class="modal-footer">
-                          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-                      </div>
-                  </div>
+            <h1 class="training-title">MS Office Training at A1 Training Institute</h1>
+            <p class="training-description">MS Office training provided by A1 Training Institute helps you master essential Office applications. Gain proficiency in Word, Excel, and PowerPoint, boosting your productivity and career prospects.</p>
+            <ul class="training-features">
+              <li>&#10003; 40 hours of Instructor-led Training</li>
+              <li>&#10003; Comprehensive coverage of MS Office applications</li>
+              <li>&#10003; Hands-on assignments to support theoretical concepts</li>
+              <li>&#10003; Interactive and project-oriented lab sessions</li>
+            </ul>
+            <h4 class="training-info">We offer different modes of training, including classroom and online sessions. Our centers are conveniently located.</h4>
+            <div class="button-container">
+              <button class="button view-syllabus">View / Download Syllabus</button>
+              <button class="button contact-advisor">Contact Course Advisor</button>
+            </div>
+            <div class="container mt-5">
+              <div class="row">
+                <div class="col-sm-3 training-box">
+                  <h3>40+ Hrs</h3>
+                  <p>Hands-On Training</p>
+                </div>
+                <div class="col-sm-3 training-box">
+                  <h3>2 Live</h3>
+                  <p>Project For Hands-On Learning</p>
+                </div>
+                <div class="col-sm-3 training-box">
+                  <h3>50 Hrs</h3>        
+                  <p>Practical Assignments</p>
+                </div>
+                <div class="col-sm-3 training-box">
+                  <h3>24/7</h3>        
+                  <p>Lifetime Access To Support Team</p>
+                </div>
               </div>
+            </div>`;
+        }
+
+        let textWithoutUnderscores = course.title.replace(/_/g, ' ');
+
+        const modalHTML = `
+          <div class="modal fade" id="${course.title}" tabindex="-1" role="dialog" aria-labelledby="${course.title}Label" aria-hidden="true">
+            <div class="modal-dialog modal-xl" role="document">
+              <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                  <h4 class="modal-title" id="${course.title}Label">${textWithoutUnderscores}</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <!-- Modal body -->
+                <div class="modal-body">
+                  ${descriptionContent}
+                </div>
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
           </div>`;
 
-      // Append modal to the container
-      document.body.insertAdjacentHTML('beforeend', modalHTML);
-  });
+        document.body.insertAdjacentHTML('beforeend', modalHTML);
+      });
 
-  // Add event listener to callout image to open the specific modal
-  const calloutImage = document.getElementById('calloutImage');
-  calloutImage.addEventListener('click', function() {
-      // Assuming you want to open the modal with ID 'MS_Office'
-      const msOfficeModal = document.getElementById('MS_Office');
-      if (msOfficeModal) {
+      const calloutImage = document.getElementById('calloutImage');
+      calloutImage.addEventListener('click', function() {
+        // Open the "MS Office" modal on image click
+        const msOfficeModal = document.getElementById('MS_Office');
+        if (msOfficeModal) {
           const modalInstance = new bootstrap.Modal(msOfficeModal);
           modalInstance.show();
-      }
-  });
-});
-</script>
+        }
+      });
+    });
+  </script>
+</body>
+</html>
