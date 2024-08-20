@@ -76,27 +76,34 @@
                     <script>
                         for (i = 0; i < books.col1.length; i++) {
                             document.write(`
-                                <div class="col-sm-3" style="float:left;">
+                            <div class="col-sm-3" style="float:left;" data-bs-toggle="modal" data-bs-target="#myModal${i}">
                                     <div class="well" style="margin:3px;">
-                                        <h5 style="margin-top: 23px;">${books.col1[i].name}</h5>
-                                        <p style="color:black;"> Author -${books.col1[i].Author}</p>
-                                        <img src="assets/images/download1.png" alt="" style="width: 15%;margin-right:24px;margin-left: 10px;" data-bs-toggle="modal" data-bs-target="#myModal">
-                                        <!--created on 01/05/24 by manish-->
+                                        <h5 style="margin-top: 10px;" >${books.col1[i].name}</h5>
+                                        <p style="color:black;"> <span style="font-size:20px;">Author</span> -${books.col1[i].Author} ${books.col1[i].ebookAuthor}
+                                            </p>
+                                            <img src="assets/images/download1.png" alt="" style="width: 15%;margin-right:24px;margin-left: 10px;" data-bs-toggle="modal" data-bs-target="#myModal${i}">
+     
+                                            <!--created on 01/05/24 by manish-->
+
                                         <!-- The Modal -->
-                                        <div class="modal" id="myModal">
+                                        <div class="modal" id="myModal${i}">
                                             <div class="modal-dialog">
                                                 <div class="modal-content">
                                                     <!-- Modal Header -->
                                                     <div class="modal-header">
-                                                        <h4 class="modal-title">MS Dos</h4>
+                                                        <h4 class="modal-title" align="center"> ${books.col1[i].name}</h4>
                                                         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                                                     </div>
                                                     <!-- Modal body -->
                                                     <div class="modal-body">
-                                                        <img src="assets/images/ms-dos.png" width=";" height=";">
-                                                        <a href="assets/pdf/${books.col1[i].pdf}" target="blank" style="margin-left:75px;" title="Download CSS Pdf">
-                                                            <img src="assets/images/download1.png" alt="" style="width: 32%;margin-right :15px;margin-top:-4px;" data-bs-toggle="modal" data-bs-target="#myModal"></a>
+                                                        
+                                                        <h2 align="left">Download PDF</h2>
+                                                        <ul id="pdfList${i}" align="left"></ul>
+                                                        <br>
+                                                        <ul id="ebookList${i}" align="left"></ul>
+                                                            
                                                     </div>
+                                                
                                                     <!-- Modal footer -->
                                                     <div class="modal-footer">
                                                         <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
@@ -105,8 +112,39 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>`);
+                                </div>`)
+                                // Dynamically populate the PDF list in the modal
+                                const pdfList = document.getElementById(`pdfList${i}`);
+                                books.col1[i].pdf.forEach((pdf, index) => {
+                                    const listItem = document.createElement('li');
+                                    const anchor = document.createElement('a');
+                                    anchor.href = pdf;
+                                    anchor.textContent = `${books.col1[i].pdf_name[index]} - Author: ${books.col1[i].Author[index]}`;
+                                    anchor.target = "_blank";
+                                    listItem.appendChild(anchor);
+                                    pdfList.appendChild(listItem);
+                                });
+
+                                	// Dynamically populate the ebook list in the modal
+	                          const ebookList = document.getElementById(`ebookList${i}`);
+                              const ebookHeading = document.createElement('h2');
+                              ebookHeading.textContent = "Buy From Online Stores";
+                              ebookList.appendChild(ebookHeading);
+                              books.col1[i].ebook.forEach((ebookLink, index) => {
+                          	  const ebookListItem = document.createElement('li');
+                              const ebookAnchor = document.createElement('a');
+                              ebookAnchor.href = ebookLink;
+                              ebookAnchor.textContent = `Buy ${books.col1[i].name} - Author: ${books.col1[i].ebookAuthor[index]}`;
+                              ebookAnchor.target = "_blank";
+                              ebookListItem.appendChild(ebookAnchor);
+                              ebookList.appendChild(ebookListItem);
+                            });
+	
+
+
+
                         }
+
                     </script>
                 </span>
             </div>
@@ -186,14 +224,14 @@
             input = document.getElementById("myInput");
             filter = input.value.toUpperCase();
             container = document.getElementById("products1");
-            wells = container.getElementsByClassName("well");
+            wells = container.getElementsByClassName("col-sm-3");
             for (i = 0; i < wells.length; i++) {
                 h5 = wells[i].getElementsByTagName("h5")[0];
                 txtValue = h5.textContent || h5.innerText;
                 if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                    wells[i].parentElement.style.display = "";
+                    wells[i].style.display = "";
                 } else {
-                    wells[i].parentElement.style.display = "none";
+                    wells[i].style.display = "none";
                 }
             }
         }
