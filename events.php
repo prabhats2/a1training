@@ -499,6 +499,7 @@ window.addEventListener('hashchange', showSectionFromHash);
     </div>
     <hr style="color: white; width: 1130px;">
    </div>
+   
 <!-----Html CSS---->
 <div class="container item-container" data-title="html  css"id="html-css" class="section " >
     <div class="row">
@@ -528,7 +529,7 @@ window.addEventListener('hashchange', showSectionFromHash);
                     <span class="read-more-btn" onclick="toggleReadMore(this)">Read More</span>
                 </p>
             </div>
-        </div>
+        </div>       
         <div class="col-md-3">
             <div class="well-1" style="padding:0px">
                 <div class="well">

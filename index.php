@@ -699,7 +699,7 @@ window.onclick = function(event) {
             <div class="card-body">
             <!-- Contact Form -->
  
-            <form action="sendmail.php" method="POST" class="form-container" style="height: 475px; overflow-y: scroll;">
+            <form action="" method="POST" class="form-container" style="height: 475px; overflow-y: scroll;" id="contactform">
 <!---Full Name--->
 <div class="mb-3">
         <label for="Name">Name:</label>
@@ -1265,8 +1265,58 @@ document.getElementById('mobileno').addEventListener('input', function (e) {
     e.target.value = x;
 });
 </script>
+      <!-- JavaScript for handling the modal and form submission -->
+<!-- SweetAlert2 JS -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Auto-Fill Course Name in Modal
+        const courseModal = document.getElementById('courseModal');
+        const courseNameInput = document.getElementById('courseName');
 
+        if (courseModal) {
+            courseModal.addEventListener('show.bs.modal', function (event) {
+                const button = event.relatedTarget; // Button that triggered the modal
+                const courseName = button.getAttribute('data-course'); // Extract course name from data attribute
+                if (courseNameInput) {
+                    courseNameInput.value = courseName; // Set the course name in the input field
+                }
+            });
+        }
 
+        // Handle form submission
+        const form = document.getElementById('contactform');
+        if (form) {
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                const scriptURL = 'https://script.google.com/macros/s/AKfycby-wm55ttgYdZ7Pfqu8G8S4ihQXqVNIg0j720tLiCtag4c0Yr8gQ2aEU142mS9s20jc/exec';
+                const formData = new FormData(this);
+
+                fetch(scriptURL, { method: 'POST', body: formData })
+                    .then(response => {
+                        Swal.fire({
+                            title: "Thank you!",
+                            text: "Your form is submitted successfully.",
+                            icon: "success",
+                            timer: 1500,
+                            showConfirmButton: false
+                        }).then(() => {
+                            window.location.reload(); // Reload after closing the alert
+                        });
+                    })
+                    .catch(error => {
+                        console.error('Error!', error.message);
+                        Swal.fire({
+                            title: "Oops!",
+                            text: "Something went wrong. Please try again later.",
+                            icon: "error"
+                        });
+                    });
+            });
+        }
+    });
+</script>
 </body>
 
 </body>
