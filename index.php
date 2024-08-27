@@ -699,7 +699,7 @@ window.onclick = function(event) {
             <div class="card-body">
             <!-- Contact Form -->
  
-            <form action="" method="POST" class="form-container" style="height: 475px; overflow-y: scroll;" id="contactform">
+<form action="" method="POST" class="form-container" style="height: 475px; overflow-y: scroll;" id="contactform">
 <!---Full Name--->
 <div class="mb-3">
         <label for="Name">Name:</label>

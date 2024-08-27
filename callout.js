@@ -1,0 +1,277 @@
+document.write(`<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* Style for the right-side callout */
+.callout {
+  position: fixed;
+  bottom: 35px;
+  right: 20px; /* Position the first callout to the right */
+  max-width: 350px;
+  z-index: 99;
+}
+
+/* Header styling for the right-side callout */
+.callout-header {
+  padding: 10px 15px;
+  background: #555;
+  font-size: 30px;
+  color: white;
+}
+
+/* Container styling for the right-side callout */
+.callout-container {
+  padding: 15px;
+  background-color: #ccc;
+  color: black;
+}
+
+/* Close button styling */
+.closebtn {
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.closebtn:hover {
+  color: lightgrey; /* Change color on hover */
+}
+
+/* Style for the left-side callout */
+.callout1 {
+  position: fixed;
+  bottom: 35px;
+  left: 20px; /* Position the second callout to the left */
+  max-width: 350px; /* Adjust to match the right-side callout */
+  z-index: 99;
+}
+
+/* Header styling for the left-side callout */
+.callout1-header {
+  padding: 10px 15px; /* Adjust to match the right-side callout */
+  background: #555;
+  font-size: 30px;
+  color: white;
+}
+
+/* Container styling for the left-side callout */
+.callout1-container {
+  padding: 15px;
+  background-color: #ccc;
+  color: black;
+}
+
+/* Image slider styles for both callouts */
+.slider, .slider1 {
+  position: relative;
+  max-width: 100%;
+  height: 200px; /* Adjust height as needed */
+  margin: auto;
+  overflow: hidden;
+}
+
+/* Image slide styles for both callouts */
+.slides, .slides1 {
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+
+/* Active slide styling */
+.active, .active1 {
+  display: block;
+}
+
+/* Navigation button styling for both callouts */
+.prev, .next, .prev1, .next1 {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Right navigation button styling */
+.next, .next1 {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* Hover effect for navigation buttons */
+.prev:hover, .next:hover, .prev1:hover, .next1:hover {
+  background-color: rgba(0,0,0,0.8); /* Darker background on hover */
+}
+
+/* Dot container styling for both callouts */
+.dot-container {
+  text-align: center;
+  padding: 10px;
+  background: #ddd;
+}
+
+/* Dot styling for both callouts */
+.dot, .dot1 {
+  cursor: pointer;
+  height: 10px;
+  width: 10px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Active dot styling */
+.active-dot, .active-dot1 {
+  background-color: #717171;
+}
+
+/* Hidden div styling */
+.hidden-div {
+  display: none; /* The div is hidden but still occupies space */
+}
+</style>`)
+document.write(`<!-- Callout on the right side -->
+<div class="callout">
+  <a href="events.php"><div class="callout-header">Events</div></a>
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">×</span>
+  <div class="callout-container">
+    <!-- Image slider -->
+    <div class="slider"> 
+      <a href="events.php#git"><img class="slides active" src="assets/images/events/git.png" alt="git"></a>
+      <a href="events.php#aws"><img class="slides" src="assets/images/events/aws.png" alt="aws"></a>
+      <a href="events.php#html-css"><img class="slides" src="assets/images/events/html-css.png" alt="html-css"></a>
+      <!-- Next and previous buttons -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <!-- The dots/circles -->
+    <div class="dot-container hidden-div">
+      <span class="dot active-dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span> 
+    </div>
+  </div>
+</div>
+
+<!-- Callout on the left side -->
+<div class="callout1">
+  <a href="junior_geeks_coding.html"><div class="callout1-header">Coding 4 Junior Geeks</div></a>
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">×</span>
+  <div class="callout1-container">
+    <!-- Image slider -->
+<div class="slider1"> 
+
+  <a href="#" onclick="openModalOnText1('Tally');"><img class="slides1" src="assets/images/junior-geeks/tally.png" alt="tally"></a>  
+  <a href="#" onclick="openModalOnText1('Python');"><img class="slides1" src="assets/images/junior-geeks/python.png" alt="python"></a>
+
+    
+  <!-- Next and previous buttons -->
+      <a class="prev1" onclick="plusSlides1(-1)">&#10094;</a>
+      <a class="next1" onclick="plusSlides1(1)">&#10095;</a>
+</div>
+    <!-- The dots/circles -->
+    <div class="dot-container hidden-div">
+      <span class="dot1 active-dot1" onclick="currentSlide1(1)"></span> 
+      <span class="dot1" onclick="currentSlide1(2)"></span> 
+      <span class="dot1" onclick="currentSlide1(3)"></span> 
+    </div>
+  </div>
+</div>
+`)
+// Example code that still runs even if the div is hidden
+document.addEventListener("DOMContentLoaded", function() {
+    console.log("Div is hidden, but this script is still running.");
+  });
+function openModalOnText1(modalId) {
+    localStorage.setItem('modalToShow', modalId);
+    window.open('junior_geeks_coding.html', '_blank');
+}
+// The added script for handling the modal based on URL parameters
+document.addEventListener("DOMContentLoaded", function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const modalId = urlParams.get('modal');
+    if (modalId) {
+      let modalElement = document.getElementById(`${modalId}Modal`);
+      if (modalElement) {
+        var myModal = new bootstrap.Modal(modalElement);
+        myModal.show();
+      } else {
+        console.log('No modal found with ID:', modalId);
+      }
+    }
+  });
+  // For the first callout
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("slides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active-dot", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active-dot";
+}
+
+// Automatic Slideshow
+let slideInterval = setInterval(function() {
+  plusSlides(1);
+}, 3000); // Change image every 3 seconds
+
+// For the second callout
+let slideIndex1 = 1;
+showSlides1(slideIndex1);
+
+function plusSlides1(n) {
+  showSlides1(slideIndex1 += n);
+}
+
+function currentSlide1(n) {
+  showSlides1(slideIndex1 = n);
+}
+
+function showSlides1(n) {
+  let i;
+  let slides = document.getElementsByClassName("slides1");
+  let dots = document.getElementsByClassName("dot1");
+  if (n > slides.length) {slideIndex1 = 1}
+  if (n < 1) {slideIndex1 = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active-dot1", "");
+  }
+  slides[slideIndex1-1].style.display = "block";  
+  dots[slideIndex1-1].className += " active-dot1";
+}
+
+// Automatic Slideshow for second slider
+let slideInterval1 = setInterval(function() {
+  plusSlides1(1);
+}, 3000); // Change image every 3 seconds

@@ -1,440 +1,314 @@
-Junior Geeks Coding Program 
-<button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                    data-bs-target="#contactModal"style="margin-right: 10px;">
-                                    Contact Us
-                                </button> <div class="modal fade" id="contactModal" tabindex="-1"
-                                    aria-labelledby="contactModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog modal-xl">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                              <h5 class="modal-title" id="contactModalLabel">LET'S GET IN TOUCH</h5>
-                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                    aria-label="Close"></button>
-                                            </div>
-                                            <div class="modal-body" style="text-align: left;">
-                                                <!-- Contact Form -->
-                                                <div class="row">
-                                                    <div class="col-sm-3 m d-none d-sm-block"> 
-                                                        <div class="container-fluid">
-                                                            <div class="row n">
-                                                                <div>
-                                                                    <a href="images/img 21.png" class="d-block mb-3 gallery-item" data-fancybox="gallery"
-                                                                        data-caption="Image 1">
-                                                                        <img src="images/img 21.png" class="img-fluid" alt="Image 1">
-                                                                    </a>
-                                                                </div>
-                                                                <div>
-                                                                    <a href="images/img 22.png" class="d-block mb-3 gallery-item" data-fancybox="gallery"
-                                                                        data-caption="Image 2">
-                                                                        <img src="images/img 22.png" class="img-fluid" alt="Image 2">
-                                                                    </a>
-                                                                </div>
-                                                                <div>
-                                                                    <a href="images/img 23.png" class="d-block mb-3 gallery-item" data-fancybox="gallery"
-                                                                        data-caption="Image 3">
-                                                                        <img src="images/img 23.png" class="img-fluid" alt="Image 3">
-                                                                    </a>
-                                                                </div>
-                                                                <div>
-                                                                    <a href="images/img 24.png" class="d-block mb-3 gallery-item" data-fancybox="gallery"
-                                                                        data-caption="Image 3">
-                                                                        <img src="images/img 24.png" class="img-fluid" alt="Image 3">
-                                                                    </a>
-                                                                </div>
-                                                                <div>
-                                                                    <a href="images/img 25.png" class="d-block mb-3 gallery-item" data-fancybox="gallery"
-                                                                        data-caption="Image 3">
-                                                                        <img src="images/img 25.png" class="img-fluid" alt="Image 3">
-                                                                    </a>
-                                                                </div>
-                                                                <div>
-                                                                    <a href="images/img 26.png" class="d-block mb-3 gallery-item" data-fancybox="gallery"
-                                                                        data-caption="Image 3">
-                                                                        <img src="images/img 26.png" class="img-fluid" alt="Image 3">
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>  
-                                                    <div class="col-sm-6">
-                                                        <div class="container text-center">
-                                                            <img src="images/img.png" alt="" class="img-fluid col-md-4">
-                                                        </div>
-                                                        <h1 class=" text-center">INQUIRY FORM</h1>
-                                                        <div class="container">
-                                                            <form action="/action_page.php">
-                                                                <div class="form-group">
-                                                                    <label for="email">Email:</label>
-                                                                    <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
-                                                                </div>
-                                                                <div class="form-group">
-                                                                    <label for="Name">Name:</label>
-                                                                    <input type="Name" class="form-control" id="Name" placeholder="Enter Name" name="Name">
-                                                                </div>
-                                                                <div class="form-group">
-                                                                    <label for="DOB">DOB:</label>
-                                                                    <input type="date" class="form-control" id="DOB" placeholder="Enter DOB" name="DOB">
-                                                                </div>
-                                                                <div class="form-group">
-                                                                    <label for="Mobile No">Mobile No:</label>
-                                                                    <input type="number" class="form-control" id="Mobile No" placeholder="Enter Mobile No"
-                                                                        name="Mobile No">
-                                                                </div>
-                                                                <div class="form-group">
-                                                                    <label for="Address">Address:</label>
-                                                                    <textarea class="form-control" rows="2" id="Address" placeholder="Enter Address"
-                                                                        name="text"></textarea>
-                                                                </div>
-                                                                <div class="form-group">
-                                                                    <label for="name">How did you learn about us?:</label>
-                                                                    <input type="text" class="form-control" id="name" placeholder="Enter name" name="name">
-                                                                </div>
-                                                                <div class="form-group">
-                                                                    <label for="sel1">Select Subject:</label>
-                                                                    <select class="form-control" id="sel1" name="sellist1">
-                                                                      <option>Choose Subject</option>
-                                                            <optgroup label="Web Designing">
+<?php session_start(); ?>
+<!DOCTYPE html>
+<html lang="en">
 
-                                                                <option>Angular Js</option>
-                                                                <option>React Js</option>
-                                                                <option>Web Designing</option>
-                                                                <option>UI & UX</option>
-                                                                <option>PHP Experts</option>
-                                                                <option>PHP Full Stack</option>
-                                                            </optgroup>
-                                                            <optgroup label="Cloud Computing">
-                                                                <option>AWS Training</option>
-                                                                <option>AZURE Training</option>
-                                                                <option>GCP</option>
-                                                            </optgroup>
-                                                            <optgroup label="Devops">
-                                                                <option>Kubemetes Training</option>
-                                                                <option>Docker Certification Training</option>
-                                                                <option>Ansible Training</option>
-                                                                <option>Devops Training</option>
-                                                                <option>Jenkins</option>
-                                                                <option>Terraform</option>
-                                                                <option>Linux</option>
-                                                                <option>Git</option>
-                                                                <option>Shell Scripting</option>
-                                                            </optgroup>
-                                                            <optgroup label="Programming">
-                                                                <option>Python Training</option>
-                                                                <option>JavaScript Training</option>
-                                                                <option>Unix Shell Scripting Training</option>
-                                                                <option>Java Certification</option>
-                                                                <option>C And C++ Training</option>
-                                                                <option>.NET Training</option>
-                                                            </optgroup>
-                                                            <optgroup label="Database Developer">
-                                                                <option>MySQL Training</option>
-                                                                <option>MongoDB Training</option>
-                                                                <option>SQL Server DBA Training</option>
-                                                            </optgroup>
-                                                            <optgroup label="Mobile App Development">
-                                                                <option>Android</option>
-                                                                <option>I-Phone</option>
-                                                            </optgroup>
-                                                            <optgroup label="Data Science & AI">
-                                                                <option>Machine Learning Training</option>
-                                                                <option>Data Science Training</option>
-                                                                <option>Data Science With Python Training</option>
-                                                                <option>Deep Learning Course</option>
-                                                                <option>Artificial Intelligence Course</option>
-                                                            </optgroup>
-                                                            <optgroup label="MIS-Advanced Excel-BI Tools">
-                                                                <option>Power Bi</option>
-                                                                <option>Advanced Microsoft Excel</option>
-                                                                <option>MIS</option>
-                                                            </optgroup>
-                                                            <optgroup label="Digital Marketing">
-                                                                <option>Advanced Digital Marketing</option>
-                                                                <option>Digital Marketing</option>
-                                                            </optgroup>
-                                                            <optgroup label="Industrial Training">
-                                                                <option>6 Weeks Summer Training</option>
-                                                                <option>6 Months Industrial Training</option>
-                                                            </optgroup>
-                                                            <optgroup label="Multimedia Animation-Graphics">
-                                                                <option>Graphic Designing</option>
-                                                                <option>Graphic Designing Pro</option>
-                                                                <option>Motion Graphic Course </option>
-                                                                <option>Multimedia & Animation </option>
-                                                                <option>Graphic Motion Pro Course</option>
-                                                                <option>Multimedia & Animation (Diploma)</option>
-                                                                <option>Videograpy Course</option>
-                                                                <option>Scriptwriting & Story Boarding</option>
-                                                                <option>Film Making</option>
-                                                            </optgroup>
-                                                            <optgroup label="Software Testing">
-                                                                <option>Manual Testing</option>
-                                                                <option>Manual + Selenium</option>
-                                                                <option>Full Stack QA</option>
-                                                                <option>Java With Selenium </option>
-                                                                <option>REST Assured API</option>
-                                                                <option>Appium Testing</option>
-                                                                <option>API Testing</option>
-                                                            </optgroup>
-                                                            <optgroup label="Project Management">
-                                                                <option>Primavera P6 Testing</option>
-                                                                <option>Agile Testing</option>
-                                                                <option>Microsoft Excel Training</option>
-                                                                <option>Scrum Master Training</option>
+  <head>
 
-                                                            </optgroup>
-                                                            <optgroup label="Full Stack Development">
-                                                                <option>MEAN Stack</option>
-                                                                <option>Mern Stack</option>
-                                                            </optgroup>
-                                                                    </select>
-                                                                </div>
-                                                                <div class="form-group">
-                                                                    <label for="sel1">Select Mode of Course (select one):</label>
-                                                                    <select class="form-control" id="sel1" name="sellist1">
-                                                                        <option>Select Mode of Course</option>
-                                                                        <option>Online</option>
-                                                                        <option>Offline</option>
-                                                                    </select>
-                                                                </div>
-                                                                <div class="form-group">
-                                                                    <label for="name">Other Courses Not Included in list:</label>
-                                                                    <input type="text" class="form-control" id="name" placeholder="Enter name" name="name">
-                                                                </div>
-                                                                <!----- <h2 class=" text-center">For office Use Only</h2>
-                                                                <div class="form-group">
-                                                                  <label for="name">Date</label>
-                                                                  <input type="Date" class="form-control" id="Date" placeholder="Enter Date" name="Date">
-                                                                </div>
-                                                                <div class="form-group">
-                                                                  <label for="Registration No">Registration No</label>
-                                                                  <input type="number" class="form-control" id="Registration No" placeholder="Enter Registration No" name="Registration No">
-                                                              </div>----->
-                                                                <button type="submit" class="btn btn-primary">Submit</button>
-                                                            </form>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-sm-3 m ">
-                                                        <h1 class=" text-center">Course</h1>
-                                                        <div class="n">
-                                                            <div class="card" style="width:100%">
-                                                                <img class="card-img-top" src="images/img 1.jpg" alt="Card image" style="width:100%">
-                                                                <div class="card-body text-center">
-                                                                    <h4 class="card-title">MEAN/MERN Stack</h4>
-                                                                    <a href="tel:+918368979712" class="btn btn-primary "><i class="fa fa-phone" id="phone"><img
-                                                                                src="images/call_icon.png" alt=""></i></a>
-                                                                    <a href="https://wa.me/8368979712" class="btn btn-success "><img src="images/logo.png"
-                                                                            alt="" class="bg-success"></a>
-                                                                </div>
-                                                            </div>
-                                                            <div class="card" style="width:100%">
-                                                                <img class="card-img-top" src="images/img 2.jpg" alt="Card image" style="width:100%">
-                                                                <div class="card-body text-center">
-                                                                    <h4 class="card-title">AI/Maching learning</h4>
-                                                                    <a href="tel:+918368979712" class="btn btn-primary "><i class="fa fa-phone" id="phone"><img
-                                                                                src="images/call_icon.png" alt=""></i></a>
-                                                                    <a href="https://wa.me/8368979712" class="btn btn-success "><img src="images/logo.png"
-                                                                            alt="" class="bg-success"></a>
-                                                                </div>
-                                                            </div>
-                                                            <div class="card" style="width:100%">
-                                                                <img class="card-img-top" src="images/img 3.jpg" alt="Card image" style="width:100%">
-                                                                <div class="card-body text-center">
-                                                                    <h4 class="card-title">Android Training</h4>
-                                                                    <a href="tel:+918368979712" class="btn btn-primary "><i class="fa fa-phone" id="phone"><img
-                                                                                src="images/call_icon.png" alt=""></i></a>
-                                                                    <a href="https://wa.me/8368979712" class="btn btn-success "><img src="images/logo.png"
-                                                                            alt="" class="bg-success"></a>
-                                                                </div>
-                                                            </div>
-                                                            <div class="card" style="width:100%">
-                                                                <img class="card-img-top" src="images/img 4.jpg" alt="Card image" style="width:100%">
-                                                                <div class="card-body text-center">
-                                                                    <h4 class="card-title">UI Development</h4>
-                                                                    <a href="tel:+918368979712" class="btn btn-primary "><i class="fa fa-phone" id="phone"><img
-                                                                                src="images/call_icon.png" alt=""></i></a>
-                                                                    <a href="https://wa.me/8368979712" class="btn btn-success "><img src="images/logo.png"
-                                                                            alt="" class="bg-success"></a>
-                                                                </div>
-                                                            </div>
-                                                            <div class="card" style="width:100%">
-                                                                <img class="card-img-top" src="images/img 5.jpg" alt="Card image" style="width:100%">
-                                                                <div class="card-body text-center">
-                                                                    <h4 class="card-title">Graphic designing</h4>
-                                                                    <a href="tel:+918368979712" class="btn btn-primary "><i class="fa fa-phone" id="phone"><img
-                                                                                src="images/call_icon.png" alt=""></i></a>
-                                                                    <a href="https://wa.me/8368979712" class="btn btn-success "><img src="images/logo.png"
-                                                                            alt="" class="bg-success"></a>
-                                                                </div>
-                                                            </div>
-                                                            <div class="card" style="width:100%">
-                                                                <img class="card-img-top" src="images/img 6.jpg" alt="Card image" style="width:100%">
-                                                                <div class="card-body text-center">
-                                                                    <h4 class="card-title">Angular/React Training</h4>
-                                                                    <a href="tel:+918368979712" class="btn btn-primary "><i class="fa fa-phone" id="phone"><img
-                                                                                src="images/call_icon.png" alt=""></i></a>
-                                                                    <a href="https://wa.me/8368979712" class="btn btn-success "><img src="images/logo.png"
-                                                                            alt="" class="bg-success"></a>
-                                                                </div>
-                                                            </div>
-                                                            <div class="card" style="width:100%">
-                                                                <img class="card-img-top" src="images/img 7.jpg" alt="Card image" style="width:100%">
-                                                                <div class="card-body text-center">
-                                                                    <h4 class="card-title">AWS/Azure</h4>
-                                                                    <a href="tel:+918368979712" class="btn btn-primary "><i class="fa fa-phone" id="phone"><img
-                                                                                src="images/call_icon.png" alt=""></i></a>
-                                                                    <a href="https://wa.me/8368979712" class="btn btn-success "><img src="images/logo.png"
-                                                                            alt="" class="bg-success"></a>
-                                                                </div>
-                                                            </div>
-                                                            <div class="card" style="width:100%">
-                                                                <img class="card-img-top" src="images/img 8.jpg" alt="Card image" style="width:100%">
-                                                                <div class="card-body text-center">
-                                                                    <h4 class="card-title">Excel Training</h4>
-                                                                    <a href="tel:+918368979712" class="btn btn-primary "><i class="fa fa-phone" id="phone"><img
-                                                                                src="images/call_icon.png" alt=""></i></a>
-                                                                    <a href="https://wa.me/8368979712" class="btn btn-success "><img src="images/logo.png"
-                                                                            alt="" class="bg-success"></a>
-                                                                </div>
-                                                            </div>
-                                                            <div class="card" style="width:100%">
-                                                                <img class="card-img-top" src="images/img 9.jpg" alt="Card image" style="width:100%">
-                                                                <div class="card-body text-center">
-                                                                    <h4 class="card-title">Digital Marketing</h4>
-                                                                    <a href="tel:+918368979712" class="btn btn-primary "><i class="fa fa-phone" id="phone"><img
-                                                                                src="images/call_icon.png" alt=""></i></a>
-                                                                    <a href="https://wa.me/8368979712" class="btn btn-success "><img src="images/logo.png"
-                                                                            alt="" class="bg-success"></a>
-                                                                </div>
-                                                            </div>
-                                                            <div class="card" style="width:100%">
-                                                                <img class="card-img-top" src="images/img 10.jpg" alt="Card image" style="width:100%">
-                                                                <div class="card-body text-center">
-                                                                    <h4 class="card-title">Python Training</h4>
-                                                                    <a href="tel:+918368979712" class="btn btn-primary "><i class="fa fa-phone" id="phone"><img
-                                                                                src="images/call_icon.png" alt=""></i></a>
-                                                                    <a href="https://wa.me/8368979712" class="btn btn-success "><img src="images/logo.png"
-                                                                            alt="" class="bg-success"></a>
-                                                                </div>
-                                                            </div>
-                                                            <div class="card" style="width:100%">
-                                                                <img class="card-img-top" src="images/img 11.jpg" alt="Card image" style="width:100%">
-                                                                <div class="card-body text-center">
-                                                                    <h4 class="card-title"> Sap Training</h4>
-                                                                    <a href="tel:+918368979712" class="btn btn-primary "><i class="fa fa-phone" id="phone"><img
-                                                                                src="images/call_icon.png" alt=""></i></a>
-                                                                    <a href="https://wa.me/8368979712" class="btn btn-success "><img src="images/logo.png"
-                                                                            alt="" class="bg-success"></a>
-                                                                </div>
-                                                            </div>
-                                                            <div class="card" style="width:100%">
-                                                                <img class="card-img-top" src="images/img 12.jpg" alt="Card image" style="width:100%">
-                                                                <div class="card-body text-center">
-                                                                    <h4 class="card-title"> Automation Training</h4>
-                                                                    <a href="tel:+918368979712" class="btn btn-primary "><i class="fa fa-phone" id="phone"><img
-                                                                                src="images/call_icon.png" alt=""></i></a>
-                                                                    <a href="https://wa.me/8368979712" class="btn btn-success "><img src="images/logo.png"
-                                                                            alt="" class="bg-success"></a>
-                                                                </div>
-                                                            </div>
-                                                            <div class="card" style="width:100%">
-                                                                <img class="card-img-top" src="images/img 13.jpg" alt="Card image" style="width:100%">
-                                                                <div class="card-body text-center">
-                                                                    <h4 class="card-title"> Core & Advanced Java</h4>
-                                                                    <a href="tel:+918368979712" class="btn btn-primary "><i class="fa fa-phone" id="phone"><img
-                                                                                src="images/call_icon.png" alt=""></i></a>
-                                                                    <a href="https://wa.me/8368979712" class="btn btn-success "><img src="images/logo.png"
-                                                                            alt="" class="bg-success"></a>
-                                                                </div>
-                                                            </div>
-                                                            <div class="card" style="width:100%">
-                                                                <img class="card-img-top" src="images/img 14.jpg" alt="Card image" style="width:100%">
-                                                                <div class="card-body text-center">
-                                                                    <h4 class="card-title"> .NET Training</h4>
-                                                                    <a href="tel:+918368979712" class="btn btn-primary "><i class="fa fa-phone" id="phone"><img
-                                                                                src="images/call_icon.png" alt=""></i></a>
-                                                                    <a href="https://wa.me/8368979712" class="btn btn-success "><img src="images/logo.png"
-                                                                            alt="" class="bg-success"></a>
-                                                                </div>
-                                                            </div>
-                                                            <div class="card" style="width:100%">
-                                                                <img class="card-img-top" src="images/img 15.jpg" alt="Card image" style="width:100%">
-                                                                <div class="card-body text-center">
-                                                                    <h4 class="card-title"> Software Testing</h4>
-                                                                    <a href="tel:+918368979712" class="btn btn-primary "><i class="fa fa-phone" id="phone"><img
-                                                                                src="images/call_icon.png" alt=""></i></a>
-                                                                    <a href="https://wa.me/8368979712" class="btn btn-success "><img src="images/logo.png"
-                                                                            alt="" class="bg-success"></a>
-                                                                </div>
-                                                            </div>
-                                                            <div class="card" style="width:100%">
-                                                                <img class="card-img-top" src="images/img 16.jpg" alt="Card image" style="width:100%">
-                                                                <div class="card-body text-center">
-                                                                    <h4 class="card-title"> Data Science</h4>
-                                                                    <a href="tel:+918368979712" class="btn btn-primary "><i class="fa fa-phone" id="phone"><img
-                                                                                src="images/call_icon.png" alt=""></i></a>
-                                                                    <a href="https://wa.me/8368979712" class="btn btn-success "><img src="images/logo.png"
-                                                                            alt="" class="bg-success"></a>
-                                                                </div>
-                                                            </div>
-                                                            <div class="card" style="width:100%">
-                                                                <img class="card-img-top" src="images/img 17.jpg" alt="Card image" style="width:100%">
-                                                                <div class="card-body text-center">
-                                                                    <h4 class="card-title"> DevOps Training</h4>
-                                                                    <a href="tel:+918368979712" class="btn btn-primary "><i class="fa fa-phone" id="phone"><img
-                                                                                src="images/call_icon.png" alt=""></i></a>
-                                                                    <a href="https://wa.me/8368979712" class="btn btn-success "><img src="images/logo.png"
-                                                                            alt="" class="bg-success"></a>
-                                                                </div>
-                                                            </div>
-                                                            <div class="card" style="width:100%">
-                                                                <img class="card-img-top" src="images/img 18.jpg" alt="Card image" style="width:100%">
-                                                                <div class="card-body text-center">
-                                                                    <h4 class="card-title"> C/C++</h4>
-                                                                    <a href="tel:+918368979712" class="btn btn-primary "><i class="fa fa-phone" id="phone"><img
-                                                                                src="images/call_icon.png" alt=""></i></a>
-                                                                    <a href="https://wa.me/8368979712" class="btn btn-success "><img src="images/logo.png"
-                                                                            alt="" class="bg-success"></a>
-                                                                </div>
-                                                            </div>
-                                                            <div class="card" style="width:100%">
-                                                                <img class="card-img-top" src="images/img 19.jpg" alt="Card image" style="width:100%">
-                                                                <div class="card-body text-center">
-                                                                    <h4 class="card-title"> Computer Science 11th</h4>
-                                                                    <a href="tel:+918368979712" class="btn btn-primary "><i class="fa fa-phone" id="phone"><img
-                                                                                src="images/call_icon.png" alt=""></i></a>
-                                                                    <a href="https://wa.me/8368979712" class="btn btn-success "><img src="images/logo.png"
-                                                                            alt="" class="bg-success"></a>
-                                                                </div>
-                                                            </div>
-                                                            <div class="card" style="width:100%">
-                                                                <img class="card-img-top" src="images/img 19.jpg" alt="Card image" style="width:100%">
-                                                                <div class="card-body text-center">
-                                                                    <h4 class="card-title"> Computer Science 12th</h4>
-                                                                    <a href="tel:+918368979712" class="btn btn-primary "><i class="fa fa-phone" id="phone"><img
-                                                                                src="images/call_icon.png" alt=""></i></a>
-                                                                    <a href="https://wa.me/8368979712" class="btn btn-success "><img src="images/logo.png"
-                                                                            alt="" class="bg-success"></a>
-                                                                </div>
-                                                            </div>
-                                                            <div class="card" style="width:100%">
-                                                                <img class="card-img-top" src="images/img 20.jpg" alt="Card image" style="width:100%">
-                                                                <div class="card-body text-center">
-                                                                    <h4 class="card-title">Basic Computer</h4>
-                                                                    <a href="tel:+918368979712" class="btn btn-primary "><i class="fa fa-phone" id="phone"><img
-                                                                                src="images/call_icon.png" alt=""></i></a>
-                                                                    <a href="https://wa.me/8368979712" class="btn btn-success "><img src="images/logo.png"
-                                                                            alt="" class="bg-success"></a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Template Mo">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
+    <title>Education - List of Meetings</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+     <!-- Bootstrap JS with Popper.js -->
+     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+    <!-- SweetAlert2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-edu-meeting.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/lightbox.css">
+<!--
+
+TemplateMo 569 Edu Meeting
+
+https://templatemo.com/tm-569-edu-meeting
+
+-->
+  </head>
+  <style>
+    .side{
+      margin-bottom:20px;
+    }
+    form {
+    background: white;
+    padding: 35px;
+    border-radius: 10px;
+  }
+
+  .form-control {
+    border-radius: 25px;
+    border: 1px solid #e0e0e0;
+    padding: 15px;
+    margin:15px;
+    background-color:#fafafa;
+  }
+
+  textarea.form-control {
+    height: 150px;
+  }
+
+  button.btn {
+    background-color: #a52a2a;
+    border-color: #a52a2a;
+    border-radius: 25px;
+    padding: 10px 30px;
+    font-weight: bold;
+  }
+
+  h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  @media (max-width: 767px) {
+    .col-lg-4 {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+  }
+  </style>
+
+<body>
+ <!--Start of Tawk.to Script-->
+ <script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/66bb21d20cca4f8a7a754fad/1i55fo8ds';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+  })();
+  </script>
+  <!--End of Tawk.to Script-->
+   
+
+ <!--menu-->
+<script type="text/javascript" src="menu.js"></script>
+<!--menu end-->
+  
+
+  <section class="heading-page header-text" id="top">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h6>Connect with Us</h6>
+          <h2>Connect form</h2>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ 
+                <section class="contact-us" id="contact">
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-lg-9 align-self-center" style=" margin-bottom:112px;">
+                          <div class="row">
+                            <div class="col-lg-12">
+                            <form id="contactform">
+  <div class="row">
+    <div class="col-lg-12">
+      <h2>Let's get in touch</h2>
+    </div>
+    <div class="col-lg-4">
+      <fieldset>
+        <input type="text" name="Name" id="fullname" class="form-control" placeholder="Enter Name" required>
+      </fieldset>
+    </div>
+    <div class="col-lg-4">
+      <fieldset>
+        <input type="email" class="form-control" id="E-mail" name="email" placeholder="YOUR EMAIL..." required>
+      </fieldset>
+    </div>
+    <div class="col-lg-4">
+      <fieldset>
+        <input type="text" name="Subject" id="subject" placeholder="SUBJECT..." required class="form-control">
+      </fieldset>
+    </div>
+    <div class="col-lg-12">
+      <fieldset>
+        <textarea name="Message" class="form-control" id="message" placeholder="YOUR MESSAGE..." rows="4"></textarea>
+      </fieldset>
+    </div>
+    <div class="col-lg-12">
+      <fieldset>
+        <button type="submit" name="submitContact" class="btn btn-primary">Send Mail</button>
+      </fieldset>
+    </div>
+  </div>
+</form>
+
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-3">
+                          <div class="right-info side ">
+                            <ul>
+                              <li>
+                                <h6>Phone Number</h6>
+                                <span style=" font-size : 17px;">8368979712 / 6380486914</span>
+                                
+                              </li>
+                              <li>
+                                <h6>Email Address</h6>
+                                <span style=" font-size : 17px;">a1training167@gmail.com</span>
+                              </li>
+                              <li>
+                                <h6>Street Address</h6>
+                                <span style=" font-size : 17px;">C-167, Omicron 1, 6% Abadi, Greater Noida 201310</span>
+                              </li>
+                              <li>
+                                <h6>Website URL</h6>
+                                <span style=" font-size : 17px;">www.a1training.in</span>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </div>`)
+                
+            <div class="col-lg-12">
+              <div class="pagination">
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+   <!--footer-->
+   <script type="text/javascript" src="footer.js"></script>
+   <!--footer end-->
+
+
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="assets/js/isotope.min.js"></script>
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/lightbox.js"></script>
+    <script src="assets/js/tabs.js"></script>
+    <script src="assets/js/isotope.js"></script>
+    <script src="assets/js/video.js"></script>
+    <script src="assets/js/slick-slider.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script>
+        //according to loftblog tut
+        $('.nav li:first').addClass('active');
+
+        var showSection = function showSection(section, isAnimate) {
+          var
+          direction = section.replace(/#/, ''),
+          reqSection = $('.section').filter('[data-section="' + direction + '"]'),
+          reqSectionPos = reqSection.offset().top - 0;
+
+          if (isAnimate) {
+            $('body, html').animate({
+              scrollTop: reqSectionPos },
+            800);
+          } else {
+            $('body, html').scrollTop(reqSectionPos);
+          }
+
+        };
+
+        var checkSection = function checkSection() {
+          $('.section').each(function () {
+            var
+            $this = $(this),
+            topEdge = $this.offset().top - 80,
+            bottomEdge = topEdge + $this.height(),
+            wScroll = $(window).scrollTop();
+            if (topEdge < wScroll && bottomEdge > wScroll) {
+              var
+              currentId = $this.data('section'),
+              reqLink = $('a').filter('[href*=\\#' + currentId + ']');
+              reqLink.closest('li').addClass('active').
+              siblings().removeClass('active');
+            }
+          });
+        };
+
+        $('.main-menu, .responsive-menu, .scroll-to-section').on('click', 'a', function (e) {
+          e.preventDefault();
+          showSection($(this).attr('href'), true);
+        });
+
+        $(window).scroll(function () {
+          checkSection();
+        });
+    </script>
+  
+  
+
+<!-- JavaScript for handling the modal and form submission -->
+<!-- SweetAlert2 JS -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Auto-Fill Course Name in Modal
+        const courseModal = document.getElementById('courseModal');
+        const courseNameInput = document.getElementById('courseName');
+
+        if (courseModal) {
+            courseModal.addEventListener('show.bs.modal', function (event) {
+                const button = event.relatedTarget; // Button that triggered the modal
+                const courseName = button.getAttribute('data-course'); // Extract course name from data attribute
+                if (courseNameInput) {
+                    courseNameInput.value = courseName; // Set the course name in the input field
+                }
+            });
+        }
+
+        // Handle form submission
+        const form = document.getElementById('contactform');
+        if (form) {
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                const scriptURL = 'https://script.google.com/macros/s/AKfycbyTdBGvT9D6neYK_8gdaaP9YIvJ5dGKR0F0ZI7YBhiq1oW-ArzRjgh4__gnbdDTHFe5/exec';
+                const formData = new FormData(this);
+
+                fetch(scriptURL, { method: 'POST', body: formData })
+                    .then(response => {
+                        Swal.fire({
+                            title: "Thank you!",
+                            text: "Your form is submitted successfully.",
+                            icon: "success",
+                            timer: 1500,
+                            showConfirmButton: false
+                        }).then(() => {
+                            window.location.reload(); // Reload after closing the alert
+                        });
+                    })
+                    .catch(error => {
+                        console.error('Error!', error.message);
+                        Swal.fire({
+                            title: "Oops!",
+                            text: "Something went wrong. Please try again later.",
+                            icon: "error"
+                        });
+                    });
+            });
+        }
+    });
+</script>
+  </body>
+
+</html>
