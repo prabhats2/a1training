@@ -2,327 +2,130 @@
 <html lang="en">
 
 <head>
-
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="Template Mo">
-  <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-
-  <title>Education - List of Meetings</title>
-
-  <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-GLhlTQ8iNl7lqyiYbNE3u5zHMHp0UA+POD4t1itd16u7jOFEL76P0DHS9tN8+OHL" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
-  <script>
-    $(document).ready(function () {
-      $('.gallery-item').fancybox();
-    });
-  </script>
-  <style>
-    .n {
-      overflow: scroll;
-      height: 800px
-    }
-
-    .m {
-      margin-top: 100px;
-      height: 900px;
-    }
-    
-  </style>
-
-  <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
-  <!-- Additional CSS Files -->
-  <link rel="stylesheet" href="assets/css/fontawesome.css">
-  <link rel="stylesheet" href="assets/css/templatemo-edu-meeting.css">
-  <link rel="stylesheet" href="assets/css/owl.css">
-  <link rel="stylesheet" href="assets/css/lightbox.css">
-
-  <script type="text/javascript" src="assets/json/test.json"></script>
-  <script type="text/javascript" src="test_modal.js"></script>
-  <!--
-
-TemplateMo 569 Edu Meeting
-
-https://templatemo.com/tm-569-edu-meeting
-
--->
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Details</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- SweetAlert2 CSS (Optional for customization) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css"> 
 </head>
 
 <body>
- <!--Start of Tawk.to Script-->
- <script type="text/javascript">
-  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-  (function(){
-  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-  s1.async=true;
-  s1.src='https://embed.tawk.to/66bb21d20cca4f8a7a754fad/1i55fo8ds';
-  s1.charset='UTF-8';
-  s1.setAttribute('crossorigin','*');
-  s0.parentNode.insertBefore(s1,s0);
-  })();
-  </script>
-  <!--End of Tawk.to Script-->
 
-
-  <!--menu-->
-  <script type="text/javascript" src="menu.js"></script>
-  <!--menu end-->
-
-
-  <section class="heading-page header-text" id="top">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <h6>HERE ARE OUR POPULAR PROFESSIONAL COURSE</h6>
-          <h2>Junior Geeks Courses</h2>
-          <div class="container my-4">
-            <input type="text" id="searchBar" class="search-bar form-control" placeholder="Search Courses..." onkeyup="filterItems()">
-
-          </div>
+    <!-- Content Section -->
+    <!-- Course 1 -->
+    <div class="col-md-6">
+        <div class="well" style="background-color: #007bff; padding: 20px;">
+            <h5 style="margin-top: 23px; color: white;">UI Project Training</h5>
+            <p><span style="color:white;">HTML, HTML5, CSS, CSS3, JS (ES6, ES7), Bootstrap</span></p>
+            <!-- Button to Trigger Modal -->
+            <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#courseModal" data-course="UI Project Training">
+                More Info
+            </button>
         </div>
+    </div>
+     <!-- Course 1 -->
+     <div class="col-md-6">
+      <div class="well" style="background-color: #007bff; padding: 20px;">
+          <h5 style="margin-top: 23px; color: white;">UI Project </h5>
+          <p><span style="color:white;">HTML, HTML5, CSS, CSS3, JS (ES6, ES7), Bootstrap</span></p>
+          <!-- Button to Trigger Modal -->
+          <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#courseModal" data-course="UI Project Training">
+              More Info
+          </button>
       </div>
-    </div>
-  </section>
+  </div>
 
-  <section class="meetings-page" id="meetings">
-    <div class="container">
-
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="filters">
-                <ul>
-                  <li data-filter="*" class="active">All Courses</li>
-                  <li data-filter=".soon">class 5-8</li>
-                  <li data-filter=".imp">class 9-10</li>
-                  <li data-filter=".att">class 11-12</li>
-                </ul>
-              </div>
+    <!-- The Modal -->
+    <div class="modal fade" id="courseModal" tabindex="-1" aria-labelledby="courseModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="courseModalLabel">Course Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Form inside the Modal -->
+                    <form method="post" name="contactform">
+                        <!-- Course NAME -->
+                        <div class="mb-3">
+                            <label for="courseName" class="form-label">Course Name</label>
+                            <input type="text" class="form-control" id="courseName" name="courseName" readonly>
+                        </div>
+                        <!-- NAME -->
+                        <div class="mb-3">
+                            <label for="Name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="Name" name="Name">
+                        </div>
+                        <!-- E-mail -->
+                        <div class="mb-3">
+                            <label for="e-mail" class="form-label">e-mail</label>
+                            <input type="email" class="form-control" id="e-mail" name="e-mail" required>
+                        </div>
+                        <!-- Mobile No -->
+                        <div class="mb-3">
+                            <label for="Mobile" class="form-label">Mobile</label>
+                            <input type="number" class="form-control" id="Mobile" name="Mobile" required>
+                        </div>
+                        <!-- Message -->
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" name="message" rows="2" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Send</button>
+                    </form>
+                </div>
             </div>
-            <div class="col-lg-12"data-title="aws"id="aws" class="section ">
-              <div class="row" id="courses-container">
-                <!-- Courses will be dynamically loaded here -->
-              <script>
-                document.addEventListener('DOMContentLoaded', function () {
-                  const coursesContainer = document.getElementById('courses-container');
-              
-                  for (let i = 0; i < courses.col1.length; i++) {
-                    const courseClass = courses.col1[i].class.toLowerCase();
-                    const courseName = courses.col1[i].course_name.toLowerCase();
-                    const courseElement = document.createElement('div');
-              
-                    courseElement.classList.add('col-lg-4', 'templatemo-item-col', 'all', courseClass, 'item-container', 'show');
-                    courseElement.setAttribute('data-title', `${courseName} ${courseClass}`);
-              
-                    courseElement.innerHTML = `
-                      <div class="meeting-item">
-                        <div class="thumb">
-                          <div class="price">
-                            <span class="fa fa-cloud-download" data-bs-toggle="modal" data-bs-target="#syllabus${i}" style="font-size:23px;color:blue"></span>
-                            <div class="modal" id="syllabus${i}">
-                              <div class="modal-dialog">
-                                <div class="modal-content">
-                                  <div class="modal-header">
-                                    <h4 class="modal-title" align="center">${courses.col1[i].title.replace(/_/g, ' ')}</h4>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                                  </div>
-                                  <div class="modal-body">
-                                    <h2 align="left">Download Syllabus</h2>
-                                    <ul id="pdfList${i}" align="left"></ul>
-                                    <br>
-                                  </div>
-                                  <div class="modal-footer">
-                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <img src="assets/images/junior-geeks/${courses.col1[i].image}" >
-                        </div>
-                        <div class="down-content text-center">
-                          <h4>${courses.col1[i].course_name}</h4>
-                          <br>
-                          <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#${courses.col1[i].title}" >
-                            More Info
-                          </button>
-                          <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                            data-bs-target="#contactModal" style="margin-right: 10px;">
-                            Contact Us
-                          </button>
-                        </div>
-                        <div class="modal" id="myModal${i}">
-                          <div class="modal-dialog">
-                            <div class="modal-content">
-                              <div class="modal-header">
-                                <h4 class="modal-title">${courses.col1[i].course_name}</h4>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                              </div>
-                              <div class="modal-body">
-                                <p>Details about ${courses.col1[i].course_name}...</p>
-                                 ${courses.col1[i].descriptionContent}
-                              </div>
-                              <div class="modal-footer">
-                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    `;
-              
-                    coursesContainer.appendChild(courseElement);
-              
-                    // Dynamically populate the PDF list in the modal
-                    const pdfList = document.getElementById(`pdfList${i}`);
-                    courses.col1[i].syllabus.forEach((syllabus, index) => {
-                      const listItem = document.createElement('li');
-                      const anchor = document.createElement('a');
-                      anchor.href = syllabus;
-                      anchor.textContent = `${courses.col1[i].syllabus_name[index]} `;
-                      anchor.target = "_blank";
-                      listItem.appendChild(anchor);
-                      pdfList.appendChild(listItem);
-                    });
-                  }
-                });
-                function filterItems() {
-  const searchText = document.getElementById('searchBar').value.toLowerCase(); // Get the current text from the search bar
-  const courses = document.querySelectorAll('.item-container'); // Get all course elements
-
-  courses.forEach(course => {
-    const title = course.getAttribute('data-title').toLowerCase(); // Get the title from the data attribute
-    if (title.includes(searchText)) {
-      course.style.display = ''; // Show the course if it includes the search text
-    } else {
-      course.style.display = 'none'; // Hide the course if it does not include the search text
-    }
-  });
-}
-
-              </script>
-              <script>
-                // Check localStorage for the modal to show
-                document.addEventListener("DOMContentLoaded", function() {
-                  const modalToShow = localStorage.getItem('modalToShow');
-                  if (modalToShow) {
-                    const modalElement = document.getElementById(modalToShow);
-                    if (modalElement) {
-                      const myModal = new bootstrap.Modal(modalElement);
-                      myModal.show();
-                    }
-                    localStorage.removeItem('modalToShow');
-                  }
-                });
-              </script>
-              
-
-            </div>
-          </div>
-
-      </div>
+        </div>
     </div>
-    
-    <div class="footer">
-      <p>Copyright © 2022 Edu Meeting Co., Ltd. All Rights Reserved.
-        <br>
-        Design: <a href="https://templatemo.com" target="_parent" title="free css templates">TemplateMo</a>
-        <br>
-        Distibuted By: <a href="https://themewagon.com" target="_blank" title="Build Better UI, Faster">ThemeWagon</a>
-      </p>
-    </div>
-  </section>
-  
 
-  <script></script>
+    <!-- Bootstrap JS with Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <!-- SweetAlert2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
+    <!-- JavaScript to Auto-Fill Course Name Dynamically -->
+    <script>
+        const courseModal = document.getElementById('courseModal');
+        const courseNameInput = document.getElementById('courseName');
 
-  <!-- Scripts -->
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        courseModal.addEventListener('show.bs.modal', function (event) {
+            const button = event.relatedTarget; // Button that triggered the modal
+            const courseName = button.getAttribute('data-course'); // Extract course name from data attribute
+            courseNameInput.value = courseName; // Set the course name in the input field
+        });
+    </script>
 
-  <script src="assets/js/isotope.min.js"></script>
-  <script src="assets/js/owl-carousel.js"></script>
-  <script src="assets/js/lightbox.js"></script>
-  <script src="assets/js/tabs.js"></script>
-  <script src="assets/js/isotope.js"></script>
-  <script src="assets/js/video.js"></script>
-  <script src="assets/js/slick-slider.js"></script>
-  <script src="assets/js/custom.js"></script>
-  <script>
-    //according to loftblog tut
-    $('.nav li:first').addClass('active');
-
-    var showSection = function showSection(section, isAnimate) {
-      var
-        direction = section.replace(/#/, ''),
-        reqSection = $('.section').filter('[data-section="' + direction + '"]'),
-        reqSectionPos = reqSection.offset().top - 0;
-
-      if (isAnimate) {
-        $('body, html').animate({
-          scrollTop: reqSectionPos
-        },
-          800);
-      } else {
-        $('body, html').scrollTop(reqSectionPos);
-      }
-
-    };
-
-    var checkSection = function checkSection() {
-      $('.section').each(function () {
-        var
-          $this = $(this),
-          topEdge = $this.offset().top - 80,
-          bottomEdge = topEdge + $this.height(),
-          wScroll = $(window).scrollTop();
-        if (topEdge < wScroll && bottomEdge > wScroll) {
-          var
-            currentId = $this.data('section'),
-            reqLink = $('a').filter('[href*=\\#' + currentId + ']');
-          reqLink.closest('li').addClass('active').
-            siblings().removeClass('active');
-        }
-      });
-    };
-
-    $('.main-menu, .responsive-menu, .scroll-to-section').on('click', 'a', function (e) {
-      e.preventDefault();
-      showSection($(this).attr('href'), true);
-    });
-
-    $(window).scroll(function () {
-      checkSection();
-    });
-  </script>
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-  const urlParams = new URLSearchParams(window.location.search);
-  const modalName = urlParams.get('modal');
-  if (modalName) {
-    const modalToOpen = new bootstrap.Modal(document.getElementById(modalName + 'Modal'), {
-      keyboard: true
-    });
-    modalToOpen.show();
-  }
-});
-</script>
+    <!-- Script to handle form submission with SweetAlert2 -->
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyzWpZIIAt4ZaXdOXZKWnFoj-REOq7PDbaGYqieIPxJDQhR6B9NLYj_SgSFFtVyGVjj/exec'
+        const form = document.forms['contactform']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                Swal.fire({
+                    title: "Thank you!",
+                    text: "Your form is submitted successfully.",
+                    icon: "success"
+                }).then(() => {
+                    window.location.reload(); // Reload after closing the alert
+                });
+            })
+            .catch(error => {
+                console.error('Error!', error.message);
+                Swal.fire({
+                    title: "Oops!",
+                    text: "Something went wrong. Please try again later.",
+                    icon: "error"
+                });
+            });
+        })
+    </script>
 
 </body>
-
-
-</body>
-
 </html>

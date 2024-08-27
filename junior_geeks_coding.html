@@ -37,7 +37,17 @@
       margin-top: 100px;
       height: 900px;
     }
-    
+    .no-content-message {
+  background-color: #f8d7da; /* Light red background */
+  color: #721c24; /* Dark red text */
+  border: 1px solid #f5c6cb; /* Light red border */
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
   </style>
 
   <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
@@ -88,7 +98,9 @@ https://templatemo.com/tm-569-edu-meeting
           <h2>Junior Geeks Courses</h2>
           <div class="container my-4">
             <input type="text" id="searchBar" class="search-bar form-control" placeholder="Search Courses..." onkeyup="filterItems()">
-
+            <div id="noContentMessage" class="no-content-message" style="display: none;">
+              <p>No content found</p>
+            </div>
           </div>
         </div>
       </div>
@@ -308,6 +320,36 @@ https://templatemo.com/tm-569-edu-meeting
     $(window).scroll(function () {
       checkSection();
     });
+
+    function filterItems() {
+  const searchText = document.getElementById('searchBar').value.toLowerCase();
+  const courses = document.querySelectorAll('.item-container');
+  let hasVisibleItem = false;
+
+  courses.forEach(course => {
+    const title = course.getAttribute('data-title').toLowerCase();
+    if (title.includes(searchText)) {
+      course.style.display = '';
+      hasVisibleItem = true;
+    } else {
+      course.style.display = 'none';
+    }
+  });
+
+  const noContentMessage = document.getElementById('noContentMessage');
+  if (hasVisibleItem) {
+    noContentMessage.style.opacity = '0';
+    setTimeout(() => {
+      noContentMessage.style.display = 'none';
+    }, 300); // Match this duration with the CSS transition
+  } else {
+    noContentMessage.style.display = 'block';
+    setTimeout(() => {
+      noContentMessage.style.opacity = '1';
+    }, 10); // Short delay to ensure display is set before fading in
+  }
+}
+
   </script>
 <script>
 document.addEventListener("DOMContentLoaded", function() {
@@ -321,6 +363,7 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 });
 </script>
+
 
 </body>
 

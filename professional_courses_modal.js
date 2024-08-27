@@ -5,21 +5,7 @@ for (let i = 0; i < courses.col1.length; i++) {
     if (courses.col1[i].description === 'MEAN_Stack01') {
         descriptionContent = `
         <span id="MEAN_Stack01">
-            <!-- what is mean stack -->
-            The MEAN stack is a popular technology stack used for building full-stack JavaScript applications. 
-            The acronym "MEAN" stands for MongoDB, Express.js, Angular, and Node.js. Here's a brief overview of each component:
-            <br>
-            <strong>MongoDB:</strong> A NoSQL database that uses a document-oriented data model. It stores data in flexible, JSON-like documents, 
-            which makes it easy to work with and scale.<br>
             
-            <strong>Express.js:</strong> A web application framework for Node.js. It provides a robust set of features to develop web and mobile 
-            applications, including handling HTTP requests and middleware.<br>
-            
-            <strong>Angular:</strong> A front-end web application framework developed by Google. It allows developers to create dynamic, single-page 
-            applications with a powerful set of tools for managing data and building user interfaces.<br>
-            
-            <strong>Node.js:</strong> A JavaScript runtime built on Chrome's V8 JavaScript engine. It allows developers to run JavaScript on the server 
-            side, making it possible to use a single programming language for both client-side and server-side development.<br>
         </span>`;
     } else if (courses.col1[i].description === 'MERN_Stack02') {
         descriptionContent = `

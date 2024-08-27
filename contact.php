@@ -14,6 +14,12 @@
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+     <!-- Bootstrap JS with Popper.js -->
+     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+    <!-- SweetAlert2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 
     <!-- Additional CSS Files -->
@@ -74,7 +80,7 @@ https://templatemo.com/tm-569-edu-meeting
                         <div class="col-lg-9 align-self-center" style=" margin-bottom:112px;">
                           <div class="row">
                             <div class="col-lg-12">
-                              <form id="contact" action="contactmail.php" method="post">
+                              <form id="contact" id="contactform">
                                 <div class="row">
                                   <div class="col-lg-12">
                                     <h2>Let's get in touch</h2>
@@ -212,27 +218,60 @@ https://templatemo.com/tm-569-edu-meeting
           checkSection();
         });
     </script>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  
+  
+<!-- JavaScript for handling the modal and form submission -->
+<!-- SweetAlert2 JS -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Auto-Fill Course Name in Modal
+        const courseModal = document.getElementById('courseModal');
+        const courseNameInput = document.getElementById('courseName');
 
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script>
-
-        var messageText = "<?= $_SESSION['status'] ?? '';  ?>";
-        if(messageText != ''){
-            Swal.fire({
-                title: "Thank you!",
-                text: messageText,
-                icon: "success"
+        if (courseModal) {
+            courseModal.addEventListener('show.bs.modal', function (event) {
+                const button = event.relatedTarget; // Button that triggered the modal
+                const courseName = button.getAttribute('data-course'); // Extract course name from data attribute
+                if (courseNameInput) {
+                    courseNameInput.value = courseName; // Set the course name in the input field
+                }
             });
-            <?php unset($_SESSION['status']); ?>
         }
 
-    </script>
+        // Handle form submission
+        const form = document.getElementById('contactform');
+        if (form) {
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
 
-</body>
+                const scriptURL = 'https://script.google.com/macros/s/AKfycbw7RRDLswOI8SEuG73n3-Fh7BUQf3Gf_gYyGQ8PbjS59-xDedktem6HG5r5fKLhu0RYUw/exec';
+                const formData = new FormData(this);
 
-
+                fetch(scriptURL, { method: 'POST', body: formData })
+                    .then(response => {
+                        Swal.fire({
+                            title: "Thank you!",
+                            text: "Your form is submitted successfully.",
+                            icon: "success",
+                            timer: 1500,
+                            showConfirmButton: false
+                        }).then(() => {
+                            window.location.reload(); // Reload after closing the alert
+                        });
+                    })
+                    .catch(error => {
+                        console.error('Error!', error.message);
+                        Swal.fire({
+                            title: "Oops!",
+                            text: "Something went wrong. Please try again later.",
+                            icon: "error"
+                        });
+                    });
+            });
+        }
+    });
+</script>
   </body>
 
 </html>
