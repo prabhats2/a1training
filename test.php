@@ -118,7 +118,7 @@ https://templatemo.com/tm-569-edu-meeting
                         <div class="col-lg-9 align-self-center" style=" margin-bottom:112px;">
                           <div class="row">
                             <div class="col-lg-12">
-                            <form id="contactform">
+<form id="contactform">
   <div class="row">
     <div class="col-lg-12">
       <h2>Let's get in touch</h2>

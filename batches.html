@@ -9,7 +9,7 @@
     <meta name="author" content="Template Mo">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
-    <title>Education - List of Meetings</title>
+    <title>A1TI Batches</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -306,7 +306,7 @@ https://templatemo.com/tm-569-edu-meeting
                             <!-- Mobile No -->
                             <div class="mb-3">
                                 <label for="Mobile" class="form-label">Mobile</label>
-                                <input type="number" class="form-control" id="Mobile" name="Mobile" required>
+                                <input type="number" class="form-control" id="Mobile" name="Mobile" pattern="\d{10}" maxlength="10" required>
                             </div>
                             <!-- Message -->
                             <div class="mb-3">
@@ -450,3 +450,12 @@ https://templatemo.com/tm-569-edu-meeting
         }
     });
 </script>
+<script>
+    document.getElementById('Mobile').addEventListener('input', function (e) {
+      var x = e.target.value.replace(/\D/g, '');
+      if (x.length > 10) {
+        x = x.substring(0, 10);
+      }
+      e.target.value = x;
+    });
+  </script>

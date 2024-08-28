@@ -1,6 +1,3 @@
-<?php
-session_start();
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -34,63 +31,6 @@ session_start();
   <!-- Bootstrap JS and dependencies -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/js/bootstrap.min.js"></script>
-  <!-- Include SweetAlert JavaScript -->
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-
-  <script>
-    document.getElementById('mobileno').addEventListener('input', function (e) {
-      var x = e.target.value.replace(/\D/g, '');
-      if (x.length > 10) {
-        x = x.substring(0, 10);
-      }
-      e.target.value = x;
-    });
-
-    var messageText = "<?php echo $_SESSION['status'] ?? ''; ?>";
-    if (messageText !== '') {
-      Swal.fire({
-        title: "Thank you!",
-        text: messageText,
-        icon: "success"
-      });
-    <? php unset($_SESSION['status']); ?>
-}
-
-
-    document.addEventListener('DOMContentLoaded', (event) => {
-      const form = document.querySelector('.form');
-
-      form.addEventListener('submit', function (event) {
-        event.preventDefault(); // Prevent the form from submitting the traditional way
-
-        Swal.fire({
-          title: 'Are you sure?',
-          text: "You won't be able to revert this!",
-          icon: 'warning',
-          showCancelButton: true,
-          confirmButtonColor: '#3085d6',
-          cancelButtonColor: '#d33',
-          confirmButtonText: 'Yes, submit it!'
-        }).then((result) => {
-          if (result.isConfirmed) {
-            Swal.fire(
-              'Submitted!',
-              'Your form has been submitted.',
-              'success'
-            );
-            // Optionally, you can submit the form programmatically if needed
-            // form.submit();
-          }
-        });
-      });
-    });
-
-
-    $(document).ready(function () {
-      $('.gallery-item').fancybox();
-    });
-  </script>
 
 
   <style>
@@ -293,72 +233,52 @@ session_start();
       display: none;
       /* The div is hidden but still occupies space */
     }
+
     .custom-modal .side {
-    margin-bottom: 20px;
-  }
-
-  .custom-modal form {
-    background: white;
-    padding: 35px;
-    border-radius: 10px;
-  }
-
-  .custom-modal .form-control {
-    border-radius: 25px;
-    border: 1px solid #e0e0e0;
-    padding: 15px;
-    margin: 15px;
-    background-color: #fafafa;
-  }
-
-  .custom-modal textarea.form-control {
-    height: 150px;
-  }
-
-  .custom-modal button.btn {
-    background-color: #a52a2a;
-    border-color: #a52a2a;
-    border-radius: 25px;
-    padding: 10px 30px;
-    font-weight: bold;
-  }
-
-  .custom-modal h2 {
-    margin-bottom: 20px;
-    font-size: 24px;
-    font-weight: bold;
-  }
-
-  @media (max-width: 767px) {
-    .custom-modal .col-lg-4 {
-      width: 100%;
-      margin-bottom: 15px;
+      margin-bottom: 20px;
     }
-  }
-  </style>
-  <script>
-    $(document).ready(function () {
-      $('#exampleModal').on('shown.bs.modal', function () {
-        var messageText = '<?php echo $_SESSION['status']; ?>';
-        if (messageText != '') {
-          Swal.fire({
-            title: "Thank you!",
-            text: messageText,
-            icon: "success"
-          });
-        }
 
-        //-------10 numbers limit-//
-        document.getElementById('mobileno').addEventListener('input', function (e) {
-          var x = e.target.value.replace(/\D/g, '');
-          if (x.length > 10) {
-            x = x.substring(0, 10);
-          }
-          e.target.value = x;
-        });
-      });
-    });
-  </script>
+    .custom-modal form {
+      background: white;
+      padding: 35px;
+      border-radius: 10px;
+    }
+
+    .custom-modal .form-control {
+      border-radius: 25px;
+      border: 1px solid #e0e0e0;
+      padding: 15px;
+      margin: 15px;
+      background-color: #fafafa;
+    }
+
+    .custom-modal textarea.form-control {
+      height: 150px;
+    }
+
+    .custom-modal button.btn {
+      background-color: #a52a2a;
+      border-color: #a52a2a;
+      border-radius: 25px;
+      padding: 10px 30px;
+      font-weight: bold;
+    }
+
+    .custom-modal h2 {
+      margin-bottom: 20px;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    @media (max-width: 767px) {
+      .custom-modal .col-lg-4 {
+        width: 100%;
+        margin-bottom: 15px;
+      }
+    }
+   
+  </style>
+
   <!-- Additional CSS Files -->
   <link rel="stylesheet" href="assets/css/fontawesome.css">
   <link rel="stylesheet" href="assets/css/templatemo-edu-meeting.css">
@@ -520,9 +440,11 @@ session_start();
               <div style="color: white; margin:10px; margin-left:40px;">07:00 PM-08:00 PM</div>
             </div>
             <!-- BOOK NOW BUTTON -->
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#courseModal" data-course-name=" AWS Webinar">Book Now</button>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#courseModal"
+              data-course-name=" AWS Webinar"data-course="AWS Webinar">Book Now</button>
             <!-- MORE INFO BUTTON -->
-            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#myModal">More info</button>
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#myModal">More
+              info</button>
             <!-- Modal -->
             <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
               <div class="modal-dialog modal-lg">
@@ -621,9 +543,11 @@ session_start();
               <div style="color: white; margin:10px; margin-left:40px;">06:00 PM-07:00 PM</div>
             </div>
             <!-- BOOK NOW BUTTON -->
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#courseModal" data-course-name=" HTML/CSS Webinar">Book Now</button>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#courseModal"
+              data-course-name=" HTML/CSS Webinar"data-course="HTML/CSS Webinar">Book Now</button>
             <!-- MORE INFO BUTTON -->
-            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#HTML-CSS"> More info</button>
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#HTML-CSS"> More
+              info</button>
             <!-- Modal -->
             <div class="modal fade" id="HTML-CSS" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
               <div class="modal-dialog modal-lg">
@@ -683,177 +607,192 @@ session_start();
     </div>
 
     <!-----Git Webinar ---->
-<div class="container item-container" data-title="git" id="git" class="section">
-  <div class="row">
-    <!-- Git Webinar Section -->
-    <div class="col-md-3">
-      <div class="well">
-        <img src="assets/images/events/git.png" alt="Git Webinar">
-      </div>
-    </div>
-    <div class="col-md-6">
-      <div class="col-lg">
-        <h5 style="margin-top: 23px; color: white;">GIT Webinar</h5>
-        <p style="color: white;">
-          <span>"Master Git: Version Control Essentials with A1 Training Institute"</span>
-          <span class="more-text">
-            <strong><br> Introduction to Git </strong> <br>
-            <strong><br> Basic Topics:<br></strong>
-            &#8226; Setting Up and Basic Commands (git init, git add, git commit)<br>
-            &#8226; Branching, Merging, and Conflict Resolution<br>
-            &#8226; Collaboration (Cloning, Pull Requests)<br>
-            <strong><br> Advanced Topics:<br></strong>
-            &#8226; Rebasing vs. Merging <br>
-            &#8226; Stashing Changes<br>
-            &#8226; Git Hooks<br>
-          </span>
-          <span class="read-more-btn" onclick="toggleReadMore(this)">Read More</span>
-        </p>
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="well-1" style="padding:0px">
-        <div class="well">
-          <button type="button" class="btn btn-danger btn-md">17-19<br>Aug, 2024</button>
-          <a href="assets/pdf/events/AWS-Webinar.pdf" target="_blank">
-            <button type="button" class="btn btn-danger btn-md">
-              <i class="fa fa-download" style="font-size:20px"></i><br>
-              <span style="margin-left:14px; margin-right:14px;">Notes</span>
-            </button>
-          </a>
-          <div style="color: white; margin:10px; margin-left:40px;">06:00 PM-07:00 PM</div>
+    <div class="container item-container" data-title="git" id="git" class="section">
+      <div class="row">
+        <!-- Git Webinar Section -->
+        <div class="col-md-3">
+          <div class="well">
+            <img src="assets/images/events/git.png" alt="Git Webinar">
+          </div>
         </div>
-        <!-- BOOK NOW BUTTON -->
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#courseModal" data-course-name=" GIT Webinar">Book Now</button>
-        <!-- MORE INFO BUTTON -->
-        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#gitModal">More info</button>
-        <!-- Modal -->
-        <div class="modal fade" id="gitModal" tabindex="-1" aria-labelledby="gitModalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="gitModalLabel" style="color:black;"><strong>FREE GIT WEBINAR</strong></h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body" style="color:black;">
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfDzJJhzAuTsPkmVGtZ9VG3kTEwaYvOZj4xBiCy73GuBUgzBw/viewform" target="_blank">
-                  <img src="assets/images/events/git-1.jpeg" alt="Git Webinar" class="img-fluid">
-                </a>
-                <div class="container my-3">
-                  <h1 class="text-center display-4"><strong>FREE <span style="color:#85482c;">GIT</span> WEBINAR</strong></h1>
-                  <h4 class="text-center">"Master Git: Version Control Essentials with A1 Training Institute"</h4>
-                  <br>
-                  <h2>Introduction To Git</h2>
-                  <ul>
-                    <strong><br> Introduction to Git </strong> <br>
-                    <strong><br> Basic Topics:<br></strong>
-                    &#8226; Setting Up and Basic Commands (git init, git add, git commit)<br>
-                    &#8226; Branching, Merging, and Conflict Resolution<br>
-                    &#8226; Collaboration (Cloning, Pull Requests)<br>
-                    <strong><br> Advanced Topics:<br></strong>
-                    &#8226; Rebasing vs. Merging <br>
-                    &#8226; Stashing Changes<br>
-                    &#8226; Git Hooks<br>
-                  </ul>
-                  <h2>Git Webinar Series: Getting Started With A1TI</h2><br>
-                  <p>
-                  <div class="info-item"><strong>Date:</strong> 17-19 August</div>
-                  <div class="info-item"><strong>Time:</strong> 6-7 PM</div>
-                  <div class="info-item"><strong>Location:</strong> Noida, Delhi, Bangalore, Pune</div>
-                  </p><br>
-                  <div class="text-center button-container">
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfDzJJhzAuTsPkmVGtZ9VG3kTEwaYvOZj4xBiCy73GuBUgzBw/viewform" target="_blank">
-                      <button type="button" class="btn btn-primary animated-button">Click To Enroll Now</button>
+        <div class="col-md-6">
+          <div class="col-lg">
+            <h5 style="margin-top: 23px; color: white;">GIT Webinar</h5>
+            <p style="color: white;">
+              <span>"Master Git: Version Control Essentials with A1 Training Institute"</span>
+              <span class="more-text">
+                <strong><br> Introduction to Git </strong> <br>
+                <strong><br> Basic Topics:<br></strong>
+                &#8226; Setting Up and Basic Commands (git init, git add, git commit)<br>
+                &#8226; Branching, Merging, and Conflict Resolution<br>
+                &#8226; Collaboration (Cloning, Pull Requests)<br>
+                <strong><br> Advanced Topics:<br></strong>
+                &#8226; Rebasing vs. Merging <br>
+                &#8226; Stashing Changes<br>
+                &#8226; Git Hooks<br>
+              </span>
+              <span class="read-more-btn" onclick="toggleReadMore(this)">Read More</span>
+            </p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="well-1" style="padding:0px">
+            <div class="well">
+              <button type="button" class="btn btn-danger btn-md">17-19<br>Aug, 2024</button>
+              <a href="assets/pdf/events/AWS-Webinar.pdf" target="_blank">
+                <button type="button" class="btn btn-danger btn-md">
+                  <i class="fa fa-download" style="font-size:20px"></i><br>
+                  <span style="margin-left:14px; margin-right:14px;">Notes</span>
+                </button>
+              </a>
+              <div style="color: white; margin:10px; margin-left:40px;">06:00 PM-07:00 PM</div>
+            </div>
+            <!-- BOOK NOW BUTTON -->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#courseModal"
+              data-course-name=" GIT Webinar" data-course="GIT Webinar">Book Now</button>
+            <!-- MORE INFO BUTTON -->
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#gitModal">More info</button>
+            <!-- Modal -->
+            <div class="modal fade" id="gitModal" tabindex="-1" aria-labelledby="gitModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="gitModalLabel" style="color:black;"><strong>FREE GIT WEBINAR</strong>
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body" style="color:black;">
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfDzJJhzAuTsPkmVGtZ9VG3kTEwaYvOZj4xBiCy73GuBUgzBw/viewform"
+                      target="_blank">
+                      <img src="assets/images/events/git-1.jpeg" alt="Git Webinar" class="img-fluid">
                     </a>
+                    <div class="container my-3">
+                      <h1 class="text-center display-4"><strong>FREE <span style="color:#85482c;">GIT</span>
+                          WEBINAR</strong></h1>
+                      <h4 class="text-center">"Master Git: Version Control Essentials with A1 Training Institute"</h4>
+                      <br>
+                      <h2>Introduction To Git</h2>
+                      <ul>
+                        <strong><br> Introduction to Git </strong> <br>
+                        <strong><br> Basic Topics:<br></strong>
+                        &#8226; Setting Up and Basic Commands (git init, git add, git commit)<br>
+                        &#8226; Branching, Merging, and Conflict Resolution<br>
+                        &#8226; Collaboration (Cloning, Pull Requests)<br>
+                        <strong><br> Advanced Topics:<br></strong>
+                        &#8226; Rebasing vs. Merging <br>
+                        &#8226; Stashing Changes<br>
+                        &#8226; Git Hooks<br>
+                      </ul>
+                      <h2>Git Webinar Series: Getting Started With A1TI</h2><br>
+                      <p>
+                      <div class="info-item"><strong>Date:</strong> 17-19 August</div>
+                      <div class="info-item"><strong>Time:</strong> 6-7 PM</div>
+                      <div class="info-item"><strong>Location:</strong> Noida, Delhi, Bangalore, Pune</div>
+                      </p><br>
+                      <div class="text-center button-container">
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfDzJJhzAuTsPkmVGtZ9VG3kTEwaYvOZj4xBiCy73GuBUgzBw/viewform"
+                          target="_blank">
+                          <button type="button" class="btn btn-primary animated-button">Click To Enroll Now</button>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                      style="background-color:red;">Close</button>
                   </div>
                 </div>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="background-color:red;">Close</button>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <hr style="color: white; width: 1130px;">
     </div>
-  </div>
-  <hr style="color: white; width: 1130px;">
-</div>
 
 
 
-<!----------Book Now Modal-------------->
-<!-- The Modal -->
-<div class="modal fade" id="courseModal">
-    <div class="modal-dialog modal-lg">
+    <!----------Book Now Modal-------------->
+    <!-- The Modal -->
+    <div class="modal fade" id="courseModal">
+      <div class="modal-dialog modal-lg">
         <div class="modal-content custom-modal">
 
-            <!-- Modal Header -->
-            <div class="modal-header">
+          <!-- Modal Header -->
+          <div class="modal-header">
             <h4 class="modal-title">Let's Enroll For<span id="modalCourseName"></span></h4>
-                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
 
-            <!-- Modal body -->
-            <div class="modal-body">
-                <div class="container">
+          <!-- Modal body -->
+          <div class="modal-body">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-12">
+
+                  <form id="contactform">
                     <div class="row">
-                        <div class="col-lg-12">
-                            
-                            <form id="contactform">
-                                <div class="row">
-                                    <div class="col-lg-4">
-                                        <fieldset>
-                                            <input type="text" name="Name" id="fullname" class="form-control" placeholder="Enter Name..." required>
-                                        </fieldset>
-                                    </div>
-                                    <div class="col-lg-4">
-  <fieldset>
-    <input type="number" name="Mobile" class="form-control" id="Mobile" placeholder="Your Mobile..." pattern="\d{10}" maxlength="10" required>
-  </fieldset>
-</div>
-                                
-                                    <div class="col-lg-4">
-                                        <fieldset>
-                                            <input type="text" name="City" class="form-control" id="City" placeholder="City..."  >
-                                        </fieldset>
-                                    </div>
-                                    <div class="col-lg-12 mt-3">
-                                        <fieldset>
-                                            <input type="email" name="email" class="form-control" id="E-mail"  placeholder="Your Email..." required>
-                                        </fieldset>
-                                    </div>
-                                    <div class="col-lg-12 mt-3">
-                                        <fieldset>
-                                            <textarea name="Address" class="form-control" id="Address" placeholder="Your Address..." rows="4"></textarea>
-                                        </fieldset>
-                                    </div>
-                                    <div class="col-lg-12 mt-3">
-                                        <fieldset>
-                                            <textarea name="Message" class="form-control" id="message" placeholder="Your Message..." rows="2"></textarea>
-                                        </fieldset>
-                                    </div>
-                                    <div class="col-lg-12 mt-3">
-                                        <fieldset>
-                                            <button type="submit" name="submitContact" class="btn btn-primary">Send Mail</button>
-                                        </fieldset>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                     <!-- Course NAME -->
+                     <div class="mb-3">
+                      
+                      <input type="text" class="form-control" id="courseName" name="courseName" hidden>
+                  </div>
+                      <div class="col-lg-4">
+                        <fieldset>
+                          <input type="text" name="Name" id="fullname" class="form-control" placeholder="Enter Name... " required>
+                        </fieldset>
+                      </div>
+                      <div class="col-lg-4">
+                        <fieldset>
+                          <input type="number" name="Mobile" class="form-control" id="Mobile"
+                            placeholder="Your Mobile..." pattern="\d{10}" maxlength="10" required>
+                        </fieldset>
+                      </div>
 
-            <!-- Modal footer -->
-            <div class="modal-footer">
-                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                      <div class="col-lg-4">
+                        <fieldset>
+                          <input type="text" name="City" class="form-control" id="City" placeholder="City...">
+                        </fieldset>
+                      </div>
+                      <div class="col-lg-12 mt-3">
+                        <fieldset>
+                          <input type="email" name="email" class="form-control" id="E-mail" placeholder="Your Email..."
+                            required>
+                        </fieldset>
+                      </div>
+                      <div class="col-lg-12 mt-3">
+                        <fieldset>
+                          <textarea name="Address" class="form-control" id="Address" placeholder="Your Address..."
+                            rows="4"></textarea>
+                        </fieldset>
+                      </div>
+                      <div class="col-lg-12 mt-3">
+                        <fieldset>
+                          <textarea name="Message" class="form-control" id="message" placeholder="Your Message..."
+                            rows="2"></textarea>
+                        </fieldset>
+                      </div>
+                      <div class="col-lg-12 mt-3">
+                        <fieldset>
+                          <button type="submit" name="submitContact" class="btn btn-primary">Send Mail</button>
+                        </fieldset>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
             </div>
+          </div>
+
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+          </div>
 
         </div>
+      </div>
     </div>
-</div>
-<!----------Book Now Modal End-------------->
+    <!----------Book Now Modal End-------------->
 
   </section>
   <!--footer-->
@@ -1025,66 +964,80 @@ session_start();
       });
     });
   </script>
-<!--------Events_form.php---------->
+  <!--------Events_form.php---------->
 
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  
+
   <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    var courseModal = document.getElementById('courseModal');
-    courseModal.addEventListener('show.bs.modal', function (event) {
-      var button = event.relatedTarget;
-      var courseName = button.getAttribute('data-course-name');
-      var modalTitle = courseModal.querySelector('#modalCourseName');
-      modalTitle.textContent = courseName;
+    document.addEventListener('DOMContentLoaded', function () {
+      var courseModal = document.getElementById('courseModal');
+      courseModal.addEventListener('show.bs.modal', function (event) {
+        var button = event.relatedTarget;
+        var courseName = button.getAttribute('data-course-name');
+        var modalTitle = courseModal.querySelector('#modalCourseName');
+        modalTitle.textContent = courseName;
+      });
     });
-  });
-</script>
-<script>
-    
-      // Handle form submission
-      const form = document.getElementById('contactform');
-      if (form) {
-        form.addEventListener('submit', function (e) {
-          e.preventDefault();
+  </script>
+  <script>
 
-          const scriptURL = 'https://script.google.com/macros/s/AKfycbziKklYI3oUFtHVfhLM2K8fM4sLVUyAynVsVItW1pNZgXMiloSeypTvIyrNDLnkAtRH/exec';
-          const formData = new FormData(this);
+    // Handle form submission
+    const form = document.getElementById('contactform');
+    if (form) {
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
 
-          fetch(scriptURL, { method: 'POST', body: formData })
-            .then(response => {
-              Swal.fire({
-                title: "Thank you!",
-                text: "Your form is submitted successfully.",
-                icon: "success",
-                timer: 1500,
-                showConfirmButton: false
-              }).then(() => {
-                window.location.reload(); // Reload after closing the alert
-              });
-            })
-            .catch(error => {
-              console.error('Error!', error.message);
-              Swal.fire({
-                title: "Oops!",
-                text: "Something went wrong. Please try again later.",
-                icon: "error"
-              });
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbziKklYI3oUFtHVfhLM2K8fM4sLVUyAynVsVItW1pNZgXMiloSeypTvIyrNDLnkAtRH/exec';
+        const formData = new FormData(this);
+
+        fetch(scriptURL, { method: 'POST', body: formData })
+          .then(response => {
+            Swal.fire({
+              title: "Thank you!",
+              text: "Your form is submitted successfully.",
+              icon: "success",
+              timer: 1500,
+              showConfirmButton: false
+            }).then(() => {
+              window.location.reload(); // Reload after closing the alert
             });
-        });
-      }
-    
+          })
+          .catch(error => {
+            console.error('Error!', error.message);
+            Swal.fire({
+              title: "Oops!",
+              text: "Something went wrong. Please try again later.",
+              icon: "error"
+            });
+          });
+      });
+    }
+// Auto-Fill Course Name in Modal
+const courseModal = document.getElementById('courseModal');
+        const courseNameInput = document.getElementById('courseName');
+
+        if (courseModal) {
+            courseModal.addEventListener('show.bs.modal', function (event) {
+                const button = event.relatedTarget; // Button that triggered the modal
+                const courseName = button.getAttribute('data-course'); // Extract course name from data attribute
+                if (courseNameInput) {
+                    courseNameInput.value = courseName; // Set the course name in the input field
+                }
+            });
+        }
+
   </script>
 
-<script>
-  document.getElementById('Mobile').addEventListener('input', function (e) {
-    var x = e.target.value.replace(/\D/g, '');
-    if (x.length > 10) {
-      x = x.substring(0, 10);
-    }
-    e.target.value = x;
-  });
-</script>
+  <script>
+    document.getElementById('Mobile').addEventListener('input', function (e) {
+      var x = e.target.value.replace(/\D/g, '');
+      if (x.length > 10) {
+        x = x.substring(0, 10);
+      }
+      e.target.value = x;
+    });
+    
+  </script>
 
 </body>
 

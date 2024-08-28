@@ -48,7 +48,7 @@ document.write(`  <!-- Sub Header -->
                             </ul>
                         </li>
                         <li><a href="batches.html">Batches</a></li>
-                       <li><a href="events.php">Events</a></li>
+                       <li><a href="events.html">Events</a></li>
 
                         <li class="has-sub">
                             <a href="javascript:void(0)">More</a>
