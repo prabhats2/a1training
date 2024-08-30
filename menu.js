@@ -39,7 +39,7 @@ document.write(`  <!-- Sub Header -->
 
                     <!-- ***** Menu Start ***** -->
                     <ul class="nav">
-                        <li><a href="index.php">Home</a></li>
+                        <li><a href="index.html">Home</a></li>
                         <li class="has-sub">
                             <a href="javascript:void(0)">Courses</a>
                             <ul class="sub-menu">
@@ -48,7 +48,7 @@ document.write(`  <!-- Sub Header -->
                             </ul>
                         </li>
                         <li><a href="batches.html">Batches</a></li>
-                       <li><a href="events.php">Events</a></li>
+                       <li><a href="events.html">Events</a></li>
 
                         <li class="has-sub">
                             <a href="javascript:void(0)">More</a>
@@ -59,7 +59,7 @@ document.write(`  <!-- Sub Header -->
                             </ul>
                         </li>
                      
-                        <li><a href="contact.php">Contact Us</a></li> 
+                        <li><a href="contact.html">Contact Us</a></li> 
                     </ul>        
                     <a class='menu-trigger'>
                         <span>Menu</span>

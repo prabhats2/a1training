@@ -39,6 +39,44 @@ https://templatemo.com/tm-569-edu-meeting
     .side{
       margin-bottom:20px;
     }
+    form {
+    background: white;
+    padding: 35px;
+    border-radius: 10px;
+  }
+
+  .form-control {
+    border-radius: 25px;
+    border: 1px solid #e0e0e0;
+    padding: 15px;
+    margin:15px;
+    background-color:#fafafa;
+  }
+
+  textarea.form-control {
+    height: 150px;
+  }
+
+  button.btn {
+    background-color: #a52a2a;
+    border-color: #a52a2a;
+    border-radius: 25px;
+    padding: 10px 30px;
+    font-weight: bold;
+  }
+
+  h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  @media (max-width: 767px) {
+    .col-lg-4 {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+  }
   </style>
 
 <body>
@@ -80,41 +118,39 @@ https://templatemo.com/tm-569-edu-meeting
                         <div class="col-lg-9 align-self-center" style=" margin-bottom:112px;">
                           <div class="row">
                             <div class="col-lg-12">
-                              <form id="contact" id="contactform">
-                                <div class="row">
-                                  <div class="col-lg-12">
-                                    <h2>Let's get in touch</h2>
-                                  </div>
-                                  <div class="col-lg-4">
-                                    <fieldset>                                   
-                                    
-                                    <input type="text" name="full_name" id="fullname" required class="form-control" placeholder="Enter Name">
-                                    </fieldset>
-                                  </div>
-                                  <div class="col-lg-4">
-                                    <fieldset>
-                                    <input name="email" type="text" id="email" pattern="[^ @]*@[^ @]*" placeholder="YOUR EMAIL..." required="">
-                                  </fieldset>
-                                  </div>
-                                  <div class="col-lg-4">
-                                    <fieldset>
-                                      <input name="subject" type="text" id="subject" placeholder="SUBJECT..." required="">
-                                    </fieldset>
-                                  </div>
-                                  <div class="col-lg-12">
-                                    <fieldset>
-                                      <textarea name="message" type="text" class="form-control" id="message" placeholder="YOUR MESSAGE..." ></textarea>
-                                    </fieldset>
-                                    
-                                  </div>
-                                  <div class="col-lg-12">
-                                    <fieldset>
-                                      
-                                      <button type="submit" name="submitContact" class="btn btn-primary">Send Mail</button>
-                                    </fieldset>
-                                  </div>
-                                </div>
-                              </form>
+                            <form id="contactform">
+  <div class="row">
+    <div class="col-lg-12">
+      <h2>Let's get in touch</h2>
+    </div>
+    <div class="col-lg-4">
+      <fieldset>
+        <input type="text" name="Name" id="fullname" class="form-control" placeholder="Enter Name" required>
+      </fieldset>
+    </div>
+    <div class="col-lg-4">
+      <fieldset>
+        <input type="email" class="form-control" id="E-mail" name="email" placeholder="YOUR EMAIL..." required>
+      </fieldset>
+    </div>
+    <div class="col-lg-4">
+      <fieldset>
+        <input type="text" name="Subject" id="subject" placeholder="SUBJECT..." required class="form-control">
+      </fieldset>
+    </div>
+    <div class="col-lg-12">
+      <fieldset>
+        <textarea name="Message" class="form-control" id="message" placeholder="YOUR MESSAGE..." rows="4"></textarea>
+      </fieldset>
+    </div>
+    <div class="col-lg-12">
+      <fieldset>
+        <button type="submit" name="submitContact" class="btn btn-primary">Send Mail</button>
+      </fieldset>
+    </div>
+  </div>
+</form>
+
                             </div>
                           </div>
                         </div>
@@ -220,6 +256,7 @@ https://templatemo.com/tm-569-edu-meeting
     </script>
   
   
+
 <!-- JavaScript for handling the modal and form submission -->
 <!-- SweetAlert2 JS -->
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -245,7 +282,7 @@ https://templatemo.com/tm-569-edu-meeting
             form.addEventListener('submit', function (e) {
                 e.preventDefault();
 
-                const scriptURL = 'https://script.google.com/macros/s/AKfycbw7RRDLswOI8SEuG73n3-Fh7BUQf3Gf_gYyGQ8PbjS59-xDedktem6HG5r5fKLhu0RYUw/exec';
+                const scriptURL = 'https://script.google.com/macros/s/AKfycbyTdBGvT9D6neYK_8gdaaP9YIvJ5dGKR0F0ZI7YBhiq1oW-ArzRjgh4__gnbdDTHFe5/exec';
                 const formData = new FormData(this);
 
                 fetch(scriptURL, { method: 'POST', body: formData })

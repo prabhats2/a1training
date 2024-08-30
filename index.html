@@ -1,4 +1,4 @@
-<!----<?php session_start(); ?>---->
+<!-----<?php session_start(); ?>--------->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -11,7 +11,7 @@
   <meta name="author" content="TemplateMo">
   <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <title>A1 Training Institute</title>
+  <title>A1 Training Institute Home</title>
 
   <!-- Bootstrap core CSS 
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -86,7 +86,6 @@
 <body>
   <!--Start of Tawk.to Script-->
   <script type="text/javascript">
-
     var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
     (function () {
       var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
@@ -137,6 +136,7 @@
   </script>
   <!--menu-->
   <script type="text/javascript" src="menu.js"></script>
+  <script type="text/javascript" src="callout.js"></script>
   <!--menu end-->
 
   <!-- ***** Main Banner Area Start ***** -->
@@ -169,7 +169,7 @@
     </div>
   </section>
   <!-- ***** Main Banner Area End ***** -->
-  <?php include 'callout.html'; ?>
+
 
   <section class="services">
     <div class="container">
@@ -710,8 +710,8 @@
             <div class="card-body">
               <!-- Contact Form -->
 
-              <form action="sendmail.php" method="POST" class="form-container"
-                style="height: 475px; overflow-y: scroll;" i>
+              <form action="" method="POST" class="form-container" style="height: 475px; overflow-y: scroll;"
+                id="contactform">
                 <!---Full Name--->
                 <div class="mb-3">
                   <label for="Name">Name:</label>
@@ -1231,70 +1231,7 @@
   <script src="assets/js/slick-slider.js"></script>
   <script src="assets/js/custom.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <!----
-  <script>
 
-        var messageText = "<?= $_SESSION['status'] ?? '';  ?>";
-        if(messageText != ''){
-            Swal.fire({
-                title: "Thank you!",
-                text: messageText,
-                icon: "success"
-            });
-            <?php unset($_SESSION['status']); ?>
-        }
-
-    </script>
-   --->
-  <!--created by manish for sweet alert -->
-
-  <script>
-    //according to loftblog tut
-    $('.nav li:first').addClass('active');
-
-    var showSection = function showSection(section, isAnimate) {
-      var
-        direction = section.replace(/#/, ''),
-        reqSection = $('.section').filter('[data-section="' + direction + '"]'),
-        reqSectionPos = reqSection.offset().top - 0;
-
-      if (isAnimate) {
-        $('body, html').animate({
-          scrollTop: reqSectionPos
-        },
-          800);
-      } else {
-        $('body, html').scrollTop(reqSectionPos);
-      }
-
-    };
-
-    var checkSection = function checkSection() {
-      $('.section').each(function () {
-        var
-          $this = $(this),
-          topEdge = $this.offset().top - 80,
-          bottomEdge = topEdge + $this.height(),
-          wScroll = $(window).scrollTop();
-        if (topEdge < wScroll && bottomEdge > wScroll) {
-          var
-            currentId = $this.data('section'),
-            reqLink = $('a').filter('[href*=\\#' + currentId + ']');
-          reqLink.closest('li').addClass('active').
-            siblings().removeClass('active');
-        }
-      });
-    };
-
-    $('.main-menu, .responsive-menu, .scroll-to-section').on('click', 'a', function (e) {
-      e.preventDefault();
-      showSection($(this).attr('href'), true);
-    });
-
-    $(window).scroll(function () {
-      checkSection();
-    });
-  </script>
   <!----10 number limit in form ------->
   <script>
     document.getElementById('mobileno').addEventListener('input', function (e) {
@@ -1305,8 +1242,58 @@
       e.target.value = x;
     });
   </script>
+  <!-- JavaScript for handling the modal and form submission -->
+  <!-- SweetAlert2 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Auto-Fill Course Name in Modal
+      const courseModal = document.getElementById('courseModal');
+      const courseNameInput = document.getElementById('courseName');
 
+      if (courseModal) {
+        courseModal.addEventListener('show.bs.modal', function (event) {
+          const button = event.relatedTarget; // Button that triggered the modal
+          const courseName = button.getAttribute('data-course'); // Extract course name from data attribute
+          if (courseNameInput) {
+            courseNameInput.value = courseName; // Set the course name in the input field
+          }
+        });
+      }
 
+      // Handle form submission
+      const form = document.getElementById('contactform');
+      if (form) {
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+
+          const scriptURL = 'https://script.google.com/macros/s/AKfycby-wm55ttgYdZ7Pfqu8G8S4ihQXqVNIg0j720tLiCtag4c0Yr8gQ2aEU142mS9s20jc/exec';
+          const formData = new FormData(this);
+
+          fetch(scriptURL, { method: 'POST', body: formData })
+            .then(response => {
+              Swal.fire({
+                title: "Thank you!",
+                text: "Your form is submitted successfully.",
+                icon: "success",
+                timer: 1500,
+                showConfirmButton: false
+              }).then(() => {
+                window.location.reload(); // Reload after closing the alert
+              });
+            })
+            .catch(error => {
+              console.error('Error!', error.message);
+              Swal.fire({
+                title: "Oops!",
+                text: "Something went wrong. Please try again later.",
+                icon: "error"
+              });
+            });
+        });
+      }
+    });
+  </script>
 </body>
 
 </body>
