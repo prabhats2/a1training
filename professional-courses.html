@@ -121,9 +121,9 @@ https://templatemo.com/tm-569-edu-meeting
                 document.addEventListener('DOMContentLoaded', function () {
                   const coursesContainer = document.getElementById('courses-container');
               
-                  for (let i = 0; i < courses.col1.length; i++) {
-                    const courseClass = courses.col1[i].class.toLowerCase();
-                    const courseName = courses.col1[i].course_name.toLowerCase();
+                  for (let i = 0; i < courses1.col1.length; i++) {
+                    const courseClass = courses1.col1[i].class.toLowerCase();
+                    const courseName = courses1.col1[i].course_name.toLowerCase();
                     const courseElement = document.createElement('div');
               
                     courseElement.classList.add('col-lg-4', 'templatemo-item-col', 'all', courseClass, 'item-container', 'show');
@@ -138,7 +138,7 @@ https://templatemo.com/tm-569-edu-meeting
                               <div class="modal-dialog">
                                 <div class="modal-content">
                                   <div class="modal-header">
-                                    <h4 class="modal-title" align="center">${courses.col1[i].title.replace(/_/g, ' ')}</h4>
+                                    <h4 class="modal-title" align="center">${courses1.col1[i].title.replace(/_/g, ' ')}</h4>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                                   </div>
                                   <div class="modal-body">
@@ -153,12 +153,12 @@ https://templatemo.com/tm-569-edu-meeting
                               </div>
                             </div>
                           </div>
-                          <img src="assets/images/professional-courses/${courses.col1[i].image}" >
+                          <img src="assets/images/professional-courses/${courses1.col1[i].image}" >
                         </div>
                         <div class="down-content text-center">
-                          <h4>${courses.col1[i].course_name}</h4>
+                          <h4>${courses1.col1[i].course_name}</h4>
                           <br>
-                          <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#${courses.col1[i].title}" >
+                          <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#${courses1.col1[i].title}" >
                             More Info
                           </button>
                           <button type="button" class="btn btn-primary" data-bs-toggle="modal"
@@ -170,12 +170,12 @@ https://templatemo.com/tm-569-edu-meeting
                           <div class="modal-dialog">
                             <div class="modal-content">
                               <div class="modal-header">
-                                <h4 class="modal-title">${courses.col1[i].course_name}</h4>
+                                <h4 class="modal-title">${courses1.col1[i].course_name}</h4>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                               </div>
                               <div class="modal-body">
-                                 ${courses.col1[i].course_name}
-                                 ${courses.col1[i].descriptionContent}
+                                 ${courses1.col1[i].course_name}
+                                 ${courses1.col1[i].descriptionContent}
                                 
                                 
                               </div>
@@ -192,11 +192,11 @@ https://templatemo.com/tm-569-edu-meeting
               
                     // Dynamically populate the PDF list in the modal
                     const pdfList = document.getElementById(`pdfList${i}`);
-                    courses.col1[i].syllabus.forEach((syllabus, index) => {
+                    courses1.col1[i].syllabus.forEach((syllabus, index) => {
                       const listItem = document.createElement('li');
                       const anchor = document.createElement('a');
                       anchor.href = syllabus;
-                      anchor.textContent = `${courses.col1[i].syllabus_name[index]} `;
+                      anchor.textContent = `${courses1.col1[i].syllabus_name[index]} `;
                       anchor.target = "_blank";
                       listItem.appendChild(anchor);
                       pdfList.appendChild(listItem);

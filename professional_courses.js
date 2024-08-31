@@ -1,7 +1,7 @@
-for (let i = 0; i < courses.col1.length; i++) {
+for (let i = 0; i < courses1.col1.length; i++) {
     let descriptionContent = '';
 
-    if (courses.col1[i].description === 'Linux_01') {
+    if (courses1.col1[i].description === 'Linux_01') {
         descriptionContent = `
         <span id="Linux_01">
            <div class="content-container">
@@ -51,7 +51,7 @@ for (let i = 0; i < courses.col1.length; i++) {
 
 </div>
         </span>`;
-    } else if (courses.col1[i].description === 'Shell_Scripting') {
+    } else if (courses1.col1[i].description === 'Shell_Scripting') {
         descriptionContent = `
         <span id="Shell_Scripting">
             <div class="content-container">
@@ -101,7 +101,7 @@ for (let i = 0; i < courses.col1.length; i++) {
 
 </div>
         </span>`;
-    } else if (courses.col1[i].description === 'python') {
+    } else if (courses1.col1[i].description === 'python') {
         descriptionContent = `
         <div class="content-container">
 
@@ -150,7 +150,7 @@ for (let i = 0; i < courses.col1.length; i++) {
 
 </div>
         </span>`;
-    } else if (courses.col1[i].description === 'Jenkins_01') {
+    } else if (courses1.col1[i].description === 'Jenkins_01') {
         descriptionContent = `
         <span id="Jenkins_01">
             <div class="content-container">
@@ -201,7 +201,7 @@ for (let i = 0; i < courses.col1.length; i++) {
 </div>
 
         </span>`;
-    } else if (courses.col1[i].description === 'Docker_Training') {
+    } else if (courses1.col1[i].description === 'Docker_Training') {
         descriptionContent = `
         <span id="Docker_Training">
            <div class="content-container">
@@ -251,7 +251,7 @@ for (let i = 0; i < courses.col1.length; i++) {
 
 </div>
         </span>`;
-    } else if (courses.col1[i].description === 'Kubenetes_Training') {
+    } else if (courses1.col1[i].description === 'Kubenetes_Training') {
         descriptionContent = `
         <span id="Kubenetes_Training">
          <div class="content-container">
@@ -302,7 +302,7 @@ for (let i = 0; i < courses.col1.length; i++) {
 </div>
 
           </span>`;
-    } else if (courses.col1[i].description === 'Ansible_Training') {
+    } else if (courses1.col1[i].description === 'Ansible_Training') {
         descriptionContent = `
         <span id="Ansible_Training">
           <div class="content-container">
@@ -353,7 +353,7 @@ for (let i = 0; i < courses.col1.length; i++) {
 </div>
 
 </span>`;
-    } else if (courses.col1[i].description === 'Terraform') {
+    } else if (courses1.col1[i].description === 'Terraform') {
         descriptionContent = `
         <span id="Terraform">
             <div class="content-container">
@@ -403,7 +403,7 @@ for (let i = 0; i < courses.col1.length; i++) {
 
 </div>
  </span>`;
-    } else if (courses.col1[i].description === 'AWS_03') {
+    } else if (courses1.col1[i].description === 'AWS_03') {
         descriptionContent = `
         <span id="AWS_03">
             <div class="content-container">
@@ -453,7 +453,7 @@ for (let i = 0; i < courses.col1.length; i++) {
 
 </div>
         </span>`;
-    } else if (courses.col1[i].description === 'gcp') {
+    } else if (courses1.col1[i].description === 'gcp') {
         descriptionContent = `
         <span id="gcp">
           <div class="content-container">
@@ -503,7 +503,7 @@ for (let i = 0; i < courses.col1.length; i++) {
 
 </div>
         </span>`;
-    }else if (courses.col1[i].description === 'Azure_Training') {
+    }else if (courses1.col1[i].description === 'Azure_Training') {
         descriptionContent = `
         <span id="Azure_Training">
           <div class="content-container">
@@ -553,7 +553,7 @@ for (let i = 0; i < courses.col1.length; i++) {
 
 </div>
         </span>`;
-    } else if (courses.col1[i].description === 'MEAN_Stack01') {
+    } else if (courses1.col1[i].description === 'MEAN_Stack01') {
         descriptionContent = `
         <span id="MEAN_Stack01">
         <div class="content-container">
@@ -603,7 +603,7 @@ for (let i = 0; i < courses.col1.length; i++) {
 
 </div>
         </span>`;
-    } else if (courses.col1[i].description === 'MERN_Stack02') {
+    } else if (courses1.col1[i].description === 'MERN_Stack02') {
         descriptionContent = `
         <span id="MERN_Stack02">
             <div class="content-container">
@@ -653,7 +653,7 @@ for (let i = 0; i < courses.col1.length; i++) {
 
 </div>
         </span>`;
-    } else if (courses.col1[i].description === 'react_js') {
+    } else if (courses1.col1[i].description === 'react_js') {
         descriptionContent = `
         <span id="react_js">
          <div class="content-container">
@@ -703,7 +703,7 @@ for (let i = 0; i < courses.col1.length; i++) {
 
 </div>
         </span>`;
-    } else if (courses.col1[i].description === 'Web_Designing') {
+    } else if (courses1.col1[i].description === 'Web_Designing') {
         descriptionContent = `
         <span id="Web_Designing">
            <div class="content-container">
@@ -753,7 +753,7 @@ for (let i = 0; i < courses.col1.length; i++) {
 
 </div>
         </span>`;
-    } else if (courses.col1[i].description === 'UI/UX_01') {
+    } else if (courses1.col1[i].description === 'UI/UX_01') {
         descriptionContent = `
         <span id="UI/UX_01">
             <div class="content-container">
@@ -803,7 +803,7 @@ for (let i = 0; i < courses.col1.length; i++) {
 
 </div>
         </span>`;
-    } else if (courses.col1[i].description === 'PHP_Full_Stack') {
+    } else if (courses1.col1[i].description === 'PHP_Full_Stack') {
         descriptionContent = `
         <span id="PHP_Full_Stack">
              <div class="content-container">
@@ -853,7 +853,7 @@ for (let i = 0; i < courses.col1.length; i++) {
 
 </div>
         </span>`;
-    } else if (courses.col1[i].description === 'PHP_Experts') {
+    } else if (courses1.col1[i].description === 'PHP_Experts') {
         descriptionContent = `
         <span id="PHP_Experts">
              <div class="content-container">
@@ -903,7 +903,7 @@ for (let i = 0; i < courses.col1.length; i++) {
 
 </div>
         </span>`;
-    } else if (courses.col1[i].description === 'Angular_Js') {
+    } else if (courses1.col1[i].description === 'Angular_Js') {
         descriptionContent = `
         <span id="Angular_Js">
             <div class="content-container">
@@ -953,7 +953,7 @@ for (let i = 0; i < courses.col1.length; i++) {
 
 </div>
         </span>`;
-    } else if (courses.col1[i].description === 'Devops_Training') {
+    } else if (courses1.col1[i].description === 'Devops_Training') {
         descriptionContent = `
         <span id="Devops_Training">
              <div class="content-container">
@@ -1003,7 +1003,7 @@ for (let i = 0; i < courses.col1.length; i++) {
 
 </div>
         </span>`;
-    } else if (courses.col1[i].description === 'Unix_Shell_Scripting_Training') {
+    } else if (courses1.col1[i].description === 'Unix_Shell_Scripting_Training') {
         descriptionContent = `
         <span id="Unix_Shell_Scripting_Training">
              <div class="content-container">
@@ -1053,7 +1053,7 @@ for (let i = 0; i < courses.col1.length; i++) {
 
 </div>
         </span>`;
-    } else if (courses.col1[i].description === 'C_And_Cplus_Training') {
+    } else if (courses1.col1[i].description === 'C_And_Cplus_Training') {
         descriptionContent = `
         <span id="C_And_Cplus_Training">
              <div class="content-container">
@@ -1103,7 +1103,7 @@ for (let i = 0; i < courses.col1.length; i++) {
 
 </div>
         </span>`;
-    } else if (courses.col1[i].description === 'NET_Training') {
+    } else if (courses1.col1[i].description === 'NET_Training') {
         descriptionContent = `
         <span id="NET_Training">
              <div class="content-container">
@@ -1153,7 +1153,7 @@ for (let i = 0; i < courses.col1.length; i++) {
 
 </div>
         </span>`;
-    } else if (courses.col1[i].description === 'JavaScript_Training') {
+    } else if (courses1.col1[i].description === 'JavaScript_Training') {
         descriptionContent = `
         <span id="JavaScript_Training">
             <div class="content-container">
@@ -1203,7 +1203,7 @@ for (let i = 0; i < courses.col1.length; i++) {
 
 </div>
         </span>`;
-    } else if (courses.col1[i].description === 'MySQL_Training') {
+    } else if (courses1.col1[i].description === 'MySQL_Training') {
         descriptionContent = `
         <span id="MySQL_Training">
             <div class="content-container">
@@ -1253,7 +1253,7 @@ for (let i = 0; i < courses.col1.length; i++) {
 
 </div>
         </span>`;
-    } else if (courses.col1[i].description === 'SQL_Server_DBA_Training') {
+    } else if (courses1.col1[i].description === 'SQL_Server_DBA_Training') {
         descriptionContent = `
         <span id="SQL_Server_DBA_Training">
            <div class="content-container">
@@ -1303,7 +1303,7 @@ for (let i = 0; i < courses.col1.length; i++) {
 
 </div>
         </span>`;
-    } else if (courses.col1[i].description === 'MongoDB_Training') {
+    } else if (courses1.col1[i].description === 'MongoDB_Training') {
         descriptionContent = `
         <span id="MongoDB_Training">
             <div class="content-container">
@@ -1353,7 +1353,7 @@ for (let i = 0; i < courses.col1.length; i++) {
 
 </div>
         </span>`;
-    } else if (courses.col1[i].description === 'Android') {
+    } else if (courses1.col1[i].description === 'Android') {
         descriptionContent = `
         <span id="Android">
              <div class="content-container">
@@ -1403,7 +1403,7 @@ for (let i = 0; i < courses.col1.length; i++) {
 
 </div>
         </span>`;
-    } else if (courses.col1[i].description === 'I_Phone') {
+    } else if (courses1.col1[i].description === 'I_Phone') {
         descriptionContent = `
         <span id="I_Phone">
             <div class="content-container">
@@ -1453,7 +1453,7 @@ for (let i = 0; i < courses.col1.length; i++) {
 
 </div>
         </span>`;
-    } else if (courses.col1[i].description === 'Machine_Learning_Training') {
+    } else if (courses1.col1[i].description === 'Machine_Learning_Training') {
         descriptionContent = `
         <span id="Machine_Learning_Training">
             <div class="content-container">
@@ -1503,7 +1503,7 @@ for (let i = 0; i < courses.col1.length; i++) {
 
 </div>
         </span>`;
-    } else if (courses.col1[i].description === 'Data_Science_Training') {
+    } else if (courses1.col1[i].description === 'Data_Science_Training') {
         descriptionContent = `
         <span id="Data_Science_Training">
             <div class="content-container">
@@ -1553,7 +1553,7 @@ for (let i = 0; i < courses.col1.length; i++) {
 
 </div>
         </span>`;
-    } else if (courses.col1[i].description === 'Deep_Learning_Course') {
+    } else if (courses1.col1[i].description === 'Deep_Learning_Course') {
         descriptionContent = `
         <span id="Deep_Learning_Course">
            <div class="content-container">
@@ -1603,7 +1603,7 @@ for (let i = 0; i < courses.col1.length; i++) {
 
 </div>
         </span>`;
-    } else if (courses.col1[i].description === 'Artificial_Intelligence_Course') {
+    } else if (courses1.col1[i].description === 'Artificial_Intelligence_Course') {
         descriptionContent = `
         <span id="Artificial_Intelligence_Course">
              <div class="content-container">
@@ -1653,7 +1653,7 @@ for (let i = 0; i < courses.col1.length; i++) {
 
 </div>
         </span>`;
-    } else if (courses.col1[i].description === 'Data_Science_With_Python') {
+    } else if (courses1.col1[i].description === 'Data_Science_With_Python') {
         descriptionContent = `
         <span id="Data_Science_With_Python">
            <div class="content-container">
@@ -1703,7 +1703,7 @@ for (let i = 0; i < courses.col1.length; i++) {
 
 </div>
         </span>`;
-    } else if (courses.col1[i].description === 'Power_BI') {
+    } else if (courses1.col1[i].description === 'Power_BI') {
         descriptionContent = `
         <span id="Power_BI">
              <div class="content-container">
@@ -1753,7 +1753,7 @@ for (let i = 0; i < courses.col1.length; i++) {
 
 </div>
         </span>`;
-    } else if (courses.col1[i].description === 'MIS') {
+    } else if (courses1.col1[i].description === 'MIS') {
         descriptionContent = `
         <span id="MIS">
             <div class="content-container">
@@ -1803,7 +1803,7 @@ for (let i = 0; i < courses.col1.length; i++) {
 
 </div>
         </span>`;
-    } else if (courses.col1[i].description === 'Advanced_Microsoft_Excel') {
+    } else if (courses1.col1[i].description === 'Advanced_Microsoft_Excel') {
         descriptionContent = `
         <span id="Advanced_Microsoft_Excel">
            <div class="content-container">
@@ -1853,7 +1853,7 @@ for (let i = 0; i < courses.col1.length; i++) {
 
 </div>
         </span>`;
-    } else if (courses.col1[i].description === 'SQL_Server_DBA_Training') {
+    } else if (courses1.col1[i].description === 'SQL_Server_DBA_Training') {
         descriptionContent = `
         <span id="SQL_Server_DBA_Training">
              <div class="content-container">
@@ -1903,7 +1903,7 @@ for (let i = 0; i < courses.col1.length; i++) {
 
 </div>
         </span>`;
-    } else if (courses.col1[i].description === 'Advanced_Digital_Marketing') {
+    } else if (courses1.col1[i].description === 'Advanced_Digital_Marketing') {
         descriptionContent = `
         <span id="Advanced_Digital_Marketing">
              <div class="content-container">
@@ -1953,7 +1953,7 @@ for (let i = 0; i < courses.col1.length; i++) {
 
 </div>
         </span>`;
-    } else if (courses.col1[i].description === 'Digital_Marketing') {
+    } else if (courses1.col1[i].description === 'Digital_Marketing') {
         descriptionContent = `
         <span id="Digital_Marketing">
              <div class="content-container">
@@ -2003,7 +2003,7 @@ for (let i = 0; i < courses.col1.length; i++) {
 
 </div>
         </span>`;
-    } else if (courses.col1[i].description === 'six_Weeks_Summer_Training') {
+    } else if (courses1.col1[i].description === 'six_Weeks_Summer_Training') {
         descriptionContent = `
         <span id="six_Weeks_Summer_Training">
            <div class="content-container">
@@ -2053,7 +2053,7 @@ for (let i = 0; i < courses.col1.length; i++) {
 
 </div>
         </span>`;
-    } else if (courses.col1[i].description === 'six_Months_Industrial_Training') {
+    } else if (courses1.col1[i].description === 'six_Months_Industrial_Training') {
         descriptionContent = `
         <span id="six_Months_Industrial_Training">
             <div class="content-container">
@@ -2103,7 +2103,7 @@ for (let i = 0; i < courses.col1.length; i++) {
 
 </div>
         </span>`;
-    } else if (courses.col1[i].description === 'Graphic_Designing') {
+    } else if (courses1.col1[i].description === 'Graphic_Designing') {
         descriptionContent = `
         <span id="Graphic_Designing">
             <div class="content-container">
@@ -2153,7 +2153,7 @@ for (let i = 0; i < courses.col1.length; i++) {
 
 </div>
         </span>`;
-    } else if (courses.col1[i].description === 'Multimedia_Animation') {
+    } else if (courses1.col1[i].description === 'Multimedia_Animation') {
         descriptionContent = `
         <span id="Multimedia_Animation">
            <div class="content-container">
@@ -2203,7 +2203,7 @@ for (let i = 0; i < courses.col1.length; i++) {
 
 </div>
         </span>`;
-    } else if (courses.col1[i].description === 'Graphic_Motion_Pro_Course') {
+    } else if (courses1.col1[i].description === 'Graphic_Motion_Pro_Course') {
         descriptionContent = `
         <span id="Graphic_Motion_Pro_Course">
             <div class="content-container">
@@ -2253,7 +2253,7 @@ for (let i = 0; i < courses.col1.length; i++) {
 
 </div>
         </span>`;
-    } else if (courses.col1[i].description === 'Multimedia_&_Animation_(Diploma)') {
+    } else if (courses1.col1[i].description === 'Multimedia_&_Animation_(Diploma)') {
         descriptionContent = `
         <span id="Multimedia_&_Animation_(Diploma)">
             <div class="content-container">
@@ -2303,7 +2303,7 @@ for (let i = 0; i < courses.col1.length; i++) {
 
 </div>
         </span>`;
-    } else if (courses.col1[i].description === 'Videograpy_Course') {
+    } else if (courses1.col1[i].description === 'Videograpy_Course') {
         descriptionContent = `
         <span id="Videograpy_Course">
            <div class="content-container">
@@ -2353,7 +2353,7 @@ for (let i = 0; i < courses.col1.length; i++) {
 
 </div>
         </span>`;
-    } else if (courses.col1[i].description === 'Scriptwriting_Story_Boarding') {
+    } else if (courses1.col1[i].description === 'Scriptwriting_Story_Boarding') {
         descriptionContent = `
         <span id="Scriptwriting_Story_Boarding">
             <div class="content-container">
@@ -2403,7 +2403,7 @@ for (let i = 0; i < courses.col1.length; i++) {
 
 </div>
         </span>`;
-    } else if (courses.col1[i].description === 'Film_Making') {
+    } else if (courses1.col1[i].description === 'Film_Making') {
         descriptionContent = `
         <span id="Film_Making">
            <div class="content-container">
@@ -2453,7 +2453,7 @@ for (let i = 0; i < courses.col1.length; i++) {
 
 </div>
         </span>`;
-    } else if (courses.col1[i].description === 'Graphic_Designing_Pro') {
+    } else if (courses1.col1[i].description === 'Graphic_Designing_Pro') {
         descriptionContent = `
         <span id="Graphic_Designing_Pro">
             <div class="content-container">
@@ -2503,7 +2503,7 @@ for (let i = 0; i < courses.col1.length; i++) {
 
 </div>
         </span>`;
-    } else if (courses.col1[i].description === 'Manual_plus_Selenium_01') {
+    } else if (courses1.col1[i].description === 'Manual_plus_Selenium_01') {
         descriptionContent = `
         <span id="Manual_plus_Selenium_01">
             <div class="content-container">
@@ -2553,7 +2553,7 @@ for (let i = 0; i < courses.col1.length; i++) {
 
 </div>
         </span>`;
-    } else if (courses.col1[i].description === 'Full_Stack_QA') {
+    } else if (courses1.col1[i].description === 'Full_Stack_QA') {
         descriptionContent = `
         <span id="Full_Stack_QA">
            <div class="content-container">
@@ -2603,7 +2603,7 @@ for (let i = 0; i < courses.col1.length; i++) {
 
 </div>
         </span>`;
-    } else if (courses.col1[i].description === 'Java') {
+    } else if (courses1.col1[i].description === 'Java') {
         descriptionContent = `
         <span id="Java">
            <div class="content-container">
@@ -2653,7 +2653,7 @@ for (let i = 0; i < courses.col1.length; i++) {
 
 </div>
         </span>`;
-    } else if (courses.col1[i].description === 'REST_Assured_API') {
+    } else if (courses1.col1[i].description === 'REST_Assured_API') {
         descriptionContent = `
         <span id="REST_Assured_API">
             <div class="content-container">
@@ -2703,7 +2703,7 @@ for (let i = 0; i < courses.col1.length; i++) {
 
 </div>
         </span>`;
-    } else if (courses.col1[i].description === 'Appium_Testing') {
+    } else if (courses1.col1[i].description === 'Appium_Testing') {
         descriptionContent = `
         <span id="Appium_Testing">
             <div class="content-container">
@@ -2753,7 +2753,7 @@ for (let i = 0; i < courses.col1.length; i++) {
 
 </div>
         </span>`;
-    } else if (courses.col1[i].description === 'API_Testing') {
+    } else if (courses1.col1[i].description === 'API_Testing') {
         descriptionContent = `
         <span id="API_Testing">
             <div class="content-container">
@@ -2803,7 +2803,7 @@ for (let i = 0; i < courses.col1.length; i++) {
 
 </div>
         </span>`;
-    } else if (courses.col1[i].description === 'Manual_Testing') {
+    } else if (courses1.col1[i].description === 'Manual_Testing') {
         descriptionContent = `
         <span id="Manual_Testing">
            <div class="content-container">
@@ -2853,7 +2853,7 @@ for (let i = 0; i < courses.col1.length; i++) {
 
 </div>
         </span>`;
-    } else if (courses.col1[i].description === 'Primavera_P6_Testing') {
+    } else if (courses1.col1[i].description === 'Primavera_P6_Testing') {
         descriptionContent = `
         <span id="Primavera_P6_Testing">
             <div class="content-container">
@@ -2903,7 +2903,7 @@ for (let i = 0; i < courses.col1.length; i++) {
 
 </div>
         </span>`;
-    } else if (courses.col1[i].description === 'Agile_Testing') {
+    } else if (courses1.col1[i].description === 'Agile_Testing') {
         descriptionContent = `
         <span id="Agile_Testing">
             <div class="content-container">
@@ -2953,7 +2953,7 @@ for (let i = 0; i < courses.col1.length; i++) {
 
 </div>
         </span>`;
-    } else if (courses.col1[i].description === 'Microsoft_Excel_Training') {
+    } else if (courses1.col1[i].description === 'Microsoft_Excel_Training') {
         descriptionContent = `
         <span id="Microsoft_Excel_Training">
            <div class="content-container">
@@ -3003,7 +3003,7 @@ for (let i = 0; i < courses.col1.length; i++) {
 
 </div>
         </span>`;
-    } else if (courses.col1[i].description === 'Scrum_Master_Training') {
+    } else if (courses1.col1[i].description === 'Scrum_Master_Training') {
         descriptionContent = `
         <span id="Scrum_Master_Training">
              <div class="content-container">
@@ -3053,7 +3053,7 @@ for (let i = 0; i < courses.col1.length; i++) {
 
 </div>
         </span>`;
-    } else if (courses.col1[i].description === 'Motion_Graphic_Course') {
+    } else if (courses1.col1[i].description === 'Motion_Graphic_Course') {
         descriptionContent = `
         <span id="Motion_Graphic_Course">
             <div class="content-container">
@@ -3108,13 +3108,13 @@ for (let i = 0; i < courses.col1.length; i++) {
    
     
 // Example text with underscores
-let textWithUnderscores = courses.col1[i].title;
+let textWithUnderscores = courses1.col1[i].title;
 
 // Remove underscores using replace() with regex
 let textWithoutUnderscores = textWithUnderscores.replace(/_/g, ' ');
 
     document.write(`
-    <div class="modal" id="${courses.col1[i].title}">
+    <div class="modal" id="${courses1.col1[i].title}">
         <div class="modal-dialog modal-xl">
             <div class="modal-content">
                 <!-- Modal Header -->
