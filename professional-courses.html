@@ -22,6 +22,7 @@
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+  
   <script>
     $(document).ready(function () {
       $('.gallery-item').fancybox();
@@ -46,7 +47,110 @@
   text-align: center;
   margin-top: 20px;
   font-weight: bold;
-}
+ }
+
+ .dropbtn {
+            background-color: #dc3b41;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .dropbtn:hover, .dropbtn:focus {
+            background-color: #b73a36;
+        }
+
+        #myInput {
+            box-sizing: border-box;
+            background-image: url('searchicon.png');
+            background-position: 14px 12px;
+            background-repeat: no-repeat;
+            font-size: 16px;
+            padding: 14px 20px 12px 45px;
+            border: none;
+            border-bottom: 1px solid #ddd;
+        }
+
+        #myInput:focus {
+            outline: 3px solid #ddd;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f6f6f6;
+            min-width: 230px;
+            border: 1px solid #ddd;
+            z-index: 1;
+            opacity: 0;
+            transform: scaleY(0);
+            transform-origin: top;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        .dropdown-content.show {
+            display: block;
+            opacity: 1;
+            transform: scaleY(1);
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            transition: background-color 0.3s ease;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .item {
+            transition: transform 0.5s ease, opacity 0.5s ease;
+            opacity: 1;
+        }
+
+        .item.hidden {
+            opacity: 0;
+            transform: scale(0.8);
+        }
+
+        .item.show {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        /* Import FontAwesome if you're using it for icons */
+  @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+  
+  /* Keyframes for blinking animation */
+  @keyframes blink {
+      0% {
+          opacity: 1;
+      }
+      50% {
+          opacity: 0;
+      }
+      100% {
+          opacity: 1;
+      }
+  }
+  
+  /* Apply the animation to the icon */
+  .icon {
+      font-size: none; /* Adjust the size of the icon as needed */
+      color: red; /* Set the color to red */
+      animation: blink 1s infinite; /* Adjust the duration and iteration of the animation */
+  }
+
 
   </style>
 
@@ -102,9 +206,28 @@ https://templatemo.com/tm-569-edu-meeting
               <p>No content found</p>
             </div>
           </div>
-          
-          
-        </div>
+          <div class="dropdown">
+            <button onclick="toggleDropdown()" class="dropbtn">Select Courses</button>
+            <div id="myDropdown" class="dropdown-content">
+                <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()" autofocus>
+                <ul id="dropdownList">
+                    <li data-filter="*" class="active">All Courses</li>
+                    <li data-filter=".programming">Programming</li>
+                    <li data-filter=".cloud">Cloud</li>
+                    <li data-filter=".devops">DevOps</li>
+                    <li data-filter=".data">Data Science & AI</li>
+                    <li data-filter=".mobile">Mobile Development</li>
+                    <li data-filter=".database">Database</li>
+                    <li data-filter=".mis">Advance Excel-BI Tools</li>
+                    <li data-filter=".digital">Digital Marketing</li>
+                    <li data-filter=".industrial">Industrial Training</li>
+                    <li data-filter=".multimedia">Multimedia Animation-Graphics</li>
+                    <li data-filter=".software">Software Testing</li>
+                    <li data-filter=".project">Project Management</li>
+                    <li data-filter=".full">Full Stack Development</li>
+                    <li data-filter=".web">Web Designing</li>
+                </ul>
+            </div>
       </div>
     </div>
   </section>
@@ -132,8 +255,8 @@ https://templatemo.com/tm-569-edu-meeting
                     courseElement.innerHTML = `
                       <div class="meeting-item">
                         <div class="thumb">
-                          <div class="price">
-                            <span class="fa fa-cloud-download" data-bs-toggle="modal" data-bs-target="#syllabus${i}" style="font-size:23px;color:blue"></span>
+                          <div class="price ">
+                            <span class="fa fa-cloud-download icon" data-bs-toggle="modal" data-bs-target="#syllabus${i}" style="font-size:23px;color:red"></span>
                             <div class="modal" id="syllabus${i}">
                               <div class="modal-dialog">
                                 <div class="modal-content">
@@ -264,11 +387,52 @@ https://templatemo.com/tm-569-edu-meeting
       </p>
     </div>
   </section>
-  
 
-  <script></script>
+  <script>
+    var selectedFilter = ""; // Add this variable to store the selected filter
 
+    function toggleDropdown() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
 
+    function filterFunction() {
+      var input, filter, ul, li, a, i;
+      input = document.getElementById("myInput");
+      filter = input.value.toUpperCase();
+      ul = document.getElementById("myDropdown").getElementsByTagName("ul")[0];
+      li = ul.getElementsByTagName("li");
+
+      for (i = 0; i < li.length; i++) {
+        a = li[i];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          a.style.display = "";
+        } else {
+          a.style.display = "none";
+        }
+      }
+    }
+
+    document.getElementById("myDropdown").addEventListener('click', function (e) {
+      if (e.target.tagName === 'LI') {
+        selectedFilter = e.target.getAttribute('data-filter');
+        applyFilter();
+        document.getElementById("myDropdown").classList.remove("show");
+      }
+    });
+
+    function applyFilter() {
+      var courses = document.querySelectorAll('.templatemo-item-col');
+      courses.forEach(function (course) {
+        if (selectedFilter === '*' || course.classList.contains(selectedFilter.substring(1))) {
+          course.style.display = '';
+        } else {
+          course.style.display = 'none';
+        }
+      });
+    }
+  </script>
+ 
   <!-- Scripts -->
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
@@ -341,10 +505,54 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 });
 </script>
+<!-------------SCRIPT FOR DROPDOWN SEARCH -->
+<!-- Bootstrap core JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  
+<!-- Custom Scripts -->
+<script>
+  function toggleDropdown() {
+      document.getElementById("myDropdown").classList.toggle("show");
+  }
+
+  function filterFunction() {
+      var input, filter, ul, li, i;
+      input = document.getElementById("myInput");
+      filter = input.value.toUpperCase();
+      ul = document.getElementById("dropdownList");
+      li = ul.getElementsByTagName("li");
+
+      // Add the fade-in class to all items before filtering
+      for (i = 0; i < li.length; i++) {
+          li[i].classList.add("fade-in");
+      }
+
+      // Use a timeout to synchronize with animation
+      setTimeout(() => {
+          // Hide all items initially
+          for (i = 0; i < li.length; i++) {
+              li[i].classList.add("hidden");
+          }
+
+          // Show filtered items
+          for (i = 0; i < li.length; i++) {
+              txtValue = li[i].textContent || li[i].innerText;
+              if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                  li[i].classList.remove("hidden");
+              }
+          }
+      }, 300); // Match with CSS transition duration
+
+      // Remove fade-in class after animation
+      setTimeout(() => {
+          let items = ul.getElementsByTagName('li');
+          for (let item of items) {
+              item.classList.remove('fade-in');
+          }
+      }, 600); // Match with animation duration
+  }
+</script>
+          
 
 </body>
-
-
-</body>
-
 </html>

@@ -47,6 +47,29 @@
   margin-top: 20px;
   font-weight: bold;
 }
+ /* Import FontAwesome if you're using it for icons */
+ @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+  
+  /* Keyframes for blinking animation */
+  @keyframes blink {
+      0% {
+          opacity: 1;
+      }
+      50% {
+          opacity: 0;
+      }
+      100% {
+          opacity: 1;
+      }
+  }
+  
+  /* Apply the animation to the icon */
+  .icon {
+      font-size: none; /* Adjust the size of the icon as needed */
+      color: red; /* Set the color to red */
+      animation: blink 1s infinite; /* Adjust the duration and iteration of the animation */
+  }
+
 
   </style>
 
@@ -140,7 +163,7 @@ https://templatemo.com/tm-569-edu-meeting
                       <div class="meeting-item">
                         <div class="thumb">
                           <div class="price">
-                            <span class="fa fa-cloud-download" data-bs-toggle="modal" data-bs-target="#syllabus${i}" style="font-size:23px;color:blue"></span>
+                            <span class="fa fa-cloud-download icon" data-bs-toggle="modal" data-bs-target="#syllabus${i}" style="font-size:23px;color:red"></span>
                             <div class="modal" id="syllabus${i}">
                               <div class="modal-dialog">
                                 <div class="modal-content">
