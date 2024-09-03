@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <section class="meetings-page" id="meetings">
+    <div class="container">
+      <div class="row">
+        <script>
+          document.addEventListener("DOMContentLoaded", function () {
+            const coursesContainer = document.querySelector(".row");
+  
+            batches.col1.forEach((course, i) => {
+              const courseClass = course.title.toLowerCase().replace(/ /g, "-");
+              const courseElement = document.createElement("div");
+  
+              courseElement.classList.add(
+                "col-lg-12",
+                "templatemo-item-col",
+                "all",
+                courseClass,
+                "item-container",
+                "show"
+              );
+              courseElement.setAttribute("data-title", course.title.toLowerCase());
+  
+              courseElement.innerHTML = `
+                <div class="row">
+                  <div class="col-md-2">
+                    <div class="well text-center">
+                      <button type="button" class="btn btn-danger btn-md">${course.date}</button>
+                      <div style="color: white;">${course.time}</div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="well">
+                      <h5 style="margin-top: 23px; color: white;">${course.title}</h5>
+                      <p><span style="color:white;">${course.description}</span></p>
+                    </div>
+                  </div>
+                  <div class="col-md-4 text-end">
+                    <div class="well">
+                      <button type="button" class="btn btn-primary me-2" data-bs-toggle="modal" data-bs-target="#contactModal">Contact Us</button>
+                      <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#courseModal" data-course="${course.title}">Enroll Now</button>
+                    </div>
+                  </div>
+                </div>
+                <hr style="color: white; width: 100%;">
+              `;
+  
+              coursesContainer.appendChild(courseElement);
+            });
+  
+            // Auto-Fill Course Name in Modal
+            const courseModal = document.getElementById("courseModal");
+            if (courseModal) {
+              courseModal.addEventListener("show.bs.modal", function (event) {
+                const button = event.relatedTarget;
+                const courseName = button.getAttribute("data-course");
+                const courseNameInput = document.getElementById("courseName");
+                if (courseNameInput) {
+                  courseNameInput.value = courseName;
+                }
+              });
+            }
+  
+            // Handle form submission
+            const form = document.getElementById("contactform");
+            if (form) {
+              form.addEventListener("submit", function (e) {
+                e.preventDefault();
+                const scriptURL =
+                  "https://script.google.com/macros/s/AKfycbyzWpZIIAt4ZaXdOXZKWnFoj-REOq7PDbaGYqieIPxJDQhR6B9NLYj_SgSFFtVyGVjj/exec";
+                const formData = new FormData(this);
+  
+                fetch(scriptURL, { method: "POST", body: formData })
+                  .then((response) => {
+                    Swal.fire({
+                      title: "Thank you!",
+                      text: "Your form is submitted successfully.",
+                      icon: "success",
+                      timer: 1500,
+                      showConfirmButton: false,
+                    }).then(() => {
+                      window.location.reload();
+                    });
+                  })
+                  .catch((error) => {
+                    console.error("Error!", error.message);
+                    Swal.fire({
+                      title: "Oops!",
+                      text: "Something went wrong. Please try again later.",
+                      icon: "error",
+                    });
+                  });
+              });
+            }
+  
+            // Restrict Mobile number input to 10 digits
+            document
+              .getElementById("Mobile")
+              .addEventListener("input", function (e) {
+                var x = e.target.value.replace(/\D/g, "");
+                if (x.length > 10) {
+                  x = x.substring(0, 10);
+                }
+                e.target.value = x;
+              });
+          });
+        </script>
+      </div>
+    </div>
+  </section>
+  
+</body>
+</html>

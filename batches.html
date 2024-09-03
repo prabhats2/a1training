@@ -147,7 +147,7 @@ https://templatemo.com/tm-569-edu-meeting
 
                                 <button type="button" class="btn btn-light" data-bs-toggle="modal"
                                     data-bs-target="#courseModal" data-course="UI ">
-                                    More Info
+                                    Enroll Now
                                 </button>
 
                             </div>
@@ -188,7 +188,7 @@ https://templatemo.com/tm-569-edu-meeting
 
                                 <button type="button" class="btn btn-light" data-bs-toggle="modal"
                                     data-bs-target="#courseModal" data-course="Angular6/7Project Training ">
-                                    More Info
+                                    Enroll Now
                                 </button>
 
                             </div>
@@ -227,7 +227,7 @@ https://templatemo.com/tm-569-edu-meeting
 
                                 <button type="button" class="btn btn-light" data-bs-toggle="modal"
                                     data-bs-target="#courseModal" data-course="JavaScript Framework Project Training">
-                                    More Info
+                                    Enroll Now
                                 </button>
                             </div>
                         </div>
@@ -264,7 +264,7 @@ https://templatemo.com/tm-569-edu-meeting
                                 </button>
                                 <button type="button" class="btn btn-light" data-bs-toggle="modal"
                                     data-bs-target="#courseModal" data-course="Python Training">
-                                    More Info
+                                   Enroll Now
                                 </button>
                             </div>
                         </div>
@@ -276,50 +276,112 @@ https://templatemo.com/tm-569-edu-meeting
         </div>
 
 
-        <!---------modal more info form Start-->
+        
+    <!-- Combined Modal for Contact Us and More Info -->
+    <div class="modal fade" id="courseModal" tabindex="-1" aria-labelledby="courseModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="courseModalLabel">Course Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Form inside the Modal -->
+                    <form id="contactform">
+                        <!-- Course NAME -->
+                        <div class="mb-3">
+                            <label for="courseName" class="form-label">Course Name</label>
+                            <input type="text" class="form-control" id="courseName" name="courseName" readonly>
+                        </div>
+                        <!-- NAME -->
+                        <div class="mb-3">
+                            <label for="Name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="Name" name="Name">
+                        </div>
+                        <!-- E-mail -->
+                        <div class="mb-3">
+                            <label for="e-mail" class="form-label">E-mail</label>
+                            <input type="email" class="form-control" id="e-mail" name="e-mail" required>
+                        </div>
+                        <!-- Mobile No -->
+                        <div class="mb-3">
+                            <label for="Mobile" class="form-label">Mobile</label>
+                            <input type="number" class="form-control" id="Mobile" name="Mobile" pattern="\d{10}" maxlength="10" required>
+                        </div>
+                        <!-- Message -->
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" name="message" rows="2"></textarea>
+                        </div>
 
-        <div class="modal fade" id="courseModal" tabindex="-1" aria-labelledby="courseModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="courseModalLabel">Course Details</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <!-- Form inside the Modal -->
-                        <form id="contactform">
-                            <!-- Course NAME -->
-                            <div class="mb-3">
-                                <label for="courseName" class="form-label">Course Name</label>
-                                <input type="text" class="form-control" id="courseName" name="courseName" readonly>
-                            </div>
-                            <!-- NAME -->
-                            <div class="mb-3">
-                                <label for="Name" class="form-label">Name</label>
-                                <input type="text" class="form-control" id="Name" name="Name">
-                            </div>
-                            <!-- E-mail -->
-                            <div class="mb-3">
-                                <label for="e-mail" class="form-label">E-mail</label>
-                                <input type="email" class="form-control" id="e-mail" name="e-mail" required>
-                            </div>
-                            <!-- Mobile No -->
-                            <div class="mb-3">
-                                <label for="Mobile" class="form-label">Mobile</label>
-                                <input type="number" class="form-control" id="Mobile" name="Mobile" pattern="\d{10}" maxlength="10" required>
-                            </div>
-                            <!-- Message -->
-                            <div class="mb-3">
-                                <label for="message" class="form-label">Message</label>
-                                <textarea class="form-control" id="message" name="message" rows="2"></textarea>
-                            </div>
-
-                            <button type="submit" class="btn btn-primary">Send</button>
-                        </form>
-                    </div>
+                        <button type="submit" class="btn btn-primary">Send</button>
+                    </form>
                 </div>
             </div>
         </div>
+    </div>
+
+    <!-- Your existing body content -->
+
+    <!-- Scripts -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Auto-Fill Course Name in Modal
+            const courseModal = document.getElementById('courseModal');
+            const courseNameInput = document.getElementById('courseName');
+
+            if (courseModal) {
+                courseModal.addEventListener('show.bs.modal', function (event) {
+                    const button = event.relatedTarget; // Button that triggered the modal
+                    const courseName = button.getAttribute('data-course'); // Extract course name from data attribute
+                    if (courseNameInput) {
+                        courseNameInput.value = courseName; // Set the course name in the input field
+                    }
+                });
+            }
+
+            // Handle form submission
+            const form = document.getElementById('contactform');
+            if (form) {
+                form.addEventListener('submit', function (e) {
+                    e.preventDefault();
+
+                    const scriptURL = 'https://script.google.com/macros/s/AKfycbyzWpZIIAt4ZaXdOXZKWnFoj-REOq7PDbaGYqieIPxJDQhR6B9NLYj_SgSFFtVyGVjj/exec';
+                    const formData = new FormData(this);
+
+                    fetch(scriptURL, { method: 'POST', body: formData })
+                        .then(response => {
+                            Swal.fire({
+                                title: "Thank you!",
+                                text: "Your form is submitted successfully.",
+                                icon: "success",
+                                timer: 1500,
+                                showConfirmButton: false
+                            }).then(() => {
+                                window.location.reload(); // Reload after closing the alert
+                            });
+                        })
+                        .catch(error => {
+                            console.error('Error!', error.message);
+                            Swal.fire({
+                                title: "Oops!",
+                                text: "Something went wrong. Please try again later.",
+                                icon: "error"
+                            });
+                        });
+                });
+            }
+
+            // Restrict Mobile number input to 10 digits
+            document.getElementById('Mobile').addEventListener('input', function (e) {
+                var x = e.target.value.replace(/\D/g, '');
+                if (x.length > 10) {
+                    x = x.substring(0, 10);
+                }
+                e.target.value = x;
+            });
+        });
+    </script>
 
         <!---------modal more info form Ends-->
 

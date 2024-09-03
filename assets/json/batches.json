@@ -1,0 +1,27 @@
+const batches = {
+  "col1": [
+    {
+      "date": "07<br>Feb,2024",
+      "time": "9:15 am-5:00 pm",
+      "title": "UI Project Training",
+      "description": "HTML, HTML5, CSS, CSS3, JS (ES6, ES7), Bootstrap",
+      "modalId": "UI Project Training"
+    },
+    {
+      "date": "07<br>Feb,2024",
+      "time": "9:15 am-5:00 pm",
+      "title": "Angular6/7 Project Training",
+      "description": "HTML, HTML5, CSS, CSS3, JS (ES6, ES7), Bootstrap, Angular6/7",
+      "modalId": "Angular6/7 Project Training"
+    },
+    {
+      "date": "07<br>Feb,2024",
+      "time": "9:15 am-5:00 pm",
+      "title": "JavaScript Framework Project Training",
+      "description": "JS (ES6, ES7), React, Vue, Angular",
+      "modalId": "JavaScript Framework Project Training"
+    }
+  ]
+};
+
+let i = 0;

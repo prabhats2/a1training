@@ -10,18 +10,14 @@
   <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
   <title>AITI Junior Geeks Coding</title>
-
-  <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="Template Mo">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-GLhlTQ8iNl7lqyiYbNE3u5zHMHp0UA+POD4t1itd16u7jOFEL76P0DHS9tN8+OHL" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+
   <script>
     $(document).ready(function () {
       $('.gallery-item').fancybox();
@@ -37,40 +33,48 @@
       margin-top: 100px;
       height: 900px;
     }
+
     .no-content-message {
-  background-color: #f8d7da; /* Light red background */
-  color: #721c24; /* Dark red text */
-  border: 1px solid #f5c6cb; /* Light red border */
-  padding: 10px;
-  border-radius: 5px;
-  text-align: center;
-  margin-top: 20px;
-  font-weight: bold;
-}
- /* Import FontAwesome if you're using it for icons */
- @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
-  
-  /* Keyframes for blinking animation */
-  @keyframes blink {
+      background-color: #f8d7da;
+      /* Light red background */
+      color: #721c24;
+      /* Dark red text */
+      border: 1px solid #f5c6cb;
+      /* Light red border */
+      padding: 10px;
+      border-radius: 5px;
+      text-align: center;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+
+    /* Import FontAwesome if you're using it for icons */
+    @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+
+    /* Keyframes for blinking animation */
+    @keyframes blink {
       0% {
-          opacity: 1;
+        opacity: 1;
       }
+
       50% {
-          opacity: 0;
+        opacity: 0;
       }
+
       100% {
-          opacity: 1;
+        opacity: 1;
       }
-  }
-  
-  /* Apply the animation to the icon */
-  .icon {
-      font-size: none; /* Adjust the size of the icon as needed */
-      color: red; /* Set the color to red */
-      animation: blink 1s infinite; /* Adjust the duration and iteration of the animation */
-  }
+    }
 
-
+    /* Apply the animation to the icon */
+    .icon {
+      font-size: none;
+      /* Adjust the size of the icon as needed */
+      color: red;
+      /* Set the color to red */
+      animation: blink 1s infinite;
+      /* Adjust the duration and iteration of the animation */
+    }
   </style>
 
   <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
@@ -93,17 +97,17 @@ https://templatemo.com/tm-569-edu-meeting
 </head>
 
 <body>
- <!--Start of Tawk.to Script-->
- <script type="text/javascript">
-  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-  (function(){
-  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-  s1.async=true;
-  s1.src='https://embed.tawk.to/66bb21d20cca4f8a7a754fad/1i55fo8ds';
-  s1.charset='UTF-8';
-  s1.setAttribute('crossorigin','*');
-  s0.parentNode.insertBefore(s1,s0);
-  })();
+  <!--Start of Tawk.to Script-->
+  <script type="text/javascript">
+    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+    (function () {
+      var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+      s1.async = true;
+      s1.src = 'https://embed.tawk.to/66bb21d20cca4f8a7a754fad/1i55fo8ds';
+      s1.charset = 'UTF-8';
+      s1.setAttribute('crossorigin', '*');
+      s0.parentNode.insertBefore(s1, s0);
+    })();
   </script>
   <!--End of Tawk.to Script-->
 
@@ -120,7 +124,8 @@ https://templatemo.com/tm-569-edu-meeting
           <h6>HERE ARE OUR POPULAR PROFESSIONAL COURSE</h6>
           <h2>Junior Geeks Courses</h2>
           <div class="container my-4">
-            <input type="text" id="searchBar" class="search-bar form-control" placeholder="Search Courses..." onkeyup="filterItems()">
+            <input type="text" id="searchBar" class="search-bar form-control" placeholder="Search Courses..."
+              onkeyup="filterItems()">
             <div id="noContentMessage" class="no-content-message" style="display: none;">
               <p>No content found</p>
             </div>
@@ -133,33 +138,34 @@ https://templatemo.com/tm-569-edu-meeting
   <section class="meetings-page" id="meetings">
     <div class="container">
 
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="filters">
-                <ul>
-                  <li data-filter="*" class="active">All Courses</li>
-                  <li data-filter=".soon">class 5-8</li>
-                  <li data-filter=".imp">class 9-10</li>
-                  <li data-filter=".att">class 11-12</li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-lg-12"data-title="aws"id="aws" class="section ">
-              <div class="row" id="courses-container">
-                <!-- Courses will be dynamically loaded here -->
-              <script>
-                document.addEventListener('DOMContentLoaded', function () {
-                  const coursesContainer = document.getElementById('courses-container');
-              
-                  for (let i = 0; i < courses.col1.length; i++) {
-                    const courseClass = courses.col1[i].class.toLowerCase();
-                    const courseName = courses.col1[i].course_name.toLowerCase();
-                    const courseElement = document.createElement('div');
-              
-                    courseElement.classList.add('col-lg-4', 'templatemo-item-col', 'all', courseClass, 'item-container', 'show');
-                    courseElement.setAttribute('data-title', `${courseName} ${courseClass}`);
-              
-                    courseElement.innerHTML = `
+      <div class="row">
+
+        <div class="col-lg-12">
+          <div class="filters">
+            <ul>
+              <li data-filter="*" class="active">All Courses</li>
+              <li data-filter=".soon">class 5-8</li>
+              <li data-filter=".imp">class 9-10</li>
+              <li data-filter=".att">class 11-12</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row" id="courses-container">
+          <!-- Courses will be dynamically loaded here -->
+          <script>
+            document.addEventListener('DOMContentLoaded', function () {
+              const coursesContainer = document.getElementById('courses-container');
+
+              for (let i = 0; i < courses.col1.length; i++) {
+                const courseClass = courses.col1[i].class.toLowerCase();
+                const courseName = courses.col1[i].course_name.toLowerCase();
+                const courseElement = document.createElement('div');
+
+                courseElement.classList.add('col-lg-4', 'templatemo-item-col', 'all', courseClass, 'item-container', 'show');
+                courseElement.setAttribute('data-title', `${courseName} ${courseClass}`);
+
+                courseElement.innerHTML = `
                       <div class="meeting-item">
                         <div class="thumb">
                           <div class="price">
@@ -201,13 +207,12 @@ https://templatemo.com/tm-569-edu-meeting
                             <div class="modal-content">
                               <div class="modal-header">
                                 <h4 class="modal-title">${courses.col1[i].course_name}</h4>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                               </div>
                               <div class="modal-body">
                                  ${courses.col1[i].course_name}
                                  ${courses.col1[i].descriptionContent}
-                                
-                                
+                              
                               </div>
                               <div class="modal-footer">
                                 <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
@@ -217,59 +222,98 @@ https://templatemo.com/tm-569-edu-meeting
                         </div>
                       </div>
                     `;
-              
-                    coursesContainer.appendChild(courseElement);
-              
-                    // Dynamically populate the PDF list in the modal
-                    const pdfList = document.getElementById(`pdfList${i}`);
-                    courses.col1[i].syllabus.forEach((syllabus, index) => {
-                      const listItem = document.createElement('li');
-                      const anchor = document.createElement('a');
-                      anchor.href = syllabus;
-                      anchor.textContent = `${courses.col1[i].syllabus_name[index]} `;
-                      anchor.target = "_blank";
-                      listItem.appendChild(anchor);
-                      pdfList.appendChild(listItem);
-                    });
-                  }
-                });
-                function filterItems() {
-  const searchText = document.getElementById('searchBar').value.toLowerCase(); // Get the current text from the search bar
-  const courses = document.querySelectorAll('.item-container'); // Get all course elements
 
-  courses.forEach(course => {
-    const title = course.getAttribute('data-title').toLowerCase(); // Get the title from the data attribute
-    if (title.includes(searchText)) {
-      course.style.display = ''; // Show the course if it includes the search text
-    } else {
-      course.style.display = 'none'; // Hide the course if it does not include the search text
+                coursesContainer.appendChild(courseElement);
+
+                // Dynamically populate the PDF list in the modal
+                const pdfList = document.getElementById(`pdfList${i}`);
+                courses.col1[i].syllabus.forEach((syllabus, index) => {
+                  const listItem = document.createElement('li');
+                  const anchor = document.createElement('a');
+                  anchor.href = syllabus;
+                  anchor.textContent = `${courses.col1[i].syllabus_name[index]} `;
+                  anchor.target = "_blank";
+                  listItem.appendChild(anchor);
+                  pdfList.appendChild(listItem);
+                });
+              }
+            });
+            function filterItems() {
+              const searchText = document.getElementById('searchBar').value.toLowerCase(); // Get the current text from the search bar
+              const courses = document.querySelectorAll('.item-container'); // Get all course elements
+
+              courses.forEach(course => {
+                const title = course.getAttribute('data-title').toLowerCase(); // Get the title from the data attribute
+                if (title.includes(searchText)) {
+                  course.style.display = ''; // Show the course if it includes the search text
+                } else {
+                  course.style.display = 'none'; // Hide the course if it does not include the search text
+                }
+              });
+            }
+            // Function to open a modal and navigate if necessary
+            function openModalOnText1(modalId) {
+              // Store the modal ID in localStorage
+              localStorage.setItem('modalToShow', modalId);
+
+              // Check if we are already on the junior_geeks_coding.html page
+              if (window.location.pathname.includes('junior_geeks_coding.html')) {
+                const modalElement = document.getElementById(modalId);
+                if (modalElement) {
+                  const myModal = new bootstrap.Modal(modalElement);
+                  myModal.show();
+                }
+              } else {
+                // If not, navigate to the junior_geeks_coding.html page
+                window.location.href = 'junior_geeks_coding.html';
+              }
+            }
+
+            // Check localStorage for the modal to show when the page loads
+            document.addEventListener("DOMContentLoaded", function () {
+              const modalToShow = localStorage.getItem('modalToShow');
+              if (modalToShow) {
+                const modalElement = document.getElementById(modalToShow);
+                if (modalElement) {
+                  const myModal = new bootstrap.Modal(modalElement);
+                  myModal.show();
+                }
+                localStorage.removeItem('modalToShow'); // Clear the modal ID once it's shown
+              }
+            });
+// The script for handling the modal based on URL parameters
+document.addEventListener("DOMContentLoaded", function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const modalId = urlParams.get('modal');
+    if (modalId) {
+        let modalElement = document.getElementById(`${modalId}Modal`);
+        if (modalElement) {
+            var myModal = new bootstrap.Modal(modalElement);
+            myModal.show();
+            
+            // Attach an event listener to the close button inside the modal
+            let closeModalButton = modalElement.querySelector('.close');
+            if (closeModalButton) {
+                closeModalButton.addEventListener('click', function() {
+                    myModal.hide();
+                });
+            }
+        } else {
+            console.log('No modal found with ID:', modalId);
+        }
     }
-  });
-}
+});
 
-              </script>
-              <script>
-                // Check localStorage for the modal to show
-                document.addEventListener("DOMContentLoaded", function() {
-                  const modalToShow = localStorage.getItem('modalToShow');
-                  if (modalToShow) {
-                    const modalElement = document.getElementById(modalToShow);
-                    if (modalElement) {
-                      const myModal = new bootstrap.Modal(modalElement);
-                      myModal.show();
-                    }
-                    localStorage.removeItem('modalToShow');
-                  }
-                });
-              </script>
-              
+          </script>
 
-            </div>
-          </div>
+
+        </div>
 
       </div>
+
     </div>
-    
+
+
     <div class="footer">
       <p>Copyright © 2022 Edu Meeting Co., Ltd. All Rights Reserved.
         <br>
@@ -279,11 +323,6 @@ https://templatemo.com/tm-569-edu-meeting
       </p>
     </div>
   </section>
-  
-
-  <script></script>
-
-
   <!-- Scripts -->
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
@@ -345,47 +384,47 @@ https://templatemo.com/tm-569-edu-meeting
     });
 
     function filterItems() {
-  const searchText = document.getElementById('searchBar').value.toLowerCase();
-  const courses = document.querySelectorAll('.item-container');
-  let hasVisibleItem = false;
+      const searchText = document.getElementById('searchBar').value.toLowerCase();
+      const courses = document.querySelectorAll('.item-container');
+      let hasVisibleItem = false;
 
-  courses.forEach(course => {
-    const title = course.getAttribute('data-title').toLowerCase();
-    if (title.includes(searchText)) {
-      course.style.display = '';
-      hasVisibleItem = true;
-    } else {
-      course.style.display = 'none';
+      courses.forEach(course => {
+        const title = course.getAttribute('data-title').toLowerCase();
+        if (title.includes(searchText)) {
+          course.style.display = '';
+          hasVisibleItem = true;
+        } else {
+          course.style.display = 'none';
+        }
+      });
+
+      const noContentMessage = document.getElementById('noContentMessage');
+      if (hasVisibleItem) {
+        noContentMessage.style.opacity = '0';
+        setTimeout(() => {
+          noContentMessage.style.display = 'none';
+        }, 300); // Match this duration with the CSS transition
+      } else {
+        noContentMessage.style.display = 'block';
+        setTimeout(() => {
+          noContentMessage.style.opacity = '1';
+        }, 10); // Short delay to ensure display is set before fading in
+      }
     }
-  });
-
-  const noContentMessage = document.getElementById('noContentMessage');
-  if (hasVisibleItem) {
-    noContentMessage.style.opacity = '0';
-    setTimeout(() => {
-      noContentMessage.style.display = 'none';
-    }, 300); // Match this duration with the CSS transition
-  } else {
-    noContentMessage.style.display = 'block';
-    setTimeout(() => {
-      noContentMessage.style.opacity = '1';
-    }, 10); // Short delay to ensure display is set before fading in
-  }
-}
 
   </script>
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-  const urlParams = new URLSearchParams(window.location.search);
-  const modalName = urlParams.get('modal');
-  if (modalName) {
-    const modalToOpen = new bootstrap.Modal(document.getElementById(modalName + 'Modal'), {
-      keyboard: true
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const urlParams = new URLSearchParams(window.location.search);
+      const modalName = urlParams.get('modal');
+      if (modalName) {
+        const modalToOpen = new bootstrap.Modal(document.getElementById(modalName + 'Modal'), {
+          keyboard: true
+        });
+        modalToOpen.show();
+      }
     });
-    modalToOpen.show();
-  }
-});
-</script>
+  </script>
 
 
 </body>
