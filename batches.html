@@ -30,7 +30,7 @@
 
     <!-- SweetAlert2 JS -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
+    <script type="text/javascript" src="assets/json/batches.json"></script>
     <script>
         $(document).ready(function () {
             $('.gallery-item').fancybox();
@@ -103,24 +103,23 @@ https://templatemo.com/tm-569-edu-meeting
                 <!----UI Project Training----->
                 <div class="container">
                     <div class="row">
-
-                        <div class="col-md-2">
+                        <script>
+                        for (let i = 0; i < batches.col1.length; i++) {
+                            document.write(`<div class="col-md-2">
                             <div class="well">
-                                <button type="button" class="btn btn-danger btn-md">07<br>Feb,2024</button>
-                                <div style="color: white;">9:15 am-5:00 pm</div>
+                                <button type="button" class="btn btn-danger btn-md">${batches.col1[i].date}</button>
+                                <div style="color: white;">${batches.col1[i].time}</div>
                             </div>
                         </div>
-
 
                         <div class="col-md-6">
                             <div class="well">
-                                <h5 style="margin-top: 23px; color: white;">UI Project Training</h5>
+                                <h5 style="margin-top: 23px; color: white;">${batches.col1[i].title.replace(/_/g, ' ')}</h5>
 
-                                <p><span style="color:white;">HTML,HTML5,CSS,CSS3,JS(ES6,ES7),Bootstrap</span></p>
+                                <p><span style="color:white;">${batches.col1[i].description}</p>
 
                             </div>
                         </div>
-
 
                         <div class="col-md-4">
                             <div class="well">
@@ -129,147 +128,26 @@ https://templatemo.com/tm-569-edu-meeting
                                     Contact Us
                                 </button>
 
-
-                                <!-- Modal -->
-                                <div class="modal fade" id="contactModal" tabindex="-1"
-                                    aria-labelledby="contactModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog modal-xl">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title" id="contactModalLabel">LET'S GET IN TOUCH</h5>
-                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                    aria-label="Close"></button>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-
                                 <button type="button" class="btn btn-light" data-bs-toggle="modal"
-                                    data-bs-target="#courseModal" data-course="UI ">
+                                    data-bs-target="#courseModal" data-course="${batches.col1[i].title} ">
                                     Enroll Now
                                 </button>
 
+
+                                
+
                             </div>
                         </div>
+                        <hr style="color: white;width: 1130px;">
+                        `)
+
+                        }
+                            </script>
+                        
                     </div>
                 </div>
-                <hr style="color: white;width: 1130px;">
-                <!----Angular6/7 Project Training----->
-                <div class="container">
-                    <div class="row">
-
-                        <div class="col-md-2">
-                            <div class="well">
-                                <button type="button" class="btn btn-danger btn-md">07<br>Feb,2024</button>
-                                <div style="color: white;">9:15 am-5:00 pm</div>
-                            </div>
-                        </div>
-
-
-                        <div class="col-md-6">
-                            <div class="well">
-                                <h5 style="margin-top: 23px; color: white;">Angular6/7 Project Training</h5>
-
-                                <p><span
-                                        style="color:white;">HTML,HTML5,CSS,CSS3,JS(ES6,ES7),Bootstrap,Angular6/7</span>
-                                </p>
-
-                            </div>
-                        </div>
-
-
-                        <div class="col-md-4">
-                            <div class="well">
-                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                    data-bs-target="#contactModal" style="margin-right: 10px;">
-                                    Contact Us
-                                </button>
-
-                                <button type="button" class="btn btn-light" data-bs-toggle="modal"
-                                    data-bs-target="#courseModal" data-course="Angular6/7Project Training ">
-                                    Enroll Now
-                                </button>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <hr style="color: white;width: 1130px;">
-                <!----JavaScript Framework Project Training----->
-                <div class="container">
-                    <div class="row">
-
-                        <div class="col-md-2">
-                            <div class="well">
-                                <button type="button" class="btn btn-danger btn-md">07<br>Feb,2024</button>
-                                <div style="color: white;">9:15 am-5:00 pm</div>
-                            </div>
-                        </div>
-
-
-                        <div class="col-md-6">
-                            <div class="well">
-                                <h5 style="margin-top: 23px; color: white;">JavaScript Framework Project Training</h5>
-
-                                <p><span style="color:white;">JS(S6,ES7),Angular6/7,React,Node</span></p>
-
-                            </div>
-                        </div>
-
-
-                        <div class="col-md-4">
-                            <div class="well">
-                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                    data-bs-target="#contactModal" style="margin-right: 10px;">
-                                    Contact Us
-                                </button>
-
-                                <button type="button" class="btn btn-light" data-bs-toggle="modal"
-                                    data-bs-target="#courseModal" data-course="JavaScript Framework Project Training">
-                                    Enroll Now
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <hr style="color: white;width: 1130px;">
-                <!----Python Project Training----->
-                <div class="container">
-                    <div class="row">
-
-                        <div class="col-md-2">
-                            <div class="well">
-                                <button type="button" class="btn btn-danger btn-md">07<br>Feb,2024</button>
-                                <div style="color: white;">9:15 am-5:00 pm</div>
-                            </div>
-                        </div>
-
-
-                        <div class="col-md-6">
-                            <div class="well">
-                                <h5 style="margin-top: 23px; color: white;">Python Project Training</h5>
-
-                                <p><span style="color:white;">Basic,Advanced Python</span></p>
-
-                            </div>
-                        </div>
-
-
-                        <div class="col-md-4">
-                            <div class="well">
-                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                    data-bs-target="#contactModal" style="margin-right: 10px;">
-                                    Contact Us
-                                </button>
-                                <button type="button" class="btn btn-light" data-bs-toggle="modal"
-                                    data-bs-target="#courseModal" data-course="Python Training">
-                                   Enroll Now
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                
+                
             </div>
         </div>
         </div>
@@ -451,9 +329,6 @@ https://templatemo.com/tm-569-edu-meeting
             checkSection();
         });
     </script>
-
-</body>
-
 
 </body>
 
