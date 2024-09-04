@@ -32,65 +32,119 @@
   <link rel="stylesheet" href="assets/css/templatemo-edu-meeting.css">
   <link rel="stylesheet" href="assets/css/owl.css">
   <link rel="stylesheet" href="assets/css/lightbox.css">
-  
   <script type="text/javascript" src="assets/json/professional_courses.json"></script>
-
-  <style>
-    /* Styles for the modal */
-    .modal_pop {
-      display: none;
-      position: fixed;
-      z-index: 1000;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      overflow: auto;
-      background-color: rgba(0, 0, 0, 0.5);
-    }
-
-    /* Modal content */
-    .modal-content-pop {
-      background-color: #fefefe;
-      margin: 15% auto;
-      padding-top: auto;
-      padding-bottom: 10px;
-      padding-left: 10px;
-      padding-right: 10px;
-      border: 1px solid #888;
-      width: 80%;
-      max-width: 400px;
-      text-align: center;
-      border-radius: 5px;
-    }
-
-    /* Close button */
-    .close {
-      position: absolute;
-      top: -18px;
-      right: -6px;
-      /* Adjust the position to the right */
-      color: #000;
-      /* Set the color of the close button */
-      font-size: 28px;
-      /* Adjust the font size */
-      font-weight: bold;
-      /* Optionally, adjust the font weight */
-      padding: 10px;
-      /* Add padding for better clickability */
-      cursor: pointer;
-      /* Set cursor to pointer to indicate it's clickable */
-    }
-
-    .close:hover,
-    .close:focus {
-      color: black;
-      text-decoration: none;
-      cursor: pointer;
-    }
-  </style>
 </head>
 
+<style>
+  /* Modal styles */
+  .modal_pop {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 99;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+  }
+
+  .modal-content-pop {
+    background-color: #fefefe;
+    margin: 10% auto;
+    /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 500px;
+    /* Could be more or less, depending on screen size */
+    position: relative;
+  }
+
+  .close1 {
+    color: #aaa;
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+
+  }
+
+  .close1:hover,
+  .close1:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  /* Carousel styles */
+  .carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .carousel-item {
+    display: none;
+    /* Hide by default */
+    position: absolute;
+    width: 100%;
+    transition: opacity 1s ease-in-out;
+  }
+
+  .carousel-item.active {
+    display: block;
+    position: relative;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    position: absolute;
+    top: 50%;
+    width: auto;
+    height: 50px;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 7);
+    border: none;
+  }
+
+  .carousel-control-prev {
+    left: 0;
+  }
+
+  .carousel-control-next {
+    right: 0;
+  }
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: no-repeat center center;
+    background-size: 100% 100%;
+  }
+
+  .carousel-control-prev-icon {
+    background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 8"%3E%3Cpath d="M5.5 7L1 4l4.5-3" fill="none" stroke="%23fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/%3E%3C/svg%3E');
+  }
+
+  .carousel-control-next-icon {
+    background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 8"%3E%3Cpath d="M2.5 1l4.5 3-4.5 3" fill="none" stroke="%23fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/%3E%3C/svg%3E');
+  }
+</style>
 <body>
   <!--Start of Tawk.to Script-->
   <script type="text/javascript">
@@ -105,44 +159,117 @@
     })();
   </script>
   <!--End of Tawk.to Script-->
-
-  <!-- The Modal -->
-  <div id="myModal" class="modal_pop">
-    <!---- Modal content -->
+<!-- The Modal -->
+<div id="myModal" class="modal_pop">
+    <!-- Modal content -->
     <div class="modal-content-pop">
-      <span style="margin-left:360px;" class="close1">&times;</span>
-      <video width="100%" controls>
-        <source src="video/VID-20240426-WA0004.mp4" type="video/mp4">
-      </video>
+        <span class="close1">&times;</span>
+        <!-- Custom Carousel -->
+        <div id="videoCarousel" class="carousel-inner">
+            <!-- First video item -->
+            <div class="carousel-item active">
+                <video width="100%" controls>
+                    <source src="video/VID-20240426-WA0004.mp4" type="video/mp4">
+                </video>
+            </div>
+            <!-- Second Image item -->
+            <div class="carousel-item">
+                <img class="card-img-top" src="images/video_crousel/Android_development.png" alt="Card image" style="width:100%" class="img-fluid">
+            </div>
+            <!-- Third Image item -->
+            <div class="carousel-item">
+                <img class="card-img-top" src="images/video_crousel/learn_computer_science.png" alt="Card image" style="width:100%" class="img-fluid">
+            </div>
+            <!-- Fourth Image item -->
+            <div class="carousel-item">
+                <img class="card-img-top" src="images/video_crousel/web_development.jpg" alt="Card image" style="width:100%" class="img-fluid">
+            </div>
+            <!-- Fifth Image item -->
+            <div class="carousel-item">
+                <img class="card-img-top" src="images/video_crousel/node_js.png" alt="Card image" style="width:100%" class="img-fluid">
+            </div>
+            <!-- Sixth Image item -->
+            <div class="carousel-item">
+                <img class="card-img-top" src="images/video_crousel/mean_mern_stack_developer.png" alt="Card image" style="width:100%" class="img-fluid">
+            </div>
+            <!-- Seventh Image item -->
+            <div class="carousel-item">
+                <img class="card-img-top" src="images/video_crousel/java_developer.png" alt="Card image" style="width:100%" class="img-fluid">
+            </div>
+            <!-- Eight Image item -->
+            <div class="carousel-item">
+                <img class="card-img-top" src="images/video_crousel/graphic_designing.png" alt="Card image" style="width:100%" class="img-fluid">
+            </div>
+            <!-- Nine Image item -->
+            <div class="carousel-item">
+                <img class="card-img-top" src="images/video_crousel/college_student.png" alt="Card image" style="width:100%" class="img-fluid">
+            </div>
+            <!-- Tenth Image item -->
+            <div class="carousel-item">
+                <img class="card-img-top" src="images/video_crousel/data_structure.png" alt="Card image" style="width:100%" class="img-fluid">
+            </div>
+
+        </div>
+        <!-- Carousel controls -->
+        <button class="carousel-control-prev" id="prevBtn">&#10094;</button>
+        <button class="carousel-control-next" id="nextBtn">&#10095;</button>
     </div>
-  </div>
-
-
-  <script>
+</div>
+<script>
     // Get the modal
     var modal = document.getElementById('myModal');
 
     // Get the close button
     var closeBtn = document.querySelector('.close1');
 
-    // When the page loads
+    // Get carousel elements
+    var items = document.querySelectorAll('.carousel-item');
+    var currentIndex = 0;
+
+    // Function to show a specific carousel item
+    function showItem(index) {
+        items.forEach(function(item, i) {
+            item.classList.remove('active');
+            if (i === index) {
+                item.classList.add('active');
+            }
+        });
+    }
+
+    // Show the modal when the page loads
     window.onload = function () {
-      // Show the modal
-      modal.style.display = 'block';
+        modal.style.display = 'block';
     };
 
-    // When the user clicks on the close button, close the modal
+    // Close the modal when the close button is clicked
     closeBtn.onclick = function () {
-      modal.style.display = 'none';
+        modal.style.display = 'none';
     };
 
-    // When the user clicks anywhere outside of the modal, close it
+    // Close the modal when clicking outside of it
     window.onclick = function (event) {
-      if (event.target == modal) {
-        modal.style.display = 'none';
-      }
+        if (event.target == modal) {
+            modal.style.display = 'none';
+        }
     };
-  </script>
+
+    // Carousel controls
+    document.getElementById('prevBtn').onclick = function () {
+        currentIndex = (currentIndex > 0) ? currentIndex - 1 : items.length - 1;
+        showItem(currentIndex);
+    };
+
+    document.getElementById('nextBtn').onclick = function () {
+        currentIndex = (currentIndex < items.length - 1) ? currentIndex + 1 : 0;
+        showItem(currentIndex);
+    };
+
+    // Automatic sliding
+    setInterval(function() {
+        currentIndex = (currentIndex < items.length - 1) ? currentIndex + 1 : 0;
+        showItem(currentIndex);
+    }, 3000); // Change slide every 3 seconds
+</script>
   <!--menu-->
   <script type="text/javascript" src="menu.js"></script>
   <script type="text/javascript" src="callout.js"></script>
@@ -575,82 +702,6 @@
     </div>
   </section>
 
-  <section class="apply-now" id="apply" style="padding: 40px 0px;">
-    <div class="container">
-      <div class="col-lg-12">
-        <div class="section-heading">
-          <h2 style="text-align: center;">Our Students Review</h2>
-        </div>
-      </div>
-      <div class="row justify-content-center">
-        <div class="col-lg-12">
-          <div id="testimonialSlider" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <div class="testimonial">
-                  <img src="assets/images/profile-person1.png" alt="Testimonial Image 1">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua.</p>
-                  <h5>John Doe</h5>
-                  <p>Company ABC</p>
-                </div>
-              </div>
-
-              <div class="carousel-item">
-                <div class="testimonial">
-                  <img src="assets/images/profile-person3.png" alt="Testimonial Image 2">
-                  <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat.</p>
-                  <h5>Jane Doe</h5>
-                  <p>Company XYZ</p>
-                </div>
-              </div>
-
-              <div class="carousel-item">
-                <div class="testimonial">
-                  <img src="assets/images/profile-female2.png" alt="Testimonial Image 3">
-                  <p>Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                  <h5>Bob Smith</h5>
-                  <p>Company DEF</p>
-                </div>
-              </div>
-
-              <div class="carousel-item">
-                <div class="testimonial">
-                  <img src="assets/images/profile-person1.png" alt="Testimonial Image 4">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua.</p>
-                  <h5>Alice Johnson</h5>
-                  <p>Company GHI</p>
-                </div>
-              </div>
-
-            </div>
-
-            <button style="margin-left:-59px" class="carousel-control-prev" type="button"
-              data-bs-target="#testimonialSlider" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button style="margin-right:-59px" class="carousel-control-next" type="button"
-              data-bs-target="#testimonialSlider" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </section>
-
-<!--------GOOGLE REVIEW  BADGE CODE 
-LINK  https://dash.elfsight.com/apps/google-reviews?install=edbaae46-f71e-416d-b195-650cde5d14c2-->
-<!-- PROFESSIONAL COURSES CROUSEL  -->
-<script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
-<div class="elfsight-app-edbaae46-f71e-416d-b195-650cde5d14c2" data-elfsight-app-lazy></div>
-<!--------GOOGLE REVIEW  BADGE CODE END---->
-
 <section class="our-courses" id="courses" style="padding-bottom: 40px; padding-top: 40px;">
     <div class="container">
         <div class="row">
@@ -756,7 +807,7 @@ LINK  https://dash.elfsight.com/apps/google-reviews?install=edbaae46-f71e-416d-b
           courses.col1.forEach(function (course) {
               var itemHtml = `
                   <div class="item">
-                      <a href="junior-_geeks_coding.html">
+                      <a href="junior_geeks_coding.html">
                           <img src="assets/images/junior-geeks/${course.image}" alt="${course.course_name}">
                           <div class="down-content">
                               <h4>${course.course_name}</h4>
@@ -789,6 +840,12 @@ LINK  https://dash.elfsight.com/apps/google-reviews?install=edbaae46-f71e-416d-b
       }
   });
 </script>
+
+
+<!----------GOOGLE REVIEW -->
+<script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+  <div class="elfsight-app-95467440-94ad-490a-9e08-5773a27f66ef" data-elfsight-app-lazy></div>
+  
 
   <!--footer-->
   <script type="text/javascript" src="footer.js"></script>
