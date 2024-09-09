@@ -14,7 +14,7 @@
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+   
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iNl7lqyiYbNE3u5zHMHp0UA+POD4t1itd16u7jOFEL76P0DHS9tN8+OHL" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -46,6 +46,22 @@
             margin-top: 100px;
             height: 800px;
         }
+        
+ /* Custom style for the list */
+ #courseDescriptionMoreInfo ul {
+    list-style-type: none; /* Remove default bullets */
+    padding-left: 17px; /* Remove default padding */
+  }
+
+  #courseDescriptionMoreInfo ul li::before {
+    content: '•'; /* Add a dot before each item */
+    color: rgb(255, 255, 255); /* Change color of the dot to match your theme */
+    display: inline-block;
+    width: 1em; /* Adjust width if necessary */
+    margin-left: -0.5em; /* Adjust margin if necessary */
+    margin-right: 0.5em; /* Space between the dot and text */
+  }
+
     </style>
 
 
@@ -123,19 +139,18 @@ https://templatemo.com/tm-569-edu-meeting
 
                         <div class="col-md-4">
                             <div class="well">
-                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                    data-bs-target="#contactModal" style="margin-right: 10px;">
-                                    Contact Us
-                                </button>
-
-                                <button type="button" class="btn btn-light" data-bs-toggle="modal"
-                                    data-bs-target="#courseModal" data-course="${batches.col1[i].title} ">
-                                    Enroll Now
-                                </button>
+                                                 <!-- Button to trigger More Info Offcanvas -->
+<button type="button" class="btn btn-primary" data-bs-toggle="offcanvas" 
+    data-bs-target="#courseOffcanvas1" data-course="${batches.col1[i].title}" data-course="Course Title" data-description="${batches.col1[i].description}">
+    More Info
+</button>
 
 
-                                
-
+                              <!-- Button to trigger Enroll Now Offcanvas -->
+<button type="button" class="btn btn-danger" data-bs-toggle="offcanvas" 
+    data-bs-target="#courseOffcanvas" data-course="${batches.col1[i].title}">
+    Enroll Now
+</button>
                             </div>
                         </div>
                         <hr style="color: white;width: 1130px;">
@@ -153,117 +168,103 @@ https://templatemo.com/tm-569-edu-meeting
         </div>
         </div>
 
-
-        
-    <!-- Combined Modal for Contact Us and More Info -->
-    <div class="modal fade" id="courseModal" tabindex="-1" aria-labelledby="courseModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-xl">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="courseModalLabel">Course Details</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <!-- Form inside the Modal -->
-                    <form id="contactform">
-                        <!-- Course NAME -->
-                        <div class="mb-3">
-                            <label for="courseName" class="form-label">Course Name</label>
-                            <input type="text" class="form-control" id="courseName" name="courseName" readonly>
-                        </div>
-                        <!-- NAME -->
-                        <div class="mb-3">
-                            <label for="Name" class="form-label">Name</label>
-                            <input type="text" class="form-control" id="Name" name="Name">
-                        </div>
-                        <!-- E-mail -->
-                        <div class="mb-3">
-                            <label for="e-mail" class="form-label">E-mail</label>
-                            <input type="email" class="form-control" id="e-mail" name="e-mail" required>
-                        </div>
-                        <!-- Mobile No -->
-                        <div class="mb-3">
-                            <label for="Mobile" class="form-label">Mobile</label>
-                            <input type="number" class="form-control" id="Mobile" name="Mobile" pattern="\d{10}" maxlength="10" required>
-                        </div>
-                        <!-- Message -->
-                        <div class="mb-3">
-                            <label for="message" class="form-label">Message</label>
-                            <textarea class="form-control" id="message" name="message" rows="2"></textarea>
-                        </div>
-
-                        <button type="submit" class="btn btn-primary">Send</button>
-                    </form>
-                </div>
-            </div>
-        </div>
+ <!-- Offcanvas for Enroll Now -->
+<div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="courseOffcanvas" aria-labelledby="courseOffcanvasLabel" style="z-index: 1111;">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="courseOffcanvasLabel">Course Details</h5>
+      <button type="button" class="btn-close btn-light" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
+    <div class="offcanvas-body">
+      <form id="contactform">
+        <!-- Enroll Now Course Name -->
+        <div class="mb-3">
+          <label for="courseNameEnroll" class="form-label">Course Name</label>
+          <input type="text" class="form-control" id="courseNameEnroll" name="courseName" readonly>
+        </div>
+        <!-- NAME -->
+        <div class="mb-3">
+          <label for="Name" class="form-label">Name</label>
+          <input type="text" class="form-control" id="Name" name="Name">
+        </div>
+        <!-- E-mail -->
+        <div class="mb-3">
+          <label for="e-mail" class="form-label">E-mail</label>
+          <input type="email" class="form-control" id="e-mail" name="e-mail" required>
+        </div>
+        <!-- Mobile No -->
+        <div class="mb-3">
+          <label for="Mobile" class="form-label">Mobile</label>
+          <input type="number" class="form-control" id="Mobile" name="Mobile" pattern="\d{10}" maxlength="10" required>
+        </div>
+        <!-- Message -->
+        <div class="mb-3">
+          <label for="message" class="form-label">Message</label>
+          <textarea class="form-control" id="message" name="message" rows="2"></textarea>
+        </div>
+  
+        <button type="submit" class="btn btn-primary">Send</button>
+      </form>
+    </div>
+</div>
+<!-- Offcanvas for More Info -->
+<div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="courseOffcanvas1" aria-labelledby="courseOffcanvasLabel1" style="z-index: 1111;">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="courseOffcanvasLabel1">More Info</h5>
+        <button type="button" class="btn-close btn-light" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <!-- Display the course name as a heading -->
+        <h1 id="courseTitleMoreInfo" class="mb-3"></h1><br>
+        <h2>Description</h2><br>
+        <!-- Display the course description -->
+        <h4 id="courseDescriptionMoreInfo"></h4>
+    </div>
+</div>
+ <!-- Scripts To display course name in canvas More Info & Enroll Now  -->
+ <script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Auto-Fill Course Name in Enroll Now Offcanvas form
+    const courseOffcanvas = document.getElementById('courseOffcanvas');
+    const courseNameInputEnroll = document.getElementById('courseNameEnroll');
 
-    <!-- Your existing body content -->
-
-    <!-- Scripts -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Auto-Fill Course Name in Modal
-            const courseModal = document.getElementById('courseModal');
-            const courseNameInput = document.getElementById('courseName');
-
-            if (courseModal) {
-                courseModal.addEventListener('show.bs.modal', function (event) {
-                    const button = event.relatedTarget; // Button that triggered the modal
-                    const courseName = button.getAttribute('data-course'); // Extract course name from data attribute
-                    if (courseNameInput) {
-                        courseNameInput.value = courseName; // Set the course name in the input field
-                    }
-                });
+    if (courseOffcanvas) {
+        courseOffcanvas.addEventListener('show.bs.offcanvas', function (event) {
+            const button = event.relatedTarget; // Button that triggered the offcanvas
+            const courseName = button.getAttribute('data-course'); // Extract course name from data attribute
+            if (courseNameInputEnroll) {
+                courseNameInputEnroll.value = courseName; // Set the course name in the input field
             }
-
-            // Handle form submission
-            const form = document.getElementById('contactform');
-            if (form) {
-                form.addEventListener('submit', function (e) {
-                    e.preventDefault();
-
-                    const scriptURL = 'https://script.google.com/macros/s/AKfycbyzWpZIIAt4ZaXdOXZKWnFoj-REOq7PDbaGYqieIPxJDQhR6B9NLYj_SgSFFtVyGVjj/exec';
-                    const formData = new FormData(this);
-
-                    fetch(scriptURL, { method: 'POST', body: formData })
-                        .then(response => {
-                            Swal.fire({
-                                title: "Thank you!",
-                                text: "Your form is submitted successfully.",
-                                icon: "success",
-                                timer: 1500,
-                                showConfirmButton: false
-                            }).then(() => {
-                                window.location.reload(); // Reload after closing the alert
-                            });
-                        })
-                        .catch(error => {
-                            console.error('Error!', error.message);
-                            Swal.fire({
-                                title: "Oops!",
-                                text: "Something went wrong. Please try again later.",
-                                icon: "error"
-                            });
-                        });
-                });
-            }
-
-            // Restrict Mobile number input to 10 digits
-            document.getElementById('Mobile').addEventListener('input', function (e) {
-                var x = e.target.value.replace(/\D/g, '');
-                if (x.length > 10) {
-                    x = x.substring(0, 10);
-                }
-                e.target.value = x;
-            });
         });
-    </script>
+    }
 
-        <!---------modal more info form Ends-->
+});
+// Auto-Fill Course Name and Description in More Info Offcanvas
+document.addEventListener('DOMContentLoaded', function () {
+    
+    const courseOffcanvas1 = document.getElementById('courseOffcanvas1');
+    const courseTitleMoreInfo = document.getElementById('courseTitleMoreInfo');
+    const courseDescriptionMoreInfo = document.getElementById('courseDescriptionMoreInfo');
 
+    if (courseOffcanvas1) {
+        courseOffcanvas1.addEventListener('show.bs.offcanvas', function (event) {
+            const button = event.relatedTarget; // Button that triggered the offcanvas
+            const courseName = button.getAttribute('data-course'); // Extract course name from data attribute
+            const courseDescription = button.getAttribute('data-description'); // Extract course description from data attribute
+            
+            if (courseTitleMoreInfo) {
+                courseTitleMoreInfo.textContent = courseName; // Set the course name in the H1
+            }
+            
+            if (courseDescriptionMoreInfo) {
+                // Format the description as a list
+                const descriptionItems = courseDescription.split(',').map(item => `<li>${item.trim()}</li>`).join('');
+                courseDescriptionMoreInfo.innerHTML = `<ul>${descriptionItems}</ul>`; // Set the course description in the H4 as a list
+            }
+        });
+    }
+});
 
+</script>
     </section>
     <!--footer-->
     <script type="text/javascript" src="footer.js"></script>
@@ -340,20 +341,7 @@ https://templatemo.com/tm-569-edu-meeting
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-        // Auto-Fill Course Name in Modal
-        const courseModal = document.getElementById('courseModal');
-        const courseNameInput = document.getElementById('courseName');
-
-        if (courseModal) {
-            courseModal.addEventListener('show.bs.modal', function (event) {
-                const button = event.relatedTarget; // Button that triggered the modal
-                const courseName = button.getAttribute('data-course'); // Extract course name from data attribute
-                if (courseNameInput) {
-                    courseNameInput.value = courseName; // Set the course name in the input field
-                }
-            });
-        }
-
+     
         // Handle form submission
         const form = document.getElementById('contactform');
         if (form) {
@@ -386,8 +374,6 @@ https://templatemo.com/tm-569-edu-meeting
             });
         }
     });
-</script>
-<script>
     document.getElementById('Mobile').addEventListener('input', function (e) {
       var x = e.target.value.replace(/\D/g, '');
       if (x.length > 10) {
@@ -396,3 +382,5 @@ https://templatemo.com/tm-569-edu-meeting
       e.target.value = x;
     });
   </script>
+  
+  

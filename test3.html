@@ -46,21 +46,6 @@
             margin-top: 100px;
             height: 800px;
         }
- /* Custom style for the list */
- #courseDescriptionMoreInfo ul {
-    list-style-type: none; /* Remove default bullets */
-    padding-left: 17px; /* Remove default padding */
-  }
-
-  #courseDescriptionMoreInfo ul li::before {
-    content: '•'; /* Add a dot before each item */
-    color: rgb(255, 255, 255); /* Change color of the dot to match your theme */
-    display: inline-block;
-    width: 1em; /* Adjust width if necessary */
-    margin-left: -0.5em; /* Adjust margin if necessary */
-    margin-right: 0.5em; /* Space between the dot and text */
-  }
-
     </style>
 
 
@@ -138,8 +123,8 @@ https://templatemo.com/tm-569-edu-meeting
                             <div class="well">
 
                                 <!-- Button to trigger More Info Offcanvas -->
-<button type="button" class="btn btn-primary" data-bs-toggle="offcanvas" 
-    data-bs-target="#courseOffcanvas1" data-course="${batches.col1[i].title}" data-course="Course Title" data-description="${batches.col1[i].description}">
+<button type="button" class="btn btn-primary" data-bs-toggle="offcanvas"
+    data-bs-target="#courseOffcanvas1" data-course="${batches.col1[i].title}">
     More Info
 </button>
 
@@ -149,6 +134,9 @@ https://templatemo.com/tm-569-edu-meeting
     data-bs-target="#courseOffcanvas" data-course="${batches.col1[i].title}">
     Enroll Now
 </button>
+
+
+
 
                             </div>
                         </div>
@@ -164,7 +152,6 @@ https://templatemo.com/tm-569-edu-meeting
                 
             </div>
         </div>
-        
         </div>
         </div>
 <!-- Offcanvas for Enroll Now -->
@@ -208,17 +195,15 @@ https://templatemo.com/tm-569-edu-meeting
 <!-- Offcanvas for More Info -->
 <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="courseOffcanvas1" aria-labelledby="courseOffcanvasLabel1" style="z-index: 1111;">
     <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="courseOffcanvasLabel1">More Info</h5>
-        <button type="button" class="btn-close btn-light" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      <h5 class="offcanvas-title" id="courseOffcanvasLabel1">More Info</h5>
+      <button type="button" class="btn-close btn-light" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body">
-        <!-- Display the course name as a heading -->
-        <h1 id="courseTitleMoreInfo" class="mb-3"></h1><br>
-        <h2>Description</h2><br>
-        <!-- Display the course description -->
-        <h4 id="courseDescriptionMoreInfo"></h4>
-    </div>
-</div>
+      <!-- Display the course name as a heading -->
+      <h1 id="courseTitleMoreInfo" class="mb-3"></h1>
+      <h4> Description Content</h4>
+  </div>
+</div> 
  <!-- Scripts To display course name in canvas More Info & Enroll Now  -->
  <script>
 document.addEventListener('DOMContentLoaded', function () {
@@ -237,27 +222,18 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
 });
-// Auto-Fill Course Name and Description in More Info Offcanvas
+// Auto-Fill Course Name in More Info Offcanvas
 document.addEventListener('DOMContentLoaded', function () {
     
     const courseOffcanvas1 = document.getElementById('courseOffcanvas1');
     const courseTitleMoreInfo = document.getElementById('courseTitleMoreInfo');
-    const courseDescriptionMoreInfo = document.getElementById('courseDescriptionMoreInfo');
 
     if (courseOffcanvas1) {
         courseOffcanvas1.addEventListener('show.bs.offcanvas', function (event) {
             const button = event.relatedTarget; // Button that triggered the offcanvas
             const courseName = button.getAttribute('data-course'); // Extract course name from data attribute
-            const courseDescription = button.getAttribute('data-description'); // Extract course description from data attribute
-            
             if (courseTitleMoreInfo) {
                 courseTitleMoreInfo.textContent = courseName; // Set the course name in the H1
-            }
-            
-            if (courseDescriptionMoreInfo) {
-                // Format the description as a list
-                const descriptionItems = courseDescription.split(',').map(item => `<li>${item.trim()}</li>`).join('');
-                courseDescriptionMoreInfo.innerHTML = `<ul>${descriptionItems}</ul>`; // Set the course description in the H4 as a list
             }
         });
     }

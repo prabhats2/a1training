@@ -1,77 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offcanvas Course Details</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iNl7lqyiYbNE3u5zHMHp0UA+POD4t1itd16u7jOFEL76P0DHS9tN8+OHL" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <!-- Bootstrap JS with Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 </head>
 <body>
+    <!-- Buttons to trigger offcanvas -->
+    <button class="btn btn-primary" id="showCourseDetails" data-index="0 ">Show Course 1 Details</button>
+    <button class="btn btn-primary" id="showCourseDetails1" data-index="1">Show Course 2 Details</button>
+    <button class="btn btn-primary" id="showCourseDetails2" data-index="2">Show Course 3 Details</button>
 
-    
-<div class="offcanvas offcanvas-end" id="demo">
-  <div class="offcanvas-header">
-    <h1 class="offcanvas-title">Heading</h1>
-    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
-  </div>
-  <div class="offcanvas-body">
-        <!-- Form inside the Modal -->
-        <form id="contactform">
-            <!-- Course NAME -->
-            <div class="mb-3">
-                <label for="courseName" class="form-label">Course Name</label>
-                <input type="text" class="form-control" id="courseName" name="courseName" readonly>
-            </div>
-            <!-- NAME -->
-            <div class="mb-3">
-                <label for="Name" class="form-label">Name</label>
-                <input type="text" class="form-control" id="Name" name="Name">
-            </div>
-            <!-- E-mail -->
-            <div class="mb-3">
-                <label for="e-mail" class="form-label">E-mail</label>
-                <input type="email" class="form-control" id="e-mail" name="e-mail" required>
-            </div>
-            <!-- Mobile No -->
-            <div class="mb-3">
-                <label for="Mobile" class="form-label">Mobile</label>
-                <input type="number" class="form-control" id="Mobile" name="Mobile" pattern="\d{10}" maxlength="10" required>
-            </div>
-            <!-- Message -->
-            <div class="mb-3">
-                <label for="message" class="form-label">Message</label>
-                <textarea class="form-control" id="message" name="message" rows="2"></textarea>
-            </div>
+   
 
-            <button type="submit" class="btn btn-primary">Send</button>
-        </form>
-  </div>
-</div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Example JSON data
+        const jsonData = [
+            {
+                "title": "Course 1",
+                "description": "This is the description for Course 1."
+            },
+            {
+                "title": "Course 2",
+                "description": "This is the description for Course 2."
+            },
+            {
+                "title": "Course 3",
+                "description": "This is the description for Course 3."
+            }
+        ];
 
+        // Function to open offcanvas with course details
+        function openOffcanvas(index) {
+            const data = jsonData[index];
+            document.getElementById('courseName').textContent = data.title;
+            document.getElementById('courseDescription').textContent = data.description;
 
+            const offcanvas = new bootstrap.Offcanvas(document.getElementById('courseOffcanvas1'));
+            offcanvas.show();
+        }
 
-  <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo"  >
-   More Info 
-  </button>
-
-<script>
-     document.addEventListener('DOMContentLoaded', function () {
-           
-           // Auto-Fill Course Name in Modal
-           const courseModal = document.getElementById('courseModal');
-           const courseNameInput = document.getElementById('courseName');
-
-           if (courseModal) {
-               courseModal.addEventListener('show.bs.modal', function (event) {
-                   const button = event.relatedTarget; // Button that triggered the modal
-                   const courseName = button.getAttribute('data-courses'); // Extract course name from data attribute
-                   if (courseNameInput) {
-                       courseNameInput.value = courseName; // Set the course name in the input field
-                   }
-               });
-           }
-        })
-</script>
+        // Attach event listeners to buttons
+        document.querySelectorAll('[id^="showCourseDetails"]').forEach(button => {
+            button.addEventListener('click', function() {
+                openOffcanvas(parseInt(this.getAttribute('data-index')));
+            });
+        });
+    </script> <!-- Offcanvas -->
+    <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="courseOffcanvas1" aria-labelledby="courseOffcanvasLabel" style="z-index: 1111;">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="courseOffcanvasLabel">Course Details</h5>
+            <button type="button" class="btn-close btn-light" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <h6 id="courseName">Course Name</h6>
+            <p id="courseDescription">Course Description</p>
+        </div>
+    </div>
 </body>
 </html>
