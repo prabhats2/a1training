@@ -1,0 +1,45 @@
+const events = {
+     "col1": [
+              {
+                "title": "AWS Webinar",
+                "image": "aws.png",
+                "MoreInfoImg": "aws.jpeg",
+                "description": "Unlocking the Power of the Cloud: Join A1 Training Institute's AWS Masterclass!<br>",
+                "moreinfodescription": "<strong><br>Introduction to AWS</strong><br>&#8226; Creating a free tier AWS account<br>&#8226; Launching an EC2 Instance<br>&#8226; AWS Networking (VPC)<br>&#8226; AWS Route 53<br>&#8226; Amazon S3 Bucket<br>&#8226; Live Q/A with AWS experts<br>&#8226; Live Project",
+                "pdf": "assets/pdf/events/AWS-Webinar.pdf",
+                "date": "10-12 Aug, 2024",
+                "time": "07:00 PM-08:00 PM",
+                "form_url": "https://docs.google.com/forms/d/e/1FAIpQLSfDzJJhzAuTsPkmVGtZ9VG3kTEwaYvOZj4xBiCy73GuBUgzBw/viewform",
+                "moreInfoTitle": "FREE AWS WEBINAR",
+                "moreInfoDetails": "Learn About the Most Popular Cloud Service Provider",
+                "moreInfoLocation": "Noida, Delhi, Bangalore, Pune"
+              },
+              {
+                "title":"HTML / CSS Webinar",
+                "image": "html-css.png",
+                "MoreInfoImg":"html-css-1.jpeg",
+                "description": "Design Like a Pro: HTML & CSS Fundamentals with A1 Training Institute <br>",
+                "moreinfodescription": "<strong><br> HTML Topics: </strong> <br> &#8226; HTML Elements<br> &#8226; HTML Lists, Forms, Table<br> &#8226; HTML Layout Design & DIV Concepts (VPC)<br> <br><strong> CSS Topics: </strong> <br> &#8226; Types Of CSS<br> &#8226; CSS Pseudo-Class / Element<br> &#8226; CSS Margin & Padding<br> &#8226; Live Q/A<br> &#8226; Live Project",
+                "pdf": "assets/pdf/events/AWS-Webinar.pdf",
+                "date": "17-19 Aug, 2024",
+                "time": "06:00 PM-07:00 PM",
+                "form_url": "https://docs.google.com/forms/d/e/1FAIpQLSfDzJJhzAuTsPkmVGtZ9VG3kTEwaYvOZj4xBiCy73GuBUgzBw/viewform"
+              }
+              ,
+              {
+                "title":"GIT Webinar",
+                "image": "git.png",
+                "MoreInfoImg":"git-1.jpeg",
+                "description": "Master Git: Version Control Essentials with A1 Training Institute",
+                "moreinfodescription": "<strong><br> Introduction to Git </strong> <br><strong><br> Basic Topics:<br></strong> &#8226; Setting Up and Basic Commands (git init, git add, git commit)<br> &#8226; Branching, Merging, and Conflict Resolution<br> &#8226; Collaboration (Cloning, Pull Requests)<br> <strong><br> Advanced Topics:<br></strong>&#8226; Rebasing vs. Merging <br> &#8226; Stashing Changes<br> &#8226; Git Hooks<br>",
+                "pdf": "assets/pdf/events/AWS-Webinar.pdf",
+                "date": "17-19 Aug, 2024",
+                "time": "06:00 PM-07:00 PM",
+                "form_url": "https://docs.google.com/forms/d/e/1FAIpQLSfDzJJhzAuTsPkmVGtZ9VG3kTEwaYvOZj4xBiCy73GuBUgzBw/viewform"
+              }
+              // More events...
+      
+      
+    ]
+  };
+  

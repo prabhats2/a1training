@@ -18,7 +18,7 @@ let batches = {
         "date": "07<br>Feb,2024",
         "time": "9:15 am-5:00 pm",
         "title": "JavaScript Framework Project Training",
-        "description": "JS (ES6, ES7), React, Vue, Angular",
+        "description": "JS (ES6-ES7), React, Vue, Angular",
         "Data": "JavaScript Framework"
       },
       {

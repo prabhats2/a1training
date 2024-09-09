@@ -1,77 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Offcanvas Course Details</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-GLhlTQ8iNl7lqyiYbNE3u5zHMHp0UA+POD4t1itd16u7jOFEL76P0DHS9tN8+OHL" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
-    <!-- Bootstrap JS with Popper.js -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="assets/json/events.json"></script>
+  <style>
+    .modal-body img {
+      max-width: 100%;
+      height: auto;
+    }
+    .more-text {
+      display: none;
+    }
+  </style>
 </head>
 <body>
-    <!-- Buttons to trigger offcanvas -->
-    <button class="btn btn-primary" id="showCourseDetails" data-index="0 ">Show Course 1 Details</button>
-    <button class="btn btn-primary" id="showCourseDetails1" data-index="1">Show Course 2 Details</button>
-    <button class="btn btn-primary" id="showCourseDetails2" data-index="2">Show Course 3 Details</button>
-
-   
-
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
-    <script>
-        // Example JSON data
-        const jsonData = [
-            {
-                "title": "Course 1",
-                "description": "This is the description for Course 1."
-            },
-            {
-                "title": "Course 2",
-                "description": "This is the description for Course 2."
-            },
-            {
-                "title": "Course 3",
-                "description": "This is the description for Course 3."
+    <section class="meetings-page" id="meetings">
+        <script>
+            // Assuming events.col1 is an array of event objects
+            for (let i = 0; i < events.col1.length; i++) {
+                document.write(`
+                    <div class="container item-container" data-title="aws" id="aws" class="section">
+                        <div class="row">
+                            <!-- AWS Webinar Section -->
+                            <div class="col-md-3">
+                                <div class="well">
+                                    <img src="assets/images/events/${events.col1[i].image}" alt="Event Image"> 
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="col-lg">
+                                    <h5 style="margin-top: 23px; color: white;">${events.col1[i].title}</h5>
+                                    <p style="color: white;">
+                                        <span>${events.col1[i].description}</span>
+                                        <span class="more-text">
+                                            ${events.col1[i].moreinfodescription}
+                                        </span>
+                                        <span class="read-more-btn" onclick="toggleReadMore(this)">Read More</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="well-1" style="padding:0px">
+                                    <div class="well">
+                                        <button type="button" class="btn btn-danger btn-md">10-12<br>Aug, 2024</button>
+                                        <a href="${events.col1[i].pdf}" target="_blank">
+                                            <button type="button" class="btn btn-danger btn-md">
+                                                <i class="fa fa-download" style="font-size:20px"></i><br>
+                                                <span style="margin-left:14px; margin-right:14px;">Notes</span>
+                                            </button>
+                                        </a>
+                                        <div style="color: white; margin:10px; margin-left:40px;">07:00 PM-08:00 PM</div>
+                                    </div>
+                                    <!-- BOOK NOW BUTTON -->
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#courseModal" data-course-name="${events.col1[i].title}">Book Now</button>
+                                    
+                                    <!-- MORE INFO BUTTON -->
+                                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#myModal${i}">More info</button>
+                                </div>
+                            </div>
+                        </div>
+                        <hr style="color: white; width: 1130px;">
+                    </div>
+                    
+                    <!-- MORE INFO Modal -->
+                    <div class="modal fade" id="myModal${i}" tabindex="-1" aria-labelledby="myModalLabel${i}" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title" id="myModalLabel${i}">${events.col1[i].title}</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <img src="assets/images/events/${events.col1[i].image}" alt="Event Image">
+                                    <p>${events.col1[i].moreinfodescription}</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `);
             }
-        ];
 
-        // Function to open offcanvas with course details
-        function openOffcanvas(index) {
-            const data = jsonData[index];
-            document.getElementById('courseName').textContent = data.title;
-            document.getElementById('courseDescription').textContent = data.description;
-
-            const offcanvas = new bootstrap.Offcanvas(document.getElementById('courseOffcanvas1'));
-            offcanvas.show();
-        }
-
-        // Attach event listeners to buttons
-        document.querySelectorAll('[id^="showCourseDetails"]').forEach(button => {
-            button.addEventListener('click', function() {
-                openOffcanvas(parseInt(this.getAttribute('data-index')));
-            });
-        });
-    </script> <!-- Offcanvas -->
-    <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="courseOffcanvas1" aria-labelledby="courseOffcanvasLabel" style="z-index: 1111;">
-        <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="courseOffcanvasLabel">Course Details</h5>
-            <button type="button" class="btn-close btn-light" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-            <h6 id="courseName">Course Name</h6>
-            <p id="courseDescription">Course Description</p>
-        </div>
-    </div>
+            function toggleReadMore(btn) {
+                const moreText = btn.previousElementSibling;
+                if (moreText.style.display === "none") {
+                    moreText.style.display = "inline";
+                    btn.textContent = "Read Less";
+                } else {
+                    moreText.style.display = "none";
+                    btn.textContent = "Read More";
+                }
+            }
+        </script>
+    </section>
 </body>
 </html>
