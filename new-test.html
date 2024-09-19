@@ -3,35 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Buttons and Modals</title>
-    
+    <title>Social Media Embeds</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        .btn-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px; /* Space between buttons */
+        .social-media-div {
+            border: 1px solid #ddd; /* Optional: for visual separation */
+            padding: 20px; /* Optional: for spacing inside the divs */
+            text-align: center; /* Centers content inside each div */
+            background-color: #f8f9fa; /* Optional: background color */
+            height: 343px; /* Fixed height for all divs */
+            overflow: hidden; /* Ensures content doesn't overflow */
+            margin-bottom: 20px; /* Spacing below each div */
+        }
+        .social-media-div iframe,
+        .social-media-div .twitter-timeline {
+            width: 100%;
+            height: 100%;
         }
     </style>
 </head>
 <body>
-    <div class="container mt-3">
+    <div class="container mt-4">
         <div class="row">
-            <div class="col-md-4">
-                <div class="well-1">
-                    <div class="btn-container">
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#contactModal">
-                            Contact Us
-                        </button>
-                        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#myModal">
-                            More info
-                        </button>
-                    </div>
+          <!-- Facebook Embed -->
+<div class="col-md-3 mb-4">
+  <div class="social-media-div">
+      <div class="fb-page" data-href="https://www.facebook.com/a1projecttraining/" data-tabs="timeline" data-width="" data-height="300" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+          <blockquote cite="https://www.facebook.com/a1projecttraining/" class="fb-xfbml-parse-ignore">
+              <a href="https://www.facebook.com/a1projecttraining/">A1 Project Training</a>
+          </blockquote>
+      </div>
+      <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v12.0"></script>
+  </div>
+</div>
+
+                 <!-- Instagram Profile Link -->
+                 <div class="col-md-3 mb-4">
+                  <div class="social-media-div d-flex justify-content-center align-items-center">
+                      <a href="https://www.instagram.com/a1traininginstitute167/" target="_blank" style="text-decoration: none; color: #000;">
+                          <div style="background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); text-align: center;">
+                              <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram Logo" style="width: 50px; height: 50px;"/>
+                              <p style="margin: 10px 0;">Follow us on Instagram</p>
+                          </div>
+                      </a>
+                  </div>
+              </div>
+
+            <!-- Twitter Embed -->
+            <div class="col-md-3 mb-4">
+                <div class="social-media-div">
+                    <a class="twitter-timeline" href="https://twitter.com/a1training167" data-height="300" data-chrome="noheader nofooter noborders" data-tweet-limit="1"></a>
+                    <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+            </div>
+
+            <!-- Google Maps Embed -->
+            <div class="col-md-3 mb-4">
+                <div class="social-media-div">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3507.444203934121!2d77.56183207528264!3d28.466166275756017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cc1ace1d0021d%3A0x4a817521c4ed4de2!2sA1%20Training(Only%20Coding)-Best%20software%20training%20institute%20in%20Delhi%2Cnoida%20and%20greater%20noida!5e0!3m2!1sen!2sin!4v1726565286366!5m2!1sen!2sin" loading="lazy"></iframe>
                 </div>
             </div>
         </div>
     </div>
-  
 
-    
+    <!-- Load Bootstrap JS (optional for more features) -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

@@ -1,0 +1,26 @@
+let indexcourses = {
+    "col1": [
+      {
+        "title": "MEAN Stack",
+        "image": "mean.png",
+      },
+      {
+        "title": "MERN Stack",
+        "image": "mern.png",
+      },
+      { "title": "AWS Training",
+      "image": "aws.png",
+      },
+      {
+        "title": "DevOps Training",
+        "image": "devops.png",
+      },
+      {
+        "title": "Python Training",
+        "image": "python.png",
+      }
+    ]
+  };
+  
+
+  
