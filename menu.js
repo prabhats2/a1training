@@ -48,6 +48,7 @@ document.write(`  <!-- Sub Header -->
                             </ul>
                         </li>
                         <li><a href="batches.html">Batches</a></li>
+                        <li><a href="blog.html">Blog</a></li>
                        <li><a href="events.html">Events</a></li>
 
                         <li class="has-sub">

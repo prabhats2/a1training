@@ -1,7 +1,4 @@
 document.write(`  <section class="contact-us" id="contact" style="background-color: rgb(40, 89, 153);background-image: none;padding: 50px 0px 0px 0px;">
-
-
-
  <link rel="stylesheet" href="assets/css/icon-style.css">
  <div class="call-icon-left icons">
         <a href="tel:+91 8368979712">
@@ -14,10 +11,7 @@ document.write(`  <section class="contact-us" id="contact" style="background-col
             <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
         </a>
     </div>
-
-
-    <section class="contact-us" id="contact" style="background-color: rgb(40, 89, 153);background-image: none;padding: 50px 0px 0px 0px;">
-    <div class="container-fluid">
+ <div class="container-fluid">
   <div class="row">
     <div class="col-lg-12 align-self-center">
       <div class="row">
@@ -36,6 +30,7 @@ document.write(`  <section class="contact-us" id="contact" style="background-col
                       padding: 10px 20px;
                       cursor: pointer;
                       margin-bottom: 10px;
+                      margin-right: 10px; /* Adds space between buttons */
                     }
 
                     .button {
@@ -44,7 +39,6 @@ document.write(`  <section class="contact-us" id="contact" style="background-col
                       color: white;
                       padding: 5px 10px;
                       text-align: center;
-                      text-decoration: none;
                       display: inline-block;
                       font-size: 16px;
                       margin: 4px 2px;
@@ -92,68 +86,92 @@ document.write(`  <section class="contact-us" id="contact" style="background-col
                     }
 
                     .button4:hover {
-                      background-color: #e7e7e7;
+                      background-color: blue;
+                      color: white;
                     }
 
-                    .tab-content {
-                      display: none;
-                      margin-top: 20px; /* Add spacing between buttons and content */
+                    /* Centering content in the display-container */
+                    .display-container {
+                      border: 2px solid #ddd;
+                      padding: 20px;
+                      margin-top: 20px;
+                      min-height: 100px;
+                      display: flex;
+                      justify-content: center; /* Center horizontally */
+                      align-items: center; /* Center vertically */
+                      text-align: center; /* Center the text */
                     }
                   </style>
 
-                  <div class="tab-container">
+                  <!-- Buttons -->
+                  <div class="tab-container-fluid">
                     <div class="tab-btn button button1" onclick="openTab('tab1')">NOIDA EXTENSION</div>
-                    <div id="tab1" class="tab-content">
-                      <ul class="contact">
-                        <h6><strong>Noida Extension</strong></h6>
-                        <li><p><strong>Address:- </strong>Earthcon Sanskriti, Sector 1, Noida Extension</p></li>
-                        <li><p><i class="fa fa-phone"></i> <strong>Phone:</strong> +91 8368979712,6380486914</p></li>
-                        <li><p><i class="fa fa-envelope"></i> <strong>Email:</strong> a1training167@gmail.com</p></li>
-                      </ul>
-                    </div>
-
                     <div class="tab-btn button button2" onclick="openTab('tab2')">GREATER NOIDA BRANCH I</div>
-                    <div id="tab2" class="tab-content">
-                      <ul class="contact">
-                        <h6><strong>Greater Noida-Alpha Branch I</strong></h6>
-                        <li><p><strong>Address:- </strong>Alpha Commercial Belt, Paras Nath Tower, 3rd Floor</p></li>
-                        <li><p><i class="fa fa-phone"></i> <strong>Phone:</strong> +91 8368979712,6380486914</p></li>
-                        <li><p><i class="fa fa-envelope"></i> <strong>Email:</strong> a1training167@gmail.com</p></li>
-                      </ul>
-                    </div>
-
                     <div class="tab-btn button button3" onclick="openTab('tab3')">GREATER NOIDA BRANCH II</div>
-                    <div id="tab3" class="tab-content">
-                      <ul class="contact">
-                        <h6><strong>Greater Noida-Omicron Branch II</strong></h6>
-                        <li><p><strong>Address:- </strong>C-167, Omicron I, Block C, 6% Abadi, Greater Noida</p></li>
-                        <li><p><i class="fa fa-phone"></i> <strong>Phone:</strong> +91 8368979712,6380486914</p></li>
-                        <li><p><i class="fa fa-envelope"></i> <strong>Email:</strong> a1training167@gmail.com</p></li>
-                      </ul>
-                    </div>
-
                     <div class="tab-btn button button4" onclick="openTab('tab4')">DELHI</div>
-                    <div id="tab4" class="tab-content">
-                      <ul class="contact">
-                        <h6><strong>Delhi-Timarpur Branch</strong></h6>
-                        <li><p><strong>Address:- </strong>347, Lancer Road, Timarpur, New Delhi-110054</p></li>
-                        <li><p><i class="fa fa-phone"></i> <strong>Phone:</strong> +91 6206126433,8368979712</p></li>
-                        <li><p><i class="fa fa-envelope"></i> <strong>Email:</strong> a1training167@gmail.com</p></li>
-                      </ul>
-                    </div>
+                  </div>
+
+                  <!-- Hidden content for each tab -->
+                  <div id="tab1" class="tab-content" style="display:none;">
+                    <ul class="contact">
+                      <h6><strong>Noida Extension</strong></h6>
+                      <li><p><strong>Address:- </strong>Earthcon Sanskriti, Sector 1, Noida Extension</p></li>
+                      <li><p><i class="fa fa-phone"></i> <strong>Phone:</strong> +91 8368979712,6380486914</p></li>
+                      <li><p><i class="fa fa-envelope"></i> <strong>Email:</strong> a1training167@gmail.com</p></li>
+                    </ul>
+                  </div>
+
+                  <div id="tab2" class="tab-content" style="display:none;">
+                    <ul class="contact">
+                      <h6><strong>Greater Noida-Alpha Branch I</strong></h6>
+                      <li><p><strong>Address:- </strong>Alpha Commercial Belt, Paras Nath Tower, 3rd Floor</p></li>
+                      <li><p><i class="fa fa-phone"></i> <strong>Phone:</strong> +91 8368979712,6380486914</p></li>
+                      <li><p><i class="fa fa-envelope"></i> <strong>Email:</strong> a1training167@gmail.com</p></li>
+                    </ul>
+                  </div>
+
+                  <div id="tab3" class="tab-content" style="display:none;">
+                    <ul class="contact">
+                      <h6><strong>Greater Noida-Omicron Branch II</strong></h6>
+                      <li><p><strong>Address:- </strong>C-167, Omicron I, Block C, 6% Abadi, Greater Noida</p></li>
+                      <li><p><i class="fa fa-phone"></i> <strong>Phone:</strong> +91 8368979712,6380486914</p></li>
+                      <li><p><i class="fa fa-envelope"></i> <strong>Email:</strong> a1training167@gmail.com</p></li>
+                    </ul>
+                  </div>
+
+                  <div id="tab4" class="tab-content" style="display:none;">
+                    <ul class="contact">
+                      <h6><strong>Delhi-Timarpur Branch</strong></h6>
+                      <li><p><strong>Address:- </strong>347, Lancer Road, Timarpur, New Delhi-110054</p></li>
+                      <li><p><i class="fa fa-phone"></i> <strong>Phone:</strong> +91 6206126433,8368979712</p></li>
+                      <li><p><i class="fa fa-envelope"></i> <strong>Email:</strong> a1training167@gmail.com</p></li>
+                    </ul>
                   </div>
 
                   <script>
                     function openTab(tabName) {
                       var i, tabContent;
+                      var displayContainer = document.getElementById('display-container');
+                      displayContainer.style.display='block'
+
+                      // Hide all tab contents
                       tabContent = document.getElementsByClassName("tab-content");
                       for (i = 0; i < tabContent.length; i++) {
                         tabContent[i].style.display = "none";
                       }
-                      document.getElementById(tabName).style.display = "block";
+
+                      // Get the selected tab's content and show it in the display container
+                      var selectedTabContent = document.getElementById(tabName).innerHTML;
+                      displayContainer.innerHTML = selectedTabContent;
                     }
                   </script>
                 </div>
+                
+                <!-- Content display div, located below the buttons -->
+                <div id="display-container" class="display-container" style="display:none;">
+                  Click on a button to see the details here.
+                </div>
+
               </div>
             </div>
           </form>
@@ -162,6 +180,7 @@ document.write(`  <section class="contact-us" id="contact" style="background-col
     </div>
   </div>
 </div>
+
 
 
     
