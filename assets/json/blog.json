@@ -1,0 +1,43 @@
+let blog = {
+  "col1": [
+    {
+      "image" :"computer_science.png",
+      "title":"Blog Post Title 1",
+      "description":"A brief description of the blog post goes here.",
+      "category": "programming"  
+    },
+    {
+      "image" :"photo-shop.png",
+      "title":"Blog Post Title 2",
+      "description":"A brief description of the blog post goes here.",
+       "category": "designing"
+    },
+    {
+      "image" :"illustrator.png",
+      "title":"Blog Post Title 3",
+      "description":"A brief description of the blog post goes here.",
+       "category": "designing"
+
+    },
+    {
+      "image" :"canva.png",
+      "title":"Blog Post Title 4",
+      "description":"A brief description of the blog post goes here.",
+       "category": "designing"
+    },
+    {
+      "image" :"cc+.png",
+      "title":"Blog Post Title 4",
+      "description":"A brief description of the blog post goes here.",
+      "category": "programming"
+    },
+    {
+      "image" :"game-development.png",
+      "title":"Blog Post Title 4",
+      "description":"A brief description of the blog post goes here.",
+      "category": "web-development"
+    }
+  
+    
+  ]
+};
