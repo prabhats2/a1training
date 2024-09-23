@@ -1,0 +1,114 @@
+const formData = {
+    "form": {
+      "action": "",
+      "method": "POST",
+      "class": "form-container",
+      "style": "height: 475px; overflow-y: scroll;",
+      "id": "contactform",
+      "fields": [
+        {
+          "type": "text",
+          "label": "Name:",
+          "name": "full_name",
+          "id": "fullname",
+          "required": true,
+          "class": "form-control",
+          "placeholder": "Enter Name"
+        },
+        {
+          "type": "email",
+          "label": "Email Address:",
+          "name": "email",
+          "id": "email_address",
+          "required": true,
+          "class": "form-control",
+          "placeholder": "E-Mail Address"
+        },
+        {
+          "type": "number",
+          "label": "Mobile No.",
+          "name": "mobileno",
+          "id": "mobileno",
+          "pattern": "\\d{10}",
+          "maxlength": 10,
+          "required": true,
+          "class": "form-control",
+          "placeholder": "Mobile No"
+        },
+        {
+          "type": "select",
+          "label": "Select Subject:",
+          "name": "subject",
+          "id": "selectpickerGroups",
+          "required": true,
+          "class": "form-select selectpicker w-1",
+           "placeholder":"Choose",
+          "options": {
+            "Web Designing": ["Angular Js", "React Js", "Web Designing", "UI & UX", "PHP Experts", "PHP Full Stack"],
+            "Cloud Computing": ["AWS Training", "AZURE Training", "GCP"],
+            "Devops": ["Kubernetes Training", "Docker Certification Training", "Ansible Training", "Devops Training", "Jenkins", "Terraform", "Linux", "Git", "Shell Scripting"],
+            "Programming": ["Python Training", "JavaScript Training", "Unix Shell Scripting Training", "Java Certification", "C And C++ Training", ".NET Training"],
+            "Database Developer": ["MySQL Training", "MongoDB Training", "SQL Server DBA Training"],
+            "Mobile App Development": ["Android", "I-Phone"],
+            "Data Science & AI": ["Machine Learning Training", "Data Science Training", "Data Science With Python Training", "Deep Learning Course", "Artificial Intelligence Course"],
+            "MIS-Advanced Excel-BI Tools": ["Power Bi", "Advanced Microsoft Excel", "MIS"],
+            "Digital Marketing": ["Advanced Digital Marketing", "Digital Marketing"],
+            "Industrial Training": ["6 Weeks Summer Training", "6 Months Industrial Training"],
+            "Multimedia Animation-Graphics": ["Graphic Designing", "Graphic Designing Pro", "Motion Graphic Course", "Multimedia & Animation", "Graphic Motion Pro Course", "Multimedia & Animation (Diploma)", "Videography Course", "Scriptwriting & Story Boarding", "Film Making"],
+            "Software Testing": ["Manual Testing", "Manual + Selenium", "Full Stack QA", "Java With Selenium", "REST Assured API", "Appium Testing", "API Testing"],
+            "Project Management": ["Primavera P6 Testing", "Agile Testing", "Microsoft Excel Training", "Scrum Master Training"],
+            "Full Stack Development": ["MEAN Stack", "Mern Stack"]
+          }
+         
+
+        },
+        {
+          "type": "radio",
+          "label": "Select Mode of Course (select one):",
+          "name": "mode",
+          "id": "mode",
+          "options": ["Online", "Offline"]
+        },
+        {
+          "type": "date",
+          "label": "DOB:",
+          "name": "Dob",
+          "id": "dob",
+          "class": "form-control",
+          "placeholder": "DOB:"
+        },
+        {
+          "type": "textarea",
+          "label": "Address:",
+          "name": "Address",
+          "id": "address",
+          "class": "form-control",
+          "rows": 3,
+          "placeholder": "Address"
+        },
+        {
+          "type": "text",
+          "label": "How did you learn about us?:",
+          "name": "About_us",
+          "id": "Learn_About_Us",
+          "class": "form-control",
+          "placeholder": "Social Media"
+        },
+        {
+          "type": "textarea",
+          "label": "Other Courses Not Included in list:",
+          "name": "message",
+          "id": "not listed",
+          "class": "form-control",
+          "rows": 3,
+          "placeholder": "Other Courses"
+        }
+      ],
+      "submit": {
+        "type": "submit",
+        "name": "submitContact",
+        "class": "btn btn-primary",
+        "text": "Submit"
+      }
+    }
+  };

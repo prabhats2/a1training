@@ -142,14 +142,14 @@ body {font-family: Arial, Helvetica, sans-serif;}
 </style>`)
 document.write(`<!-- Callout on the right side -->
 <div class="callout">
-  <a href="events.php"><div class="callout-header">Events</div></a>
+  <a href="events.html"><div class="callout-header">Events</div></a>
   <span class="closebtn" onclick="this.parentElement.style.display='none';">×</span>
   <div class="callout-container">
     <!-- Image slider -->
     <div class="slider"> 
-      <a href="events.php#git"><img class="slides active" src="assets/images/events/git.png" alt="git"></a>
-      <a href="events.php#aws"><img class="slides" src="assets/images/events/aws.png" alt="aws"></a>
-      <a href="events.php#html-css"><img class="slides" src="assets/images/events/html-css.png" alt="html-css"></a>
+      <a href="events.html#GIT"><img class="slides active" src="assets/images/events/git.png" alt="git"></a>
+      <a href="events.html#AWS"><img class="slides" src="assets/images/events/aws.png" alt="aws"></a>
+      <a href="events.html#HTML/CSS"><img class="slides" src="assets/images/events/html-css.png" alt="html-css"></a>
       <!-- Next and previous buttons -->
       <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
       <a class="next" onclick="plusSlides(1)">&#10095;</a>
@@ -165,7 +165,7 @@ document.write(`<!-- Callout on the right side -->
 
 <!-- Callout on the left side -->
 <div class="callout1">
-  <a href="junior_geeks_coding.html"><div class="callout1-header">Coding 4 Junior Geeks</div></a>
+  <a href="junior_geeks_coding.html"><div class="callout1-header">Junior Geeks Coding</div></a>
   <span class="closebtn" onclick="this.parentElement.style.display='none';">×</span>
   <div class="callout1-container">
     <!-- Image slider -->
