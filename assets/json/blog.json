@@ -4,19 +4,22 @@ let blog = {
       "image" :"computer_science.png",
       "title":"Blog Post Title 1",
       "description":"A brief description of the blog post goes here.",
-      "category": "programming"  
+      "category": "all"  , 
+      "button":"more info button"
     },
     {
       "image" :"photo-shop.png",
       "title":"Blog Post Title 2",
       "description":"A brief description of the blog post goes here.",
-       "category": "designing"
+       "category": "designing"  ,
+      "button":"more info "
     },
     {
       "image" :"illustrator.png",
       "title":"Blog Post Title 3",
       "description":"A brief description of the blog post goes here.",
-       "category": "designing"
+       "category": "designing" ,
+      "button":"more info button"
 
     },
     {
