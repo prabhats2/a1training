@@ -1,725 +1,342 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Template Mo">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
-  <title>DDAS HUB | Story</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+    <title>A1TI Blogs</title>
+    <!-- Keep only one Bootstrap version -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Favicons -->
-  <link href="assets/img/ddas_fav.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <style>
+        .header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+        /* Section Styles */
+        #blog {
+            padding: 2rem 0;
+            background-image: url(assets/images/meetings-bg.jpg);
+        }
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/css/style.css" rel="stylesheet">
-  <style>
-    img{
-      width:100%;
-    }
-    .pagination {
-    margin-top: 20px;
-    text-align: center;
-}
+        /* Header Styles */
+        #blog h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
 
-.pagination a {
-    display: inline-block;
-    padding: 8px 16px;
-    margin: 0 4px;
-    background-color: #f1f1f1;
-    color: #333;
-    text-decoration: none;
-    border-radius: 4px;
-    transition: background-color 0.3s;
-}
+        /* Card Styles */
+        .card {
+            transition: transform 0.3s;
+            border-radius: 1.0rem;
+        }
 
-.pagination a:hover {
-    background-color: #ddd;
-}
+        .card:hover {
+            transform: scale(1.05);
+        }
 
-.pagination .active {
-    background-color: #333;
-    color: #fff;
-}
+        /* Featured Post Styles */
+        #blog .mb-4 img {
+            border-radius: 1rem;
+            padding: 3px;
+        }
 
-  </style> 
+        #sidebar {
+            position: sticky;
+            top: 80px;
+            margin-left: 120px;
+            width: 300px;
+            height: calc(100vh - 160px);
+            overflow-y: auto;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            border-radius: 0.9rem;
+        }
+
+        /* Sidebar Styles */
+        .sidebar h4 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .sidebar .list-group-item {
+            background-color: #ffffff;
+            border: 0px solid #ddd;
+            border-radius: 0.9rem;
+            transition: background-color 0.3s;
+        }
+
+        .sidebar .list-group-item:hover {
+            background-color: #e9ecef;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            #blog h2 {
+                font-size: 2rem;
+            }
+
+            .card {
+                margin-bottom: 1.5rem;
+            }
+        }
+
+        /* Animation Styles */
+        .fade-in {
+            animation: fadeIn 0.5s forwards;
+        }
+
+        .fade-out {
+            animation: fadeOut 0.5s forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeOut {
+            from {
+                transform: scale(1);
+                opacity: 1;
+            }
+
+            to {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+        }
+
+        #sidebar {
+            transition: opacity 0.5s ease;
+        }
+    </style>
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-edu-meeting.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/lightbox.css">
 </head>
 
 <body>
+    <!--menu-->
+    <script type="text/javascript" src="menu.js"></script>
+    <!--menu end-->
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-NTXSBYKTVH"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <section id="blog" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Blog</h2>
 
-  gtag('config', 'G-NTXSBYKTVH');
-</script>
+            <!-- Button to toggle the sidebar dropdown at the top -->
+            <button class="btn btn-primary d-lg-none mb-4 w-100" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarDropdown" aria-expanded="false" aria-controls="sidebarDropdown">
+                Categories
+            </button>
 
+            <!-- Sidebar dropdown for mobile view -->
+            <div class="collapse d-lg-none mb-4 w-100" id="sidebarDropdown">
+                <div class="card">
+                    <div class="card-body">
+                        <h4>Categories</h4>
+                        <ul class="list-group mb-4">
+                            <li class="list-group-item" data-category="all"><a href="#" class="category-link">All</a></li>
+                            <li class="list-group-item" data-category="programming"><a href="#" class="category-link">Programming</a></li>
+                            <li class="list-group-item" data-category="designing"><a href="#" class="category-link">Designing</a></li>
+                            <li class="list-group-item" data-category="web-development"><a href="#" class="category-link">Web Development</a></li>
+                        </ul>
 
-<!-- ======= Top Bar ======= -->
-<section id="topbar" class="d-flex align-items-center d-none">
-  <div class="container d-flex justify-content-center justify-content-md-between">
-    <div class="contact-info d-flex align-items-center">
-      <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:hr@ddashub.com" style="font-size:20px">hr@ddashub.com</a></i>
-      <i class="bi bi-phone d-flex align-items-center ms-4 d-none"><span style="font-size:20px">+91 8349469712</span></i>
-    </div>
-
-  <div class="cta d-md-flex align-items-center">
-      <a href="admin_ddashub/login.php" class="scrollto" style="font-size:20px;"><b>Login</b></a>
-    </div> 
-  </div>
-</section>
-
-
-
-<!-- ======= Header ======= -->
-
-<header id="header" class="d-flex align-items-center">
-  <div class="container d-flex align-items-center justify-content-between">
-
-    <div class="logo">
-      <!--<h1><a href="index.html"><img src="assets/img/logo.jpg" alt=""></a></h1>-->
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <a href="index.php"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>
-    </div>
-
-    <nav id="navbar" class="navbar">
-      <ul>
-        <li><a class="nav-link scrollto" href="index.php">Home</a></li>
-        <li><a class="nav-link scrollto" href="about.php">About Us</a></li>
-        <li class="dropdown"><a class="nav-link scrollto"><span>Books</span> <i class="bi bi-chevron-down"></i></a>
-          <ul>
-            <li><a class="nav-link scrollto" href="govt_books.php">Govt Entrance Exam Books</a></li>
-            <li><a class="nav-link scrollto" href="school_books.php">School Books</a></li>
-            <li><a class="nav-link scrollto" href="technical_books.php">Technical Book</a></li>
-            <li><a class="nav-link scrollto" href="fiction_books.php">Literature & Fiction Books</a></li>
-          </ul>
-        </li>
-        <li><a class="nav-link scrollto" href="training_videos.php">Training</a></li>
-        <li><a class="nav-link scrollto" href="services.php">Services</a></li>
-        <li class="dropdown"><a class="nav-link scrollto"><span>Career</span> <i class="bi bi-chevron-down"></i></a>
-        <ul>
-        <li><a class="nav-link scrollto" href="private_vacancy.php">Private Job</a></li>
-            <li><a class="nav-link scrollto" href="govt_vacancy.php">Government Job</a></li>
-</ul>
-<li><a class="nav-link scrollto" href="story.php">Story</a></li>
-        <li><a class="nav-link scrollto " href="employer.php">Employer</a></li>
-        <li><a class="nav-link scrollto" href="contact.php">Contact Us</a></li>
-        <li><a class="nav-link scrollto" href="admin_ddashub/login.php">Login</a></li>
-      </ul>
-      <i class="bi bi-list mobile-nav-toggle"></i>
-    </nav><!-- .navbar -->
-
-  </div>
-</header><!-- End Header -->
-  <main id="main">
-
-    <!-- ======= Breadcrumbs ======= -->
-    <section id="breadcrumbs" class="breadcrumbs">
-      <div class="container">
-        <!--<ol>
-          <li><a href="index.php" style="color:black;">Home</a></li>
-          <li>Story</li>
-        </ol>-->
-        <h2 style="text-align:center;"> STORY </h2>
-      </div>
-    </section><!-- End Breadcrumbs -->
-
-    <!-- ======= Blog Section ======= -->
-    <section id="blog" class="blog">
-      <div class="container" data-aos="fade-up">
-
-        <div class="row">
-
-          <div class="col-lg-8 entries">
-
-            <article class="entry" id="myTable">
-
-             <!-- <div class="entry-img">
-                <img src="assets/img/blog/blog-1.jpg" alt="" class="img-fluid">
-              </div>-->
-                            <h2 class="entry-title" id="34">
-                <a href="#">bangladesh</a>
-              </h2>
-
-              <div class="entry-meta">
-                <ul>
-                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">virat</a></li>
-                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="2020-01-01">2024-08-19</time></a></li>
-                </ul>
-              </div>
-              <div>
-              <img src="admin_ddashub/storyFile/india.jpeg" alt="Denim Jeans" class="img-fluid">
-              </div>
-
-              <div class="entry-content">
-                <p>
-                <div style='margin-top: 20px;'><div style='border: 1px solid #ccc;overflow: auto;
-    height: 300px; padding: 10px;'> dfwqs</div></div>                </p>
-                <!--<div class="read-more">
-                  <a href="blog-single.html">Read More</a>
-                </div>-->
-                              <h2 class="entry-title" id="33">
-                <a href="#">Triathlon recap, Aug. 5: Germany surges to gold, U.S. earns silver in team relay</a>
-              </h2>
-
-              <div class="entry-meta">
-                <ul>
-                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">Dan Levinsohn</a></li>
-                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="2020-01-01">2024-08-15</time></a></li>
-                </ul>
-              </div>
-              <div>
-              <img src="admin_ddashub/storyFile/event.jpg" alt="Denim Jeans" class="img-fluid">
-              </div>
-
-              <div class="entry-content">
-                <p>
-                <div style='margin-top: 20px;'><div style='border: 1px solid #ccc;overflow: auto;
-    height: 300px; padding: 10px;'> <p style="font-size: 20px; line-height: 36px; margin-bottom: 40px; color: rgb(10, 9, 28); font-family: nbcsn_frank; background-color: rgb(242, 243, 247);"><em>Trois</em>&nbsp;triathlon events at the 2024 Paris Olympics,&nbsp;<em>trois&nbsp;</em>winning countries: France's&nbsp;<strong>Cassandre Beaugrand&nbsp;</strong>won the women's individual, Great Britain's<strong>&nbsp;Alex Yee&nbsp;</strong>broke the tape in men's individual — and&nbsp;<strong>Laura Lindemann</strong>&nbsp;grabbed gold for Germany in the mixed team relay event on Monday morning.</p><ol style="font-size: 20px; line-height: 36px; margin-bottom: 40px; color: rgb(10, 9, 28); font-family: nbcsn_frank; background-color: rgb(242, 243, 247);"><li><strong>GERMANY</strong>&nbsp;(Tim Hellwig / Lisa Tertsch / Lasse Lurs / Laura Lindemann)</li><li><strong>UNITED STATES</strong>&nbsp;(Seth Rider / Taylor Spivey / Morgan Pearson / Taylor Knibb)</li><li><strong>GREAT BRITAIN</strong>&nbsp;(Alex Yee / Georgia Taylor-Brown / Sam Dickins / Beth Potter)&nbsp;</li></ol><p style="font-size: 20px; line-height: 36px; margin-bottom: 40px; color: rgb(10, 9, 28); font-family: nbcsn_frank; background-color: rgb(242, 243, 247);">After claiming victory at the event's Olympic debut in Tokyo three years ago, Great Britain brought back half of its 2020 foursome —<strong>&nbsp;</strong>including&nbsp;<strong>Yee</strong>&nbsp;and<strong>&nbsp;Georgia Taylor-Brown</strong>, the latter of whom finished sixth in the women's individual — to clinch a second successive gold. But in a last-minute surge reminiscent of Yee's come-from-behind win less than a week ago,&nbsp;<strong>Laura Lindemann</strong>&nbsp;broke ahead of Great Britain's&nbsp;<strong>Beth Potter</strong>&nbsp;on the homestretch to thrust Germany atop the podium.</p></div></div>                </p>
-                <!--<div class="read-more">
-                  <a href="blog-single.html">Read More</a>
-                </div>-->
-                              <h2 class="entry-title" id="28">
-                <a href="#">olympic</a>
-              </h2>
-
-              <div class="entry-meta">
-                <ul>
-                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">egt</a></li>
-                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="2020-01-01">2024-07-28</time></a></li>
-                </ul>
-              </div>
-              <div>
-              <img src="admin_ddashub/storyFile/WhatsApp Image 2024-07-31 at 2.53.32 PM.jpeg" alt="Denim Jeans" class="img-fluid">
-              </div>
-
-              <div class="entry-content">
-                <p>
-                <div style='margin-top: 20px;'><div style='border: 1px solid #ccc;overflow: auto;
-    height: 300px; padding: 10px;'> hi this is olympic</div></div>                </p>
-                <!--<div class="read-more">
-                  <a href="blog-single.html">Read More</a>
-                </div>-->
-                <div class="pagination"><a href="story.php?page=1">1</a><a href="story.php?page=2">2</a><a href="story.php?page=3">3</a><a href="story.php?page=4">4</a><a href="story.php?page=5">5</a><a href="story.php?page=6">6</a><a href="story.php?page=7">7</a><a href="story.php?page=8">8</a></div>              </div>
-
-          </article><!-- End blog entry -->
-
-           <!-- <article class="entry">
-
-              <div class="entry-img">
-                <img src="assets/img/blog/blog-2.jpg" alt="" class="img-fluid">
-              </div>
-
-              <h2 class="entry-title">
-                <a href="blog-single.html">Nisi magni odit consequatur autem nulla dolorem</a>
-              </h2>
-
-              <div class="entry-meta">
-                <ul>
-                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">John Doe</a></li>
-                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
-                  <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="blog-single.html">12 Comments</a></li>
-                </ul>
-              </div>
-
-              <div class="entry-content">
-                <p>
-                  Incidunt voluptate sit temporibus aperiam. Quia vitae aut sint ullam quis illum voluptatum et. Quo libero rerum voluptatem pariatur nam.
-                  Ad impedit qui officiis est in non aliquid veniam laborum. Id ipsum qui aut. Sit aliquam et quia molestias laboriosam. Tempora nam odit omnis eum corrupti qui aliquid excepturi molestiae. Facilis et sint quos sed voluptas. Maxime sed tempore enim omnis non alias odio quos distinctio.
-                </p>
-                <div class="read-more">
-                  <a href="blog-single.html">Read More</a>
+                        <h4>Recent Posts</h4>
+                        <ul class="list-group">
+                            <li class="list-group-item"><a href="#">Recent Post 1</a></li>
+                            <li class="list-group-item"><a href="#">Recent Post 2</a></li>
+                        </ul>
+                    </div>
                 </div>
-              </div>
+            </div>
 
-            </article>--><!-- End blog entry -->
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="row" id="blogPosts">
+                        <script>
+                            // Change the column class for the first blog post to col-lg-12
+                            document.write(`
+                              <div id="blogCarousel" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    <!-- Blog Post Item 1 -->
+                                    <div class="carousel-item active">
+                                        <div class="row">
+                                            <div class="col-lg-12 mb-4" data-category="${blog.col1[0].category}">
+                                                <div class="card">
+                                                    <img src="assets/images/junior-geeks/${blog.col1[0].image}" class="card-img-top" alt="Blog Post 1">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">${blog.col1[0].title}</h5>
+                                                        <p class="card-text">${blog.col1[0].description}</p>
+                                                        <a href="blog-post1.html" class="btn btn-primary">More</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
 
-           <!-- <article class="entry">
+                                    <!-- Blog Post Item 2 -->
+                                    <div class="carousel-item">
+                                        <div class="row">
+                                            <div class="col-lg-12 mb-4" data-category="${blog.col1[1].category}">
+                                                <div class="card">
+                                                    <img src="assets/images/junior-geeks/${blog.col1[1].image}" class="card-img-top" alt="Blog Post 2">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">${blog.col1[1].title}</h5>
+                                                        <p class="card-text">${blog.col1[1].description}</p>
+                                                        <a href="blog-post2.html" class="btn btn-primary">More</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
 
-              <div class="entry-img">
-                <img src="assets/img/blog/blog-3.jpg" alt="" class="img-fluid">
-              </div>
+                                    <!-- Blog Post Item 3 -->
+                                    <div class="carousel-item">
+                                        <div class="row">
+                                            <div class="col-lg-12 mb-4" data-category="${blog.col1[2].category}">
+                                                <div class="card">
+                                                    <img src="assets/images/junior-geeks/${blog.col1[2].image}" class="card-img-top" alt="Blog Post 3">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">${blog.col1[2].title}</h5>
+                                                        <p class="card-text">${blog.col1[2].description}</p>
+                                                        <a href="blog-post3.html" class="btn btn-primary">More</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
 
-              <h2 class="entry-title">
-                <a href="blog-single.html">Possimus soluta ut id suscipit ea ut. In quo quia et soluta libero sit sint.</a>
-              </h2>
-
-              <div class="entry-meta">
-                <ul>
-                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">John Doe</a></li>
-                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
-                  <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="blog-single.html">12 Comments</a></li>
-                </ul>
-              </div>
-
-              <div class="entry-content">
-                <p>
-                  Aut iste neque ut illum qui perspiciatis similique recusandae non. Fugit autem dolorem labore omnis et. Eum temporibus fugiat voluptate enim tenetur sunt omnis.
-                  Doloremque est saepe laborum aut. Ipsa cupiditate ex harum at recusandae nesciunt. Ut dolores velit.
-                </p>
-                <div class="read-more">
-                  <a href="blog-single.html">Read More</a>
+                                    <!-- Blog Post Item 4 -->
+                                    <div class="carousel-item">
+                                        <div class="row">
+                                            <div class="col-lg-12 mb-4" data-category="${blog.col1[3].category}">
+                                                <div class="card">
+                                                    <img src="assets/images/junior-geeks/${blog.col1[3].image}" class="card-img-top" alt="Blog Post 4">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">${blog.col1[3].title}</h5>
+                                                        <p class="card-text">${blog.col1[3].description}</p>
+                                                        <a href="blog-post4.html" class="btn btn-primary">More</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#blogCarousel" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#blogCarousel" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                              </div>
+                            `);
+                        </script>
+                    </div>
                 </div>
-              </div>
 
-            </article>--><!-- End blog entry -->
+                <div class="col-lg-4">
+                    <div id="sidebar">
+                        <div class="sidebar">
+                            <h4>Categories</h4>
+                            <ul class="list-group mb-4">
+                                <li class="list-group-item" data-category="all"><a href="#" class="category-link">All</a></li>
+                                <li class="list-group-item" data-category="programming"><a href="#" class="category-link">Programming</a></li>
+                                <li class="list-group-item" data-category="designing"><a href="#" class="category-link">Designing</a></li>
+                                <li class="list-group-item" data-category="web-development"><a href="#" class="category-link">Web Development</a></li>
+                            </ul>
 
-           <!-- <article class="entry">
-
-              <div class="entry-img">
-                <img src="assets/img/blog/blog-4.jpg" alt="" class="img-fluid">
-              </div>
-
-              <h2 class="entry-title">
-                <a href="blog-single.html">Non rem rerum nam cum quo minus. Dolor distinctio deleniti explicabo eius exercitationem.</a>
-              </h2>
-
-              <div class="entry-meta">
-                <ul>
-                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">John Doe</a></li>
-                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
-                  <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="blog-single.html">12 Comments</a></li>
-                </ul>
-              </div>
-
-              <div class="entry-content">
-                <p>
-                  Aspernatur rerum perferendis et sint. Voluptates cupiditate voluptas atque quae. Rem veritatis rerum enim et autem. Saepe atque cum eligendi eaque iste omnis a qui.
-                  Quia sed sunt. Ea asperiores expedita et et delectus voluptates rerum. Id saepe ut itaque quod qui voluptas nobis porro rerum. Quam quia nesciunt qui aut est non omnis. Inventore occaecati et quaerat magni itaque nam voluptas. Voluptatem ducimus sint id earum ut nesciunt sed corrupti nemo.
-                </p>
-                <div class="read-more">
-                  <a href="blog-single.html">Read More</a>
+                            <h4>Recent Posts</h4>
+                            <ul class="list-group">
+                                <li class="list-group-item"><a href="#">Recent Post 1</a></li>
+                                <li class="list-group-item"><a href="#">Recent Post 2</a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-              </div>
+            </div>
+        </div>
+    </section>
 
-            </article>--><!-- End blog entry -->
+    <script>
+        let blog = {};
 
-            <!--<div class="blog-pagination">
-              <ul class="justify-content-center">
-                <li><a href="#">1</a></li>
-                <li class="active"><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-              </ul>
-            </div>-->
+        fetch('assets/json/blog.json')
+            .then(response => response.json())
+            .then(data => {
+                blog = data;
+                renderBlogPosts();
+                setupCategoryLinks(); // Set up event listeners after posts are rendered
+            })
+            .catch(error => console.error('Error fetching the blog data:', error));
 
-          </div><!-- End blog entries list -->
+        function renderBlogPosts() {
+            const blogPostsContainer = document.getElementById('blogPosts');
+            blogPostsContainer.innerHTML = ''; // Clear existing content
 
-        <div class="col-lg-4">
-
-       <div class="sidebar">
-
-            <!-- <h3 class="sidebar-title">Search</h3>
-              <div class="sidebar-item search-form">-->
-                <!--<form action="">-->
-                  <!--<input type="text" id="myInput" onkeyup="filterTable()">
-                  <button type="submit"><i class="bi bi-search"></i></button>-->
-                <!--</form>-->
-                <!--<script> 
-function filterTable() {
-    var input, filter, table, tr, td, i, txtValue;
-    input = document.getElementById("myInput");
-    filter = input.value.toUpperCase();
-    table = document.getElementById("myTable");
-    tr = table.getElementsByTagName("h2");
-
-    // Loop through all table rows, and hide those that don't match the search query
-    for (i = 0; i < tr.length; i++) {
-        // Start from index 1 to skip the header row
-        for (var j = 1; j < tr[i].cells.length; j++) {
-            td = tr[i].getElementsByTagName("a")[j];
-            if (td) {
-                txtValue = td.textContent || td.innerText;
-                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                    tr[i].style.display = "";
-                    break; // If one cell in the row matches, show the row and move to the next row
-                } else {
-                    tr[i].style.display = "none";
-                }
-            }
+            blog.col1.forEach((post, index) => {
+                const isActive = index === 0 ? 'active' : '';
+                const carouselItem = `
+                    <div class="carousel-item ${isActive}">
+                        <div class="row">
+                            <div class="col-lg-12 mb-4" data-category="${post.category}">
+                                <div class="card">
+                                    <img src="assets/images/junior-geeks/${post.image}" class="card-img-top" alt="${post.title}">
+                                    <div class="card-body">
+                                        <h5 class="card-title">${post.title}</h5>
+                                        <p class="card-text">${post.description}</p>
+                                        <a href="blog-post${index + 1}.html" class="btn btn-primary">More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                blogPostsContainer.innerHTML += carouselItem;
+            });
         }
-    }
-}
-</script>-->
-             <!-- </div>--><!-- End sidebar search formn-->
 
-             <!-- <h3 class="sidebar-title">Categories</h3>
-              <div class="sidebar-item categories">
-                <ul>
-                  <li><a href="#">General <span>(25)</span></a></li>
-                  <li><a href="#">Lifestyle <span>(12)</span></a></li>
-                  <li><a href="#">Travel <span>(5)</span></a></li>
-                  <li><a href="#">Design <span>(22)</span></a></li>
-                  <li><a href="#">Creative <span>(8)</span></a></li>
-                  <li><a href="#">Educaion <span>(14)</span></a></li>
-                </ul>
-              </div>--><!-- End sidebar categories-->
- 
-              <h3 class="sidebar-title">Recent Posts</h3>
-              <div class="sidebar-item recent-posts">
-                             <div class="post-item clearfix">
-    <img src="assets/img/blog/story.jpeg"  alt="">
-     <h4><a href="#34">bangladesh</a></h4>
-     <time>August 19, 2024</time>
-</div>
-<!-- End sidebar recent posts-->
-                             <div class="post-item clearfix">
-    <img src="assets/img/blog/story.jpeg"  alt="">
-     <h4><a href="#33">Triathlon recap, Aug. 5: Germany surges to gold, U.S. earns silver in team relay</a></h4>
-     <time>August 15, 2024</time>
-</div>
-<!-- End sidebar recent posts-->
-                             <div class="post-item clearfix">
-    <img src="assets/img/blog/story.jpeg"  alt="">
-     <h4><a href="#28">olympic</a></h4>
-     <time>July 28, 2024</time>
-</div>
-<!-- End sidebar recent posts-->
-                             <div class="post-item clearfix">
-    <img src="assets/img/blog/story.jpeg"  alt="">
-     <h4><a href="#26">dew</a></h4>
-     <time>July 11, 2024</time>
-</div>
-<!-- End sidebar recent posts-->
-                             <div class="post-item clearfix">
-    <img src="assets/img/blog/story.jpeg"  alt="">
-     <h4><a href="#24">Karnataka cabinet moots Bill to provide 50 to 75 percent Kannadiga quota in private sector jobs</a></h4>
-     <time>July 4, 2024</time>
-</div>
-<!-- End sidebar recent posts-->
-                             <div class="post-item clearfix">
-    <img src="assets/img/blog/story.jpeg"  alt="">
-     <h4><a href="#23">In the past three years, over 40% of all security forces personnel killed in J&amp;K died in the Jammu division</a></h4>
-     <time>July 12, 2024</time>
-</div>
-<!-- End sidebar recent posts-->
-                             <div class="post-item clearfix">
-    <img src="assets/img/blog/story.jpeg"  alt="">
-     <h4><a href="#22">testing again</a></h4>
-     <time>July 13, 2024</time>
-</div>
-<!-- End sidebar recent posts-->
-                             <div class="post-item clearfix">
-    <img src="assets/img/blog/story.jpeg"  alt="">
-     <h4><a href="#21">testing if this is working or not </a></h4>
-     <time>July 6, 2024</time>
-</div>
-<!-- End sidebar recent posts-->
-                             <div class="post-item clearfix">
-    <img src="assets/img/blog/story.jpeg"  alt="">
-     <h4><a href="#20">making the project</a></h4>
-     <time>July 12, 2024</time>
-</div>
-<!-- End sidebar recent posts-->
-                             <div class="post-item clearfix">
-    <img src="assets/img/blog/story.jpeg"  alt="">
-     <h4><a href="#19">m</a></h4>
-     <time>July 24, 2024</time>
-</div>
-<!-- End sidebar recent posts-->
-                             <div class="post-item clearfix">
-    <img src="assets/img/blog/story.jpeg"  alt="">
-     <h4><a href="#18"></a></h4>
-     <time>May 22, 2024</time>
-</div>
-<!-- End sidebar recent posts-->
-                             <div class="post-item clearfix">
-    <img src="assets/img/blog/story.jpeg"  alt="">
-     <h4><a href="#16">Several Ahmedabad schools receive bomb threat through email Several Ahmedabad schools receive bomb threat through email</a></h4>
-     <time>May 6, 2024</time>
-</div>
-<!-- End sidebar recent posts-->
-                             <div class="post-item clearfix">
-    <img src="assets/img/blog/story.jpeg"  alt="">
-     <h4><a href="#15">BJP candidate Mukesh Dalal wins Surat Lok Sabha seat unopposed</a></h4>
-     <time>April 22, 2024</time>
-</div>
-<!-- End sidebar recent posts-->
-                             <div class="post-item clearfix">
-    <img src="assets/img/blog/story.jpeg"  alt="">
-     <h4><a href="#14">PM Modi addressed rallies in Bengaluru and Chikkaballapur</a></h4>
-     <time>April 22, 2024</time>
-</div>
-<!-- End sidebar recent posts-->
-                             <div class="post-item clearfix">
-    <img src="assets/img/blog/story.jpeg"  alt="">
-     <h4><a href="#11">Heatwave grips India, maximum temperatures rise above normal levels</a></h4>
-     <time>April 22, 2024</time>
-</div>
-<!-- End sidebar recent posts-->
-                             <div class="post-item clearfix">
-    <img src="assets/img/blog/story.jpeg"  alt="">
-     <h4><a href="#9">AI will not take away jobs, it will create jobs' by CP Gurnani ( Tech Mahindra CEO) - rank - Source: businesstoday</a></h4>
-     <time>April 12, 2024</time>
-</div>
-<!-- End sidebar recent posts-->
-              
+        function filterPosts(selectedCategory) {
+            const blogPosts = document.querySelectorAll('#blogPosts .col-lg-12');
+            blogPosts.forEach(post => {
+                const postCategory = post.getAttribute('data-category');
+                post.style.display = (selectedCategory === 'all' || postCategory === selectedCategory) ? 'block' : 'none';
+            });
+        }
 
-
-              <!--<h3 class="sidebar-title">Tags</h3>
-              <div class="sidebar-item tags">
-                <ul>
-                  <li><a href="#">App</a></li>
-                  <li><a href="#">IT</a></li>
-                  <li><a href="#">Business</a></li>
-                  <li><a href="#">Mac</a></li>
-                  <li><a href="#">Design</a></li>
-                  <li><a href="#">Office</a></li>
-                  <li><a href="#">Creative</a></li>
-                  <li><a href="#">Studio</a></li>
-                  <li><a href="#">Smart</a></li>
-                  <li><a href="#">Tips</a></li>
-                  <li><a href="#">Marketing</a></li>
-                </ul>
-              </div>--><!-- End sidebar tags-->
-
-            </div><!-- End sidebar -->
-
-          </div><!-- End blog sidebar -->
-
-        </div>
-
-      </div>
-    </section><!-- End Blog Section -->
-
-  </main><!-- End #main -->
-
-    <!-- ======= Footer ======= -->
-    <footer id="footer">
-
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
-
-          <div class="col-lg-3 col-md-6 footer-contact">
-            <h3>Address</h3>
-            <p>
-            13A- Shiv Shakti Nagar,Chhola Road <br>
-            Bhopal-462038
-            <br>
-              <strong>Phone:</strong> +91 8349469712<br>
-              <strong>Email:</strong> hr@ddashub.com<br>
-            </p>
-          </div>
-
-          <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="terms_condition.php">Terms of service</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="privacy_policy.php">Privacy policy</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-          <h4>Our Services</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Banking & Finance Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">IT & ITES</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">BPO</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Construction</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Tour & Travel</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-4 col-md-6 footer-newsletter">
-            <h4>Follow us on facebook</h4>
-            <div class="fb-like-box" data-href="https://www.facebook.com/ddashub" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="false" data-show-border="false" data-height="300px"></div>
-				
-            <script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=338744439619473&version=v2.0";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-    <div class="container d-lg-flex py-4">
-
-      <div class="me-lg-auto text-center text-lg-start">
-        <div class="copyright">
-        Copyright © 2023 DDAS HUB | All Rights Reserved
-        </div>
-      </div>
-      <div class="social-links text-center text-lg-right pt-3 pt-lg-0">
-        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-        <a href="https://www.facebook.com/ddashub" class="facebook"><i class="bx bxl-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-        <a href="https://www.linkedin.com/company/ddas-hub/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-      </div>
-    </div>
-  </footer><!-- End Footer -->
-  <style>
-   /* for desktop */
-   .whatsapp_float {
-          position: fixed;
-          width: 60px;
-          height: 60px;
-          /*bottom: 40px;*/
-          bottom:70px;
-          right: 10px;
-          background-color: #25d366;
-          color: #FFF;
-          border-radius: 50px;
-          text-align: center;
-          font-size: 30px;
-          box-shadow: 2px 2px 3px #999;
-          z-index: 100;
-      }
-
-      .whatsapp-icon {
-          margin-top: 16px;
-      }
-
-      /* for mobile */
-      @media screen and (max-width: 767px) {
-          .whatsapp-icon {
-              margin-top: 10px;
-          }
-
-          .whatsapp_float {
-              width: 40px;
-              height: 40px;
-              bottom: 60px;
-              right: 10px;
-              font-size: 22px;
-          }
-      }
-            
-.icon-bar {
-  position: fixed;
-  top: 60%;
-  -webkit-transform: translateY(-25%);
-  -ms-transform: translateY25%);
-  transform: translateY(-50%);
-  z-index: 130;
-  bottom:60px;
-}
-
-.icon-bar a {
-  display: block;
-  text-align:center ;
-  padding:20px;
-  transition: all 0.3s ease;
-  color: white;
-  font-size: 10px;
- 
-  
-}
-
-.icon-bar a:hover {
-  background-color: #000;
-}
-
-.facebook {
-  background: #3B5998;
-  color: white;
-}
-
-.twitter {
-  background: #55ACEE;
-  color: white;
-}
-
-.google {
-  background: #dd4b39;
-  color: white;
-}
-
-.linkedin {
-  background: #007bb5;
-  color: white;
-}
-
-      
-
-</style>
-  
-     <a
-        href="https://api.whatsapp.com/send?phone=918349469712"
-        class="whatsapp_float"
-        target="_blank"
-        rel="noopener noreferrer">
-
-        <i class="fa fa-whatsapp whatsapp-icon"></i></a>
-        <div class="icon-bar">
-  <a href="#" class="facebook"><i class="fa fa-facebook"></i></a> 
-  <a href="#" class="twitter"><i class="fa fa-twitter"></i></a> 
-  <a href="https://www.google.com/maps/dir/28.5450054,77.4816688/gate+number+3,+Marble+temple+shop,+Venice+Mall,+F15,+Block+H,+Block+F,+Industrial+Area,+Surajpur+Site+4,+Greater+Noida,+Uttar+Pradesh+201308/@28.5064271,77.4675792,13z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x390cc1b5b19089b3:0x8fab628a35ea528b!2m2!1d77.5268936!2d28.4537305" class="google" target="blank"><i class="fa fa-google"></i></a> 
-  <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
-    </div>
-
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
-
- <!-- font awesome -->
- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">  <!-- End Footer -->
-<!--search--> 
-
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
-   <!-- Bootstrap core CSS -->
-   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-   <!-- Bootstrap JS with Popper.js -->
-   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
-
-  <!-- SweetAlert2 JS -->
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-
-  <!-- Additional CSS Files -->
-  <link rel="stylesheet" href="assets/css/fontawesome.css">
-  <link rel="stylesheet" href="assets/css/templatemo-edu-meeting.css">
-  <link rel="stylesheet" href="assets/css/owl.css">
-  <link rel="stylesheet" href="assets/css/lightbox.css">
-<!--<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
-<! Owl-- Carousel CSS -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
-
-<link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
-<!-- Additional CSS Files -->
-<link rel="stylesheet" href="assets/css/fontawesome.css">
-<link rel="stylesheet" href="assets/css/templatemo-edu-meeting.css">
-<link rel="stylesheet" href="assets/css/owl.css">
-<link rel="stylesheet" href="assets/css/lightbox.css">
-<script type="text/javascript" src="assets/json/professional_courses.json"></script>
+        function setupCategoryLinks() {
+            document.querySelectorAll('.category-link').forEach(link => {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const category = this.parentElement.getAttribute('data-category');
+                    filterPosts(category); // Call the filter function
+                });
+            });
+        }
+    </script>
 </body>
 
 </html>

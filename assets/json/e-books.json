@@ -143,11 +143,13 @@ let books = { "col1" : [
 			}, 
 		  //Javascript
 			{"name" : "Javascript", 
-			 "Author" : ["Azad","Shivam"],
-			 "ebookAuthor" : ["Yanko Belov","Laurence Lars Svekis ","Chris Minnick "],
-			 "ebook" : ["https://amzn.to/4cxxz4L", "https://amzn.to/4cxxMVB", "https://amzn.to/4g75J2v"],
+
+			 "Author" : ["Flavico Copes","Rob Percival"],
+			 "ebookAuthor" : ["Code Academy","Noel Kantaris","Peter Freese","Azad","Shivam"],
+			 "ebook" : ["https://amzn.in/d/dTDTKwy", "https://amzn.in/d/76hrmRz", "https://amzn.in/d/4Jzj8A2"],
+
 			 "ebook_name" : ["Guide to MS DOS", "MS-DOS 6 Explained (BP S.): 341", "MS-DOS Up to and Including Version 6.2"],
-			 "pdf":["assets/pdf/ms_dos_by_azad.pdf","assets/pdf/msdosbyshivambhati.pdf"] ,
+			 "pdf":["assets/pdf/javascript-handbook.pdf ",  "assets/pdf/javascript_beginner_ to_professional.pdf"] ,
 			 "pdf_name":["Ms Dos ","Ms Dos "]	 
 			},
 					 
