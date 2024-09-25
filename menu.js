@@ -32,7 +32,7 @@ document.write(`  <!-- Sub Header -->
             <div class="col-12">
                 <nav class="main-nav">
                     <!-- ***** Logo Start ***** -->
-                    <a href="index.php"class="logo">
+                    <a href="index.html"class="logo">
                         <img src="assets/images/logo1.png" style="height:70px; width:250px"/>
                     </a>
                     <!-- ***** Logo End ***** -->
