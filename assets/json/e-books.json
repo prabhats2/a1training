@@ -2,9 +2,9 @@ let books = { "col1" : [
 	      //Git
 	         {"name" : "Git", 
 	      "Author" : ["A1 Training ","A1 Training ","A1 Training ","Mayank Rana"],
-		  "ebookAuthor" : ["Amazon"],
-	      "ebook" : ["#"],
-	      "ebook_name" : ["https://amzn.in/d/eeW0gGK", "https://amzn.in/d/76hrmRz", "https://amzn.in/d/4Jzj8A2"],
+		  "ebookAuthor" : ["Shaumik Daityari "],
+	      "ebook" : ["https://amzn.to/3SRLU56"],
+	      "ebook_name" : ["https://amzn.to/4g2s9Sv", "https://amzn.in/d/76hrmRz", "https://amzn.in/d/4Jzj8A2"],
 	      "pdf":["assets/pdf/git.pdf","assets/pdf/git-cheat-sheet-education.pdf" ,
 		         "assets/pdf/git_ebook.pdf" ,"assets/pdf/Git_Interview_Questions_Answers.pdf"],
 		
@@ -13,8 +13,8 @@ let books = { "col1" : [
    //linux
          {"name" : "Linux", 
  		  "Author" : ["A1 Training "],
- 		  "ebookAuthor" : ["Amazon"],
-		  "ebook" : ["#"],
+ 		  "ebookAuthor" : ["Rocky Johnson ","Richard Petersen", "Alisson Machado de Menezes"],
+		  "ebook" : ["https://amzn.to/46NgMtj","https://amzn.to/3MakKTa", "https://amzn.to/46RRo5A"],
 		  "ebook_name" : ["https://amzn.in/d/eeW0gGK", "https://amzn.in/d/76hrmRz", "https://amzn.in/d/4Jzj8A2"],
 		  "pdf":["assets/pdf/50_linux_commands.pdf"],
  
@@ -23,8 +23,8 @@ let books = { "col1" : [
 		//docker
 		{"name" : "Docker", 
 		"Author" : ["A1 Training ","Mayank Rana",],
-		"ebookAuthor" : ["Amazon"],
-		"ebook" : ["https://amzn.in/d/eeW0gGK", "https://amzn.in/d/76hrmRz", "https://amzn.in/d/4Jzj8A2"],
+		"ebookAuthor" : ["Nigel Poulton", "Nisarg Vasavada", "Sandeep Rawat", "Scott Surovich"],
+		"ebook" : ["https://amzn.to/3AtwNbG", "https://amzn.to/4drFhif", "https://amzn.to/3SUR3t3", "https://amzn.to/3YTPHTr"],
 		"ebook_name" : ["https://amzn.in/d/eeW0gGK", "https://amzn.in/d/76hrmRz", "https://amzn.in/d/4Jzj8A2"],
 		"pdf":["assets/pdf/Docker_Course_pdf1.pdf"],
 		"pdf_name":["Docker Course "]	 
@@ -32,8 +32,8 @@ let books = { "col1" : [
           //Kubernetes
 	       {"name" : "Kubernetes", 
 			 "Author" : ["Mayank Rana ","Mayank Rana","Mayank Rana","Mayank Rana"],
-			 "ebookAuthor" : ["Amazon"],
-			 "ebook" : ["https://amzn.in/d/eeW0gGK", "https://amzn.in/d/76hrmRz", "https://amzn.in/d/4Jzj8A2"],
+			 "ebookAuthor" : ["Stephen Fleming", "Gigi Sayfan", "Nisarg Vasavada "],
+			 "ebook" : ["https://amzn.to/46M6ee1", "https://amzn.to/4drFoKH", "https://amzn.to/4do6DFV"],
 			 "ebook_name" : ["https://amzn.in/d/eeW0gGK", "https://amzn.in/d/76hrmRz", "https://amzn.in/d/4Jzj8A2"],
 			 "pdf":["assets/pdf/Kubernetes_Cluster_Setup_Guide.pdf" ,"assets/pdf/Kubernetes_Commands_Overview.pdf"  ,
 			        "assets/pdf/Kubernetes_Interview_Questions.pdf"  , "assets/pdf/Kubernetes_Manifest_file.pdf"] ,
@@ -44,8 +44,8 @@ let books = { "col1" : [
 			 //jenkins
 			 {"name" : "Jenkins", 
 			 "Author" : ["Azad","Shivam"],
-			 "ebookAuthor" : ["Code Academy","Noel Kantaris","Peter Freese","Azad","Shivam"],
-			 "ebook" : ["https://amzn.in/d/dTDTKwy", "https://amzn.in/d/76hrmRz", "https://amzn.in/d/4Jzj8A2"],
+			 "ebookAuthor" : ["Sandeep Rawat","KS EBOOKS"],
+			 "ebook" : ["https://amzn.to/3yLgE0K", "https://amzn.to/3MjwAdD" ],
 			 "ebook_name" : ["Guide to MS DOS", "MS-DOS 6 Explained (BP S.): 341", "MS-DOS Up to and Including Version 6.2"],
 			 "pdf":["assets/pdf/ms_dos_by_azad.pdf","assets/pdf/msdosbyshivambhati.pdf"] ,
 			 "pdf_name":["Ms Dos ","Ms Dos "]	 
@@ -53,8 +53,8 @@ let books = { "col1" : [
 			//terraform
 			{"name" : "Terraform", 
 			"Author" : ["Azad","Shivam"],
-			"ebookAuthor" : ["Code Academy","Noel Kantaris","Peter Freese","Azad","Shivam"],
-			"ebook" : ["https://amzn.in/d/dTDTKwy", "https://amzn.in/d/76hrmRz", "https://amzn.in/d/4Jzj8A2"],
+			"ebookAuthor" : ["Oluyemi James Odeyinka ","Mark Tinderholt ","Ankita Patil Mitesh Soni"," KS EBOOKS"],
+			"ebook" : ["https://amzn.to/4dOII2d", "https://amzn.to/4dGLAOM", "https://amzn.to/4fUvOkY", "https://amzn.to/46TUBSc"],
 			"ebook_name" : ["Guide to MS DOS", "MS-DOS 6 Explained (BP S.): 341", "MS-DOS Up to and Including Version 6.2"],
 			"pdf":["assets/pdf/Terraform_question_answer.pdf"] ,
 			"pdf_name":["Ms Dos ","Ms Dos "]	 
@@ -62,8 +62,8 @@ let books = { "col1" : [
 					  //AWS 
 			{"name" : "AWS", 
 			 "Author" : ["Azad","Shivam"],
-			 "ebookAuthor" : ["Code Academy","Noel Kantaris","Peter Freese","Azad","Shivam"],
-			 "ebook" : ["https://amzn.in/d/dTDTKwy", "https://amzn.in/d/76hrmRz", "https://amzn.in/d/4Jzj8A2"],
+			 "ebookAuthor" : ["Saurabh Shrivastava","Anthony J. Sequeira","Gareth Eagar", " John Culkin"],
+			 "ebook" : ["https://amzn.to/3X8TFpP", "https://amzn.to/4dP7ZZZ", "https://amzn.to/4dMPQw0", "https://amzn.to/3yO58Sh"],
 			 "ebook_name" : ["Guide to MS DOS", "MS-DOS 6 Explained (BP S.): 341", "MS-DOS Up to and Including Version 6.2"],
 			 "pdf":["assets/pdf/ms_dos_by_azad.pdf","assets/pdf/msdosbyshivambhati.pdf"] ,
 			 "pdf_name":["Ms Dos ","Ms Dos "]	 
@@ -71,8 +71,8 @@ let books = { "col1" : [
 					  //AZURE
 			{"name" : "AZURE", 
 			 "Author" : ["Azad","Shivam"],
-			 "ebookAuthor" : ["Code Academy","Noel Kantaris","Peter Freese","Azad","Shivam"],
-			 "ebook" : ["https://amzn.in/d/dTDTKwy", "https://amzn.in/d/76hrmRz", "https://amzn.in/d/4Jzj8A2"],
+			 "ebookAuthor" : ["Mitesh Soni", "Jonah Carrio Andersson "," Abhishek Mishra","Kasam Ahmed Shaikh"],
+			 "ebook" : ["https://amzn.to/4cx5ryz", "https://amzn.to/3AwCaa8", "https://amzn.to/46Vd293","https://amzn.to/3McN2MT"],
 			 "ebook_name" : ["Guide to MS DOS", "MS-DOS 6 Explained (BP S.): 341", "MS-DOS Up to and Including Version 6.2"],
 			 "pdf":["assets/pdf/ms_dos_by_azad.pdf","assets/pdf/msdosbyshivambhati.pdf"] ,
 			 "pdf_name":["Ms Dos ","Ms Dos "]	 
@@ -80,8 +80,8 @@ let books = { "col1" : [
 					  //GCP 
 			{"name" : "GCP", 
 			 "Author" : ["Azad","Shivam"],
-			 "ebookAuthor" : ["Code Academy","Noel Kantaris","Peter Freese","Azad","Shivam"],
-			 "ebook" : ["https://amzn.in/d/dTDTKwy", "https://amzn.in/d/76hrmRz", "https://amzn.in/d/4Jzj8A2"],
+			 "ebookAuthor" : ["Praveen Kukreti","Sandeep Madamanchi "],
+			 "ebook" : ["https://amzn.to/3AtGU0a", "https://amzn.to/3AtuO7p"],
 			 "ebook_name" : ["Guide to MS DOS", "MS-DOS 6 Explained (BP S.): 341", "MS-DOS Up to and Including Version 6.2"],
 			 "pdf":["assets/pdf/ms_dos_by_azad.pdf","assets/pdf/msdosbyshivambhati.pdf"] ,
 			 "pdf_name":["Ms Dos ","Ms Dos "]	 
@@ -89,16 +89,16 @@ let books = { "col1" : [
 			 //python
 			 {"name" : "Python", 
 			 "Author" : ["Azad","Shivam"],
-			 "ebookAuthor" : ["Code Academy","Noel Kantaris","Peter Freese","Azad","Shivam"],
-			 "ebook" : ["https://amzn.in/d/dTDTKwy", "https://amzn.in/d/76hrmRz", "https://amzn.in/d/4Jzj8A2"],
+			 "ebookAuthor" : ["Kriti Kumari Sinha "," Saurabh Chandrakar","Brijesh Bakariya "," R. Nageswara Rao","John Shovic"],
+			 "ebook" : ["https://amzn.to/3XbNzFh", "https://amzn.to/4cxsAkv", "https://amzn.to/4csKx3O","https://amzn.to/4fRCn7N","https://amzn.to/3WVha4x"],
 			 "ebook_name" : ["Guide to MS DOS", "MS-DOS 6 Explained (BP S.): 341", "MS-DOS Up to and Including Version 6.2"],
 			 "pdf":["assets/pdf/ms_dos_by_azad.pdf","assets/pdf/msdosbyshivambhati.pdf"] ,
 			 "pdf_name":["Ms Dos ","Ms Dos "]	 
 			}, //shell Scripting
 			{"name" : "Shell Scripting", 
 			"Author" : ["Mayank Rana"],
-			"ebookAuthor" : ["Code Academy","Noel Kantaris","Peter Freese","Mayank Rana"],
-			"ebook" : ["https://amzn.in/d/dTDTKwy", "https://amzn.in/d/76hrmRz", "https://amzn.in/d/4Jzj8A2"],
+			"ebookAuthor" : ["Arnold Robbins","Amit Ganvir ","Rocky Johnson "],
+			"ebook" : ["https://amzn.to/3SUTH22", "https://amzn.to/3XbRgea", "https://amzn.to/4cx6gYb"],
 			"ebook_name" : ["Guide to MS DOS", "MS-DOS 6 Explained (BP S.): 341", "MS-DOS Up to and Including Version 6.2"],
 			"pdf":["assets/pdf/Introduction_to_Shell_Scripting.pdf"] ,
 			"pdf_name":["Shell Scripting "]	 
@@ -106,8 +106,8 @@ let books = { "col1" : [
 		    //Networking
 			{"name" : "Networking", 
 			"Author" : ["Azad","Shivam"],
-			"ebookAuthor" : ["Code Academy","Noel Kantaris","Peter Freese","Azad","Shivam"],
-			"ebook" : ["https://amzn.in/d/dTDTKwy", "https://amzn.in/d/76hrmRz", "https://amzn.in/d/4Jzj8A2"],
+			"ebookAuthor" : [" Kurose","Doug Lowe","Tanenbaum "],
+			"ebook" : ["https://amzn.to/4fUcPHa", "https://amzn.to/3X00tF8", "https://amzn.to/3AtvMR5"],
 			"ebook_name" : ["Guide to MS DOS", "MS-DOS 6 Explained (BP S.): 341", "MS-DOS Up to and Including Version 6.2"],
 			"pdf":["assets/pdf/ms_dos_by_azad.pdf","assets/pdf/msdosbyshivambhati.pdf"] ,
 			"pdf_name":["Ms Dos ","Ms Dos "]	 
@@ -115,8 +115,8 @@ let books = { "col1" : [
 		   //Ms Dos 
 		   {"name" : "MS Dos", 
 			"Author" : ["Azad","Shivam"],
-			"ebookAuthor" : ["LP Editorial Board","Noel Kantaris","Peter Freese","Azad","Shivam"],
-			"ebook" : ["https://amzn.in/d/eeW0gGK", "https://amzn.in/d/76hrmRz", "https://amzn.in/d/4Jzj8A2"],
+			"ebookAuthor" : ["Peter Freese","Kenneth Pugh"],
+			"ebook" : ["https://amzn.to/3yM1JDs", "https://amzn.to/3WW2uC7"],
 			"ebook_name" : ["Guide to MS DOS", "MS-DOS 6 Explained (BP S.): 341", "MS-DOS Up to and Including Version 6.2"],
 			"pdf":["assets/pdf/ms_dos_by_azad.pdf","assets/pdf/msdosbyshivambhati.pdf"],
 			"pdf_name":["Ms Dos ","Ms Dos "]	 
@@ -125,8 +125,8 @@ let books = { "col1" : [
 		  //Html Css 
 			{"name" : "Html & CSS", 
 			 "Author" : ["Azad","Shivam"],
-			 "ebookAuthor" : ["Code Academy","Noel Kantaris","Peter Freese","Azad","Shivam"],
-			 "ebook" : ["https://amzn.in/d/dTDTKwy", "https://amzn.in/d/76hrmRz", "https://amzn.in/d/4Jzj8A2"],
+			 "ebookAuthor" : ["Laura Lemay","Thomas Powell "],
+			 "ebook" : ["https://amzn.to/3At8met", "https://amzn.to/3AoYzWH"],
 			 "ebook_name" : ["Guide to MS DOS", "MS-DOS 6 Explained (BP S.): 341", "MS-DOS Up to and Including Version 6.2"],
 			 "pdf":["assets/pdf/ms_dos_by_azad.pdf","assets/pdf/msdosbyshivambhati.pdf"] ,
 			 "pdf_name":["Ms Dos ","Ms Dos "]	 
@@ -135,17 +135,19 @@ let books = { "col1" : [
 		  //C & C++
 			{"name" : "C & C++", 
 			 "Author" : ["Azad","Shivam"],
-			 "ebookAuthor" : ["Code Academy","Noel Kantaris","Peter Freese","Azad","Shivam"],
-			 "ebook" : ["https://amzn.in/d/dTDTKwy", "https://amzn.in/d/76hrmRz", "https://amzn.in/d/4Jzj8A2"],
+			 "ebookAuthor" : ["Bjarne Stroustrup","Yashavant Kanetkar","E Balagurusamy","Yashavant Kanetkar ","Langsam / Augenstein / Tenenbaum","Yashavant Kanetkar"],
+			 "ebook" : ["https://amzn.to/4fPXK9M", "https://amzn.to/3AxaKkm", "https://amzn.to/3MaCM7I","https://amzn.to/4drlakj","https://amzn.to/3X6SvLr","https://amzn.to/3WW2OAP"],
 			 "ebook_name" : ["Guide to MS DOS", "MS-DOS 6 Explained (BP S.): 341", "MS-DOS Up to and Including Version 6.2"],
 			 "pdf":["assets/pdf/ms_dos_by_azad.pdf","assets/pdf/msdosbyshivambhati.pdf"] ,
 			 "pdf_name":["Ms Dos ","Ms Dos "]	 
 			}, 
 		  //Javascript
 			{"name" : "Javascript", 
+
 			 "Author" : ["Flavico Copes","Rob Percival"],
 			 "ebookAuthor" : ["Code Academy","Noel Kantaris","Peter Freese","Azad","Shivam"],
 			 "ebook" : ["https://amzn.in/d/dTDTKwy", "https://amzn.in/d/76hrmRz", "https://amzn.in/d/4Jzj8A2"],
+
 			 "ebook_name" : ["Guide to MS DOS", "MS-DOS 6 Explained (BP S.): 341", "MS-DOS Up to and Including Version 6.2"],
 			 "pdf":["assets/pdf/javascript-handbook.pdf ",  "assets/pdf/javascript_beginner_ to_professional.pdf"] ,
 			 "pdf_name":["Ms Dos ","Ms Dos "]	 
@@ -154,28 +156,28 @@ let books = { "col1" : [
 		  //java
 			{"name" : "Java", 
 			 "Author" : ["Azad","Shivam"],
-			 "ebookAuthor" : ["Code Academy","Noel Kantaris","Peter Freese","Azad","Shivam"],
-			 "ebook" : ["https://amzn.in/d/dTDTKwy", "https://amzn.in/d/76hrmRz", "https://amzn.in/d/4Jzj8A2"],
+			 "ebookAuthor" : ["E. Balagurusamy"," R. Nageswara Rao ","Narasimha Karumanchi "],
+			 "ebook" : ["https://amzn.to/3XahfCG", "https://amzn.to/4fT4jYX", "https://amzn.to/3MbZUTF"],
 			 "ebook_name" : ["Guide to MS DOS", "MS-DOS 6 Explained (BP S.): 341", "MS-DOS Up to and Including Version 6.2"],
 			 "pdf":["assets/pdf/ms_dos_by_azad.pdf","assets/pdf/msdosbyshivambhati.pdf"] ,
 			 "pdf_name":["Ms Dos ","Ms Dos "]	 
 			},
 					 
-					  //Sql 
+		  //Sql 
 			{"name" : "SQL", 
 			 "Author" : ["Virat"],
-			 "ebookAuthor" : ["Code Quickly","Noel Kantaris","Peter Freese","Azad","Shivam"],
-			 "ebook" : ["https://amzn.in/d/g39ktgR", "https://amzn.in/d/76hrmRz", "https://amzn.in/d/4Jzj8A2"],
+			 "ebookAuthor" : ["Allen G. Taylor ","Thomas Nield ","Praveen K Sharma, Deepak Gupta, Naveen Bhardwaj"],
+			 "ebook" : ["https://amzn.to/4fSTo1y", "https://amzn.to/3Xdfp42", "https://amzn.to/3X9ed1s"],
 			 "ebook_name" : ["Guide to MS DOS", "MS-DOS 6 Explained (BP S.): 341", "MS-DOS Up to and Including Version 6.2"],
 			 "pdf":["assets/pdf/ms_dos_by_azad.pdf","assets/pdf/msdosbyshivambhati.pdf"] ,
 			 "pdf_name":["Ms Dos ","Ms Dos "]	 
 			},
 					 
-			//React
+		  //React
 			  {"name" : "React", 
 			   "Author" : ["Azad","Shivam"],
-			   "ebookAuthor" : ["Code Academy","Noel Kantaris","Peter Freese","Azad","Shivam"],
-			   "ebook" : ["https://amzn.in/d/dTDTKwy", "https://amzn.in/d/76hrmRz", "https://amzn.in/d/4Jzj8A2"],
+			   "ebookAuthor" : ["Mehul Mohan","Mayur Patil","Alex Banks"],
+			   "ebook" : ["https://amzn.to/4dtJAtb", "https://amzn.to/4fMztS1", "https://amzn.to/3YSpOTZ"],
 			   "ebook_name" : ["Guide to MS DOS", "MS-DOS 6 Explained (BP S.): 341", "MS-DOS Up to and Including Version 6.2"],
 			   "pdf":["assets/pdf/ms_dos_by_azad.pdf","assets/pdf/msdosbyshivambhati.pdf"] ,
 			   "pdf_name":["Ms Dos ","Ms Dos "]	 
@@ -184,23 +186,23 @@ let books = { "col1" : [
 			  //Angular
 				{"name" : "Angular", 
 				 "Author" : ["Azad","Shivam"],
-				 "ebookAuthor" : ["Code Academy","Noel Kantaris","Peter Freese","Azad","Shivam"],
-				 "ebook" : ["https://amzn.in/d/dTDTKwy", "https://amzn.in/d/76hrmRz", "https://amzn.in/d/4Jzj8A2"],
+				 "ebookAuthor" : ["Sukesh Marla ","Aristeidis Bampakos"],
+				 "ebook" : ["https://amzn.to/4dMOTnk", "https://amzn.to/3AyI8r7"],
 				 "ebook_name" : ["Guide to MS DOS", "MS-DOS 6 Explained (BP S.): 341", "MS-DOS Up to and Including Version 6.2"],
 				 "pdf":["assets/pdf/ms_dos_by_azad.pdf","assets/pdf/msdosbyshivambhati.pdf"] ,
 				 "pdf_name":["Ms Dos ","Ms Dos "]	 
 				},
 					 
-				//node.js
+			  //node.js
 				  {"name" : "Node.Js", 
 				   "Author" : ["Azad","Shivam"],
-				   "ebookAuthor" : ["Code Academy","Noel Kantaris","Peter Freese","Azad","Shivam"],
-				   "ebook" : ["https://amzn.in/d/dTDTKwy", "https://amzn.in/d/76hrmRz", "https://amzn.in/d/4Jzj8A2"],
+				   "ebookAuthor" : ["Greg Lim ","Dhruti Shah "],
+				   "ebook" : ["https://amzn.to/4dxkdqt", "https://amzn.to/3WVW05Z"],
 				   "ebook_name" : ["Guide to MS DOS", "MS-DOS 6 Explained (BP S.): 341", "MS-DOS Up to and Including Version 6.2"],
 				   "pdf":["assets/pdf/ms_dos_by_azad.pdf","assets/pdf/msdosbyshivambhati.pdf"] ,
 				   "pdf_name":["Ms Dos ","Ms Dos "]	 
 				  },
-				  //C/C++
+				 //C/C++
 				  {"name" : "C/C++", 
 				   "Author" : ["Azad","Shivam"],
 				   "ebookAuthor" : ["Code Academy","Noel Kantaris","Peter Freese","Azad","Shivam"],
