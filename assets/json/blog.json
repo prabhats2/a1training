@@ -2,21 +2,21 @@ let blog = {
   "col1": [
     {
       "image" :"computer_science.png",
-      "title":"Blog Post Title 1",
+      "title":"Computer Science",
       "description":"A brief description of the blog post goes here.",
       "category": "all"  , 
       "button":"more info button"
     },
     {
       "image" :"photo-shop.png",
-      "title":"Blog Post Title 2",
+      "title":"Photoshop",
       "description":"A brief description of the blog post goes here.",
        "category": "designing"  ,
       "button":"more info "
     },
     {
       "image" :"illustrator.png",
-      "title":"Blog Post Title 3",
+      "title":"Illustrator",
       "description":"A brief description of the blog post goes here.",
        "category": "designing" ,
       "button":"more info button"
@@ -24,19 +24,19 @@ let blog = {
     },
     {
       "image" :"canva.png",
-      "title":"Blog Post Title 4",
+      "title":"Canva",
       "description":"A brief description of the blog post goes here.",
        "category": "designing"
     },
     {
       "image" :"cc+.png",
-      "title":"Blog Post Title 4",
+      "title":"C/C++",
       "description":"A brief description of the blog post goes here.",
       "category": "programming"
     },
     {
       "image" :"game-development.png",
-      "title":"Blog Post Title 4",
+      "title":"Game Development",
       "description":"A brief description of the blog post goes here.",
       "category": "web-development"
     }
