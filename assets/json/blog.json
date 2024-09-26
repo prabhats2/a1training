@@ -3,6 +3,7 @@ let blog = {
     {
       "image" :"computer_science.png",
       "title":"Computer Science",
+      "date" :"25/Sep/2024",
       "description":"A brief description of the blog post goes here.",
       "category": "all"  , 
       "button":"more info button"
@@ -10,6 +11,7 @@ let blog = {
     {
       "image" :"photo-shop.png",
       "title":"Photoshop",
+      "date" :"24/Sep/2024",
       "description":"A brief description of the blog post goes here.",
        "category": "designing"  ,
       "button":"more info "
@@ -17,6 +19,7 @@ let blog = {
     {
       "image" :"illustrator.png",
       "title":"Illustrator",
+      "date" :"23/Sep/2024",
       "description":"A brief description of the blog post goes here.",
        "category": "designing" ,
       "button":"more info button"
@@ -25,20 +28,30 @@ let blog = {
     {
       "image" :"canva.png",
       "title":"Canva",
+      "date" :"22/Sep/2024",
       "description":"A brief description of the blog post goes here.",
        "category": "designing"
     },
     {
       "image" :"cc+.png",
       "title":"C/C++",
+      "date" :"21/Sep/2024",
       "description":"A brief description of the blog post goes here.",
       "category": "programming"
     },
     {
       "image" :"game-development.png",
       "title":"Game Development",
+      "date" :"20/Sep/2024",
       "description":"A brief description of the blog post goes here.",
       "category": "web-development"
+    },
+    {
+      "image" :"python.png",
+      "title":"Python Programming ",
+      "date" :"26/Sep/2024",
+      "description":"<h6>Why It’s Important to Learn Python Programming in 2024 </h6> In today’s rapidly evolving tech world, programming skills are not just reserved for developers or computer scientists. They’ve become an essential tool for professionals across industries. Among the vast array of programming languages available, Python has emerged as one of the most popular and versatile choices. Whether you’re a beginner, a data scientist, or someone looking to automate routine tasks, learning Python offers countless benefits.",
+      "category": "programming"
     }
   
     
