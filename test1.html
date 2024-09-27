@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog Post</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-edu-meeting.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/lightbox.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -34,9 +40,7 @@
             width: 100%;
             height: 100%;
             background-color: rgba(0, 0, 0, 0.8);
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            display: none;
             z-index: 9999; /* Ensure overlay is on top */
         }
 
@@ -47,10 +51,10 @@
             width: 80%;
             max-height: 90%;
             overflow-y: auto;
-        }
-
-        .sidebar {
-            margin-top: 20px;
+            position: relative;
+            margin: 0 auto; /* Center overlay content */
+            top: 50%; /* Move down */
+            transform: translateY(-50%); /* Adjust to center vertically */
         }
 
         .close {
@@ -73,6 +77,44 @@
             -webkit-line-clamp: unset; /* Remove line limit */
             max-height: unset; /* Allow full height */
         }
+
+        /* Adjust the layout without Flexbox */
+        .overlay-content .row {
+            margin: 0; /* Reset margin */
+        }
+
+        .overlay-content .col-lg-8,
+        .overlay-content .col-lg-4 {
+            float: left; /* Use float for layout */
+        }
+
+        .overlay-content .col-lg-8 {
+            width: 66.6666%; /* Left content column takes 66% */
+        }
+
+        .overlay-content .col-lg-4 {
+            width: 33.3333%; /* Right images column takes 33% */
+            height: 400px; /* Set fixed height for the scrollable area */
+            overflow-y: auto; /* Enable vertical scroll */
+        }
+
+        @media (max-width: 768px) {
+            .overlay-content .col-lg-4,
+            .overlay-content .col-lg-8 {
+                width: 100%; /* Full width in mobile */
+                float: none; /* Clear float */
+            }
+        }
+
+        .image-scroll {
+            height: auto;
+        }
+
+        .image-scroll img {
+            width: 100%;
+            margin-bottom: 10px; /* Space between images */
+            border-radius: 5px;
+        }
     </style>
 </head>
 <body>
@@ -86,47 +128,32 @@
         </p>
     </div>
 
-    <div class="post" onclick="openPost('Your Second Blog Post Title', 'This is a short description of your second blog post. This text should help you understand how the read more and read less functionality works.', 'assets/images/junior-geeks/game-development.png')">
-        <img src="assets/images/junior-geeks/game-development.png" alt="Blog Post Image" class="post-image">
-        <h3 class="post-title">Your Second Blog Post Title</h3>
-        <p class="post-description">
-            This is a short description of your second blog post.
-            <span class="more" id="moreText2" style="display:none;"> Here is some additional content that will be shown on clicking "Read More".</span>
-            <span class="read-more" id="readMoreBtn2" onclick="toggleReadMore(event, 'moreText2', 'readMoreBtn2')">Read More</span>
-        </p>
-    </div>
+    
 
-    <div id="overlay" class="overlay" style="display:none;" onclick="closeOverlay(event)">
+    <div id="overlay" class="overlay" onclick="closeOverlay(event)">
         <div class="overlay-content" onclick="event.stopPropagation();"> <!-- Prevent event bubbling -->
             <span class="close" onclick="closeOverlay(event)">&times;</span>
-            <div class="big-post">
-                <img id="bigPostImage" src="" alt="Big Post Image" class="post-image">
-                <h2 id="bigPostTitle"></h2>
-                <p id="bigPostDescription" class="description"></p>
-                <span id="readMoreBtn" onclick="toggleDescription(event)">Read More</span>
-            </div>
-            <div class="sidebar">
-                <h3>Other Blog Posts</h3>
-                <div id="carouselExample" class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="assets/images/junior-geeks/computer_science.png" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="assets/images/junior-geeks/canva.png" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="assets/images/junior-geeks/game-development.png" class="d-block w-100" alt="...">
-                        </div>
+            
+            <div class="row">
+                <!-- Blog Content Column (Left) -->
+                <div class="col-lg-8 ">
+                    <div class="big-post">
+                        <img id="bigPostImage" src="" alt="Big Post Image" class="post-image">
+                        <h2 id="bigPostTitle"></h2>
+                        <p id="bigPostDescription" class="description"></p>
+                        <span id="readMoreBtn" onclick="toggleDescription(event)">Read More</span>
                     </div>
-                    <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
+                </div>
+
+                <!-- Images Column (Right) -->
+                <div class="col-lg-4">
+                    <div class="image-scroll">
+                        <img src="assets/images/junior-geeks/canva.png" alt="Related Image 1">
+                        <img src="assets/images/junior-geeks/game-development.png" alt="Related Image 2">
+                        <img src="assets/images/junior-geeks/canva.png" alt="Related Image 3">
+                        <img src="assets/images/junior-geeks/game-development.png" alt="Related Image 4">
+                        <!-- Add more images as needed -->
+                    </div>
                 </div>
             </div>
         </div>
@@ -174,9 +201,9 @@
         }
 
         function closeOverlay(event) {
-            if (event) event.stopPropagation();
-            const overlay = document.getElementById("overlay");
-            overlay.style.display = "none";
+            if (event.target === document.getElementById("overlay")) {
+                document.getElementById("overlay").style.display = "none";
+            }
         }
     </script>
 </body>

@@ -5,52 +5,55 @@ let blog = {
       "title":"Computer Science",
       "date" :"25/Sep/2024",
       "description":"A brief description of the blog post goes here.",
-      "category": "all"  , 
-      "button":"more info button"
+      "description1":" In today’s rapidly evolving tech world, programming skills are not just reserved for developers or computer scientists. They’ve become an essential tool for professionals across industries. Among the vast array of programming languages available, Python has emerged as one of the most popular and versatile choices. Whether you’re a beginner, a data scientist, or someone looking to automate routine tasks, learning Python offers countless benefits.",
+      "category": "all"
     },
     {
       "image" :"photo-shop.png",
       "title":"Photoshop",
       "date" :"24/Sep/2024",
-      "description":"A brief description of the blog post goes here.",
-       "category": "designing"  ,
-      "button":"more info "
+      "description":"Mastering Photoshop: 5 Essential Techniques for Stunning Visuals",
+      "description1":"In today’s digital age, Photoshop remains a powerful tool for graphic designers, photographers, and creatives alike. Whether you’re a beginner or an experienced user, honing your skills can lead to breathtaking results. This post will explore five essential techniques that will elevate your Photoshop game and enhance your visual storytelling.",
+      "category": "designing" 
     },
     {
       "image" :"illustrator.png",
       "title":"Illustrator",
       "date" :"23/Sep/2024",
-      "description":"A brief description of the blog post goes here.",
-       "category": "designing" ,
-      "button":"more info button"
-
+      "description":" Unlock Your Creativity: 5 Illustrator Techniques for Stunning Designs",
+      "description1":" Adobe Illustrator is the go-to tool for vector graphics, enabling designers to create crisp, scalable art. Whether you're designing logos, illustrations, or infographics, mastering Illustrator can enhance your creative process. In this post, we'll explore five essential techniques that will help you elevate your designs and unleash your creativity. ",
+      "category": "designing" 
     },
     {
       "image" :"canva.png",
       "title":"Canva",
       "date" :"22/Sep/2024",
-      "description":"A brief description of the blog post goes here.",
-       "category": "designing"
+      "description":"Design Like a Pro: 5 Essential Tips for Mastering Canva",
+      "description1":" Canva has revolutionized graphic design, making it accessible to everyone, regardless of skill level. Whether you’re creating social media graphics, presentations, or marketing materials, mastering Canva can elevate your designs. In this post, we’ll explore five essential tips that will help you unleash your creativity and design like a pro.",
+      "category": "designing"
     },
     {
       "image" :"cc+.png",
       "title":"C/C++",
       "date" :"21/Sep/2024",
       "description":"A brief description of the blog post goes here.",
+      "description1":" In today’s rapidly evolving tech world, programming skills are not just reserved for developers or computer scientists. They’ve become an essential tool for professionals across industries. Among the vast array of programming languages available, Python has emerged as one of the most popular and versatile choices. Whether you’re a beginner, a data scientist, or someone looking to automate routine tasks, learning Python offers countless benefits.",
       "category": "programming"
     },
     {
       "image" :"game-development.png",
       "title":"Game Development",
       "date" :"20/Sep/2024",
-      "description":"A brief description of the blog post goes here.",
+      "description":"Level Up Your Skills: 5 Essential Tips for Aspiring Game Developers",
+      "description1":"Game development is an exciting and dynamic field that combines creativity, technology, and storytelling. Whether you’re interested in designing 2D platformers or immersive 3D worlds, mastering the essentials can set you on the path to success. In this post, we’ll explore five vital tips to help aspiring game developers enhance their skills and bring their game ideas to life.",   
       "category": "web-development"
     },
     {
       "image" :"python.png",
       "title":"Python Programming ",
       "date" :"26/Sep/2024",
-      "description":"<h6>Why It’s Important to Learn Python Programming in 2024 </h6> In today’s rapidly evolving tech world, programming skills are not just reserved for developers or computer scientists. They’ve become an essential tool for professionals across industries. Among the vast array of programming languages available, Python has emerged as one of the most popular and versatile choices. Whether you’re a beginner, a data scientist, or someone looking to automate routine tasks, learning Python offers countless benefits.",
+      "description":"Why It’s Important to Learn Python Programming in 2024  ",
+      "description1":" In today’s rapidly evolving tech world, programming skills are not just reserved for developers or computer scientists. They’ve become an essential tool for professionals across industries. Among the vast array of programming languages available, Python has emerged as one of the most popular and versatile choices. Whether you’re a beginner, a data scientist, or someone looking to automate routine tasks, learning Python offers countless benefits.",
       "category": "programming"
     }
   
