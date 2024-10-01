@@ -48,7 +48,7 @@ document.write(`  <!-- Sub Header -->
                             </ul>
                         </li>
                         <li><a href="batches.html">Batches</a></li>
-                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="#">Blog</a></li>
                        <li><a href="events.html">Events</a></li>
 
                         <li class="has-sub">
@@ -89,8 +89,11 @@ s1.setAttribute('crossorigin','*');
 s0.parentNode.insertBefore(s1,s0);
 })();
 
-//if (window.location.pathname.endsWith('.html')) {
-  //  const newPath = window.location.pathname.replace('.html', '');
-  //  window.history.replaceState(null, '', newPath);
- // }
- 
+if (window.location.pathname.endsWith('.html') && !window.performance.getEntriesByType('navigation')[0].type === 'reload') {
+  const newPath = window.location.pathname.replace('.html', '');
+  
+  // Check if the path has already been updated to avoid multiple updates
+  if (!window.location.pathname.endsWith('/')) {
+    window.history.replaceState(null, '', newPath);
+  }
+}

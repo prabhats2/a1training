@@ -2,7 +2,7 @@ var courses = {
     "col1": [
         {
             "course_name": "MS Office",
-            "class": "soon",
+            "class": "att",
             "pdf": "MS Office.pdf",
             "title": "MS_Office",
             "image": "ms-office.jpg",
@@ -91,13 +91,13 @@ var courses = {
         },
         {
             "course_name": "Python",
-            "class": "soon",
+            "class": ["soon", "imp"], 
             "pdf": "Python.pdf",
             "title": "Python",
             "image": "python.png",
             "download": "course_1",
             "description": "Python",
-            "syllabus" : ["assets/pdf/junior_geeks/python_junior.pdf"],
+            "syllabus" : ["assets/syllabus/Python_for_kids.pdf"],
            "syllabus_name":["Python Syllabus "]
         },
         {
@@ -111,11 +111,12 @@ var courses = {
             "syllabus" : ["assets/pdf/junior_geeks/java.pdf"],
            "syllabus_name":["Java Syllabus "]
         },
+    
         {
             "course_name": "C/C++ Programming",
             "class": "att",
             "pdf": "C/C++ Programming.pdf",
-            "title": "C/C++_Programming",
+            "title": "C_and_C_plus_plus_Programming",
             "image": "cc+.png",
             "download": "course_1",
             "description": "C/C++_Programming",
@@ -135,7 +136,7 @@ var courses = {
         },
         {
             "course_name": "Database",
-            "class": "att",
+            "class": "course-item soon",
             "pdf": "Database.pdf",
             "title": "Database",
             "image": "database.png",
@@ -145,10 +146,10 @@ var courses = {
            "syllabus_name":["Database Syllabus "]
         },
         {
-            "course_name": "Computer Science",
+            "course_name": "Computer Science 11th & 12th",
             "class": "att",
             "pdf": "Computer_Science.pdf",
-            "title": "Computer_Science",
+            "title": "Computer_Science_11th_and_12th",
             "image": "computer_science.png",
             "download": "course_1",
             "description": "Computer_Science",

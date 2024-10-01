@@ -38,7 +38,7 @@ var courses = {
             "title": "Python_Training",
             "image": "python.png",
             "description": "gcp04",
-            "syllabus" : ["assets/syllabus/python.pdf"],
+            "syllabus" : ["assets/syllabus/a1_training_Python_for_professional.pdf"],
            "syllabus_name":["Python Training Syllabus "]	
         },
         {

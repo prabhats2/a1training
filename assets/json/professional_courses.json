@@ -9,10 +9,8 @@ var courses1 = {
             "image": "Linux.jpg",
             "description": "Linux_01",
             "syllabus" : ["assets/syllabus/Linux.pdf"],
-           "syllabus_name":["Linux Syllabus "]
-             
+           "syllabus_name":["Linux Syllabus "]  
         },	
-        
         {
             "course_name": "Shell Scripting",
             "class": "Devops",
@@ -32,7 +30,7 @@ var courses1 = {
             "download": "course_1",
             "image": "python.png",
             "description": "python",
-            "syllabus" : ["assets/syllabus/python.pdf"],
+            "syllabus" : ["assets/syllabus/a1_training_Python_for_professional.pdf"],
            "syllabus_name":["Python Training Syllabus "]	
         },
         {

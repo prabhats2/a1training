@@ -88,12 +88,12 @@ let books = { "col1" : [
 			},
 			 //python
 			 {"name" : "Python", 
-			 "Author" : ["Azad","Shivam"],
+			 "Author" : ["Dave Kuhlman"],
 			 "ebookAuthor" : ["Kriti Kumari Sinha "," Saurabh Chandrakar","Brijesh Bakariya "," R. Nageswara Rao","John Shovic"],
 			 "ebook" : ["https://amzn.to/3XbNzFh", "https://amzn.to/4cxsAkv", "https://amzn.to/4csKx3O","https://amzn.to/4fRCn7N","https://amzn.to/3WVha4x"],
 			 "ebook_name" : ["Guide to MS DOS", "MS-DOS 6 Explained (BP S.): 341", "MS-DOS Up to and Including Version 6.2"],
-			 "pdf":["assets/pdf/ms_dos_by_azad.pdf","assets/pdf/msdosbyshivambhati.pdf"] ,
-			 "pdf_name":["Ms Dos ","Ms Dos "]	 
+			 "pdf":["assets/pdf/python_book_01.pdf"] ,
+			 "pdf_name":["Python Book",]	 
 			}, //shell Scripting
 			{"name" : "Shell Scripting", 
 			"Author" : ["Mayank Rana"],
