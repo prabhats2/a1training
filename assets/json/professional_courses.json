@@ -52,7 +52,7 @@ var courses1 = {
             "download": "course_1",
             "image": "Docker-Certification-Training.jpg",
             "description": "Docker_Training",
-            "syllabus" : ["assets/syllabus/#.pdf"],
+            "syllabus" : ["assets/syllabus/Docker_Course_Syllabus.pdf"],
            "syllabus_name":["Docker Training Syllabus "]	
         },
         {
