@@ -89,9 +89,10 @@ var courses = {
             "syllabus" : ["assets/pdf/junior_geeks/robotics .pdf"],
            "syllabus_name":["Robotics Syllabus "]
         },
+        
         {
             "course_name": "Python",
-            "class": ["soon", "imp"], 
+            "class": "soon",
             "pdf": "Python.pdf",
             "title": "Python",
             "image": "python.png",
@@ -136,15 +137,16 @@ var courses = {
         },
         {
             "course_name": "Database",
-            "class": "course-item soon",
+            "class": "att",
             "pdf": "Database.pdf",
             "title": "Database",
             "image": "database.png",
             "download": "course_1",
             "description": "Database",
             "syllabus" : ["assets/pdf/junior_geeks/database.pdf"],
-           "syllabus_name":["Database Syllabus "]
+           "syllabus_name":["Canva Designing Syllabus "]
         },
+
         {
             "course_name": "Computer Science 11th & 12th",
             "class": "att",
