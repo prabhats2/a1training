@@ -24,7 +24,7 @@ for (let i = 0; i < courses.col1.length; i++) {
         Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
 
     <div class="button-container">
-        <button class="custom-button">View / Download Syllabus</button>
+        <button class="custom-button" data-bs-toggle="modal"  data-bs-target="#syllabusModal${i}">View / Download Syllabus</button>
         <button class="custom-button">Contact Course Advisor</button>
     </div>
 
@@ -74,7 +74,7 @@ for (let i = 0; i < courses.col1.length; i++) {
         Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
 
     <div class="button-container">
-        <button class="custom-button">View / Download Syllabus</button>
+        <button class="custom-button" data-bs-toggle="modal"  data-bs-target="#syllabusModal${i}">View / Download Syllabus</button>
         <button class="custom-button">Contact Course Advisor</button>
     </div>
 
@@ -124,7 +124,7 @@ for (let i = 0; i < courses.col1.length; i++) {
         Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
 
     <div class="button-container">
-        <button class="custom-button">View / Download Syllabus</button>
+        <button class="custom-button" data-bs-toggle="modal"  data-bs-target="#syllabusModal${i}">View / Download Syllabus</button>
         <button class="custom-button">Contact Course Advisor</button>
     </div>
 
@@ -174,7 +174,7 @@ for (let i = 0; i < courses.col1.length; i++) {
         Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
 
     <div class="button-container">
-        <button class="custom-button">View / Download Syllabus</button>
+        <button class="custom-button" data-bs-toggle="modal"  data-bs-target="#syllabusModal${i}">View / Download Syllabus</button>
         <button class="custom-button">Contact Course Advisor</button>
     </div>
 
@@ -225,7 +225,7 @@ for (let i = 0; i < courses.col1.length; i++) {
         Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
 
     <div class="button-container">
-        <button class="custom-button">View / Download Syllabus</button>
+        <button class="custom-button" data-bs-toggle="modal"  data-bs-target="#syllabusModal${i}">View / Download Syllabus</button>
         <button class="custom-button">Contact Course Advisor</button>
     </div>
 
@@ -275,7 +275,7 @@ for (let i = 0; i < courses.col1.length; i++) {
         Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
 
     <div class="button-container">
-        <button class="custom-button">View / Download Syllabus</button>
+        <button class="custom-button" data-bs-toggle="modal"  data-bs-target="#syllabusModal${i}">View / Download Syllabus</button>
         <button class="custom-button">Contact Course Advisor</button>
     </div>
 
@@ -326,7 +326,7 @@ for (let i = 0; i < courses.col1.length; i++) {
         Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
 
     <div class="button-container">
-        <button class="custom-button">View / Download Syllabus</button>
+        <button class="custom-button" data-bs-toggle="modal"  data-bs-target="#syllabusModal${i}">View / Download Syllabus</button>
         <button class="custom-button">Contact Course Advisor</button>
     </div>
 
@@ -376,7 +376,7 @@ for (let i = 0; i < courses.col1.length; i++) {
         Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
 
     <div class="button-container">
-        <button class="custom-button">View / Download Syllabus</button>
+        <button class="custom-button" data-bs-toggle="modal"  data-bs-target="#syllabusModal${i}">View / Download Syllabus</button>
         <button class="custom-button">Contact Course Advisor</button>
     </div>
 
@@ -409,25 +409,21 @@ for (let i = 0; i < courses.col1.length; i++) {
         <span id="Python">
             <div class="content-container">
 
-    <h1 class="main-heading">Linux Training at A1 Training Institute</h1>
+    <h1 class="main-heading">Python Programming  at A1 Training Institute</h1>
 
-    <p class="description">Linux training provided by A1 Training Institute can help you work more efficiently by giving you the skills and
-        knowledge needed to troubleshoot and resolve issues quickly. With Linux, many tasks can be automated, and by
-        learning how to use Linux tools and utilities, you can save time and increase your productivity.</p>
+    <p class="description">Python training provided by A1 Training Institute can help you work more efficiently by giving you the skills and knowledge needed to build applications and solve problems quickly. With Python, many tasks can be automated, and by learning how to use Python libraries and frameworks, you can save time and increase your productivity.</p>
 
     <ul class="feature-list">
-        <li class="feature-item">&#10003; 40 hours of Instructor led Training</li>
-        <li class="feature-item">&#10003; Comprehensive coverage of basic and advanced exercises on Linux</li>
+        <li class="feature-item">&#10003; 40 hours of Instructor-led Training</li>
+        <li class="feature-item">&#10003; Comprehensive coverage of basic and advanced exercises on Python</li>
         <li class="feature-item">&#10003; Hands-on assignments to support theoretical concepts</li>
-        <li class="feature-item">&#10003; Interactive and project-oriented lab sessions on Linux</li>
+        <li class="feature-item">&#10003; Interactive and project-oriented lab sessions on Python</li>
     </ul>
 
-    <h4 class="sub-heading">We provide the NO.1 Linux training program in Chennai. We offer different modes of training by
-        providing classroom and online training. Our training centers are spread across Chennai at Adyar, OMR,
-        Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
+    <h4 class="sub-heading">We provide the NO.1 Python programming training program in Chennai. We offer different modes of training by providing classroom and online training. Our training centers are spread across Chennai at Adyar, OMR, Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
 
     <div class="button-container">
-        <button class="custom-button">View / Download Syllabus</button>
+        <button class="custom-button"data-bs-toggle="modal"  data-bs-target="#syllabusModal${i}">View / Download Syllabus</button>
         <button class="custom-button">Contact Course Advisor</button>
     </div>
 
@@ -477,7 +473,57 @@ for (let i = 0; i < courses.col1.length; i++) {
         Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
 
     <div class="button-container">
-        <button class="custom-button">View / Download Syllabus</button>
+        <button class="custom-button" data-bs-toggle="modal"  data-bs-target="#syllabusModal${i}">View / Download Syllabus</button>
+        <button class="custom-button">Contact Course Advisor</button>
+    </div>
+
+    <div class="training-container mt-5">
+        <div class="row">
+            <div class="training-col">
+                <h3>40+ Hrs</h3>
+                <p>Hands-On Training</p>
+            </div>
+            <div class="training-col">
+                <h3>2 Live</h3>
+                <p>Projects For Hands-On Learning</p>
+            </div>
+            <div class="training-col">
+                <h3>50 Hrs</h3>
+                <p>Practical Assignments</p>
+            </div>
+            <div class="training-col">
+                <h3>24/7</h3>
+                <p>Lifetime Access To Support Team</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+        </span>`;
+    }  else if (courses.col1[i].description === 'Canva_Designing') {
+        descriptionContent = `
+        <span id="Canva_Designing">
+          <div class="content-container">
+
+    <h1 class="main-heading">Linux Training at A1 Training Institute</h1>
+
+    <p class="description">Linux training provided by A1 Training Institute can help you work more efficiently by giving you the skills and
+        knowledge needed to troubleshoot and resolve issues quickly. With Linux, many tasks can be automated, and by
+        learning how to use Linux tools and utilities, you can save time and increase your productivity.</p>
+
+    <ul class="feature-list">
+        <li class="feature-item">&#10003; 40 hours of Instructor led Training</li>
+        <li class="feature-item">&#10003; Comprehensive coverage of basic and advanced exercises on Linux</li>
+        <li class="feature-item">&#10003; Hands-on assignments to support theoretical concepts</li>
+        <li class="feature-item">&#10003; Interactive and project-oriented lab sessions on Linux</li>
+    </ul>
+
+    <h4 class="sub-heading">We provide the NO.1 Linux training program in Chennai. We offer different modes of training by
+        providing classroom and online training. Our training centers are spread across Chennai at Adyar, OMR,
+        Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
+
+    <div class="button-container">
+        <button class="custom-button" data-bs-toggle="modal"  data-bs-target="#syllabusModal${i}">View / Download Syllabus</button>
         <button class="custom-button">Contact Course Advisor</button>
     </div>
 
@@ -527,7 +573,7 @@ for (let i = 0; i < courses.col1.length; i++) {
         Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
 
     <div class="button-container">
-        <button class="custom-button">View / Download Syllabus</button>
+        <button class="custom-button" data-bs-toggle="modal"  data-bs-target="#syllabusModal${i}" >View / Download Syllabus</button>
         <button class="custom-button">Contact Course Advisor</button>
     </div>
 
@@ -578,7 +624,7 @@ for (let i = 0; i < courses.col1.length; i++) {
         Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
 
     <div class="button-container">
-        <button class="custom-button">View / Download Syllabus</button>
+        <button class="custom-button" data-bs-toggle="modal"  data-bs-target="#syllabusModal${i}">View / Download Syllabus</button>
         <button class="custom-button">Contact Course Advisor</button>
     </div>
 
@@ -628,7 +674,7 @@ for (let i = 0; i < courses.col1.length; i++) {
         Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
 
     <div class="button-container">
-        <button class="custom-button">View / Download Syllabus</button>
+        <button class="custom-button" data-bs-toggle="modal"  data-bs-target="#syllabusModal${i}">View / Download Syllabus</button>
         <button class="custom-button">Contact Course Advisor</button>
     </div>
 
@@ -678,7 +724,7 @@ for (let i = 0; i < courses.col1.length; i++) {
         Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
 
     <div class="button-container">
-        <button class="custom-button">View / Download Syllabus</button>
+        <button class="custom-button" data-bs-toggle="modal"  data-bs-target="#syllabusModal${i}">View / Download Syllabus</button>
         <button class="custom-button">Contact Course Advisor</button>
     </div>
 

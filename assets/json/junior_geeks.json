@@ -2,7 +2,7 @@ var courses = {
     "col1": [
         {
             "course_name": "MS Office",
-            "class": "soon",
+            "class": "att",
             "pdf": "MS Office.pdf",
             "title": "MS_Office",
             "image": "ms-office.jpg",
@@ -89,6 +89,7 @@ var courses = {
             "syllabus" : ["assets/pdf/junior_geeks/robotics .pdf"],
            "syllabus_name":["Robotics Syllabus "]
         },
+        
         {
             "course_name": "Python",
             "class": "soon",
@@ -97,7 +98,7 @@ var courses = {
             "image": "python.png",
             "download": "course_1",
             "description": "Python",
-            "syllabus" : ["assets/pdf/junior_geeks/python_junior.pdf"],
+            "syllabus" : ["assets/syllabus/Python_for_kids.pdf"],
            "syllabus_name":["Python Syllabus "]
         },
         {
@@ -111,11 +112,12 @@ var courses = {
             "syllabus" : ["assets/pdf/junior_geeks/java.pdf"],
            "syllabus_name":["Java Syllabus "]
         },
+    
         {
             "course_name": "C/C++ Programming",
             "class": "att",
             "pdf": "C/C++ Programming.pdf",
-            "title": "C/C++_Programming",
+            "title": "C_and_C_plus_plus_Programming",
             "image": "cc+.png",
             "download": "course_1",
             "description": "C/C++_Programming",
@@ -142,13 +144,14 @@ var courses = {
             "download": "course_1",
             "description": "Database",
             "syllabus" : ["assets/pdf/junior_geeks/database.pdf"],
-           "syllabus_name":["Database Syllabus "]
+           "syllabus_name":["Canva Designing Syllabus "]
         },
+
         {
-            "course_name": "Computer Science",
+            "course_name": "Computer Science 11th & 12th",
             "class": "att",
             "pdf": "Computer_Science.pdf",
-            "title": "Computer_Science",
+            "title": "Computer_Science_11th_and_12th",
             "image": "computer_science.png",
             "download": "course_1",
             "description": "Computer_Science",
