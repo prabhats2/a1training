@@ -1,172 +1,39 @@
-var courses = {
+{
     "col1": [
         {
             "course_name": "MS Office",
-            "class": "soon",
+            "class": [".class-5-8"],
             "pdf": "MS Office.pdf",
             "title": "MS_Office",
             "image": "ms-office.jpg",
             "download": "course_1",
             "description": "MS_Office",
-            "syllabus" : ["assets/pdf/junior_geeks/ms_office.pdf"],
-           "syllabus_name":["MS Office Course Syllabus "]
-        },	
-        
+            "syllabus": ["assets/pdf/junior_geeks/ms_office.pdf"],
+            "syllabus_name": ["MS Office Course Syllabus"]
+        },
         {
             "course_name": "Corel Draw",
-            "class": "soon",
+            "class": ["class-9-10"],
             "pdf": "Corel Draw.pdf",
             "title": "Corel_Draw",
             "image": "coral-draw.png",
             "download": "course_1",
             "description": "Corel_Draw",
-            "syllabus" : ["assets/pdf/junior_geeks/corel_draw.pdf"],
-           "syllabus_name":["Coral Draw Syllabus "]
+            "syllabus": ["assets/pdf/junior_geeks/corel_draw.pdf"],
+            "syllabus_name": ["Coral Draw Syllabus"]
         },
         {
-            "course_name": "Tally",
-            "class": "att",
-            "pdf": "Tally.pdf",
-            "title": "Tally",
-            "image": "tally.png",
+            "course_name": "Corel Draw",
+            "class": ["class-11-12" ],
+            "pdf": "Corel Draw.pdf",
+            "title": "Corel_Draw",
+            "image": "coral-draw.png",
             "download": "course_1",
-            "description": "Tally",
-            "syllabus" : ["assets/pdf/junior_geeks/tally.pdf"],
-           "syllabus_name":["Tally Syllabus "]
-        },
-        {
-            "course_name": "Adobe Photoshop",
-            "class": "att",
-            "pdf": "Abode_Photoshop.pdf",
-            "title": "Abode_Photoshop",
-            "image": "photo-shop.png",
-            "download": "course_1",
-            "description": "Abode_Photoshop",
-            "syllabus" : ["assets/pdf/junior_geeks/photoshop.pdf"],
-           "syllabus_name":["Abode Photoshop Syllabus "]
-        },
-        {
-            "course_name": "Adobe Illustrator",
-            "class": "imp",
-            "pdf": "Adobe Illustrator.pdf",
-            "title": "Adobe_Illustrator",
-            "image": "illustrator.png",
-            "download": "course_1",
-            "description": "Adobe_Illustrator",
-            "syllabus" : ["assets/pdf/junior_geeks/illustrator.pdf"],
-           "syllabus_name":["Adobe Illustrator Syllabus "]
-        },
-        {
-            "course_name": "Web Development",
-            "class": "att",
-            "pdf": "Web Development.pdf",
-            "title": "Web_Development",
-            "image": "web-development.png",
-            "download": "course_1",
-            "description": "Web_Development",
-            "syllabus" : ["assets/pdf/junior_geeks/web_development.pdf"],
-           "syllabus_name":["Web Developent Course Syllabus "]
-        },
-        {
-            "course_name": "Game Development ",
-            "class": "imp",
-            "pdf": "Game Development.pdf",
-            "title": "Game_Development",
-            "image": "game-development.png",
-            "download": "course_1",
-            "description": "Game_Development",
-            "syllabus" : ["assets/pdf/junior_geeks/Game-Development.pdf"],
-           "syllabus_name":["Game Development Syllabus "]
-        },
-        {
-            "course_name": "Robotics",
-            "class": "soon",
-            "pdf": "Robotics.pdf",
-            "title": "Robotics",
-            "image": "robotics.png",
-            "download": "course_1",
-            "description": "Robotics",
-            "syllabus" : ["assets/pdf/junior_geeks/robotics .pdf"],
-           "syllabus_name":["Robotics Syllabus "]
-        },
-        {
-            "course_name": "Python",
-            "class": "soon",
-            "pdf": "Python.pdf",
-            "title": "Python",
-            "image": "python.png",
-            "download": "course_1",
-            "description": "Python",
-            "syllabus" : ["assets/pdf/junior_geeks/python_junior.pdf"],
-           "syllabus_name":["Python Syllabus "]
-        },
-        {
-            "course_name": "Java",
-            "class": "att",
-            "pdf": "Java.pdf",
-            "title": "Java",
-            "image": "java.png",
-            "download": "course_1",
-            "description": "Java",
-            "syllabus" : ["assets/pdf/junior_geeks/java.pdf"],
-           "syllabus_name":["Java Syllabus "]
-        },
-        {
-            "course_name": "C/C++ Programming",
-            "class": "att",
-            "pdf": "C/C++ Programming.pdf",
-            "title": "C/C++_Programming",
-            "image": "cc+.png",
-            "download": "course_1",
-            "description": "C/C++_Programming",
-            "syllabus" : ["assets/pdf/junior_geeks/C&C++.pdf"],
-           "syllabus_name":["C/C++ Programming Syllabus "]
-        },
-        {
-            "course_name": "Canva Designing",
-            "class": "att",
-            "pdf": "Canva Designing.pdf",
-            "title": "Canva_Designing",
-            "image": "canva.png",
-            "download": "course_1",
-            "description": "Canva_Designing",
-            "syllabus" : ["assets/pdf/junior_geeks/canva_designing.pdf"],
-           "syllabus_name":["Canva Designing Syllabus "]
-        },
-        {
-            "course_name": "Database",
-            "class": "att",
-            "pdf": "Database.pdf",
-            "title": "Database",
-            "image": "database.png",
-            "download": "course_1",
-            "description": "Database",
-            "syllabus" : ["assets/pdf/junior_geeks/database.pdf"],
-           "syllabus_name":["Database Syllabus "]
-        },
-        {
-            "course_name": "Computer Science",
-            "class": "att",
-            "pdf": "Computer_Science.pdf",
-            "title": "Computer_Science",
-            "image": "computer_science.png",
-            "download": "course_1",
-            "description": "Computer_Science",
-            "syllabus" : ["assets/pdf/junior_geeks/database.pdf"],
-           "syllabus_name":["Computer Science Syllabus "]
-        },
-        {
-            "course_name": "Typing Science",
-            "class": "att",
-            "pdf": "Typing.pdf",
-            "title": "Typing",
-            "image": "typing.png",
-            "download": "course_1",
-            "description": "Typing",
-            "syllabus" : ["assets/pdf/junior_geeks/Typing.pdf"],
-           "syllabus_name":["Typing Syllabus "]
+            "description": "Corel_Draw",
+            "syllabus": ["assets/pdf/junior_geeks/corel_draw.pdf"],
+            "syllabus_name": ["Coral Draw Syllabus"]
         }
-        
+       
+       
     ]
-}  
-var i = 0;
+}

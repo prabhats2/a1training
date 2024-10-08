@@ -52,12 +52,12 @@ let books = { "col1" : [
 			}, 
 			//terraform
 			{"name" : "Terraform", 
-			"Author" : ["Azad","Shivam"],
+			"Author" : ["Azad","A1 Training"],
 			"ebookAuthor" : ["Oluyemi James Odeyinka ","Mark Tinderholt ","Ankita Patil Mitesh Soni"," KS EBOOKS"],
 			"ebook" : ["https://amzn.to/4dOII2d", "https://amzn.to/4dGLAOM", "https://amzn.to/4fUvOkY", "https://amzn.to/46TUBSc"],
 			"ebook_name" : ["Guide to MS DOS", "MS-DOS 6 Explained (BP S.): 341", "MS-DOS Up to and Including Version 6.2"],
-			"pdf":["assets/pdf/Terraform_question_answer.pdf"] ,
-			"pdf_name":["Ms Dos ","Ms Dos "]	 
+			"pdf":["assets/pdf/Terraform_question_answer.pdf" , "assets/pdf/Terraform_Commands.pdf"] ,
+			"pdf_name":["Terraform Questions Answers","Terraform Commands  "]	 
 		   }, 
 					  //AWS 
 			{"name" : "AWS", 

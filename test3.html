@@ -1,275 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <meta name="author" content="Template Mo">
-  <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script type="text/javascript" src="meta.js"></script>
-
-  <style>
-    .n {
-      overflow: scroll;
-      height: 800px;
-    }
-
-    .m {
-      margin-top: 100px;
-      height: 900px;
-    }
-
-    .no-content-message {
-      background-color: #f8d7da;
-      color: #721c24;
-      border: 1px solid #f5c6cb;
-      padding: 10px;
-      border-radius: 5px;
-      text-align: center;
-      margin-top: 20px;
-      font-weight: bold;
-    }
-
-    /* Import FontAwesome if you're using it for icons */
-    @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
-
-    /* Keyframes for blinking animation */
-    @keyframes blink {
-      0% {
-        opacity: 1;
-      }
-
-      50% {
-        opacity: 0;
-      }
-
-      100% {
-        opacity: 1;
-      }
-    }
-
-    /* Apply the animation to the icon */
-    .icon {
-      font-size: none;
-      color: red;
-      animation: blink 1s infinite;
-    }
-
-    .course-item {
-      display: none; /* Initially hide all course items */
-      opacity: 0;
-      transform: scale(0.9); /* Start with a small scale for animation effect */
-      transition: all 0.3s ease-in-out; /* Smooth transition for showing/hiding */
-    }
-
-    .course-item.show {
-      display: block; /* Display only filtered items */
-      opacity: 1;
-      transform: scale(1); /* Normal size when shown */
-    }
-
-    /* Flexbox to ensure the items re-arrange without gaps */
-    .courses {
-      display: auto;
-      flex-wrap: wrap;
-      gap: 20px; /* Spacing between items */
-      justify-content: center; /* Center the items */
-    }
-
-    /* Media query for responsiveness */
-    @media (max-width: 768px) {
-      .course-item {
-        flex: 1 1 calc(50% - 20px); /* 2 items per row for smaller screens */
-      }
-    }
-
-    @media (max-width: 480px) {
-      .course-item {
-        flex: 1 1 100%; /* 1 item per row for mobile */
-      }
-    }
-  </style>
-  
-  <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
-  <!-- Additional CSS Files -->
-  <link rel="stylesheet" href="assets/css/fontawesome.css">
-  <link rel="stylesheet" href="assets/css/templatemo-edu-meeting.css">
-  <link rel="stylesheet" href="assets/css/owl.css">
-  <link rel="stylesheet" href="assets/css/lightbox.css">
-  <script type="text/javascript" src="assets/json/junior_geeks.json"></script>
-  <script type="text/javascript" src="junior_geeks_coding.js"></script>
-</head>
-
-<body>
-  <!--menu-->
-  <script type="text/javascript" src="menu.js"></script>
-  <!--menu end-->
-
-  <section class="heading-page header-text" id="top">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <h6>HERE ARE OUR POPULAR PROFESSIONAL COURSE</h6>
-          <h2>Junior Geeks Courses</h2>
-          <div class="container my-4">
-            <input type="text" id="searchBar" class="search-bar form-control" placeholder="Search Courses..."
-              onkeyup="filterItems()">
-            <div id="noContentMessage" class="no-content-message" style="display: none;">
-              <p>No content found</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="meetings-page" id="meetings">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="filters">
-            <ul>
-              <li data-filter="*" class="active">All Courses</li>
-              <li data-filter=".soon">Class 5-8</li>
-              <li data-filter=".imp">Class 9-10</li>
-              <li data-filter=".att">Class 11-12</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="row" id="courses-container">
-          <!-- Course items will be rendered here -->
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <script type="text/javascript" src="footer.js"></script>
-
-  <!-- Scripts -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-  <script src="assets/js/isotope.min.js"></script>
-  <script src="assets/js/owl-carousel.js"></script>
-  <script src="assets/js/lightbox.js"></script>
-  <script src="assets/js/tabs.js"></script>
-  <script src="assets/js/isotope.js"></script>
-  <script src="assets/js/video.js"></script>
-  <script src="assets/js/slick-slider.js"></script>
-  <script src="assets/js/custom.js"></script>
-
-  <script>
-    // Function to render courses
-    function renderCourses() {
-      const coursesContainer = document.getElementById('courses-container'); // Ensure this ID matches your HTML
-      coursesContainer.innerHTML = ''; // Clear previous content
-
-      // Fetch the courses from your JSON file (assumes it's globally available as `courses`)
-      courses.col1.forEach((course, i) => {
-        const courseClass = course.class.toLowerCase();
-        const courseElement = document.createElement('div');
-
-        courseElement.classList.add('col-lg-4', 'templatemo-item-col', 'all', courseClass, 'item-container', 'course-item');
-        courseElement.setAttribute('data-title', course.course_name.toLowerCase());
-
-        // Course Item Markup
-        courseElement.innerHTML = `
-            <div class="meeting-item">
-                <div class="thumb">
-                    <div class="price">
-                        <span class="fa fa-cloud-download icon" data-bs-toggle="modal" data-bs-target="#syllabusModal${i}" style="font-size:23px;color:red"></span>
-                    </div>
-                    <img src="assets/images/junior-geeks/${course.image}">
-                </div>
-                <div class="down-content text-center">
-                    <h4>${course.course_name}</h4>
-                    <br>
-                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#${course.title}">More Info</button>
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#contactModal" style="margin-right: 10px;">Contact Us</button>
-                </div>
-            </div>
-        `;
-        coursesContainer.appendChild(courseElement);
-
-        // Modal for syllabus
-        const modalMarkup = `
-            <div class="modal fade" id="syllabusModal${i}" tabindex="-1" aria-labelledby="syllabusModalLabel${i}" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h4 class="modal-title" id="syllabusModalLabel${i}">${course.title.replace(/_/g, ' ')}</h4>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                        </div>
-                        <div class="modal-body">
-                            <h2 align="left">Download Syllabus</h2>
-                            <ul id="pdfList${i}" align="left"></ul>
-                            <br>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        `;
-        document.body.insertAdjacentHTML('beforeend', modalMarkup); // Append modal to body
-
-        // Dynamically populate the PDF list in the modal
-        const pdfList = document.getElementById(`pdfList${i}`);
-        course.syllabus.forEach((syllabus, index) => {
-          const listItem = document.createElement('li');
-          listItem.innerHTML = `<a href="${syllabus.link}" target="_blank">${syllabus.name}</a>`;
-          pdfList.appendChild(listItem);
-        });
-      });
-    }
-
-    // Function to filter items
-    function filterItems() {
-      const searchText = document.getElementById('searchBar').value.toLowerCase();
-      const courses = document.querySelectorAll('.item-container');
-      let hasVisibleItem = false;
-
-      courses.forEach(course => {
-        const title = course.getAttribute('data-title').toLowerCase();
-        if (title.includes(searchText)) {
-          course.classList.add('show'); // Show matching courses
-          hasVisibleItem = true;
-        } else {
-          course.classList.remove('show'); // Hide non-matching courses
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Filter</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .hide {
+            display: none;
         }
-      });
+        .show {
+            display: block;
+        }
+        .filters {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+        }
+        .filters li {
+            margin: 0 10px;
+            cursor: pointer;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+        }
+        .filters li.active {
+            background-color: #0056b3;
+        }
+        .meeting-item {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 10px;
+            text-align: center;
+        }
+        .thumb img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
 
-      const noContentMessage = document.getElementById('noContentMessage');
-      if (hasVisibleItem) {
-        noContentMessage.style.opacity = '0';
-        setTimeout(() => {
-          noContentMessage.style.display = 'none';
-        }, 300);
-      } else {
-        noContentMessage.style.display = 'block';
-        setTimeout(() => {
-          noContentMessage.style.opacity = '1';
-        }, 10);
-      }
-    }
+<!-- Filters -->
+<ul class="filters">
+    <li class="active" data-filter="*">All Classes</li>
+    <li data-filter=".class-5-8">Class 5-8</li>
+    <li data-filter=".class-9-10">Class 9-10</li>
+    <li data-filter=".class-11-12">Class 11-12</li>
+</ul>
 
-    // Load courses on page load
-    document.addEventListener('DOMContentLoaded', function () {
-      fetch('assets/json/junior_geeks.json')
-        .then(response => response.json())
-        .then(data => {
-          window.courses = data; // Make the courses data accessible globally
-          renderCourses(); // Call the render function
-        })
-        .catch(error => console.error('Error loading JSON:', error));
+<!-- Course Container -->
+<div class="container mt-5">
+    <div class="row" id="courses-container">
+        <!-- Courses will be dynamically added here -->
+    </div>
+</div>
+
+<!-- Bootstrap and jQuery scripts -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+      const coursesContainer = document.getElementById('courses-container');
+
+      // Fetch the courses data from test.json
+      fetch('assets/json/test.json')
+          .then(response => {
+              if (!response.ok) {
+                  throw new Error('Network response was not ok');
+              }
+              return response.json();
+          })
+          .then(courses => {
+              // Dynamically render courses
+              courses.col1.forEach((course, i) => {
+                  const courseElement = document.createElement('div');
+                  // Ensure class names are correctly set from the course data
+                  const classNames = Array.isArray(course.class) ? course.class : [course.class];
+                  courseElement.classList.add('col-lg-4', 'templatemo-item-col', 'course-item', ...classNames);
+
+                  // Course Item Markup
+                  courseElement.innerHTML = `
+                      <div class="meeting-item">
+                          <div class="thumb">
+                              <div class="price">
+                                  <span class="fa fa-cloud-download icon" data-bs-toggle="modal" data-bs-target="#syllabusModal${i}" style="font-size:23px;color:red"></span>
+                              </div>
+                              <img src="assets/images/junior-geeks/${course.image}">
+                          </div>
+                          <div class="down-content text-center">
+                              <h4>${course.course_name}</h4>
+                              <br>
+                              <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#${course.title}">More Info</button>
+                              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#contactModal" style="margin-right: 10px;">Contact Us</button>
+                          </div>
+                      </div>
+                  `;
+                  coursesContainer.appendChild(courseElement);
+
+                  // Modal Markup
+                  const modalMarkup = `
+                      <div class="modal fade" id="syllabusModal${i}" tabindex="-1" aria-labelledby="syllabusModalLabel${i}" aria-hidden="true">
+                          <div class="modal-dialog">
+                              <div class="modal-content">
+                                  <div class="modal-header">
+                                      <h4 class="modal-title" id="syllabusModalLabel${i}">${course.title.replace(/_/g, ' ')}</h4>
+                                      <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                  </div>
+                                  <div class="modal-body">
+                                      <h2 align="left">Download Syllabus</h2>
+                                      <ul id="pdfList${i}" align="left"></ul>
+                                      <br>
+                                  </div>
+                                  <div class="modal-footer">
+                                      <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  `;
+                  document.body.insertAdjacentHTML('beforeend', modalMarkup);
+
+                  // Populate the syllabus modal
+                  const pdfList = document.getElementById(`pdfList${i}`);
+                  course.syllabus.forEach((syllabus, index) => {
+                      const listItem = document.createElement('li');
+                      const anchor = document.createElement('a');
+                      anchor.href = syllabus;
+                      anchor.textContent = `${course.syllabus_name[index]}`;
+                      anchor.target = "_blank";
+                      listItem.appendChild(anchor);
+                      pdfList.appendChild(listItem);
+                  });
+              });
+          })
+          .catch(error => {
+              console.error('There was a problem with the fetch operation:', error);
+          });
+  });
+
+    // Filter logic
+    $(document).ready(function () {
+        $(".filters li").click(function () {
+            var filterValue = $(this).attr('data-filter');
+            $(".filters li").removeClass('active');
+            $(this).addClass('active');
+
+            if (filterValue == "*") {
+                $(".course-item").show();
+            } else {
+                $(".course-item").hide();
+                $(filterValue).show();
+            }
+        });
     });
-  </script>
-</body>
+</script>
 
+</body>
 </html>

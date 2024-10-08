@@ -24,7 +24,7 @@ for (let i = 0; i < courses1.col1.length; i++) {
         Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
 
     <div class="button-container">
-        <button class="custom-button">View / Download Syllabus</button>
+        <button class="custom-button"  data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
         <button class="custom-button">Contact Course Advisor</button>
     </div>
 
@@ -74,7 +74,7 @@ for (let i = 0; i < courses1.col1.length; i++) {
         Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
 
     <div class="button-container">
-        <button class="custom-button">View / Download Syllabus</button>
+        <button class="custom-button"  data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
         <button class="custom-button">Contact Course Advisor</button>
     </div>
 
@@ -123,7 +123,7 @@ for (let i = 0; i < courses1.col1.length; i++) {
         Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
 
     <div class="button-container">
-        <button class="custom-button">View / Download Syllabus</button>
+        <button class="custom-button"  data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
         <button class="custom-button">Contact Course Advisor</button>
     </div>
 
@@ -173,7 +173,7 @@ for (let i = 0; i < courses1.col1.length; i++) {
         Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
 
     <div class="button-container">
-        <button class="custom-button">View / Download Syllabus</button>
+        <button class="custom-button" data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
         <button class="custom-button">Contact Course Advisor</button>
     </div>
 
@@ -208,7 +208,7 @@ for (let i = 0; i < courses1.col1.length; i++) {
 
     <h1 class="main-heading">Linux Training at A1 Training Institute</h1>
 
-    <p class="description">Linux training provided by A1 Training Institute can help you work more efficiently by giving you the skills and
+    <p class="description" >Linux training provided by A1 Training Institute can help you work more efficiently by giving you the skills and
         knowledge needed to troubleshoot and resolve issues quickly. With Linux, many tasks can be automated, and by
         learning how to use Linux tools and utilities, you can save time and increase your productivity.</p>
 
@@ -224,7 +224,7 @@ for (let i = 0; i < courses1.col1.length; i++) {
         Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
 
     <div class="button-container">
-        <button class="custom-button">View / Download Syllabus</button>
+        <button class="custom-button"  data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
         <button class="custom-button">Contact Course Advisor</button>
     </div>
 
@@ -274,7 +274,7 @@ for (let i = 0; i < courses1.col1.length; i++) {
         Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
 
     <div class="button-container">
-        <button class="custom-button">View / Download Syllabus</button>
+        <button class="custom-button"  data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
         <button class="custom-button">Contact Course Advisor</button>
     </div>
 
@@ -325,7 +325,7 @@ for (let i = 0; i < courses1.col1.length; i++) {
         Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
 
     <div class="button-container">
-        <button class="custom-button">View / Download Syllabus</button>
+        <button class="custom-button"  data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
         <button class="custom-button">Contact Course Advisor</button>
     </div>
 
@@ -376,7 +376,7 @@ for (let i = 0; i < courses1.col1.length; i++) {
         Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
 
     <div class="button-container">
-        <button class="custom-button">View / Download Syllabus</button>
+        <button class="custom-button"  data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
         <button class="custom-button">Contact Course Advisor</button>
     </div>
 
@@ -426,7 +426,7 @@ for (let i = 0; i < courses1.col1.length; i++) {
         Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
 
     <div class="button-container">
-        <button class="custom-button">View / Download Syllabus</button>
+        <button class="custom-button"  data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
         <button class="custom-button">Contact Course Advisor</button>
     </div>
 
@@ -476,7 +476,7 @@ for (let i = 0; i < courses1.col1.length; i++) {
         Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
 
     <div class="button-container">
-        <button class="custom-button">View / Download Syllabus</button>
+        <button class="custom-button"  data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
         <button class="custom-button">Contact Course Advisor</button>
     </div>
 
@@ -526,7 +526,7 @@ for (let i = 0; i < courses1.col1.length; i++) {
         Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
 
     <div class="button-container">
-        <button class="custom-button">View / Download Syllabus</button>
+        <button class="custom-button"  data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
         <button class="custom-button">Contact Course Advisor</button>
     </div>
 
@@ -576,7 +576,7 @@ for (let i = 0; i < courses1.col1.length; i++) {
         Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
 
     <div class="button-container">
-        <button class="custom-button">View / Download Syllabus</button>
+        <button class="custom-button" data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
         <button class="custom-button">Contact Course Advisor</button>
     </div>
 
@@ -626,7 +626,7 @@ for (let i = 0; i < courses1.col1.length; i++) {
         Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
 
     <div class="button-container">
-        <button class="custom-button">View / Download Syllabus</button>
+        <button class="custom-button"  data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
         <button class="custom-button">Contact Course Advisor</button>
     </div>
 
@@ -676,7 +676,7 @@ for (let i = 0; i < courses1.col1.length; i++) {
         Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
 
     <div class="button-container">
-        <button class="custom-button">View / Download Syllabus</button>
+        <button class="custom-button"  data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
         <button class="custom-button">Contact Course Advisor</button>
     </div>
 
@@ -726,7 +726,7 @@ for (let i = 0; i < courses1.col1.length; i++) {
         Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
 
     <div class="button-container">
-        <button class="custom-button">View / Download Syllabus</button>
+        <button class="custom-button"  data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
         <button class="custom-button">Contact Course Advisor</button>
     </div>
 
@@ -776,7 +776,7 @@ for (let i = 0; i < courses1.col1.length; i++) {
         Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
 
     <div class="button-container">
-        <button class="custom-button">View / Download Syllabus</button>
+        <button class="custom-button"  data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
         <button class="custom-button">Contact Course Advisor</button>
     </div>
 
@@ -826,7 +826,7 @@ for (let i = 0; i < courses1.col1.length; i++) {
         Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
 
     <div class="button-container">
-        <button class="custom-button">View / Download Syllabus</button>
+        <button class="custom-button"  data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
         <button class="custom-button">Contact Course Advisor</button>
     </div>
 
@@ -876,7 +876,7 @@ for (let i = 0; i < courses1.col1.length; i++) {
         Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
 
     <div class="button-container">
-        <button class="custom-button">View / Download Syllabus</button>
+        <button class="custom-button"  data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
         <button class="custom-button">Contact Course Advisor</button>
     </div>
 
@@ -926,7 +926,7 @@ for (let i = 0; i < courses1.col1.length; i++) {
         Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
 
     <div class="button-container">
-        <button class="custom-button">View / Download Syllabus</button>
+        <button class="custom-button" data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
         <button class="custom-button">Contact Course Advisor</button>
     </div>
 
@@ -976,7 +976,7 @@ for (let i = 0; i < courses1.col1.length; i++) {
         Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
 
     <div class="button-container">
-        <button class="custom-button">View / Download Syllabus</button>
+        <button class="custom-button" data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
         <button class="custom-button">Contact Course Advisor</button>
     </div>
 
@@ -1026,7 +1026,7 @@ for (let i = 0; i < courses1.col1.length; i++) {
         Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
 
     <div class="button-container">
-        <button class="custom-button">View / Download Syllabus</button>
+        <button class="custom-button" data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
         <button class="custom-button">Contact Course Advisor</button>
     </div>
 
@@ -1076,7 +1076,7 @@ for (let i = 0; i < courses1.col1.length; i++) {
         Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
 
     <div class="button-container">
-        <button class="custom-button">View / Download Syllabus</button>
+        <button class="custom-button" data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
         <button class="custom-button">Contact Course Advisor</button>
     </div>
 
@@ -1126,7 +1126,7 @@ for (let i = 0; i < courses1.col1.length; i++) {
         Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
 
     <div class="button-container">
-        <button class="custom-button">View / Download Syllabus</button>
+        <button class="custom-button" data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
         <button class="custom-button">Contact Course Advisor</button>
     </div>
 
@@ -1176,7 +1176,7 @@ for (let i = 0; i < courses1.col1.length; i++) {
         Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
 
     <div class="button-container">
-        <button class="custom-button">View / Download Syllabus</button>
+        <button class="custom-button" data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
         <button class="custom-button">Contact Course Advisor</button>
     </div>
 
@@ -1226,7 +1226,7 @@ for (let i = 0; i < courses1.col1.length; i++) {
         Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
 
     <div class="button-container">
-        <button class="custom-button">View / Download Syllabus</button>
+        <button class="custom-button" data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
         <button class="custom-button">Contact Course Advisor</button>
     </div>
 
@@ -1276,7 +1276,7 @@ for (let i = 0; i < courses1.col1.length; i++) {
         Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
 
     <div class="button-container">
-        <button class="custom-button">View / Download Syllabus</button>
+        <button class="custom-button" data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
         <button class="custom-button">Contact Course Advisor</button>
     </div>
 
@@ -1326,7 +1326,7 @@ for (let i = 0; i < courses1.col1.length; i++) {
         Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
 
     <div class="button-container">
-        <button class="custom-button">View / Download Syllabus</button>
+        <button class="custom-button" data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
         <button class="custom-button">Contact Course Advisor</button>
     </div>
 
@@ -1376,7 +1376,7 @@ for (let i = 0; i < courses1.col1.length; i++) {
         Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
 
     <div class="button-container">
-        <button class="custom-button">View / Download Syllabus</button>
+        <button class="custom-button" data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
         <button class="custom-button">Contact Course Advisor</button>
     </div>
 
@@ -1426,7 +1426,7 @@ for (let i = 0; i < courses1.col1.length; i++) {
         Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
 
     <div class="button-container">
-        <button class="custom-button">View / Download Syllabus</button>
+        <button class="custom-button" data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
         <button class="custom-button">Contact Course Advisor</button>
     </div>
 
@@ -1476,7 +1476,7 @@ for (let i = 0; i < courses1.col1.length; i++) {
         Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
 
     <div class="button-container">
-        <button class="custom-button">View / Download Syllabus</button>
+        <button class="custom-button" data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
         <button class="custom-button">Contact Course Advisor</button>
     </div>
 
@@ -1526,7 +1526,7 @@ for (let i = 0; i < courses1.col1.length; i++) {
         Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
 
     <div class="button-container">
-        <button class="custom-button">View / Download Syllabus</button>
+        <button class="custom-button" data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
         <button class="custom-button">Contact Course Advisor</button>
     </div>
 
@@ -1576,7 +1576,7 @@ for (let i = 0; i < courses1.col1.length; i++) {
         Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
 
     <div class="button-container">
-        <button class="custom-button">View / Download Syllabus</button>
+        <button class="custom-button" data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
         <button class="custom-button">Contact Course Advisor</button>
     </div>
 
@@ -1626,7 +1626,7 @@ for (let i = 0; i < courses1.col1.length; i++) {
         Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
 
     <div class="button-container">
-        <button class="custom-button">View / Download Syllabus</button>
+        <button class="custom-button" data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
         <button class="custom-button">Contact Course Advisor</button>
     </div>
 
@@ -1676,7 +1676,7 @@ for (let i = 0; i < courses1.col1.length; i++) {
         Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
 
     <div class="button-container">
-        <button class="custom-button">View / Download Syllabus</button>
+        <button class="custom-button" data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
         <button class="custom-button">Contact Course Advisor</button>
     </div>
 
@@ -1726,7 +1726,7 @@ for (let i = 0; i < courses1.col1.length; i++) {
         Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
 
     <div class="button-container">
-        <button class="custom-button">View / Download Syllabus</button>
+        <button class="custom-button" data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
         <button class="custom-button">Contact Course Advisor</button>
     </div>
 
@@ -1776,7 +1776,7 @@ for (let i = 0; i < courses1.col1.length; i++) {
         Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
 
     <div class="button-container">
-        <button class="custom-button">View / Download Syllabus</button>
+        <button class="custom-button" data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
         <button class="custom-button">Contact Course Advisor</button>
     </div>
 
@@ -1826,7 +1826,7 @@ for (let i = 0; i < courses1.col1.length; i++) {
         Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
 
     <div class="button-container">
-        <button class="custom-button">View / Download Syllabus</button>
+        <button class="custom-button" data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
         <button class="custom-button">Contact Course Advisor</button>
     </div>
 
@@ -1876,7 +1876,7 @@ for (let i = 0; i < courses1.col1.length; i++) {
         Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
 
     <div class="button-container">
-        <button class="custom-button">View / Download Syllabus</button>
+        <button class="custom-button" data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
         <button class="custom-button">Contact Course Advisor</button>
     </div>
 
@@ -1926,7 +1926,7 @@ for (let i = 0; i < courses1.col1.length; i++) {
         Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
 
     <div class="button-container">
-        <button class="custom-button">View / Download Syllabus</button>
+        <button class="custom-button" data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
         <button class="custom-button">Contact Course Advisor</button>
     </div>
 
@@ -1976,7 +1976,7 @@ for (let i = 0; i < courses1.col1.length; i++) {
         Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
 
     <div class="button-container">
-        <button class="custom-button">View / Download Syllabus</button>
+        <button class="custom-button" data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
         <button class="custom-button">Contact Course Advisor</button>
     </div>
 
@@ -2026,7 +2026,7 @@ for (let i = 0; i < courses1.col1.length; i++) {
         Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
 
     <div class="button-container">
-        <button class="custom-button">View / Download Syllabus</button>
+        <button class="custom-button" data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
         <button class="custom-button">Contact Course Advisor</button>
     </div>
 
@@ -2076,7 +2076,7 @@ for (let i = 0; i < courses1.col1.length; i++) {
         Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
 
     <div class="button-container">
-        <button class="custom-button">View / Download Syllabus</button>
+        <button class="custom-button" data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
         <button class="custom-button">Contact Course Advisor</button>
     </div>
 
@@ -2126,7 +2126,7 @@ for (let i = 0; i < courses1.col1.length; i++) {
         Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
 
     <div class="button-container">
-        <button class="custom-button">View / Download Syllabus</button>
+        <button class="custom-button" data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
         <button class="custom-button">Contact Course Advisor</button>
     </div>
 
@@ -2176,7 +2176,7 @@ for (let i = 0; i < courses1.col1.length; i++) {
         Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
 
     <div class="button-container">
-        <button class="custom-button">View / Download Syllabus</button>
+        <button class="custom-button" data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
         <button class="custom-button">Contact Course Advisor</button>
     </div>
 
@@ -2226,7 +2226,7 @@ for (let i = 0; i < courses1.col1.length; i++) {
         Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
 
     <div class="button-container">
-        <button class="custom-button">View / Download Syllabus</button>
+        <button class="custom-button" data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
         <button class="custom-button">Contact Course Advisor</button>
     </div>
 
@@ -2276,7 +2276,7 @@ for (let i = 0; i < courses1.col1.length; i++) {
         Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
 
     <div class="button-container">
-        <button class="custom-button">View / Download Syllabus</button>
+        <button class="custom-button" data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
         <button class="custom-button">Contact Course Advisor</button>
     </div>
 
@@ -2326,7 +2326,7 @@ for (let i = 0; i < courses1.col1.length; i++) {
         Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
 
     <div class="button-container">
-        <button class="custom-button">View / Download Syllabus</button>
+        <button class="custom-button" data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
         <button class="custom-button">Contact Course Advisor</button>
     </div>
 
@@ -2376,7 +2376,7 @@ for (let i = 0; i < courses1.col1.length; i++) {
         Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
 
     <div class="button-container">
-        <button class="custom-button">View / Download Syllabus</button>
+        <button class="custom-button" data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
         <button class="custom-button">Contact Course Advisor</button>
     </div>
 
@@ -2426,7 +2426,7 @@ for (let i = 0; i < courses1.col1.length; i++) {
         Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
 
     <div class="button-container">
-        <button class="custom-button">View / Download Syllabus</button>
+        <button class="custom-button" data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
         <button class="custom-button">Contact Course Advisor</button>
     </div>
 
@@ -2476,7 +2476,7 @@ for (let i = 0; i < courses1.col1.length; i++) {
         Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
 
     <div class="button-container">
-        <button class="custom-button">View / Download Syllabus</button>
+        <button class="custom-button" data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
         <button class="custom-button">Contact Course Advisor</button>
     </div>
 
@@ -2526,7 +2526,7 @@ for (let i = 0; i < courses1.col1.length; i++) {
         Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
 
     <div class="button-container">
-        <button class="custom-button">View / Download Syllabus</button>
+        <button class="custom-button" data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
         <button class="custom-button">Contact Course Advisor</button>
     </div>
 
@@ -2576,7 +2576,7 @@ for (let i = 0; i < courses1.col1.length; i++) {
         Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
 
     <div class="button-container">
-        <button class="custom-button">View / Download Syllabus</button>
+        <button class="custom-button" data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
         <button class="custom-button">Contact Course Advisor</button>
     </div>
 
@@ -2626,7 +2626,7 @@ for (let i = 0; i < courses1.col1.length; i++) {
         Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
 
     <div class="button-container">
-        <button class="custom-button">View / Download Syllabus</button>
+        <button class="custom-button" data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
         <button class="custom-button">Contact Course Advisor</button>
     </div>
 
@@ -2676,7 +2676,7 @@ for (let i = 0; i < courses1.col1.length; i++) {
         Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
 
     <div class="button-container">
-        <button class="custom-button">View / Download Syllabus</button>
+        <button class="custom-button" data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
         <button class="custom-button">Contact Course Advisor</button>
     </div>
 
@@ -2726,7 +2726,7 @@ for (let i = 0; i < courses1.col1.length; i++) {
         Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
 
     <div class="button-container">
-        <button class="custom-button">View / Download Syllabus</button>
+        <button class="custom-button" data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
         <button class="custom-button">Contact Course Advisor</button>
     </div>
 
@@ -2776,7 +2776,7 @@ for (let i = 0; i < courses1.col1.length; i++) {
         Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
 
     <div class="button-container">
-        <button class="custom-button">View / Download Syllabus</button>
+        <button class="custom-button" data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
         <button class="custom-button">Contact Course Advisor</button>
     </div>
 
@@ -2826,7 +2826,7 @@ for (let i = 0; i < courses1.col1.length; i++) {
         Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
 
     <div class="button-container">
-        <button class="custom-button">View / Download Syllabus</button>
+        <button class="custom-button" data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
         <button class="custom-button">Contact Course Advisor</button>
     </div>
 
@@ -2876,7 +2876,7 @@ for (let i = 0; i < courses1.col1.length; i++) {
         Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
 
     <div class="button-container">
-        <button class="custom-button">View / Download Syllabus</button>
+        <button class="custom-button" data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
         <button class="custom-button">Contact Course Advisor</button>
     </div>
 
@@ -2926,7 +2926,7 @@ for (let i = 0; i < courses1.col1.length; i++) {
         Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
 
     <div class="button-container">
-        <button class="custom-button">View / Download Syllabus</button>
+        <button class="custom-button" data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
         <button class="custom-button">Contact Course Advisor</button>
     </div>
 
@@ -2976,7 +2976,7 @@ for (let i = 0; i < courses1.col1.length; i++) {
         Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
 
     <div class="button-container">
-        <button class="custom-button">View / Download Syllabus</button>
+        <button class="custom-button" data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
         <button class="custom-button">Contact Course Advisor</button>
     </div>
 
@@ -3026,7 +3026,7 @@ for (let i = 0; i < courses1.col1.length; i++) {
         Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
 
     <div class="button-container">
-        <button class="custom-button">View / Download Syllabus</button>
+        <button class="custom-button" data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
         <button class="custom-button">Contact Course Advisor</button>
     </div>
 
@@ -3076,7 +3076,7 @@ for (let i = 0; i < courses1.col1.length; i++) {
         Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
 
     <div class="button-container">
-        <button class="custom-button">View / Download Syllabus</button>
+        <button class="custom-button" data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
         <button class="custom-button">Contact Course Advisor</button>
     </div>
 
