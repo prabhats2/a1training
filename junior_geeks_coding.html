@@ -2,25 +2,43 @@
 <html lang="en">
 
 <head>
-
   <meta charset="utf-8">
   <meta name="author" content="Template Mo">
-  <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-
-  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="Template Mo">
+
+  <!-- Bootstrap and jQuery -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  
   <script type="text/javascript" src="meta.js"></script>
 
-
+  <!-- Custom Styling -->
   <style>
+    .course-item {
+      display: block;
+      opacity: 1;
+      transform: scale(1);
+      transition: all 0.3s ease-in-out;
+    }
+
+    .courses {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .course-item.hide {
+      display: none;
+      opacity: 0;
+    }
+
     .n {
       overflow: scroll;
-      height: 800px
+      height: 800px;
     }
 
     .m {
@@ -30,11 +48,8 @@
 
     .no-content-message {
       background-color: #f8d7da;
-      /* Light red background */
       color: #721c24;
-      /* Dark red text */
       border: 1px solid #f5c6cb;
-      /* Light red border */
       padding: 10px;
       border-radius: 5px;
       text-align: center;
@@ -42,98 +57,46 @@
       font-weight: bold;
     }
 
-    /* Import FontAwesome if you're using it for icons */
-    @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
-
-    /* Keyframes for blinking animation */
-    @keyframes blink {
-      0% {
-        opacity: 1;
-      }
-
-      50% {
-        opacity: 0;
-      }
-
-      100% {
-        opacity: 1;
-      }
-    }
-
-    /* Apply the animation to the icon */
     .icon {
       font-size: none;
-      /* Adjust the size of the icon as needed */
       color: red;
-      /* Set the color to red */
       animation: blink 1s infinite;
-      /* Adjust the duration and iteration of the animation */
     }
 
-    .course-item {
-      display: none;
-      /* Initially hide all course items */
+    @keyframes blink {
+      0% { opacity: 1; }
+      50% { opacity: 0; }
+      100% { opacity: 1; }
     }
 
-    .course-item {
-      display: block;
-      /* Initially hidden */
-      opacity: 0;
-      transform: scale(0.9);
-      /* Start with a small scale for animation effect */
-      transition: all 0.3s ease-in-out;
-      /* Smooth transition for showing/hiding */
-    }
-
-    .course-item.show {
-      display: block;
-      /* Display only filtered items */
-      opacity: 1;
-      transform: scale(1);
-      /* Normal size when shown */
-    }
-
-    /* Flexbox to ensure the items re-arrange without gaps */
-    .courses {
-      display: auto;
-      flex-wrap: wrap;
-      gap: 20px;
-      /* Spacing between items */
-      justify-content: center;
-      /* Center the items */
-    }
-
-
-
-    /* Media query for responsiveness */
+    /* Responsive layout */
     @media (max-width: 768px) {
       .course-item {
         flex: 1 1 calc(50% - 20px);
-        /* 2 items per row for smaller screens */
       }
     }
 
     @media (max-width: 480px) {
       .course-item {
         flex: 1 1 100%;
-        /* 1 item per row for mobile */
       }
     }
   </style>
+
   <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
-  <!-- Additional CSS Files -->
   <link rel="stylesheet" href="assets/css/fontawesome.css">
   <link rel="stylesheet" href="assets/css/templatemo-edu-meeting.css">
   <link rel="stylesheet" href="assets/css/owl.css">
   <link rel="stylesheet" href="assets/css/lightbox.css">
+
   <script type="text/javascript" src="assets/json/junior_geeks.json"></script>
   <script type="text/javascript" src="junior_geeks_coding.js"></script>
 </head>
 
 <body>
-  <!--menu-->
+  <!-- Menu -->
   <script type="text/javascript" src="menu.js"></script>
-  <!--menu end-->
+
   <section class="heading-page header-text" id="top">
     <div class="container">
       <div class="row">
@@ -141,214 +104,141 @@
           <h6>HERE ARE OUR POPULAR JUNIOR COURSE</h6>
           <h2>Junior Geeks Courses</h2>
           <div class="container my-4">
-            <input type="text" id="searchBar" class="search-bar form-control" placeholder="Search Courses..."
-              onkeyup="filterItems()">
+            <input type="text" id="searchBar" class="search-bar form-control" placeholder="Search Courses..." onkeyup="filterItems()">
             <div id="noContentMessage" class="no-content-message" style="display: none;">
               <p>No content found</p>
             </div>
           </div>
         </div>
       </div>
-      
     </div>
   </section>
+
   <section class="meetings-page" id="meetings">
     <div class="container">
       <div class="col-lg-12">
         <div class="filters">
-         <!-- Filters -->
-<ul class="filters">
-  <li class="active" data-filter="*">All Classes</li>
-  <li data-filter=".class-5-8">Class 5-8</li>
-  <li data-filter=".class-9-10">Class 9-10</li>
-  <li data-filter=".class-11-12">Class 11-12</li>
-</ul>
+          <ul class="filters">
+            <li class="active" data-filter="*">All Classes</li>
+            <li data-filter=".class-5-8">Class 5-8</li>
+            <li data-filter=".class-9-10">Class 9-10</li>
+            <li data-filter=".class-11-12">Class 11-12</li>
+          </ul>
         </div>
+
         <!-- Course Container -->
         <div class="container mt-5">
-            <div class="row" id="courses-container">
-                <!-- Courses will be dynamically added here -->
-            </div>
+          <div class="row" id="courses-container">
+            <!-- Courses will be dynamically added here -->
+          </div>
         </div>
       </div>
+    </div>
+  </section>
 
-      <div class="row">
-       
-<!-- Bootstrap and jQuery scripts -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Footer -->
+  <script type="text/javascript" src="footer.js"></script>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
       const coursesContainer = document.getElementById('courses-container');
 
       // Fetch the courses data from test.json
       fetch('assets/json/test.json')
-          .then(response => {
-              if (!response.ok) {
-                  throw new Error('Network response was not ok');
-              }
-              return response.json();
-          })
-          .then(courses => {
-              // Dynamically render courses
-              courses.col1.forEach((course, i) => {
-                  const courseElement = document.createElement('div');
-                  // Ensure class names are correctly set from the course data
-                  const classNames = Array.isArray(course.class) ? course.class : [course.class];
-                  courseElement.classList.add('col-lg-4', 'templatemo-item-col', 'course-item', ...classNames);
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+          return response.json();
+        })
+        .then(courses => {
+          // Dynamically render courses
+          courses.col1.forEach((course, i) => {
+            const courseElement = document.createElement('div');
+            const classNames = Array.isArray(course.class) ? course.class : [course.class];
+            courseElement.classList.add('col-lg-4', 'templatemo-item-col', 'course-item', ...classNames);
 
-                  // Course Item Markup
-                  courseElement.innerHTML = `
-                      <div class="meeting-item">
-                          <div class="thumb">
-                              <div class="price">
-                                  <span class="fa fa-cloud-download icon" data-bs-toggle="modal" data-bs-target="#syllabusModal${i}" style="font-size:23px;color:red"></span>
-                              </div>
-                              <img src="assets/images/junior-geeks/${course.image}">
-                          </div>
-                          <div class="down-content text-center">
-                              <h4>${course.course_name}</h4>
-                              <br>
-                              <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#${course.title}">More Info</button>
-                              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#contactModal" style="margin-right: 10px;">Contact Us</button>
-                          </div>
-                      </div>
-                  `;
-                  coursesContainer.appendChild(courseElement);
+            courseElement.innerHTML = `
+              <div class="meeting-item">
+                <div class="thumb">
+                  <div class="price">
+                    <span class="fa fa-cloud-download icon" data-bs-toggle="modal" data-bs-target="#syllabusModal${i}" style="font-size:23px;color:red"></span>
+                  </div>
+                  <img src="assets/images/junior-geeks/${course.image}">
+                </div>
+                <div class="down-content text-center">
+                  <h4>${course.course_name}</h4>
+                  <br>
+                  <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#${course.title}">More Info</button>
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#contactModal" style="margin-right: 10px;">Contact Us</button>
+                </div>
+              </div>
+            `;
+            coursesContainer.appendChild(courseElement);
 
-                  // Modal Markup
-                  const modalMarkup = `
-                      <div class="modal fade" id="syllabusModal${i}" tabindex="-1" aria-labelledby="syllabusModalLabel${i}" aria-hidden="true">
-                          <div class="modal-dialog">
-                              <div class="modal-content">
-                                  <div class="modal-header">
-                                      <h4 class="modal-title" id="syllabusModalLabel${i}">${course.title.replace(/_/g, ' ')}</h4>
-                                      <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                                  </div>
-                                  <div class="modal-body">
-                                      <h2 align="left">Download Syllabus</h2>
-                                      <ul id="pdfList${i}" align="left"></ul>
-                                      <br>
-                                  </div>
-                                  <div class="modal-footer">
-                                      <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                  `;
-                  document.body.insertAdjacentHTML('beforeend', modalMarkup);
+            const modalMarkup = `
+              <div class="modal fade" id="syllabusModal${i}" tabindex="-1" aria-labelledby="syllabusModalLabel${i}" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h4 class="modal-title" id="syllabusModalLabel${i}">${course.title.replace(/_/g, ' ')}</h4>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                      <h2 align="left">Download Syllabus</h2>
+                      <ul id="pdfList${i}" align="left"></ul>
+                      <br>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            `;
+            document.body.insertAdjacentHTML('beforeend', modalMarkup);
 
-                  // Populate the syllabus modal
-                  const pdfList = document.getElementById(`pdfList${i}`);
-                  course.syllabus.forEach((syllabus, index) => {
-                      const listItem = document.createElement('li');
-                      const anchor = document.createElement('a');
-                      anchor.href = syllabus;
-                      anchor.textContent = `${course.syllabus_name[index]}`;
-                      anchor.target = "_blank";
-                      listItem.appendChild(anchor);
-                      pdfList.appendChild(listItem);
-                  });
-              });
-          })
-          .catch(error => {
-              console.error('There was a problem with the fetch operation:', error);
+            const pdfList = document.getElementById(`pdfList${i}`);
+            course.syllabus.forEach((syllabus, index) => {
+              const listItem = document.createElement('li');
+              const anchor = document.createElement('a');
+              anchor.href = syllabus;
+              anchor.textContent = `${course.syllabus_name[index]}`;
+              anchor.target = "_blank";
+              listItem.appendChild(anchor);
+              pdfList.appendChild(listItem);
+            });
           });
-  });
+        })
+        .catch(error => {
+          console.error('There was a problem with the fetch operation:', error);
+        });
+    });
 
     // Filter logic
     $(document).ready(function () {
-        $(".filters li").click(function () {
-            var filterValue = $(this).attr('data-filter');
-            $(".filters li").removeClass('active');
-            $(this).addClass('active');
+      $(".filters li").click(function () {
+        var filterValue = $(this).attr('data-filter');
+        $(".filters li").removeClass('active');
+        $(this).addClass('active');
 
-            if (filterValue == "*") {
-                $(".course-item").show();
-            } else {
-                $(".course-item").hide();
-                $(filterValue).show();
-            }
-        });
-    });
-</script>
-
-            
-</div>
-</div>
-</div>
-</section>
-  <script type="text/javascript" src="footer.js"></script>
-
-  <!-- Scripts -->
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-  <script src="assets/js/isotope.min.js"></script>
-  <script src="assets/js/owl-carousel.js"></script>
-  <script src="assets/js/lightbox.js"></script>
-  <script src="assets/js/tabs.js"></script>
-  <script src="assets/js/isotope.js"></script>
-  <script src="assets/js/video.js"></script>
-  <script src="assets/js/slick-slider.js"></script>
-  <script src="assets/js/custom.js"></script>
-  <script>
-    //according to loftblog tut
-    $('.nav li:first').addClass('active');
-
-    var showSection = function showSection(section, isAnimate) {
-      var
-        direction = section.replace(/#/, ''),
-        reqSection = $('.section').filter('[data-section="' + direction + '"]'),
-        reqSectionPos = reqSection.offset().top - 0;
-
-      if (isAnimate) {
-        $('body, html').animate({
-          scrollTop: reqSectionPos
-        },
-          800);
-      } else {
-        $('body, html').scrollTop(reqSectionPos);
-      }
-
-    };
-
-    var checkSection = function checkSection() {
-      $('.section').each(function () {
-        var
-          $this = $(this),
-          topEdge = $this.offset().top - 80,
-          bottomEdge = topEdge + $this.height(),
-          wScroll = $(window).scrollTop();
-        if (topEdge < wScroll && bottomEdge > wScroll) {
-          var
-            currentId = $this.data('section'),
-            reqLink = $('a').filter('[href*=\\#' + currentId + ']');
-          reqLink.closest('li').addClass('active').
-            siblings().removeClass('active');
+        if (filterValue == "*") {
+          $(".course-item").fadeIn(300).removeClass('hide').addClass('show');
+        } else {
+          $(".course-item").fadeOut(300, function () {
+            $(".course-item" + filterValue).fadeIn(300).removeClass('hide').addClass('show');
+          });
         }
       });
-    };
-
-    $('.main-menu, .responsive-menu, .scroll-to-section').on('click', 'a', function (e) {
-      e.preventDefault();
-      showSection($(this).attr('href'), true);
     });
-
-    $(window).scroll(function () {
-      checkSection();
-    });
-
+    // Search filter function
     function filterItems() {
       const searchText = document.getElementById('searchBar').value.toLowerCase();
-      const courses = document.querySelectorAll('.item-container');
+      const courses = document.querySelectorAll('.course-item');
       let hasVisibleItem = false;
 
       courses.forEach(course => {
-        const title = course.getAttribute('data-title').toLowerCase();
+        const title = course.querySelector('h4').textContent.toLowerCase();
         if (title.includes(searchText)) {
           course.style.display = '';
           hasVisibleItem = true;
@@ -362,64 +252,15 @@
         noContentMessage.style.opacity = '0';
         setTimeout(() => {
           noContentMessage.style.display = 'none';
-        }, 300); // Match this duration with the CSS transition
+        }, 300);
       } else {
         noContentMessage.style.display = 'block';
         setTimeout(() => {
           noContentMessage.style.opacity = '1';
-        }, 10); // Short delay to ensure display is set before fading in
+        }, 10);
       }
     }
-
-    document.addEventListener("DOMContentLoaded", function () {
-      const urlParams = new URLSearchParams(window.location.search);
-      const modalName = urlParams.get('modal');
-      if (modalName) {
-        const modalToOpen = new bootstrap.Modal(document.getElementById(modalName + 'Modal'), {
-          keyboard: true
-        });
-        modalToOpen.show();
-      }
-    });
-
-//FILTER THE COURSES
-$(document).ready(function () {
-  // Initially show all courses
-  $(".course-item").addClass('show');
-
-  // Handle filter button clicks
-  $(".filters li").click(function () {
-    var filterValue = $(this).attr('data-filter');
-
-    // Remove active class from all buttons, then add to the clicked one
-    $(".filters li").removeClass('active');
-    $(this).addClass('active');
-
-    // Filter logic with animation
-    if (filterValue == "*") {
-      // Show all items with animation
-      $(".course-item").fadeOut(300, function () {
-        $(this).removeClass('hide').addClass('show').fadeIn(300);
-      });
-    } else {
-      // Show filtered items and hide others
-      $(".course-item").each(function () {
-        if ($(this).hasClass(filterValue.substring(1))) {
-          // Show filtered items
-          $(this).fadeOut(300, function () {
-            $(this).removeClass('hide').addClass('show').fadeIn(300);
-          });
-        } else {
-          // Hide non-filtered items
-          $(this).fadeOut(300, function () {
-            $(this).removeClass('show').addClass('hide');
-          });
-        }
-      });
-    }
-  });
-});
   </script>
-</body>
 
+</body>
 </html>

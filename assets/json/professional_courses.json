@@ -39,7 +39,7 @@ var courses1 = {
             "pdf": "Jenkins.pdf",
             "title": "Jenkins",
             "download": "course_1",
-            "image": "Jenkins-training.jpg",
+            "image": "jenkins-training.jpg",
             "description": "Jenkins_01",
             "syllabus" : ["assets/syllabus/mean_stack.pdf"],
            "syllabus_name":["Jenkins Syllabus "]	
@@ -241,7 +241,7 @@ var courses1 = {
             "pdf": "C And C++ Training.pdf",
             "title": "C_And_Cplus_Training",
             "download": "course_1",
-            "image": "c c++.png.png",
+            "image": "c _c++.png",
             "description": "C_And_Cplus_Training",
             "syllabus" : ["assets/syllabus/C&C++.pdf"],
            "syllabus_name":["C And C++ Training Syllabus "]	
@@ -263,7 +263,7 @@ var courses1 = {
             "pdf": "JavaScript Training.pdf",
             "title": "JavaScript_Training",
             "download": "course_1",
-            "image": "javaScript.png.png",
+            "image": "javaScript.png",
             "description": "JavaScript_Training",
             "syllabus" : ["assets/syllabus/mean_stack.pdf"],
            "syllabus_name":["JavaScript Training Syllabus "]	
@@ -549,7 +549,7 @@ var courses1 = {
             "pdf": "Manual + Selenium.pdf",
             "title": "Manual_plus_Selenium_01",
             "download": "course_1",
-            "image": "Manual + Selenium.jpg",
+            "image": "Manual_Selenium.jpg",
             "description": "Manual_plus_Selenium_01",
             "syllabus" : ["assets/syllabus/mean_stack.pdf"],
            "syllabus_name":["Manual + Selenium Syllabus "]	

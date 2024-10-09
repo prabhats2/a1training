@@ -47,6 +47,7 @@ document.write(`  <!-- Sub Header -->
                                 <li><a href="junior_geeks_coding.html">Junior Geeks Courses</a></li>
                             </ul>
                         </li>
+                          <li><a href="#">Interview Q/A</a></li>
                         <li><a href="batches.html">Batches</a></li>
                         <li><a href="#">Blog</a></li>
                        <li><a href="events.html">Events</a></li>
