@@ -915,21 +915,9 @@ document.addEventListener('DOMContentLoaded', function () {
     // Adding keyframes for animations
     const styleSheet = document.styleSheets[0];
     styleSheet.insertRule(`
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-    `, styleSheet.cssRules.length);
-    styleSheet.insertRule(`
         @keyframes slideInUp {
             from { transform: translateY(20px); opacity: 0; }
             to { transform: translateY(0); opacity: 1; }
-        }
-    `, styleSheet.cssRules.length);
-    styleSheet.insertRule(`
-        @keyframes zoomIn {
-            from { transform: scale(0.9); opacity: 0; }
-            to { transform: scale(1); opacity: 1; }
         }
     `, styleSheet.cssRules.length);
     styleSheet.insertRule(`
