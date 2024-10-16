@@ -1,25 +1,27 @@
-for (let i = 0; i < junior.col1.length; i++) {
+for (let i = 0; i < courses1.col1.length; i++) {
     let descriptionContent = '';
 
-    if (junior.col1[i].description === 'MS_Office') {
+    if (courses1.col1[i].description === 'MS_Office') {
         descriptionContent = `
         <span id="MS_Office">
            <div class="content-container">
 
-    <h1 class="main-heading">MS Office Training at A1 Training Institute</h1>
+    <h1 class="main-heading">Linux Training at A1 Training Institute</h1>
 
-    <p class="description">The MS Office training provided by A1 Training Institute is designed to enhance your productivity and efficiency in the workplace. Through this comprehensive program, you will gain in-depth knowledge of essential applications such as Word, Excel, PowerPoint, and Outlook. 
-                           Learn to create professional documents, analyze data effectively, and deliver impactful presentations. Our hands-on approach ensures that you develop practical skills that can be applied immediately, allowing you to automate repetitive tasks, collaborate seamlessly, and manage your time more effectively.</p>
+    <p class="description">Linux training provided by A1 Training Institute can help you work more efficiently by giving you the skills and
+        knowledge needed to troubleshoot and resolve issues quickly. With Linux, many tasks can be automated, and by
+        learning how to use Linux tools and utilities, you can save time and increase your productivity.</p>
 
     <ul class="feature-list">
-       <li class="feature-item">&#10003; 30 hours of Instructor-led Training</li>
-<li class="feature-item">&#10003; Comprehensive coverage of MS Word, Excel, PowerPoint, and Outlook</li>
-<li class="feature-item">&#10003; Hands-on projects to reinforce theoretical knowledge</li>
-<li class="feature-item">&#10003; Interactive sessions focusing on real-world applications and productivity tips</li>
-<li class="feature-item">&#10003; Access to additional resources and materials for continued learning</li>
-</ul>
+        <li class="feature-item">&#10003; 40 hours of Instructor led Training</li>
+        <li class="feature-item">&#10003; Comprehensive coverage of basic and advanced exercises on Linux</li>
+        <li class="feature-item">&#10003; Hands-on assignments to support theoretical concepts</li>
+        <li class="feature-item">&#10003; Interactive and project-oriented lab sessions on Linux</li>
+    </ul>
 
-    <h4 class="sub-heading">We provide the No.1 MS Office training program in Chennai. We offer various modes of training, including classroom and online training. Our training centers are spread across Chennai at Adyar, OMR, Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
+    <h4 class="sub-heading">We provide the NO.1 Linux training program in Chennai. We offer different modes of training by
+        providing classroom and online training. Our training centers are spread across Chennai at Adyar, OMR,
+        Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
 
     <div class="button-container">
         <button class="custom-button"  data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
@@ -49,14 +51,16 @@ for (let i = 0; i < junior.col1.length; i++) {
 
 </div>
         </span>`;
-    } else if (junior.col1[i].description === 'Corel_Draw') {
+    } else if (courses1.col1[i].description === 'Corel_Draw') {
         descriptionContent = `
         <span id="Corel_Draw">
             <div class="content-container">
 
-    <h1 class="main-heading">Corel Draw Training at A1 Training Institute</h1>
+    <h1 class="main-heading">Linux Training at A1 Training Institute</h1>
 
-    <p class="description">Corel Draw training at A1 Training Institute equips students with the essential skills to create stunning graphics and designs using this powerful software. Designed for beginners and professionals alike, this course covers a wide range of topics, including vector illustration, layout design, and photo editing. Participants will learn how to use Corel Draw's tools and features to create logos, brochures, and other marketing materials. The hands-on approach emphasizes practical assignments, enabling students to apply their knowledge to real-world projects. By the end of the course, students will be proficient in designing visually appealing graphics that meet industry standards, enhancing their career opportunities in graphic design and digital marketing.</p>
+    <p class="description">Linux training provided by A1 Training Institute can help you work more efficiently by giving you the skills and
+        knowledge needed to troubleshoot and resolve issues quickly. With Linux, many tasks can be automated, and by
+        learning how to use Linux tools and utilities, you can save time and increase your productivity.</p>
 
     <ul class="feature-list">
         <li class="feature-item">&#10003; 40 hours of Instructor led Training</li>
@@ -65,7 +69,9 @@ for (let i = 0; i < junior.col1.length; i++) {
         <li class="feature-item">&#10003; Interactive and project-oriented lab sessions on Linux</li>
     </ul>
 
-    <h4 class="sub-heading">We provide the No.1 Corel Draw training program in Chennai. We offer multiple modes of training, including classroom and online training. Our training centers are spread across Chennai at Adyar, OMR, Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
+    <h4 class="sub-heading">We provide the NO.1 Linux training program in Chennai. We offer different modes of training by
+        providing classroom and online training. Our training centers are spread across Chennai at Adyar, OMR,
+        Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
 
     <div class="button-container">
         <button class="custom-button"  data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
@@ -95,14 +101,15 @@ for (let i = 0; i < junior.col1.length; i++) {
 
 </div>
         </span>`;
-    } else if (junior.col1[i].description === 'Tally') {
+    } else if (courses1.col1[i].description === 'Tally') {
         descriptionContent = `
-         <span id="Tally">
-        <div class="content-container">
+        <div class="Tally">
 
-    <h1 class="main-heading">Tally Training at A1 Training Institute</h1>
+    <h1 class="main-heading">Linux Training at A1 Training Institute</h1>
 
-    <p class="description">Tally training at A1 Training Institute provides students with a comprehensive understanding of accounting and financial management software. This course is designed for individuals looking to enhance their accounting skills, whether for personal use or professional advancement. Participants will learn the fundamentals of Tally, including how to manage accounts, generate financial statements, and perform inventory management. The curriculum covers key features such as voucher entry, taxation, payroll, and financial reporting. By engaging in hands-on exercises and real-world scenarios, students will develop the confidence and proficiency needed to effectively use Tally in various business environments. This course prepares participants for roles in accounting, finance, and business management.</p>
+    <p class="description">Linux training provided by A1 Training Institute can help you work more efficiently by giving you the skills and
+        knowledge needed to troubleshoot and resolve issues quickly. With Linux, many tasks can be automated, and by
+        learning how to use Linux tools and utilities, you can save time and increase your productivity.</p>
 
     <ul class="feature-list">
         <li class="feature-item">&#10003; 40 hours of Instructor led Training</li>
@@ -111,7 +118,9 @@ for (let i = 0; i < junior.col1.length; i++) {
         <li class="feature-item">&#10003; Interactive and project-oriented lab sessions on Linux</li>
     </ul>
 
-    <h4 class="sub-heading">We provide the No.1 Tally training program in Chennai. We offer various modes of training, including classroom and online training. Our training centers are spread across Chennai at Adyar, OMR, Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
+    <h4 class="sub-heading">We provide the NO.1 Linux training program in Chennai. We offer different modes of training by
+        providing classroom and online training. Our training centers are spread across Chennai at Adyar, OMR,
+        Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
 
     <div class="button-container">
         <button class="custom-button"  data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
@@ -141,14 +150,16 @@ for (let i = 0; i < junior.col1.length; i++) {
 
 </div>
         </span>`;
-    } else if (junior.col1[i].description === 'Abode_Photoshop') {
+    } else if (courses1.col1[i].description === 'Abode_Photoshop') {
         descriptionContent = `
         <span id="Abode_Photoshop">
-        <div class="content-container">
+            <div class="content-container">
 
-    <h1 class="main-heading">Adobe Photoshop Training at A1 Training Institute</h1>
+    <h1 class="main-heading">Linux Training at A1 Training Institute</h1>
 
-    <p class="description">Adobe Photoshop training at A1 Training Institute equips students with the skills needed to transform their creative visions into reality. This hands-on course covers everything from basic photo editing to advanced techniques in graphic design and digital art. Participants will learn how to navigate the Photoshop interface, utilize essential tools, and apply various effects and filters. The curriculum includes lessons on retouching, color correction, layering, and compositing images. By working on real-world projects, students will gain practical experience that prepares them for professional opportunities in photography, web design, and multimedia art. By the end of the course, participants will confidently use Adobe Photoshop to create stunning visuals for any application.</p>
+    <p class="description">Linux training provided by A1 Training Institute can help you work more efficiently by giving you the skills and
+        knowledge needed to troubleshoot and resolve issues quickly. With Linux, many tasks can be automated, and by
+        learning how to use Linux tools and utilities, you can save time and increase your productivity.</p>
 
     <ul class="feature-list">
         <li class="feature-item">&#10003; 40 hours of Instructor led Training</li>
@@ -157,10 +168,12 @@ for (let i = 0; i < junior.col1.length; i++) {
         <li class="feature-item">&#10003; Interactive and project-oriented lab sessions on Linux</li>
     </ul>
 
-    <h4 class="sub-heading">We provide the No.1 Photoshop training program in Delhi NCR, including Noida Extension and Greater Noida. We offer flexible training options, including classroom and online training. Our training centers are located across Delhi NCR, Noida Extension, and Greater Noida to ensure easy access for all students.</h4>
+    <h4 class="sub-heading">We provide the NO.1 Linux training program in Chennai. We offer different modes of training by
+        providing classroom and online training. Our training centers are spread across Chennai at Adyar, OMR,
+        Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
 
     <div class="button-container">
-        <button class="custom-button"  data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
+        <button class="custom-button" data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
         <button class="custom-button">Contact Course Advisor</button>
     </div>
 
@@ -186,15 +199,18 @@ for (let i = 0; i < junior.col1.length; i++) {
     </div>
 
 </div>
+
         </span>`;
-    } else if (junior.col1[i].description === 'Adobe_Illustrator') {
+    } else if (courses1.col1[i].description === 'Adobe_Illustrator') {
         descriptionContent = `
         <span id="Adobe_Illustrator">
            <div class="content-container">
 
-    <h1 class="main-heading">Adobe Illustrator Training at A1 Training Institute</h1>
+    <h1 class="main-heading">Linux Training at A1 Training Institute</h1>
 
-    <p class="description" >Adobe Illustrator training at A1 Training Institute empowers students to unleash their creativity through vector graphic design. This comprehensive course covers essential tools and techniques for creating stunning illustrations, logos, and complex designs. Participants will learn about typography, color theory, and composition while mastering features like the Pen Tool, shapes, and layers. Through hands-on projects, students will develop a strong portfolio, showcasing their ability to produce professional-quality designs. By the end of the course, participants will have the skills and confidence to use Adobe Illustrator for various applications, from branding to digital artwork.</p>
+    <p class="description" >Linux training provided by A1 Training Institute can help you work more efficiently by giving you the skills and
+        knowledge needed to troubleshoot and resolve issues quickly. With Linux, many tasks can be automated, and by
+        learning how to use Linux tools and utilities, you can save time and increase your productivity.</p>
 
     <ul class="feature-list">
         <li class="feature-item">&#10003; 40 hours of Instructor led Training</li>
@@ -203,7 +219,9 @@ for (let i = 0; i < junior.col1.length; i++) {
         <li class="feature-item">&#10003; Interactive and project-oriented lab sessions on Linux</li>
     </ul>
 
-    <h4 class="sub-heading">We provide the No.1 Illustrator training program in Delhi NCR, including Noida Extension and Greater Noida. We offer various modes of training, including classroom and online training. Our training centers are located throughout Delhi NCR, Noida Extension, and Greater Noida to provide convenient access for all students.</h4>
+    <h4 class="sub-heading">We provide the NO.1 Linux training program in Chennai. We offer different modes of training by
+        providing classroom and online training. Our training centers are spread across Chennai at Adyar, OMR,
+        Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
 
     <div class="button-container">
         <button class="custom-button"  data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
@@ -233,14 +251,16 @@ for (let i = 0; i < junior.col1.length; i++) {
 
 </div>
         </span>`;
-    } else if (junior.col1[i].description === 'Web_Development') {
+    } else if (courses1.col1[i].description === 'Web_Development') {
         descriptionContent = `
         <span id="Web_Development">
          <div class="content-container">
 
-    <h1 class="main-heading">Web Development Training at A1 Training Institute</h1>
+    <h1 class="main-heading">Linux Training at A1 Training Institute</h1>
 
-    <p class="description">Web Development at A1 Training Institute equips students with the essential skills to build and maintain dynamic websites. This course covers both front-end and back-end development, including HTML, CSS, JavaScript, and server-side programming languages such as PHP and Node.js. Participants will learn about responsive design, user experience, and the latest web development frameworks. Through hands-on projects, students will create fully functional websites, gaining practical experience in web design, coding, and deployment. By the end of the course, participants will be prepared to enter the fast-paced world of web development, armed with the tools to create engaging online experiences.</p>
+    <p class="description">Linux training provided by A1 Training Institute can help you work more efficiently by giving you the skills and
+        knowledge needed to troubleshoot and resolve issues quickly. With Linux, many tasks can be automated, and by
+        learning how to use Linux tools and utilities, you can save time and increase your productivity.</p>
 
     <ul class="feature-list">
         <li class="feature-item">&#10003; 40 hours of Instructor led Training</li>
@@ -249,7 +269,9 @@ for (let i = 0; i < junior.col1.length; i++) {
         <li class="feature-item">&#10003; Interactive and project-oriented lab sessions on Linux</li>
     </ul>
 
-    <h4 class="sub-heading">We provide the No.1 Web Development training program in Delhi NCR, including Noida Extension and Greater Noida. We offer flexible training options, including classroom and online training. Our training centers are located across Delhi NCR, Noida Extension, and Greater Noida, ensuring convenient access for all students.</h4>
+    <h4 class="sub-heading">We provide the NO.1 Linux training program in Chennai. We offer different modes of training by
+        providing classroom and online training. Our training centers are spread across Chennai at Adyar, OMR,
+        Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
 
     <div class="button-container">
         <button class="custom-button"  data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
@@ -280,14 +302,16 @@ for (let i = 0; i < junior.col1.length; i++) {
 </div>
 
           </span>`;
-    } else if (junior.col1[i].description === 'Game_Development') {
+    } else if (courses1.col1[i].description === 'Game_Development') {
         descriptionContent = `
         <span id="Game_Development">
           <div class="content-container">
 
-    <h1 class="main-heading">Game Development Training at A1 Training Institute</h1>
+    <h1 class="main-heading">Linux Training at A1 Training Institute</h1>
 
-    <p class="description">Game Development at A1 Training Institute offers a comprehensive introduction to the exciting world of creating video games. This course covers the fundamentals of game design, programming, and the use of game development engines such as Unity and Unreal Engine. Students will learn about game mechanics, level design, character development, and user experience. Through hands-on projects, participants will design and build their own games, gaining practical experience in coding, graphics, and sound integration. By the end of the course, students will be equipped with the skills to bring their creative ideas to life in the gaming industry. </p>
+    <p class="description">Linux training provided by A1 Training Institute can help you work more efficiently by giving you the skills and
+        knowledge needed to troubleshoot and resolve issues quickly. With Linux, many tasks can be automated, and by
+        learning how to use Linux tools and utilities, you can save time and increase your productivity.</p>
 
     <ul class="feature-list">
         <li class="feature-item">&#10003; 40 hours of Instructor led Training</li>
@@ -296,7 +320,9 @@ for (let i = 0; i < junior.col1.length; i++) {
         <li class="feature-item">&#10003; Interactive and project-oriented lab sessions on Linux</li>
     </ul>
 
-    <h4 class="sub-heading">We provide the No.1 Game Development training program in Delhi NCR, including Noida Extension and Greater Noida. We offer multiple training modes, including classroom and online training. Our training centers are conveniently located across Delhi NCR, Noida Extension, and Greater Noida to provide easy access for all aspiring game developers.</h4>
+    <h4 class="sub-heading">We provide the NO.1 Linux training program in Chennai. We offer different modes of training by
+        providing classroom and online training. Our training centers are spread across Chennai at Adyar, OMR,
+        Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
 
     <div class="button-container">
         <button class="custom-button"  data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
@@ -327,14 +353,16 @@ for (let i = 0; i < junior.col1.length; i++) {
 </div>
 
 </span>`;
-    } else if (junior.col1[i].description === 'Python') {
+    } else if (courses1.col1[i].description === 'Robotics') {
         descriptionContent = `
-        <span id="Python">
+        <span id="Robotics">
             <div class="content-container">
 
-    <h1 class="main-heading">Python Training at A1 Training Institute</h1>
+    <h1 class="main-heading">Linux Training at A1 Training Institute</h1>
 
-    <p class="description">Python Programming at A1 Training Institute equips students with essential skills to excel in programming using one of the most popular languages today. This course covers fundamental programming concepts, including variables, data types, control structures, and functions. Students will engage in hands-on projects, enabling them to apply their knowledge to real-world scenarios. By the end of the course, participants will have a strong grasp of Python and be prepared to tackle more advanced topics, such as data analysis, machine learning, and web development.</p>
+    <p class="description">Linux training provided by A1 Training Institute can help you work more efficiently by giving you the skills and
+        knowledge needed to troubleshoot and resolve issues quickly. With Linux, many tasks can be automated, and by
+        learning how to use Linux tools and utilities, you can save time and increase your productivity.</p>
 
     <ul class="feature-list">
         <li class="feature-item">&#10003; 40 hours of Instructor led Training</li>
@@ -343,7 +371,9 @@ for (let i = 0; i < junior.col1.length; i++) {
         <li class="feature-item">&#10003; Interactive and project-oriented lab sessions on Linux</li>
     </ul>
 
-    <h4 class="sub-heading">We provide the No.1 Python training program in Delhi NCR, including Noida Extension and Greater Noida. We offer comprehensive classroom and online training options. Our training centers are located across Delhi NCR, Noida Extension, and Greater Noida, making it convenient for students to access top-quality Python training.</h4>
+    <h4 class="sub-heading">We provide the NO.1 Linux training program in Chennai. We offer different modes of training by
+        providing classroom and online training. Our training centers are spread across Chennai at Adyar, OMR,
+        Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
 
     <div class="button-container">
         <button class="custom-button"  data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
@@ -373,16 +403,16 @@ for (let i = 0; i < junior.col1.length; i++) {
 
 </div>
  </span>`;
-    } else if (junior.col1[i].description === 'computer_science11th') {
+    } else if (courses1.col1[i].description === 'Python') {
         descriptionContent = `
-        <span id="computer_science11th">
+        <span id="Python">
             <div class="content-container">
 
-    <h1 class="main-heading">Computer Science 11th Training at A1 Training Institute</h1>
+    <h1 class="main-heading">Linux Training at A1 Training Institute</h1>
 
-    <p class="description">Computer Science for 11th Grade at A1 Training Institute provides students with a strong foundation in computer science principles and programming concepts. The course introduces key topics such as programming logic, problem-solving techniques, and data representation. Students will learn to code in languages like Python and C++, developing their skills through hands-on projects and exercises. With a focus on computational thinking and creativity, this course empowers students to explore the exciting world of technology and prepares them for further studies in computer science.
-
-</p>
+    <p class="description">Linux training provided by A1 Training Institute can help you work more efficiently by giving you the skills and
+        knowledge needed to troubleshoot and resolve issues quickly. With Linux, many tasks can be automated, and by
+        learning how to use Linux tools and utilities, you can save time and increase your productivity.</p>
 
     <ul class="feature-list">
         <li class="feature-item">&#10003; 40 hours of Instructor led Training</li>
@@ -391,7 +421,9 @@ for (let i = 0; i < junior.col1.length; i++) {
         <li class="feature-item">&#10003; Interactive and project-oriented lab sessions on Linux</li>
     </ul>
 
-    <h4 class="sub-heading">We provide the No.1 Computer Science training program for 11th Grade students in Delhi NCR, including Noida Extension and Greater Noida. Our training offers flexible classroom and online learning options. With training centers located throughout Delhi NCR, Noida Extension, and Greater Noida, we ensure that students have easy access to high-quality Computer Science education.</h4>
+    <h4 class="sub-heading">We provide the NO.1 Linux training program in Chennai. We offer different modes of training by
+        providing classroom and online training. Our training centers are spread across Chennai at Adyar, OMR,
+        Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
 
     <div class="button-container">
         <button class="custom-button"  data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
@@ -421,60 +453,16 @@ for (let i = 0; i < junior.col1.length; i++) {
 
 </div>
         </span>`;
-    } else if (junior.col1[i].description === 'computer_science12th') {
-        descriptionContent = `
-        <span id="computer_science12th">
-          <div class="content-container">
-
-    <h1 class="main-heading">Computer Science 12th Training at A1 Training Institute</h1>
-
-    <p class="description">Computer Science for 12th Grade at A1 Training Institute offers a comprehensive curriculum that equips students with the knowledge and skills needed for success in today's technology-driven world. The course covers essential topics such as programming fundamentals, data structures, algorithms, and software development. Students will engage in practical projects that enhance their problem-solving abilities and coding skills using languages like Python and Java. With a focus on critical thinking and real-world applications, this course prepares students for advanced studies in computer science or careers in the tech industry.</p>
-
-    <ul class="feature-list">
-        <li class="feature-item">&#10003; 40 hours of Instructor led Training</li>
-        <li class="feature-item">&#10003; Comprehensive coverage of basic and advanced exercises on Linux</li>
-        <li class="feature-item">&#10003; Hands-on assignments to support theoretical concepts</li>
-        <li class="feature-item">&#10003; Interactive and project-oriented lab sessions on Linux</li>
-    </ul>
-
-    <h4 class="sub-heading">We offer the No.1 Computer Science training program for 12th Grade students in Delhi NCR, including Noida Extension and Greater Noida. Our training covers advanced concepts and practical applications essential for the CBSE curriculum. With flexible classroom and online training options, students can choose the mode that best suits their learning style. Our training centers are strategically located throughout Delhi NCR, ensuring easy access to high-quality education and resources.</h4>
-
-    <div class="button-container">
-        <button class="custom-button"  data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
-        <button class="custom-button">Contact Course Advisor</button>
-    </div>
-
-    <div class="training-container mt-5">
-        <div class="row">
-            <div class="training-col">
-                <h3>40+ Hrs</h3>
-                <p>Hands-On Training</p>
-            </div>
-            <div class="training-col">
-                <h3>2 Live</h3>
-                <p>Projects For Hands-On Learning</p>
-            </div>
-            <div class="training-col">
-                <h3>50 Hrs</h3>
-                <p>Practical Assignments</p>
-            </div>
-            <div class="training-col">
-                <h3>24/7</h3>
-                <p>Lifetime Access To Support Team</p>
-            </div>
-        </div>
-    </div>
-
-</div>
-        </span>`;
-    }else if (junior.col1[i].description === 'Java') {
+    } else if (courses1.col1[i].description === 'Java') {
         descriptionContent = `
         <span id="Java">
           <div class="content-container">
 
-    <h1 class="main-heading">Java Training at A1 Training Institute</h1>
+    <h1 class="main-heading">Linux Training at A1 Training Institute</h1>
 
-    <p class="description">Java Programming Course at A1 Training Institute is designed to provide you with a strong foundation in one of the most popular programming languages in the world. This course covers essential concepts such as object-oriented programming, data structures, and design patterns. You'll engage in hands-on projects that allow you to build real-world applications while learning to write clean, efficient, and maintainable code. With a focus on best practices and industry standards, this course prepares you for a successful career in software development, web applications, and mobile development using Java.</p>
+    <p class="description">Linux training provided by A1 Training Institute can help you work more efficiently by giving you the skills and
+        knowledge needed to troubleshoot and resolve issues quickly. With Linux, many tasks can be automated, and by
+        learning how to use Linux tools and utilities, you can save time and increase your productivity.</p>
 
     <ul class="feature-list">
         <li class="feature-item">&#10003; 40 hours of Instructor led Training</li>
@@ -483,7 +471,9 @@ for (let i = 0; i < junior.col1.length; i++) {
         <li class="feature-item">&#10003; Interactive and project-oriented lab sessions on Linux</li>
     </ul>
 
-    <h4 class="sub-heading">We provide the No.1 Java training program in Delhi NCR, including Noida Extension and Greater Noida. Our comprehensive training covers essential Java concepts, object-oriented programming, and hands-on experience with real-world projects. Students can choose between classroom and online training options to fit their schedules. With training centers located across Delhi NCR, we ensure easy access to high-quality Java education, equipping students with the skills needed for a successful career in software development.</h4>
+    <h4 class="sub-heading">We provide the NO.1 Linux training program in Chennai. We offer different modes of training by
+        providing classroom and online training. Our training centers are spread across Chennai at Adyar, OMR,
+        Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
 
     <div class="button-container">
         <button class="custom-button"  data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
@@ -513,14 +503,16 @@ for (let i = 0; i < junior.col1.length; i++) {
 
 </div>
         </span>`;
-    } else if (junior.col1[i].description === 'C/C++_Programming') {
+    }else if (courses1.col1[i].description === 'Canva_Designing') {
         descriptionContent = `
-        <span id="C/C++_Programming">
-        <div class="content-container">
+        <span id="Canva_Designing">
+          <div class="content-container">
 
-    <h1 class="main-heading">C/C++ Programming Training at A1 Training Institute</h1>
+    <h1 class="main-heading">Linux Training at A1 Training Institute</h1>
 
-    <p class="description">C/C++ Programming Course at A1 Training Institute provides a comprehensive introduction to programming using two of the most widely used programming languages. This course is designed to build a strong foundation in programming concepts, data structures, and algorithms. You'll learn how to write efficient code, manage memory, and understand object-oriented programming principles through hands-on projects. By the end of the course, you'll be equipped with the skills to develop robust applications and tackle complex programming challenges, setting you up for success in various software development roles.</p>
+    <p class="description">Linux training provided by A1 Training Institute can help you work more efficiently by giving you the skills and
+        knowledge needed to troubleshoot and resolve issues quickly. With Linux, many tasks can be automated, and by
+        learning how to use Linux tools and utilities, you can save time and increase your productivity.</p>
 
     <ul class="feature-list">
         <li class="feature-item">&#10003; 40 hours of Instructor led Training</li>
@@ -529,7 +521,59 @@ for (let i = 0; i < junior.col1.length; i++) {
         <li class="feature-item">&#10003; Interactive and project-oriented lab sessions on Linux</li>
     </ul>
 
-    <h4 class="sub-heading">We offer the No.1 C/C++ programming training program in Delhi NCR, including Noida Extension and Greater Noida. This program is designed to provide a strong foundation in both C and C++ programming languages, focusing on key concepts such as data structures, algorithms, and object-oriented programming. With options for classroom and online training, students can choose the learning mode that suits them best. Our training centers are conveniently located throughout Delhi NCR, ensuring that aspiring programmers gain the skills needed for a successful career in software development.</h4>
+    <h4 class="sub-heading">We provide the NO.1 Linux training program in Chennai. We offer different modes of training by
+        providing classroom and online training. Our training centers are spread across Chennai at Adyar, OMR,
+        Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
+
+    <div class="button-container">
+        <button class="custom-button"  data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
+        <button class="custom-button">Contact Course Advisor</button>
+    </div>
+
+    <div class="training-container mt-5">
+        <div class="row">
+            <div class="training-col">
+                <h3>40+ Hrs</h3>
+                <p>Hands-On Training</p>
+            </div>
+            <div class="training-col">
+                <h3>2 Live</h3>
+                <p>Projects For Hands-On Learning</p>
+            </div>
+            <div class="training-col">
+                <h3>50 Hrs</h3>
+                <p>Practical Assignments</p>
+            </div>
+            <div class="training-col">
+                <h3>24/7</h3>
+                <p>Lifetime Access To Support Team</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+        </span>`;
+    } else if (courses1.col1[i].description === 'C/C++_Programming') {
+        descriptionContent = `
+        <span id="C/C++_Programming">
+        <div class="content-container">
+
+    <h1 class="main-heading">Linux Training at A1 Training Institute</h1>
+
+    <p class="description">Linux training provided by A1 Training Institute can help you work more efficiently by giving you the skills and
+        knowledge needed to troubleshoot and resolve issues quickly. With Linux, many tasks can be automated, and by
+        learning how to use Linux tools and utilities, you can save time and increase your productivity.</p>
+
+    <ul class="feature-list">
+        <li class="feature-item">&#10003; 40 hours of Instructor led Training</li>
+        <li class="feature-item">&#10003; Comprehensive coverage of basic and advanced exercises on Linux</li>
+        <li class="feature-item">&#10003; Hands-on assignments to support theoretical concepts</li>
+        <li class="feature-item">&#10003; Interactive and project-oriented lab sessions on Linux</li>
+    </ul>
+
+    <h4 class="sub-heading">We provide the NO.1 Linux training program in Chennai. We offer different modes of training by
+        providing classroom and online training. Our training centers are spread across Chennai at Adyar, OMR,
+        Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
 
     <div class="button-container">
         <button class="custom-button" data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
@@ -559,63 +603,16 @@ for (let i = 0; i < junior.col1.length; i++) {
 
 </div>
         </span>`;
-    } else if (junior.col1[i].description === 'Canva_Designing') {
-        descriptionContent = `
-        <span id="Canva_Designing">
-            <div class="content-container">
-
-    <h1 class="main-heading">Canva Designing  at A1 Training Institute</h1>
-
-    <p class="description">Canva Designing Course at A1 Training Institute equips you with the creative skills necessary to design stunning graphics and marketing materials using Canva. This course covers the fundamentals of graphic design, including layout, color theory, typography, and branding. You'll learn how to create visually appealing social media posts, presentations, posters, and more, all while using Canva's user-friendly interface. By the end of the course, you'll be able to produce professional-quality designs quickly and efficiently, enhancing your digital presence and communication skills.
-
-</p>
-
-    <ul class="feature-list">
-        <li class="feature-item">&#10003; 40 hours of Instructor led Training</li>
-        <li class="feature-item">&#10003; Comprehensive coverage of basic and advanced exercises on Linux</li>
-        <li class="feature-item">&#10003; Hands-on assignments to support theoretical concepts</li>
-        <li class="feature-item">&#10003; Interactive and project-oriented lab sessions on Linux</li>
-    </ul>
-
-    <h4 class="sub-heading">We offer the No.1 Canva Designing training program in Delhi NCR, including Noida Extension and Greater Noida. This program is tailored for individuals looking to enhance their graphic design skills using Canva, a powerful and user-friendly design tool. Participants will learn how to create stunning visuals for social media, presentations, marketing materials, and more, all while mastering design principles and techniques. With flexible classroom and online training options, students can easily fit this program into their busy schedules. Our training centers are conveniently located across Delhi NCR, providing easy access to top-notch design education.</h4>
-
-    <div class="button-container">
-        <button class="custom-button"  data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
-        <button class="custom-button">Contact Course Advisor</button>
-    </div>
-
-    <div class="training-container mt-5">
-        <div class="row">
-            <div class="training-col">
-                <h3>40+ Hrs</h3>
-                <p>Hands-On Training</p>
-            </div>
-            <div class="training-col">
-                <h3>2 Live</h3>
-                <p>Projects For Hands-On Learning</p>
-            </div>
-            <div class="training-col">
-                <h3>50 Hrs</h3>
-                <p>Practical Assignments</p>
-            </div>
-            <div class="training-col">
-                <h3>24/7</h3>
-                <p>Lifetime Access To Support Team</p>
-            </div>
-        </div>
-    </div>
-
-</div>
-        </span>`;
-    } else if (junior.col1[i].description === 'Database') {
+    } else if (courses1.col1[i].description === 'Database') {
         descriptionContent = `
         <span id="Database">
-         <div class="content-container">
+            <div class="content-container">
 
-    <h1 class="main-heading">Databae Training at A1 Training Institute</h1>
+    <h1 class="main-heading">Linux Training at A1 Training Institute</h1>
 
-    <p class="description">Database Training Program offered by A1 Training Institute provides you with the essential skills and knowledge needed to manage and analyze data efficiently. Our training covers fundamental concepts of database design, SQL programming, and data manipulation, ensuring you understand how to create, retrieve, update, and delete data effectively. With practical exercises and real-world scenarios, you'll learn how to optimize database performance and ensure data integrity. This program empowers you to harness the power of data, making you a valuable asset in any organization.
-</p>
+    <p class="description">Linux training provided by A1 Training Institute can help you work more efficiently by giving you the skills and
+        knowledge needed to troubleshoot and resolve issues quickly. With Linux, many tasks can be automated, and by
+        learning how to use Linux tools and utilities, you can save time and increase your productivity.</p>
 
     <ul class="feature-list">
         <li class="feature-item">&#10003; 40 hours of Instructor led Training</li>
@@ -624,9 +621,9 @@ for (let i = 0; i < junior.col1.length; i++) {
         <li class="feature-item">&#10003; Interactive and project-oriented lab sessions on Linux</li>
     </ul>
 
-    <h4 class="sub-heading">We offer the No.1 Database Management training program in Delhi NCR, including Noida Extension and Greater Noida. This comprehensive program is designed to equip students with essential skills in database design, implementation, and management. Participants will learn about various database management systems (DBMS), SQL querying, data modeling, and best practices for data security and integrity. With options for classroom and online training, our program accommodates various learning preferences. Our training centers are conveniently located across Delhi NCR, making it easier for aspiring database professionals to access high-quality education.
-
-</h4>
+    <h4 class="sub-heading">We provide the NO.1 Linux training program in Chennai. We offer different modes of training by
+        providing classroom and online training. Our training centers are spread across Chennai at Adyar, OMR,
+        Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
 
     <div class="button-container">
         <button class="custom-button"  data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
@@ -656,14 +653,16 @@ for (let i = 0; i < junior.col1.length; i++) {
 
 </div>
         </span>`;
-    } else if (junior.col1[i].description === 'Typing') {
+    } else if (courses1.col1[i].description === 'Computer_Science11th') {
         descriptionContent = `
-        <span id="Typing">
-           <div class="content-container">
+        <span id="Computer_Science11th">
+            <div class="content-container">
 
-    <h1 class="main-heading">Typing at A1 Training Institute</h1>
+    <h1 class="main-heading">Linux Training at A1 Training Institute</h1>
 
-    <p class="description">Typing Training Program offered by A1 Training Institute can significantly enhance your efficiency by equipping you with essential skills for fast and accurate typing. With our comprehensive training, you'll learn proper finger placement, techniques to improve typing speed, and strategies to minimize errors. Mastering typing can streamline your workflow, making it easier to complete tasks quickly and effectively. By developing your typing skills with our expert guidance, you can boost your productivity and confidence in both academic and professional environments.</p>
+    <p class="description">Linux training provided by A1 Training Institute can help you work more efficiently by giving you the skills and
+        knowledge needed to troubleshoot and resolve issues quickly. With Linux, many tasks can be automated, and by
+        learning how to use Linux tools and utilities, you can save time and increase your productivity.</p>
 
     <ul class="feature-list">
         <li class="feature-item">&#10003; 40 hours of Instructor led Training</li>
@@ -672,7 +671,109 @@ for (let i = 0; i < junior.col1.length; i++) {
         <li class="feature-item">&#10003; Interactive and project-oriented lab sessions on Linux</li>
     </ul>
 
-    <h4 class="sub-heading">We provide the No.1 Typing training program in Delhi NCR, including Noida Extension and Greater Noida. Our program focuses on enhancing typing speed and accuracy, catering to both beginners and those looking to improve their existing skills. Participants will engage in various typing exercises, learn proper finger placement, and receive personalized feedback to boost their proficiency. Our training is available through both classroom and online modes, ensuring flexibility for all learners. With our expert instructors and structured curriculum, students will develop essential typing skills that are crucial for academic and professional success.</h4>
+    <h4 class="sub-heading">We provide the NO.1 Linux training program in Chennai. We offer different modes of training by
+        providing classroom and online training. Our training centers are spread across Chennai at Adyar, OMR,
+        Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
+
+    <div class="button-container">
+        <button class="custom-button"  data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
+        <button class="custom-button">Contact Course Advisor</button>
+    </div>
+
+    <div class="training-container mt-5">
+        <div class="row">
+            <div class="training-col">
+                <h3>40+ Hrs</h3>
+                <p>Hands-On Training</p>
+            </div>
+            <div class="training-col">
+                <h3>2 Live</h3>
+                <p>Projects For Hands-On Learning</p>
+            </div>
+            <div class="training-col">
+                <h3>50 Hrs</h3>
+                <p>Practical Assignments</p>
+            </div>
+            <div class="training-col">
+                <h3>24/7</h3>
+                <p>Lifetime Access To Support Team</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+        </span>`;
+    } else if (courses1.col1[i].description === 'Computer_Science12th') {
+        descriptionContent = `
+        <span id="Computer_Science12th">
+            <div class="content-container">
+
+    <h1 class="main-heading">Linux Training at A1 Training Institute</h1>
+
+    <p class="description">Linux training provided by A1 Training Institute can help you work more efficiently by giving you the skills and
+        knowledge needed to troubleshoot and resolve issues quickly. With Linux, many tasks can be automated, and by
+        learning how to use Linux tools and utilities, you can save time and increase your productivity.</p>
+
+    <ul class="feature-list">
+        <li class="feature-item">&#10003; 40 hours of Instructor led Training</li>
+        <li class="feature-item">&#10003; Comprehensive coverage of basic and advanced exercises on Linux</li>
+        <li class="feature-item">&#10003; Hands-on assignments to support theoretical concepts</li>
+        <li class="feature-item">&#10003; Interactive and project-oriented lab sessions on Linux</li>
+    </ul>
+
+    <h4 class="sub-heading">We provide the NO.1 Linux training program in Chennai. We offer different modes of training by
+        providing classroom and online training. Our training centers are spread across Chennai at Adyar, OMR,
+        Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
+
+    <div class="button-container">
+        <button class="custom-button"  data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
+        <button class="custom-button">Contact Course Advisor</button>
+    </div>
+
+    <div class="training-container mt-5">
+        <div class="row">
+            <div class="training-col">
+                <h3>40+ Hrs</h3>
+                <p>Hands-On Training</p>
+            </div>
+            <div class="training-col">
+                <h3>2 Live</h3>
+                <p>Projects For Hands-On Learning</p>
+            </div>
+            <div class="training-col">
+                <h3>50 Hrs</h3>
+                <p>Practical Assignments</p>
+            </div>
+            <div class="training-col">
+                <h3>24/7</h3>
+                <p>Lifetime Access To Support Team</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+        </span>`;
+    } else if (courses1.col1[i].description === 'Typing') {
+        descriptionContent = `
+        <span id="Typing">
+            <div class="content-container">
+
+    <h1 class="main-heading">Linux Training at A1 Training Institute</h1>
+
+    <p class="description">Linux training provided by A1 Training Institute can help you work more efficiently by giving you the skills and
+        knowledge needed to troubleshoot and resolve issues quickly. With Linux, many tasks can be automated, and by
+        learning how to use Linux tools and utilities, you can save time and increase your productivity.</p>
+
+    <ul class="feature-list">
+        <li class="feature-item">&#10003; 40 hours of Instructor led Training</li>
+        <li class="feature-item">&#10003; Comprehensive coverage of basic and advanced exercises on Linux</li>
+        <li class="feature-item">&#10003; Hands-on assignments to support theoretical concepts</li>
+        <li class="feature-item">&#10003; Interactive and project-oriented lab sessions on Linux</li>
+    </ul>
+
+    <h4 class="sub-heading">We provide the NO.1 Linux training program in Chennai. We offer different modes of training by
+        providing classroom and online training. Our training centers are spread across Chennai at Adyar, OMR,
+        Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
 
     <div class="button-container">
         <button class="custom-button"  data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
@@ -703,17 +804,18 @@ for (let i = 0; i < junior.col1.length; i++) {
 </div>
         </span>`;
     } 
+    }
 
    
     
 // Example text with underscores
-let textWithUnderscores = junior.col1[i].title;
+let textWithUnderscores = courses1.col1[i].title;
 
 // Remove underscores using replace() with regex
 let textWithoutUnderscores = textWithUnderscores.replace(/_/g, ' ');
 
     document.write(`
-    <div class="modal" id="${junior.col1[i].title}">
+    <div class="modal" id="${courses1.col1[i].title}">
         <div class="modal-dialog modal-xl">
             <div class="modal-content">
                 <!-- Modal Header -->

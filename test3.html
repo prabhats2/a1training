@@ -6,13 +6,12 @@
   <meta name="author" content="Template Mo">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
-  <meta name="author" content="Template Mo">
 
   <!-- Bootstrap and jQuery -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  
+
   <script type="text/javascript" src="meta.js"></script>
 
   <!-- Custom Styling -->
@@ -64,9 +63,17 @@
     }
 
     @keyframes blink {
-      0% { opacity: 1; }
-      50% { opacity: 0; }
-      100% { opacity: 1; }
+      0% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
     }
 
     /* Responsive layout */
@@ -82,15 +89,14 @@
       }
     }
   </style>
-
+<script type="text/javascript" src="assets/json/junior_geeks.json"></script>
+<script type="text/javascript" src="junior_geeks_coding.js"></script>
   <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
   <link rel="stylesheet" href="assets/css/fontawesome.css">
   <link rel="stylesheet" href="assets/css/templatemo-edu-meeting.css">
   <link rel="stylesheet" href="assets/css/owl.css">
   <link rel="stylesheet" href="assets/css/lightbox.css">
 
-  <script type="text/javascript" src="assets/json/junior_geeks.json"></script>
-  <script type="text/javascript" src="junior_geeks_coding.js"></script>
 </head>
 
 <body>
@@ -143,8 +149,8 @@
     document.addEventListener('DOMContentLoaded', function () {
       const coursesContainer = document.getElementById('courses-container');
 
-      // Fetch the courses data from test.json
-      fetch('assets/json/test.json')
+      // Fetch the courses data from junior_geeks.json
+      fetch('assets/json/junior_geeks.json')
         .then(response => {
           if (!response.ok) {
             throw new Error('Network response was not ok');
@@ -169,14 +175,35 @@
                 <div class="down-content text-center">
                   <h4>${course.course_name}</h4>
                   <br>
-                  <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#moreInfoModal${i}">More Info</button>
+                  <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#${courses.col1[i].title}" >
+                            More Info
+                          </button>
+                 <div class="modal" id="myModal${i}">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h4 class="modal-title">${courses1.col1[i].course_name}</h4>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                              </div>
+                              <div class="modal-body">
+                                 ${courses1.col1[i].course_name}
+                                 ${courses1.col1[i].descriptionContent}
+                                
+                                
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                   <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#contactModal" style="margin-right: 10px;">Contact Us</button>
                 </div>
               </div>
             `;
             coursesContainer.appendChild(courseElement);
 
-            const syllabusModalMarkup = `
+            const modalMarkup = `
               <div class="modal fade" id="syllabusModal${i}" tabindex="-1" aria-labelledby="syllabusModalLabel${i}" aria-hidden="true">
                 <div class="modal-dialog">
                   <div class="modal-content">
@@ -196,30 +223,8 @@
                 </div>
               </div>
             `;
-            document.body.insertAdjacentHTML('beforeend', syllabusModalMarkup);
+            document.body.insertAdjacentHTML('beforeend', modalMarkup);
 
-            // Create 'More Info' modal
-            const moreInfoModalMarkup = `
-              <div class="modal fade" id="moreInfoModal${i}" tabindex="-1" aria-labelledby="moreInfoModalLabel${i}" aria-hidden="true">
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h4 class="modal-title" id="moreInfoModalLabel${i}">${course.title.replace(/_/g, ' ')}</h4>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                    </div>
-                    <div class="modal-body">
-                      <p>More details about the course go here...</p>
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            `;
-            document.body.insertAdjacentHTML('beforeend', moreInfoModalMarkup);
-
-            // Render syllabus list for each course
             const pdfList = document.getElementById(`pdfList${i}`);
             course.syllabus.forEach((syllabus, index) => {
               const listItem = document.createElement('li');
@@ -231,32 +236,42 @@
               pdfList.appendChild(listItem);
             });
           });
+
+          // Add event listener for More Info buttons
+          const moreInfoButtons = document.querySelectorAll('.more-info');
+          moreInfoButtons.forEach(button => {
+            button.addEventListener('click', function () {
+              const title = this.getAttribute('data-title');
+              const description = this.getAttribute('data-description');
+              const features = this.getAttribute('data-features');
+
+              // Set modal content
+              document.getElementById('modal-title').textContent = title;
+              document.getElementById('modal-description').textContent = description;
+              document.getElementById('modal-features').textContent = features;
+            });
+          });
         })
         .catch(error => {
           console.error('There was a problem with the fetch operation:', error);
         });
     });
 
-    // Filter functionality
-    function filterItems() {
-      const searchBar = document.getElementById('searchBar').value.toLowerCase();
-      const items = document.querySelectorAll('.course-item');
-      let visibleItems = 0;
-
-      items.forEach(item => {
-        const courseName = item.querySelector('h4').textContent.toLowerCase();
-        if (courseName.includes(searchBar)) {
-          item.style.display = 'block';
-          visibleItems++;
+    // Filter logic
+    $(document).ready(function () {
+      $(".filters li").click(function () {
+        var filterValue = $(this).attr('data-filter');
+        $(".filters li").removeClass('active');
+        $(this).addClass('active');
+        $(".course-item").hide();
+        if (filterValue === "*") {
+          $(".course-item").show();
         } else {
-          item.style.display = 'none';
+          $(filterValue).show();
         }
       });
-
-      const noContentMessage = document.getElementById('noContentMessage');
-      noContentMessage.style.display = visibleItems === 0 ? 'block' : 'none';
-    }
+    });
   </script>
-</body>
 
+</body>
 </html>
