@@ -49,15 +49,16 @@ document.write(`  <!-- Sub Header -->
                         </li>
                           <li><a href="#">Interview Q/A</a></li>
                         <li><a href="batches.html">Batches</a></li>
-                        <li><a href="#">Blog</a></li>
+                        
                        <li><a href="events.html">Events</a></li>
+                       <li><a href="notes.html">Notes</a></li>
 
                         <li class="has-sub">
                             <a href="javascript:void(0)">More</a>
                             <ul class="sub-menu">
                                 <li><a href="testimonials.html">Testimonial</a></li>
                                 <li><a href="Our-Students.html">Our Students</a></li>
-                                <li><a href="notes.html">Notes</a></li>
+                                <li><a href="#">Blog</a></li>
                             </ul>
                         </li>
                      

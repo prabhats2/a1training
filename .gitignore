@@ -11,8 +11,8 @@ test.php
 index.php
 events.php
 #json
-json/profession-courses.json
-json/profession-courses1.json
-json/junior1.json
+assets/json/profession-courses.json
+assets/json/profession-courses1.json
+assets/json/junior1.json
 #js
 junior1.js

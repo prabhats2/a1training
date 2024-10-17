@@ -6,7 +6,7 @@ var junior ={
             "class": ["class-9-10", "class-11-12"],
             "pdf": "Python.pdf",
             "title": "Python",
-            "image": "Python.png",
+            "image": "python.png",
             "download": "course_8",
             "description": "Python",
             "syllabus": ["assets/syllabus/Python_for_kids.pdf"],
@@ -61,7 +61,7 @@ var junior ={
             "class": ["class-11-12"],
             "pdf": "Java.pdf",
             "title": "Java",
-            "image": "Java.png",
+            "image": "java.png",
             "download": "course_11",
             "description": "Java",
             "syllabus": ["assets/pdf/junior_geeks/Java.pdf"],
@@ -102,7 +102,6 @@ var junior ={
             "syllabus": ["assets/pdf/junior_geeks/canva_designing.pdf"],
             "syllabus_name": ["Canva Designing Syllabus"]
         },
-        
         {
             "course_name": "Adobe Photoshop",
             "class": ["class-9-10"],
@@ -130,7 +129,7 @@ var junior ={
             "class": ["class-9-10"],
             "pdf": "Corel_Draw.pdf",
             "title": "Corel_Draw",
-            "image": "coral-draw.png",
+            "image": "corel-draw.png",
             "download": "course_2",
             "description": "Corel_Draw",
             "syllabus": ["assets/pdf/junior_geeks/corel_draw.pdf"],
@@ -152,7 +151,7 @@ var junior ={
             "class": ["class-9-10", "class-11-12"],
             "pdf": "Tally.pdf",
             "title": "Tally",
-            "image": "Tally.png",
+            "image": "tally.png",
             "download": "course_3",
             "description": "Tally",
             "syllabus": ["assets/pdf/junior_geeks/Tally.pdf"],
