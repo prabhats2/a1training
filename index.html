@@ -20,7 +20,7 @@
   <link rel="stylesheet" href="assets/css/owl.css">
   <link rel="stylesheet" href="assets/css/lightbox.css">
   <script type="text/javascript" src="assets/json/professional_courses.json"></script>
-
+  <script type="text/javascript" src="assets/json/junior1.json"></script>
   <script type="text/javascript" src="meta.js"></script>
 </head>
 
@@ -250,6 +250,7 @@
   <!--menu-->
   <script type="text/javascript" src="menu.js"></script>
   <script type="text/javascript" src="callout.js"></script>
+  <script type="text/javascript" src="junior1.js"></script>
   <!--menu end-->
 
   <!-- ***** Main Banner Area Start ***** -->
@@ -620,33 +621,21 @@
                     <p><b>Expert Instructors:</b> Our team of experienced and certified instructors are experts in their
                       respective fields.They bring real-world industry experience to the classroom ensuring that you
                       receive practical and up-to-date knowledge.
-
                       <br>
-
                       <b>Cutting-Edge Curriculum:</b> Our courses are meticulously designed to cover the latest
                       technologies and industry trends. We offer a wide range of programs, from beginner to advanced
                       levels, to meet your specific learning needs.
-
                       <br>
-
                       <b>Hands-On Learning:</b> We believe in learning by doing. Our hands-on approach ensures that you
                       not only understand the concepts but also gain practical skills that are immediately applicable in
                       the workplace.
-
                       <br>
-
-
                       <b>Flexible Learning Options:</b> We understand that everyone has a unique schedule and learning
                       style. That's why we offer flexible learning options,including in-person classes, online courses,
                       and customized corporate training solutions.
-
                       <br>
-
-
                       <b>Career Support:</b> Your success is our top priority. We provide career counseling, job
                       placement assistance, and networking opportunities to help you take the next step in your career.
-
-
 
                     </p>
                   </div>
@@ -663,9 +652,7 @@
                   <div class="content">
                     <p><b>Individuals:</b> Whether you're a beginner looking to start a career in software development
                       or an experienced professional seeking to upskill, we have the right program for you.
-
                       <br>
-
                       <b>Corporations:</b> We partner with businesses to provide tailored training solutions for their
                       teams, helping them stay competitive in a rapidly evolving tech landscape.
                     </p>
@@ -768,23 +755,21 @@
       </div>
   </div>
 </section>
-<!-- External JavaScript Files -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/owl.carousel@2/dist/owl.carousel.min.js"></script>
+
 <!-- JSON Data -->
-<script type="text/javascript" src="assets/json/junior_geeks.json"></script>
+<script type="text/javascript" src="assets/json/junior1.json"></script>
 <!-- Initialization Script -->
 <script>
   $(document).ready(function () {
       var carouselContainer = $('#carousel-container1');
 
       // Ensure JSON data is loaded and structured correctly
-      if (typeof courses !== 'undefined' && courses.col1) {
+      if (typeof courses !== 'undefined' && junior.col1) {
           // Generate carousel items from JSON data
-          courses.col1.forEach(function (course) {
+          junior.col1.forEach(function (course) {
               var itemHtml = `
                   <div class="item">
-                      <a href="junior_geeks_coding.html">
+                      <a href="junior1.html">
                           <img src="assets/images/junior-geeks/${course.image}" alt="${course.course_name}">
                           <div class="down-content">
                               <h4>${course.course_name}</h4>

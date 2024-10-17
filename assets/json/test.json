@@ -1,39 +1,18 @@
-{
-    "col1": [
-        {
-            "course_name": "MS Office",
-            "class": [".class-5-8"],
-            "pdf": "MS Office.pdf",
-            "title": "MS_Office",
-            "image": "ms-office.jpg",
-            "download": "course_1",
-            "description": "MS_Office",
-            "syllabus": ["assets/pdf/junior_geeks/ms_office.pdf"],
-            "syllabus_name": ["MS Office Course Syllabus"]
-        },
-        {
-            "course_name": "Corel Draw",
-            "class": ["class-9-10"],
-            "pdf": "Corel Draw.pdf",
-            "title": "Corel_Draw",
-            "image": "coral-draw.png",
-            "download": "course_1",
-            "description": "Corel_Draw",
-            "syllabus": ["assets/pdf/junior_geeks/corel_draw.pdf"],
-            "syllabus_name": ["Coral Draw Syllabus"]
-        },
-        {
-            "course_name": "Corel Draw",
-            "class": ["class-11-12" ],
-            "pdf": "Corel Draw.pdf",
-            "title": "Corel_Draw",
-            "image": "coral-draw.png",
-            "download": "course_1",
-            "description": "Corel_Draw",
-            "syllabus": ["assets/pdf/junior_geeks/corel_draw.pdf"],
-            "syllabus_name": ["Coral Draw Syllabus"]
-        }
+[
+    {
+        "title": "Python Programming",
+        "description": "Learn the basics of Python programming."
        
-       
-    ]
-}
+    },
+    {
+        "title": "Web Development",
+        "description": "Introduction to HTML, CSS, and JavaScript."
+    
+    },
+    {
+        "title": "Data Science",
+        "description": "Explore data analysis and machine learning."
+
+    }
+
+]
