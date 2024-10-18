@@ -44,21 +44,20 @@ document.write(`  <!-- Sub Header -->
                             <a href="javascript:void(0)">Courses</a>
                             <ul class="sub-menu">
                                 <li><a href="professional-courses.html">Professional Courses</a></li>
-                                <li><a href="junior_geeks_coding.html">Junior Geeks Courses</a></li>
+                                <li><a href="junior-geeks-coding.html">Junior Geeks Courses</a></li>
                             </ul>
                         </li>
                           <li><a href="#">Interview Q/A</a></li>
-                        <li><a href="batches.html">Batches</a></li>
-                        
-                       <li><a href="events.html">Events</a></li>
-                       <li><a href="notes.html">Notes</a></li>
+                          <li><a href="notes.html">Notes</a></li>
 
                         <li class="has-sub">
                             <a href="javascript:void(0)">More</a>
                             <ul class="sub-menu">
                                 <li><a href="testimonials.html">Testimonial</a></li>
                                 <li><a href="Our-Students.html">Our Students</a></li>
-                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">Blog</a></li>                               
+                                <li><a href="batches.html">Batches</a></li>                       
+                                <li><a href="events.html">Events</a></li>
                             </ul>
                         </li>
                      

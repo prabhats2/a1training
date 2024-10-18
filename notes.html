@@ -47,7 +47,7 @@
         h4 {
             padding-left: 180px;
         }
-    </style>
+</style>
 
 </head>
 
@@ -59,14 +59,121 @@
 
     <section class="heading-page header-text" id="top">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h6>don't Learn Simply. Learn with project</h6>
-                    <h2>Download Quality Notes By A1 Training Institute</h2>
-                    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for e-notes.."
-                        title="Type name..." style="margin-left:20px;">
+            <div class="col-lg-12" style="text-align:center;">
+                <h6>Don't Learn Simply. Learn with Project</h6>
+                <h2>Download Quality Notes By A1 Training Institute</h2>
+                
+                <div style="position: relative; display: inline-block; width: 50%;">
+                    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for e-notes.." title="Type name..."
+                        style="width: 100%; padding: 12px 40px 12px 20px; font-size: 16px; border-radius: 25px; border: 1px solid #ccc; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);">
+                        <span onclick="startVoiceSearch()" id="voiceIcon" style="position: absolute; right: 30px; top: 50%; transform: translateY(-50%); cursor: pointer;">
+                            <i class="fa fa-microphone" id="micIcon" style="font-size: 20px; color: #333;"></i>
+                        </span>
+                        
                 </div>
+            
+                <ul id="myUL" style="list-style-type: none; padding: 0; margin-top: 20px; display: none;">
+                    <li style="padding: 10px;">Course 1: git</li>
+                    <li style="padding: 10px;">Course 2: Linux</li>
+                    <li style="padding: 10px;">Course 3: Docker</li>
+                    <li style="padding: 10px;">Course 4: Kubernetes</li>
+                    <li style="padding: 10px;">Course 5: jenkins</li>
+                    <li style="padding: 10px;">Course 6: terraform</li>
+                    <li style="padding: 10px;">Course 7: Aws</li>
+                    <li style="padding: 10px;">Course 8: Azure</li>
+                    <li style="padding: 10px;">Course 9: gcp</li>
+                    <li style="padding: 10px;">Course 10: Python</li>
+                    <li style="padding: 10px;">Course 11: Shell Scripting</li>
+                    <li style="padding: 10px;">Course 12: Networking</li>
+                    <li style="padding: 10px;">Course 13: Ms Dos</li>
+                    <li style="padding: 10px;">Course 14: Html & css</li>
+                    <li style="padding: 10px;">Course 15: c/c++</li>
+                    <li style="padding: 10px;">Course 16: JavaScript</li>
+                    <li style="padding: 10px;">Course 17: Java</li>
+                    <li style="padding: 10px;">Course 18: Sql</li>
+                    <li style="padding: 10px;">Course 19: React</li>
+                    <li style="padding: 10px;">Course 20: Angular</li>
+                    <li style="padding: 10px;">Course 21: Node.js</li>
+                </ul>
+                <script>// Function to filter courses based on input
+                    function myFunction() {
+                        var input, filter, ul, li, i, txtValue, visibleCount = 0;
+                        input = document.getElementById('myInput');
+                        
+                        // Remove special characters from input and convert to uppercase
+                        filter = input.value.replace(/[^a-zA-Z0-9\s]/g, '').toUpperCase();
+                        
+                        ul = document.getElementById("myUL");
+                        li = ul.getElementsByTagName('li');
+                        
+                        for (i = 0; i < li.length; i++) {
+                            txtValue = li[i].textContent || li[i].innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                li[i].style.display = "";
+                                visibleCount++;
+                            } else {
+                                li[i].style.display = "none";
+                            }
+                        }
+                    
+                        // Show message if no results are found
+                        var noResultMessage = document.getElementById('noResultMessage');
+                        if (visibleCount === 0) {
+                            if (!noResultMessage) {
+                                noResultMessage = document.createElement('p');
+                                noResultMessage.id = 'noResultMessage';
+                                noResultMessage.textContent = 'No results found';
+                                ul.parentNode.appendChild(noResultMessage);
+                            }
+                        } else {
+                            if (noResultMessage) {
+                                noResultMessage.remove();
+                            }
+                        }
+                    }
+                    
+                    // Function to start voice recognition with mic color change
+                    function startVoiceSearch() {
+                        const icon = document.getElementById('micIcon'); // Get the mic icon element
+                        icon.style.color = 'red'; // Change color to red when voice recognition is active
+                    
+                        if ('webkitSpeechRecognition' in window) {
+                            const recognition = new webkitSpeechRecognition();
+                            recognition.lang = 'en-US';
+                            recognition.interimResults = false;
+                            recognition.maxAlternatives = 1;
+                    
+                            recognition.start();
+                    
+                            recognition.onresult = function(event) {
+                                let transcript = event.results[0][0].transcript;
+                    
+                                // Remove any trailing period from the transcript
+                                transcript = transcript.trim().replace(/\.$/, '');
+                    
+                                document.getElementById('myInput').value = transcript;
+                                myFunction();  // Automatically trigger the search after voice input
+                            };
+                    
+                            recognition.onerror = function(event) {
+                                console.error('Speech recognition error:', event.error);
+                                icon.style.color = '#333'; // Revert to default color in case of error
+                            };
+                    
+                            recognition.onend = function() {
+                                icon.style.color = '#333'; // Revert to default color when recognition ends
+                            };
+                        } else {
+                            alert("Sorry, your browser doesn't support speech recognition.");
+                            icon.style.color = '#333'; // Revert to default color if not supported
+                        }
+                    }
+                    </script>
             </div>
+            
+            <!-- Font Awesome for the microphone icon -->
+            <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+            
         </div>
     </section>
 
