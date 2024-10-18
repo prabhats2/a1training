@@ -12,13 +12,13 @@ let books = { "col1" : [
    },
    //linux
          {"name" : "Linux", 
- 		  "Author" : ["A1 Training "],
+ 		  "Author" : ["A1 Training" , "A1 Training"],
  		  "ebookAuthor" : ["Rocky Johnson ","Richard Petersen", "Alisson Machado de Menezes"],
 		  "ebook" : ["https://amzn.to/46NgMtj","https://amzn.to/3MakKTa", "https://amzn.to/46RRo5A"],
 		  "ebook_name" : ["https://amzn.in/d/eeW0gGK", "https://amzn.in/d/76hrmRz", "https://amzn.in/d/4Jzj8A2"],
-		  "pdf":["assets/pdf/50_linux_commands.pdf"],
+		  "pdf":["assets/pdf/50_linux_commands.pdf" , "assets/pdf/linux-end-to-end.pdf"] ,
  
-		  "pdf_name":["50 Linux Commands "]	 
+		  "pdf_name":["50 Linux Commands " , "Linux Notes"]	 
 		},
 		//docker
 		{"name" : "Docker", 
@@ -132,15 +132,6 @@ let books = { "col1" : [
 			 "pdf_name":["Ms Dos ","Ms Dos "]	 
 			},
 		
-		  //C & C++
-			{"name" : "C & C++", 
-			 "Author" : ["Azad","Shivam"],
-			 "ebookAuthor" : ["Bjarne Stroustrup","Yashavant Kanetkar","E Balagurusamy","Yashavant Kanetkar ","Langsam / Augenstein / Tenenbaum","Yashavant Kanetkar"],
-			 "ebook" : ["https://amzn.to/4fPXK9M", "https://amzn.to/3AxaKkm", "https://amzn.to/3MaCM7I","https://amzn.to/4drlakj","https://amzn.to/3X6SvLr","https://amzn.to/3WW2OAP"],
-			 "ebook_name" : ["Guide to MS DOS", "MS-DOS 6 Explained (BP S.): 341", "MS-DOS Up to and Including Version 6.2"],
-			 "pdf":["assets/pdf/ms_dos_by_azad.pdf","assets/pdf/msdosbyshivambhati.pdf"] ,
-			 "pdf_name":["Ms Dos ","Ms Dos "]	 
-			}, 
 		  //Javascript
 			{"name" : "Javascript", 
 			 "Author" : ["Flavico Copes","Rob Percival"],

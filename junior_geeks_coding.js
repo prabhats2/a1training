@@ -26,9 +26,9 @@ for (let i = 0; i < junior.col1.length; i++) {
         <button class="custom-button">Contact Course Advisor</button>
     </div>
 
-    <div class="training-container mt-5">
+    <div class="training-container mt-5 ">
         <div class="row">
-            <div class="training-col">
+            <div class="training-col ">
                 <h3>40+ Hrs</h3>
                 <p>Hands-On Training</p>
             </div>
@@ -44,6 +44,7 @@ for (let i = 0; i < junior.col1.length; i++) {
                 <h3>24/7</h3>
                 <p>Lifetime Access To Support Team</p>
             </div>
+           
         </div>
     </div>
 
@@ -697,8 +698,7 @@ for (let i = 0; i < junior.col1.length; i++) {
         <button class="custom-button"  data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
         <button class="custom-button">Contact Course Advisor</button>
     </div>
-
-    <div class="training-container mt-5">
+ <div class="training-container mt-5">
         <div class="row">
             <div class="training-col">
                 <h3>40+ Hrs</h3>
@@ -753,7 +753,6 @@ let textWithoutUnderscores = textWithUnderscores.replace(/_/g, ' ');
         </div>
     </div>`);
 }
-
 
 document.addEventListener('DOMContentLoaded', function () {
     const styles = {
@@ -825,7 +824,7 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         trainingContainer: {
             margin: '30px auto',
-            maxWidth: '1200px',
+            maxWidth: 'auto',
         },
         row: {
             display: 'flex',
@@ -844,9 +843,10 @@ document.addEventListener('DOMContentLoaded', function () {
             padding: '20px',
             transition: 'box-shadow 0.3s ease', // Smooth shadow transition
             animation: 'zoomIn 0.5s ease-in-out', // Zoom-in animation for each column
+            pointerEvents: 'none', // Disable pointer events for clicking
         },
         colHover: {
-            boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)', // Add shadow on hover to bottom content
+            boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)', // Add shadow on hover
         },
         colH3: {
             color: '#007BFF', // Red for the logo
@@ -890,7 +890,6 @@ document.addEventListener('DOMContentLoaded', function () {
             from { opacity: 0; }
             to { opacity: 1; }
         }
-    
     `, styleSheet.cssRules.length);
     styleSheet.insertRule(`
         @keyframes zoomIn {
@@ -906,20 +905,27 @@ document.addEventListener('DOMContentLoaded', function () {
     `, styleSheet.cssRules.length);
 });
 
-    // Responsive Design
-    const mediaQuery = window.matchMedia('(max-width: 768px)');
-    function handleMediaQueryChange(e) {
-        if (e.matches) {
-            document.querySelectorAll('.training-col').forEach(col => {
-                col.style.maxWidth = '100%';
-                col.style.flex = '100%';
-            });
-        } else {
-            document.querySelectorAll('.training-col').forEach(col => {
-                col.style.maxWidth = '22%';
-                col.style.flex = '1';
-            });
-        }
+// Responsive Design for 2 Divs per Row in Mobile View
+const mediaQuery = window.matchMedia('(max-width: 768px)');
+
+function handleMediaQueryChange(e) {
+    if (e.matches) {
+        // For mobile view: 2 divs per row
+        document.querySelectorAll('.training-col').forEach(col => {
+            col.style.maxWidth = '50%';  // 50% width for 2 columns
+            col.style.flex = '0 0 50%';  // Flex property to take 50% space
+        });
+    } else {
+        // For larger screens: 4 divs in a row
+        document.querySelectorAll('.training-col').forEach(col => {
+            col.style.maxWidth = '22%';  // 4 columns
+            col.style.flex = '1';  // Flex property for equal distribution
+        });
     }
-    mediaQuery.addListener(handleMediaQueryChange);
-    handleMediaQueryChange(mediaQuery);
+}
+
+// Listen for changes in screen size
+mediaQuery.addEventListener('change', handleMediaQueryChange);
+
+// Initial check on page load
+handleMediaQueryChange(mediaQuery);

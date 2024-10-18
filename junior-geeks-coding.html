@@ -1,10 +1,9 @@
-<html >
+<html>
 <head>
-
   <meta charset="utf-8">
-  <meta name="author" content="Template Mo">
+  <meta name="author" content="">
   <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-
+  <script type="text/javascript" src="meta.js"></script>
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -18,7 +17,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-  <script type="text/javascript" src="meta.js"></script>
+  
   <script>
     $(document).ready(function () {
       $('.gallery-item').fancybox();
@@ -120,78 +119,102 @@
       animation: blink 1s infinite;
       /* Adjust the duration and iteration of the animation */
     }
+
     /* Center the filters for web view */
-.filters {
-    text-align: center; /* Center the content */
-    margin-bottom: 20px; /* Spacing below the filters */
-}
-
-/* Style the dropdown button */
-.dropdown-toggle {
-    background-color: #007bff; /* Bootstrap primary color */
-    color: white; /* Text color */
-    border: none; /* Remove border */
-    border-radius: 5px; /* Rounded corners */
-    padding: 10px 20px; /* Padding */
-    font-size: 16px; /* Font size */
-}
-
-/* Style dropdown items */
-.dropdown-menu {
-    
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
-    background-color:#a12c2f;
-    text-emphasis-color: white;
-    border-radius: 1.5rex;  /* Rounded corners */
-
-}
-
-/* Style dropdown item links */
-.dropdown-item {
-    color: white; /* Text color */
-    text-decoration: bold;
-    padding: 10px 30px; /* Padding */
-}
-
-/* Change background on hover */
-.dropdown-item:hover {
-    background-color: #f8f9fa; /* Light background on hover */
-}
-
-/* Media query for mobile view */
-@media (max-width: 576px) {
     .filters {
-        margin-top: 10px; /* Top margin for mobile */
+      text-align: center;
+      /* Center the content */
+      margin-bottom: 20px;
+      /* Spacing below the filters */
     }
 
-    .filters ul {
-        flex-wrap: wrap; /* Allow wrapping for small screens */
+    /* Style the dropdown button */
+    .dropdown-toggle {
+      background-color: #007bff;
+      /* Bootstrap primary color */
+      color: white;
+      /* Text color */
+      border: none;
+      /* Remove border */
+      border-radius: 5px;
+      /* Rounded corners */
+      padding: 10px 20px;
+      /* Padding */
+      font-size: 16px;
+      /* Font size */
+    }
+
+    /* Style dropdown items */
+    .dropdown-menu {
+
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      /* Shadow effect */
+      background-color: #a12c2f;
+      text-emphasis-color: white;
+      border-radius: 1.5rex;
+      /* Rounded corners */
+
+    }
+
+    /* Style dropdown item links */
+    .dropdown-item {
+      color: white;
+      /* Text color */
+      text-decoration: bold;
+      padding: 10px 30px;
+      /* Padding */
+    }
+
+    /* Change background on hover */
+    .dropdown-item:hover {
+      background-color: #f8f9fa;
+      /* Light background on hover */
+    }
+
+    /* Media query for mobile view */
+    @media (max-width: 576px) {
+      .filters {
+        margin-top: 10px;
+        /* Top margin for mobile */
+      }
+
+      .filters ul {
+        flex-wrap: wrap;
+        /* Allow wrapping for small screens */
         margin-left: 100px;
+      }
+
+      .filters ul li {
+        flex: 0 0 50%;
+        /* Each item takes up half of the row */
+        text-align: center;
+        /* Center text in mobile */
+        margin-bottom: 10px;
+        /* Spacing between items */
+      }
     }
 
-    .filters ul li {
-        flex: 0 0 50%; /* Each item takes up half of the row */
-        text-align: center; /* Center text in mobile */
-        margin-bottom: 10px; /* Spacing between items */
-    }
-}
+    /* Additional styling for larger screens */
+    @media (min-width: 992px) {
+      .filters ul {
+        display: flex;
+        /* Flex display for larger screens */
+        justify-content: center;
+        /* Center the items */
+        list-style: none;
+        /* Remove bullet points */
+        padding: 0;
+        /* Remove default padding */
+      }
 
-/* Additional styling for larger screens */
-@media (min-width: 992px) {
-    .filters ul {
-        display: flex; /* Flex display for larger screens */
-        justify-content: center; /* Center the items */
-        list-style: none; /* Remove bullet points */
-        padding: 0; /* Remove default padding */
-    }
+      .filters ul li {
+        margin: 0 15px;
+        /* Spacing between items */
+        cursor: pointer;
+        /* Pointer cursor on hover */
 
-    .filters ul li {
-        margin: 0 15px; /* Spacing between items */
-        cursor: pointer; /* Pointer cursor on hover */
-        
+      }
     }
-}
-
   </style>
 
   <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
@@ -205,6 +228,7 @@
   <script type="text/javascript" src="junior_geeks_coding.js"></script>
 
 </head>
+
 <body>
   <!--menu-->
   <script type="text/javascript" src="menu.js"></script>
@@ -230,35 +254,36 @@
   </section>
   <section class="meetings-page" id="meetings">
     <div class="container">
-        <div class="col-lg-12">
-            <div class="filters">
-                <div class="dropdown d-lg-none">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="filterDropdown" data-bs-toggle="dropdown" aria-expanded="true">
-                        Select Class
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="filterDropdown">
-                        <li class="active" data-filter="*"><a class="dropdown-item" href="#">All Classes</a></li>
-                        <li data-filter=".class-5-8"><a class="dropdown-item" href="#">Class 5-8</a></li>
-                        <li data-filter=".class-9-10"><a class="dropdown-item" href="#">Class 9-10</a></li>
-                        <li data-filter=".class-11-12"><a class="dropdown-item" href="#">Class 11-12</a></li>
-                    </ul>
-                </div>
-                <ul class="d-none d-lg-flex">
-                    <li class="active" data-filter="*">All Classes</li>
-                    <li data-filter=".class-5-8">Class 5-8</li>
-                    <li data-filter=".class-9-10">Class 9-10</li>
-                    <li data-filter=".class-11-12">Class 11-12</li>
-                </ul>
-            </div>
+      <div class="col-lg-12">
+        <div class="filters">
+          <div class="dropdown d-lg-none">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="filterDropdown"
+              data-bs-toggle="dropdown" aria-expanded="true">
+              Select Class
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="filterDropdown">
+              <li class="active" data-filter="*"><a class="dropdown-item" href="#">All Classes</a></li>
+              <li data-filter=".class-5-8"><a class="dropdown-item" href="#">Class 5-8</a></li>
+              <li data-filter=".class-9-10"><a class="dropdown-item" href="#">Class 9-10</a></li>
+              <li data-filter=".class-11-12"><a class="dropdown-item" href="#">Class 11-12</a></li>
+            </ul>
+          </div>
+          <ul class="d-none d-lg-flex">
+            <li class="active" data-filter="*">All Classes</li>
+            <li data-filter=".class-5-8">Class 5-8</li>
+            <li data-filter=".class-9-10">Class 9-10</li>
+            <li data-filter=".class-11-12">Class 11-12</li>
+          </ul>
         </div>
-        
-        <div class="container mt-5">
-            <div class="row" id="courses-container">
-                <!-- Courses will be dynamically added here -->
-            </div>
+      </div>
+
+      <div class="container mt-5">
+        <div class="row" id="courses-container">
+          <!-- Courses will be dynamically added here -->
         </div>
+      </div>
     </div>
-</section>
+  </section>
 
   <section class="meetings-page" id="meetings">
     <div class="container">
@@ -514,49 +539,50 @@
     });
   </script>
 
-<script>
-  // Filter logic
-  $(document).ready(function () {
-    $(".filters li").click(function () {
-      var filterValue = $(this).attr('data-filter');
-      $(".filters li").removeClass('active');
-      $(this).addClass('active');
+  <script>
+    // Filter logic
+    $(document).ready(function () {
+      $(".filters li").click(function () {
+        var filterValue = $(this).attr('data-filter');
+        $(".filters li").removeClass('active');
+        $(this).addClass('active');
 
-      if (filterValue == "*") {
-        $(".item-container").fadeIn(300).removeClass('hide').addClass('show');
-      } else {
-        $(".item-container").fadeOut(300, function () {
-          $(`.item-container${filterValue}`).fadeIn(300).removeClass('hide').addClass('show');
-        });
-      }
-    });
-  });
-
-  // Search filter function
-  function filterItems() {
-    const searchText = document.getElementById('searchBar').value.toLowerCase();
-    const courses = document.querySelectorAll('.item-container');
-    let hasVisibleItem = false;
-
-    courses.forEach(course => {
-      const title = course.getAttribute('data-title').toLowerCase();
-      if (title.includes(searchText)) {
-        course.style.display = '';
-        hasVisibleItem = true;
-      } else {
-        course.style.display = 'none';
-      }
+        if (filterValue == "*") {
+          $(".item-container").fadeIn(300).removeClass('hide').addClass('show');
+        } else {
+          $(".item-container").fadeOut(300, function () {
+            $(`.item-container${filterValue}`).fadeIn(300).removeClass('hide').addClass('show');
+          });
+        }
+      });
     });
 
-    // Show or hide "No content found" message
-    const noContentMessage = document.getElementById('noContentMessage');
-    if (hasVisibleItem) {
-      noContentMessage.style.display = 'none';
-    } else {
-      noContentMessage.style.display = 'block';
+    // Search filter function
+    function filterItems() {
+      const searchText = document.getElementById('searchBar').value.toLowerCase();
+      const courses = document.querySelectorAll('.item-container');
+      let hasVisibleItem = false;
+
+      courses.forEach(course => {
+        const title = course.getAttribute('data-title').toLowerCase();
+        if (title.includes(searchText)) {
+          course.style.display = '';
+          hasVisibleItem = true;
+        } else {
+          course.style.display = 'none';
+        }
+      });
+
+      // Show or hide "No content found" message
+      const noContentMessage = document.getElementById('noContentMessage');
+      if (hasVisibleItem) {
+        noContentMessage.style.display = 'none';
+      } else {
+        noContentMessage.style.display = 'block';
+      }
     }
-  }
-</script>
+  </script>
 
 </body>
+
 </html>

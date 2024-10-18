@@ -20,7 +20,7 @@ var junior ={
             "image": "computer_science11th.png",
             "download": "course_9",
             "description": "computer_science11th",
-            "syllabus": ["assets/pdf/junior_geeks/computer_science11th.pdf"],
+            "syllabus": ["assets/pdf/junior_geeks/computer_science11th_syllabus.pdf"],
             "syllabus_name": ["Computer Science Syllabus"]
         },
         {
@@ -31,7 +31,7 @@ var junior ={
             "image": "computer_science12th.png",
             "download": "course_10",
             "description": "computer_science12th",
-            "syllabus": ["assets/pdf/junior_geeks/computer_science12th.pdf"],
+            "syllabus": ["assets/pdf/junior_geeks/computer_science12th_syllabus.pdf"],
             "syllabus_name": ["Computer Science Syllabus"]
         },
         {
@@ -50,7 +50,7 @@ var junior ={
             "class": ["class-11-12"],
             "pdf": "C_C++.pdf",
             "title": "C_and_C_plus_plus_Programming",
-            "image": "cc+.png",
+            "image": "ccplus.png",
             "download": "course_12",
             "description": "C/C++_Programming",
             "syllabus": ["assets/pdf/junior_geeks/C&C++.pdf"],
