@@ -26,8 +26,8 @@ let books = { "col1" : [
 		"ebookAuthor" : ["Nigel Poulton", "Nisarg Vasavada", "Sandeep Rawat", "Scott Surovich"],
 		"ebook" : ["https://amzn.to/3AtwNbG", "https://amzn.to/4drFhif", "https://amzn.to/3SUR3t3", "https://amzn.to/3YTPHTr"],
 		"ebook_name" : ["https://amzn.in/d/eeW0gGK", "https://amzn.in/d/76hrmRz", "https://amzn.in/d/4Jzj8A2"],
-		"pdf":["assets/pdf/Docker_Course_pdf1.pdf"],
-		"pdf_name":["Docker Course "]	 
+		"pdf":[ "assets/pdf/Reduce-Docker-Image-Size.pdf","assets/pdf/Docker_Course_pdf1.pdf"],
+		"pdf_name":[ "Reduce Docker Image Size","Docker Course" ]	 
 	   },
           //Kubernetes
 	       {"name" : "Kubernetes", 

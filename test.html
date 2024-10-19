@@ -1,835 +1,277 @@
-<!-----<?php session_start(); ?>--------->
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Pages Carousel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 
-  <meta charset="utf-8">
-  <meta name="author" content="A1 Training Institute">
-  <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
-<!-- Owl Carousel CSS -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <script type="text/javascript" src="assets/json/junior_geeks.json"></script>
+    <script type="text/javascript" src="junior_geeks_coding.js"></script>
+    <style>
+        /* Main container styling */
+        .pdf-carousel-container {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%; /* Full width */
+            height: 100vh; /* Full height */
+            margin: auto; /* Center the div */
+            overflow-y: hidden;
+            z-index: 1050; /* Ensure it stays above other elements */
+            display: flex;
+            flex-direction: column; /* Ensure vertical layout */
+        }
 
-  <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
-  <!-- Additional CSS Files -->
-  <link rel="stylesheet" href="assets/css/fontawesome.css">
-  <link rel="stylesheet" href="assets/css/templatemo-edu-meeting.css">
-  <link rel="stylesheet" href="assets/css/owl.css">
-  <link rel="stylesheet" href="assets/css/lightbox.css">
-  <script type="text/javascript" src="assets/json/professional_courses.json"></script>
-  <script type="text/javascript" src="assets/json/junior1.json"></script>
-  <script type="text/javascript" src="meta.js"></script>
+        /* Hide the container by default */
+        .pdf-carousel-container.hidden {
+            display: none;
+        }
+
+        /* Carousel container to take up available height */
+        .carousel-container {
+            flex: 1;
+            display: flex;
+            align-items: center; /* Vertically center carousel */
+            justify-content: center; /* Horizontally center carousel */
+        }
+
+        /* Carousel items styling */
+        .carousel-item img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            max-height: 80vh; /* Ensure image fills container height */
+            object-fit: contain; /* Ensure image fits nicely inside the div */
+        }
+
+        /* Custom styling for carousel controls */
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-color: #000;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .carousel-control-prev-icon::before,
+        .carousel-control-next-icon::before {
+            font-size: 30px;
+            color: white;
+        }
+
+        .carousel-control-prev,
+        .carousel-control-next {
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 1;
+            z-index: 1;
+        }
+
+        /* Close button styling */
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #dc3545;
+            border: none;
+            color: white;
+            padding: 8px 12px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            z-index: 1060;
+        }
+
+        /* Media query for mobile devices */
+        @media (max-width: 768px) {
+            .pdf-carousel-container {
+                width: 100%; /* Full width on mobile */
+                height: 100vh; /* Still full height */
+            }
+
+            .carousel-item img {
+                max-height: 100%; /* Ensure the image fits within the container height */
+            }
+
+            .carousel-control-prev-icon,
+            .carousel-control-next-icon {
+                width: 40px;
+                height: 40px;
+            }
+        }
+
+        /* Overlay to detect outside clicks */
+        #pdfOverlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: transparent;
+            display: none; /* Initially hidden */
+            z-index: 1040; /* Ensure it's below the container */
+        }
+    </style>
 </head>
-
-<style>
-  /* Modal styles */
-  .modal_pop {
-    display: none;
-    /* Hidden by default */
-    position: fixed;
-    /* Stay in place */
-    z-index: 99;
-    /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%;
-    /* Full width */
-    height: 100%;
-    /* Full height */
-    overflow: auto;
-    /* Enable scroll if needed */
-    background-color: rgb(0, 0, 0);
-    /* Fallback color */
-    background-color: rgba(0, 0, 0, 0.4);
-    /* Black w/ opacity */
-  }
-
-  .modal-content-pop {
-    background-color: #fefefe;
-    margin: 10% auto;
-    /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 500px;
-    /* Could be more or less, depending on screen size */
-    position: relative;
-  }
-
-  .close1 {
-    color: #aaa;
-    float: right;
-    font-size: 20px;
-    font-weight: bold;
-
-  }
-
-  .close1:hover,
-  .close1:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-  }
-
-  /* Carousel styles */
-  .carousel-inner {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-  }
-
-  .carousel-item {
-    display: none;
-    /* Hide by default */
-    position: absolute;
-    width: 100%;
-    transition: opacity 1s ease-in-out;
-  }
-
-  .carousel-item.active {
-    display: block;
-    position: relative;
-  }
-
-  .carousel-control-prev,
-  .carousel-control-next {
-    position: absolute;
-    top: 50%;
-    width: auto;
-    height: 50px;
-    padding: 16px;
-    margin-top: -22px;
-    color: white;
-    font-weight: bold;
-    text-align: center;
-    cursor: pointer;
-    background-color: rgba(0, 0, 0, 7);
-    border: none;
-  }
-
-  .carousel-control-prev {
-    left: 0;
-  }
-
-  .carousel-control-next {
-    right: 0;
-  }
-
-  .carousel-control-prev-icon,
-  .carousel-control-next-icon {
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    background: no-repeat center center;
-    background-size: 100% 100%;
-  }
-
-  .carousel-control-prev-icon {
-    background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 8"%3E%3Cpath d="M5.5 7L1 4l4.5-3" fill="none" stroke="%23fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/%3E%3C/svg%3E');
-  }
-
-  .carousel-control-next-icon {
-    background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 8"%3E%3Cpath d="M2.5 1l4.5 3-4.5 3" fill="none" stroke="%23fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/%3E%3C/svg%3E');
-  }
-</style>
 <body>
 
+<div class="container">
+    <h3>Interactive PDF Viewer</h3>
+
+    <!-- Button to Open Modal for PDF Links -->
+    <div class="d-grid">
+      <button type="button" class="btn btn-primary btn-block mt-2" data-bs-toggle="modal" data-bs-target="#pdfModal">
+        JavaScript Interview Questions
+      </button>
+    </div>
+    <div class="d-grid mt-2">
+      <button type="button" class="btn btn-primary btn-block" data-bs-toggle="modal" data-bs-target="#pdfModal">
+        Kubernetes Interview Questions
+      </button>
+    </div>
+    <div class="d-grid mt-2">
+      <button type="button" class="btn btn-primary btn-block" data-bs-toggle="modal" data-bs-target="#pdfModal">
+        Shell Scripting Interview Questions
+      </button>
+    </div>
+    <div class="d-grid mt-2">
+      <button type="button" class="btn btn-primary btn-block" data-bs-toggle="modal" data-bs-target="#pdfModal">
+        MS Office Interview Questions
+      </button>
+    </div>
+
+    <!-- Modal for PDF Links -->
+    <div class="modal fade" id="pdfModal" tabindex="-1" aria-labelledby="pdfModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="pdfModalLabel">Available PDFs</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <ul>
+                        <li><a href="#" onclick="openPDF('assets/pdf/junior_geeks/C&C++.pdf'); return false;">C++ PDF</a></li>
+                        <li><a href="#" onclick="openPDF('assets/pdf/junior_geeks/canva_designing.pdf'); return false;">Canva Designing PDF</a></li>
+                        <li><a href="#" onclick="openPDF('assets/pdf/junior_geeks/computer_science11th_syllabus.pdf'); return false;">Computer Science 11th PDF</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PDF Carousel Container -->
+    <div class="pdf-carousel-container hidden" id="pdfCarouselContainer">
+        <!-- Close Button -->
+        <button class="close-btn" onclick="closePDF()">Close</button>
+        
+        <!-- Carousel for PDF Pages -->
+        <div id="pdfCarousel" class="carousel slide carousel-container" data-bs-ride="carousel">
+            <div class="carousel-inner" id="carouselInner">
+                <!-- PDF Pages will be loaded here dynamically -->
+            </div>
+
+            <!-- Carousel Controls for Navigating Left and Right -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#pdfCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#pdfCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Fullscreen overlay for detecting outside clicks -->
+    <div id="pdfOverlay" onclick="closePDF()"></div>
+</div>
+
+<div id="modalContainer"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
 <script>
-    // Get the modal
-    var modal = document.getElementById('myModal');
+    function openPDF(pdfUrl) {
+        const carouselInner = document.getElementById('carouselInner');
+        const pdfContainer = document.getElementById('pdfCarouselContainer');
+        const pdfOverlay = document.getElementById('pdfOverlay');
 
-    // Get the close button
-    var closeBtn = document.querySelector('.close1');
+        // Clear previous content and display the PDF container
+        carouselInner.innerHTML = '';
+        pdfContainer.classList.remove('hidden');
+        pdfOverlay.style.display = 'block'; // Show the overlay
 
-    // Get carousel elements
-    var items = document.querySelectorAll('.carousel-item');
-    var currentIndex = 0;
+        // Load the PDF using pdf.js
+        const loadingTask = pdfjsLib.getDocument(pdfUrl);
+        loadingTask.promise.then(function(pdf) {
+            const numPages = pdf.numPages;
 
-    // Function to show a specific carousel item
-    function showItem(index) {
-        items.forEach(function(item, i) {
-            item.classList.remove('active');
-            if (i === index) {
-                item.classList.add('active');
+            // Loop through each page and render it
+            for (let pageNum = 1; pageNum <= numPages; pageNum++) {
+                pdf.getPage(pageNum).then(function(page) {
+                    const scale = 1.5;
+                    const viewport = page.getViewport({ scale: scale });
+
+                    // Create a canvas element for this page
+                    const canvas = document.createElement('canvas');
+                    canvas.width = viewport.width;
+                    canvas.height = viewport.height;
+
+                    // Render the page onto the canvas
+                    const context = canvas.getContext('2d');
+                    const renderContext = {
+                        canvasContext: context,
+                        viewport: viewport
+                    };
+                    page.render(renderContext).promise.then(function() {
+                        // Add the page to the carousel as a new item
+                        const div = document.createElement('div');
+                        div.classList.add('carousel-item');
+                        if (pageNum === 1) {
+                            div.classList.add('active'); // Make the first page active
+                        }
+
+                        const img = document.createElement('img');
+                        img.src = canvas.toDataURL(); // Convert the canvas to an image
+                        img.classList.add('d-block');
+                        img.classList.add('w-100');
+
+                        div.appendChild(img);
+                        carouselInner.appendChild(div);
+                    });
+                });
             }
+        }, function(reason) {
+            console.error(reason);
         });
+
+        // Close the modal when a PDF is opened
+        const pdfModal = bootstrap.Modal.getInstance(document.getElementById('pdfModal'));
+        if (pdfModal) {
+            pdfModal.hide();
+        }
     }
 
-    // Show the modal when the page loads
-    window.onload = function () {
-        modal.style.display = 'block';
-    };
+    // Function to close the PDF viewer
+    function closePDF() {
+        document.getElementById('pdfCarouselContainer').classList.add('hidden');
+        document.getElementById('pdfOverlay').style.display = 'none'; // Hide the overlay
 
-    // Close the modal when the close button is clicked
-    closeBtn.onclick = function () {
-        modal.style.display = 'none';
-    };
-
-    // Close the modal when clicking outside of it
-    window.onclick = function (event) {
-        if (event.target == modal) {
-            modal.style.display = 'none';
-        }
-    };
-
-    // Carousel controls
-    document.getElementById('prevBtn').onclick = function () {
-        currentIndex = (currentIndex > 0) ? currentIndex - 1 : items.length - 1;
-        showItem(currentIndex);
-    };
-
-    document.getElementById('nextBtn').onclick = function () {
-        currentIndex = (currentIndex < items.length - 1) ? currentIndex + 1 : 0;
-        showItem(currentIndex);
-    };
-
-    // Automatic sliding
-    setInterval(function() {
-        currentIndex = (currentIndex < items.length - 1) ? currentIndex + 1 : 0;
-        showItem(currentIndex);
-    }, 3000); // Change slide every 3 seconds
+        // Reopen the modal when closing the PDF viewer
+        const pdfModal = new bootstrap.Modal(document.getElementById('pdfModal'));
+        pdfModal.show();
+    }
 </script>
-  <!--menu-->
-  <script type="text/javascript" src="menu.js"></script>
 
-  <script type="text/javascript" src="junior1.js"></script>
-  <!--menu end-->
-
-  <!-- ***** Main Banner Area Start ***** -->
-  <section class="section main-banner" id="top" data-section="section1">
-    <video autoplay muted loop id="bg-video">
-      <source src="assets/images/course-video.mp4" type="video/mp4" />
-    </video>
-
-
-    <div class="video-overlay header-text">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="caption">
-              <h6>Hello Students</h6>
-              <h2>Welcome to A1 Training institute</h2>
-              <p>At A1TI, we believe that education is the key to unlocking limitless possibilities.We invite you to
-                embark on a learning journey with us and discover the exciting world of software development and
-                technology.
-                Invest in your future. Contact us today to learn more about our programs and how we can help you achieve
-                your goals.
-              </p>
-              <div class="main-button-red">
-                <div class="scroll-to-section"><a href="#contact">Join Us Now!</a></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- ***** Main Banner Area End ***** -->
-
-
-  <section class="services">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-
-          <div class="owl-service-item owl-carousel">
-            <div class="item">
-              <div class="icon">
-                <img src="assets/images/batches/mean.png" alt="">
-              </div>
-              <div class="down-content">
-                <h4>MEAN Stack</h4>
-                <!------<p>Starting Date: 01-01-2024</p>---->
-                <button onclick="window.location.href='#targetDiv'" type="button" class="btn btn-primary"
-                  data-bs-toggle="modal" data-bs-target="#myModal1">
-                  Request a call back>>
-                </button>
-              </div>
-            </div>
-
-            <div class="item">
-              <div class="icon">
-                <img src="assets/images/batches/mern.png" alt="">
-              </div>
-              <div class="down-content">
-                <h4>MERN Stack</h4>
-                <!------<p>Starting Date: 01-01-2024</p>---->
-                <button onclick="window.location.href='#targetDiv'" type="button" class="btn btn-primary"
-                  data-bs-toggle="modal" data-bs-target="#myModal1">
-                  Request a call back>>
-                </button>
-              </div>
-            </div>
-
-            <div class="item">
-              <div class="icon">
-                <img src="assets/images/batches/aws.png" alt="">
-              </div>
-              <div class="down-content">
-                <h4>AWS Training</h4>
-                <!------<p>Starting Date: 01-01-2024</p>---->
-                <button onclick="window.location.href='#targetDiv'" type="button" class="btn btn-primary"
-                  data-bs-toggle="modal" data-bs-target="#myModal1">
-                  Request a call back>>
-                </button>
-              </div>
-            </div>
-
-            <div class="item">
-              <div class="icon">
-                <img src="assets/images/batches/devops.png" alt="">
-              </div>
-              <div class="down-content">
-                <h4>Devops Training</h4>
-                <!------<p>Starting Date: 01-01-2024</p>---->
-                <button onclick="window.location.href='#targetDiv'" type="button" class="btn btn-primary"
-                  data-bs-toggle="modal" data-bs-target="#myModal1">
-                  Request a call back>>
-                </button>
-              </div>
-            </div>
-
-            <div class="item">
-              <div class="icon">
-                <img src="assets/images/batches/python.png" alt="">
-              </div>
-              <div class="down-content">
-                <h4>Python Training</h4>
-                <!------<p>Starting Date: 01-01-2024</p>---->
-                <button onclick="window.location.href='#targetDiv'" type="button" class="btn btn-primary"
-                  data-bs-toggle="modal" data-bs-target="#myModal1">
-                  Request a call back>>
-                </button>
-
-
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-
-        <!-- The Modal -->
-        <div class="modal fade" id="myModal1" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-xl">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="contactModalLabel">LET'S GET IN TOUCH</h5>
-                <a href=> </a> <button type="button" class="btn-close" data-bs-dismiss="modal"
-                  aria-label="Close"></button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="upcoming-meetings" id="meetings" style="padding-bottom: 20px;">
-    <div class="container">
-      <div class="row" id="targetDiv">
-
-        <div class="col-lg-12">
-          <div class="section-heading">
-            <h2>Welcome to A1 Training Institute – Your Gateway to Excellence in Software Education!
-            </h2>
-          </div>
-        </div>
-        <!-- Target div -->
-
-        <div class="col-lg-4">
-
-          <div class="card">
-            <div class="card-header">
-              <h4 style="text-align:center; ">Request A Call Back</h4>
-            </div>
-            <div class="card-body">
-              <!-- Contact Form -->
-
-              <form action="" method="POST" class="form-container" style="height: 475px; overflow-y: scroll;"
-                id="contactform">
-                <!---Full Name--->
-                <div class="mb-3">
-                  <label for="Name">Name:</label>
-                  <input type="text" name="full_name" id="fullname" required class="form-control"
-                    placeholder="Enter Name">
-                </div>
-
-                <!---E-mail Address--->
-                <div class="mb-3">
-                  <label for="email_address">Email Address:</label>
-                  <input type="email" name="email" id="email_address" required class="form-control"
-                    placeholder="E-Mail Address" />
-                </div>
-                <!---mobileno--->
-                <div class="mb-3">
-                  <label for="mobileno"> Mobile No.</label>
-                  <input type="number" name="mobileno" id="mobileno" pattern="\d{10}" maxlength="10" required
-                    class="form-control" placeholder=" Mobile No" />
-                </div>
-
-
-                <!---Select Subject:--->
-                <div class="mb-3">
-                  <label for="sel1">Select Subject:</label>
-                  <select id="selectpickerGroups" name="subject" required class="form-select selectpicker w-100"
-                    data-style="btn-default" placeholder=" Subject" style="border: 1 px solid black;">
-                    <option>Choose Subject</option>
-                    <optgroup label="Web Designing">
-
-                      <option>Angular Js</option>
-                      <option>React Js</option>
-                      <option>Web Designing</option>
-                      <option>UI & UX</option>
-                      <option>PHP Experts</option>
-                      <option>PHP Full Stack</option>
-                    </optgroup>
-                    <optgroup label="Cloud Computing">
-                      <option>AWS Training</option>
-                      <option>AZURE Training</option>
-                      <option>GCP</option>
-                    </optgroup>
-                    <optgroup label="Devops">
-                      <option>Kubenetes Training</option>
-                      <option>Docker Certification Training</option>
-                      <option>Ansible Training</option>
-                      <option>Devops Training</option>
-                      <option>Jenkins</option>
-                      <option>Terraform</option>
-                      <option>Linux</option>
-                      <option>Git</option>
-                      <option>Shell Scripting</option>
-                    </optgroup>
-                    <optgroup label="Programming">
-                      <option>Python Training</option>
-                      <option>JavaScript Training</option>
-                      <option>Unix Shell Scripting Training</option>
-                      <option>Java Certification</option>
-                      <option>C And C++ Training</option>
-                      <option>.NET Training</option>
-                    </optgroup>
-                    <optgroup label="Database Developer">
-                      <option>MySQL Training</option>
-                      <option>MongoDB Training</option>
-                      <option>SQL Server DBA Training</option>
-                    </optgroup>
-                    <optgroup label="Mobile App Development">
-                      <option>Android</option>
-                      <option>I-Phone</option>
-                    </optgroup>
-                    <optgroup label="Data Science & AI">
-                      <option>Machine Learning Training</option>
-                      <option>Data Science Training</option>
-                      <option>Data Science With Python Training</option>
-                      <option>Deep Learning Course</option>
-                      <option>Artificial Intelligence Course</option>
-                    </optgroup>
-                    <optgroup label="MIS-Advanced Excel-BI Tools">
-                      <option>Power Bi</option>
-                      <option>Advanced Microsoft Excel</option>
-                      <option>MIS</option>
-                    </optgroup>
-                    <optgroup label="Digital Marketing">
-                      <option>Advanced Digital Marketing</option>
-                      <option>Digital Marketing</option>
-                    </optgroup>
-                    <optgroup label="Industrial Training">
-                      <option>6 Weeks Summer Training</option>
-                      <option>6 Months Industrial Training</option>
-                    </optgroup>
-                    <optgroup label="Multimedia Animation-Graphics">
-                      <option>Graphic Designing</option>
-                      <option>Graphic Designing Pro</option>
-                      <option>Motion Graphic Course </option>
-                      <option>Multimedia & Animation </option>
-                      <option>Graphic Motion Pro Course</option>
-                      <option>Multimedia & Animation (Diploma)</option>
-                      <option>Videograpy Course</option>
-                      <option>Scriptwriting & Story Boarding</option>
-                      <option>Film Making</option>
-                    </optgroup>
-                    <optgroup label="Software Testing">
-                      <option>Manual Testing</option>
-                      <option>Manual + Selenium</option>
-                      <option>Full Stack QA</option>
-                      <option>Java With Selenium </option>
-                      <option>REST Assured API</option>
-                      <option>Appium Testing</option>
-                      <option>API Testing</option>
-                    </optgroup>
-                    <optgroup label="Project Management">
-                      <option>Primavera P6 Testing</option>
-                      <option>Agile Testing</option>
-                      <option>Microsoft Excel Training</option>
-                      <option>Scrum Master Training</option>
-
-                    </optgroup>
-                    <optgroup label="Full Stack Development">
-                      <option>MEAN Stack</option>
-                      <option>Mern Stack</option>
-                    </optgroup>
-                  </select>
-                </div>
-                <!------course mode ------->
-                <div class="mb-3">
-                  <label for="mode">Select Mode of Course (select one):</label><br>
-                  <input type="radio" id="mode" name="mode" value="Online">
-                  <label for="html">Online</label><br>
-                  <input type="radio" id="mode" name="mode" value="Offline">
-                  <label for="css">Offline</label><br>
-                </div>
-                <!---Dob--->
-                <div class="mb-3">
-                  <label for="DOB">DOB:</label>
-                  <input type="date" name="Dob" id="dob" class="form-control" placeholder=" DOB:">
-                </div>
-                <!---Address--->
-                <div class="mb-3">
-                  <label for="Address">Address:</label>
-                  <textarea name="Address" id="address" class="form-control" rows="3" placeholder=" Address"></textarea>
-                </div>
-                <!-------How did you learn about us?:-------->
-                <div class="mb-3">
-                  <label for="Learn About Us">How did you learn about us?:</label>
-                  <input type="text" name="About_us" id="Learn_About_Us" placeholder="Enter name" class="form-control"
-                    placeholder="Social Media ">
-                </div>
-                <!------courses not listed in list ------->
-                <div class="mb-3">
-                  <label for="message">Other Courses Not Included in list:</label>
-                  <textarea name="message" id="not listed " class="form-control" rows="3"
-                    placeholder="Other Courses"></textarea>
-                </div>
-                <!------Submit------->
-                <button type="submit" name="submitContact" class="btn btn-primary">Submit</button>
-              </form>
-            </div>
-          </div>
-        </div>
-
-
-        <script>
-          document.getElementById('redirectButton').addEventListener('click', function () {
-            document.getElementById('targetDiv').scrollIntoView({ behavior: 'smooth' });
-          });
-        </script>
-        <div class="col-lg-8">
-          <div class="row">
-            <div class="accordions is-first-expanded" style="margin: 0px;">
-              <article class="accordion">
-                <div class="accordion-head">
-                  <span>Welcome to A1 Training Institute – Your Gateway to Excellence in Software Education!
-                  </span>
-                  <span class="icon">
-                    <i class="icon fa fa-chevron-right"></i>
-                  </span>
-                </div>
-                <div class="accordion-body">
-                  <div class="content">
-                    <p>At A1TI, we understand the transformative power of technology and the critical role it plays in
-                      today's fast-paced world. Our mission is to empower individuals and organizations with the
-                      knowledge and skills they need to thrive in the digital age.
-                    </p>
-                  </div>
-                </div>
-              </article>
-              <article class="accordion">
-                <div class="accordion-head">
-                  <span>Who We Are:
-                  </span>
-                  <span class="icon">
-                    <i class="icon fa fa-chevron-right"></i>
-                  </span>
-                </div>
-                <div class="accordion-body">
-                  <div class="content">
-                    <p>A1TI is a leading destination for comprehensive software training and education. With a legacy of
-                      10+ years in the industry, we have earned a reputation for excellence, innovation, and dedication
-                      to our students' success.
-                    </p>
-                  </div>
-                </div>
-              </article>
-              <article class="accordion">
-                <div class="accordion-head">
-                  <span>Why Choose Us?
-                  </span>
-                  <span class="icon">
-                    <i class="icon fa fa-chevron-right"></i>
-                  </span>
-                </div>
-                <div class="accordion-body">
-                  <div class="content">
-                    <p><b>Expert Instructors:</b> Our team of experienced and certified instructors are experts in their
-                      respective fields.They bring real-world industry experience to the classroom ensuring that you
-                      receive practical and up-to-date knowledge.
-                      <br>
-                      <b>Cutting-Edge Curriculum:</b> Our courses are meticulously designed to cover the latest
-                      technologies and industry trends. We offer a wide range of programs, from beginner to advanced
-                      levels, to meet your specific learning needs.
-                      <br>
-                      <b>Hands-On Learning:</b> We believe in learning by doing. Our hands-on approach ensures that you
-                      not only understand the concepts but also gain practical skills that are immediately applicable in
-                      the workplace.
-                      <br>
-                      <b>Flexible Learning Options:</b> We understand that everyone has a unique schedule and learning
-                      style. That's why we offer flexible learning options,including in-person classes, online courses,
-                      and customized corporate training solutions.
-                      <br>
-                      <b>Career Support:</b> Your success is our top priority. We provide career counseling, job
-                      placement assistance, and networking opportunities to help you take the next step in your career.
-
-                    </p>
-                  </div>
-                </div>
-              </article>
-              <article class="accordion last-accordion">
-                <div class="accordion-head">
-                  <span>Who We Serve:</span>
-                  <span class="icon">
-                    <i class="icon fa fa-chevron-right"></i>
-                  </span>
-                </div>
-                <div class="accordion-body">
-                  <div class="content">
-                    <p><b>Individuals:</b> Whether you're a beginner looking to start a career in software development
-                      or an experienced professional seeking to upskill, we have the right program for you.
-                      <br>
-                      <b>Corporations:</b> We partner with businesses to provide tailored training solutions for their
-                      teams, helping them stay competitive in a rapidly evolving tech landscape.
-                    </p>
-                  </div>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="our-courses" id="courses" style="padding-bottom: 40px; padding-top: 40px;">
-    <div class="container">
-        <div class="row">
-            <!-- Section Heading: Full Width -->
-            <div class="col-lg-12">
-                <div class="section-heading">
-                    <h2>Our Professional Courses</h2>
-                </div>
-            </div>
-            
-            <!-- Carousel Container: Full Width -->
-            <div class="col-lg-12">
-                <div class="owl-carousel owl-theme" id="carousel-container">
-                    <!-- Carousel items will be dynamically inserted here -->
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- External JavaScript Files -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/owl.carousel@2/dist/owl.carousel.min.js"></script>
-<!-- JSON Data -->
-<script type="text/javascript" src="assets/json/professional_courses.json"></script>
-<!-- Initialization Script -->
-<script>
-    $(document).ready(function () {
-        var carouselContainer = $('#carousel-container');
-
-        // Ensure JSON data is loaded and structured correctly
-        if (typeof courses !== 'undefined' && courses1.col1) {
-            // Generate carousel items from JSON data
-            courses1.col1.forEach(function (course) {
-                var itemHtml = `
-                    <div class="item">
-                        <a href="professional-courses.html">
-                            <img src="assets/images/professional-courses/${course.image}" alt="${course.course_name}">
-                            <div class="down-content">
-                                <h4>${course.course_name}</h4>
-                            </div>
-                        </a>
-                    </div>
-                `;
-                carouselContainer.append(itemHtml);
-            });
-
-            
-            // Initialize Owl Carousel after items are loaded
-            carouselContainer.owlCarousel({
-                items: 1, // Adjust to display one item per slide in a 4-column layout
-                margin: 10,
-                loop: true,
-                nav: true,
-                dots: false,
-                autoplay: true,
-                autoplayTimeout: 3000,
-                autoplayHoverPause: true,
-                responsive: {
-                    0: { items: 1 },
-                    600: { items: 1 }, // Adjust to show one item per slide on smaller screens
-                    1000: { items: 4 } // Adjust to show one item per slide in a 4-column layout
-                }
-            });
-        } else {
-            console.error('JSON data is not loaded or structured incorrectly.');
-        }
-    });
-</script>
-<section class="our-courses" id="courses" style="padding-bottom: 40px; padding-top: 40px;">
-    <div class="container">
-        <div class="row">
-            <!-- Section Heading: Full Width -->
-            <div class="col-lg-12">
-                <div class="section-heading">
-                    <h2>Our Professional Courses</h2>
-                </div>
-            </div>
-            
-            <!-- Carousel Container: Full Width -->
-            <div class="col-lg-12">
-                <div class="owl-carousel owl-theme" id="carousel-container">
-                    <!-- Carousel items will be dynamically inserted here -->
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- JSON Data -->
-<script type="text/javascript" src="assets/json/professional_courses.json"></script>
-<!-- Initialization Script -->
-<script>
-    $(document).ready(function () {
-        var carouselContainer = $('#carousel-container');
-
-        // Ensure JSON data is loaded and structured correctly
-        if (typeof courses !== 'undefined' && courses1.col1) {
-            // Generate carousel items from JSON data
-            courses1.col1.forEach(function (course) {
-                var itemHtml = `
-                    <div class="item">
-                        <a href="professional-courses.html">
-                            <img src="assets/images/professional-courses/${course.image}" alt="${course.course_name}">
-                            <div class="down-content">
-                                <h4>${course.course_name}</h4>
-                            </div>
-                        </a>
-                    </div>
-                `;
-                carouselContainer.append(itemHtml);
-            });
-
-            
-            // Initialize Owl Carousel after items are loaded
-            carouselContainer.owlCarousel({
-                items: 1, // Adjust to display one item per slide in a 4-column layout
-                margin: 10,
-                loop: true,
-                nav: true,
-                dots: false,
-                autoplay: true,
-                autoplayTimeout: 3000,
-                autoplayHoverPause: true,
-                responsive: {
-                    0: { items: 1 },
-                    600: { items: 1 }, // Adjust to show one item per slide on smaller screens
-                    1000: { items: 4 } // Adjust to show one item per slide in a 4-column layout
-                }
-            });
-        } else {
-            console.error('JSON data is not loaded or structured incorrectly.');
-        }
-    });
-</script>
-<!----------GOOGLE REVIEW -->
-<script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
-  <div class="elfsight-app-95467440-94ad-490a-9e08-5773a27f66ef" data-elfsight-app-lazy></div>
-
-  <!--footer-->
-  <script type="text/javascript" src="footer.js"></script>
-  <!--footer end-->
-
-  <!-- Scripts -->
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-  <script src="assets/js/isotope.min.js"></script>
-  <script src="assets/js/owl-carousel.js"></script>
-  <script src="assets/js/lightbox.js"></script>
-  <script src="assets/js/tabs.js"></script>
-  <script src="assets/js/video.js"></script>
-  <script src="assets/js/slick-slider.js"></script>
-  <script src="assets/js/custom.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-  <!----10 number limit in form ------->
-  <script>
-    document.getElementById('mobileno').addEventListener('input', function (e) {
-      var x = e.target.value.replace(/\D/g, '');
-      if (x.length > 10) {
-        x = x.substring(0, 10);
-      }
-      e.target.value = x;
-    });
-  </script>
-  <!-- JavaScript for handling the modal and form submission -->
-  <!-- SweetAlert2 JS -->
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      // Auto-Fill Course Name in Modal
-      const courseModal = document.getElementById('courseModal');
-      const courseNameInput = document.getElementById('courseName');
-
-      if (courseModal) {
-        courseModal.addEventListener('show.bs.modal', function (event) {
-          const button = event.relatedTarget; // Button that triggered the modal
-          const courseName = button.getAttribute('data-course'); // Extract course name from data attribute
-          if (courseNameInput) {
-            courseNameInput.value = courseName; // Set the course name in the input field
-          }
-        });
-      }
-
-      // Handle form submission
-      const form = document.getElementById('contactform');
-      if (form) {
-        form.addEventListener('submit', function (e) {
-          e.preventDefault();
-
-          const scriptURL = 'https://script.google.com/macros/s/AKfycby-wm55ttgYdZ7Pfqu8G8S4ihQXqVNIg0j720tLiCtag4c0Yr8gQ2aEU142mS9s20jc/exec';
-          const formData = new FormData(this);
-
-          fetch(scriptURL, { method: 'POST', body: formData })
-            .then(response => {
-              Swal.fire({
-                title: "Thank you!",
-                text: "Your form is submitted successfully.",
-                icon: "success",
-                timer: 1500,
-                showConfirmButton: false
-              }).then(() => {
-                window.location.reload(); // Reload after closing the alert
-              });
-            })
-            .catch(error => {
-              console.error('Error!', error.message);
-              Swal.fire({
-                title: "Oops!",
-                text: "Something went wrong. Please try again later.",
-                icon: "error"
-              });
-            });
-        });
-      }
-    });
-  </script>
 </body>
-
-
 </html>
