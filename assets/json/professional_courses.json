@@ -17,7 +17,7 @@ var courses1 = {
             "pdf": "Shell Scripting.pdf",
             "title": "Shell_Scripting",
             "download": "course_1",
-            "image": "Shell Scripting.jpg",
+            "image": "shell_scripting.jpg",
             "description": "Shell_Scripting",
             "syllabus" : ["assets/syllabus/#.pdf"],
            "syllabus_name":["Shell Scripting Syllabus "]	
@@ -50,7 +50,7 @@ var courses1 = {
             "pdf": "Docker Training.pdf",
             "title": "Docker_Certification_Training",
             "download": "course_1",
-            "image": "Docker-Certification-Training.jpg",
+            "image": "docker-certification-training.jpg",
             "description": "Docker_Training",
             "syllabus" : ["assets/syllabus/Docker_Course_Syllabus.pdf"],
            "syllabus_name":["Docker Training Syllabus "]	
@@ -61,7 +61,7 @@ var courses1 = {
             "pdf": "Kubemetes Training.pdf",
             "title": "Kubemetes_Training",
             "download": "course_1",
-            "image": "Kubernetes.png",
+            "image": "kubernetes.png",
             "description": "Kubenetes_Training",
             "syllabus" : ["assets/syllabus/Kubernetes_Cluster_Setup_Guide.pdf" , "assets/syllabus/Kubernetes_Commands_Overview.pdf"  , "assets/syllabus/Kubernetes_Interview_Questions.pdf"  , "assets/syllabus/Kubernetes_Manifest_file.pdf"] ,  
            "syllabus_name":["Kubemetes Cluster Setup Syllabus " , "Kubernetes Commands Overview Syllabus " , "Kubernetes Interview Questions  ", "Kubernetes Manifest file Syllabus "]	
@@ -105,7 +105,7 @@ var courses1 = {
             "pdf": "cloud.pdf",
             "title": "GCP",
             "download": "course_1",
-            "image": "GCP.png",
+            "image": "gcp.png",
             "description": "gcp",
             "syllabus" : ["assets/syllabus/GCP.pdf"],
            "syllabus_name":["GCP Syllabus "]	
@@ -127,7 +127,7 @@ var courses1 = {
             "pdf": "git ebook.pdf",
             "title": "MEAN_Stack",
             "download": "course_1",
-            "image": "Mean Stack.png",
+            "image": "mean_stack.png",
             "description": "MEAN_Stack01",
             "download": "course_1",
            "interview_pdf" : ["https://amzn.in/d/eeW0gGK", "https://amzn.in/d/76hrmRz", "https://amzn.in/d/4Jzj8A2"],
@@ -141,7 +141,7 @@ var courses1 = {
             "pdf": "mern.pdf",
             "title": "MERN_Stack",
             "download": "course_1",
-            "image": "Mern Stack.jpg",
+            "image": "mern_stack.jpg",
             "description": "MERN_Stack02",
             "syllabus" : ["assets/syllabus/mern_stack.pdf"],
            "syllabus_name":["Mern Stack Syllabus "]	
@@ -175,7 +175,7 @@ var courses1 = {
             "pdf": "UI/UX .pdf",
             "title": "UI_UX",
             "download": "course_1",
-            "image": "UI-Development.jpg",
+            "image": "ui_development.jpg",
             "description": "UI/UX_01",
             "syllabus" : ["assets/syllabus/mean_stack.pdf"],
            "syllabus_name":["UI/UX Syllabus "]	
@@ -197,7 +197,7 @@ var courses1 = {
             "pdf": "PHP Experts .pdf",
             "title": "PHP_Experts",
             "download": "course_1",
-            "image": "php-Experts.jpg",
+            "image": "php-experts.jpg",
             "description": "PHP_Experts",
             "syllabus" : ["assets/syllabus/mean_stack.pdf"],
            "syllabus_name":["PHP Experts Syllabus "]	
@@ -208,7 +208,7 @@ var courses1 = {
             "pdf": "Angular.pdf",
             "title": "Angular_Js",
             "download": "course_1",
-            "image": "Angular-training.png",
+            "image": "angular-training.png",
             "description": "Angular_Js",
             "syllabus" : ["assets/syllabus/mean_stack.pdf"],
            "syllabus_name":["Angular Js Syllabus "]	
@@ -219,7 +219,7 @@ var courses1 = {
             "pdf": "Devops Training.pdf",
             "title": "Devops_Training",
             "download": "course_1",
-            "image": "Devops training.jpg",
+            "image": "devops_training.jpg",
             "description": "Devops_Training",
             "syllabus" : ["assets/syllabus/DevOps_with_AWS_l.pdf" , "assets/syllabus/AWS_Amazon_Web_Segitrvices.pdf"],
            "syllabus_name":["Devops Training Syllabus ", "AWS Training Syllabus "]	
@@ -230,7 +230,7 @@ var courses1 = {
             "pdf": "Unix Shell Scripting Training.pdf",
             "title": "Unix_Shell_Scripting_Training",
             "download": "course_1",
-            "image": "unix shell scripting training.png",
+            "image": "unix_shell_scripting_training.png",
             "description": "Unix_Shell_Scripting_Training",
             "syllabus" : ["assets/syllabus/mean_stack.pdf"],
            "syllabus_name":["Unix Shell Scripting Training Syllabus "]	
@@ -241,7 +241,7 @@ var courses1 = {
             "pdf": "C And C++ Training.pdf",
             "title": "C_And_Cplus_Training",
             "download": "course_1",
-            "image": "c _c++.png",
+            "image": "c_c++.png",
             "description": "C_And_Cplus_Training",
             "syllabus" : ["assets/syllabus/C&C++.pdf"],
            "syllabus_name":["C And C++ Training Syllabus "]	
@@ -274,7 +274,7 @@ var courses1 = {
             "pdf": "MySQL Training.pdf",
             "title": "MySQL_Training",
             "download": "course_1",
-            "image": "My-Sql.jpg",
+            "image": "my-sql.jpg",
             "description": "MySQL_Training",
             "syllabus" : ["assets/syllabus/mean_stack.pdf"],
            "syllabus_name":["MySQL Training Syllabus "]	
@@ -307,7 +307,7 @@ var courses1 = {
             "pdf": "Android.pdf",
             "title": "Android",
             "download": "course_1",
-            "image": "Android-Training.jpg",
+            "image": "android-training.jpg",
             "description": "Android",
             "syllabus" : ["assets/syllabus/mean_stack.pdf"],
            "syllabus_name":["Android Syllabus "]	
@@ -549,7 +549,7 @@ var courses1 = {
             "pdf": "Manual + Selenium.pdf",
             "title": "Manual_plus_Selenium_01",
             "download": "course_1",
-            "image": "Manual_Selenium.jpg",
+            "image": "manual_selenium.jpg",
             "description": "Manual_plus_Selenium_01",
             "syllabus" : ["assets/syllabus/mean_stack.pdf"],
            "syllabus_name":["Manual + Selenium Syllabus "]	

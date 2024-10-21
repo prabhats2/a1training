@@ -721,6 +721,53 @@ for (let i = 0; i < junior.col1.length; i++) {
 
 </div>
         </span>`;
+    } else if (junior.col1[i].description === 'Basic_Computer') {
+        descriptionContent = `
+        <span id="Basic_Computer">
+           <div class="content-container">
+
+   <h1 class="main-heading">Basic Computer Course at A1 Training Institute</h1>
+
+<p class="description">The Basic Computer Course at A1 Training Institute is designed for individuals seeking to build foundational skills in computer usage and digital literacy. This course covers essential topics such as operating systems, word processing, spreadsheets, presentations, and internet basics. By mastering these skills, you will gain confidence in using computers effectively in both personal and professional settings.</p>
+
+<ul class="feature-list">
+    <li class="feature-item">&#10003; 30 hours of Instructor-led Training</li>
+    <li class="feature-item">&#10003; Comprehensive coverage of computer fundamentals and software applications</li>
+    <li class="feature-item">&#10003; Hands-on exercises to practice real-world tasks</li>
+    <li class="feature-item">&#10003; Real-world assignments focusing on document creation, data management, and online research</li>
+    <li class="feature-item">&#10003; Focus on developing problem-solving skills and computer proficiency</li>
+</ul>
+
+<h4 class="sub-heading">We provide the NO.1 Basic Computer Course in Chennai, with flexible training modes including classroom and online sessions. Our centers are located at Adyar, OMR, Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
+lass="sub-heading">We provide the No.1 Typing training program in Delhi NCR, including Noida Extension and Greater Noida. Our program focuses on enhancing typing speed and accuracy, catering to both beginners and those looking to improve their existing skills. Participants will engage in various typing exercises, learn proper finger placement, and receive personalized feedback to boost their proficiency. Our training is available through both classroom and online modes, ensuring flexibility for all learners. With our expert instructors and structured curriculum, students will develop essential typing skills that are crucial for academic and professional success.</h4>
+
+    <div class="button-container">
+        <button class="custom-button"  data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
+        <button class="custom-button">Contact Course Advisor</button>
+    </div>
+ <div class="training-container mt-5">
+        <div class="row">
+            <div class="training-col">
+                <h3>40+ Hrs</h3>
+                <p>Hands-On Training</p>
+            </div>
+            <div class="training-col">
+                <h3>2 Live</h3>
+                <p>Projects For Hands-On Learning</p>
+            </div>
+            <div class="training-col">
+                <h3>50 Hrs</h3>
+                <p>Practical Assignments</p>
+            </div>
+            <div class="training-col">
+                <h3>24/7</h3>
+                <p>Lifetime Access To Support Team</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+        </span>`;
     } 
 
    
