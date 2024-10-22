@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="author" content="Template Mo">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iNl7lqyiYbNE3u5zHMHp0UA+POD4t1itd16u7jOFEL76P0DHS9tN8+OHL" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+
+    <!-- Bootstrap JS with Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+    <!-- SweetAlert2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="text/javascript" src="assets/json/batches.json"></script>
+    
+  <script type="text/javascript" src="meta.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.gallery-item').fancybox();
+        });
+    </script>
+    <style>
+        .n {
+            overflow: scroll;
+            height: 800px
+        }
+
+        .m {
+            margin-top: 100px;
+            height: 800px;
+        }
+
+        /* Custom style for the list */
+        #courseDescriptionMoreInfo ul {
+            list-style-type: none;
+            /* Remove default bullets */
+            padding-left: 17px;
+            /* Remove default padding */
+        }
+
+        #courseDescriptionMoreInfo ul li::before {
+            content: '•';
+            /* Add a dot before each item */
+            color: rgb(255, 255, 255);
+            /* Change color of the dot to match your theme */
+            display: inline-block;
+            width: 1em;
+            /* Adjust width if necessary */
+            margin-left: -0.5em;
+            /* Adjust margin if necessary */
+            margin-right: 0.5em;
+            /* Space between the dot and text */
+        }
+    </style>
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-edu-meeting.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/lightbox.css">
+ 
+</head>
+<!--menu-->
+    <script type="text/javascript" src="menu.js"></script>
+    <!--menu end-->
+<body>
+    
+
+
+    <section class="heading-page header-text" id="top">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <h6>don't Learn Simply. Learn with project</h6>
+                    <h2>Project Training Batches</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="meetings-page" id="meetings">
+       <div class="container">
+    <h3>JavaScript</h3>
+    <div class="d-grid">
+        <button type="button" class="btn btn-primary btn-block mt-2" data-bs-toggle="modal" onclick="loadPDFs('javascript')">JavaScript Interview Questions</button>
+    </div>
+    <h3>Kubernetes</h3>
+    <div class="d-grid mt-2">
+        <button type="button" class="btn btn-primary btn-block" data-bs-toggle="modal" onclick="loadPDFs('kubernetes')">Kubernetes Interview Questions</button>
+    </div>
+    <h3>Shell Scripting</h3>
+    <div class="d-grid mt-2">
+        <button type="button" class="btn btn-primary btn-block" data-bs-toggle="modal" onclick="loadPDFs('shell_scripting')">Shell Scripting Interview Questions</button>
+    </div>
+    <h3>MS Office</h3>
+    <div class="d-grid mt-2">
+        <button type="button" class="btn btn-primary btn-block" data-bs-toggle="modal" onclick="loadPDFs('ms_office')">MS Office Interview Questions</button>
+    </div>
+
+    <!-- Modal for PDF Links -->
+    <div class="modal fade" id="pdfModal" tabindex="-1" aria-labelledby="pdfModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="pdfModalLabel">Available PDFs</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="pdfList"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PDF Carousel Container -->
+    <div class="pdf-carousel-container hidden" id="pdfCarouselContainer">
+        <button class="close-btn" onclick="closePDF()">Close</button>
+        <div id="pdfCarousel" class="carousel slide carousel-container" data-bs-ride="carousel">
+            <div class="carousel-inner" id="carouselInner"></div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#pdfCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#pdfCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <div id="pdfOverlay" onclick="closePDF()"></div>
+</div>
+
+        </div>
+        </div>
+
+        <!-- Offcanvas for Enroll Now -->
+        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="courseOffcanvas"
+            aria-labelledby="courseOffcanvasLabel" style="z-index: 1111;">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="courseOffcanvasLabel">Course Details</h5>
+                <button type="button" class="btn-close btn-light" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <form id="contactform">
+                    <!-- Enroll Now Course Name -->
+                    <div class="mb-3">
+                        <label for="courseNameEnroll" class="form-label">Course Name</label>
+                        <input type="text" class="form-control" id="courseNameEnroll" name="courseName" readonly>
+                    </div>
+                    <!-- NAME -->
+                    <div class="mb-3">
+                        <label for="Name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="Name" name="Name">
+                    </div>
+                    <!-- E-mail -->
+                    <div class="mb-3">
+                        <label for="e-mail" class="form-label">E-mail</label>
+                        <input type="email" class="form-control" id="e-mail" name="e-mail" required>
+                    </div>
+                    <!-- Mobile No -->
+                    <div class="mb-3">
+                        <label for="Mobile" class="form-label">Mobile</label>
+                        <input type="number" class="form-control" id="Mobile" name="Mobile" pattern="\d{10}"
+                            maxlength="10" required>
+                    </div>
+                    <!-- Message -->
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control" id="message" name="message" rows="2"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Send</button>
+                </form>
+            </div>
+        </div>
+        <!-- Offcanvas for More Info -->
+        <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="courseOffcanvas1"
+            aria-labelledby="courseOffcanvasLabel1" style="z-index: 1111;">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="courseOffcanvasLabel1">More Info</h5>
+                <button type="button" class="btn-close btn-light" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <!-- Display the course name as a heading -->
+                <h1 id="courseTitleMoreInfo" class="mb-3"></h1><br>
+                <h2>Description</h2><br>
+                <!-- Display the course description -->
+                <h4 id="courseDescriptionMoreInfo"></h4>
+            </div>
+        </div>
+        <!-- Scripts To display course name in canvas More Info & Enroll Now  -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                // Auto-Fill Course Name in Enroll Now Offcanvas form
+                const courseOffcanvas = document.getElementById('courseOffcanvas');
+                const courseNameInputEnroll = document.getElementById('courseNameEnroll');
+
+                if (courseOffcanvas) {
+                    courseOffcanvas.addEventListener('show.bs.offcanvas', function (event) {
+                        const button = event.relatedTarget; // Button that triggered the offcanvas
+                        const courseName = button.getAttribute('data-course'); // Extract course name from data attribute
+                        if (courseNameInputEnroll) {
+                            courseNameInputEnroll.value = courseName; // Set the course name in the input field
+                        }
+                    });
+                }
+
+            });
+            // Auto-Fill Course Name and Description in More Info Offcanvas
+            document.addEventListener('DOMContentLoaded', function () {
+
+                const courseOffcanvas1 = document.getElementById('courseOffcanvas1');
+                const courseTitleMoreInfo = document.getElementById('courseTitleMoreInfo');
+                const courseDescriptionMoreInfo = document.getElementById('courseDescriptionMoreInfo');
+
+                if (courseOffcanvas1) {
+                    courseOffcanvas1.addEventListener('show.bs.offcanvas', function (event) {
+                        const button = event.relatedTarget; // Button that triggered the offcanvas
+                        const courseName = button.getAttribute('data-course'); // Extract course name from data attribute
+                        const courseDescription = button.getAttribute('data-description'); // Extract course description from data attribute
+
+                        if (courseTitleMoreInfo) {
+                            courseTitleMoreInfo.textContent = courseName; // Set the course name in the H1
+                        }
+
+                        if (courseDescriptionMoreInfo) {
+                            // Format the description as a list
+                            const descriptionItems = courseDescription.split(',').map(item => `<li>${item.trim()}</li>`).join('');
+                            courseDescriptionMoreInfo.innerHTML = `<ul>${descriptionItems}</ul>`; // Set the course description in the H4 as a list
+                        }
+                    });
+                }
+            });
+
+        </script>
+    </section>
+    <!--footer-->
+    <script type="text/javascript" src="footer.js"></script>
+    <!--footer end-->
+
+    <!-- Scripts -->
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="assets/js/isotope.min.js"></script>
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/lightbox.js"></script>
+    <script src="assets/js/tabs.js"></script>
+    <script src="assets/js/isotope.js"></script>
+    <script src="assets/js/video.js"></script>
+    <script src="assets/js/slick-slider.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script>
+        //according to loftblog tut
+        $('.nav li:first').addClass('active');
+
+        var showSection = function showSection(section, isAnimate) {
+            var
+                direction = section.replace(/#/, ''),
+                reqSection = $('.section').filter('[data-section="' + direction + '"]'),
+                reqSectionPos = reqSection.offset().top - 0;
+
+            if (isAnimate) {
+                $('body, html').animate({
+                    scrollTop: reqSectionPos
+                },
+                    800);
+            } else {
+                $('body, html').scrollTop(reqSectionPos);
+            }
+
+        };
+
+        var checkSection = function checkSection() {
+            $('.section').each(function () {
+                var
+                    $this = $(this),
+                    topEdge = $this.offset().top - 80,
+                    bottomEdge = topEdge + $this.height(),
+                    wScroll = $(window).scrollTop();
+                if (topEdge < wScroll && bottomEdge > wScroll) {
+                    var
+                        currentId = $this.data('section'),
+                        reqLink = $('a').filter('[href*=\\#' + currentId + ']');
+                    reqLink.closest('li').addClass('active').
+                        siblings().removeClass('active');
+                }
+            });
+        };
+
+        $('.main-menu, .responsive-menu, .scroll-to-section').on('click', 'a', function (e) {
+            e.preventDefault();
+            showSection($(this).attr('href'), true);
+        });
+
+        $(window).scroll(function () {
+            checkSection();
+        });
+    </script>
+
+</body>
+
+</html>
+
+
+<!-- JavaScript for handling the modal and form submission -->
+<!-- SweetAlert2 JS -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+
+        // Handle form submission
+        const form = document.getElementById('contactform');
+        if (form) {
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                const scriptURL = 'https://script.google.com/macros/s/AKfycbyzWpZIIAt4ZaXdOXZKWnFoj-REOq7PDbaGYqieIPxJDQhR6B9NLYj_SgSFFtVyGVjj/exec';
+                const formData = new FormData(this);
+
+                fetch(scriptURL, { method: 'POST', body: formData })
+                    .then(response => {
+                        Swal.fire({
+                            title: "Thank you!",
+                            text: "Your form is submitted successfully.",
+                            icon: "success",
+                            timer: 1500,
+                            showConfirmButton: false
+                        }).then(() => {
+                            window.location.reload(); // Reload after closing the alert
+                        });
+                    })
+                    .catch(error => {
+                        console.error('Error!', error.message);
+                        Swal.fire({
+                            title: "Oops!",
+                            text: "Something went wrong. Please try again later.",
+                            icon: "error"
+                        });
+                    });
+            });
+        }
+    });
+    document.getElementById('Mobile').addEventListener('input', function (e) {
+        var x = e.target.value.replace(/\D/g, '');
+        if (x.length > 10) {
+            x = x.substring(0, 10);
+        }
+        e.target.value = x;
+    });
+</script>

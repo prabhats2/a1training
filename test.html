@@ -9,6 +9,7 @@
 
     <script type="text/javascript" src="assets/json/junior_geeks.json"></script>
     <script type="text/javascript" src="junior_geeks_coding.js"></script>
+    <script type="text/javascript" src="interview-Q-Ans.js"></script>
     <style>
         /* Main container styling */
         .pdf-carousel-container {
@@ -127,24 +128,27 @@
 <body>
 
 <div class="container">
-    <h3>Interactive PDF Viewer</h3>
-
+    
+    <h3>JavaScript</h3>
     <!-- Button to Open Modal for PDF Links -->
     <div class="d-grid">
       <button type="button" class="btn btn-primary btn-block mt-2" data-bs-toggle="modal" data-bs-target="#pdfModal">
         JavaScript Interview Questions
       </button>
     </div>
+    <h3>Kubernetes</h3>
     <div class="d-grid mt-2">
       <button type="button" class="btn btn-primary btn-block" data-bs-toggle="modal" data-bs-target="#pdfModal">
         Kubernetes Interview Questions
       </button>
     </div>
+    <h3>Shell Scripting</h3>
     <div class="d-grid mt-2">
       <button type="button" class="btn btn-primary btn-block" data-bs-toggle="modal" data-bs-target="#pdfModal">
         Shell Scripting Interview Questions
       </button>
     </div>
+    <h3>Ms Office </h3>
     <div class="d-grid mt-2">
       <button type="button" class="btn btn-primary btn-block" data-bs-toggle="modal" data-bs-target="#pdfModal">
         MS Office Interview Questions
@@ -160,11 +164,31 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <ul>
+                   <!--  <ul>
                         <li><a href="#" onclick="openPDF('assets/pdf/junior_geeks/C&C++.pdf'); return false;">C++ PDF</a></li>
                         <li><a href="#" onclick="openPDF('assets/pdf/junior_geeks/canva_designing.pdf'); return false;">Canva Designing PDF</a></li>
                         <li><a href="#" onclick="openPDF('assets/pdf/junior_geeks/computer_science11th_syllabus.pdf'); return false;">Computer Science 11th PDF</a></li>
+                    </ul> -->
+                    <script>
+                        for(let i = 0; i < javascript.length;i++){
+                            //document.write(javascript[i]+'<br>')
+                            document.write(`
+                             <ul>
+                        <li><a href="#" onclick="openPDF('assets/pdf/junior_geeks/${javascript[i]}'); return false;">${javascript[i]}</a></li>
+                        
                     </ul>
+                            `)
+                        }
+                        for(let k = 0; k < kubernetes.length;k++){
+                            //document.write(javascript[i]+'<br>')
+                            document.write(`
+                             <ul>
+                        <li><a href="#" onclick="openPDF('assets/pdf/junior_geeks/${kubernetes[k]}'); return false;">${kubernetes[k]}</a></li>
+                        
+                    </ul>
+                            `)
+                        }
+                    </script>
                 </div>
             </div>
         </div>
