@@ -19,7 +19,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
 
-
     <!-- Bootstrap JS with Popper.js -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
@@ -28,45 +27,227 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script type="text/javascript" src="assets/json/batches.json"></script>
     
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
   <script type="text/javascript" src="meta.js"></script>
+        <style>
+            * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-items: center;
+}
+
+.grid-item {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white for better contrast */
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 250px; /* Max width for item */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    transition: box-shadow 0.3s ease; /* Smooth transition for hover effect */
+    border: 2px solid #4A00E0;; /* Purple border */
+}
+
+.grid-item:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+.download-btn {
+    background-color: white; /* Button background */
+    color: #4A00E0; /* Button text color */
+    border: none; /* No border */
+    padding: 10px; /* Padding for button */
+    font-weight: bold; /* Bold text */
+    cursor: pointer; /* Pointer cursor */
+    border-radius: 5px; /* Rounded corners */
+    margin-top: 10px; /* Margin above button */
+    width: 100%; /* Full width button */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-heading {
+        font-size: 1.5rem; /* Responsive heading size */
+    }
+
+    .header h1 {
+        font-size: 1.6rem; /* Responsive header size */
+    }
+
+    .grid-container {
+        gap: 15px; /* Reduced gap for smaller screens */
+    }
+
+    .download-btn {
+        padding: 8px; /* Reduced padding for buttons */
+    }
+}
+
+@media (max-width: 480px) {
+    .main-heading {
+        font-size: 1.2rem; /* Smaller heading size */
+    }
+
+    .header h1 {
+        font-size: 1.4rem; /* Smaller header size */
+    }
+
+    .grid-item {
+        max-width: 150px; /* Smaller max width for items */
+        padding: 15px; /* Reduced padding */
+    }
+
+    .download-btn {
+        font-size: 0.9rem; /* Smaller button text */
+        padding: 6px; /* Reduced button padding */
+    }
+
+    .footer {
+        font-size: 1rem; /* Footer text size */
+    }
+}
+
+/* PDF Carousel Styles */
+.pdf-carousel-container {
+    background-color: rgba(0, 0, 0, 0.8); /* Dark background for the carousel */
+    padding: 20px; /* Padding for the carousel */
+    border-radius: 10px; /* Rounded corners */
+    position: fixed; /* Fixed position for full-screen */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100vh; /* Full height */
+    margin: auto; /* Centering */
+    overflow-y: hidden; /* Disable vertical scrolling */
+    z-index: 1050; /* Above other elements */
+    display: flex; /* Flexbox for layout */
+    flex-direction: column; /* Column layout */
+}
+
+.pdf-carousel-container.hidden {
+    display: none; /* Hide when not needed */
+}
+
+.carousel-container {
+    flex: 1; /* Flexible size for carousel container */
+    display: flex;
+    align-items: center; /* Center align */
+    justify-content: center; /* Center justify */
+}
+
+.carousel-item img {
+    display: block; /* Block display */
+    margin: 0 auto; /* Centered */
+    max-height: 80vh; /* Limit max height */
+    object-fit: contain; /* Maintain aspect ratio */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); /* Light shadow */
+}
+
+.close-btn {
+    position: absolute; /* Absolute positioning for close button */
+    top: 10px;
+    right: 10px;
+    background-color: #dc3545; /* Red background */
+    color: white; /* White text */
+    padding: 8px 12px; /* Padding */
+    font-size: 16px; /* Font size */
+    border-radius: 5px; /* Rounded corners */
+    z-index: 1060; /* Above carousel */
+}
+
+#pdfOverlay {
+    position: fixed; /* Fixed overlay for full screen */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Dark overlay */
+    display: none; /* Hidden by default */
+    z-index: 1040; /* Below close button */
+}
+
+.img-box {
+    background-color: white; /* White background for image box */
+    padding: 5px; /* Padding */
+    border-radius: 5px; /* Rounded corners */
+    display: flex; /* Flexbox for center alignment */
+    justify-content: center; /* Center content */
+    align-items: center; /* Center items */
+    height: auto; /* Auto height */
+    width: 100%; /* Full width */
+}
+
+.img-box img {
+    max-width: 100%; /* Responsive images */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Rounded corners */
+    object-fit: contain; /* Maintain image aspect ratio */
+}
+
+    .search-container {
+        position: relative;
+        display: inline-block;
+        width: 50%;
+        /* Default for larger screens */
+    }
+
+    .search-input {
+        width: 100%;
+        padding: 12px 40px 12px 20px;
+        font-size: 16px;
+        border-radius: 25px;
+        border: 1px solid #ccc;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .voice-icon {
+        position: absolute;
+        right: 30px;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+    }
+
+    #micIcon {
+        font-size: 20px;
+        color: #333;
+    }
+
+    @media (max-width: 768px) {
+        .search-container {
+            width: 100%;
+            /* Full width (col-12 equivalent) on mobile */
+        }
+    }
+</style>
     <script>
         $(document).ready(function () {
             $('.gallery-item').fancybox();
         });
     </script>
-    <style>
-        .n {
-            overflow: scroll;
-            height: 800px
-        }
-
-        .m {
-            margin-top: 100px;
-            height: 800px;
-        }
-
-        /* Custom style for the list */
-        #courseDescriptionMoreInfo ul {
-            list-style-type: none;
-            /* Remove default bullets */
-            padding-left: 17px;
-            /* Remove default padding */
-        }
-
-        #courseDescriptionMoreInfo ul li::before {
-            content: '•';
-            /* Add a dot before each item */
-            color: rgb(255, 255, 255);
-            /* Change color of the dot to match your theme */
-            display: inline-block;
-            width: 1em;
-            /* Adjust width if necessary */
-            margin-left: -0.5em;
-            /* Adjust margin if necessary */
-            margin-right: 0.5em;
-            /* Space between the dot and text */
-        }
-    </style>
+   
     <!-- Additional CSS Files -->
     <link rel="stylesheet" href="assets/css/fontawesome.css">
     <link rel="stylesheet" href="assets/css/templatemo-edu-meeting.css">
@@ -78,39 +259,298 @@
     <script type="text/javascript" src="menu.js"></script>
     <!--menu end-->
 <body>
-    
-
-
+   
     <section class="heading-page header-text" id="top">
         <div class="container">
+            <div class="col-lg-12" style="text-align:center;">
+                <h6>Don't Learn Simply. Learn with Project</h6>
+                <h2>Download Interview Q & ANS</h2>
+                <div class="search-container">
+                    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for Interview Q / Ans..." title="Type name..."
+                        class="search-input">
+                    <span onclick="startVoiceSearch()" id="voiceIcon" class="voice-icon">
+                        <i class="fa fa-microphone" id="micIcon"></i>
+                    </span>
+                </div>
+                
+                <ul id="myUL" style="list-style-type: none; padding: 0; margin-top: 20px; display: none;">
+                    <li style="padding: 10px;">Course 1: git</li>
+                    <li style="padding: 10px;">Course 2: Linux</li>
+                    <li style="padding: 10px;">Course 3: Docker</li>
+                    <li style="padding: 10px;">Course 4: Kubernetes</li>
+                    <li style="padding: 10px;">Course 5: jenkins</li>
+                    <li style="padding: 10px;">Course 6: terraform</li>
+                    <li style="padding: 10px;">Course 7: Aws</li>
+                    <li style="padding: 10px;">Course 8: Azure</li>
+                    <li style="padding: 10px;">Course 9: gcp</li>
+                    <li style="padding: 10px;">Course 10: Python</li>
+                    <li style="padding: 10px;">Course 11: Shell Scripting</li>
+                    <li style="padding: 10px;">Course 12: Networking</li>
+                    <li style="padding: 10px;">Course 13: Ms Dos</li>
+                    <li style="padding: 10px;">Course 14: Html & css</li>
+                    <li style="padding: 10px;">Course 15: c/c++</li>
+                    <li style="padding: 10px;">Course 16: JavaScript</li>
+                    <li style="padding: 10px;">Course 17: Java</li>
+                    <li style="padding: 10px;">Course 18: Sql</li>
+                    <li style="padding: 10px;">Course 19: React</li>
+                    <li style="padding: 10px;">Course 20: Angular</li>
+                    <li style="padding: 10px;">Course 21: Node.js</li>
+                </ul>
+                <script>// Function to filter courses based on input
+                    function myFunction() {
+                        var input, filter, ul, li, i, txtValue, visibleCount = 0;
+                        input = document.getElementById('myInput');
+                        
+                        // Remove special characters from input and convert to uppercase
+                        filter = input.value.replace(/[^a-zA-Z0-9\s]/g, '').toUpperCase();
+                        
+                        ul = document.getElementById("myUL");
+                        li = ul.getElementsByTagName('li');
+                        
+                        for (i = 0; i < li.length; i++) {
+                            txtValue = li[i].textContent || li[i].innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                li[i].style.display = "";
+                                visibleCount++;
+                            } else {
+                                li[i].style.display = "none";
+                            }
+                        }
+                    
+                        // Show message if no results are found
+                        var noResultMessage = document.getElementById('noResultMessage');
+                        if (visibleCount === 0) {
+                            if (!noResultMessage) {
+                                noResultMessage = document.createElement('p');
+                                noResultMessage.id = 'noResultMessage';
+                                noResultMessage.textContent = 'No results found';
+                                ul.parentNode.appendChild(noResultMessage);
+                            }
+                        } else {
+                            if (noResultMessage) {
+                                noResultMessage.remove();
+                            }
+                        }
+                    }
+                    
+                    // Function to start voice recognition with mic color change
+                    function startVoiceSearch() {
+                        const icon = document.getElementById('micIcon'); // Get the mic icon element
+                        icon.style.color = 'red'; // Change color to red when voice recognition is active
+                    
+                        if ('webkitSpeechRecognition' in window) {
+                            const recognition = new webkitSpeechRecognition();
+                            recognition.lang = 'en-US';
+                            recognition.interimResults = false;
+                            recognition.maxAlternatives = 1;
+                    
+                            recognition.start();
+                    
+                            recognition.onresult = function(event) {
+                                let transcript = event.results[0][0].transcript;
+                    
+                                // Remove any trailing period from the transcript
+                                transcript = transcript.trim().replace(/\.$/, '');
+                    
+                                document.getElementById('myInput').value = transcript;
+                                myFunction();  // Automatically trigger the search after voice input
+                            };
+                    
+                            recognition.onerror = function(event) {
+                                console.error('Speech recognition error:', event.error);
+                                icon.style.color = '#333'; // Revert to default color in case of error
+                            };
+                    
+                            recognition.onend = function() {
+                                icon.style.color = '#333'; // Revert to default color when recognition ends
+                            };
+                        } else {
+                            alert("Sorry, your browser doesn't support speech recognition.");
+                            icon.style.color = '#333'; // Revert to default color if not supported
+                        }
+                    }
+                    </script>
+            </div>
+            
+            <!-- Font Awesome for the microphone icon -->
+            <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+            
+        </div>
+    </section>
+    <section class="meetings-page" id="meetings">
+        <div class="container">
+    
+    <!-- Main Content Section -->
+    <main class="col-lg-12">
+        <h2 class="main-heading">Download Syllabus</h2>
+        <div class="grid-container">
 
-            <div class="row">
-                <div class="col-lg-12">
-                    <h6>don't Learn Simply. Learn with project</h6>
-                    <h2>Project Training Batches</h2>
+            <div class="grid-item col-lg-3">
+                <p>JavaScript</p>
+                <div class="img-box"><img src="assets/images/Syllabus/javaScript.png" alt=""></div><br>
+                <button type="button" class="btn btn-primary btn-block mt-2"
+                    onclick="loadPDFs('javascript')">Download</button>
+            </div>
+            <div class="grid-item col-lg-3">
+                <p>Kubernetes</p>
+                <div class="img-box"><img src="assets/images/Syllabus/kubernetes.png" alt=""></div><br>
+                <button type="button" class="btn btn-primary btn-block"
+                    onclick="loadPDFs('kubernetes')">Download</button>
+            </div>
+            <div class="grid-item col-lg-3">
+                <p>Shell Scripting</p>
+                <div class="img-box"><img src="assets/images/Syllabus/shell_scripting.jpg" alt=""></div><br>
+                <button type="button" class="btn btn-primary btn-block"
+                    onclick="loadPDFs('shell_scripting')">Download</button>
+            </div>
+            <div class="grid-item col-lg-3">
+                <p>MS Office</p>
+                <div class="img-box"><img src="assets/images/Syllabus/ms-office.jpg" alt=""></div><br>
+                <button type="button" class="btn btn-primary btn-block"
+                    onclick="loadPDFs('ms_office')">Download</button>
+            </div>
+
+            <div class="grid-item col-lg-3">
+                <p>Python</p>
+                <div class="img-box"><img src="assets/images/Syllabus/python.png" alt=""></div><br>
+                <button type="button" class="btn btn-primary btn-block" onclick="loadPDFs('Python')">Download</button>
+            </div>
+            <div class="grid-item col-lg-3">
+                <p>Data Science</p>
+                <div class="img-box"><img src="assets/images/Syllabus/data-science.jpg" alt=""></div><br>
+                <button type="button" class="btn btn-primary btn-block"
+                    onclick="loadPDFs('Data_Science')">Download</button>
+            </div>
+            <div class="grid-item col-lg-3">
+                <p>Ai Machine Learning</p>
+                <div class="img-box"><img src="assets/images/Syllabus/ai-machine-learning.png" alt=""></div><br>
+                <button type="button" class="btn btn-primary btn-block"
+                    onclick="loadPDFs('Machine_learning')">Download</button>
+            </div>
+            <div class="grid-item col-lg-3">
+                <p>Web Development</p>
+                <div class="img-box"><img src="assets/images/Syllabus/web-development.png" alt=""></div><br>
+                <button type="button" class="btn btn-primary btn-block"
+                    onclick="loadPDFs('Web_Development')">Download</button>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Modal for PDF Links -->
+    <div class="modal fade" id="pdfModal" tabindex="-1" aria-labelledby="pdfModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="pdfModalLabel">Available PDFs</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="pdfList"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
-    <section class="meetings-page" id="meetings">
-       <div class="container">
-    <h3>JavaScript</h3>
-    <div class="d-grid">
-        <button type="button" class="btn btn-primary btn-block mt-2" data-bs-toggle="modal" onclick="loadPDFs('javascript')">JavaScript Interview Questions</button>
-    </div>
-    <h3>Kubernetes</h3>
-    <div class="d-grid mt-2">
-        <button type="button" class="btn btn-primary btn-block" data-bs-toggle="modal" onclick="loadPDFs('kubernetes')">Kubernetes Interview Questions</button>
-    </div>
-    <h3>Shell Scripting</h3>
-    <div class="d-grid mt-2">
-        <button type="button" class="btn btn-primary btn-block" data-bs-toggle="modal" onclick="loadPDFs('shell_scripting')">Shell Scripting Interview Questions</button>
-    </div>
-    <h3>MS Office</h3>
-    <div class="d-grid mt-2">
-        <button type="button" class="btn btn-primary btn-block" data-bs-toggle="modal" onclick="loadPDFs('ms_office')">MS Office Interview Questions</button>
-    </div>
+    <script>
+        // JSON data
+        const data = {
+            javascript: ['ms_office.pdf'],
+            kubernetes: ['ms_office.pdf'],
+            shell_scripting: ['ms_office.pdf'],
+            ms_office: ['ms_office.pdf'],
+            Python: ['ms_office.pdf'],
+            Data_Science: ['ms_office.pdf'],
+            Machine_learning: ['ms_office.pdf'],
+            Web_Development: ['ms_office.pdf'],
+        };
+
+        // Load PDFs based on the selected category
+        function loadPDFs(category) {
+            const pdfList = document.getElementById('pdfList');
+            pdfList.innerHTML = ''; // Clear previous list
+
+            data[category].forEach(pdf => {
+                pdfList.innerHTML += `<ul><li><a href="#" onclick="openPDF('assets/pdf/junior_geeks/${pdf}'); return false;">${pdf}</a></li></ul>`;
+            });
+
+            // Show modal after updating the list
+            const pdfModal = new bootstrap.Modal(document.getElementById('pdfModal'));
+            pdfModal.show();
+        }
+
+        function openPDF(pdfUrl) {
+            const carouselInner = document.getElementById('carouselInner');
+            const pdfContainer = document.getElementById('pdfCarouselContainer');
+            const pdfOverlay = document.getElementById('pdfOverlay');
+
+            carouselInner.innerHTML = ''; // Clear previous content
+            pdfContainer.classList.remove('hidden');
+            pdfOverlay.style.display = 'block'; // Show the overlay
+
+            const loadingTask = pdfjsLib.getDocument(pdfUrl);
+            loadingTask.promise.then(function (pdf) {
+                const numPages = pdf.numPages;
+                const currentPageNum = Math.floor(numPages / 2); // Display the middle page
+
+                // Load the previous page, current page, and next page
+                const pagesToLoad = [
+                    currentPageNum - 1, // Previous page
+                    currentPageNum,     // Current page
+                    currentPageNum + 1  // Next page
+                ];
+
+                pagesToLoad.forEach((pageNum, index) => {
+                    if (pageNum > 0 && pageNum <= numPages) {
+                        pdf.getPage(pageNum).then(function (page) {
+                            const scale = 1.5;
+                            const viewport = page.getViewport({ scale: scale });
+                            const canvas = document.createElement('canvas');
+                            canvas.width = viewport.width;
+                            canvas.height = viewport.height;
+
+                            const context = canvas.getContext('2d');
+                            const renderContext = {
+                                canvasContext: context,
+                                viewport: viewport
+                            };
+
+                            page.render(renderContext).promise.then(function () {
+                                const div = document.createElement('div');
+                                div.classList.add('carousel-item');
+                                if (index === 1) { // Center the current page
+                                    div.classList.add('active');
+                                }
+
+                                const img = document.createElement('img');
+                                img.src = canvas.toDataURL();
+                                img.classList.add('d-block', 'w-100');
+                                div.appendChild(img);
+                                carouselInner.appendChild(div);
+                            });
+                        });
+                    }
+                });
+            });
+
+            const pdfModal = bootstrap.Modal.getInstance(document.getElementById('pdfModal'));
+            if (pdfModal) {
+                pdfModal.hide();
+            }
+        }
+
+
+        function closePDF() {
+            const pdfContainer = document.getElementById('pdfCarouselContainer');
+            const pdfOverlay = document.getElementById('pdfOverlay');
+            pdfContainer.classList.add('hidden');
+            pdfOverlay.style.display = 'none'; // Hide the overlay
+        }
+
+    </script>
 
     <!-- Modal for PDF Links -->
     <div class="modal fade" id="pdfModal" tabindex="-1" aria-labelledby="pdfModalLabel" aria-hidden="true">
@@ -141,113 +581,14 @@
         </div>
     </div>
     <div id="pdfOverlay" onclick="closePDF()"></div>
-</div>
+    
 
         </div>
         </div>
-
-        <!-- Offcanvas for Enroll Now -->
-        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="courseOffcanvas"
-            aria-labelledby="courseOffcanvasLabel" style="z-index: 1111;">
-            <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="courseOffcanvasLabel">Course Details</h5>
-                <button type="button" class="btn-close btn-light" data-bs-dismiss="offcanvas"
-                    aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-                <form id="contactform">
-                    <!-- Enroll Now Course Name -->
-                    <div class="mb-3">
-                        <label for="courseNameEnroll" class="form-label">Course Name</label>
-                        <input type="text" class="form-control" id="courseNameEnroll" name="courseName" readonly>
-                    </div>
-                    <!-- NAME -->
-                    <div class="mb-3">
-                        <label for="Name" class="form-label">Name</label>
-                        <input type="text" class="form-control" id="Name" name="Name">
-                    </div>
-                    <!-- E-mail -->
-                    <div class="mb-3">
-                        <label for="e-mail" class="form-label">E-mail</label>
-                        <input type="email" class="form-control" id="e-mail" name="e-mail" required>
-                    </div>
-                    <!-- Mobile No -->
-                    <div class="mb-3">
-                        <label for="Mobile" class="form-label">Mobile</label>
-                        <input type="number" class="form-control" id="Mobile" name="Mobile" pattern="\d{10}"
-                            maxlength="10" required>
-                    </div>
-                    <!-- Message -->
-                    <div class="mb-3">
-                        <label for="message" class="form-label">Message</label>
-                        <textarea class="form-control" id="message" name="message" rows="2"></textarea>
-                    </div>
-
-                    <button type="submit" class="btn btn-primary">Send</button>
-                </form>
-            </div>
         </div>
-        <!-- Offcanvas for More Info -->
-        <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="courseOffcanvas1"
-            aria-labelledby="courseOffcanvasLabel1" style="z-index: 1111;">
-            <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="courseOffcanvasLabel1">More Info</h5>
-                <button type="button" class="btn-close btn-light" data-bs-dismiss="offcanvas"
-                    aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-                <!-- Display the course name as a heading -->
-                <h1 id="courseTitleMoreInfo" class="mb-3"></h1><br>
-                <h2>Description</h2><br>
-                <!-- Display the course description -->
-                <h4 id="courseDescriptionMoreInfo"></h4>
-            </div>
-        </div>
-        <!-- Scripts To display course name in canvas More Info & Enroll Now  -->
-        <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                // Auto-Fill Course Name in Enroll Now Offcanvas form
-                const courseOffcanvas = document.getElementById('courseOffcanvas');
-                const courseNameInputEnroll = document.getElementById('courseNameEnroll');
 
-                if (courseOffcanvas) {
-                    courseOffcanvas.addEventListener('show.bs.offcanvas', function (event) {
-                        const button = event.relatedTarget; // Button that triggered the offcanvas
-                        const courseName = button.getAttribute('data-course'); // Extract course name from data attribute
-                        if (courseNameInputEnroll) {
-                            courseNameInputEnroll.value = courseName; // Set the course name in the input field
-                        }
-                    });
-                }
-
-            });
-            // Auto-Fill Course Name and Description in More Info Offcanvas
-            document.addEventListener('DOMContentLoaded', function () {
-
-                const courseOffcanvas1 = document.getElementById('courseOffcanvas1');
-                const courseTitleMoreInfo = document.getElementById('courseTitleMoreInfo');
-                const courseDescriptionMoreInfo = document.getElementById('courseDescriptionMoreInfo');
-
-                if (courseOffcanvas1) {
-                    courseOffcanvas1.addEventListener('show.bs.offcanvas', function (event) {
-                        const button = event.relatedTarget; // Button that triggered the offcanvas
-                        const courseName = button.getAttribute('data-course'); // Extract course name from data attribute
-                        const courseDescription = button.getAttribute('data-description'); // Extract course description from data attribute
-
-                        if (courseTitleMoreInfo) {
-                            courseTitleMoreInfo.textContent = courseName; // Set the course name in the H1
-                        }
-
-                        if (courseDescriptionMoreInfo) {
-                            // Format the description as a list
-                            const descriptionItems = courseDescription.split(',').map(item => `<li>${item.trim()}</li>`).join('');
-                            courseDescriptionMoreInfo.innerHTML = `<ul>${descriptionItems}</ul>`; // Set the course description in the H4 as a list
-                        }
-                    });
-                }
-            });
-
-        </script>
+        
+     
     </section>
     <!--footer-->
     <script type="text/javascript" src="footer.js"></script>
@@ -318,8 +659,6 @@
 
 </html>
 
-
-<!-- JavaScript for handling the modal and form submission -->
 <!-- SweetAlert2 JS -->
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>

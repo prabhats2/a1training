@@ -3,299 +3,186 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PDF Pages Carousel</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
-
-    <script type="text/javascript" src="assets/json/junior_geeks.json"></script>
-    <script type="text/javascript" src="junior_geeks_coding.js"></script>
-    <script type="text/javascript" src="interview-Q-Ans.js"></script>
+    <title>PDF Carousel with Header & Footer</title>
     <style>
-        /* Main container styling */
-        .pdf-carousel-container {
-            background-color: #f9f9f9;
+        /* General Styling */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            box-sizing: border-box;
+        }
+
+        /* Header Styling */
+        header {
+            background-color: purple;
+            color: white;
+            text-align: center;
             padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            font-size: 24px;
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: purple;
+            color: white;
+            text-align: center;
+            padding: 10px;
             position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
             bottom: 0;
-            width: 100%; /* Full width */
-            height: 100vh; /* Full height */
-            margin: auto; /* Center the div */
-            overflow-y: hidden;
-            z-index: 1050; /* Ensure it stays above other elements */
-            display: flex;
-            flex-direction: column; /* Ensure vertical layout */
+            width: 100%;
         }
 
-        /* Hide the container by default */
-        .pdf-carousel-container.hidden {
-            display: none;
-        }
-
-        /* Carousel container to take up available height */
-        .carousel-container {
-            flex: 1;
-            display: flex;
-            align-items: center; /* Vertically center carousel */
-            justify-content: center; /* Horizontally center carousel */
-        }
-
-        /* Carousel items styling */
-        .carousel-item img {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            max-height: 80vh; /* Ensure image fills container height */
-            object-fit: contain; /* Ensure image fits nicely inside the div */
-        }
-
-        /* Custom styling for carousel controls */
-        .carousel-control-prev-icon,
-        .carousel-control-next-icon {
-            background-color: #000;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
+        /* Carousel Container Styling */
+        #pdfCarouselContainer {
             display: flex;
             justify-content: center;
             align-items: center;
+            position: relative;
+            height: 80vh;
+            overflow: hidden;
+            padding-top: 20px; /* Adding space below header */
+            padding-bottom: 50px; /* Adding space above footer */
         }
 
-        .carousel-control-prev-icon::before,
-        .carousel-control-next-icon::before {
-            font-size: 30px;
+        /* Individual PDF Item Styling */
+        .carousel-item {
+            width: 200px;
+            height: 300px;
+            margin: 0 10px;
+            background-color: purple;
             color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            transition: transform 0.5s ease, opacity 0.5s ease;
+            opacity: 0.5;
         }
 
-        .carousel-control-prev,
-        .carousel-control-next {
+        /* Styling for the active (center) PDF */
+        .carousel-item.active {
+            transform: scale(1.2);
+            opacity: 1;
+            z-index: 2;
+        }
+
+        /* Arrow Styling */
+        .arrow {
+            font-size: 30px;
+            color: purple;
+            cursor: pointer;
+            position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            opacity: 1;
-            z-index: 1;
         }
 
-        /* Close button styling */
-        .close-btn {
+        .arrow-left {
+            left: 10px;
+        }
+
+        .arrow-right {
+            right: 10px;
+        }
+
+        /* Close Button Styling */
+        #closeButton {
             position: absolute;
             top: 10px;
             right: 10px;
-            background-color: #dc3545;
-            border: none;
+            background-color: red;
             color: white;
-            padding: 8px 12px;
-            font-size: 16px;
+            padding: 10px 15px;
             cursor: pointer;
-            border-radius: 5px;
-            z-index: 1060;
+            font-size: 16px;
         }
 
-        /* Media query for mobile devices */
-        @media (max-width: 768px) {
-            .pdf-carousel-container {
-                width: 100%; /* Full width on mobile */
-                height: 100vh; /* Still full height */
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            .carousel-item {
+                width: 150px;
+                height: 200px;
             }
 
-            .carousel-item img {
-                max-height: 100%; /* Ensure the image fits within the container height */
+            .arrow {
+                font-size: 24px;
             }
 
-            .carousel-control-prev-icon,
-            .carousel-control-next-icon {
-                width: 40px;
-                height: 40px;
+            header, footer {
+                font-size: 18px;
             }
-        }
-
-        /* Overlay to detect outside clicks */
-        #pdfOverlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: transparent;
-            display: none; /* Initially hidden */
-            z-index: 1040; /* Ensure it's below the container */
         }
     </style>
 </head>
 <body>
 
-<div class="container">
-    
-    <h3>JavaScript</h3>
-    <!-- Button to Open Modal for PDF Links -->
-    <div class="d-grid">
-      <button type="button" class="btn btn-primary btn-block mt-2" data-bs-toggle="modal" data-bs-target="#pdfModal">
-        JavaScript Interview Questions
-      </button>
-    </div>
-    <h3>Kubernetes</h3>
-    <div class="d-grid mt-2">
-      <button type="button" class="btn btn-primary btn-block" data-bs-toggle="modal" data-bs-target="#pdfModal">
-        Kubernetes Interview Questions
-      </button>
-    </div>
-    <h3>Shell Scripting</h3>
-    <div class="d-grid mt-2">
-      <button type="button" class="btn btn-primary btn-block" data-bs-toggle="modal" data-bs-target="#pdfModal">
-        Shell Scripting Interview Questions
-      </button>
-    </div>
-    <h3>Ms Office </h3>
-    <div class="d-grid mt-2">
-      <button type="button" class="btn btn-primary btn-block" data-bs-toggle="modal" data-bs-target="#pdfModal">
-        MS Office Interview Questions
-      </button>
-    </div>
+    <!-- Header -->
+    <header>
+        PDF Carousel Viewer
+    </header>
 
-    <!-- Modal for PDF Links -->
-    <div class="modal fade" id="pdfModal" tabindex="-1" aria-labelledby="pdfModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="pdfModalLabel">Available PDFs</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                   <!--  <ul>
-                        <li><a href="#" onclick="openPDF('assets/pdf/junior_geeks/C&C++.pdf'); return false;">C++ PDF</a></li>
-                        <li><a href="#" onclick="openPDF('assets/pdf/junior_geeks/canva_designing.pdf'); return false;">Canva Designing PDF</a></li>
-                        <li><a href="#" onclick="openPDF('assets/pdf/junior_geeks/computer_science11th_syllabus.pdf'); return false;">Computer Science 11th PDF</a></li>
-                    </ul> -->
-                    <script>
-                        for(let i = 0; i < javascript.length;i++){
-                            //document.write(javascript[i]+'<br>')
-                            document.write(`
-                             <ul>
-                        <li><a href="#" onclick="openPDF('assets/pdf/junior_geeks/${javascript[i]}'); return false;">${javascript[i]}</a></li>
-                        
-                    </ul>
-                            `)
-                        }
-                        for(let k = 0; k < kubernetes.length;k++){
-                            //document.write(javascript[i]+'<br>')
-                            document.write(`
-                             <ul>
-                        <li><a href="#" onclick="openPDF('assets/pdf/junior_geeks/${kubernetes[k]}'); return false;">${kubernetes[k]}</a></li>
-                        
-                    </ul>
-                            `)
-                        }
-                    </script>
-                </div>
-            </div>
-        </div>
-    </div>
+    <!-- Carousel Container -->
+    <div id="pdfCarouselContainer">
+        <!-- Left Arrow -->
+        <div class="arrow arrow-left">&#8592;</div>
 
-    <!-- PDF Carousel Container -->
-    <div class="pdf-carousel-container hidden" id="pdfCarouselContainer">
+        <!-- PDF Pages (carousel items) -->
+        <div class="carousel-item">Page 1</div>
+        <div class="carousel-item">Page 2</div>
+        <div class="carousel-item active">Page 3</div> <!-- Active PDF (Center) -->
+        <div class="carousel-item">Page 4</div>
+        <div class="carousel-item">Page 5</div>
+
+        <!-- Right Arrow -->
+        <div class="arrow arrow-right">&#8594;</div>
+
         <!-- Close Button -->
-        <button class="close-btn" onclick="closePDF()">Close</button>
-        
-        <!-- Carousel for PDF Pages -->
-        <div id="pdfCarousel" class="carousel slide carousel-container" data-bs-ride="carousel">
-            <div class="carousel-inner" id="carouselInner">
-                <!-- PDF Pages will be loaded here dynamically -->
-            </div>
-
-            <!-- Carousel Controls for Navigating Left and Right -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#pdfCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#pdfCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
+        <div id="closeButton">CLOSE</div>
     </div>
 
-    <!-- Fullscreen overlay for detecting outside clicks -->
-    <div id="pdfOverlay" onclick="closePDF()"></div>
-</div>
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 PDF Viewer. All rights reserved.
+    </footer>
 
-<div id="modalContainer"></div>
+    <script>
+        // Select all carousel items and the arrows
+        const pdfItems = document.querySelectorAll('.carousel-item');
+        const leftArrow = document.querySelector('.arrow-left');
+        const rightArrow = document.querySelector('.arrow-right');
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
-<script>
-    function openPDF(pdfUrl) {
-        const carouselInner = document.getElementById('carouselInner');
-        const pdfContainer = document.getElementById('pdfCarouselContainer');
-        const pdfOverlay = document.getElementById('pdfOverlay');
+        let currentIndex = 2; // Index of the initially active item
 
-        // Clear previous content and display the PDF container
-        carouselInner.innerHTML = '';
-        pdfContainer.classList.remove('hidden');
-        pdfOverlay.style.display = 'block'; // Show the overlay
+        // Function to update carousel display
+        function updateCarousel() {
+            pdfItems.forEach((item, index) => {
+                item.classList.remove('active');
+                if (index === currentIndex) {
+                    item.classList.add('active');
+                }
+            });
+        }
 
-        // Load the PDF using pdf.js
-        const loadingTask = pdfjsLib.getDocument(pdfUrl);
-        loadingTask.promise.then(function(pdf) {
-            const numPages = pdf.numPages;
-
-            // Loop through each page and render it
-            for (let pageNum = 1; pageNum <= numPages; pageNum++) {
-                pdf.getPage(pageNum).then(function(page) {
-                    const scale = 1.5;
-                    const viewport = page.getViewport({ scale: scale });
-
-                    // Create a canvas element for this page
-                    const canvas = document.createElement('canvas');
-                    canvas.width = viewport.width;
-                    canvas.height = viewport.height;
-
-                    // Render the page onto the canvas
-                    const context = canvas.getContext('2d');
-                    const renderContext = {
-                        canvasContext: context,
-                        viewport: viewport
-                    };
-                    page.render(renderContext).promise.then(function() {
-                        // Add the page to the carousel as a new item
-                        const div = document.createElement('div');
-                        div.classList.add('carousel-item');
-                        if (pageNum === 1) {
-                            div.classList.add('active'); // Make the first page active
-                        }
-
-                        const img = document.createElement('img');
-                        img.src = canvas.toDataURL(); // Convert the canvas to an image
-                        img.classList.add('d-block');
-                        img.classList.add('w-100');
-
-                        div.appendChild(img);
-                        carouselInner.appendChild(div);
-                    });
-                });
-            }
-        }, function(reason) {
-            console.error(reason);
+        // Event listener for left arrow click
+        leftArrow.addEventListener('click', () => {
+            currentIndex = (currentIndex > 0) ? currentIndex - 1 : pdfItems.length - 1;
+            updateCarousel();
         });
 
-        // Close the modal when a PDF is opened
-        const pdfModal = bootstrap.Modal.getInstance(document.getElementById('pdfModal'));
-        if (pdfModal) {
-            pdfModal.hide();
-        }
-    }
+        // Event listener for right arrow click
+        rightArrow.addEventListener('click', () => {
+            currentIndex = (currentIndex < pdfItems.length - 1) ? currentIndex + 1 : 0;
+            updateCarousel();
+        });
 
-    // Function to close the PDF viewer
-    function closePDF() {
-        document.getElementById('pdfCarouselContainer').classList.add('hidden');
-        document.getElementById('pdfOverlay').style.display = 'none'; // Hide the overlay
+        // Initial update to set the correct active item
+        updateCarousel();
 
-        // Reopen the modal when closing the PDF viewer
-        const pdfModal = new bootstrap.Modal(document.getElementById('pdfModal'));
-        pdfModal.show();
-    }
-</script>
+        // Close button functionality
+        document.getElementById('closeButton').addEventListener('click', () => {
+            document.getElementById('pdfCarouselContainer').style.display = 'none';
+        });
+    </script>
 
 </body>
 </html>

@@ -1,155 +1,285 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PDF Pages Carousel</title>
+    <title>Responsive Download Syllabus</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+    <script type="text/javascript" src="meta.js"></script>
 
-    <script type="text/javascript" src="assets/json/junior_geeks.json"></script>
-    <script type="text/javascript" src="junior_geeks_coding.js"></script>
     <style>
-        /* Main container styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .header {
+            background-color: #4A00E0;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        .main-heading {
+            text-align: center;
+            font-size: 1.8rem;
+            margin: 20px 0;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            justify-items: center;
+        }
+
+        .grid-item {
+            background-color: #00a2ff;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 250px;
+            /* Updated max width for better spacing */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            /* Added shadow effect */
+            transition: box-shadow 0.3s ease;
+            /* Smooth transition effect */
+        }
+
+        .grid-item:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            /* Slightly stronger shadow on hover */
+        }
+
+
+
+
+        .download-btn {
+            background-color: white;
+            color: #4A00E0;
+            border: none;
+            padding: 10px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+            width: 100%;
+        }
+
+
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .main-heading {
+                font-size: 1.5rem;
+            }
+
+            .header h1 {
+                font-size: 1.6rem;
+            }
+
+            .grid-container {
+                gap: 15px;
+            }
+
+
+
+            .download-btn {
+                padding: 8px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .main-heading {
+                font-size: 1.2rem;
+            }
+
+            .header h1 {
+                font-size: 1.4rem;
+            }
+
+            .grid-item {
+                max-width: 150px;
+                padding: 15px;
+            }
+
+            .download-btn {
+                font-size: 0.9rem;
+                padding: 6px;
+            }
+
+            .footer {
+                font-size: 1rem;
+            }
+        }
+
+        /* PDF Carousel Styles */
         .pdf-carousel-container {
-            background-color: #f9f9f9;
+            background-color: rgba(0, 0, 0, 0.8);
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
-            width: 100%; /* Full width */
-            height: 100vh; /* Full height */
-            margin: auto; /* Center the div */
+            width: 100%;
+            height: 100vh;
+            margin: auto;
             overflow-y: hidden;
-            z-index: 1050; /* Ensure it stays above other elements */
+            z-index: 1050;
             display: flex;
-            flex-direction: column; /* Ensure vertical layout */
+            flex-direction: column;
         }
 
-        /* Hide the container by default */
         .pdf-carousel-container.hidden {
             display: none;
         }
 
-        /* Carousel container to take up available height */
         .carousel-container {
             flex: 1;
             display: flex;
-            align-items: center; /* Vertically center carousel */
-            justify-content: center; /* Horizontally center carousel */
+            align-items: center;
+            justify-content: center;
         }
 
-        /* Carousel items styling */
         .carousel-item img {
             display: block;
-            margin-left: auto;
-            margin-right: auto;
-            max-height: 80vh; /* Ensure image fills container height */
-            object-fit: contain; /* Ensure image fits nicely inside the div */
+            margin: 0 auto;
+            max-height: 80vh;
+            object-fit: contain;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
         }
 
-        /* Custom styling for carousel controls */
-        .carousel-control-prev-icon,
-        .carousel-control-next-icon {
-            background-color: #000;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .carousel-control-prev-icon::before,
-        .carousel-control-next-icon::before {
-            font-size: 30px;
-            color: white;
-        }
-
-        .carousel-control-prev,
-        .carousel-control-next {
-            top: 50%;
-            transform: translateY(-50%);
-            opacity: 1;
-            z-index: 1;
-        }
-
-        /* Close button styling */
         .close-btn {
             position: absolute;
             top: 10px;
             right: 10px;
             background-color: #dc3545;
-            border: none;
             color: white;
             padding: 8px 12px;
             font-size: 16px;
-            cursor: pointer;
             border-radius: 5px;
             z-index: 1060;
         }
 
-        /* Media query for mobile devices */
-        @media (max-width: 768px) {
-            .pdf-carousel-container {
-                width: 100%; /* Full width on mobile */
-                height: 100vh; /* Still full height */
-            }
-
-            .carousel-item img {
-                max-height: 100%; /* Ensure the image fits within the container height */
-            }
-
-            .carousel-control-prev-icon,
-            .carousel-control-next-icon {
-                width: 40px;
-                height: 40px;
-            }
-        }
-
-        /* Overlay to detect outside clicks */
         #pdfOverlay {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: transparent;
-            display: none; /* Initially hidden */
-            z-index: 1040; /* Ensure it's below the container */
+            background-color: rgba(0, 0, 0, 0.8);
+            display: none;
+            z-index: 1040;
+        }
+
+        .img-box {
+            background-color: white;
+            padding: 5px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: auto;
+            /* Remove fixed height */
+            width: 100%;
+            /* Make the image box responsive */
+        }
+
+        .img-box img {
+            max-width: 100%;
+            /* Images will scale responsively */
+            height: auto;
+            /* Maintain aspect ratio */
+            border-radius: 5px;
+            /* Optional: add rounded corners */
+            object-fit: contain;
+            /* Ensures image does not stretch */
         }
     </style>
 </head>
+
 <body>
 
-<div class="container">
-    <h3>Interactive PDF Viewer</h3>
+ 
+    <!-- Main Content Section -->
+    <main class="col-lg-12">
+        <h2 class="main-heading">Download Syllabus</h2>
+        <div class="grid-container">
 
-    <!-- Button to Open Modal for PDF Links -->
-    <div class="d-grid">
-      <button type="button" class="btn btn-primary btn-block mt-2" data-bs-toggle="modal" data-bs-target="#pdfModal">
-        JavaScript Interview Questions
-      </button>
-    </div>
-    <div class="d-grid mt-2">
-      <button type="button" class="btn btn-primary btn-block" data-bs-toggle="modal" data-bs-target="#pdfModal">
-        Kubernetes Interview Questions
-      </button>
-    </div>
-    <div class="d-grid mt-2">
-      <button type="button" class="btn btn-primary btn-block" data-bs-toggle="modal" data-bs-target="#pdfModal">
-        Shell Scripting Interview Questions
-      </button>
-    </div>
-    <div class="d-grid mt-2">
-      <button type="button" class="btn btn-primary btn-block" data-bs-toggle="modal" data-bs-target="#pdfModal">
-        MS Office Interview Questions
-      </button>
-    </div>
+            <div class="grid-item col-lg-3">
+                <p>JavaScript</p>
+                <div class="img-box"><img src="assets/images/Syllabus/javaScript.png" alt=""></div><br>
+                <button type="button" class="btn btn-primary btn-block mt-2"
+                    onclick="loadPDFs('javascript')">Download</button>
+            </div>
+            <div class="grid-item col-lg-3">
+                <p>Kubernetes</p>
+                <div class="img-box"><img src="assets/images/Syllabus/kubernetes.png" alt=""></div><br>
+                <button type="button" class="btn btn-primary btn-block"
+                    onclick="loadPDFs('kubernetes')">Download</button>
+            </div>
+            <div class="grid-item col-lg-3">
+                <p>Shell Scripting</p>
+                <div class="img-box"><img src="assets/images/Syllabus/shell_scripting.jpg" alt=""></div><br>
+                <button type="button" class="btn btn-primary btn-block"
+                    onclick="loadPDFs('shell_scripting')">Download</button>
+            </div>
+            <div class="grid-item col-lg-3">
+                <p>MS Office</p>
+                <div class="img-box"><img src="assets/images/Syllabus/ms-office.jpg" alt=""></div><br>
+                <button type="button" class="btn btn-primary btn-block"
+                    onclick="loadPDFs('ms_office')">Download</button>
+            </div>
+
+            <div class="grid-item col-lg-3">
+                <p>Python</p>
+                <div class="img-box"><img src="assets/images/Syllabus/python.png" alt=""></div><br>
+                <button type="button" class="btn btn-primary btn-block" onclick="loadPDFs('Python')">Download</button>
+            </div>
+            <div class="grid-item col-lg-3">
+                <p>Data Science</p>
+                <div class="img-box"><img src="assets/images/Syllabus/data-science.jpg" alt=""></div><br>
+                <button type="button" class="btn btn-primary btn-block"
+                    onclick="loadPDFs('Data_Science')">Download</button>
+            </div>
+            <div class="grid-item col-lg-3">
+                <p>Ai Machine Learning</p>
+                <div class="img-box"><img src="assets/images/Syllabus/ai-machine-learning.png" alt=""></div><br>
+                <button type="button" class="btn btn-primary btn-block"
+                    onclick="loadPDFs('Machine_learning')">Download</button>
+            </div>
+            <div class="grid-item col-lg-3">
+                <p>Web Development</p>
+                <div class="img-box"><img src="assets/images/Syllabus/web-development.png" alt=""></div><br>
+                <button type="button" class="btn btn-primary btn-block"
+                    onclick="loadPDFs('Web_Development')">Download</button>
+            </div>
+
+        </div>
+    </main>
 
     <!-- Modal for PDF Links -->
     <div class="modal fade" id="pdfModal" tabindex="-1" aria-labelledby="pdfModalLabel" aria-hidden="true">
@@ -160,28 +290,130 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <ul>
-                        <li><a href="#" onclick="openPDF('assets/pdf/junior_geeks/C&C++.pdf'); return false;">C++ PDF</a></li>
-                        <li><a href="#" onclick="openPDF('assets/pdf/junior_geeks/canva_designing.pdf'); return false;">Canva Designing PDF</a></li>
-                        <li><a href="#" onclick="openPDF('assets/pdf/junior_geeks/computer_science11th_syllabus.pdf'); return false;">Computer Science 11th PDF</a></li>
-                    </ul>
+                    <div id="pdfList"></div>
                 </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // JSON data
+        const data = {
+            javascript: ['ms_office.pdf'],
+            kubernetes: ['ms_office.pdf'],
+            shell_scripting: ['ms_office.pdf'],
+            ms_office: ['ms_office.pdf'],
+            Python: ['ms_office.pdf'],
+            Data_Science: ['ms_office.pdf'],
+            Machine_learning: ['ms_office.pdf'],
+            Web_Development: ['ms_office.pdf'],
+        };
+
+        // Load PDFs based on the selected category
+        function loadPDFs(category) {
+            const pdfList = document.getElementById('pdfList');
+            pdfList.innerHTML = ''; // Clear previous list
+
+            data[category].forEach(pdf => {
+                pdfList.innerHTML += `<ul><li><a href="#" onclick="openPDF('assets/pdf/junior_geeks/${pdf}'); return false;">${pdf}</a></li></ul>`;
+            });
+
+            // Show modal after updating the list
+            const pdfModal = new bootstrap.Modal(document.getElementById('pdfModal'));
+            pdfModal.show();
+        }
+
+        function openPDF(pdfUrl) {
+            const carouselInner = document.getElementById('carouselInner');
+            const pdfContainer = document.getElementById('pdfCarouselContainer');
+            const pdfOverlay = document.getElementById('pdfOverlay');
+
+            carouselInner.innerHTML = ''; // Clear previous content
+            pdfContainer.classList.remove('hidden');
+            pdfOverlay.style.display = 'block'; // Show the overlay
+
+            const loadingTask = pdfjsLib.getDocument(pdfUrl);
+            loadingTask.promise.then(function (pdf) {
+                const numPages = pdf.numPages;
+                const currentPageNum = Math.floor(numPages / 2); // Display the middle page
+
+                // Load the previous page, current page, and next page
+                const pagesToLoad = [
+                    currentPageNum - 1, // Previous page
+                    currentPageNum,     // Current page
+                    currentPageNum + 1  // Next page
+                ];
+
+                pagesToLoad.forEach((pageNum, index) => {
+                    if (pageNum > 0 && pageNum <= numPages) {
+                        pdf.getPage(pageNum).then(function (page) {
+                            const scale = 1.5;
+                            const viewport = page.getViewport({ scale: scale });
+                            const canvas = document.createElement('canvas');
+                            canvas.width = viewport.width;
+                            canvas.height = viewport.height;
+
+                            const context = canvas.getContext('2d');
+                            const renderContext = {
+                                canvasContext: context,
+                                viewport: viewport
+                            };
+
+                            page.render(renderContext).promise.then(function () {
+                                const div = document.createElement('div');
+                                div.classList.add('carousel-item');
+                                if (index === 1) { // Center the current page
+                                    div.classList.add('active');
+                                }
+
+                                const img = document.createElement('img');
+                                img.src = canvas.toDataURL();
+                                img.classList.add('d-block', 'w-100');
+                                div.appendChild(img);
+                                carouselInner.appendChild(div);
+                            });
+                        });
+                    }
+                });
+            });
+
+            const pdfModal = bootstrap.Modal.getInstance(document.getElementById('pdfModal'));
+            if (pdfModal) {
+                pdfModal.hide();
+            }
+        }
+
+
+        function closePDF() {
+            const pdfContainer = document.getElementById('pdfCarouselContainer');
+            const pdfOverlay = document.getElementById('pdfOverlay');
+            pdfContainer.classList.add('hidden');
+            pdfOverlay.style.display = 'none'; // Hide the overlay
+        }
+
+    </script>
+
+    <!-- Modal for PDF Links -->
+    <div class="modal fade" id="pdfModal" tabindex="-1" aria-labelledby="pdfModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="pdfModalLabel">Available PDFs</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="pdfList"></div>
             </div>
         </div>
     </div>
 
     <!-- PDF Carousel Container -->
     <div class="pdf-carousel-container hidden" id="pdfCarouselContainer">
-        <!-- Close Button -->
         <button class="close-btn" onclick="closePDF()">Close</button>
-        
-        <!-- Carousel for PDF Pages -->
         <div id="pdfCarousel" class="carousel slide carousel-container" data-bs-ride="carousel">
-            <div class="carousel-inner" id="carouselInner">
-                <!-- PDF Pages will be loaded here dynamically -->
-            </div>
-
-            <!-- Carousel Controls for Navigating Left and Right -->
+            <div class="carousel-inner" id="carouselInner"></div>
             <button class="carousel-control-prev" type="button" data-bs-target="#pdfCarousel" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
@@ -192,86 +424,8 @@
             </button>
         </div>
     </div>
-
-    <!-- Fullscreen overlay for detecting outside clicks -->
     <div id="pdfOverlay" onclick="closePDF()"></div>
-</div>
-
-<div id="modalContainer"></div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
-<script>
-    function openPDF(pdfUrl) {
-        const carouselInner = document.getElementById('carouselInner');
-        const pdfContainer = document.getElementById('pdfCarouselContainer');
-        const pdfOverlay = document.getElementById('pdfOverlay');
-
-        // Clear previous content and display the PDF container
-        carouselInner.innerHTML = '';
-        pdfContainer.classList.remove('hidden');
-        pdfOverlay.style.display = 'block'; // Show the overlay
-
-        // Load the PDF using pdf.js
-        const loadingTask = pdfjsLib.getDocument(pdfUrl);
-        loadingTask.promise.then(function(pdf) {
-            const numPages = pdf.numPages;
-
-            // Loop through each page and render it
-            for (let pageNum = 1; pageNum <= numPages; pageNum++) {
-                pdf.getPage(pageNum).then(function(page) {
-                    const scale = 1.5;
-                    const viewport = page.getViewport({ scale: scale });
-
-                    // Create a canvas element for this page
-                    const canvas = document.createElement('canvas');
-                    canvas.width = viewport.width;
-                    canvas.height = viewport.height;
-
-                    // Render the page onto the canvas
-                    const context = canvas.getContext('2d');
-                    const renderContext = {
-                        canvasContext: context,
-                        viewport: viewport
-                    };
-                    page.render(renderContext).promise.then(function() {
-                        // Add the page to the carousel as a new item
-                        const div = document.createElement('div');
-                        div.classList.add('carousel-item');
-                        if (pageNum === 1) {
-                            div.classList.add('active'); // Make the first page active
-                        }
-
-                        const img = document.createElement('img');
-                        img.src = canvas.toDataURL(); // Convert the canvas to an image
-                        img.classList.add('d-block');
-                        img.classList.add('w-100');
-
-                        div.appendChild(img);
-                        carouselInner.appendChild(div);
-                    });
-                });
-            }
-        }, function(reason) {
-            console.error(reason);
-        });
-
-        // Close the modal when a PDF is opened
-        const pdfModal = bootstrap.Modal.getInstance(document.getElementById('pdfModal'));
-        if (pdfModal) {
-            pdfModal.hide();
-        }
-    }
-
-    // Function to close the PDF viewer
-    function closePDF() {
-        document.getElementById('pdfCarouselContainer').classList.add('hidden');
-        document.getElementById('pdfOverlay').style.display = 'none'; // Hide the overlay
-
-        // Reopen the modal when closing the PDF viewer
-        const pdfModal = new bootstrap.Modal(document.getElementById('pdfModal'));
-        pdfModal.show();
-    }
-</script>
-
+    
 </body>
+
 </html>
