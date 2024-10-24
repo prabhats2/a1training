@@ -1,0 +1,51 @@
+{
+    "syllabus": [
+      {
+        "title": "JavaScript",
+        "image": "assets/images/Syllabus/javaScript.png",
+        "category": "javascript"
+      },
+      {
+        "title": "Kubernetes",
+        "image": "assets/images/Syllabus/kubernetes.png",
+        "category": "kubernetes"
+      },
+      {
+        "title": "Shell Scripting",
+        "image": "assets/images/Syllabus/shell_scripting.jpg",
+        "category": "shell_scripting"
+      },
+      {
+        "title": "Jenkins",
+        "image": "assets/images/Syllabus/jenkins-training.jpg",
+        "category": "Jenkins"
+        
+      },
+      {
+        "title": "MS Office",
+        "image": "assets/images/Syllabus/ms-office.jpg",
+        "category": "ms_office"
+      },
+      {
+        "title": "Python",
+        "image": "assets/images/Syllabus/python.png",
+        "category": "Python"
+      },
+      {
+        "title": "Data Science",
+        "image": "assets/images/Syllabus/data-science.jpg",
+        "category": "Data_Science"
+      },
+      {
+        "title": "AI Machine Learning",
+        "image": "assets/images/Syllabus/ai-machine-learning.png",
+        "category": "Machine_learning"
+      },
+      {
+        "title": "Web Development",
+        "image": "assets/images/Syllabus/web-development.png",
+        "category": "Web_Development"
+      }
+    ]
+  }
+  
