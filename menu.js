@@ -47,7 +47,7 @@ document.write(`  <!-- Sub Header -->
                                 <li><a href="junior-geeks-coding.html">Junior Geeks Courses</a></li>
                             </ul>
                         </li>
-                          <li><a href="#">Interview Q/A</a></li>
+                          <li><a href="interview-Q-ans.html">Interview Q/A</a></li>
                           <li><a href="notes.html">Notes</a></li>
 
                         <li class="has-sub">

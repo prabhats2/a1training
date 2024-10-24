@@ -146,6 +146,17 @@ var junior ={
             "syllabus": ["assets/pdf/junior_geeks/ms_office.pdf"],
             "syllabus_name": ["MS Office Course Syllabus"]
         },
+         {
+            "course_name": "Basic Computer",
+            "class":["class-5-8"],
+            "pdf": "MS_Office.pdf",
+            "title": "Basic_Computer",
+            "image": "basic_computer.png",
+            "download": "course_1",
+            "description": "Basic_Computer",
+            "syllabus": ["assets/pdf/junior_geeks/basic_computer.pdf"],
+            "syllabus_name": ["Basic Computer Syllabus"]
+        },
         {
             "course_name": "Tally",
             "class": ["class-9-10", "class-11-12"],

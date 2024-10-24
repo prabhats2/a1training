@@ -45,7 +45,17 @@ document.write(`  <section class="contact-us" id="contact" style="background-col
                       transition-duration: 0.4s;
                       cursor: pointer;
                     }
+                    
+                    .button0 {
+                      background-color: white;
+                      color: black;
+                      border: 2px solid #04AA6D;
+                    }
 
+                    .button0:hover {
+                      background-color: purple;
+                      color: white;
+                    }
                     .button1 {
                       background-color: white;
                       color: black;
@@ -105,6 +115,7 @@ document.write(`  <section class="contact-us" id="contact" style="background-col
 
                   <!-- Buttons -->
                   <div class="tab-container-fluid">
+                   <div class="tab-btn button button0" onclick="openTab('tab0')">NOIDA </div>
                     <div class="tab-btn button button1" onclick="openTab('tab1')">NOIDA EXTENSION</div>
                     <div class="tab-btn button button2" onclick="openTab('tab2')">GREATER NOIDA BRANCH I</div>
                     <div class="tab-btn button button3" onclick="openTab('tab3')">GREATER NOIDA BRANCH II</div>
@@ -112,6 +123,14 @@ document.write(`  <section class="contact-us" id="contact" style="background-col
                   </div>
 
                   <!-- Hidden content for each tab -->
+                   <div id="tab0" class="tab-content" style="display:none;">
+                    <ul class="contact">
+                      <h6><strong>Noida</strong></h6>
+                      <li><p><strong>Address:- </strong>G-8 Ground Floor, Krishna Complex, Sector-31, Noida-201301, U.P.</p></li>
+                      <li><p><i class="fa fa-phone"></i> <strong>Phone:</strong> +91 8368979712,6380486914</p></li>
+                      <li><p><i class="fa fa-envelope"></i> <strong>Email:</strong> a1training167@gmail.com</p></li>
+                    </ul>
+                  </div>
                   <div id="tab1" class="tab-content" style="display:none;">
                     <ul class="contact">
                       <h6><strong>Noida Extension</strong></h6>

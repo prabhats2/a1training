@@ -38,21 +38,55 @@
             height: 150px;
             text-align: center;
         }
-
+    
         img {
             width: 39%;
             margin-left: 20PX;
         }
-
+    
         h4 {
             padding-left: 180px;
         }
-</style>
+    
+        .search-container {
+            position: relative;
+            display: inline-block;
+            width: 50%;
+            /* Default for larger screens */
+        }
+    
+        .search-input {
+            width: 100%;
+            padding: 12px 40px 12px 20px;
+            font-size: 16px;
+            border-radius: 25px;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        }
+    
+        .voice-icon {
+            position: absolute;
+            right: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+    
+        #micIcon {
+            font-size: 20px;
+            color: #333;
+        }
+    
+        @media (max-width: 768px) {
+            .search-container {
+                width: 100%;
+                /* Full width (col-12 equivalent) on mobile */
+            }
+        }
+    </style>
 
 </head>
-
 <body>
-     
     <!--menu-->
     <script type="text/javascript" src="menu.js"></script>
     <!--menu end-->
@@ -62,16 +96,14 @@
             <div class="col-lg-12" style="text-align:center;">
                 <h6>Don't Learn Simply. Learn with Project</h6>
                 <h2>Download Quality Notes By A1 Training Institute</h2>
-                
-                <div style="position: relative; display: inline-block; width: 50%;">
+                <div class="search-container">
                     <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for e-notes.." title="Type name..."
-                        style="width: 100%; padding: 12px 40px 12px 20px; font-size: 16px; border-radius: 25px; border: 1px solid #ccc; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);">
-                        <span onclick="startVoiceSearch()" id="voiceIcon" style="position: absolute; right: 30px; top: 50%; transform: translateY(-50%); cursor: pointer;">
-                            <i class="fa fa-microphone" id="micIcon" style="font-size: 20px; color: #333;"></i>
-                        </span>
-                        
+                        class="search-input">
+                    <span onclick="startVoiceSearch()" id="voiceIcon" class="voice-icon">
+                        <i class="fa fa-microphone" id="micIcon"></i>
+                    </span>
                 </div>
-            
+                
                 <ul id="myUL" style="list-style-type: none; padding: 0; margin-top: 20px; display: none;">
                     <li style="padding: 10px;">Course 1: git</li>
                     <li style="padding: 10px;">Course 2: Linux</li>

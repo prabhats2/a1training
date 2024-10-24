@@ -2,276 +2,248 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="author" content="Template Mo">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Interview Q & ANS</title>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
 
-  <!-- Bootstrap and jQuery -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        .grid-item {
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
 
-  <script type="text/javascript" src="meta.js"></script>
+        .pdf-list {
+            margin-top: 20px;
+        }
 
-  <!-- Custom Styling -->
-  <style>
-    .course-item {
-      display: block;
-      opacity: 1;
-      transform: scale(1);
-      transition: all 0.3s ease-in-out;
-    }
+        .pdf-category {
+            margin-bottom: 15px;
+        }
 
-    .courses {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-    }
-
-    .course-item.hide {
-      display: none;
-      opacity: 0;
-    }
-
-    .n {
-      overflow: scroll;
-      height: 800px;
-    }
-
-    .m {
-      margin-top: 100px;
-      height: 900px;
-    }
-
-    .no-content-message {
-      background-color: #f8d7da;
-      color: #721c24;
-      border: 1px solid #f5c6cb;
-      padding: 10px;
-      border-radius: 5px;
-      text-align: center;
-      margin-top: 20px;
-      font-weight: bold;
-    }
-
-    .icon {
-      font-size: none;
-      color: red;
-      animation: blink 1s infinite;
-    }
-
-    @keyframes blink {
-      0% {
-        opacity: 1;
-      }
-
-      50% {
-        opacity: 0;
-      }
-
-      100% {
-        opacity: 1;
-      }
-    }
-
-    /* Responsive layout */
-    @media (max-width: 768px) {
-      .course-item {
-        flex: 1 1 calc(50% - 20px);
-      }
-    }
-
-    @media (max-width: 480px) {
-      .course-item {
-        flex: 1 1 100%;
-      }
-    }
-  </style>
-<script type="text/javascript" src="assets/json/junior_geeks.json"></script>
-<script type="text/javascript" src="junior_geeks_coding.js"></script>
-  <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
-  <link rel="stylesheet" href="assets/css/fontawesome.css">
-  <link rel="stylesheet" href="assets/css/templatemo-edu-meeting.css">
-  <link rel="stylesheet" href="assets/css/owl.css">
-  <link rel="stylesheet" href="assets/css/lightbox.css">
-
+        .search-container {
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 
 <body>
-  <!-- Menu -->
-  <script type="text/javascript" src="menu.js"></script>
+    <section class="heading-page header-text" id="top">
+        <div class="container">
+            <div class="col-lg-12" style="text-align:center;">
+                <h6>Don't Learn Simply. Learn with Project</h6>
+                <h2>Download Interview Q & ANS</h2>
+                
+                <!-- Updated Search Container -->
+                <div class="search-container">
+                    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for Interview Q / Ans..." title="Type name..." class="search-input">
+                    <span onclick="startVoiceSearch()" id="voiceIcon" class="voice-icon">
+                        <i class="fa fa-microphone" id="micIcon"></i>
+                    </span>
+                </div>
 
-  <section class="heading-page header-text" id="top">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <h6>HERE ARE OUR POPULAR JUNIOR COURSE</h6>
-          <h2>Junior Geeks Courses</h2>
-          <div class="container my-4">
-            <input type="text" id="searchBar" class="search-bar form-control" placeholder="Search Courses..." onkeyup="filterItems()">
-            <div id="noContentMessage" class="no-content-message" style="display: none;">
-              <p>No content found</p>
+                <ul id="myUL" style="list-style-type: none; padding: 0; margin-top: 20px;">
+                    <li style="padding: 10px;">Course 1: MS Office</li>
+                    <li style="padding: 10px;">Course 2: Linux</li>
+                    <li style="padding: 10px;">Course 3: Docker</li>
+                    <li style="padding: 10px;">Course 4: Kubernetes</li>
+                    <li style="padding: 10px;">Course 5: Jenkins</li>
+                    <li style="padding: 10px;">Course 6: Terraform</li>
+                    <li style="padding: 10px;">Course 7: AWS</li>
+                    <li style="padding: 10px;">Course 8: Azure</li>
+                    <li style="padding: 10px;">Course 9: GCP</li>
+                    <li style="padding: 10px;">Course 10: Python</li>
+                    <li style="padding: 10px;">Course 11: Shell Scripting</li>
+                    <li style="padding: 10px;">Course 12: Networking</li>
+                    <li style="padding: 10px;">Course 13: MS DOS</li>
+                    <li style="padding: 10px;">Course 14: HTML & CSS</li>
+                    <li style="padding: 10px;">Course 15: C/C++</li>
+                    <li style="padding: 10px;">Course 16: JavaScript</li>
+                    <li style="padding: 10px;">Course 17: Java</li>
+                    <li style="padding: 10px;">Course 18: SQL</li>
+                    <li style="padding: 10px;">Course 19: React</li>
+                    <li style="padding: 10px;">Course 20: Angular</li>
+                    <li style="padding: 10px;">Course 21: Node.js</li>
+                </ul>
+
+                <script>
+                    // Function to filter courses based on input
+                    function myFunction() {
+                        const input = document.getElementById('myInput');
+                        const filter = input.value.replace(/[^a-zA-Z0-9\s]/g, '').toUpperCase();
+                        const ul = document.getElementById("myUL");
+                        const li = ul.getElementsByTagName('li');
+                        let visibleCount = 0;
+
+                        for (let i = 0; i < li.length; i++) {
+                            const txtValue = li[i].textContent || li[i].innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                li[i].style.display = "";
+                                visibleCount++;
+                            } else {
+                                li[i].style.display = "none";
+                            }
+                        }
+
+                        // Show message if no results are found
+                        const noResultMessage = document.getElementById('noResultMessage');
+                        if (visibleCount === 0) {
+                            if (!noResultMessage) {
+                                const message = document.createElement('p');
+                                message.id = 'noResultMessage';
+                                message.textContent = 'No results found';
+                                ul.parentNode.appendChild(message);
+                            }
+                        } else {
+                            if (noResultMessage) {
+                                noResultMessage.remove();
+                            }
+                        }
+                    }
+
+                    // Function to start voice recognition with mic color change
+                    function startVoiceSearch() {
+                        const icon = document.getElementById('micIcon');
+                        icon.style.color = 'red';
+
+                        if ('webkitSpeechRecognition' in window) {
+                            const recognition = new webkitSpeechRecognition();
+                            recognition.lang = 'en-US';
+                            recognition.interimResults = false;
+                            recognition.maxAlternatives = 1;
+
+                            recognition.start();
+
+                            recognition.onresult = function (event) {
+                                let transcript = event.results[0][0].transcript.trim().replace(/\.$/, '');
+                                document.getElementById('myInput').value = transcript;
+                                myFunction();
+                            };
+
+                            recognition.onerror = function () {
+                                console.error('Speech recognition error');
+                                icon.style.color = '#333';
+                            };
+
+                            recognition.onend = function () {
+                                icon.style.color = '#333';
+                            };
+                        } else {
+                            alert("Sorry, your browser doesn't support speech recognition.");
+                            icon.style.color = '#333';
+                        }
+                    }
+                </script>
             </div>
-          </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="meetings-page" id="meetings">
-    <div class="container">
-      <div class="col-lg-12">
-        <div class="filters">
-          <ul class="filters">
-            <li class="active" data-filter="*">All Classes</li>
-            <li data-filter=".class-5-8">Class 5-8</li>
-            <li data-filter=".class-9-10">Class 9-10</li>
-            <li data-filter=".class-11-12">Class 11-12</li>
-          </ul>
-        </div>
-
-        <!-- Course Container -->
-        <div class="container mt-5">
-          <div class="row" id="courses-container">
-            <!-- Courses will be dynamically added here -->
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <script type="text/javascript" src="footer.js"></script>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const coursesContainer = document.getElementById('courses-container');
-
-      // Fetch the courses data from junior_geeks.json
-      fetch('assets/json/junior_geeks.json')
-        .then(response => {
-          if (!response.ok) {
-            throw new Error('Network response was not ok');
-          }
-          return response.json();
-        })
-        .then(courses => {
-          // Dynamically render courses
-          courses.col1.forEach((course, i) => {
-            const courseElement = document.createElement('div');
-            const classNames = Array.isArray(course.class) ? course.class : [course.class];
-            courseElement.classList.add('col-lg-4', 'templatemo-item-col', 'course-item', ...classNames);
-
-            courseElement.innerHTML = `
-              <div class="meeting-item">
-                <div class="thumb">
-                  <div class="price">
-                    <span class="fa fa-cloud-download icon" data-bs-toggle="modal" data-bs-target="#syllabusModal${i}" style="font-size:23px;color:red"></span>
-                  </div>
-                  <img src="assets/images/junior-geeks/${course.image}">
+    <section class="meetings-page" id="meetings">
+        <div class="container">
+            <main class="col-lg-12">
+                <h2 class="main-heading">Download Syllabus</h2>
+                <div class="grid-container" id="syllabusGrid">
+                    <!-- Syllabus items will be dynamically added here -->
                 </div>
-                <div class="down-content text-center">
-                  <h4>${course.course_name}</h4>
-                  <br>
-                  <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#${courses.col1[i].title}" >
-                            More Info
-                          </button>
-                 <div class="modal" id="myModal${i}">
-                          <div class="modal-dialog">
-                            <div class="modal-content">
-                              <div class="modal-header">
-                                <h4 class="modal-title">${courses1.col1[i].course_name}</h4>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                              </div>
-                              <div class="modal-body">
-                                 ${courses1.col1[i].course_name}
-                                 ${courses1.col1[i].descriptionContent}
-                                
-                                
-                              </div>
-                              <div class="modal-footer">
-                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#contactModal" style="margin-right: 10px;">Contact Us</button>
-                </div>
-              </div>
-            `;
-            coursesContainer.appendChild(courseElement);
+            </main>
 
-            const modalMarkup = `
-              <div class="modal fade" id="syllabusModal${i}" tabindex="-1" aria-labelledby="syllabusModalLabel${i}" aria-hidden="true">
+            <script>
+                // Function to fetch syllabus data from the JSON file
+                async function fetchSyllabusData() {
+                    try {
+                        const response = await fetch('assets/json/interview-Q-Ans.json');
+                        if (!response.ok) throw new Error('Network response was not ok');
+                        const data = await response.json();
+                        generateSyllabusGrid(data.syllabus);
+                    } catch (error) {
+                        console.error('There has been a problem with your fetch operation:', error);
+                    }
+                }
+
+                // Function to generate the grid items
+                function generateSyllabusGrid(syllabus) {
+                    const gridContainer = document.getElementById('syllabusGrid');
+                    syllabus.forEach(item => {
+                        const gridItem = document.createElement('div');
+                        gridItem.classList.add('grid-item', 'col-lg-3');
+                        gridItem.innerHTML = `
+                            <p>${item.title}</p>
+                            <div class="img-box"><img src="${item.image}" alt="${item.title}"></div>
+                            <button type="button" class="btn btn-primary btn-block" onclick="loadPDFs('${item.category}')">Download</button>
+                        `;
+                        gridContainer.appendChild(gridItem);
+                    });
+                }
+
+                // Call the function to fetch data and populate the grid
+                fetchSyllabusData();
+            </script>
+
+            <!-- Modal for PDF Links -->
+            <div class="modal fade" id="pdfModal" tabindex="-1" aria-labelledby="pdfModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h4 class="modal-title" id="syllabusModalLabel${i}">${course.title.replace(/_/g, ' ')}</h4>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="pdfModalLabel">Available PDFs</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div id="pdfList"></div>
+                        </div>
                     </div>
-                    <div class="modal-body">
-                      <h2 align="left">Download Syllabus</h2>
-                      <ul id="pdfList${i}" align="left"></ul>
-                      <br>
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-                    </div>
-                  </div>
                 </div>
-              </div>
-            `;
-            document.body.insertAdjacentHTML('beforeend', modalMarkup);
+            </div>
 
-            const pdfList = document.getElementById(`pdfList${i}`);
-            course.syllabus.forEach((syllabus, index) => {
-              const listItem = document.createElement('li');
-              const anchor = document.createElement('a');
-              anchor.href = syllabus;
-              anchor.textContent = `${course.syllabus_name[index]}`;
-              anchor.target = "_blank";
-              listItem.appendChild(anchor);
-              pdfList.appendChild(listItem);
-            });
-          });
+            <script>
+                // JSON data for PDF downloads
+                const pdfData = {
+                    javascript: ['ms_office.pdf'],
+                    kubernetes: ['ms_office.pdf'],
+                    shell_scripting: ['ms_office.pdf'],
+                    jenkins: ['ms_office.pdf'],
+                    ms_office: ['ms_office.pdf'],
+                    python: ['ms_office.pdf'],
+                    data_science: ['ms_office.pdf'],
+                    machine_learning: ['ms_office.pdf'],
+                    web_development: ['ms_office.pdf'],
+                };
 
-          // Add event listener for More Info buttons
-          const moreInfoButtons = document.querySelectorAll('.more-info');
-          moreInfoButtons.forEach(button => {
-            button.addEventListener('click', function () {
-              const title = this.getAttribute('data-title');
-              const description = this.getAttribute('data-description');
-              const features = this.getAttribute('data-features');
+                // Load PDFs based on the selected category
+                function loadPDFs(category) {
+                    const pdfListContainer = document.getElementById('pdfList');
+                    pdfListContainer.innerHTML = ''; // Clear previous results
 
-              // Set modal content
-              document.getElementById('modal-title').textContent = title;
-              document.getElementById('modal-description').textContent = description;
-              document.getElementById('modal-features').textContent = features;
-            });
-          });
-        })
-        .catch(error => {
-          console.error('There was a problem with the fetch operation:', error);
-        });
-    });
+                    if (pdfData[category]) {
+                        pdfData[category].forEach(pdf => {
+                            const pdfLink = document.createElement('a');
+                            pdfLink.href = `assets/pdf/${pdf}`;
+                            pdfLink.target = '_blank';
+                            pdfLink.innerText = pdf;
+                            pdfListContainer.appendChild(pdfLink);
+                            pdfListContainer.appendChild(document.createElement('br'));
+                        });
+                    } else {
+                        pdfListContainer.innerHTML = '<p>No PDFs available for this category.</p>';
+                    }
 
-    // Filter logic
-    $(document).ready(function () {
-      $(".filters li").click(function () {
-        var filterValue = $(this).attr('data-filter');
-        $(".filters li").removeClass('active');
-        $(this).addClass('active');
-        $(".course-item").hide();
-        if (filterValue === "*") {
-          $(".course-item").show();
-        } else {
-          $(filterValue).show();
-        }
-      });
-    });
-  </script>
+                    // Show modal
+                    const pdfModal = new bootstrap.Modal(document.getElementById('pdfModal'));
+                    pdfModal.show();
+                }
+            </script>
+        </div>
+    </section>
 
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
