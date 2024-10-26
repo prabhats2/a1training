@@ -32,11 +32,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-<!-- Include Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
-<script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
+    <!-- Include Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
+    <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
     <script type="text/javascript" src="meta.js"></script>
     <script type="text/javascript" src="assets/json/interview-Q-Ans.json"></script>
     <style>
@@ -318,6 +318,24 @@
                 /* Full width (col-12 equivalent) on mobile */
             }
         }
+        #download {
+            margin-left:80pc;
+            color: red;
+            font-size: 25px;
+            color: white; 
+            animation: pop 1.5s ease infinite;
+           
+        }
+    
+    /* Popping animation */
+    @keyframes pop {
+      0%, 100% {
+        transform: scale(1); /* Normal size */
+      }
+      50% {
+        transform: scale(1.2); /* Increase size */
+      }
+    }
     </style>
 
     <!-- Additional CSS Files -->
@@ -464,188 +482,243 @@
                 <div class="grid-container" id="syllabusGrid">
                     <!-- Syllabus items will be dynamically added here -->
                 </div>
-            </main>          
+            </main>
         </div>
     </section>
 
-<!-- Modal for PDF Links -->
-<div class="modal fade" id="pdfModal" tabindex="-1" aria-labelledby="pdfModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="pdfModalLabel">Available PDFs</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <div id="pdfList"></div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+    <!-- Modal for PDF Links -->
+    <div class="modal fade" id="pdfModal" tabindex="-1" aria-labelledby="pdfModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="pdfModalLabel">Available PDFs</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="pdfList"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-<!-- PDF Carousel Container -->
-<div class="pdf-carousel-container hidden" id="pdfCarouselContainer">
-    <button class="close-btn" onclick="closePDF()">Close</button>
-    <div id="pdfCarousel" class="carousel slide carousel-container" data-bs-ride="carousel">
-        <div class="carousel-inner" id="carouselInner"></div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#pdfCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        
-        <button class="carousel-control-next" type="button" data-bs-target="#pdfCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
+    <!-- PDF Carousel Container -->
+    <div class="pdf-carousel-container hidden" id="pdfCarouselContainer">
+        <button class="close-btn" onclick="closePDF()">Close</button>
+    
+        <!-- Download button added here -->
+        <a id="downloadButton" href="#" download  title="Download PDF">
+            <i class="fas fa-download" id="download"></i>
+        </a>
+    
+        <div id="pdfCarousel" class="carousel slide carousel-container" data-bs-ride="carousel">
+            <div class="carousel-inner" id="carouselInner"></div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#pdfCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+    
+            <button class="carousel-control-next" type="button" data-bs-target="#pdfCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
     </div>
-</div>
-
-<script>
-    // JSON data
-    const data = {
-        javascript: ['javascript-Q-ans.pdf', 'javascript_beginner_to_professional.pdf'],
-        kubernetes: ['Kubernetes_Cluster_Setup_Guide.pdf', 'Kubernetes_Commands_Overview.pdf', 'Kubernetes_Interview_Questions.pdf', 'Kubernetes_Manifest_file.pdf'],
-        shell_scripting: ['Introduction_to_Shell_Scripting.pdf'],
-        Jenkins: ['jenkins.pdf'],
-        ms_office: ['ms_office.pdf'],
-        Python: ['python_junior.pdf'],
-        Data_Science: ['#.pdf'],
-        Machine_learning: ['#.pdf'],
-        Web_Development: ['#.pdf'],
-    };
-
-    // Function to load PDFs based on the selected category and set the modal title
-    function loadPDFs(category, title) {
-        const pdfList = document.getElementById('pdfList');
-        const pdfModalLabel = document.getElementById('pdfModalLabel');
-        pdfList.innerHTML = ''; // Clear previous list
-        pdfModalLabel.innerText = `PDFs for ${title}`; // Set the modal title
-
-        data[category].forEach(pdf => {
-            pdfList.innerHTML += `
-                <ul>
-                    <li>
-                        <a href="#" onclick="openPDF('assets/pdf/syllabus/${pdf}'); return false;">${pdf}</a>
-                        <a href="assets/pdf/syllabus/${pdf}" download class="btn btn-link" title="Download">
-                            <i class="fas fa-download"></i>
-                        </a>
-                    </li>
-                </ul>`;
-        });
-
-        // Show modal after updating the list
-        const pdfModal = new bootstrap.Modal(document.getElementById('pdfModal'));
-        pdfModal.show();
-    }
-
-    function openPDF(pdfUrl) {
-        const carouselInner = document.getElementById('carouselInner');
-        const pdfContainer = document.getElementById('pdfCarouselContainer');
-        const pdfOverlay = document.getElementById('pdfOverlay');
-
-        carouselInner.innerHTML = ''; // Clear previous content
-        pdfContainer.classList.remove('hidden');
-        pdfOverlay.style.display = 'block'; // Show the overlay
-
-        const loadingTask = pdfjsLib.getDocument(pdfUrl);
-        loadingTask.promise.then(function (pdf) {
-            const numPages = pdf.numPages;
-            const currentPageNum = Math.floor(numPages / 2); // Display the middle page
-
-            // Load the previous page, current page, and next page
-            const pagesToLoad = [
-                currentPageNum - 1, // Previous page
-                currentPageNum,     // Current page
-                currentPageNum + 1  // Next page
-            ];
-
-            pagesToLoad.forEach((pageNum, index) => {
-                if (pageNum > 0 && pageNum <= numPages) {
+    
+    <script>
+        // JSON data
+        const data = {
+            javascript: ['javascript-Q-ans.pdf', 'javascript_beginner_to_professional.pdf'],
+            kubernetes: ['#.pdf '],
+            shell_scripting: ['#.pdf'],
+            Jenkins: ['jenkins.pdf'],
+            Python: ['#.pdf'],
+            Data_Science: ['#.pdf'],
+            Machine_learning: ['#.pdf'],
+            Web_Development: ['#.pdf'],
+            Linux: ['#.pdf'],
+            Docker_Training: ['#.pdf'],
+            Ansible_Training: ['#.pdf'],
+            Terraform: ['#.pdf'],
+            AWS_Training: ['#.pdf'],
+            GCP: ['#.pdf'],
+            AZURE_Training: ['#.pdf'],
+            MEAN_Stack: ['#.pdf'],
+            React_Js: ['#.pdf'],
+            Web_Designing: ['#.pdf'],
+            UI_UX: ['#.pdf'],
+            PHP_Full_Stack: ['#.pdf'],
+            PHP_Experts: ['#.pdf'],
+            Angular_Js: ['#.pdf'],
+            Devops_Training: ['#.pdf'],
+            Unix_Shell_Scripting_Training: ['#.pdf'],
+            C_And_Cplus_Training: ['#.pdf'],
+            NET_Training: ['#.pdf'],
+            JavaScript_Training: ['#.pdf'],
+            MySQL_Training: ['#.pdf'],
+            SQL_Server_DBA_Training: ['#.pdf'],
+            MongoDB_Training: ['#.pdf'],
+            Android: ['#.pdf'],
+            I_Phone: ['#.pdf'],
+            Machine_Learning_Training: ['#.pdf'],
+            Data_Science_Training: ['#.pdf'],
+            Deep_Learning_Course: ['#.pdf'],
+            Artificial_Intelligence_Course: ['#.pdf'],
+            Data_Science_With_Python: ['#.pdf'],
+            Power_Bi: ['#.pdf'],
+            MIS: ['#.pdf'],
+            Advanced_Microsoft_Excel: ['#.pdf'],
+            Advanced_Digital_Marketing: ['#.pdf'],
+            Digital_Marketing: ['#.pdf'],
+            Six_Weeks_Summer_Training: ['#.pdf'],
+            Six_Months_Industrial_Training: ['#.pdf'],
+            Graphic_Designing: ['#.pdf'],
+            Motion_Graphic_Course: ['#.pdf'],
+            Multimedia_And_Animation: ['#.pdf'],
+            Graphic_Motion_Pro_Course: ['#.pdf'],
+            Videograpy_Course: ['#.pdf'],
+            Scriptwriting_and_Story_Boarding: ['#.pdf'],
+            Film_Making: ['#.pdf'],
+            Graphic_Designing_Pro: ['#.pdf'],
+            Manual_Selenium: ['#.pdf'],
+            Full_Stack_QA: ['#.pdf'],
+            Java_With_Selenium: ['#.pdf'],
+            REST_Assured_API: ['#.pdf'],
+            Appium_Testing: ['#.pdf'],
+            API_Testing: ['#.pdf'],
+            Manual_Testing: ['#.pdf'],
+            Primavera_P6_Testing: ['#.pdf'],
+            Agile_Testing: ['#.pdf'],
+            Microsoft_Excel_Training: ['#.pdf'],
+            Scrum_Master_Training: ['#.pdf'],
+        };
+    
+        // Function to open and display a PDF in the carousel
+        function openPDF(pdfUrl) {
+            const carouselInner = document.getElementById('carouselInner');
+            const pdfContainer = document.getElementById('pdfCarouselContainer');
+            const pdfOverlay = document.getElementById('pdfOverlay');
+            const downloadButton = document.getElementById('downloadButton');
+    
+            // Set the download link for the current PDF
+            downloadButton.href = pdfUrl;
+    
+            carouselInner.innerHTML = ''; // Clear previous content
+            pdfContainer.classList.remove('hidden');
+            pdfOverlay.style.display = 'block'; // Show the overlay
+    
+            const loadingTask = pdfjsLib.getDocument(pdfUrl);
+            loadingTask.promise.then(function (pdf) {
+                const numPages = pdf.numPages;
+                const pagesToLoad = Array.from({ length: Math.min(numPages, 10) }, (_, i) => i + 1); // Load up to 10 pages
+    
+                pagesToLoad.forEach((pageNum, index) => {
                     pdf.getPage(pageNum).then(function (page) {
                         const scale = 1.5;
                         const viewport = page.getViewport({ scale: scale });
                         const canvas = document.createElement('canvas');
                         canvas.width = viewport.width;
                         canvas.height = viewport.height;
-
+    
                         const context = canvas.getContext('2d');
                         const renderContext = {
                             canvasContext: context,
                             viewport: viewport
                         };
-
+    
                         page.render(renderContext).promise.then(function () {
                             const div = document.createElement('div');
                             div.classList.add('carousel-item');
-                            if (index === 1) { // Center the current page
-                                div.classList.add('active');
+                            if (index === 0) {
+                                div.classList.add('active'); // Set the first page as active
                             }
-
+    
                             const img = document.createElement('img');
                             img.src = canvas.toDataURL();
-                            img.classList.add('d-block', 'w-100');
+                            img.classList.add('d-block');
                             div.appendChild(img);
                             carouselInner.appendChild(div);
                         });
                     });
-                }
+                });
             });
-        });
-
-        const pdfModal = bootstrap.Modal.getInstance(document.getElementById('pdfModal'));
-        if (pdfModal) {
-            pdfModal.hide();
+    
+            const pdfModal = bootstrap.Modal.getInstance(document.getElementById('pdfModal'));
+            if (pdfModal) {
+                pdfModal.hide();
+            }
         }
-    }
-
-    function closePDF() {
-        const pdfContainer = document.getElementById('pdfCarouselContainer');
-        const pdfOverlay = document.getElementById('pdfOverlay');
-        pdfContainer.classList.add('hidden');
-        pdfOverlay.style.display = 'none'; // Hide the overlay
-    }
-
-    // Function to fetch syllabus data from the JSON file
-    async function fetchSyllabusData() {
-        try {
-            const response = await fetch('assets/json/interview-Q-Ans.json');
-            if (!response.ok) throw new Error('Network response was not ok');
-            const data = await response.json();
-            generateSyllabusGrid(data.syllabus);
-        } catch (error) {
-            console.error('There has been a problem with your fetch operation:', error);
+    
+        // Function to close the PDF carousel
+        function closePDF() {
+            const pdfContainer = document.getElementById('pdfCarouselContainer');
+            const pdfOverlay = document.getElementById('pdfOverlay');
+            pdfContainer.classList.add('hidden');
+            pdfOverlay.style.display = 'none'; // Hide the overlay
         }
-    }
-
-    // Function to generate the grid items
-    function generateSyllabusGrid(syllabus) {
-        const gridContainer = document.getElementById('syllabusGrid');
-        gridContainer.innerHTML = ''; // Clear previous content
-        syllabus.forEach(item => {
-            const gridItem = document.createElement('div');
-            gridItem.classList.add('grid-item', 'col-lg-3');
-            gridItem.innerHTML = `
+    
+        // Function to load PDFs for a specific category and set the modal title
+        function loadPDFs(category, title) {
+            const pdfList = document.getElementById('pdfList');
+            const pdfModalLabel = document.getElementById('pdfModalLabel');
+            pdfList.innerHTML = ''; // Clear previous list
+            pdfModalLabel.innerText = `PDFs for ${title}`; // Set the modal title
+    
+            data[category].forEach(pdf => {
+                pdfList.innerHTML += `
+                <ul>
+                    <li>
+                        <a href="#" onclick="openPDF('assets/pdf/syllabus/${pdf}'); return false;">${pdf}</a>
+                        <a href="assets/pdf/syllabus/${pdf}" download  title="Download">
+                            <i class="fas fa-download"></i>
+                        </a>
+                    </li>
+                </ul>`;
+            });
+    
+            // Show modal after updating the list
+            const pdfModal = new bootstrap.Modal(document.getElementById('pdfModal'));
+            pdfModal.show();
+        }
+    
+        // Function to fetch syllabus data from the JSON file
+        async function fetchSyllabusData() {
+            try {
+                const response = await fetch('assets/json/interview-Q-Ans.json');
+                if (!response.ok) throw new Error('Network response was not ok');
+                const data = await response.json();
+                generateSyllabusGrid(data.syllabus);
+            } catch (error) {
+                console.error('There has been a problem with your fetch operation:', error);
+            }
+        }
+    
+        // Function to generate the grid items
+        function generateSyllabusGrid(syllabus) {
+            const gridContainer = document.getElementById('syllabusGrid');
+            gridContainer.innerHTML = ''; // Clear previous content
+            syllabus.forEach(item => {
+                const gridItem = document.createElement('div');
+                gridItem.classList.add('grid-item', 'col-lg-3');
+                gridItem.innerHTML = `
                 <p>${item.title}</p>
                 <div class="img-box"><img src="${item.image}" alt="${item.title}"></div><br>
                 <button type="button" class="btn btn-primary btn-block" onclick="loadPDFs('${item.category}', '${item.title}')">Download</button>
             `;
-            gridContainer.appendChild(gridItem);
-        });
-    }
-
-    // Call the function to fetch data and populate the grid
-    fetchSyllabusData();
-</script>
-
-
-
+                gridContainer.appendChild(gridItem);
+            });
+        }
+    
+        // Initialize by fetching syllabus data
+        fetchSyllabusData();
+    </script>
+    
     <div id="pdfOverlay" onclick="closePDF()"></div>
 
     <script type="text/javascript" src="footer.js"></script>
-    
+
 </body>
 
 </html>

@@ -1,5 +1,286 @@
 {
     "syllabus": [
+      
+      {
+        "title": "Linux",
+        "image": "assets/images/Syllabus/Linux.jpg",
+        "category": "Linux"
+      },
+      {
+        "title": "Docker Training",
+        "image": "assets/images/Syllabus/docker-certification-training.jpg",
+        "category": "Docker_Training"
+      },
+      {
+        "title": "Ansible Training",
+        "image": "assets/images/Syllabus/ansible.png",
+        "category": "Ansible_Training"
+      },
+      {
+        "title": "Terraform",
+        "image": "assets/images/Syllabus/terraform.png",
+        "category": "Terraform"
+      },
+      {
+        "title": "AWS Training",
+        "image": "assets/images/Syllabus/aws.png",
+        "category": "AWS_Training"
+      },
+      {
+        "title": "GCP",
+        "image": "assets/images/Syllabus/gcp.png",
+        "category": "GCP"
+      },
+      {
+        "title": "AZURE Training",
+        "image": "assets/images/Syllabus/azure.png",
+        "category": "AZURE_Training"
+      },
+      {
+        "title": "MEAN Stack",
+        "image": "assets/images/Syllabus/mean_stack.png",
+        "category": "MEAN_Stack"
+      },
+      {
+        "title": "MERN Stack",
+        "image": "assets/images/Syllabus/mern_stack.jpg",
+        "category": "MERN Stack"
+      },
+      {
+        "title": "React Js",
+        "image": "assets/images/Syllabus/react-js-training.png",
+        "category": "React_Js"
+      },
+      {
+        "title": "Web Designing",
+        "image": "assets/images/Syllabus/web-design.png",
+        "category": "Web_Designing"
+      },
+      {
+        "title": "UI/UX",
+        "image": "assets/images/Syllabus/ui_development.jpg",
+        "category": "UI_UX"
+      },
+      {
+        "title": "PHP Full Stack",
+        "image": "assets/images/Syllabus/php-full-stack.jpg",
+        "category": "PHP_Full_Stack"
+      },
+      {
+        "title": "PHP Experts",
+        "image": "assets/images/Syllabus/php-experts.jpg",
+        "category": "PHP_Experts"
+      },
+      {
+        "title": "Angular Js",
+        "image": "assets/images/Syllabus/angular-training.png",
+        "category": "Angular_Js"
+      },
+      {
+        "title": "Devops Training",
+        "image": "assets/images/Syllabus/devops_training.jpg",
+        "category": "Devops_Training"
+      },
+      {
+        "title": "Unix Shell Scripting Training",
+        "image": "assets/images/Syllabus/unix_shell_scripting_training.png",
+        "category": "Unix_Shell_Scripting_Training"
+      },
+      {
+        "title": "C And C++ Training",
+        "image": "assets/images/Syllabus/c_c++.png",
+        "category": "C_And_Cplus_Training"
+      },
+      {
+        "title": ".NET Training",
+        "image": "assets/images/Syllabus/net-training.png",
+        "category": "NET_Training"
+      },
+      {
+        "title": "JavaScript Training",
+        "image": "assets/images/Syllabus/javaScript.png",
+        "category": "JavaScript_Training"
+      },
+      {
+        "title": "MySQL Training",
+        "image": "assets/images/Syllabus/my-sql.jpg",
+        "category": "MySQL_Training"
+      },
+      {
+        "title": "SQL Server DBA Training",
+        "image": "assets/images/Syllabus/sql-server-dba-training.png",
+        "category": "SQL_Server_DBA_Training"
+      },
+      {
+        "title": "MongoDB Training",
+        "image": "assets/images/Syllabus/mongodb.jpg",
+        "category": "MongoDB_Training"
+      },
+      {
+        "title": "Android",
+        "image": "assets/images/Syllabus/android-training.jpg",
+        "category": "Android"
+      },
+      {
+        "title": "I-Phone",
+        "image": "assets/images/Syllabus/I-Phone.jpg",
+        "category": "I_Phone"
+      },
+      {
+        "title": "Machine Learning Training",
+        "image": "assets/images/Syllabus/ai-machine-learning.png",
+        "category": "Machine_Learning_Training"
+      },
+      {
+        "title": "Data Science Training",
+        "image": "assets/images/Syllabus/data-science.jpg",
+        "category": "Data_Science_Training"
+      },
+      {
+        "title": "Deep Learning Course",
+        "image": "assets/images/Syllabus/Deep-learning-courses.jpg",
+        "category": "Deep_Learning_Course"
+      },
+      {
+        "title": "Artificial Intelligence Course",
+        "image": "assets/images/Syllabus/artificial intelligence.jpg",
+        "category": "Artificial_Intelligence_Course"
+      },
+      {
+        "title": "Data Science With Python",
+        "image": "assets/images/Syllabus/data-science-with-python.png",
+        "category": "Data_Science_With_Python"
+      },
+      {
+        "title": "Power Bi",
+        "image": "assets/images/Syllabus/power-bi.jpg",
+        "category": "Power_Bi"
+      },
+      {
+        "title": "MIS",
+        "image": "assets/images/Syllabus/mis.png",
+        "category": "MIS"
+      },
+      {
+        "title": "Advanced Microsoft Excel",
+        "image": "assets/images/Syllabus/microsoft Excel testing.jpg",
+        "category": "Advanced_Microsoft_Excel"
+      },
+      {
+        "title": "Advanced Digital Marketing",
+        "image": "assets/images/Syllabus/advanced-digital-marketing.jpg",
+        "category": "Advanced_Digital_Marketing"
+      },
+      {
+        "title": "Digital Marketing",
+        "image": "assets/images/Syllabus/digital-marketing.jpg",
+        "category": "Digital_Marketing"
+      },
+      {
+        "title": "6 Weeks Summer Training",
+        "image": "assets/images/Syllabus/6 week.jpg",
+        "category": "Six_Weeks_Summer_Training"
+      },
+      {
+        "title": "6 Months Industrial Training",
+        "image": "assets/images/Syllabus/6 Months.jpg",
+        "category": "Six_Months_Industrial_Training"
+      },
+      {
+        "title": "Graphic Designing",
+        "image": "assets/images/Syllabus/Graphic-Design.jpg",
+        "category": "Graphic_Designing"
+      },
+      {
+        "title": "Motion Graphic Course",
+        "image": "assets/images/Syllabus/motion.jpg",
+        "category": "Motion_Graphic_Course"
+      },
+      {
+        "title": "Multimedia & Animation",
+        "image": "assets/images/Syllabus/multimedia-ana animation diploma.jpg",
+        "category": "Multimedia_And_Animation"
+      },
+      {
+        "title": "Graphic Motion Pro Course",
+        "image": "assets/images/Syllabus/graphic motion pro course.jpg",
+        "category": "Graphic_Motion_Pro_Course"
+      },
+      {
+        "title": "Videograpy Course",
+        "image": "assets/images/Syllabus/Videograpy course.jpg",
+        "category": "Videograpy_Course"
+      },
+      {
+        "title": "Scriptwriting & Story Boarding",
+        "image": "assets/images/Syllabus/scriptwriting.png",
+        "category": "Scriptwriting_and_Story_Boarding"
+      },
+      {
+        "title": "Film Making",
+        "image": "assets/images/Syllabus/Film Making.jpg",
+        "category": "Film_Making"
+      },
+      {
+        "title": "Graphic Designing Pro",
+        "image": "assets/images/Syllabus/Graphic Designing Pro.jpg",
+        "category": "Graphic_Designing_Pro"
+      },
+      {
+        "title": "Manual + Selenium",
+        "image": "assets/images/Syllabus/manual_selenium.jpg",
+        "category": "Manual_Selenium"
+      },
+      {
+        "title": "Full Stack QA",
+        "image": "assets/images/Syllabus/Full Stack QA.png",
+        "category": "Full_Stack_QA"
+      },
+      {
+        "title": "Java With Selenium",
+        "image": "assets/images/Syllabus/java with selenium.jpg",
+        "category": "Java_With_Selenium"
+      },
+      {
+        "title": "REST Assured API",
+        "image": "assets/images/Syllabus/Rest Assured Api.jpg",
+        "category": "REST_Assured_API"
+      },
+      {
+        "title": "Appium Testing",
+        "image": "assets/images/Syllabus/Appium testing.png",
+        "category": "Appium_Testing"
+      },
+      {
+        "title": "API Testing",
+        "image": "assets/images/Syllabus/api_testing.jpg",
+        "category": "API_Testing"
+      },
+      {
+        "title": "Manual Testing",
+        "image": "assets/images/Syllabus/manual testing.jpg",
+        "category": "Manual_Testing"
+      },
+      {
+        "title": "Primavera P6 Testing",
+        "image": "assets/images/Syllabus/Primavera P6 Testing.jpg",
+        "category": "Primavera_P6_Testing"
+      },
+      {
+        "title": "Agile Testing",
+        "image": "assets/images/Syllabus/Agile-Testing.jpg",
+        "category": "Agile_Testing"
+      },
+      {
+        "title": "Microsoft Excel Training",
+        "image": "assets/images/Syllabus/Excel-Training.jpg",
+        "category": "Microsoft_Excel_Training"
+      },
+      {
+        "title": "Scrum Master Training",
+        "image": "assets/images/Syllabus/Scrum Master Traing.jpg",
+        "category": "Scrum_Master_Training"
+      },
       {
         "title": "JavaScript",
         "image": "assets/images/Syllabus/javaScript.png",
@@ -20,11 +301,6 @@
         "image": "assets/images/Syllabus/jenkins-training.jpg",
         "category": "Jenkins"
         
-      },
-      {
-        "title": "MS Office",
-        "image": "assets/images/Syllabus/ms-office.jpg",
-        "category": "ms_office"
       },
       {
         "title": "Python",

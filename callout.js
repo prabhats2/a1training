@@ -165,13 +165,14 @@ document.write(`<!-- Callout on the right side -->
 
 <!-- Callout on the left side -->
 <div class="callout1">
-  <a href="junior_geeks_coding.html"><div class="callout1-header">Junior Geeks Coding</div></a>
+  <a href="junior-geeks-coding.html"><div class="callout1-header">Junior Geeks Coding</div></a>
   <span class="closebtn" onclick="this.parentElement.style.display='none';">×</span>
   <div class="callout1-container">
     <!-- Image slider -->
 <div class="slider1"> 
 
-  <a href="#" onclick="openModalOnText1('Tally');"><img class="slides1" src="assets/images/junior-geeks/tally.png" alt="tally"></a>  
+  <a href="#" onclick="openModalOnText1('Computer_Science_11th');"><img class="slides1" src="assets/images/junior-geeks/computer_science11th.png" alt="computer Science 11th"></a>
+   <a href="#" onclick="openModalOnText1('Computer_Science_12th');"><img class="slides1" src="assets/images/junior-geeks/computer_science12th.png" alt="computer Science 12th"></a>  
   <a href="#" onclick="openModalOnText1('Python');"><img class="slides1" src="assets/images/junior-geeks/python.png" alt="python"></a>
 
     
@@ -194,7 +195,7 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 function openModalOnText1(modalId) {
     localStorage.setItem('modalToShow', modalId);
-    window.open('junior_geeks_coding.html', '_blank');
+    window.open('junior-geeks-coding.html', '_blank');
 }
 // The added script for handling the modal based on URL parameters
 document.addEventListener("DOMContentLoaded", function() {
