@@ -2,8 +2,23 @@
     "syllabus": [
       
       {
+        "title": "Shell Scripting",
+        "image": "assets/images/Syllabus/shell_scripting.jpg",
+        "category": "shell_scripting"
+      },
+      {
+        "title": "Jenkins",
+        "image": "assets/images/Syllabus/jenkins-training.jpg",
+        "category": "Jenkins"
+      },
+      {
+        "title": "Python",
+        "image": "assets/images/Syllabus/python.png",
+        "category": "Python"
+      },
+      {
         "title": "Linux",
-        "image": "assets/images/Syllabus/Linux.jpg",
+        "image": "assets/images/Syllabus/linux.jpg",
         "category": "Linux"
       },
       {
@@ -12,14 +27,29 @@
         "category": "Docker_Training"
       },
       {
+        "title": "Terraform",
+        "image": "assets/images/Syllabus/terraform.png",
+        "category": "Terraform"
+      },
+      {
         "title": "Ansible Training",
         "image": "assets/images/Syllabus/ansible.png",
         "category": "Ansible_Training"
       },
       {
-        "title": "Terraform",
-        "image": "assets/images/Syllabus/terraform.png",
-        "category": "Terraform"
+        "title": "Kubernetes",
+        "image": "assets/images/Syllabus/kubernetes.png",
+        "category": "kubernetes"
+      },
+      {
+        "title": "Devops Training",
+        "image": "assets/images/Syllabus/devops_training.jpg",
+        "category": "Devops_Training"
+      },
+      {
+        "title": "Unix Shell Scripting Training",
+        "image": "assets/images/Syllabus/unix_shell_scripting_training.png",
+        "category": "Unix_Shell_Scripting_Training"
       },
       {
         "title": "AWS Training",
@@ -35,6 +65,11 @@
         "title": "AZURE Training",
         "image": "assets/images/Syllabus/azure.png",
         "category": "AZURE_Training"
+      },
+      {
+        "title": "JavaScript Training",
+        "image": "assets/images/Syllabus/javaScript.png",
+        "category": "JavaScript_Training"
       },
       {
         "title": "MEAN Stack",
@@ -77,18 +112,8 @@
         "category": "Angular_Js"
       },
       {
-        "title": "Devops Training",
-        "image": "assets/images/Syllabus/devops_training.jpg",
-        "category": "Devops_Training"
-      },
-      {
-        "title": "Unix Shell Scripting Training",
-        "image": "assets/images/Syllabus/unix_shell_scripting_training.png",
-        "category": "Unix_Shell_Scripting_Training"
-      },
-      {
         "title": "C And C++ Training",
-        "image": "assets/images/Syllabus/c_c++.png",
+        "image": "assets/images/Syllabus/c_cplus.png",
         "category": "C_And_Cplus_Training"
       },
       {
@@ -96,11 +121,7 @@
         "image": "assets/images/Syllabus/net-training.png",
         "category": "NET_Training"
       },
-      {
-        "title": "JavaScript Training",
-        "image": "assets/images/Syllabus/javaScript.png",
-        "category": "JavaScript_Training"
-      },
+     
       {
         "title": "MySQL Training",
         "image": "assets/images/Syllabus/my-sql.jpg",
@@ -123,7 +144,7 @@
       },
       {
         "title": "I-Phone",
-        "image": "assets/images/Syllabus/I-Phone.jpg",
+        "image": "assets/images/Syllabus/i_phone.jpg",
         "category": "I_Phone"
       },
       {
@@ -286,27 +307,7 @@
         "image": "assets/images/Syllabus/javaScript.png",
         "category": "javascript"
       },
-      {
-        "title": "Kubernetes",
-        "image": "assets/images/Syllabus/kubernetes.png",
-        "category": "kubernetes"
-      },
-      {
-        "title": "Shell Scripting",
-        "image": "assets/images/Syllabus/shell_scripting.jpg",
-        "category": "shell_scripting"
-      },
-      {
-        "title": "Jenkins",
-        "image": "assets/images/Syllabus/jenkins-training.jpg",
-        "category": "Jenkins"
-        
-      },
-      {
-        "title": "Python",
-        "image": "assets/images/Syllabus/python.png",
-        "category": "Python"
-      },
+      
       {
         "title": "Data Science",
         "image": "assets/images/Syllabus/data-science.jpg",

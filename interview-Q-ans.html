@@ -39,304 +39,224 @@
     <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
     <script type="text/javascript" src="meta.js"></script>
     <script type="text/javascript" src="assets/json/interview-Q-Ans.json"></script>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
+    body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
 
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        /* Display four columns on larger screens */
+        gap: 20px;
+        padding: 20px;
+        justify-items: center;
+        justify-content: center;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .grid-item {
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+        text-align: center;
+        border-radius: 10px;
+        width: 100%;
+        max-width: 250px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: box-shadow 0.3s ease;
+        border: 2px solid #4A00E0;
+    }
+
+    .grid-item:hover {
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    .download-btn {
+        background-color: white;
+        color: #4A00E0;
+        border: none;
+        padding: 10px;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 5px;
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    @media (max-width: 768px) {
         .grid-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            padding: 20px;
-            justify-items: center;
-        }
-
-        .grid-item {
-            background-color: rgba(255, 255, 255, 0.8);
-            /* Semi-transparent white for better contrast */
-            padding: 20px;
-            text-align: center;
-            border-radius: 10px;
-            width: 100%;
-            max-width: 250px;
-            /* Max width for item */
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            /* Shadow effect */
-            transition: box-shadow 0.3s ease;
-            /* Smooth transition for hover effect */
-            border: 2px solid #4A00E0;
-            ;
-            /* Purple border */
-        }
-
-        .grid-item:hover {
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-            /* Enhanced shadow on hover */
+            grid-template-columns: repeat(2, 1fr);
+            /* Two columns on smaller screens */
+            gap: 15px;
         }
 
         .download-btn {
-            background-color: white;
-            /* Button background */
-            color: #4A00E0;
-            /* Button text color */
-            border: none;
-            /* No border */
-            padding: 10px;
-            /* Padding for button */
-            font-weight: bold;
-            /* Bold text */
-            cursor: pointer;
-            /* Pointer cursor */
-            border-radius: 5px;
-            /* Rounded corners */
-            margin-top: 10px;
-            /* Margin above button */
-            width: 100%;
-            /* Full width button */
+            padding: 8px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .grid-container {
+            grid-template-columns: repeat(2, 1fr);
+            /* Two columns on mobile view */
+            gap: 10px;
         }
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .main-heading {
-                font-size: 1.5rem;
-                /* Responsive heading size */
-            }
-
-            .header h1 {
-                font-size: 1.6rem;
-                /* Responsive header size */
-            }
-
-            .grid-container {
-                gap: 15px;
-                /* Reduced gap for smaller screens */
-            }
-
-            .download-btn {
-                padding: 8px;
-                /* Reduced padding for buttons */
-            }
+        .grid-item {
+            max-width: 150px;
         }
 
-        @media (max-width: 480px) {
-            .main-heading {
-                font-size: 1.2rem;
-                /* Smaller heading size */
-            }
-
-            .header h1 {
-                font-size: 1.4rem;
-                /* Smaller header size */
-            }
-
-            .grid-item {
-                max-width: 150px;
-                /* Smaller max width for items */
-                padding: 15px;
-                /* Reduced padding */
-            }
-
-            .download-btn {
-                font-size: 0.9rem;
-                /* Smaller button text */
-                padding: 6px;
-                /* Reduced button padding */
-            }
-
-            .footer {
-                font-size: 1rem;
-                /* Footer text size */
-            }
+        .download-btn {
+            font-size: 0.9rem;
+            padding: 6px;
         }
+    }
 
-        /* PDF Carousel Styles */
-        .pdf-carousel-container {
-            background-color: rgba(0, 0, 0, 0.8);
-            /* Dark background for the carousel */
-            padding: 20px;
-            /* Padding for the carousel */
-            border-radius: 10px;
-            /* Rounded corners */
-            position: fixed;
-            /* Fixed position for full-screen */
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            width: 100%;
-            height: 100vh;
-            /* Full height */
-            margin: auto;
-            /* Centering */
-            overflow-y: hidden;
-            /* Disable vertical scrolling */
-            z-index: 1050;
-            /* Above other elements */
-            display: flex;
-            /* Flexbox for layout */
-            flex-direction: column;
-            /* Column layout */
-        }
+    /* PDF Carousel Styles */
+    .pdf-carousel-container {
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 20px;
+        border-radius: 10px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100vh;
+        margin: auto;
+        overflow-y: hidden;
+        z-index: 1050;
+        display: flex;
+        flex-direction: column;
+    }
 
-        .pdf-carousel-container.hidden {
-            display: none;
-            /* Hide when not needed */
-        }
+    .pdf-carousel-container.hidden {
+        display: none;
+    }
 
-        .carousel-container {
-            flex: 1;
-            /* Flexible size for carousel container */
-            display: flex;
-            align-items: center;
-            /* Center align */
-            justify-content: center;
-            /* Center justify */
-        }
+    .carousel-container {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
-        .carousel-item img {
-            display: block;
-            /* Block display */
-            margin: 0 auto;
-            /* Centered */
-            max-height: 80vh;
-            /* Limit max height */
-            object-fit: contain;
-            /* Maintain aspect ratio */
-            box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
-            /* Light shadow */
-        }
+    .carousel-item img {
+        display: block;
+        margin: 0 auto;
+        max-height: 80vh;
+        object-fit: contain;
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    }
 
-        .close-btn {
-            position: absolute;
-            /* Absolute positioning for close button */
-            top: 10px;
-            right: 10px;
-            background-color: #dc3545;
-            /* Red background */
-            color: white;
-            /* White text */
-            padding: 8px 12px;
-            /* Padding */
-            font-size: 16px;
-            /* Font size */
-            border-radius: 5px;
-            /* Rounded corners */
-            z-index: 1060;
-            /* Above carousel */
-        }
+    .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background-color: #dc3545;
+        color: white;
+        padding: 8px 12px;
+        font-size: 16px;
+        border-radius: 5px;
+        z-index: 1060;
+    }
 
-        #pdfOverlay {
-            position: fixed;
-            /* Fixed overlay for full screen */
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
-            /* Dark overlay */
-            display: none;
-            /* Hidden by default */
-            z-index: 1040;
-            /* Below close button */
-        }
+    #pdfOverlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        display: none;
+        z-index: 1040;
+    }
 
-        .img-box {
-            background-color: white;
-            /* White background for image box */
-            padding: 5px;
-            /* Padding */
-            border-radius: 5px;
-            /* Rounded corners */
-            display: flex;
-            /* Flexbox for center alignment */
-            justify-content: center;
-            /* Center content */
-            align-items: center;
-            /* Center items */
-            height: auto;
-            /* Auto height */
-            width: 100%;
-            /* Full width */
-        }
+    .img-box {
+        background-color: white;
+        padding: 5px;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
 
-        .img-box img {
-            max-width: 100%;
-            /* Responsive images */
-            height: auto;
-            /* Maintain aspect ratio */
-            border-radius: 5px;
-            /* Rounded corners */
-            object-fit: contain;
-            /* Maintain image aspect ratio */
-        }
+    .img-box img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 5px;
+        object-fit: contain;
+    }
 
+    .search-container {
+        position: relative;
+        display: inline-block;
+        width: 50%;
+    }
+
+    .search-input {
+        width: 100%;
+        padding: 12px 40px 12px 20px;
+        font-size: 16px;
+        border-radius: 25px;
+        border: 1px solid #ccc;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .voice-icon {
+        position: absolute;
+        right: 30px;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+    }
+
+    #micIcon {
+        font-size: 20px;
+        color: #333;
+    }
+
+    @media (max-width: 768px) {
         .search-container {
-            position: relative;
-            display: inline-block;
-            width: 50%;
-            /* Default for larger screens */
-        }
-
-        .search-input {
             width: 100%;
-            padding: 12px 40px 12px 20px;
-            font-size: 16px;
-            border-radius: 25px;
-            border: 1px solid #ccc;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
         }
+    }
 
-        .voice-icon {
-            position: absolute;
-            right: 30px;
-            top: 50%;
-            transform: translateY(-50%);
-            cursor: pointer;
-        }
+    #download {
+        margin-left: 80pc;
+        color: white;
+        font-size: 25px;
+        animation: pop 1.5s ease infinite;
+    }
 
-        #micIcon {
-            font-size: 20px;
-            color: #333;
-        }
-
-        @media (max-width: 768px) {
-            .search-container {
-                width: 100%;
-                /* Full width (col-12 equivalent) on mobile */
-            }
-        }
-        #download {
-            margin-left:80pc;
-            color: red;
-            font-size: 25px;
-            color: white; 
-            animation: pop 1.5s ease infinite;
-           
-        }
-    
     /* Popping animation */
     @keyframes pop {
-      0%, 100% {
-        transform: scale(1); /* Normal size */
-      }
-      50% {
-        transform: scale(1.2); /* Increase size */
-      }
+
+        0%,
+        100% {
+            transform: scale(1);
+        }
+
+        50% {
+            transform: scale(1.2);
+        }
     }
-    </style>
+</style>
 
     <!-- Additional CSS Files -->
     <link rel="stylesheet" href="assets/css/fontawesome.css">
@@ -367,15 +287,67 @@
 
                 <ul id="myUL" style="list-style-type: none; padding: 0; margin-top: 20px; display: none;">
                     <!-- List items here -->
-                    <li style="padding: 10px;">Course 1: JavaScript</li>
-                    <li style="padding: 10px;">Course 2: Kubernetes</li>
-                    <li style="padding: 10px;">Course 3: Python</li>
-                    <li style="padding: 10px;">Course 4: Jenkins</li>
-                    <li style="padding: 10px;">Course 5: Shell Scripting</li>
-                    <li style="padding: 10px;">Course 6: Data Science</li>
-                    <li style="padding: 10px;">Course 7: AI Machine Learning</li>
-                    <li style="padding: 10px;">Course 8: Web Development</li>
-
+                    <li style="padding: 10px;">Course 1: JavaScript  </li>
+                    <li style="padding: 10px;">Course 2: Docker Training </li>
+                    <li style="padding: 10px;">Course 3: Terraform  </li>
+                    <li style="padding: 10px;">Course 4: Ansible Training  </li>
+                    <li style="padding: 10px;">Course 5: Kubernetes  </li>
+                    <li style="padding: 10px;">Course 6: Devops Training  </li>
+                    <li style="padding: 10px;">Course 7: Unix Shell Scripting Training  </li>
+                    <li style="padding: 10px;">Course 8: AWS Training  </li>
+                    <li style="padding: 10px;">Course 9: GCP  </li>
+                    <li style="padding: 10px;">Course 10: AZURE Training </li>
+                    <li style="padding: 10px;">Course 11: MEAN Stack </li>
+                    <li style="padding: 10px;">Course 12: MERN Stack </li>
+                    <li style="padding: 10px;">Course 13: React Js </li>
+                    <li style="padding: 10px;">Course 14: Web Designing </li>
+                    <li style="padding: 10px;">Course 15: UI/UX </li>
+                    <li style="padding: 10px;">Course 16: PHP Full Stack </li>
+                    <li style="padding: 10px;">Course 17: PHP Experts </li>
+                    <li style="padding: 10px;">Course 18: Angular Js </li>
+                    <li style="padding: 10px;">Course 19: C And C++ Training </li>
+                    <li style="padding: 10px;">Course 20: .NET Training </li>
+                    <li style="padding: 10px;">Course 21: JavaScript Training </li>
+                    <li style="padding: 10px;">Course 22: MySQL Training </li>
+                    <li style="padding: 10px;">Course 23: SQL Server DBA Training </li>
+                    <li style="padding: 10px;">Course 24: MongoDB Training </li>
+                    <li style="padding: 10px;">Course 25: Android </li>
+                    <li style="padding: 10px;">Course 26: I-Phone </li>
+                    <li style="padding: 10px;">Course 27: Machine Learning Training </li>
+                    <li style="padding: 10px;">Course 28: Data Science Training </li>
+                    <li style="padding: 10px;">Course 30: Deep Learning Course </li>
+                    <li style="padding: 10px;">Course 31: Artificial Intelligence Course </li>
+                    <li style="padding: 10px;">Course 32: Data Science With Python </li>
+                    <li style="padding: 10px;">Course 33: Power Bi </li>
+                    <li style="padding: 10px;">Course 34: MIS </li>
+                    <li style="padding: 10px;">Course 35: Advanced Microsoft Excel </li>
+                    <li style="padding: 10px;">Course 36: Advanced Digital Marketing </li>
+                    <li style="padding: 10px;">Course 37: Digital Marketing </li>
+                    <li style="padding: 10px;">Course 38: 6 Weeks Summer Training </li>
+                    <li style="padding: 10px;">Course 39: 6 Months Industrial Training </li>
+                    <li style="padding: 10px;">Course 40: Graphic Designing </li>
+                    <li style="padding: 10px;">Course 41: Motion Graphic Course </li>
+                    <li style="padding: 10px;">Course 42: Multimedia & Animation </li>
+                    <li style="padding: 10px;">Course 43: Graphic Motion Pro Course </li>
+                    <li style="padding: 10px;">Course 44: Videograpy Course </li>
+                    <li style="padding: 10px;">Course 45: Scriptwriting & Story Boarding </li>
+                    <li style="padding: 10px;">Course 46: Film Making </li>
+                    <li style="padding: 10px;">Course 47: Graphic Designing Pro </li>
+                    <li style="padding: 10px;">Course 48: Manual + Selenium </li>
+                    <li style="padding: 10px;">Course 49: Full Stack QA </li>
+                    <li style="padding: 10px;">Course 50: Java With Selenium </li>
+                    <li style="padding: 10px;">Course 51: REST Assured API </li>
+                    <li style="padding: 10px;">Course 52: Appium Testing </li>
+                    <li style="padding: 10px;">Course 53: API Testing </li>
+                    <li style="padding: 10px;">Course 54: Manual Testing </li>
+                    <li style="padding: 10px;">Course 55: Primavera P6 Testing </li>
+                    <li style="padding: 10px;">Course 56: Agile Testing </li>
+                    <li style="padding: 10px;">Course 57: Microsoft Excel Training </li>
+                    <li style="padding: 10px;">Course 58: Scrum Master Training </li>
+                    <li style="padding: 10px;">Course 59: JavaScript</li>
+                    <li style="padding: 10px;">Course 60: Data Science </li>
+                    <li style="padding: 10px;">Course 61: AI Machine Learning </li>
+                    <li style="padding: 10px;">Course 62: Web Development </li>
                 </ul>
 
                 <script>
@@ -531,7 +503,7 @@
         // JSON data
         const data = {
             javascript: ['javascript-Q-ans.pdf', 'javascript_beginner_to_professional.pdf'],
-            kubernetes: ['#.pdf '],
+            kubernetes: ['kubernetes-50-real-time1.pdf '],
             shell_scripting: ['#.pdf'],
             Jenkins: ['jenkins.pdf'],
             Python: ['#.pdf'],
@@ -595,62 +567,63 @@
             Scrum_Master_Training: ['#.pdf'],
         };
     
-        // Function to open and display a PDF in the carousel
-        function openPDF(pdfUrl) {
-            const carouselInner = document.getElementById('carouselInner');
-            const pdfContainer = document.getElementById('pdfCarouselContainer');
-            const pdfOverlay = document.getElementById('pdfOverlay');
-            const downloadButton = document.getElementById('downloadButton');
-    
-            // Set the download link for the current PDF
-            downloadButton.href = pdfUrl;
-    
-            carouselInner.innerHTML = ''; // Clear previous content
-            pdfContainer.classList.remove('hidden');
-            pdfOverlay.style.display = 'block'; // Show the overlay
-    
-            const loadingTask = pdfjsLib.getDocument(pdfUrl);
-            loadingTask.promise.then(function (pdf) {
-                const numPages = pdf.numPages;
-                const pagesToLoad = Array.from({ length: Math.min(numPages, 10) }, (_, i) => i + 1); // Load up to 10 pages
-    
-                pagesToLoad.forEach((pageNum, index) => {
-                    pdf.getPage(pageNum).then(function (page) {
-                        const scale = 1.5;
-                        const viewport = page.getViewport({ scale: scale });
-                        const canvas = document.createElement('canvas');
-                        canvas.width = viewport.width;
-                        canvas.height = viewport.height;
-    
-                        const context = canvas.getContext('2d');
-                        const renderContext = {
-                            canvasContext: context,
-                            viewport: viewport
-                        };
-    
-                        page.render(renderContext).promise.then(function () {
-                            const div = document.createElement('div');
-                            div.classList.add('carousel-item');
-                            if (index === 0) {
-                                div.classList.add('active'); // Set the first page as active
-                            }
-    
-                            const img = document.createElement('img');
-                            img.src = canvas.toDataURL();
-                            img.classList.add('d-block');
-                            div.appendChild(img);
-                            carouselInner.appendChild(div);
-                        });
-                    });
+        // Function to open and display a PDF in the carousel in sequence
+function openPDF(pdfUrl) {
+    const carouselInner = document.getElementById('carouselInner');
+    const pdfContainer = document.getElementById('pdfCarouselContainer');
+    const pdfOverlay = document.getElementById('pdfOverlay');
+    const downloadButton = document.getElementById('downloadButton');
+
+    // Set the download link for the current PDF
+    downloadButton.href = pdfUrl;
+
+    carouselInner.innerHTML = ''; // Clear previous content
+    pdfContainer.classList.remove('hidden');
+    pdfOverlay.style.display = 'block'; // Show the overlay
+
+    const loadingTask = pdfjsLib.getDocument(pdfUrl);
+    loadingTask.promise.then(async function (pdf) {
+        const numPages = pdf.numPages;
+        const pagesToLoad = Array.from({ length: Math.min(numPages, 1000) }, (_, i) => i + 1); // Load up to 10 pages
+
+        // Sequential loading to ensure order
+        for (let pageNum of pagesToLoad) {
+            await pdf.getPage(pageNum).then(function (page) {
+                const scale = 1.5;
+                const viewport = page.getViewport({ scale: scale });
+                const canvas = document.createElement('canvas');
+                canvas.width = viewport.width;
+                canvas.height = viewport.height;
+
+                const context = canvas.getContext('2d');
+                const renderContext = {
+                    canvasContext: context,
+                    viewport: viewport
+                };
+
+                return page.render(renderContext).promise.then(function () {
+                    const div = document.createElement('div');
+                    div.classList.add('carousel-item');
+                    if (pageNum === 1) {
+                        div.classList.add('active'); // Set the first page as active
+                    }
+
+                    const img = document.createElement('img');
+                    img.src = canvas.toDataURL();
+                    img.classList.add('d-block');
+                    div.appendChild(img);
+                    carouselInner.appendChild(div);
                 });
             });
-    
-            const pdfModal = bootstrap.Modal.getInstance(document.getElementById('pdfModal'));
-            if (pdfModal) {
-                pdfModal.hide();
-            }
         }
-    
+    });
+
+    const pdfModal = bootstrap.Modal.getInstance(document.getElementById('pdfModal'));
+    if (pdfModal) {
+        pdfModal.hide();
+    }
+}
+
         // Function to close the PDF carousel
         function closePDF() {
             const pdfContainer = document.getElementById('pdfCarouselContainer');
