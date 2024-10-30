@@ -67,11 +67,6 @@
         "category": "AZURE_Training"
       },
       {
-        "title": "JavaScript Training",
-        "image": "assets/images/Syllabus/javaScript.png",
-        "category": "JavaScript_Training"
-      },
-      {
         "title": "MEAN Stack",
         "image": "assets/images/Syllabus/mean_stack.png",
         "category": "MEAN_Stack"

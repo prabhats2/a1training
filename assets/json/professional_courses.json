@@ -50,7 +50,7 @@ var courses1 = {
             "pdf": "Docker Training.pdf",
             "title": "Docker_Certification_Training",
             "download": "course_1",
-            "image": "docker-certification-training.jpg",
+            "image": "docker-training.png",
             "description": "Docker_Training",
             "syllabus" : ["assets/syllabus/Docker_Course_Syllabus.pdf"],
            "syllabus_name":["Docker Training Syllabus "]	
@@ -61,7 +61,7 @@ var courses1 = {
             "pdf": "Kubenetes Training.pdf",
             "title": "Kubenetes_Training",
             "download": "course_1",
-            "image": "kubernetes.png",
+            "image": "kubernetes-training.png",
             "description": "Kubenetes_Training",
             "syllabus" : ["assets/syllabus/Kubernetes_Cluster_Setup_Guide.pdf" , "assets/syllabus/Kubernetes_Commands_Overview.pdf"  , "assets/syllabus/Kubernetes_Interview_Questions.pdf"  , "assets/syllabus/Kubernetes_Manifest_file.pdf"] ,  
            "syllabus_name":["Kubemetes Cluster Setup Syllabus " , "Kubernetes Commands Overview Syllabus " , "Kubernetes Interview Questions  ", "Kubernetes Manifest file Syllabus "]	
@@ -263,7 +263,7 @@ var courses1 = {
             "pdf": "JavaScript Training.pdf",
             "title": "JavaScript_Training",
             "download": "course_1",
-            "image": "javaScript.png",
+            "image": "javaScript-training.png",
             "description": "JavaScript_Training",
             "syllabus" : ["assets/syllabus/mean_stack.pdf"],
            "syllabus_name":["JavaScript Training Syllabus "]	
@@ -274,7 +274,7 @@ var courses1 = {
             "pdf": "MySQL Training.pdf",
             "title": "MySQL_Training",
             "download": "course_1",
-            "image": "my-sql.jpg",
+            "image": "my-sql-training.png",
             "description": "MySQL_Training",
             "syllabus" : ["assets/syllabus/mean_stack.pdf"],
            "syllabus_name":["MySQL Training Syllabus "]	
@@ -307,7 +307,7 @@ var courses1 = {
             "pdf": "Android.pdf",
             "title": "Android",
             "download": "course_1",
-            "image": "android-training.jpg",
+            "image": "android-training.png",
             "description": "Android",
             "syllabus" : ["assets/syllabus/mean_stack.pdf"],
            "syllabus_name":["Android Syllabus "]	
