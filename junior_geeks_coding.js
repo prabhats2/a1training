@@ -739,8 +739,6 @@ for (let i = 0; i < junior.col1.length; i++) {
 </ul>
 
 <h4 class="sub-heading">We provide the NO.1 Basic Computer Course in Chennai, with flexible training modes including classroom and online sessions. Our centers are located at Adyar, OMR, Navalur, Porur, Annanagar, Velachery, and Perumbakkam.</h4>
-lass="sub-heading">We provide the No.1 Typing training program in Delhi NCR, including Noida Extension and Greater Noida. Our program focuses on enhancing typing speed and accuracy, catering to both beginners and those looking to improve their existing skills. Participants will engage in various typing exercises, learn proper finger placement, and receive personalized feedback to boost their proficiency. Our training is available through both classroom and online modes, ensuring flexibility for all learners. With our expert instructors and structured curriculum, students will develop essential typing skills that are crucial for academic and professional success.</h4>
-
     <div class="button-container">
         <button class="custom-button"  data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
         <button class="custom-button">Contact Course Advisor</button>
