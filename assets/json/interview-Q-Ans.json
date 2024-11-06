@@ -1,6 +1,10 @@
 {
     "syllabus": [
-      
+      {
+        "title": "Git Training",
+        "image": "assets/images/Syllabus/git-training.png",
+        "category": "Git"
+      },
       {
         "title": "Shell Scripting",
         "image": "assets/images/Syllabus/shell_scripting.jpg",
@@ -317,6 +321,11 @@
         "title": "Web Development",
         "image": "assets/images/Syllabus/web-development.png",
         "category": "Web_Development"
+      },
+      {
+        "title": "HTML / CSS",
+        "image": "assets/images/Syllabus/html_css.png",
+        "category": "html_css"
       }
     ]
   }

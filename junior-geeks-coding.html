@@ -17,6 +17,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script> <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
   
   <script>
     $(document).ready(function () {
@@ -348,10 +350,13 @@
                                               More Info
                                           </button>
                                       </div>
-                                      <div class="col-12 col-md-6 mt-1">
-                                          <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#contactModal">
-                                              Contact Us
-                                          </button>
+                                      
+                                    <!-- Button to trigger Enroll Now Offcanvas -->
+                                      <div class="col-12 col-md-6 mt-1">             
+                                        <button type="button" class="btn btn-primary " data-bs-toggle="offcanvas" 
+                                            data-bs-target="#courseOffcanvas" data-course="${junior.col1[i].title}">
+                                            Contact Us 
+                                        </button>
                                       </div>
                                   </div>
                               </div>
@@ -586,7 +591,189 @@
       }
     }
   </script>
+<!-- Offcanvas for Enroll Now -->
+<div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="courseOffcanvas"
+aria-labelledby="courseOffcanvasLabel" style="z-index: 1111;">
+<div class="offcanvas-header">
+  <h5 class="offcanvas-title" id="courseOffcanvasLabel">Course Details</h5>
+  <button type="button" class="btn-close btn-light" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+</div>
+<div class="offcanvas-body">
+  <form id="contactform">
+    <div class="mb-3 position-relative">
+      <!-- Label for Course Name -->
+      <label for="courseNameEnroll" class="form-label">Course Name</label> 
 
+      <!-- Input Field with Dropdown Icon -->
+      <div class="input-group">
+        <input type="text" class="form-control" id="courseNameEnroll" name="courseName" readonly>
+        <span class="input-group-text bg-light" style="cursor: pointer;">
+          <i class="bi bi-caret-down-fill"></i> <!-- Dropdown icon -->
+        </span>
+      </div>
+
+      <!-- Dropdown Menu Positioned Above the Input Field -->
+      <select class="form-select position-absolute top-50 start-0 w-100" id="courseSelect"
+        style="opacity: 0; z-index: 1;">
+        <option value="">--Select Course--</option>
+        <script>
+          for (let i = 0; i < junior.col1.length; i++) {
+            // Replace underscores with spaces for display
+            const courseDisplayName = junior.col1[i].course_name.replace(/_/g, ' ');
+            document.write(`<option value="${junior.col1[i].course_name}" data-description="${junior.col1[i].description}">${courseDisplayName}</option>`);
+          }
+        </script>
+      </select>
+    </div>
+
+    <!-- Other Form Fields -->
+    <div class="mb-3">
+      <label for="Name" class="form-label">Name</label>
+      <input type="text" class="form-control" id="Name" name="Name">
+    </div>
+    <div class="mb-3">
+      <label for="e-mail" class="form-label">E-mail</label>
+      <input type="email" class="form-control" id="e-mail" name="e-mail" required>
+    </div>
+    <div class="mb-3">
+      <label for="Mobile" class="form-label">Mobile</label>
+      <input type="number" class="form-control" id="Mobile" name="Mobile" pattern="\d{10}" maxlength="10" required>
+    </div>
+    <div class="mb-3">
+      <label for="message" class="form-label">Message</label>
+      <textarea class="form-control" id="message" name="message" rows="2"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Send</button>
+  </form>
+</div>
+</div>
+<!-- Offcanvas for More Info -->
+<div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="courseOffcanvas1"
+aria-labelledby="courseOffcanvasLabel1" style="z-index: 1111;">
+<div class="offcanvas-header">
+  <h5 class="offcanvas-title" id="courseOffcanvasLabel1">More Info</h5>
+  <button type="button" class="btn-close btn-light" data-bs-dismiss="offcanvas"
+    aria-label="Close"></button>
+</div>
+<div class="offcanvas-body">
+  <h1 id="courseTitleMoreInfo" class="mb-3"></h1><br>
+  <h2>Description</h2><br>
+  <h4 id="courseDescriptionMoreInfo"></h4>
+</div>
+</div>
+<!-- Script to handle course selection and initialize with the first course -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const courseNameInputEnroll = document.getElementById('courseNameEnroll');
+  const courseSelect = document.getElementById('courseSelect');
+
+  // Select the first course by default if available
+  if (courseSelect.options.length > 1) {  // Ensure there's at least one course to select
+    const defaultOption = courseSelect.options[1]; // First actual course option
+    courseSelect.selectedIndex = 1;
+    courseNameInputEnroll.value = defaultOption.text.replace(/_/g, ' ');
+  }
+
+  // Update course name input on dropdown change
+  courseSelect.addEventListener('change', function () {
+    const selectedOption = courseSelect.options[courseSelect.selectedIndex];
+    if (selectedOption.value) {
+      // Update the input field to display the selected course name without underscores
+      courseNameInputEnroll.value = selectedOption.textContent.replace(/_/g, ' ');
+    }
+  });
+});
+</script>
+
+<!-- Script to Handle Course Name and Details Display in Offcanvas -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const courseOffcanvas = document.getElementById('courseOffcanvas');
+  const courseNameInputEnroll = document.getElementById('courseNameEnroll');
+  const courseSelect = document.getElementById('courseSelect');
+
+  const courseTitleMoreInfo = document.getElementById('courseTitleMoreInfo');
+  const courseDescriptionMoreInfo = document.getElementById('courseDescriptionMoreInfo');
+
+  if (courseOffcanvas) {
+    courseOffcanvas.addEventListener('show.bs.offcanvas', function (event) {
+      const button = event.relatedTarget;
+      const courseName = button.getAttribute('data-course');
+      if (courseNameInputEnroll) {
+        courseNameInputEnroll.value = courseName.replace(/_/g, ' '); // Display name without underscores
+      }
+    });
+  }
+
+  // Update the course name when selecting from the dropdown
+  courseSelect.addEventListener('change', function () {
+    const selectedOption = courseSelect.options[courseSelect.selectedIndex];
+    if (selectedOption.value) {
+      courseNameInputEnroll.value = selectedOption.value.replace(/_/g, ' '); // Display without underscores
+
+      // Show course details in the More Info section of the offcanvas
+      if (courseTitleMoreInfo) {
+        courseTitleMoreInfo.textContent = selectedOption.textContent;
+      }
+
+      if (courseDescriptionMoreInfo) {
+        const courseDescription = selectedOption.getAttribute('data-description');
+        const descriptionItems = courseDescription ?
+          courseDescription.split(',').map(item => `<li>${item.trim()}</li>`).join('') : '';
+        courseDescriptionMoreInfo.innerHTML = `<ul>${descriptionItems}</ul>`;
+      }
+    }
+  });
+});
+</script>
+
+<!-- SweetAlert2 JS -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+
+  // Handle form submission
+  const form = document.getElementById('contactform');
+  if (form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbyzWpZIIAt4ZaXdOXZKWnFoj-REOq7PDbaGYqieIPxJDQhR6B9NLYj_SgSFFtVyGVjj/exec';
+      const formData = new FormData(this);
+
+      fetch(scriptURL, { method: 'POST', body: formData })
+        .then(response => {
+          Swal.fire({
+            title: "Thank you!",
+            text: "Your form is submitted successfully.",
+            icon: "success",
+            timer: 1500,
+            showConfirmButton: false
+          }).then(() => {
+            window.location.reload(); // Reload after closing the alert
+          });
+        })
+        .catch(error => {
+          console.error('Error!', error.message);
+          Swal.fire({
+            title: "Oops!",
+            text: "Something went wrong. Please try again later.",
+            icon: "error"
+          });
+        });
+    });
+  }
+});
+document.getElementById('Mobile').addEventListener('input', function (e) {
+  var x = e.target.value.replace(/\D/g, '');
+  if (x.length > 10) {
+    x = x.substring(0, 10);
+  }
+  e.target.value = x;
+});
+
+
+</script>
 </body>
 
 </html>
