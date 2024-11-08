@@ -88,7 +88,7 @@ let books = { "col1" : [
 			},
 			 //python
 			 {"name" : "Python", 
-			 "Author" : ["Dave Kuhlman","A1 Training Institute"],
+			 "Author" : ["Dave Kuhlman","Mohammad Sajid "],
 			 "ebookAuthor" : ["Kriti Kumari Sinha "," Saurabh Chandrakar","Brijesh Bakariya "," R. Nageswara Rao","John Shovic"],
 			 "ebook" : ["https://amzn.to/3XbNzFh", "https://amzn.to/4cxsAkv", "https://amzn.to/4csKx3O","https://amzn.to/4fRCn7N","https://amzn.to/3WVha4x"],
 			 "ebook_name" : ["Guide to MS DOS", "MS-DOS 6 Explained (BP S.): 341", "MS-DOS Up to and Including Version 6.2"],

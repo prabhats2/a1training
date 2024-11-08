@@ -2,719 +2,751 @@
 <html lang="en">
 
 <head>
-
   <meta charset="utf-8">
-  <meta name="author" content="Template Mo">
-  <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-  <!-- Latest Bootstrap 5.3.2 CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<meta name="author" content="Template Mo">
+<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+<!-- Bootstrap 5.3.2 CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<!-- Fancybox -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
 
-  <!-- jQuery -->
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<!-- jQuery (latest version) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- Popper.js (required for Bootstrap) -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<!-- Bootstrap JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Fancybox JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+<!-- PDF.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+<!-- Your meta.js script -->
+<script type="text/javascript" src="meta.js"></script>
 
-  <!-- Bootstrap 5.3.2 JS with Popper.js -->
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+ <!-- Include Bootstrap JS -->
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
+ <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
+ <script type="text/javascript" src="meta.js"></script>
 
-  <!-- Fancybox (for lightbox functionality if needed) -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
-
-  <!-- SweetAlert2 JS -->
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <!-- JSON file for professional courses -->
-  <script type="text/javascript" src="assets/json/professional_courses.json"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script> <!-- Bootstrap CSS -->
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Bootstrap Icons for the caret icon -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css">
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
-  <script type="text/javascript" src="meta.js"></script>
-  <script>
-    $(document).ready(function () {
-      $('.gallery-item').fancybox();
-    });
-  </script>
-  <style>
-    .n {
-      overflow: scroll;
-      height: 800px
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-edu-meeting.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/lightbox.css">
+     <script type="text/javascript" src="assets/json/blog.json"></script>
+    <style>
+          /* Section Styles */
+    #blog {
+        padding:15rex 0;
+        background-image: url(assets/images/meetings-bg.jpg);
+        background-size: cover;
     }
 
-    .m {
-      margin-top: 100px;
-      height: 900px;
+    /* Header Styles */
+    #blog h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+        color: #fff;
     }
 
-    .no-content-message {
-      background-color: #f8d7da;
-      /* Light red background */
-      color: #721c24;
-      /* Dark red text */
-      border: 1px solid #f5c6cb;
-      /* Light red border */
-      padding: 10px;
-      border-radius: 5px;
-      text-align: center;
-      margin-top: 20px;
-      font-weight: bold;
+    /* Card Styles */
+    .card {
+        transition: transform 0.3s;
+        border-radius: 1rem;
+        overflow: hidden; /* Ensure no overflow from cards */
     }
 
-    .dropbtn {
-      background-color: #dc3b41;
-      color: white;
-      padding: 16px;
-      font-size: 16px;
-      border: none;
-      cursor: pointer;
+    .card:hover {
+        transform: scale(1.05);
     }
 
-    .dropbtn:hover,
-    .dropbtn:focus {
-      background-color: #b73a36;
+    /* Featured Post Styles */
+    #blog .mb-4 img {
+        border-radius: 1rem;
+        padding: 3px;
     }
 
-    #myInput {
-      box-sizing: border-box;
-      background-image: url('searchicon.png');
-      background-position: 14px 12px;
-      background-repeat: no-repeat;
-      font-size: 16px;
-      padding: 14px 20px 12px 45px;
-      border: none;
-      border-bottom: 1px solid #ddd;
+    /* Sidebar Styles */
+    #sidebar {
+        position: sticky;
+        top: 80px;
+        margin-left: 120px;
+        width: 300px;
+        height: calc(100vh - 160px);
+        overflow-y: auto;
+        background-color: white;
+        padding: 20px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        z-index: 1;
+        border-radius: 0.9rem;
     }
 
-    #myInput:focus {
-      outline: 3px solid #ddd;
+    .sidebar h4 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
     }
 
-    .dropdown {
-      position: relative;
-      display: inline-block;
+    .sidebar .list-group-item {
+        background-color: #ffffff;
+        border: 0;
+        border-radius: 0.9rem;
+        transition: background-color 0.3s;
     }
 
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #f6f6f6;
-      min-width: 230px;
-      border: 1px solid #ddd;
-      z-index: 1;
-      opacity: 0;
-      transform: scaleY(0);
-      transform-origin: top;
-      transition: opacity 0.3s ease, transform 0.3s ease;
+    .sidebar .list-group-item:hover {
+        background-color: #e9ecef;
     }
 
-    .dropdown-content.show {
-      display: block;
-      opacity: 1;
-      transform: scaleY(1);
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+        #blog h2 {
+            font-size: 2rem;
+        }
+
+        .card {
+            margin-bottom: 1.5rem;
+        }
+
+        /* Adjust Sidebar for Mobile */
+        #sidebar {
+            position: static;
+            width: 100%;
+            height: auto;
+            margin-left: 0;
+            padding: 1rem;
+        }
     }
 
-    .dropdown-content a {
-      color: black;
-      padding: 12px 16px;
-      text-decoration: none;
-      display: block;
-      transition: background-color 0.3s ease;
-    }
+    /* For fade-in and fade-out transitions */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+}
 
-    .dropdown-content a:hover {
-      background-color: #ddd;
-    }
+.fade-out {
+    opacity: 1;
+    animation: fadeOut 0.5s forwards;
+}
 
-    .item {
-      transition: transform 0.5s ease, opacity 0.5s ease;
-      opacity: 1;
-    }
-
-    .item.hidden {
-      opacity: 0;
-      transform: scale(0.8);
-    }
-
-    .item.show {
-      opacity: 1;
-      transform: scale(1);
-    }
-
-    /* Import FontAwesome if you're using it for icons */
-    @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
-
-    /* Keyframes for blinking animation */
-    @keyframes blink {
-      0% {
+@keyframes fadeIn {
+    to {
         opacity: 1;
-      }
+    }
+}
 
-      50% {
+@keyframes fadeOut {
+    to {
         opacity: 0;
-      }
+    }
+}
 
-      100% {
-        opacity: 1;
-      }
+    /* Description Styles for Overlay */
+    .description {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        -webkit-line-clamp: 5;
+        max-height: 8em;
+        transition: max-height 0.5s ease;
     }
 
-    /* Apply the animation to the icon */
-    .icon {
-      font-size: none;
-      /* Adjust the size of the icon as needed */
-      color: red;
-      /* Set the color to red */
-      animation: blink 1s infinite;
-      /* Adjust the duration and iteration of the animation */
+    .description.expanded {
+        -webkit-line-clamp: unset;
+        max-height: unset;
     }
-  </style>
 
-  <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
-  <!-- Additional CSS Files -->
-  <link rel="stylesheet" href="assets/css/fontawesome.css">
-  <link rel="stylesheet" href="assets/css/templatemo-edu-meeting.css">
-  <link rel="stylesheet" href="assets/css/owl.css">
-  <link rel="stylesheet" href="assets/css/lightbox.css">
+    /* Overlay Content Styles */
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        display: none;
+        z-index: 9999;
+    }
 
-  <script type="text/javascript" src="professional_courses.js"></script>
-  <script type="text/javascript" src="contact_us_button.json"></script>
+    .overlay-content {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        width: 80%;
+        max-height: 90%;
+        position: relative;
+        margin: 0 auto;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .overlay-content .row {
+        margin: 0;
+    }
+
+    .overlay-content .col-lg-8,
+    .overlay-content .col-lg-4 {
+        float: left;
+    }
+
+    .overlay-content .col-lg-8 {
+        width: 66.6666%;
+    }
+
+    .overlay-content .col-lg-4 {
+        width: 33.3333%;
+        height: auto;
+    }
+
+    @media (max-width: 768px) {
+        .overlay-content .col-lg-4,
+        .overlay-content .col-lg-8 {
+            width: 100%;
+            float: none;
+        }
+    }
+
+    /* Related Posts */
+    .related-posts {
+        max-height: 550px;
+        overflow-y: auto;
+    }
+
+    .related-posts .post {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 10px;
+        margin-bottom: 10px;
+        cursor: pointer;
+    }
+
+    .related-posts .post img {
+        width: 100%;
+        border-radius: 5px;
+    }
+
+    /* Search Bar Styles */
+    #search-bar {
+        margin-bottom: 15px;
+       
+    }
+    .search_bar{
+      height: 50px;
+    }
+
+    /* Microphone Icon */
+    #mic-icon {
+        cursor: pointer;
+        color: #555;
+        
+    }
+
+    #mic-icon:hover {
+        color: #007bff;
+    }
+    /* Search Bar Styles */
+#search-bar {
+    margin-bottom: 15px;
+    display: flex; /* Flexbox for aligning elements */
+    align-items: center; /* Vertically center the content */
+}
+
+.search_bar {
+    height: 50px; /* Set a fixed height for the search bar */
+    flex-grow: 1; /* Let the search bar take available space */
+    padding: 0 10px;
+    font-size: 1rem;
+}
+
+.input-group-text {
+    height: 50px; /* Match height with search bar */
+    display: flex; /* Use flex to align the icon */
+    align-items: center; /* Center the icon vertically */
+    padding: 0 10px; /* Add some padding if needed */
+}
+
+#mic-icon {
+    cursor: pointer;
+    color: #555;
+    font-size: 1.5rem; /* Size the mic icon properly */
+}
+
+#mic-icon:hover {
+    color: #007bff;
+}
+
+    </style>
 </head>
-
+<!-- MENU START -->
+<script type="text/javascript" src="menu.js"></script>
+<!-- MENU END -->
 <body>
-  <!--menu-->
-  <script type="text/javascript" src="menu.js"></script>
-  <!--menu end-->
-
-  <section class="heading-page header-text" id="top">
+  <section id="blog" >
     <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <h6>HERE ARE OUR POPULAR PROFESSIONAL COURSE</h6>
-          <h2>Professional Courses</h2>
-          <script src="test.js"></script> <br>
-          <!-- <div class="container my-4">
-            <input type="text" id="searchBar" class="search-bar form-control" placeholder="Search Courses..."
-              onkeyup="filterItems()">
-            <div id="noContentMessage" class="no-content-message" style="display:none;">
-              <p>No content found</p>
-            </div>
-          </div> -->
 
-          <div class="dropdown">
-            <button onclick="toggleDropdown()" class="dropbtn">Select Courses</button>
-            <div id="myDropdown" class="dropdown-content">
+        <!-- Button to toggle the sidebar dropdown at the top -->
+        <button class="btn btn-primary d-lg-none mb-4 w-100" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarDropdown" aria-expanded="false" aria-controls="sidebarDropdown">
+            Categories
+        </button>
 
-              <ul id="dropdownList">
-                <li data-filter="*" class="active">All Courses</li>
-                <li data-filter=".programming">Programming</li>
-                <li data-filter=".cloud">Cloud</li>
-                <li data-filter=".devops">DevOps</li>
-                <li data-filter=".data">Data Science & AI</li>
-                <li data-filter=".mobile">Mobile Development</li>
-                <li data-filter=".database">Database</li>
-                <li data-filter=".mis">Advance Excel-BI Tools</li>
-                <li data-filter=".digital">Digital Marketing</li>
-                <li data-filter=".industrial">Industrial Training</li>
-                <li data-filter=".multimedia">Multimedia Animation-Graphics</li>
-                <li data-filter=".software">Software Testing</li>
-                <li data-filter=".project">Project Management</li>
-                <li data-filter=".full">Full Stack Development</li>
-                <li data-filter=".web">Web Designing</li>
-              </ul>
+        <!-- Sidebar dropdown for mobile view -->
+        <div class="collapse d-lg-none mb-4 w-100" id="sidebarDropdown">
+            <div class="card">
+                <div class="card-body">
+                    <h4>Categories</h4>
+                    <ul class="list-group mb-4">
+                        <li class="list-group-item" data-category="all"><a href="#" class="category-link">All</a></li>
+                        <li class="list-group-item" data-category="programming"><a href="#" class="category-link">Programming</a></li>
+                        <li class="list-group-item" data-category="designing"><a href="#" class="category-link">Designing</a></li>
+                        <li class="list-group-item" data-category="web-development"><a href="#" class="category-link">Web Development</a></li>
+                    </ul>
+                    <h4>Recent Posts</h4>
+                    <ul class="list-group">
+                        <li class="list-group-item"><a href="#">Recent Post 1</a></li>
+                        <li class="list-group-item"><a href="#">Recent Post 2</a></li>
+                    </ul>
+                </div>
             </div>
-          </div>
         </div>
-  </section>
 
-  <section class="meetings-page" id="meetings">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12" data-title="aws" id="aws" class="section ">
-          <div class="row" id="courses-container">
-            <!-- Courses will be dynamically loaded here -->
-            <script>
-              document.addEventListener('DOMContentLoaded', function () {
-                const coursesContainer = document.getElementById('courses-container');
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="row" id="blogPosts">
+                    <script>
+  // Initialize the carousel HTML structure outside the loop
+  document.write(`
+        <div id="blogCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+    `);
 
-                for (let i = 0; i < courses1.col1.length; i++) {
-                  const courseClass = courses1.col1[i].class.toLowerCase();
-                  const courseName = courses1.col1[i].course_name.toLowerCase();
-                  const courseElement = document.createElement('div');
+    // Loop through the blog posts and create carousel items dynamically
+    for (let i = 0; i < blog.col1.length; i++) {
+        const activeClass = i === 0 ? "active" : "";  // Only the first item gets the active class
 
-                  courseElement.classList.add('col-lg-4', 'templatemo-item-col', 'all', courseClass, 'item-container', 'show');
-                  courseElement.setAttribute('data-title', `${courseName} ${courseClass}`);
+        document.write(`
+            <div class="carousel-item ${activeClass}">
+                <div class="row">
+                    <div class="col-lg-12 mb-4" data-category="${blog.col1[i].category}">
+                        <div class="card">
+                            <img src="assets/images/junior-geeks/${blog.col1[i].image}" class="card-img-top" alt="Blog Post ${i + 1}">
+                            <div class="card-body">
+                                <h5 class="card-title">${blog.col1[i].title}</h5>
+                                <p class="card-text">${blog.col1[i].description}</p>
+                                <a href="blog-post${i + 1}.html" class="btn btn-primary">More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `);
+    }
 
-                  courseElement.innerHTML = `
-                      <div class="meeting-item">
-                        <div class="thumb">
-                          <div class="price ">
-                            <span class="fa fa-cloud-download icon" data-bs-toggle="modal" data-bs-target="#syllabus${i}" style="font-size:23px;color:red"></span>
-                            <div class="modal" id="syllabus${i}">
-                              <div class="modal-dialog">
-                                <div class="modal-content">
-                                  <div class="modal-header">
-                                    <h4 class="modal-title" align="center">${courses1.col1[i].title.replace(/_/g, ' ')}</h4>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                                  </div>
-                                  <div class="modal-body">
-                                    <h2 align="left">Download Syllabus</h2>
-                                    <ul id="pdfList${i}" align="left"></ul>
-                                    <br>
-                                  </div>
-                                  <div class="modal-footer">
-                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-                                  </div>
+    // Close the carousel-inner and add the controls
+    document.write(`
+            </div>
+            <!-- Carousel Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#blogCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#blogCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    `);
+
+  
+                        // Loop to display additional blog posts
+                        for (let i = 1; i < blog.col1.length; i++) {
+                            const moreTextId = `moreText${i}`;
+                            const readMoreBtnId = `readMoreBtn${i}`;
+
+                            document.write(`
+                                <div class="col-md-6 mb-4" data-category="${blog.col1[i].category}">
+                                    <div class="card">
+                                        <img src="assets/images/junior-geeks/${blog.col1[i].image}" class="card-img-top" alt="Blog Post ${i + 1}" onclick="openOverlay('${blog.col1[i].title}', '${blog.col1[i].description1}', 'assets/images/junior-geeks/${blog.col1[i].image}')">
+                                        <div class="card-body">
+                                            <span class="input-group-text bg-white border-0 d-flex justify-content-between align-items-center">
+                                                <p class="bi bi-calendar" style="font-size: 1.5rex; color: #6c757d; margin: 0;"> ${blog.col1[i].date}</p>
+                                                <p style="font-size: 1.5rex; color: #6c757d; margin: 0;">
+                                                    <i class="bi bi-person" style="font-size: 2rex; color: #6c757d;"></i> A1TI
+                                                </p>
+                                            </span>
+                                            <h5 class="card-title">${blog.col1[i].title}</h5>
+                                            <p class="card-text">
+                                                ${blog.col1[i].description}
+                                                <span class="more" id="${moreTextId}" style="display:none;"> ${blog.col1[i].description1}.</span>
+                                                <span class="read-more" id="${readMoreBtnId}" onclick="toggleReadMore(event, '${moreTextId}', '${readMoreBtnId}')" style="color: #6c757d;">Read More...</span>
+                                            </p>
+                                            <a href="#" class="btn btn-primary" onclick="openOverlay('${blog.col1[i].title}', '${blog.col1[i].description1}', 'assets/images/junior-geeks/${blog.col1[i].image}')">More Info</a>
+                                        </div>
+                                    </div>
                                 </div>
-                              </div>
-                            </div>
-                          </div>
-                          <img src="assets/images/professional-courses/${courses1.col1[i].image}" >
-                        </div>
-                        <div class="down-content text-center">
-                          <h4>${courses1.col1[i].course_name}</h4>
-                          <br>
-                          <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#${courses1.col1[i].title}" >
-                            More Info
-                          </button>
-                          <!-- Button to trigger Enroll Now Offcanvas -->
-                                    <button type="button" class="btn btn-primary " data-bs-toggle="offcanvas" 
-                                        data-bs-target="#courseOffcanvas" data-course="${courses.col1[i].title}">
-                                        Contact Us 
-                                    </button>
-
-                        </div>
-                        <div class="modal" id="myModal${i}">
-                          <div class="modal-dialog">
-                            <div class="modal-content">
-                              <div class="modal-header">
-                                <h4 class="modal-title">${courses1.col1[i].course_name}</h4>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                              </div>
-                              <div class="modal-body">
-                                 ${courses1.col1[i].course_name}
-                                 ${courses1.col1[i].descriptionContent}
-                                
-                                
-                              </div>
-                              <div class="modal-footer">
-                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    `;
-
-                  coursesContainer.appendChild(courseElement);
-
-                  // Dynamically populate the PDF list in the modal
-                  const pdfList = document.getElementById(`pdfList${i}`);
-                  courses1.col1[i].syllabus.forEach((syllabus, index) => {
-                    const listItem = document.createElement('li');
-                    const anchor = document.createElement('a');
-                    anchor.href = syllabus;
-                    anchor.textContent = `${courses1.col1[i].syllabus_name[index]} `;
-                    anchor.target = "_blank";
-                    listItem.appendChild(anchor);
-                    pdfList.appendChild(listItem);
-                  });
-                }
-              });
-              function filterItems() {
-                const searchText = document.getElementById('searchBar').value.toLowerCase();
-                const courses = document.querySelectorAll('.item-container');
-                let hasVisibleItem = false;
-
-                courses.forEach(course => {
-                  const title = course.getAttribute('data-title').toLowerCase();
-                  if (title.includes(searchText)) {
-                    course.style.display = '';
-                    hasVisibleItem = true;
-                  } else {
-                    course.style.display = 'none';
-                  }
-                });
-
-                const noContentMessage = document.getElementById('noContentMessage');
-                if (hasVisibleItem) {
-                  noContentMessage.style.opacity = '0';
-                  setTimeout(() => {
-                    noContentMessage.style.display = 'none';
-                  }, 300); // Match this duration with the CSS transition
-                } else {
-                  noContentMessage.style.display = 'block';
-                  setTimeout(() => {
-                    noContentMessage.style.opacity = '1';
-                  }, 10); // Short delay to ensure display is set before fading in
-                }
-              }
-
-            </script>
-            <script>
-              // Check localStorage for the modal to show
-              document.addEventListener("DOMContentLoaded", function () {
-                const modalToShow = localStorage.getItem('modalToShow');
-                if (modalToShow) {
-                  const modalElement = document.getElementById(modalToShow);
-                  if (modalElement) {
-                    const myModal = new bootstrap.Modal(modalElement);
-                    myModal.show();
-                  }
-                  localStorage.removeItem('modalToShow');
-                }
-              });
-            </script>
-
-         <!-- Offcanvas for Enroll Now -->
-<div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="courseOffcanvas"
-aria-labelledby="courseOffcanvasLabel" style="z-index: 1111;">
-<div class="offcanvas-header">
-  <h5 class="offcanvas-title" id="courseOffcanvasLabel">Course Details</h5>
-  <button type="button" class="btn-close btn-light" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-</div>
-<div class="offcanvas-body">
-  <form id="contactform">
-    <div class="mb-3 position-relative">
-      <!-- Label for Course Name -->
-      <label for="courseNameEnroll" class="form-label">Course Name</label> 
-
-      <!-- Input Field with Dropdown Icon -->
-      <div class="input-group">
-        <input type="text" class="form-control" id="courseNameEnroll" name="courseName" readonly>
-        <span class="input-group-text bg-light" style="cursor: pointer;">
-          <i class="bi bi-caret-down-fill"></i> <!-- Dropdown icon -->
-        </span>
-      </div>
-
-      <!-- Dropdown Menu Positioned Above the Input Field -->
-      <select class="form-select position-absolute top-50 start-0 w-100" id="courseSelect"
-        style="opacity: 0; z-index: 1;">
-        <option value="">--Select Course--</option>
-        <script>
-          for (let i = 0; i < courses.col1.length; i++) {
-            // Replace underscores with spaces for display
-            const courseDisplayName = courses.col1[i].course_name.replace(/_/g, ' ');
-            document.write(`<option value="${courses.col1[i].course_name}" data-description="${courses.col1[i].description}">${courseDisplayName}</option>`);
-          }
-        </script>
-      </select>
-    </div>
-
-    <!-- Other Form Fields -->
-    <div class="mb-3">
-      <label for="Name" class="form-label">Name</label>
-      <input type="text" class="form-control" id="Name" name="Name">
-    </div>
-    <div class="mb-3">
-      <label for="e-mail" class="form-label">E-mail</label>
-      <input type="email" class="form-control" id="e-mail" name="e-mail" required>
-    </div>
-    <div class="mb-3">
-      <label for="Mobile" class="form-label">Mobile</label>
-      <input type="number" class="form-control" id="Mobile" name="Mobile" pattern="\d{10}" maxlength="10" required>
-    </div>
-    <div class="mb-3">
-      <label for="message" class="form-label">Message</label>
-      <textarea class="form-control" id="message" name="message" rows="2"></textarea>
-    </div>
-    <button type="submit" class="btn btn-primary">Send</button>
-  </form>
-</div>
-</div>
-            <!-- Offcanvas for More Info -->
-            <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="courseOffcanvas1"
-              aria-labelledby="courseOffcanvasLabel1" style="z-index: 1111;">
-              <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="courseOffcanvasLabel1">More Info</h5>
-                <button type="button" class="btn-close btn-light" data-bs-dismiss="offcanvas"
-                  aria-label="Close"></button>
-              </div>
-              <div class="offcanvas-body">
-                <h1 id="courseTitleMoreInfo" class="mb-3"></h1><br>
-                <h2>Description</h2><br>
-                <h4 id="courseDescriptionMoreInfo"></h4>
-              </div>
+                            `);
+                        }
+                    </script>
+                </div>
             </div>
-            <!-- Script to handle course selection and initialize with the first course -->
-            <script>
-              document.addEventListener('DOMContentLoaded', function () {
-                const courseNameInputEnroll = document.getElementById('courseNameEnroll');
-                const courseSelect = document.getElementById('courseSelect');
-
-                // Select the first course by default if available
-                if (courseSelect.options.length > 1) {  // Ensure there's at least one course to select
-                  const defaultOption = courseSelect.options[1]; // First actual course option
-                  courseSelect.selectedIndex = 1;
-                  courseNameInputEnroll.value = defaultOption.text.replace(/_/g, ' ');
-                }
-
-                // Update course name input on dropdown change
-                courseSelect.addEventListener('change', function () {
-                  const selectedOption = courseSelect.options[courseSelect.selectedIndex];
-                  if (selectedOption.value) {
-                    // Update the input field to display the selected course name without underscores
-                    courseNameInputEnroll.value = selectedOption.textContent.replace(/_/g, ' ');
+            
+            <!-- Sidebar for larger screens -->
+            <div class="col-lg-4 d-none d-lg-block" id="sidebar">
+              <!-- Search Bar with Mic Icon Start -->
+              <div class="mb-4 mt-6">
+                <div class="input-group">
+                    <input type="text" class="form-control search_bar" onkeyup="filterblogpost()" placeholder="Search..." 
+                    id="search-bar" oninput="filterblogpost()">
+                    <span class="input-group-text" id="mic-icon" onclick="startVoiceSearch()" class="voice-icon">
+                        <i class="fas fa-microphone"></i>
+                    </span>
+                </div>
+              </div>
+              
+              <ul id="myUL" style="list-style-type: none; padding: 0; margin-top: 20px; display: none;">
+                <!-- List items here -->
+                <li style="padding: 10px;">Course 1: JavaScript  </li>
+                <li style="padding: 10px;">Course 2: Docker Training </li>
+                <li style="padding: 10px;">Course 3: Terraform  </li>
+                <li style="padding: 10px;">Course 4: Ansible Training  </li>
+                <li style="padding: 10px;">Course 5: Kubernetes  </li>
+                <li style="padding: 10px;">Course 6: Devops Training  </li>
+                <li style="padding: 10px;">Course 7: Unix Shell Scripting Training  </li>
+                <li style="padding: 10px;">Course 8: AWS Training  </li>
+                <li style="padding: 10px;">Course 9: GCP  </li>
+                <li style="padding: 10px;">Course 10: AZURE Training </li>
+                <li style="padding: 10px;">Course 11: MEAN Stack </li>
+                <li style="padding: 10px;">Course 12: MERN Stack </li>
+                <li style="padding: 10px;">Course 13: React Js </li>
+                <li style="padding: 10px;">Course 14: Web Designing </li>
+                <li style="padding: 10px;">Course 15: UI/UX </li>
+                <li style="padding: 10px;">Course 16: PHP Full Stack </li>
+                <li style="padding: 10px;">Course 17: PHP Experts </li>
+                <li style="padding: 10px;">Course 18: Angular Js </li>
+                <li style="padding: 10px;">Course 19: C And C++ Training </li>
+                <li style="padding: 10px;">Course 20: .NET Training </li>
+                <li style="padding: 10px;">Course 21: JavaScript Training </li>
+                <li style="padding: 10px;">Course 22: MySQL Training </li>
+                <li style="padding: 10px;">Course 23: SQL Server DBA Training </li>
+                <li style="padding: 10px;">Course 24: MongoDB Training </li>
+                <li style="padding: 10px;">Course 25: Android </li>
+                <li style="padding: 10px;">Course 26: I-Phone </li>
+                <li style="padding: 10px;">Course 27: Machine Learning Training </li>
+                <li style="padding: 10px;">Course 28: Data Science Training </li>
+                <li style="padding: 10px;">Course 30: Deep Learning Course </li>
+                <li style="padding: 10px;">Course 31: Artificial Intelligence Course </li>
+                <li style="padding: 10px;">Course 32: Data Science With Python </li>
+                <li style="padding: 10px;">Course 33: Power Bi </li>
+                <li style="padding: 10px;">Course 34: MIS </li>
+                <li style="padding: 10px;">Course 35: Advanced Microsoft Excel </li>
+                <li style="padding: 10px;">Course 36: Advanced Digital Marketing </li>
+                <li style="padding: 10px;">Course 37: Digital Marketing </li>
+                <li style="padding: 10px;">Course 38: 6 Weeks Summer Training </li>
+                <li style="padding: 10px;">Course 39: 6 Months Industrial Training </li>
+                <li style="padding: 10px;">Course 40: Graphic Designing </li>
+                <li style="padding: 10px;">Course 41: Motion Graphic Course </li>
+                <li style="padding: 10px;">Course 42: Multimedia & Animation </li>
+                <li style="padding: 10px;">Course 43: Graphic Motion Pro Course </li>
+                <li style="padding: 10px;">Course 44: Videography Course </li>
+                <li style="padding: 10px;">Course 45: Scriptwriting & Story Boarding </li>
+                <li style="padding: 10px;">Course 46: Film Making </li>
+                <li style="padding: 10px;">Course 47: Graphic Designing Pro </li>
+                <li style="padding: 10px;">Course 48: Manual + Selenium </li>
+                <li style="padding: 10px;">Course 49: Full Stack QA </li>
+                <li style="padding: 10px;">Course 50: Java With Selenium </li>
+                <li style="padding: 10px;">Course 51: REST Assured API </li>
+                <li style="padding: 10px;">Course 52: Appium Testing </li>
+                <li style="padding: 10px;">Course 53: API Testing </li>
+                <li style="padding: 10px;">Course 54: Manual Testing </li>
+                <li style="padding: 10px;">Course 55: Primavera P6 Testing </li>
+                <li style="padding: 10px;">Course 56: Agile Testing </li>
+                <li style="padding: 10px;">Course 57: Microsoft Excel Training </li>
+                <li style="padding: 10px;">Course 58: Scrum Master Training </li>
+                <li style="padding: 10px;">Course 59: JavaScript</li>
+                <li style="padding: 10px;">Course 60: Data Science </li>
+                <li style="padding: 10px;">Course 61: AI Machine Learning </li>
+                <li style="padding: 10px;">Course 62: Web Development </li>
+              </ul>
+              
+              <script>
+              // Function to filter blog posts based on search input
+              function filterblogpost() {
+                  const input = document.getElementById('search-bar');
+                  const filter = input.value.toUpperCase();
+                  const list = document.getElementById("myUL");
+                  const items = list.getElementsByTagName("li");
+                  let visibleCount = 0;
+              
+                  for (let i = 0; i < items.length; i++) {
+                      const text = items[i].textContent || items[i].innerText;
+                      if (text.toUpperCase().indexOf(filter) > -1) {
+                          items[i].style.display = "";
+                          visibleCount++;
+                      } else {
+                          items[i].style.display = "none";
+                      }
                   }
-                });
-              });
-            </script>
-
-            <!-- Script to Handle Course Name and Details Display in Offcanvas -->
-            <script>
-              document.addEventListener('DOMContentLoaded', function () {
-                const courseOffcanvas = document.getElementById('courseOffcanvas');
-                const courseNameInputEnroll = document.getElementById('courseNameEnroll');
-                const courseSelect = document.getElementById('courseSelect');
-
-                const courseTitleMoreInfo = document.getElementById('courseTitleMoreInfo');
-                const courseDescriptionMoreInfo = document.getElementById('courseDescriptionMoreInfo');
-
-                if (courseOffcanvas) {
-                  courseOffcanvas.addEventListener('show.bs.offcanvas', function (event) {
-                    const button = event.relatedTarget;
-                    const courseName = button.getAttribute('data-course');
-                    if (courseNameInputEnroll) {
-                      courseNameInputEnroll.value = courseName.replace(/_/g, ' '); // Display name without underscores
-                    }
-                  });
                 }
-
-                // Update the course name when selecting from the dropdown
-                courseSelect.addEventListener('change', function () {
-                  const selectedOption = courseSelect.options[courseSelect.selectedIndex];
-                  if (selectedOption.value) {
-                    courseNameInputEnroll.value = selectedOption.value.replace(/_/g, ' '); // Display without underscores
-
-                    // Show course details in the More Info section of the offcanvas
-                    if (courseTitleMoreInfo) {
-                      courseTitleMoreInfo.textContent = selectedOption.textContent;
-                    }
-
-                    if (courseDescriptionMoreInfo) {
-                      const courseDescription = selectedOption.getAttribute('data-description');
-                      const descriptionItems = courseDescription ?
-                        courseDescription.split(',').map(item => `<li>${item.trim()}</li>`).join('') : '';
-                      courseDescriptionMoreInfo.innerHTML = `<ul>${descriptionItems}</ul>`;
-                    }
+              
+              // Function to start voice search with mic color change
+              function startVoiceSearch() {
+                  const icon = document.getElementById('mic-icon');
+                  icon.style.color = 'red';
+              
+                  if ('webkitSpeechRecognition' in window) {
+                      const recognition = new webkitSpeechRecognition();
+                      recognition.lang = 'en-US';
+                      recognition.interimResults = false;
+                      recognition.maxAlternatives = 1;
+              
+                      recognition.start();
+              
+                      recognition.onresult = function (event) {
+                          let transcript = event.results[0][0].transcript.trim().replace(/\.$/, '');
+                          document.getElementById('search-bar').value = transcript;
+              
+                          // Trigger filtering after voice search result is entered
+                          filterblogpost();
+                      };
+              
+                      recognition.onerror = function () {
+                          console.error('Speech recognition error');
+                          icon.style.color = '#333';
+                      };
+              
+                      recognition.onend = function () {
+                          icon.style.color = '#333';
+                      };
+                  } else {
+                      alert('Speech recognition not supported in this browser.');
                   }
-                });
-              });
-            </script>
+              }
+              </script>
+              
+              <!-- Search Bar with Mic Icon End ---->
 
-            <!-- SweetAlert2 JS -->
-            <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-            <script>
-              document.addEventListener('DOMContentLoaded', function () {
-
-                // Handle form submission
-                const form = document.getElementById('contactform');
-                if (form) {
-                  form.addEventListener('submit', function (e) {
-                    e.preventDefault();
-
-                    const scriptURL = 'https://script.google.com/macros/s/AKfycbyzWpZIIAt4ZaXdOXZKWnFoj-REOq7PDbaGYqieIPxJDQhR6B9NLYj_SgSFFtVyGVjj/exec';
-                    const formData = new FormData(this);
-
-                    fetch(scriptURL, { method: 'POST', body: formData })
-                      .then(response => {
-                        Swal.fire({
-                          title: "Thank you!",
-                          text: "Your form is submitted successfully.",
-                          icon: "success",
-                          timer: 1500,
-                          showConfirmButton: false
-                        }).then(() => {
-                          window.location.reload(); // Reload after closing the alert
-                        });
-                      })
-                      .catch(error => {
-                        console.error('Error!', error.message);
-                        Swal.fire({
-                          title: "Oops!",
-                          text: "Something went wrong. Please try again later.",
-                          icon: "error"
-                        });
-                      });
-                  });
-                }
-              });
-              document.getElementById('Mobile').addEventListener('input', function (e) {
-                var x = e.target.value.replace(/\D/g, '');
-                if (x.length > 10) {
-                  x = x.substring(0, 10);
-                }
-                e.target.value = x;
-              });
-
-
-            </script>
-          </div>
+               <!-- Categories Started -->
+                <div class="mb-4">
+                    <h4>Categories</h4>
+                    <ul class="list-group">
+                        <li class="list-group-item" data-category="all"><a href="#" class="category-link">All</a></li>
+                        <li class="list-group-item" data-category="programming"><a href="#" class="category-link">Programming</a></li>
+                        <li class="list-group-item" data-category="designing"><a href="#" class="category-link">Designing</a></li>
+                        <li class="list-group-item" data-category="web-development"><a href="#" class="category-link">Web Development</a></li>
+                    </ul>
+                </div>
+                <!-- Categories End ----->
+                <!-- Recent Post Start -->
+                <div class="mb-4">
+                    <h4>Recent Posts</h4>
+                    <ul class="list-group">
+                        <li class="list-group-item"><a href="#">Recent Post 1</a></li>
+                        <li class="list-group-item"><a href="#">Recent Post 2</a></li>
+                    </ul>
+                </div>
+                <!-- Recent Post End -->
+            </div>
         </div>
-      </div>
     </div>
+</section>
 
-  </section>
-  <!-- Footer -->
-  <script type="text/javascript" src="footer.js"></script>
-  <!-- Footer -->
-  <script>
-    var selectedFilter = ""; // Add this variable to store the selected filter
+<!-- Overlay Modal -->
+<div id="overlay" class="overlay" onclick="closeOverlay(event)">
+    <div class="overlay-content" onclick="event.stopPropagation();">
+        <span class="close" onclick="closeOverlay(event)">&times;</span>
+        <div class="row">
+            <div class="col-lg-8">
+                <h2 id="overlay-title"></h2>
+                <img id="overlay-image" src="" alt="Overlay Image" class="image-scroll">
+                <p id="overlay-description"></p>
+            </div>
+            <div class="col-lg-4">
+                <h4>Related Posts</h4>
+                <div id="related-posts" class="related-posts"></div>
+            </div>
+        </div>
+    </div>
+</div>
 
-    function toggleDropdown() {
-      document.getElementById("myDropdown").classList.toggle("show");
+    <!--------FOOTER STARTS-------->
+    <script type="text/javascript" src="footer.js"></script>
+    <!--------FOOTER ENDS-------->
+
+<script>
+  let currentOpenMoreTextId = null;
+let currentOpenReadMoreBtnId = null;
+
+// Function to toggle Read More/Read Less
+function toggleReadMore(event, moreTextId, readMoreBtnId) {
+    event.stopPropagation();
+    const moreText = document.getElementById(moreTextId);
+    const readMoreBtn = document.getElementById(readMoreBtnId);
+
+    if (currentOpenMoreTextId && currentOpenMoreTextId !== moreTextId) {
+        document.getElementById(currentOpenMoreTextId).style.display = "none";
+        document.getElementById(currentOpenReadMoreBtnId).textContent = "Read More...";
     }
 
-    function filterFunction() {
-      var input, filter, ul, li, a, i;
-      input = document.getElementById("myInput");
-      filter = input.value.toUpperCase();
-      ul = document.getElementById("myDropdown").getElementsByTagName("ul")[0];
-      li = ul.getElementsByTagName("li");
+    if (moreText.style.display === "none" || moreText.style.display === "") {
+        moreText.style.display = "inline";
+        readMoreBtn.textContent = "Read Less...";
+        currentOpenMoreTextId = moreTextId;
+        currentOpenReadMoreBtnId = readMoreBtnId;
+    } else {
+        moreText.style.display = "none";
+        readMoreBtn.textContent = "Read More...";
+        currentOpenMoreTextId = null;
+        currentOpenReadMoreBtnId = null;
+    }
+}
 
-      for (i = 0; i < li.length; i++) {
-        a = li[i];
-        txtValue = a.textContent || a.innerText;
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-          a.style.display = "";
+// Function to filter blog posts with smooth animations
+function filterPosts(selectedCategory) {
+    const blogPosts = document.querySelectorAll('#blogPosts .col-md-6, #blogPosts .col-lg-12');
+    const filteredPosts = []; // Store filtered posts for the carousel
+
+    blogPosts.forEach(post => {
+        const postCategory = post.getAttribute('data-category');
+
+        if (selectedCategory === 'all' || postCategory === selectedCategory) {
+            if (post.style.display === 'none') {
+                post.style.display = 'block';
+                void post.offsetWidth; // Trigger reflow for animation
+                post.classList.remove('fade-out');
+                post.classList.add('fade-in');
+            }
+            filteredPosts.push({
+                title: post.querySelector('.card-title').innerText,
+                description: post.querySelector('.card-text').innerText,
+                image: post.querySelector('.card-img-top').getAttribute('src').split('/').pop(),
+                category: postCategory
+            });
         } else {
-          a.style.display = "none";
+            if (post.style.display !== 'none') {
+                post.classList.remove('fade-in');
+                post.classList.add('fade-out');
+                post.addEventListener('animationend', function handleAnimation() {
+                    post.style.display = 'none';
+                    post.classList.remove('fade-out');
+                    post.removeEventListener('animationend', handleAnimation);
+                });
+            }
         }
-      }
-    }
-
-    document.getElementById("myDropdown").addEventListener('click', function (e) {
-      if (e.target.tagName === 'LI') {
-        selectedFilter = e.target.getAttribute('data-filter');
-        applyFilter();
-        document.getElementById("myDropdown").classList.remove("show");
-      }
     });
 
-    function applyFilter() {
-      var courses = document.querySelectorAll('.templatemo-item-col');
-      courses.forEach(function (course) {
-        if (selectedFilter === '*' || course.classList.contains(selectedFilter.substring(1))) {
-          course.style.display = '';
+    // Update the carousel with filtered posts
+    updateCarousel(filteredPosts);
+}
+
+// Update the carousel with filtered posts
+function updateCarousel(filteredPosts) {
+    const carouselInner = document.querySelector('.carousel-inner');
+    carouselInner.innerHTML = ''; // Clear existing carousel items
+
+    if (filteredPosts.length === 0) {
+        carouselInner.innerHTML = '<div class="carousel-item active"><div class="row"><div class="col-12"><h5>No posts available in this category.</h5></div></div></div>';
+        // Hide carousel navigation arrows if no posts are available
+        toggleCarouselArrows(false);
+        return;
+    }
+
+    filteredPosts.forEach((post, index) => {
+        const activeClass = index === 0 ? 'active' : '';
+        carouselInner.innerHTML += `
+            <div class="carousel-item ${activeClass}">
+                <div class="row">
+                    <div class="col-lg-12 mb-4" data-category="${post.category}">
+                        <div class="card">
+                            <img src="assets/images/junior-geeks/${post.image}" class="card-img-top" alt="${post.title}">
+                            <div class="card-body">
+                                <h5 class="card-title">${post.title}</h5>
+                                <p class="card-text">${post.description}</p>
+                                <a href="blog-post${index + 1}.html" class="btn btn-primary">More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+    });
+
+    // Reinitialize the carousel to fix arrow visibility after filtering
+    toggleCarouselArrows(filteredPosts.length > 1);
+}
+
+// Function to toggle carousel arrows visibility based on the number of posts
+function toggleCarouselArrows(show) {
+    const prevButton = document.querySelector('.carousel-control-prev');
+    const nextButton = document.querySelector('.carousel-control-next');
+
+    if (show) {
+        prevButton.style.display = 'block';
+        nextButton.style.display = 'block';
+    } else {
+        prevButton.style.display = 'none';
+        nextButton.style.display = 'none';
+    }
+}
+
+// Sidebar scroll adjustment
+window.addEventListener('scroll', function () {
+    const sidebar = document.getElementById('sidebar');
+    const footer = document.querySelector('footer'); // Assuming there's a footer element
+    const sidebarHeight = sidebar.offsetHeight;
+    const footerPosition = footer.getBoundingClientRect().top;
+
+    if (footerPosition < sidebarHeight) {
+        sidebar.style.position = 'absolute';
+        sidebar.style.top = (footerPosition - sidebarHeight) + 'px';
+    } else {
+        sidebar.style.position = 'fixed';
+        sidebar.style.top = '20px';
+    }
+});
+
+// Add event listeners to category links
+document.querySelectorAll('.category-link').forEach(link => {
+    link.addEventListener('click', function (e) {
+        e.preventDefault(); // Prevent default link behavior
+        const selectedCategory = this.parentElement.getAttribute('data-category'); // Get category
+        filterPosts(selectedCategory); // Call filterPosts
+    });
+});
+
+// Search bar functionality
+document.getElementById('search-bar').addEventListener('input', function () {
+    const searchTerm = this.value.toLowerCase();
+    const blogPosts = document.querySelectorAll('#blogPosts .col-md-6, #blogPosts .col-lg-12');
+
+    blogPosts.forEach(post => {
+        const title = post.querySelector('.card-title').textContent.toLowerCase();
+        const description = post.querySelector('.card-text').textContent.toLowerCase();
+        if (title.includes(searchTerm) || description.includes(searchTerm)) {
+            post.style.display = 'block';
         } else {
-          course.style.display = 'none';
+            post.style.display = 'none';
         }
-      });
-    }
-  </script>
-
-  <!-- Scripts -->
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-  <script src="assets/js/isotope.min.js"></script>
-  <script src="assets/js/owl-carousel.js"></script>
-  <script src="assets/js/lightbox.js"></script>
-  <script src="assets/js/tabs.js"></script>
-  <script src="assets/js/isotope.js"></script>
-  <script src="assets/js/video.js"></script>
-  <script src="assets/js/slick-slider.js"></script>
-  <script src="assets/js/custom.js"></script>
-  <script>
-    //according to loftblog tut
-    $('.nav li:first').addClass('active');
-
-    var showSection = function showSection(section, isAnimate) {
-      var
-        direction = section.replace(/#/, ''),
-        reqSection = $('.section').filter('[data-section="' + direction + '"]'),
-        reqSectionPos = reqSection.offset().top - 0;
-
-      if (isAnimate) {
-        $('body, html').animate({
-          scrollTop: reqSectionPos
-        },
-          800);
-      } else {
-        $('body, html').scrollTop(reqSectionPos);
-      }
-
-    };
-
-    var checkSection = function checkSection() {
-      $('.section').each(function () {
-        var
-          $this = $(this),
-          topEdge = $this.offset().top - 80,
-          bottomEdge = topEdge + $this.height(),
-          wScroll = $(window).scrollTop();
-        if (topEdge < wScroll && bottomEdge > wScroll) {
-          var
-            currentId = $this.data('section'),
-            reqLink = $('a').filter('[href*=\\#' + currentId + ']');
-          reqLink.closest('li').addClass('active').
-            siblings().removeClass('active');
-        }
-      });
-    };
-
-    $('.main-menu, .responsive-menu, .scroll-to-section').on('click', 'a', function (e) {
-      e.preventDefault();
-      showSection($(this).attr('href'), true);
     });
 
-    $(window).scroll(function () {
-      checkSection();
-    });
+    // Get filtered posts and update the carousel
+    const filteredPosts = Array.from(blogPosts)
+        .filter(post => post.style.display !== 'none')
+        .map(post => ({
+            title: post.querySelector('.card-title').innerText,
+            description: post.querySelector('.card-text').innerText,
+            image: post.querySelector('.card-img-top').getAttribute('src').split('/').pop(),
+            category: post.getAttribute('data-category')
+        }));
 
-    document.addEventListener("DOMContentLoaded", function () {
-      const urlParams = new URLSearchParams(window.location.search);
-      const modalName = urlParams.get('modal');
-      if (modalName) {
-        const modalToOpen = new bootstrap.Modal(document.getElementById(modalName + 'Modal'), {
-          keyboard: true
-        });
-        modalToOpen.show();
-      }
-    });
+    // Update the carousel with the filtered posts
+    updateCarousel(filteredPosts);
+});
 
-
-    function toggleDropdown() {
-      document.getElementById("myDropdown").classList.toggle("show");
-    }
-
-    function filterFunction() {
-      var input, filter, ul, li, i;
-      input = document.getElementById("myInput");
-      filter = input.value.toUpperCase();
-      ul = document.getElementById("dropdownList");
-      li = ul.getElementsByTagName("li");
-
-      // Add the fade-in class to all items before filtering
-      for (i = 0; i < li.length; i++) {
-        li[i].classList.add("fade-in");
-      }
-
-      // Use a timeout to synchronize with animation
-      setTimeout(() => {
-        // Hide all items initially
-        for (i = 0; i < li.length; i++) {
-          li[i].classList.add("hidden");
-        }
-
-        // Show filtered items
-        for (i = 0; i < li.length; i++) {
-          txtValue = li[i].textContent || li[i].innerText;
-          if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            li[i].classList.remove("hidden");
-          }
-        }
-      }, 300); // Match with CSS transition duration
-
-      // Remove fade-in class after animation
-      setTimeout(() => {
-        let items = ul.getElementsByTagName('li');
-        for (let item of items) {
-          item.classList.remove('fade-in');
-        }
-      }, 600); // Match with animation duration
-    }
-  </script>
-
+</script>
 </body>
-
 </html>

@@ -1,7 +1,7 @@
 let blog = {
   "col1": [
     {
-      "image" :"computer_science.png",
+      "image" :"computer_science11th.png",
       "title":"Computer Science",
       "date" :"25/Sep/2024",
       "description":"A brief description of the blog post goes here.",
@@ -33,7 +33,7 @@ let blog = {
       "category": "designing"
     },
     {
-      "image" :"cc+.png",
+      "image" :"ccplus1.png",
       "title":"C/C++",
       "date" :"21/Sep/2024",
       "description":"A brief description of the blog post goes here.",
