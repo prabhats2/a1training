@@ -3,186 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PDF Carousel with Header & Footer</title>
-    <style>
-        /* General Styling */
-        body, html {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            box-sizing: border-box;
-        }
-
-        /* Header Styling */
-        header {
-            background-color: purple;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            font-size: 24px;
-        }
-
-        /* Footer Styling */
-        footer {
-            background-color: purple;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-
-        /* Carousel Container Styling */
-        #pdfCarouselContainer {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            height: 80vh;
-            overflow: hidden;
-            padding-top: 20px; /* Adding space below header */
-            padding-bottom: 50px; /* Adding space above footer */
-        }
-
-        /* Individual PDF Item Styling */
-        .carousel-item {
-            width: 200px;
-            height: 300px;
-            margin: 0 10px;
-            background-color: purple;
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 18px;
-            transition: transform 0.5s ease, opacity 0.5s ease;
-            opacity: 0.5;
-        }
-
-        /* Styling for the active (center) PDF */
-        .carousel-item.active {
-            transform: scale(1.2);
-            opacity: 1;
-            z-index: 2;
-        }
-
-        /* Arrow Styling */
-        .arrow {
-            font-size: 30px;
-            color: purple;
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-
-        .arrow-left {
-            left: 10px;
-        }
-
-        .arrow-right {
-            right: 10px;
-        }
-
-        /* Close Button Styling */
-        #closeButton {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background-color: red;
-            color: white;
-            padding: 10px 15px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-
-        /* Responsive Design */
-        @media screen and (max-width: 768px) {
-            .carousel-item {
-                width: 150px;
-                height: 200px;
-            }
-
-            .arrow {
-                font-size: 24px;
-            }
-
-            header, footer {
-                font-size: 18px;
-            }
-        }
-    </style>
+    <title>FORM</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+    <div class="container">
+        <form  autocomplete="off" method="post" name="google-sheet">
+            <h3><center>Contact Form</center></h3>
+            <input type="text" placeholder="Type your Name Here..." name="name">
+            <input type="email" placeholder="Type your E-mail Here..." name="e-mail">
+            <input type="text" placeholder="Type your Number Here..." name="mobile">
+         
+            <select name="degree" id="">
+                <option value="Not Selected">Select An Option</option>
+                <option value="C/C++">C/C++</option>
+                <option value="Python">Python</option>
+                <option value="Java">Java</option>
 
-    <!-- Header -->
-    <header>
-        PDF Carousel Viewer
-    </header>
+            </select>
 
-    <!-- Carousel Container -->
-    <div id="pdfCarouselContainer">
-        <!-- Left Arrow -->
-        <div class="arrow arrow-left">&#8592;</div>
+            <textarea name="message" id="" rows="2" placeholder="Enter Your Message Here... "></textarea>
+            <button type="submit" name="sumbit">Send</button>
+            <button type="reset"  class="reset" >Reset</button>
 
-        <!-- PDF Pages (carousel items) -->
-        <div class="carousel-item">Page 1</div>
-        <div class="carousel-item">Page 2</div>
-        <div class="carousel-item active">Page 3</div> <!-- Active PDF (Center) -->
-        <div class="carousel-item">Page 4</div>
-        <div class="carousel-item">Page 5</div>
+        </form>
 
-        <!-- Right Arrow -->
-        <div class="arrow arrow-right">&#8594;</div>
-
-        <!-- Close Button -->
-        <div id="closeButton">CLOSE</div>
+        <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbyC2i_W2J56DSabwLY1lT3wE__pnMxRTLObilyp6xnji-5mAPdlovIsi6KES6lyJaA/exec'
+            const form = document.forms['google-sheet']
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+                .catch(error => console.error('Error!', error.message))
+            })
+          </script>
     </div>
-
-    <!-- Footer -->
-    <footer>
-        &copy; 2024 PDF Viewer. All rights reserved.
-    </footer>
-
-    <script>
-        // Select all carousel items and the arrows
-        const pdfItems = document.querySelectorAll('.carousel-item');
-        const leftArrow = document.querySelector('.arrow-left');
-        const rightArrow = document.querySelector('.arrow-right');
-
-        let currentIndex = 2; // Index of the initially active item
-
-        // Function to update carousel display
-        function updateCarousel() {
-            pdfItems.forEach((item, index) => {
-                item.classList.remove('active');
-                if (index === currentIndex) {
-                    item.classList.add('active');
-                }
-            });
-        }
-
-        // Event listener for left arrow click
-        leftArrow.addEventListener('click', () => {
-            currentIndex = (currentIndex > 0) ? currentIndex - 1 : pdfItems.length - 1;
-            updateCarousel();
-        });
-
-        // Event listener for right arrow click
-        rightArrow.addEventListener('click', () => {
-            currentIndex = (currentIndex < pdfItems.length - 1) ? currentIndex + 1 : 0;
-            updateCarousel();
-        });
-
-        // Initial update to set the correct active item
-        updateCarousel();
-
-        // Close button functionality
-        document.getElementById('closeButton').addEventListener('click', () => {
-            document.getElementById('pdfCarouselContainer').style.display = 'none';
-        });
-    </script>
-
+   
 </body>
 </html>

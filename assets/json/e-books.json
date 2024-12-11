@@ -6,9 +6,9 @@ let books = { "col1" : [
 	      "ebook" : ["https://amzn.to/3SRLU56"],
 	      "ebook_name" : ["https://amzn.to/4g2s9Sv", "https://amzn.in/d/76hrmRz", "https://amzn.in/d/4Jzj8A2"],
 	      "pdf":["assets/pdf/git.pdf","assets/pdf/git-cheat-sheet-education.pdf" ,
-		         "assets/pdf/git_ebook.pdf" ,"assets/pdf/Git_Interview_Questions_Answers.pdf"],
+		         "assets/pdf/git_ebook.pdf" ,"assets/pdf/Git_Interview_Questions_Answers.pdf" ,"assets/pdf/Git_Github_Notes.pdf"],
 		
-		  "pdf_name":["Git ", "Git Cheat Sheet ", "Git ebook" ,"GIt Interview Questions Answers "]	 
+		  "pdf_name":["Git ", "Git Cheat Sheet ", "Git ebook" ,"GIt Interview Questions Answers ", "Git & Git Hub Notes"]	 
    },
    //linux
          {"name" : "Linux", 

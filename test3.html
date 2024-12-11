@@ -2,751 +2,802 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-<meta name="author" content="Template Mo">
-<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-<!-- Bootstrap 5.3.2 CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-<!-- Bootstrap Icons -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-<!-- Font Awesome -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-<!-- Fancybox -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
-
-<!-- jQuery (latest version) -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<!-- Popper.js (required for Bootstrap) -->
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-<!-- Bootstrap JS Bundle -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<!-- Fancybox JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
-<!-- PDF.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
-<!-- Your meta.js script -->
-<script type="text/javascript" src="meta.js"></script>
-
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
- <!-- Include Bootstrap JS -->
- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
- <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
- <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
- <script type="text/javascript" src="meta.js"></script>
-
+    <meta charset="utf-8">
+    <meta name="author" content="Template Mo">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <!-- Keep only one Bootstrap version -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+ <script type="text/javascript" src="assets/json/blog.json"></script>
+ <script type="text/javascript" src="test2.js"></script>
     <!-- Additional CSS Files -->
     <link rel="stylesheet" href="assets/css/fontawesome.css">
     <link rel="stylesheet" href="assets/css/templatemo-edu-meeting.css">
     <link rel="stylesheet" href="assets/css/owl.css">
     <link rel="stylesheet" href="assets/css/lightbox.css">
-     <script type="text/javascript" src="assets/json/blog.json"></script>
     <style>
-          /* Section Styles */
-    #blog {
-        padding:15rex 0;
-        background-image: url(assets/images/meetings-bg.jpg);
-        background-size: cover;
-    }
-
-    /* Header Styles */
-    #blog h2 {
-        font-size: 2.5rem;
-        margin-bottom: 1.5rem;
-        color: #fff;
-    }
-
-    /* Card Styles */
-    .card {
-        transition: transform 0.3s;
-        border-radius: 1rem;
-        overflow: hidden; /* Ensure no overflow from cards */
-    }
-
-    .card:hover {
-        transform: scale(1.05);
-    }
-
-    /* Featured Post Styles */
-    #blog .mb-4 img {
-        border-radius: 1rem;
-        padding: 3px;
-    }
-
-    /* Sidebar Styles */
-    #sidebar {
-        position: sticky;
-        top: 80px;
-        margin-left: 120px;
-        width: 300px;
-        height: calc(100vh - 160px);
-        overflow-y: auto;
-        background-color: white;
-        padding: 20px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        z-index: 1;
-        border-radius: 0.9rem;
-    }
-
-    .sidebar h4 {
-        font-size: 1.5rem;
-        margin-bottom: 1rem;
-    }
-
-    .sidebar .list-group-item {
-        background-color: #ffffff;
-        border: 0;
-        border-radius: 0.9rem;
-        transition: background-color 0.3s;
-    }
-
-    .sidebar .list-group-item:hover {
-        background-color: #e9ecef;
-    }
-
-    /* Responsive Styles */
-    @media (max-width: 768px) {
-        #blog h2 {
-            font-size: 2rem;
+        /* Section Styles */
+        #blog {
+            padding: 2rem 0;
+            background-image: url(assets/images/meetings-bg.jpg);
         }
 
-        .card {
+        /* Header Styles */
+        #blog h2 {
+            font-size: 2.5rem;
             margin-bottom: 1.5rem;
         }
 
-        /* Adjust Sidebar for Mobile */
-        #sidebar {
-            position: static;
-            width: 100%;
-            height: auto;
-            margin-left: 0;
-            padding: 1rem;
+        /* Card Styles */
+        .card {
+            transition: transform 0.3s;
+            border-radius: 1.0rem;
+            overflow: hidden;
+            /* Ensure no overflow from cards */
         }
-    }
 
-    /* For fade-in and fade-out transitions */
-.fade-in {
-    opacity: 0;
-    animation: fadeIn 0.5s forwards;
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        /* Featured Post Styles */
+        #blog .mb-4 img {
+            border-radius: 1rem;
+            padding: 3px;
+        }
+
+        #sidebar {
+            position: sticky;
+            top: 80px;
+            margin-left: 120px;
+            width: 300px;
+            height: calc(100vh - 160px);
+            overflow-y: auto;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+            border-radius: 0.9rem;
+        }
+
+        /* Sidebar Styles */
+        .sidebar h4 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .sidebar .list-group-item {
+            background-color: #ffffff;
+            border: 0px solid #ddd;
+            border-radius: 0.9rem;
+            transition: background-color 0.3s;
+        }
+
+        .sidebar .list-group-item:hover {
+            background-color: #e9ecef;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            #blog h2 {
+                font-size: 2rem;
+            }
+
+            .card {
+                margin-bottom: 1.5rem;
+            }
+        }
+
+        /* Animation Styles */
+        .fade-in {
+            animation: fadeIn 0.5s forwards;
+        }
+
+        .fade-out {
+            animation: fadeOut 0.5s forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeOut {
+            from {
+                transform: scale(1);
+                opacity: 1;
+            }
+
+            to {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+        }
+
+        .fade-out {
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            /* Smooth transition */
+        }
+
+        #sidebar {
+            transition: opacity 0.5s ease;
+            /* Smooth transition for visibility */
+        }
+
+        .post {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px 0;
+            /* Adjust margin to minimize space */
+            cursor: pointer;
+        }
+
+        .post-image {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        .post-title {
+            margin: 10px 0;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: none;
+            z-index: 9999;
+            /* Ensure overlay is on top */
+        }
+
+        .overlay-content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            width: 80%;
+            max-height: 90%;
+
+            position: relative;
+            margin: 0 auto;
+            /* Center overlay content */
+            top: 50%;
+            /* Move down */
+            transform: translateY(-50%);
+            /* Adjust to center vertically */
+        }
+
+        .close {
+            cursor: pointer;
+            float: right;
+            font-size: 20px;
+        }
+
+        /* Hide overflow to manage line limits */
+        .description {
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            -webkit-line-clamp: 5;
+            /* Limit to 5 lines */
+            transition: max-height 0.5s ease;
+            max-height: 8em;
+            /* Control height for 5 lines */
+        }
+
+        .description.expanded {
+            -webkit-line-clamp: unset;
+            /* Remove line limit */
+            max-height: unset;
+            /* Allow full height */
+        }
+
+        /* Adjust the layout without Flexbox */
+        .overlay-content .row {
+            margin: 0;
+            /* Reset margin */
+        }
+
+        .overlay-content .col-lg-8,
+        .overlay-content .col-lg-4 {
+            float: left;
+            /* Use float for layout */
+        }
+
+        .overlay-content .col-lg-8 {
+            width: 66.6666%;
+            /* Left content column takes 66% */
+        }
+
+        .overlay-content .col-lg-4 {
+            width: 33.3333%;
+            /* Right images column takes 33% */
+            height: auto;
+            /* Set fixed height for the scrollable area */
+
+        }
+
+        @media (max-width: 768px) {
+
+            .overlay-content .col-lg-4,
+            .overlay-content .col-lg-8 {
+                width: 100%;
+                /* Full width in mobile */
+                float: none;
+                /* Clear float */
+            }
+        }
+
+        .image-scroll {
+            height: auto;
+        }
+
+        .image-scroll img {
+            width: 100%;
+            margin-bottom: 10px;
+            /* Space between images */
+            border-radius: 5px;
+        }
+
+        .related-posts {
+            max-height: 550px;
+            /* Set a max height for scrolling */
+            overflow-y: auto;
+            /* Enable scrolling */
+        }
+
+        .related-posts .post {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+
+        .related-posts .post img {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        #search-bar {
+            margin-bottom: 15px;
+        }
+
+        #mic-icon {
+            cursor: pointer;
+            color: #555;
+            /* Change color if needed */
+            height: fit-content;
+            padding: 10px;
+
+        }
+
+        #mic-icon:hover {
+            color: #007bff;
+            /* Change hover color */
+
+        }
+/* Main content section */
+.main-content {
+    max-height: 70vh; /* Limit height to 70% of the viewport */
+    overflow-y: auto; /* Add vertical scroll if needed */
+    padding-right: 10px; /* Space for scrollbar */
+    margin-right: -10px; /* Adjust content to avoid layout issues */
+    scrollbar-width: thin; /* Thin scrollbar for modern browsers */
 }
 
-.fade-out {
-    opacity: 1;
-    animation: fadeOut 0.5s forwards;
+.main-content::-webkit-scrollbar {
+    width: 6px; /* Scrollbar width */
 }
 
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-    }
+.main-content::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Track color */
 }
 
-@keyframes fadeOut {
-    to {
-        opacity: 0;
-    }
+.main-content::-webkit-scrollbar-thumb {
+    background: #888; /* Thumb color */
+    border-radius: 10px; /* Rounded scrollbar */
 }
 
-    /* Description Styles for Overlay */
-    .description {
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-        -webkit-line-clamp: 5;
-        max-height: 8em;
-        transition: max-height 0.5s ease;
-    }
+.main-content::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Hover effect */
+}
 
-    .description.expanded {
-        -webkit-line-clamp: unset;
-        max-height: unset;
-    }
+/* Related posts section */
+.related-posts {
+    max-height: 60vh; /* Adjust height for related posts */
+    overflow-y: auto; /* Scrollable related posts */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
 
-    /* Overlay Content Styles */
-    .overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.8);
-        display: none;
-        z-index: 9999;
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .main-content {
+        max-height: 50vh; /* Reduce height on smaller screens */
     }
 
     .overlay-content {
-        background-color: #fff;
-        padding: 20px;
-        border-radius: 5px;
-        width: 80%;
-        max-height: 90%;
-        position: relative;
-        margin: 0 auto;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-
-    .overlay-content .row {
-        margin: 0;
-    }
-
-    .overlay-content .col-lg-8,
-    .overlay-content .col-lg-4 {
-        float: left;
-    }
-
-    .overlay-content .col-lg-8 {
-        width: 66.6666%;
-    }
-
-    .overlay-content .col-lg-4 {
-        width: 33.3333%;
-        height: auto;
-    }
-
-    @media (max-width: 768px) {
-        .overlay-content .col-lg-4,
-        .overlay-content .col-lg-8 {
-            width: 100%;
-            float: none;
-        }
-    }
-
-    /* Related Posts */
-    .related-posts {
-        max-height: 550px;
-        overflow-y: auto;
-    }
-
-    .related-posts .post {
-        border: 1px solid #ccc;
-        border-radius: 5px;
+        max-height: 85vh; /* Adjust for smaller viewports */
         padding: 10px;
-        margin-bottom: 10px;
-        cursor: pointer;
     }
-
-    .related-posts .post img {
-        width: 100%;
-        border-radius: 5px;
-    }
-
-    /* Search Bar Styles */
-    #search-bar {
-        margin-bottom: 15px;
-       
-    }
-    .search_bar{
-      height: 50px;
-    }
-
-    /* Microphone Icon */
-    #mic-icon {
-        cursor: pointer;
-        color: #555;
-        
-    }
-
-    #mic-icon:hover {
-        color: #007bff;
-    }
-    /* Search Bar Styles */
-#search-bar {
-    margin-bottom: 15px;
-    display: flex; /* Flexbox for aligning elements */
-    align-items: center; /* Vertically center the content */
 }
 
-.search_bar {
-    height: 50px; /* Set a fixed height for the search bar */
-    flex-grow: 1; /* Let the search bar take available space */
-    padding: 0 10px;
-    font-size: 1rem;
-}
-
-.input-group-text {
-    height: 50px; /* Match height with search bar */
-    display: flex; /* Use flex to align the icon */
-    align-items: center; /* Center the icon vertically */
-    padding: 0 10px; /* Add some padding if needed */
-}
-
-#mic-icon {
-    cursor: pointer;
-    color: #555;
-    font-size: 1.5rem; /* Size the mic icon properly */
-}
-
-#mic-icon:hover {
-    color: #007bff;
-}
 
     </style>
+
 </head>
 <!-- MENU START -->
 <script type="text/javascript" src="menu.js"></script>
-<!-- MENU END -->
+<!-- META START -->
+<script type="text/javascript" src="meta.js"></script>
 <body>
-  <section id="blog" >
-    <div class="container">
+    <div id="no-results-message" style="display: none; text-align: center; margin-top: 20px;">
+        <p>No results found</p>
+    </div>
+    
+    <section id="blog" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Blog</h2>
 
-        <!-- Button to toggle the sidebar dropdown at the top -->
-        <button class="btn btn-primary d-lg-none mb-4 w-100" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarDropdown" aria-expanded="false" aria-controls="sidebarDropdown">
-            Categories
-        </button>
+            <!-- Button to toggle the sidebar dropdown at the top -->
+            <button class="btn btn-primary d-lg-none mb-4 w-100" class="btn btn-primary btn-block" type="button"
+                data-bs-toggle="collapse" data-bs-target="#sidebarDropdown" aria-expanded="false"
+                aria-controls="sidebarDropdown">
+                Categories
+            </button>
 
-        <!-- Sidebar dropdown for mobile view -->
-        <div class="collapse d-lg-none mb-4 w-100" id="sidebarDropdown">
-            <div class="card">
-                <div class="card-body">
-                    <h4>Categories</h4>
-                    <ul class="list-group mb-4">
-                        <li class="list-group-item" data-category="all"><a href="#" class="category-link">All</a></li>
-                        <li class="list-group-item" data-category="programming"><a href="#" class="category-link">Programming</a></li>
-                        <li class="list-group-item" data-category="designing"><a href="#" class="category-link">Designing</a></li>
-                        <li class="list-group-item" data-category="web-development"><a href="#" class="category-link">Web Development</a></li>
-                    </ul>
-                    <h4>Recent Posts</h4>
-                    <ul class="list-group">
-                        <li class="list-group-item"><a href="#">Recent Post 1</a></li>
-                        <li class="list-group-item"><a href="#">Recent Post 2</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+            <!-- Sidebar dropdown for mobile view -->
+            <div class="collapse d-lg-none mb-4 w-100 " id="sidebarDropdown">
+                <div class="card">
+                    <div class="card-body">
+                        <h4>Categories</h4>
+                        <ul class="list-group mb-4">
+                            <li class="list-group-item" data-category="all"><a href="#" class="category-link">All</a>
+                            </li>
+                            <li class="list-group-item" data-category="programming"><a href="#"
+                                    class="category-link">Programming</a></li>
+                            <li class="list-group-item" data-category="designing"><a href="#"
+                                    class="category-link">Designing</a></li>
+                            <li class="list-group-item" data-category="web-development"><a href="#"
+                                    class="category-link">Web Development</a></li>
+                        </ul>
 
-        <div class="row">
-            <div class="col-lg-8">
-                <div class="row" id="blogPosts">
-                    <script>
-  // Initialize the carousel HTML structure outside the loop
-  document.write(`
-        <div id="blogCarousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-    `);
-
-    // Loop through the blog posts and create carousel items dynamically
-    for (let i = 0; i < blog.col1.length; i++) {
-        const activeClass = i === 0 ? "active" : "";  // Only the first item gets the active class
-
-        document.write(`
-            <div class="carousel-item ${activeClass}">
-                <div class="row">
-                    <div class="col-lg-12 mb-4" data-category="${blog.col1[i].category}">
-                        <div class="card">
-                            <img src="assets/images/junior-geeks/${blog.col1[i].image}" class="card-img-top" alt="Blog Post ${i + 1}">
-                            <div class="card-body">
-                                <h5 class="card-title">${blog.col1[i].title}</h5>
-                                <p class="card-text">${blog.col1[i].description}</p>
-                                <a href="blog-post${i + 1}.html" class="btn btn-primary">More</a>
-                            </div>
-                        </div>
+                        <h4>Recent Posts</h4>
+                        <ul class="list-group">
+                            <li class="list-group-item"><a href="#">Python Programming</a></li>
+                            <li class="list-group-item"><a href="#">Recent Post 2</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
-        `);
-    }
 
-    // Close the carousel-inner and add the controls
-    document.write(`
-            </div>
-            <!-- Carousel Controls -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#blogCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#blogCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-    `);
+            <div class="row">
+                <div class="col-lg-8">
 
-  
-                        // Loop to display additional blog posts
-                        for (let i = 1; i < blog.col1.length; i++) {
-                            const moreTextId = `moreText${i}`;
-                            const readMoreBtnId = `readMoreBtn${i}`;
+                    <div class="row" id="blogPosts">
+                        <script>
+                            const blogItems = blog.col1;
+                        
+                            // Create the carousel
+                            let carouselContent = `<div id="blogCarousel" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">`;
+                        
+                            blogItems.forEach((item, index) => {
+                                const activeClass = index === 0 ? "active" : "";
+                                carouselContent += `
+                                    <div class="carousel-item ${activeClass}">
+                                        <div class="row">
+                                            <div class="col-lg-12 mb-4" data-category="${item.category}">
+                                                <div class="card">
+                                                    <img src="assets/images/junior-geeks/${item.image}" class="card-img-top" alt="Blog Post ${index + 1}">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">${item.title}</h5>
+                                                        <p class="card-text">${item.description}</p>
+                                                        <a href="blog-post${index + 1}.html" class="btn btn-primary">More</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>`;
+                            });
+                        
+                            carouselContent += `
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#blogCarousel" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#blogCarousel" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>`;
+                        
+                            document.write(carouselContent);
+                        
+                            // Create the rest of the blog posts
+                            blogItems.slice(1).forEach((item, index) => {
+                                const moreTextId = `moreText${index + 1}`;
+                                const readMoreBtnId = `readMoreBtn${index + 1}`;
+                                document.write(`
+                                    <div class="col-md-6 mb-4" data-category="${item.category}">
+                                        <div class="card">
+                                            <img src="assets/images/junior-geeks/${item.image}" class="card-img-top post-image" alt="Blog Post ${index + 2}" onclick="openOverlay('${item.title}', '${item.description}', '${item.description1}', 'assets/images/junior-geeks/${item.image}', '${item.date}')">
+                                            <div class="card-body">
+                                               <span class="input-group-text bg-white border-0 d-flex justify-content-between align-items-center" id="basic-addon1">
+    <div class="d-flex align-items-center me-3"> <!-- Add spacing between elements -->
+        <i class="bi bi-calendar" style="font-size: 1.5rex; color: #6c757d; margin-right: 5px;"></i> <!-- Icon with space -->
+        <p style="font-size: 1.5rex; color: #6c757d; margin: 0;">${item.date}</p>
+    </div>
+    <div class="d-flex align-items-center">
+        <i class="bi bi-person" style="font-size: 2rex; color: #6c757d; margin-right: 5px;"></i> <!-- Icon with space -->
+        <p style="font-size: 1.5rex; color: #6c757d; margin: 0;">A1TI</p>
+    </div>
+</span>
 
-                            document.write(`
-                                <div class="col-md-6 mb-4" data-category="${blog.col1[i].category}">
-                                    <div class="card">
-                                        <img src="assets/images/junior-geeks/${blog.col1[i].image}" class="card-img-top" alt="Blog Post ${i + 1}" onclick="openOverlay('${blog.col1[i].title}', '${blog.col1[i].description1}', 'assets/images/junior-geeks/${blog.col1[i].image}')">
-                                        <div class="card-body">
-                                            <span class="input-group-text bg-white border-0 d-flex justify-content-between align-items-center">
-                                                <p class="bi bi-calendar" style="font-size: 1.5rex; color: #6c757d; margin: 0;"> ${blog.col1[i].date}</p>
-                                                <p style="font-size: 1.5rex; color: #6c757d; margin: 0;">
-                                                    <i class="bi bi-person" style="font-size: 2rex; color: #6c757d;"></i> A1TI
+                                                <h5 class="card-title">${item.title}</h5>
+                                                <p class="card-text">
+                                                    ${item.description}
+                                                    <span class="more" id="${moreTextId}" style="display:none;"> ${item.description1}.</span>
+                                                    <span class="read-more" id="${readMoreBtnId}" onclick="toggleReadMore(event, '${moreTextId}', '${readMoreBtnId}')" style="color: #6c757d;">Read More...</span>
                                                 </p>
-                                            </span>
-                                            <h5 class="card-title">${blog.col1[i].title}</h5>
-                                            <p class="card-text">
-                                                ${blog.col1[i].description}
-                                                <span class="more" id="${moreTextId}" style="display:none;"> ${blog.col1[i].description1}.</span>
-                                                <span class="read-more" id="${readMoreBtnId}" onclick="toggleReadMore(event, '${moreTextId}', '${readMoreBtnId}')" style="color: #6c757d;">Read More...</span>
-                                            </p>
-                                            <a href="#" class="btn btn-primary" onclick="openOverlay('${blog.col1[i].title}', '${blog.col1[i].description1}', 'assets/images/junior-geeks/${blog.col1[i].image}')">More Info</a>
+<a href="#" class="btn btn-primary" onclick="openOverlay('${item.title}', '${item.description}', '${item.description1}', 'assets/images/junior-geeks/${item.image}', '${item.date}', '${item.description2}')">
+  More Info
+</a>
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#${item.title}">
+  More Info (MODAL)
+</button>
+
+                                            
+                                            
+                                            
+                                               </div>
                                         </div>
                                     </div>
+                                `);
+                            });
+                        </script>
+                        
+                    </div>
+                </div>
+
+                <!-- Sidebar for larger screens -->
+                    <div class="col-lg-4 d-none d-lg-block" id="sidebar">
+                  
+                        <!-- Search Bar with Mic Icon Start -->
+                            <div class="mb-4">
+                                <div class="input-group">
+                                    <input type="text" class="form-control search_bar" placeholder="Search..." id="search-bar" oninput="filterblogpost()">
+                                    <span class="input-group-text voice-icon" id="mic-icon" onclick="startVoiceSearch()">
+                                        <i class="fas fa-microphone"></i>
+                                    </span>
                                 </div>
-                            `);
-                        }
-                    </script>
-                </div>
-            </div>
-            
-            <!-- Sidebar for larger screens -->
-            <div class="col-lg-4 d-none d-lg-block" id="sidebar">
-              <!-- Search Bar with Mic Icon Start -->
-              <div class="mb-4 mt-6">
-                <div class="input-group">
-                    <input type="text" class="form-control search_bar" onkeyup="filterblogpost()" placeholder="Search..." 
-                    id="search-bar" oninput="filterblogpost()">
-                    <span class="input-group-text" id="mic-icon" onclick="startVoiceSearch()" class="voice-icon">
-                        <i class="fas fa-microphone"></i>
-                    </span>
-                </div>
-              </div>
-              
-              <ul id="myUL" style="list-style-type: none; padding: 0; margin-top: 20px; display: none;">
-                <!-- List items here -->
-                <li style="padding: 10px;">Course 1: JavaScript  </li>
-                <li style="padding: 10px;">Course 2: Docker Training </li>
-                <li style="padding: 10px;">Course 3: Terraform  </li>
-                <li style="padding: 10px;">Course 4: Ansible Training  </li>
-                <li style="padding: 10px;">Course 5: Kubernetes  </li>
-                <li style="padding: 10px;">Course 6: Devops Training  </li>
-                <li style="padding: 10px;">Course 7: Unix Shell Scripting Training  </li>
-                <li style="padding: 10px;">Course 8: AWS Training  </li>
-                <li style="padding: 10px;">Course 9: GCP  </li>
-                <li style="padding: 10px;">Course 10: AZURE Training </li>
-                <li style="padding: 10px;">Course 11: MEAN Stack </li>
-                <li style="padding: 10px;">Course 12: MERN Stack </li>
-                <li style="padding: 10px;">Course 13: React Js </li>
-                <li style="padding: 10px;">Course 14: Web Designing </li>
-                <li style="padding: 10px;">Course 15: UI/UX </li>
-                <li style="padding: 10px;">Course 16: PHP Full Stack </li>
-                <li style="padding: 10px;">Course 17: PHP Experts </li>
-                <li style="padding: 10px;">Course 18: Angular Js </li>
-                <li style="padding: 10px;">Course 19: C And C++ Training </li>
-                <li style="padding: 10px;">Course 20: .NET Training </li>
-                <li style="padding: 10px;">Course 21: JavaScript Training </li>
-                <li style="padding: 10px;">Course 22: MySQL Training </li>
-                <li style="padding: 10px;">Course 23: SQL Server DBA Training </li>
-                <li style="padding: 10px;">Course 24: MongoDB Training </li>
-                <li style="padding: 10px;">Course 25: Android </li>
-                <li style="padding: 10px;">Course 26: I-Phone </li>
-                <li style="padding: 10px;">Course 27: Machine Learning Training </li>
-                <li style="padding: 10px;">Course 28: Data Science Training </li>
-                <li style="padding: 10px;">Course 30: Deep Learning Course </li>
-                <li style="padding: 10px;">Course 31: Artificial Intelligence Course </li>
-                <li style="padding: 10px;">Course 32: Data Science With Python </li>
-                <li style="padding: 10px;">Course 33: Power Bi </li>
-                <li style="padding: 10px;">Course 34: MIS </li>
-                <li style="padding: 10px;">Course 35: Advanced Microsoft Excel </li>
-                <li style="padding: 10px;">Course 36: Advanced Digital Marketing </li>
-                <li style="padding: 10px;">Course 37: Digital Marketing </li>
-                <li style="padding: 10px;">Course 38: 6 Weeks Summer Training </li>
-                <li style="padding: 10px;">Course 39: 6 Months Industrial Training </li>
-                <li style="padding: 10px;">Course 40: Graphic Designing </li>
-                <li style="padding: 10px;">Course 41: Motion Graphic Course </li>
-                <li style="padding: 10px;">Course 42: Multimedia & Animation </li>
-                <li style="padding: 10px;">Course 43: Graphic Motion Pro Course </li>
-                <li style="padding: 10px;">Course 44: Videography Course </li>
-                <li style="padding: 10px;">Course 45: Scriptwriting & Story Boarding </li>
-                <li style="padding: 10px;">Course 46: Film Making </li>
-                <li style="padding: 10px;">Course 47: Graphic Designing Pro </li>
-                <li style="padding: 10px;">Course 48: Manual + Selenium </li>
-                <li style="padding: 10px;">Course 49: Full Stack QA </li>
-                <li style="padding: 10px;">Course 50: Java With Selenium </li>
-                <li style="padding: 10px;">Course 51: REST Assured API </li>
-                <li style="padding: 10px;">Course 52: Appium Testing </li>
-                <li style="padding: 10px;">Course 53: API Testing </li>
-                <li style="padding: 10px;">Course 54: Manual Testing </li>
-                <li style="padding: 10px;">Course 55: Primavera P6 Testing </li>
-                <li style="padding: 10px;">Course 56: Agile Testing </li>
-                <li style="padding: 10px;">Course 57: Microsoft Excel Training </li>
-                <li style="padding: 10px;">Course 58: Scrum Master Training </li>
-                <li style="padding: 10px;">Course 59: JavaScript</li>
-                <li style="padding: 10px;">Course 60: Data Science </li>
-                <li style="padding: 10px;">Course 61: AI Machine Learning </li>
-                <li style="padding: 10px;">Course 62: Web Development </li>
-              </ul>
-              
-              <script>
-              // Function to filter blog posts based on search input
-              function filterblogpost() {
-                  const input = document.getElementById('search-bar');
-                  const filter = input.value.toUpperCase();
-                  const list = document.getElementById("myUL");
-                  const items = list.getElementsByTagName("li");
-                  let visibleCount = 0;
-              
-                  for (let i = 0; i < items.length; i++) {
-                      const text = items[i].textContent || items[i].innerText;
-                      if (text.toUpperCase().indexOf(filter) > -1) {
-                          items[i].style.display = "";
-                          visibleCount++;
-                      } else {
-                          items[i].style.display = "none";
-                      }
-                  }
-                }
-              
-              // Function to start voice search with mic color change
-              function startVoiceSearch() {
-                  const icon = document.getElementById('mic-icon');
-                  icon.style.color = 'red';
-              
-                  if ('webkitSpeechRecognition' in window) {
-                      const recognition = new webkitSpeechRecognition();
-                      recognition.lang = 'en-US';
-                      recognition.interimResults = false;
-                      recognition.maxAlternatives = 1;
-              
-                      recognition.start();
-              
-                      recognition.onresult = function (event) {
-                          let transcript = event.results[0][0].transcript.trim().replace(/\.$/, '');
-                          document.getElementById('search-bar').value = transcript;
-              
-                          // Trigger filtering after voice search result is entered
-                          filterblogpost();
-                      };
-              
-                      recognition.onerror = function () {
-                          console.error('Speech recognition error');
-                          icon.style.color = '#333';
-                      };
-              
-                      recognition.onend = function () {
-                          icon.style.color = '#333';
-                      };
-                  } else {
-                      alert('Speech recognition not supported in this browser.');
-                  }
-              }
-              </script>
-              
-              <!-- Search Bar with Mic Icon End ---->
+                            </div>
+                        
+                        <!-- Course List -->
+                            <ul id="myUL" style="list-style-type: none; padding: 0; margin-top: 20px; display: none; ">
+                                <li style="padding: 10px;">Course 1: JavaScript</li>
+                                <li style="padding: 10px;">Course 2: Docker Training</li>
+                                <li style="padding: 10px;">Course 3: Terraform</li>
+                                <li style="padding: 10px;">Course 4: Ansible Training</li>
+                                <li style="padding: 10px;">Course 5: Kubernetes</li>
+                                <!-- Add more courses as needed -->
+                            </ul>
+                        <!-- Categories -->
+                            <div class="mb-4">
+                                <h4>Categories</h4>
+                                <ul class="list-group">
+                                    <li class="list-group-item" data-category="all"><a href="#" class="category-link">All</a>
+                                    </li>
+                                    <li class="list-group-item" data-category="programming"><a href="#"
+                                            class="category-link">Programming</a></li>
+                                    <li class="list-group-item" data-category="designing"><a href="#"
+                                            class="category-link">Designing</a></li>
+                                    <li class="list-group-item" data-category="web-development"><a href="#"
+                                            class="category-link">Web Development</a></li>
+                                </ul>
+                            </div>
+                        <!-- Recent Post -->
+                            <div class="mb-4">
+                                <h4>Recent Posts</h4>
+                                <ul class="list-group">
+                                    <li class="list-group-item"><a href="#">Recent Post 1</a></li>
+                                    <li class="list-group-item"><a href="#">Recent Post 2</a></li>
+                                </ul>
+                            </div>
+                    </div>
 
-               <!-- Categories Started -->
-                <div class="mb-4">
-                    <h4>Categories</h4>
-                    <ul class="list-group">
-                        <li class="list-group-item" data-category="all"><a href="#" class="category-link">All</a></li>
-                        <li class="list-group-item" data-category="programming"><a href="#" class="category-link">Programming</a></li>
-                        <li class="list-group-item" data-category="designing"><a href="#" class="category-link">Designing</a></li>
-                        <li class="list-group-item" data-category="web-development"><a href="#" class="category-link">Web Development</a></li>
-                    </ul>
+            </div>
+        </div>
+    </section>
+
+    
+    <div id="overlay" class="overlay" onclick="closeOverlay(event)">
+        <div class="overlay-content container-fluid" onclick="event.stopPropagation();">
+            <!-- Close Button -->
+            <span class="close" onclick="closeOverlay(event)">&times;</span>
+    
+            <div class="row">
+                <!-- Overlay Title -->
+                <div class="col-12">
+                    <h2 id="overlay-title" class="text-center text-lg-start"></h2>
+                </div><br><br>
+    
+                <!-- Main Content Section -->
+                <div class="col-lg-8 col-md-7 col-12 mb-4 main-content">
+                    <img id="overlay-image" src="" alt="Overlay Image" class="img-fluid image-scroll mx-auto d-block mb-3">
+                    <div class="d-flex align-items-center justify-content-between overlay-meta">
+                        <p id="overlay-date" class="d-flex align-items-center text-muted mb-0">
+                            <i class="bi bi-calendar me-2" style="font-size: 1.5rex; color: #6c757d;"></i>
+                            <span></span> <!-- Date from JSON will go here -->
+                        </p>
+                        <p id="overlay-author" class="d-flex align-items-center text-muted mb-0">
+                            <i class="bi bi-person me-2" style="font-size: 1.5rex; color: #6c757d;"></i>
+                            <span>A1TI</span> <!-- Static Author -->
+                        </p>
+                    </div>
+                    
+                    <h4 id="overlay-description" class="text-center text-lg-start"></h4>
+                    <p id="description1" class="text-center text-lg-start"></p>
+                    <p id="description2" class="text-center text-lg-start"></p>
+                    
                 </div>
-                <!-- Categories End ----->
-                <!-- Recent Post Start -->
-                <div class="mb-4">
-                    <h4>Recent Posts</h4>
-                    <ul class="list-group">
-                        <li class="list-group-item"><a href="#">Recent Post 1</a></li>
-                        <li class="list-group-item"><a href="#">Recent Post 2</a></li>
-                    </ul>
+    
+                <!-- Related Posts Section -->
+                <div class="col-lg-4 col-md-5 col-12 ms-2">
+                    <!-- Search Bar -->
+                    <div class="mb-4">
+                        <div class="input-group">
+                            <input type="text" class="form-control search_bar" placeholder="Search..." id="search-bar" oninput="filterblogpost()">
+                            <button class="btn btn-outline-secondary voice-icon" id="mic-icon" onclick="startVoiceSearch()">
+                                <i class="fas fa-microphone"></i>
+                            </button>
+                        </div>
+                    </div>
+    
+                    <!-- Related Posts Header -->
+                    <h4 class="text-center text-lg-center mb-3">Related Posts</h4>
+    
+                    <!-- Related Posts Container -->
+                    <div id="related-posts" class="related-posts d-flex flex-wrap justify-content-center"></div>
                 </div>
-                <!-- Recent Post End -->
             </div>
         </div>
     </div>
-</section>
-
-<!-- Overlay Modal -->
-<div id="overlay" class="overlay" onclick="closeOverlay(event)">
-    <div class="overlay-content" onclick="event.stopPropagation();">
-        <span class="close" onclick="closeOverlay(event)">&times;</span>
-        <div class="row">
-            <div class="col-lg-8">
-                <h2 id="overlay-title"></h2>
-                <img id="overlay-image" src="" alt="Overlay Image" class="image-scroll">
-                <p id="overlay-description"></p>
-            </div>
-            <div class="col-lg-4">
-                <h4>Related Posts</h4>
-                <div id="related-posts" class="related-posts"></div>
-            </div>
-        </div>
-    </div>
-</div>
-
+    
     <!--------FOOTER STARTS-------->
     <script type="text/javascript" src="footer.js"></script>
     <!--------FOOTER ENDS-------->
+</body>
 
 <script>
-  let currentOpenMoreTextId = null;
-let currentOpenReadMoreBtnId = null;
+    // Function to populate related posts in a container (modal/overlay)
+    function populateRelatedPosts(containerId, currentTitle) {
+        const container = document.getElementById(containerId);
+        container.innerHTML = ''; // Clear existing content
 
-// Function to toggle Read More/Read Less
-function toggleReadMore(event, moreTextId, readMoreBtnId) {
-    event.stopPropagation();
-    const moreText = document.getElementById(moreTextId);
-    const readMoreBtn = document.getElementById(readMoreBtnId);
+        blog.col1.forEach(function (post) {
+            if (post.title !== currentTitle) { // Exclude the current post
+                const safeTitle = post.title.replace(/'/g, "\\'");
+                const safeDescription = post.description.replace(/'/g, "\\'");
+                const safeDescription1 = post.description1.replace(/'/g, "\\'");
+                const safeDescription2 = post.description2.replace(/'/g, "\\'");
 
-    if (currentOpenMoreTextId && currentOpenMoreTextId !== moreTextId) {
-        document.getElementById(currentOpenMoreTextId).style.display = "none";
-        document.getElementById(currentOpenReadMoreBtnId).textContent = "Read More...";
-    }
-
-    if (moreText.style.display === "none" || moreText.style.display === "") {
-        moreText.style.display = "inline";
-        readMoreBtn.textContent = "Read Less...";
-        currentOpenMoreTextId = moreTextId;
-        currentOpenReadMoreBtnId = readMoreBtnId;
-    } else {
-        moreText.style.display = "none";
-        readMoreBtn.textContent = "Read More...";
-        currentOpenMoreTextId = null;
-        currentOpenReadMoreBtnId = null;
-    }
-}
-
-// Function to filter blog posts with smooth animations
-function filterPosts(selectedCategory) {
-    const blogPosts = document.querySelectorAll('#blogPosts .col-md-6, #blogPosts .col-lg-12');
-    const filteredPosts = []; // Store filtered posts for the carousel
-
-    blogPosts.forEach(post => {
-        const postCategory = post.getAttribute('data-category');
-
-        if (selectedCategory === 'all' || postCategory === selectedCategory) {
-            if (post.style.display === 'none') {
-                post.style.display = 'block';
-                void post.offsetWidth; // Trigger reflow for animation
-                post.classList.remove('fade-out');
-                post.classList.add('fade-in');
-            }
-            filteredPosts.push({
-                title: post.querySelector('.card-title').innerText,
-                description: post.querySelector('.card-text').innerText,
-                image: post.querySelector('.card-img-top').getAttribute('src').split('/').pop(),
-                category: postCategory
-            });
-        } else {
-            if (post.style.display !== 'none') {
-                post.classList.remove('fade-in');
-                post.classList.add('fade-out');
-                post.addEventListener('animationend', function handleAnimation() {
-                    post.style.display = 'none';
-                    post.classList.remove('fade-out');
-                    post.removeEventListener('animationend', handleAnimation);
-                });
-            }
-        }
-    });
-
-    // Update the carousel with filtered posts
-    updateCarousel(filteredPosts);
-}
-
-// Update the carousel with filtered posts
-function updateCarousel(filteredPosts) {
-    const carouselInner = document.querySelector('.carousel-inner');
-    carouselInner.innerHTML = ''; // Clear existing carousel items
-
-    if (filteredPosts.length === 0) {
-        carouselInner.innerHTML = '<div class="carousel-item active"><div class="row"><div class="col-12"><h5>No posts available in this category.</h5></div></div></div>';
-        // Hide carousel navigation arrows if no posts are available
-        toggleCarouselArrows(false);
-        return;
-    }
-
-    filteredPosts.forEach((post, index) => {
-        const activeClass = index === 0 ? 'active' : '';
-        carouselInner.innerHTML += `
-            <div class="carousel-item ${activeClass}">
-                <div class="row">
-                    <div class="col-lg-12 mb-4" data-category="${post.category}">
-                        <div class="card">
-                            <img src="assets/images/junior-geeks/${post.image}" class="card-img-top" alt="${post.title}">
-                            <div class="card-body">
-                                <h5 class="card-title">${post.title}</h5>
-                                <p class="card-text">${post.description}</p>
-                                <a href="blog-post${index + 1}.html" class="btn btn-primary">More</a>
-                            </div>
+                container.innerHTML += `
+                    <div class="post" onclick="openOverlay('${safeTitle}', '${safeDescription}', '${safeDescription1}', 'assets/images/junior-geeks/${post.image}', '${post.date}', '${safeDescription2}')">
+                        <img src="assets/images/junior-geeks/${post.image}" alt="${post.title}" class="post-image">
+                        <div class="d-flex align-items-center">
+                            <p class="bi bi-calendar mt-1.5" style="font-size: 1.5rex; color: #6c757d; margin: 0;">${post.date}</p>
+                            <p style="font-size: 1.5rex; color: #6c757d; margin-left: 170px;">
+                                <i class="bi bi-person" style="font-size: 2rex; color: #6c757d;"></i> A1TI
+                            </p>
                         </div>
+                        <h5 class="post-title">${post.title}</h5>
+                        <p class="post-description">${post.description}</p>
                     </div>
-                </div>
-            </div>
-        `;
-    });
-
-    // Reinitialize the carousel to fix arrow visibility after filtering
-    toggleCarouselArrows(filteredPosts.length > 1);
-}
-
-// Function to toggle carousel arrows visibility based on the number of posts
-function toggleCarouselArrows(show) {
-    const prevButton = document.querySelector('.carousel-control-prev');
-    const nextButton = document.querySelector('.carousel-control-next');
-
-    if (show) {
-        prevButton.style.display = 'block';
-        nextButton.style.display = 'block';
-    } else {
-        prevButton.style.display = 'none';
-        nextButton.style.display = 'none';
+                `;
+            }
+        });
     }
-}
 
-// Sidebar scroll adjustment
-window.addEventListener('scroll', function () {
-    const sidebar = document.getElementById('sidebar');
-    const footer = document.querySelector('footer'); // Assuming there's a footer element
-    const sidebarHeight = sidebar.offsetHeight;
-    const footerPosition = footer.getBoundingClientRect().top;
+    // Function to open the overlay and populate related posts
+    function openOverlay(title, description, description1, imageSrc, date, description2) {
+        document.getElementById('overlay-title').innerText = title;
+        document.getElementById('overlay-description').innerText = description;
+        document.getElementById('description1').innerText = description1;
+        document.getElementById('description2').innerText = description2;
+        document.getElementById('overlay-image').src = imageSrc;
+        document.getElementById('overlay-date').querySelector('span').innerText = date;
 
-    if (footerPosition < sidebarHeight) {
-        sidebar.style.position = 'absolute';
-        sidebar.style.top = (footerPosition - sidebarHeight) + 'px';
-    } else {
-        sidebar.style.position = 'fixed';
-        sidebar.style.top = '20px';
+        // Populate related posts in overlay
+        populateRelatedPosts('related-posts', title);
+
+        // Show the overlay
+        document.getElementById('overlay').style.display = 'block';
     }
-});
 
-// Add event listeners to category links
-document.querySelectorAll('.category-link').forEach(link => {
-    link.addEventListener('click', function (e) {
-        e.preventDefault(); // Prevent default link behavior
-        const selectedCategory = this.parentElement.getAttribute('data-category'); // Get category
-        filterPosts(selectedCategory); // Call filterPosts
-    });
-});
+    // Function to open the modal and populate related posts
+    function openModal(title) {
+        const modal = document.getElementById(title);
+        if (modal) {
+            // Populate related posts in the modal
+            populateRelatedPosts('related-posts-container', title);
 
-// Search bar functionality
-document.getElementById('search-bar').addEventListener('input', function () {
-    const searchTerm = this.value.toLowerCase();
-    const blogPosts = document.querySelectorAll('#blogPosts .col-md-6, #blogPosts .col-lg-12');
+            // Show the modal (Bootstrap method)
+            const bootstrapModal = new bootstrap.Modal(modal);
+            bootstrapModal.show();
+        }
+    }
 
-    blogPosts.forEach(post => {
-        const title = post.querySelector('.card-title').textContent.toLowerCase();
-        const description = post.querySelector('.card-text').textContent.toLowerCase();
-        if (title.includes(searchTerm) || description.includes(searchTerm)) {
-            post.style.display = 'block';
-        } else {
-            post.style.display = 'none';
+    // Function to filter blog posts based on search input
+    document.getElementById('search-bar').addEventListener('input', function () {
+        const searchTerm = this.value.toLowerCase();
+        const blogPosts = document.querySelectorAll('#blogPosts .col-md-6');
+        const noResultsMessage = document.getElementById('no-results-message');
+
+        let resultsFound = false;
+
+        blogPosts.forEach(function (post) {
+            const title = post.querySelector('.card-title').textContent.toLowerCase();
+            const description = post.querySelector('.card-text').textContent.toLowerCase();
+
+            if (title.includes(searchTerm) || description.includes(searchTerm)) {
+                post.style.display = 'block'; // Show matching post
+                resultsFound = true;
+            } else {
+                post.style.display = 'none'; // Hide non-matching post
+            }
+        });
+
+        if (!resultsFound && noResultsMessage) {
+            noResultsMessage.style.display = 'block'; // Show "No results" message
+        } else if (noResultsMessage) {
+            noResultsMessage.style.display = 'none'; // Hide "No results" message
         }
     });
 
-    // Get filtered posts and update the carousel
-    const filteredPosts = Array.from(blogPosts)
-        .filter(post => post.style.display !== 'none')
-        .map(post => ({
-            title: post.querySelector('.card-title').innerText,
-            description: post.querySelector('.card-text').innerText,
-            image: post.querySelector('.card-img-top').getAttribute('src').split('/').pop(),
-            category: post.getAttribute('data-category')
-        }));
+    // Section to start voice search
+    function startVoiceSearch() {
+        const icon = document.getElementById('mic-icon');
+        icon.style.color = 'red';
 
-    // Update the carousel with the filtered posts
-    updateCarousel(filteredPosts);
-});
+        if ('webkitSpeechRecognition' in window) {
+            const recognition = new webkitSpeechRecognition();
+            recognition.lang = 'en-US';
+            recognition.interimResults = false;
+            recognition.maxAlternatives = 1;
+
+            recognition.start();
+
+            recognition.onresult = function (event) {
+                const transcript = event.results[0][0].transcript.trim().replace(/\.$/, '');
+                document.getElementById('search-bar').value = transcript;
+
+                // Trigger filtering after voice search
+                document.getElementById('search-bar').dispatchEvent(new Event('input'));
+            };
+
+            recognition.onerror = function () {
+                console.error('Speech recognition error');
+                icon.style.color = '#333';
+            };
+
+            recognition.onend = function () {
+                icon.style.color = '#333';
+            };
+        } else {
+            alert('Speech recognition not supported in this browser.');
+        }
+    }
+
+    // Function to close the overlay
+    function closeOverlay(event) {
+        if (event.target === document.getElementById('overlay') || event.target.classList.contains('close')) {
+            document.getElementById('overlay').style.display = 'none';
+        }
+    }
+
+    // Add event listeners to category links for filtering
+    document.querySelectorAll('.category-link').forEach(function (link) {
+        link.addEventListener('click', function (e) {
+            e.preventDefault();
+            const selectedCategory = this.parentElement.getAttribute('data-category');
+            filterPosts(selectedCategory);
+        });
+    });
+
+    // Function to filter blog posts based on category selection
+    function filterPosts(selectedCategory) {
+        const blogPosts = document.querySelectorAll('#blogPosts .col-md-6');
+        const filteredPosts = []; // Store filtered posts
+
+        blogPosts.forEach(function (post) {
+            const postCategory = post.getAttribute('data-category');
+            if (selectedCategory === 'all' || postCategory === selectedCategory) {
+                post.style.display = 'block'; // Show post
+                filteredPosts.push({
+                    title: post.querySelector('.card-title').innerText,
+                    description: post.querySelector('.card-text').innerText,
+                    image: post.querySelector('.card-img-top').getAttribute('src').split('/').pop(),
+                    category: postCategory
+                });
+            } else {
+                post.style.display = 'none'; // Hide post
+            }
+        });
+
+        // Update the carousel with filtered posts
+        updateCarousel(filteredPosts);
+    }
+
+    // Function to update the carousel with filtered posts
+    function updateCarousel(filteredPosts) {
+        // Logic to update the carousel (assuming you have a carousel setup)
+    }
 
 </script>
-</body>
+<script>
+    // Function to open the modal and populate related posts
+function openModal(title) {
+    const modal = document.getElementById(title);
+    if (modal) {
+        // Populate related posts in the modal
+        populateRelatedPosts('related-posts-container', title);
+
+        // Show the modal (Bootstrap method)
+        const bootstrapModal = new bootstrap.Modal(modal);
+        bootstrapModal.show();
+    }
+}
+
+// Function to populate related posts in a container (modal/overlay)
+function populateRelatedPosts(containerId, currentTitle) {
+    const container = document.getElementById(containerId);
+    container.innerHTML = ''; // Clear existing content
+
+    blog.col1.forEach(function (post) {
+        if (post.title !== currentTitle) { // Exclude the current post
+            const safeTitle = post.title.replace(/'/g, "\\'");
+            const safeDescription = post.description.replace(/'/g, "\\'");
+            const safeDescription1 = post.description1.replace(/'/g, "\\'");
+            const safeDescription2 = post.description2.replace(/'/g, "\\'");
+
+            container.innerHTML += `
+                <div class="post" onclick="openModal('${safeTitle}')">
+                    <img src="assets/images/junior-geeks/${post.image}" alt="${post.title}" class="post-image">
+                    <div class="d-flex align-items-center">
+                        <p class="bi bi-calendar mt-1.5" style="font-size: 1.5rex; color: #6c757d; margin: 0;">${post.date}</p>
+                        <p style="font-size: 1.5rex; color: #6c757d; margin-left: 170px;">
+                            <i class="bi bi-person" style="font-size: 2rex; color: #6c757d;"></i> A1TI
+                        </p>
+                    </div>
+                    <h5 class="post-title">${post.title}</h5>
+                    <p class="post-description">${post.description}</p>
+                </div>
+            `;
+        }
+    });
+}
+
+</script>
+
 </html>

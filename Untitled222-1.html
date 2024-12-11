@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog with Dynamic Modals</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <div class="container mt-4">
+        <!-- Search Bar -->
+        <div class="mb-3">
+            <input type="text" id="searchBar" class="form-control" placeholder="Search by Title...">
+        </div>
+
+        <!-- Blog Cards Section -->
+        <div id="blogContainer" class="row row-cols-1 row-cols-md-2 g-4"></div>
+    </div>
+
+    <!-- Placeholder for Modals -->
+    <div id="modalContainer"></div>
+
+    <!-- Bootstrap and JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/blog.js"></script> <!-- Link to your JS file -->
+</body>
+</html>
+<script>
+    // Sample Blog Data
+const blog = {
+    col1: [
+        {
+            image: "image1.jpg",
+            date: "2024-07-05",
+            title: "JavaScript_Basics",
+            description: "Introduction to JavaScript",
+            description1: "Learn the core concepts of JavaScript programming."
+        },
+        {
+            image: "image2.jpg",
+            date: "2024-07-06",
+            title: "Bootstrap_Tutorial",
+            description: "Getting started with Bootstrap",
+            description1: "A guide to building responsive layouts using Bootstrap."
+        },
+        {
+            image: "image3.jpg",
+            date: "2024-07-07",
+            title: "Python_Crash_Course",
+            description: "Learn Python Quickly",
+            description1: "Master Python programming in a short time."
+        }
+    ]
+};
+
+// Function to Render Blog Cards and Modals
+function renderItems(items) {
+    const blogContainer = document.getElementById("blogContainer");
+    const modalContainer = document.getElementById("modalContainer");
+
+    blogContainer.innerHTML = ""; // Clear blog container
+    modalContainer.innerHTML = ""; // Clear modals container
+
+    items.forEach((item, index) => {
+        // Clean title (remove underscores)
+        const cleanTitle = item.title.replace(/_/g, ' ');
+
+        // Blog Card
+        const cardHTML = `
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <img src="assets/images/junior-geeks/${item.image}" class="card-img-top" alt="${cleanTitle}">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between mb-2">
+                            <div><i class="bi bi-calendar me-2"></i>${item.date}</div>
+                            <div><i class="bi bi-person me-2"></i>A1TI</div>
+                        </div>
+                        <h5 class="card-title">${cleanTitle}</h5>
+                        <p class="card-text">${item.description}</p>
+                        <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#modal-${index}">
+                            More Info
+                        </button>
+                    </div>
+                </div>
+            </div>
+        `;
+
+        // Modal Content
+        const modalHTML = `
+            <div class="modal fade" id="modal-${index}" tabindex="-1" aria-labelledby="modalLabel-${index}" aria-hidden="true">
+                <div class="modal-dialog modal-xl" style="max-width: 95%;">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="modalLabel-${index}">${cleanTitle}</h4>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-lg-8">
+                                    <p><strong>${item.description}</strong></p>
+                                    <p>${item.description1}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+
+        // Append to DOM
+        blogContainer.insertAdjacentHTML("beforeend", cardHTML);
+        modalContainer.insertAdjacentHTML("beforeend", modalHTML);
+    });
+}
+
+// Function to Filter Blog Items by Title
+function filterItems() {
+    const searchTerm = document.getElementById("searchBar").value.toLowerCase();
+    const filteredItems = blog.col1.filter(item =>
+        item.title.replace(/_/g, ' ').toLowerCase().includes(searchTerm)
+    );
+    renderItems(filteredItems); // Re-render with filtered items
+}
+
+// Initial Render
+document.addEventListener("DOMContentLoaded", () => {
+    renderItems(blog.col1); // Render all items initially
+
+    // Attach search bar event listener
+    document.getElementById("searchBar").addEventListener("keyup", filterItems);
+});
+
+</script>

@@ -573,8 +573,8 @@ var courses1 = {
             "image": "java with selenium.jpg",
             "download": "course_1",
             "description": "Java",
-            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
-           "syllabus_name":["Java With Selenium Syllabus "]	
+            "syllabus" : ["assets/syllabus/mean_stack.pdf", "assets/syllabus/Core_Java_Syllabus.pdf"],
+           "syllabus_name":["Java With Selenium Syllabus " , "Core Java Syllabus "]	
         },
         {
             "course_name": "REST Assured API",
