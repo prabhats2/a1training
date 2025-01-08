@@ -1,614 +1,731 @@
-for (let i = 0; i < blog.col1.length; i++) {
-    let descriptionContent = '';
+<!DOCTYPE html>
+<html lang="en">
 
-     if (blog.col1[i].descriptions === 'Illustrator') {
-        descriptionContent = `
-        <span id="Illustrator">
-           <div class="content-container">
-
-    <h1 class="main-heading">Adobe Illustrator Training at A1 Training Institute</h1>
-
-    <p class="description" >Adobe Illustrator training at A1 Training Institute empowers students to unleash their creativity through vector graphic design. This comprehensive course covers essential tools and techniques for creating stunning illustrations, logos, and complex designs. Participants will learn about typography, color theory, and composition while mastering features like the Pen Tool, shapes, and layers. Through hands-on projects, students will develop a strong portfolio, showcasing their ability to produce professional-quality designs. By the end of the course, participants will have the skills and confidence to use Adobe Illustrator for various applications, from branding to digital artwork.</p>
-
-    <ul class="feature-list">
-        <li class="feature-item">&#10003; Comprehensive coverage of basic and advanced exercises on Corel Draw</li>
-        <li class="feature-item">&#10003; Hands-on assignments to support theoretical concepts</li>
-        <li class="feature-item">&#10003; Interactive and project-oriented lab sessions on Corel Draw</li>
-        <li class="feature-item">&#10003; Comprehensive coverage of basic and advanced exercises on Photoshop</li>
-        <li class="feature-item">&#10003; Hands-on assignments to support theoretical concepts</li>
-        <li class="feature-item">&#10003; Interactive and project-oriented lab sessions on Photoshop</li>
-    </ul>
-
-    <h4 class="sub-heading">We provide the No.1 Illustrator training program in Delhi NCR, including Noida Extension and Greater Noida. We offer various modes of training, including classroom and online training. Our training centers are located throughout Delhi NCR, Noida Extension, and Greater Noida to provide convenient access for all students.</h4>
-
-    <div class="button-container">
-        <button class="custom-button"  data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
-        <button class="custom-button">Contact Course Advisor</button>
-    </div>
-
-    <div class="training-container mt-5">
-        <div class="row">
-            <div class="training-col">
-                <h3>40+ Hrs</h3>
-                <p>Hands-On Training</p>
-            </div>
-            <div class="training-col">
-                <h3>2 Live</h3>
-                <p>Projects For Hands-On Learning</p>
-            </div>
-            <div class="training-col">
-                <h3>50 Hrs</h3>
-                <p>Practical Assignments</p>
-            </div>
-            <div class="training-col">
-                <h3>24/7</h3>
-                <p>Lifetime Access To Support Team</p>
-            </div>
-        </div>
-    </div>
-
-</div>
-        </span>`;
-    } else if (blog.col1[i].descriptions === 'Photoshop') {
-        descriptionContent = `
-        <span id="Photoshop">
-         <div class="content-container">
-
-    <h1 class="main-heading">Web Development Training at A1 Training Institute</h1>
-
-    <p class="description">Web Development at A1 Training Institute equips students with the essential skills to build and maintain dynamic websites. This course covers both front-end and back-end development, including HTML, CSS, JavaScript, and server-side programming languages such as PHP and Node.js. Participants will learn about responsive design, user experience, and the latest web development frameworks. Through hands-on projects, students will create fully functional websites, gaining practical experience in web design, coding, and deployment. By the end of the course, participants will be prepared to enter the fast-paced world of web development, armed with the tools to create engaging online experiences.</p>
-
-    <ul class="feature-list">
-        <li class="feature-item">&#10003; Comprehensive coverage of front-end and back-end web development technologies</li>
-        <li class="feature-item">&#10003; Hands-on assignments to support theoretical concepts</li>
-        <li class="feature-item">&#10003; Interactive and project-oriented lab sessions on web development</li>
-    </ul>
-
-    <h4 class="sub-heading">We provide the No.1 Web Development training program in Delhi NCR, including Noida Extension and Greater Noida. We offer flexible training options, including classroom and online training. Our training centers are located across Delhi NCR, Noida Extension, and Greater Noida, ensuring convenient access for all students.</h4>
-
-    <div class="button-container">
-        <button class="custom-button"  data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
-        <button class="custom-button">Contact Course Advisor</button>
-    </div>
-
-    <div class="training-container mt-5">
-        <div class="row">
-            <div class="training-col">
-                <h3>40+ Hrs</h3>
-                <p>Hands-On Training</p>
-            </div>
-            <div class="training-col">
-                <h3>2 Live</h3>
-                <p>Projects For Hands-On Learning</p>
-            </div>
-            <div class="training-col">
-                <h3>50 Hrs</h3>
-                <p>Practical Assignments</p>
-            </div>
-            <div class="training-col">
-                <h3>24/7</h3>
-                <p>Lifetime Access To Support Team</p>
-            </div>
-        </div>
-    </div>
-
-</div>
-
-          </span>`;
-    }  else if (blog.col1[i].descriptions === 'Game_Development') {
-        descriptionContent = `
-        <span id="Game_Development">
-          <div class="content-container">
-
-    <h1 class="main-heading">Game Development Training at A1 Training Institute</h1>
-
-    <p class="description">Game Development at A1 Training Institute offers a comprehensive introduction to the exciting world of creating video games. This course covers the fundamentals of game design, programming, and the use of game development engines such as Unity and Unreal Engine. Students will learn about game mechanics, level design, character development, and user experience. Through hands-on projects, participants will design and build their own games, gaining practical experience in coding, graphics, and sound integration. By the end of the course, students will be equipped with the skills to bring their creative ideas to life in the gaming industry. </p>
-
-    <ul class="feature-list">
-        <li class="feature-item">&#10003; Comprehensive coverage of game design and development techniques</li>
-        <li class="feature-item">&#10003; Hands-on assignments to support theoretical concepts</li>
-        <li class="feature-item">&#10003; Interactive and project-oriented lab sessions on game development</li>
-        <li class="feature-item">&#10003; In-depth training on game engines and programming languages</li>
-        <li class="feature-item">&#10003; Real-world projects to build a portfolio of game development work</li>
-    </ul>
-
-    <h4 class="sub-heading">We provide the No.1 Game Development training program in Delhi NCR, including Noida Extension and Greater Noida. We offer multiple training modes, including classroom and online training. Our training centers are conveniently located across Delhi NCR, Noida Extension, and Greater Noida to provide easy access for all aspiring game developers.</h4>
-
-    <div class="button-container">
-        <button class="custom-button"  data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
-        <button class="custom-button">Contact Course Advisor</button>
-    </div>
-
-    <div class="training-container mt-5">
-        <div class="row">
-            <div class="training-col">
-                <h3>40+ Hrs</h3>
-                <p>Hands-On Training</p>
-            </div>
-            <div class="training-col">
-                <h3>2 Live</h3>
-                <p>Projects For Hands-On Learning</p>
-            </div>
-            <div class="training-col">
-                <h3>50 Hrs</h3>
-                <p>Practical Assignments</p>
-            </div>
-            <div class="training-col">
-                <h3>24/7</h3>
-                <p>Lifetime Access To Support Team</p>
-            </div>
-        </div>
-    </div>
-
-</div>
-
-</span>`;
-    } else if (blog.col1[i].descriptions === 'Pythons') {
-        descriptionContent = `
-        <span id="Pythons">
-            <div class="content-container">
-
-    <h1 class="main-heading">Python Training at A1 Training Institute</h1>
-
-    <p class="description">Python Programming at A1 Training Institute equips students with essential skills to excel in programming using one of the most popular languages today. This course covers fundamental programming concepts, including variables, data types, control structures, and functions. Students will engage in hands-on projects, enabling them to apply their knowledge to real-world scenarios. By the end of the course, participants will have a strong grasp of Python and be prepared to tackle more advanced topics, such as data analysis, machine learning, and web development.</p>
-
-    <ul class="feature-list">
-        <li class="feature-item">&#10003; Comprehensive coverage of Python programming fundamentals and advanced concepts</li>
-        <li class="feature-item">&#10003; Hands-on assignments to support theoretical concepts</li>
-        <li class="feature-item">&#10003; Interactive and project-oriented lab sessions on Python development</li>
-        <li class="feature-item">&#10003; Real-world applications to build practical coding skills</li>
-        <li class="feature-item">&#10003; Guidance on using Python for data analysis, web development, and automation</li>
-    </ul>
-
-    <h4 class="sub-heading">We provide the No.1 Python training program in Delhi NCR, including Noida Extension and Greater Noida. We offer comprehensive classroom and online training options. Our training centers are located across Delhi NCR, Noida Extension, and Greater Noida, making it convenient for students to access top-quality Python training.</h4>
-
-    <div class="button-container">
-        <button class="custom-button"  data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
-        <button class="custom-button">Contact Course Advisor</button>
-    </div>
-
-    <div class="training-container mt-5">
-        <div class="row">
-            <div class="training-col">
-                <h3>40+ Hrs</h3>
-                <p>Hands-On Training</p>
-            </div>
-            <div class="training-col">
-                <h3>2 Live</h3>
-                <p>Projects For Hands-On Learning</p>
-            </div>
-            <div class="training-col">
-                <h3>50 Hrs</h3>
-                <p>Practical Assignments</p>
-            </div>
-            <div class="training-col">
-                <h3>24/7</h3>
-                <p>Lifetime Access To Support Team</p>
-            </div>
-        </div>
-    </div>
-
-</div>
- </span>`;
-    } else if (blog.col1[i].descriptions === 'computer_science11th') {
-        descriptionContent = `
-        <span id="computer_science11th">
-            <div class="content-container">
-
-    <h1 class="main-heading">Computer Science 11th Training at A1 Training Institute</h1>
-
-    <p class="description">Computer Science for 11th Grade at A1 Training Institute provides students with a strong foundation in computer science principles and programming concepts. The course introduces key topics such as programming logic, problem-solving techniques, and data representation. Students will learn to code in languages like Python and C++, developing their skills through hands-on projects and exercises. With a focus on computational thinking and creativity, this course empowers students to explore the exciting world of technology and prepares them for further studies in computer science.
-
-</p>
-
-    <ul class="feature-list">
-        <li class="feature-item">&#10003; Comprehensive coverage of fundamental computer science concepts and programming basics</li>
-        <li class="feature-item">&#10003; Hands-on assignments to reinforce theoretical knowledge and practical skills</li>
-        <li class="feature-item">&#10003; Interactive lab sessions focusing on problem-solving and algorithm development</li>
-        <li class="feature-item">&#10003; Projects to develop applications using programming languages like Python or Java</li>
-        <li class="feature-item">&#10003; Exposure to data structures, databases, and software development methodologies</li>
-
-    </ul>
-
-    <h4 class="sub-heading">We provide the No.1 Computer Science training program for 11th Grade students in Delhi NCR, including Noida Extension and Greater Noida. Our training offers flexible classroom and online learning options. With training centers located throughout Delhi NCR, Noida Extension, and Greater Noida, we ensure that students have easy access to high-quality Computer Science education.</h4>
-
-    <div class="button-container">
-        <button class="custom-button"  data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
-        <button class="custom-button">Contact Course Advisor</button>
-    </div>
-
-    <div class="training-container mt-5">
-        <div class="row">
-            <div class="training-col">
-                <h3>40+ Hrs</h3>
-                <p>Hands-On Training</p>
-            </div>
-            <div class="training-col">
-                <h3>2 Live</h3>
-                <p>Projects For Hands-On Learning</p>
-            </div>
-            <div class="training-col">
-                <h3>50 Hrs</h3>
-                <p>Practical Assignments</p>
-            </div>
-            <div class="training-col">
-                <h3>24/7</h3>
-                <p>Lifetime Access To Support Team</p>
-            </div>
-        </div>
-    </div>
-
-</div>
-        </span>`;
-    } else if (blog.col1[i].descriptions === 'C/Cplus') {
-        descriptionContent = `
-        <span id="C/Cplus">
-        <div class="content-container">
-
-    <h1 class="main-heading">C/C++ Programming Training at A1 Training Institute</h1>
-
-    <p class="description">C/C++ Programming Course at A1 Training Institute provides a comprehensive introduction to programming using two of the most widely used programming languages. This course is designed to build a strong foundation in programming concepts, data structures, and algorithms. You'll learn how to write efficient code, manage memory, and understand object-oriented programming principles through hands-on projects. By the end of the course, you'll be equipped with the skills to develop robust applications and tackle complex programming challenges, setting you up for success in various software development roles.</p>
-
-    <ul class="feature-list">
-        <li class="feature-item">&#10003; Comprehensive coverage of C and C++ programming fundamentals and advanced concepts</li>
-        <li class="feature-item">&#10003; Hands-on assignments to reinforce coding skills and theoretical knowledge</li>
-        <li class="feature-item">&#10003; Interactive lab sessions focused on algorithms, data structures, and application development</li>
-        <li class="feature-item">&#10003; Real-world projects to apply C/C++ in software development and problem-solving</li>
-        <li class="feature-item">&#10003; Guidance on best practices, debugging, and optimization techniques</li>
-    </ul>
-
-    <h4 class="sub-heading">We offer the No.1 C/C++ programming training program in Delhi NCR, including Noida Extension and Greater Noida. This program is designed to provide a strong foundation in both C and C++ programming languages, focusing on key concepts such as data structures, algorithms, and object-oriented programming. With options for classroom and online training, students can choose the learning mode that suits them best. Our training centers are conveniently located throughout Delhi NCR, ensuring that aspiring programmers gain the skills needed for a successful career in software development.</h4>
-
-    <div class="button-container">
-        <button class="custom-button" data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
-        <button class="custom-button">Contact Course Advisor</button>
-    </div>
-
-    <div class="training-container mt-5">
-        <div class="row">
-            <div class="training-col">
-                <h3>40+ Hrs</h3>
-                <p>Hands-On Training</p>
-            </div>
-            <div class="training-col">
-                <h3>2 Live</h3>
-                <p>Projects For Hands-On Learning</p>
-            </div>
-            <div class="training-col">
-                <h3>50 Hrs</h3>
-                <p>Practical Assignments</p>
-            </div>
-            <div class="training-col">
-                <h3>24/7</h3>
-                <p>Lifetime Access To Support Team</p>
-            </div>
-        </div>
-    </div>
-
-</div>
-        </span>`;
-    } else if (blog.col1[i].descriptions === 'Canva') {
-        descriptionContent = `
-        <span id="Canva">
-            <div class="content-container">
-
-    <h1 class="main-heading">Canva Designing  at A1 Training Institute</h1>
-
-    <p class="description">Canva Designing Course at A1 Training Institute equips you with the creative skills necessary to design stunning graphics and marketing materials using Canva. This course covers the fundamentals of graphic design, including layout, color theory, typography, and branding. You'll learn how to create visually appealing social media posts, presentations, posters, and more, all while using Canva's user-friendly interface. By the end of the course, you'll be able to produce professional-quality designs quickly and efficiently, enhancing your digital presence and communication skills.
-
-</p>
-
-    <ul class="feature-list">
-        <li class="feature-item">&#10003; Comprehensive coverage of Canva tools and features for graphic design</li>
-        <li class="feature-item">&#10003; Hands-on assignments to create stunning visuals for various purposes</li>
-        <li class="feature-item">&#10003; Interactive lab sessions focused on designing social media graphics, presentations, and marketing materials</li>
-        <li class="feature-item">&#10003; Real-world projects to build a portfolio of design work using Canva</li>
-        <li class="feature-item">&#10003; Guidance on design principles, branding, and visual storytelling</li>
-
-    </ul>
-
-    <h4 class="sub-heading">We offer the No.1 Canva Designing training program in Delhi NCR, including Noida Extension and Greater Noida. This program is tailored for individuals looking to enhance their graphic design skills using Canva, a powerful and user-friendly design tool. Participants will learn how to create stunning visuals for social media, presentations, marketing materials, and more, all while mastering design principles and techniques. With flexible classroom and online training options, students can easily fit this program into their busy schedules. Our training centers are conveniently located across Delhi NCR, providing easy access to top-notch design education.</h4>
-
-    <div class="button-container">
-        <button class="custom-button"  data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
-        <button class="custom-button">Contact Course Advisor</button>
-    </div>
-
-    <div class="training-container mt-5">
-        <div class="row">
-            <div class="training-col">
-                <h3>40+ Hrs</h3>
-                <p>Hands-On Training</p>
-            </div>
-            <div class="training-col">
-                <h3>2 Live</h3>
-                <p>Projects For Hands-On Learning</p>
-            </div>
-            <div class="training-col">
-                <h3>50 Hrs</h3>
-                <p>Practical Assignments</p>
-            </div>
-            <div class="training-col">
-                <h3>24/7</h3>
-                <p>Lifetime Access To Support Team</p>
-            </div>
-        </div>
-    </div>
-
-</div>
-        </span>`;
-    }  
-
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Template Mo">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <!-- Keep only one Bootstrap version -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <script type="text/javascript" src="assets/json/blog.json"></script>
+    <script type="text/javascript" src="blog.js"></script>
+
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
     
-// Example text with underscores
-let textWithUnderscores = blog.col1[i].title;
+    <!-- jQuery (optional) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-// Remove underscores using replace() with regex
-let textWithoutUnderscores = textWithUnderscores.replace(/_/g, ' ');
-document.write(`
-    <div class="modal" id="${blog.col1[i].title}">
-     <div class="modal-dialog modal-xl" style="max-width: 95%; width: 95%;">
-         <div class="modal-content">
-             <!-- Modal Header -->
-             <div class="modal-header">
-                 <h4 class="modal-title">${textWithoutUnderscores}</h4>
-                 <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-             </div>
-             <!-- Modal Body -->
-             <div class="modal-body">
-                 <div class="row">
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-edu-meeting.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/lightbox.css">
+    <style>
 
-<!-- Placeholder for posts (This will be filled dynamically) -->
-<div class="container mt-4" id="postList"></div>
-                     <div class="col-lg-8 col-5 col-12">
-                         <p>${descriptionContent}</p>
-                     </div>
-
-<div class="container mb-3 col-4">
-    <input type="text" id="filterInput_${blog.col1[i].title}" 
-           class="form-control" 
-           placeholder="Search by title..." 
-           onkeyup="filterCards('${blog.col1[i].title}')">
-
-
-
- `)
-
- for (let i = 0; i < blog.col1.length; i++) {
-    document.write(`
-        <div class=" col-12 card-item" style="overflow-y: auto; height: auto; max-height: 840px; padding-right: 10px;" data-title="${blog.col1[i].title.toLowerCase()}">
-            <img src="assets/images/junior-geeks/${blog.col1[i].image}" class="img-fluid">
-            <span class="input-group-text bg-white border-0 d-flex justify-content-between align-items-center" id="basic-addon1">
-                <div class="d-flex align-items-center me-3">
-                    <i class="bi bi-calendar" style="font-size: 1.5rex; color: #6c757d; margin-right: 5px;"></i>
-                    <p style="font-size: 1.5rex; color: #6c757d; margin: 0;">${blog.col1[i].date}</p>
-                </div>
-                <div class="d-flex align-items-center">
-                    <i class="bi bi-person" style="font-size: 2rex; color: #6c757d; margin-right: 5px;"></i>
-                    <p style="font-size: 1.5rex; color: #6c757d; margin: 0;">A1TI</p>
-                </div>
-            </span>
-            <h3 class="text-center">${blog.col1[i].title.replace(/_/g, ' ')}</h3>
-            <h5>${blog.col1[i].description}</h5>
-            <p>${blog.col1[i].description1}</p><br>
-            <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#${blog.col1[i].title}">
-                More Info (MODAL)
-            </button>
-        </div>
-    `);
+.post-section {
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
 }
 
-
-          document.write(`          
-</div>
-                 </div>
-             </div>
-
-
-  
-             <!-- Modal Footer -->
-             <div class="modal-footer">
-                 <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-             </div>
-
-             
-         </div>
-     </div>
- </div>
- `);
- 
+.post {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
 }
 
-function filterCards(modalID) {
-    let input = document.getElementById(`filterInput_${modalID}`).value.toLowerCase();
-    let modal = document.getElementById(modalID);
-    let cards = modal.getElementsByClassName("card-item");
+.post:last-child {
+    border-bottom: none;
+}
 
-    for (let i = 0; i < cards.length; i++) {
-        let title = cards[i].getAttribute("data-title");
-        if (title.includes(input)) {
-            cards[i].style.display = "";
-        } else {
-            cards[i].style.display = "none";
+        /* Section Styles */
+        #blog {
+            padding: 2rem 0;
+            background-image: url(assets/images/meetings-bg.jpg);
         }
+
+        /* Header Styles */
+        #blog h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Card Styles */
+        .card {
+            transition: transform 0.3s;
+            border-radius: 1.0rem;
+            overflow: hidden;
+            /* Ensure no overflow from cards */
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        /* Featured Post Styles */
+        #blog .mb-4 img {
+            border-radius: 1rem;
+            padding: 3px;
+        }
+
+        #sidebar {
+            position: sticky;
+            top: 80px;
+            margin-left: 120px;
+            width: 300px;
+            height: calc(100vh - 160px);
+            overflow-y: auto;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+            border-radius: 0.9rem;
+        }
+
+        /* Sidebar Styles */
+        .sidebar h4 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .sidebar .list-group-item {
+            background-color: #ffffff;
+            border: 0px solid #ddd;
+            border-radius: 0.9rem;
+            transition: background-color 0.3s;
+        }
+
+        .sidebar .list-group-item:hover {
+            background-color: #e9ecef;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            #blog h2 {
+                font-size: 2rem;
+            }
+
+            .card {
+                margin-bottom: 1.5rem;
+            }
+        }
+
+        /* Animation Styles */
+        .fade-in {
+            animation: fadeIn 0.5s forwards;
+        }
+
+        .fade-out {
+            animation: fadeOut 0.5s forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeOut {
+            from {
+                transform: scale(1);
+                opacity: 1;
+            }
+
+            to {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+        }
+
+        .fade-out {
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            /* Smooth transition */
+        }
+
+        #sidebar {
+            transition: opacity 0.5s ease;
+            /* Smooth transition for visibility */
+        }
+
+        .post {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px 0;
+            /* Adjust margin to minimize space */
+            cursor: pointer;
+        }
+
+        .post-image {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        .post-title {
+            margin: 10px 0;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: none;
+            z-index: 9999;
+            /* Ensure overlay is on top */
+        }
+
+        .overlay-content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            width: 80%;
+            max-height: 90%;
+
+            position: relative;
+            margin: 0 auto;
+            /* Center overlay content */
+            top: 50%;
+            /* Move down */
+            transform: translateY(-50%);
+            /* Adjust to center vertically */
+        }
+
+        .close {
+            cursor: pointer;
+            float: right;
+            font-size: 20px;
+        }
+
+        /* Hide overflow to manage line limits */
+        .description {
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            -webkit-line-clamp: 5;
+            /* Limit to 5 lines */
+            transition: max-height 0.5s ease;
+            max-height: 8em;
+            /* Control height for 5 lines */
+        }
+
+        .description.expanded {
+            -webkit-line-clamp: unset;
+            /* Remove line limit */
+            max-height: unset;
+            /* Allow full height */
+        }
+
+        /* Adjust the layout without Flexbox */
+        .overlay-content .row {
+            margin: 0;
+            /* Reset margin */
+        }
+
+        .overlay-content .col-lg-8,
+        .overlay-content .col-lg-4 {
+            float: left;
+            /* Use float for layout */
+        }
+
+        .overlay-content .col-lg-8 {
+            width: 66.6666%;
+            /* Left content column takes 66% */
+        }
+
+        .overlay-content .col-lg-4 {
+            width: 33.3333%;
+            /* Right images column takes 33% */
+            height: auto;
+            /* Set fixed height for the scrollable area */
+
+        }
+
+        @media (max-width: 768px) {
+
+            .overlay-content .col-lg-4,
+            .overlay-content .col-lg-8 {
+                width: 100%;
+                /* Full width in mobile */
+                float: none;
+                /* Clear float */
+            }
+        }
+
+        .image-scroll {
+            height: auto;
+        }
+
+        .image-scroll img {
+            width: 100%;
+            margin-bottom: 10px;
+            /* Space between images */
+            border-radius: 5px;
+        }
+
+        .related-posts {
+            max-height: 550px;
+            /* Set a max height for scrolling */
+            overflow-y: auto;
+            /* Enable scrolling */
+        }
+
+        .related-posts .post {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+
+        .related-posts .post img {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        #search-bar {
+            margin-bottom: 15px;
+        }
+
+        #mic-icon {
+            cursor: pointer;
+            color: #555;
+            /* Change color if needed */
+            height: fit-content;
+            padding: 10px;
+
+        }
+
+        #mic-icon:hover {
+            color: #007bff;
+            /* Change hover color */
+
+        }
+/* Main content section */
+.main-content {
+    max-height: 70vh; /* Limit height to 70% of the viewport */
+    overflow-y: auto; /* Add vertical scroll if needed */
+    padding-right: 10px; /* Space for scrollbar */
+    margin-right: -10px; /* Adjust content to avoid layout issues */
+    scrollbar-width: thin; /* Thin scrollbar for modern browsers */
+}
+
+.main-content::-webkit-scrollbar {
+    width: 6px; /* Scrollbar width */
+}
+
+.main-content::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Track color */
+}
+
+.main-content::-webkit-scrollbar-thumb {
+    background: #888; /* Thumb color */
+    border-radius: 10px; /* Rounded scrollbar */
+}
+
+.main-content::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Hover effect */
+}
+
+/* Related posts section */
+.related-posts {
+    max-height: 60vh; /* Adjust height for related posts */
+    overflow-y: auto; /* Scrollable related posts */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .main-content {
+        max-height: 50vh; /* Reduce height on smaller screens */
+    }
+
+    .overlay-content {
+        max-height: 85vh; /* Adjust for smaller viewports */
+        padding: 10px;
     }
 }
 
 
+    </style>
 
-document.addEventListener('DOMContentLoaded', function () {
-    const styles = {
-        containerBody: {
-            fontFamily: 'Arial, sans-serif',
-            color: '#333',
-            margin: '0',
-            padding: '0',
-            backgroundColor: '#FAFAFA',
-        },
-        mainHeading: {
-            color: '#007BFF',  // Blue for the logo
-            textAlign: 'center',
-            padding: '20px',
-            fontSize: '2.5em',
-            textShadow: '2px 2px 4px rgba(0, 0, 0, 0.2)', // Add shadow to heading
-            animation: 'fadeIn 1s ease-in-out', // Fade-in animation
-        },
-        description: {
-            textAlign: 'center',
-            fontSize: '1.1em',
-            lineHeight: '1.6',
-            margin: '0 15px',
-            animation: 'slideInUp 1s ease-in-out', // Slide-in from bottom animation
-        },
-        featureList: {
-            listStyleType: 'none',
-            padding: '0',
-            textAlign: 'center',
-            margin: '20px 0',
-            animation: 'fadeIn 1s ease-in-out 0.5s', // Fade-in with delay
-            animationFillMode: 'both',
-        },
-        featureItem: {
-            fontSize: '1.2em',
-            color: '#007BFF',  // Blue for the logo
-            margin: '10px 0',
-            textAlign: 'left',
-        },
-        subHeading: {
-            textAlign: 'center',
-            fontSize: '1.2em',
-            margin: '20px 0',
-            color: '#555',
-            animation: 'slideInUp 1s ease-in-out 1s', // Slide-in with delay
-            animationFillMode: 'both',
-        },
-        buttonContainer: {
-            textAlign: 'center',
-            margin: '20px',
-            animation: 'zoomIn 1s ease-in-out', // Zoom-in animation
-        },
-        button: {
-            backgroundColor: '#007BFF',  // Blue for the logo
-            color: 'white',
-            border: 'none',
-            padding: '10px 20px',
-            margin: '5px',
-            fontSize: '1em',
-            cursor: 'pointer',
-            borderRadius: '5px',
-            transition: 'background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease', // Animation for hover
-            boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)', // Add shadow to buttons
-        },
-        buttonHover: {
-            backgroundColor: '#0056b3',
-            transform: 'scale(1.05)', // Slightly enlarge the button on hover
-            boxShadow: '0 6px 12px rgba(0, 0, 0, 0.2)', // Increase shadow on hover
-        },
-        trainingContainer: {
-            margin: '30px auto',
-            maxWidth: 'auto',
-        },
-        row: {
-            display: 'flex',
-            flexWrap: 'wrap',
-            justifyContent: 'space-around',
-            animation: 'fadeInUp 1s ease-in-out', // Fade-in from bottom animation
-        },
-        col: {
-            backgroundColor: '#fff',
-            borderRadius: '10px',
-            boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
-            margin: '10px',
-            flex: '1',
-            maxWidth: '22%',
-            textAlign: 'center',
-            padding: '20px',
-            transition: 'box-shadow 0.3s ease', // Smooth shadow transition
-            animation: 'zoomIn 0.5s ease-in-out', // Zoom-in animation for each column
-            pointerEvents: 'none', // Disable pointer events for clicking
-        },
-        colHover: {
-            boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)', // Add shadow on hover
-        },
-        colH3: {
-            color: '#007BFF', // Red for the logo
-            fontSize: '2em',
-            margin: '0',
-        },
-        colP: {
-            fontSize: '1.1em',
-            margin: '10px 0 0',
-        }
-    };
+</head>
+<!-- MENU START -->
+<script type="text/javascript" src="menu.js"></script>
+<!-- META START -->
+<script type="text/javascript" src="meta.js"></script>
+<body>
+    <div id="no-results-message" style="display: none; text-align: center; margin-top: 20px;">
+        <p>No results found</p>
+    </div>
+    
+    <section id="blog" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Blog</h2>
 
-    document.querySelectorAll('.content-container').forEach(container => {
-        Object.assign(container.style, styles.containerBody);
-        Object.assign(container.querySelector('.main-heading').style, styles.mainHeading);
-        container.querySelectorAll('.description').forEach(p => Object.assign(p.style, styles.description));
-        Object.assign(container.querySelector('.feature-list').style, styles.featureList);
-        container.querySelectorAll('.feature-item').forEach(li => Object.assign(li.style, styles.featureItem));
-        Object.assign(container.querySelector('.sub-heading').style, styles.subHeading);
-        Object.assign(container.querySelector('.button-container').style, styles.buttonContainer);
-        container.querySelectorAll('.custom-button').forEach(button => {
-            Object.assign(button.style, styles.button);
-            button.addEventListener('mouseover', () => Object.assign(button.style, styles.buttonHover));
-            button.addEventListener('mouseout', () => Object.assign(button.style, styles.button));
+            <!-- Button to toggle the sidebar dropdown at the top -->
+            <button class="btn btn-primary d-lg-none mb-4 w-100" class="btn btn-primary btn-block" type="button"
+                data-bs-toggle="collapse" data-bs-target="#sidebarDropdown" aria-expanded="false"
+                aria-controls="sidebarDropdown">
+                Categories
+            </button>
+
+            <!-- Sidebar dropdown for mobile view ///-->
+            <div class="collapse d-lg-none mb-4 w-100 " id="sidebarDropdown">
+                <div class="card">
+                    <div class="card-body">
+                        <h4>Categories</h4>
+                        <ul class="list-group mb-4">
+                            <li class="list-group-item" data-category="all"><a href="#" class="category-link">All</a>
+                            </li>
+                            <li class="list-group-item" data-category="programming"><a href="#"
+                                    class="category-link">Programming</a></li>
+                            <li class="list-group-item" data-category="designing"><a href="#"
+                                    class="category-link">Designing</a></li>
+                            <li class="list-group-item" data-category="web-development"><a href="#"
+                                    class="category-link">Web Development</a></li>
+                        </ul>
+
+                        <h4>Recent Posts</h4>
+                        <ul class="list-group">
+                            <li class="list-group-item"><a href="#">Python Programming</a></li>
+                            <li class="list-group-item"><a href="#">Recent Post 2</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-8">
+
+                    <div class="row" id="blogPosts">
+                       <script>
+
+    const blogItems = blog.col1;
+
+    // Select the blog posts container
+    const blogContainer = document.getElementById("blogPosts");
+
+    // Generate the Carousel
+    let carouselHTML = `
+        <div id="blogCarousel" class="carousel slide mb-4" data-bs-ride="carousel">
+            <div class="carousel-inner">
+    `;
+
+    blogItems.forEach((item, index) => {
+        const activeClass = index === 0 ? "active" : "";
+        carouselHTML += `
+            <div class="carousel-item ${activeClass}">
+                <div class="row">
+                    <div class="col-lg-12 mb-4" data-category="${item.category}">
+                        <div class="card">
+                            <img src="assets/images/junior-geeks/${item.image}" class="card-img-top" alt="Blog Post ${index + 1}">
+                            
+                            <div class="card-body">
+                                <span class="input-group-text bg-white border-0 d-flex justify-content-between align-items-center" id="basic-addon1">
+                            <div class="d-flex align-items-center me-3">
+                                <i class="bi bi-calendar" style="font-size: 1.5rex; color: #6c757d; margin-right: 5px;"></i>
+                                <p style="font-size: 1.5rex; color: #6c757d; margin: 0;">${item.date}</p>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <i class="bi bi-person" style="font-size: 2rex; color: #6c757d; margin-right: 5px;"></i>
+                                <p style="font-size: 1.5rex; color: #6c757d; margin: 0;">A1TI</p>
+                            </div>
+                        </span>
+                                <h5 class="card-title">${item.title.replace(/[^a-zA-Z0-9 ]/g, ' ').replace(/\s+/g, ' ').trim()}</h5>
+
+                                <p class="card-text">${item.description}</p>
+                                <a href="blog-post${index + 1}.html" class="btn btn-primary" style="display:none;">More</a>
+                                <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#${item.title} ">
+                                    More Info 
+                                </button>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+    });
+
+    carouselHTML += `
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#blogCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#blogCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    `;
+
+    // Generate the Rest of the Blog Posts (Grid)
+    let gridHTML = "";
+    blogItems.slice(1).forEach((item, index) => {
+        const moreTextId = `moreText${index + 1}`;
+        const readMoreBtnId = `readMoreBtn${index + 1}`;
+        gridHTML += `
+            <div class="col-md-6 mb-4" data-category="${item.category}">
+                <div class="card">
+                    <img src="assets/images/junior-geeks/${item.image}" class="card-img-top post-image" alt="Blog Post ${index + 2}" onclick="openOverlay('${item.title}', '${item.description}', '${item.description1}', 'assets/images/junior-geeks/${item.image}', '${item.date}')">
+                    <div class="card-body">
+                        <span class="input-group-text bg-white border-0 d-flex justify-content-between align-items-center" id="basic-addon1">
+                            <div class="d-flex align-items-center me-3">
+                                <i class="bi bi-calendar" style="font-size: 1.5rex; color: #6c757d; margin-right: 5px;"></i>
+                                <p style="font-size: 1.5rex; color: #6c757d; margin: 0;">${item.date}</p>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <i class="bi bi-person" style="font-size: 2rex; color: #6c757d; margin-right: 5px;"></i>
+                                <p style="font-size: 1.5rex; color: #6c757d; margin: 0;">A1TI</p>
+                            </div>
+                        </span>
+                        <h5 class="card-title">${item.title.replace(/[^a-zA-Z0-9 ]/g, ' ').replace(/\s+/g, ' ').trim()}</h5>
+
+                        <p class="card-text">
+                            ${item.description}
+                            <span class="more" id="${moreTextId}" style="display:none;"> ${item.description1}.</span>
+                            <span class="read-more" id="${readMoreBtnId}" onclick="toggleReadMore(event, '${moreTextId}', '${readMoreBtnId}')" style="color: #6c757d;">Read More...</span>
+                        </p>
+                        <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#${item.title} ">
+                            More Info 
+                        </button>
+                    </div>
+                </div>
+            </div>
+        `;
+    });
+
+    // Combine Carousel and Grid and inject into the container
+    blogContainer.innerHTML = carouselHTML + gridHTML;
+                       </script>
+                    </div>
+                </div>
+
+                <!-- Sidebar for larger screens -->
+                    <div class="col-lg-4 d-none d-lg-block" id="sidebar">
+                  
+                        <!-- Search Bar with Mic Icon Start -->
+                            <div class="mb-4">
+                                <div class="input-group">
+                                    <input type="text" class="form-control search_bar" placeholder="Search..." id="search-bar" oninput="filterblogpost()">
+                                    <span class="input-group-text voice-icon" id="mic-icon" onclick="startVoiceSearch()">
+                                        <i class="fas fa-microphone"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        
+                        <!-- Course List -->
+                            <ul id="myUL" style="list-style-type: none; padding: 0; margin-top: 20px; display: none; ">
+                                <li style="padding: 10px;">Course 1: JavaScript</li>
+                                <li style="padding: 10px;">Course 2: Docker Training</li>
+                                <li style="padding: 10px;">Course 3: Terraform</li>
+                                <li style="padding: 10px;">Course 4: Ansible Training</li>
+                                <li style="padding: 10px;">Course 5: Kubernetes</li>
+                                <!-- Add more courses as needed -->
+                            </ul>
+                        <!-- Categories -->
+                            <div class="mb-4">
+                                <h4>Categories</h4>
+                                <ul class="list-group">
+                                    <li class="list-group-item" data-category="all"><a href="#" class="category-link">All</a>
+                                    </li>
+                                    <li class="list-group-item" data-category="programming"><a href="#"
+                                            class="category-link">Programming</a></li>
+                                    <li class="list-group-item" data-category="designing"><a href="#"
+                                            class="category-link">Designing</a></li>
+                                    <li class="list-group-item" data-category="web-development"><a href="#"
+                                            class="category-link">Web Development</a></li>
+                                </ul>
+                            </div>
+                        <!-- Recent Post -->
+                            <div class="mb-4">
+                                <h4>Recent Posts</h4>
+                                <ul class="list-group">
+                                    <li class="list-group-item"><a href="#">Recent Post 1</a></li>
+                                    <li class="list-group-item"><a href="#">Recent Post 2</a></li>
+                                </ul>
+                            </div>
+                    </div>
+
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!--------FOOTER STARTS-------->
+    <script type="text/javascript" src="footer.js"></script>
+    <!--------FOOTER ENDS-------->
+</body>
+<script>
+    // Function to populate related posts in a container (modal/overlay)
+    function populateRelatedPosts(containerId, currentTitle) {
+        const container = document.getElementById(containerId);
+        container.innerHTML = ''; // Clear existing content
+
+        blog.col1.forEach(function (post) {
+            if (post.title !== currentTitle) { // Exclude the current post
+                const safeTitle = post.title.replace(/'/g, "\\'");
+                const safeDescription = post.description.replace(/'/g, "\\'");
+                const safeDescription1 = post.description1.replace(/'/g, "\\'");
+                const safeDescription2 = post.description2.replace(/'/g, "\\'");
+
+                container.innerHTML += `
+                    <div class="post" onclick="openOverlay('${safeTitle}', '${safeDescription}', '${safeDescription1}', 'assets/images/junior-geeks/${post.image}', '${post.date}', '${safeDescription2}')">
+                        <img src="assets/images/junior-geeks/${post.image}" alt="${post.title}" class="post-image">
+                        <div class="d-flex align-items-center">
+                            <p class="bi bi-calendar mt-1.5" style="font-size: 1.5rex; color: #6c757d; margin: 0;">${post.date}</p>
+                            <p style="font-size: 1.5rex; color: #6c757d; margin-left: 170px;">
+                                <i class="bi bi-person" style="font-size: 2rex; color: #6c757d;"></i> A1TI
+                            </p>
+                        </div>
+                        <h5 class="post-title">${post.title}</h5>
+                        <p class="post-description">${post.description}</p>
+                    </div>
+                `;
+            }
         });
-        Object.assign(container.querySelector('.training-container').style, styles.trainingContainer);
-        Object.assign(container.querySelector('.row').style, styles.row);
-        container.querySelectorAll('.training-col').forEach(col => {
-            Object.assign(col.style, styles.col);
-            col.addEventListener('mouseover', () => Object.assign(col.style, styles.colHover));
-            col.addEventListener('mouseout', () => Object.assign(col.style, styles.col));
-            Object.assign(col.querySelector('h3').style, styles.colH3);
-            Object.assign(col.querySelector('p').style, styles.colP);
+    }
+
+    // Function to filter blog posts based on category selection
+    function filterPosts(selectedCategory) {
+        const blogPosts = document.querySelectorAll('#blogPosts .col-md-6');
+        const filteredPosts = []; // Store filtered posts
+
+        blogPosts.forEach(function (post) {
+            const postCategory = post.getAttribute('data-category');
+            if (selectedCategory === 'all' || postCategory === selectedCategory) {
+                post.style.display = 'block'; // Show post
+                filteredPosts.push({
+                    title: post.querySelector('.card-title').innerText,
+                    description: post.querySelector('.card-text').innerText,
+                    image: post.querySelector('.card-img-top').getAttribute('src').split('/').pop(),
+                    category: postCategory
+                });
+            } else {
+                post.style.display = 'none'; // Hide post
+            }
+        });
+
+        // Update the carousel with filtered posts
+        updateCarousel(filteredPosts);
+    }
+
+    // Function to update the carousel with filtered posts
+    function updateCarousel(filteredPosts) {
+        const carouselContainer = document.getElementById('carousel-inner');
+        carouselContainer.innerHTML = ''; // Clear existing content
+
+        filteredPosts.forEach(function (post, index) {
+            const isActive = index === 0 ? 'active' : '';
+            carouselContainer.innerHTML += `
+                <div class="carousel-item ${isActive}">
+                    <img src="assets/images/junior-geeks/${post.image}" class="d-block w-100" alt="${post.title}">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>${post.title}</h5>
+                        <p>${post.description}</p>
+                    </div>
+                </div>
+            `;
+        });
+    }
+
+    // Add event listeners to category links for filtering
+    document.querySelectorAll('.category-link').forEach(function (link) {
+        link.addEventListener('click', function (e) {
+            e.preventDefault();
+            const selectedCategory = this.parentElement.getAttribute('data-category');
+            filterPosts(selectedCategory);
         });
     });
 
-    // Adding keyframes for animations
-    const styleSheet = document.styleSheets[0];
-    styleSheet.insertRule(`
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-    `, styleSheet.cssRules.length);
-    styleSheet.insertRule(`
-        @keyframes zoomIn {
-            from { transform: scale(0.9); opacity: 0; }
-            to { transform: scale(1); opacity: 1; }
-        }
-    `, styleSheet.cssRules.length);
-    styleSheet.insertRule(`
-        @keyframes fadeInUp {
-            from { transform: translateY(20px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-    `, styleSheet.cssRules.length);
-});
+    // Section to start voice search
+    function startVoiceSearch() {
+        const icon = document.getElementById('mic-icon');
+        icon.style.color = 'red';
 
-// Responsive Design for 2 Divs per Row in Mobile View
-const mediaQuery = window.matchMedia('(max-width: 768px)');
+        if ('webkitSpeechRecognition' in window) {
+            const recognition = new webkitSpeechRecognition();
+            recognition.lang = 'en-US';
+            recognition.interimResults = false;
+            recognition.maxAlternatives = 1;
 
-function handleMediaQueryChange(e) {
-    if (e.matches) {
-        // For mobile view: 2 divs per row
-        document.querySelectorAll('.training-col').forEach(col => {
-            col.style.maxWidth = '50%';  // 50% width for 2 columns
-            col.style.flex = '0 0 50%';  // Flex property to take 50% space
-        });
-    } else {
-        // For larger screens: 4 divs in a row
-        document.querySelectorAll('.training-col').forEach(col => {
-            col.style.maxWidth = '22%';  // 4 columns
-            col.style.flex = '1';  // Flex property for equal distribution
-        });
+            recognition.start();
+
+            recognition.onresult = function (event) {
+                const transcript = event.results[0][0].transcript.trim().replace(/\.$/, '');
+                document.getElementById('search-bar').value = transcript;
+
+                // Trigger filtering after voice search
+                document.getElementById('search-bar').dispatchEvent(new Event('input'));
+            };
+
+            recognition.onerror = function () {
+                console.error('Speech recognition error');
+                icon.style.color = '#333';
+            };
+
+            recognition.onend = function () {
+                icon.style.color = '#333';
+            };
+        } else {
+            alert('Speech recognition not supported in this browser.');
+        }
     }
-}
 
-// Listen for changes in screen size
-mediaQuery.addEventListener('change', handleMediaQueryChange);
+    // Function to filter blog posts based on search input
+    document.getElementById('search-bar').addEventListener('input', function () {
+        const searchTerm = this.value.toLowerCase();
+        const blogPosts = document.querySelectorAll('#blogPosts .col-md-6');
+        const noResultsMessage = document.getElementById('no-results-message');
 
-// Initial check on page load
-handleMediaQueryChange(mediaQuery);
+        let resultsFound = false;
+
+        blogPosts.forEach(function (post) {
+            const title = post.querySelector('.card-title').textContent.toLowerCase();
+            const description = post.querySelector('.card-text').textContent.toLowerCase();
+
+            if (title.includes(searchTerm) || description.includes(searchTerm)) {
+                post.style.display = 'block'; // Show matching post
+                resultsFound = true;
+            } else {
+                post.style.display = 'none'; // Hide non-matching post
+            }
+        });
+
+        if (!resultsFound && noResultsMessage) {
+            noResultsMessage.style.display = 'block'; // Show "No results" message
+        } else if (noResultsMessage) {
+            noResultsMessage.style.display = 'none'; // Hide "No results" message
+        }
+    });
+</script>
+
+
+
+</html>
