@@ -1,803 +1,279 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="author" content="Template Mo">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-    <!-- Keep only one Bootstrap version -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-   
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
- <script type="text/javascript" src="assets/json/blog.json"></script>
- <script type="text/javascript" src="test2.js"></script>
-    <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="assets/css/fontawesome.css">
-    <link rel="stylesheet" href="assets/css/templatemo-edu-meeting.css">
-    <link rel="stylesheet" href="assets/css/owl.css">
-    <link rel="stylesheet" href="assets/css/lightbox.css">
-    <style>
-        /* Section Styles */
-        #blog {
-            padding: 2rem 0;
-            background-image: url(assets/images/meetings-bg.jpg);
-        }
-
-        /* Header Styles */
-        #blog h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        /* Card Styles */
-        .card {
-            transition: transform 0.3s;
-            border-radius: 1.0rem;
-            overflow: hidden;
-            /* Ensure no overflow from cards */
-        }
-
-        .card:hover {
-            transform: scale(1.05);
-        }
-
-        /* Featured Post Styles */
-        #blog .mb-4 img {
-            border-radius: 1rem;
-            padding: 3px;
-        }
-
-        #sidebar {
-            position: sticky;
-            top: 80px;
-            margin-left: 120px;
-            width: 300px;
-            height: calc(100vh - 160px);
-            overflow-y: auto;
-            background-color: white;
-            padding: 20px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            z-index: 1;
-            border-radius: 0.9rem;
-        }
-
-        /* Sidebar Styles */
-        .sidebar h4 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .sidebar .list-group-item {
-            background-color: #ffffff;
-            border: 0px solid #ddd;
-            border-radius: 0.9rem;
-            transition: background-color 0.3s;
-        }
-
-        .sidebar .list-group-item:hover {
-            background-color: #e9ecef;
-        }
-
-        /* Responsive Styles */
-        @media (max-width: 768px) {
-            #blog h2 {
-                font-size: 2rem;
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Join the best DevOps training institute in Noida. Gain hands-on experience with CI/CD, Docker, Kubernetes, Jenkins, and more. Enroll today!">
+        <meta name="keywords" content="DevOps training, DevOps certification, best DevOps institute, DevOps course Noida, CI/CD training, Docker, Kubernetes, Jenkins, DevOps Bangalore">
+        <meta name="author" content="A1 Training Institute">
+        <meta property="og:title" content="DevOps Certification Training - A1 Training Institute">
+        <meta property="og:description" content="Master DevOps tools and practices with the best training institute in Noida and Bangalore. Enroll now for hands-on projects and industry-recognized certification.">
+        <meta property="og:url" content="https://yourdomain.com/devops-training-institute.html">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="https://via.placeholder.com/600x400">
+        <meta property="og:locale" content="en_US">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="DevOps Certification Training - A1 Training Institute">
+        <meta name="twitter:description" content="Learn DevOps with hands-on experience at A1 Training Institute. Enroll today for the best DevOps certification course in Noida and Bangalore.">
+        <meta name="twitter:image" content="https://via.placeholder.com/600x400">
+        <title>DevOps Certification Training - A1 Training Institute Bangalore</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+        <style>
+            body {
+                font-family: Arial, sans-serif;
             }
-
-            .card {
-                margin-bottom: 1.5rem;
+            .hero {
+                background: url('images/bg-2.png') no-repeat center center/cover;
+                color: white;
+                padding: 100px 20px;
+                height: 600px;
+                text-align: center;
             }
-        }
-
-        /* Animation Styles */
-        .fade-in {
-            animation: fadeIn 0.5s forwards;
-        }
-
-        .fade-out {
-            animation: fadeOut 0.5s forwards;
-        }
-
-        @keyframes fadeIn {
-            from {
-                transform: scale(0.8);
-                opacity: 0;
+            .hero h1 {
+                font-size: 3rem;
+                font-weight: bold;
             }
-
-            to {
-                transform: scale(1);
-                opacity: 1;
+            .hero p {
+                font-size: 1.2rem;
+                margin: 20px 0;
             }
-        }
-
-        @keyframes fadeOut {
-            from {
-                transform: scale(1);
-                opacity: 1;
+            .cta-button {
+                background-color: #007bff;
+                color: white;
+                padding: 15px 30px;
+                font-size: 1.2rem;
+                border: none;
+                border-radius: 5px;
             }
-
-            to {
-                transform: scale(0.8);
-                opacity: 0;
+            .cta-button:hover {
+                background-color: #0056b3;
+                color: white;
             }
-        }
-
-        .fade-out {
-            opacity: 0;
-            transition: opacity 0.5s ease;
-            /* Smooth transition */
-        }
-
-        #sidebar {
-            transition: opacity 0.5s ease;
-            /* Smooth transition for visibility */
-        }
-
-        .post {
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            padding: 10px;
-            margin: 10px 0;
-            /* Adjust margin to minimize space */
-            cursor: pointer;
-        }
-
-        .post-image {
-            width: 100%;
-            border-radius: 5px;
-        }
-
-        .post-title {
-            margin: 10px 0;
-        }
-
-        .overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
-            display: none;
-            z-index: 9999;
-            /* Ensure overlay is on top */
-        }
-
-        .overlay-content {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 5px;
-            width: 80%;
-            max-height: 90%;
-
-            position: relative;
-            margin: 0 auto;
-            /* Center overlay content */
-            top: 50%;
-            /* Move down */
-            transform: translateY(-50%);
-            /* Adjust to center vertically */
-        }
-
-        .close {
-            cursor: pointer;
-            float: right;
-            font-size: 20px;
-        }
-
-        /* Hide overflow to manage line limits */
-        .description {
-            display: -webkit-box;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-            -webkit-line-clamp: 5;
-            /* Limit to 5 lines */
-            transition: max-height 0.5s ease;
-            max-height: 8em;
-            /* Control height for 5 lines */
-        }
-
-        .description.expanded {
-            -webkit-line-clamp: unset;
-            /* Remove line limit */
-            max-height: unset;
-            /* Allow full height */
-        }
-
-        /* Adjust the layout without Flexbox */
-        .overlay-content .row {
-            margin: 0;
-            /* Reset margin */
-        }
-
-        .overlay-content .col-lg-8,
-        .overlay-content .col-lg-4 {
-            float: left;
-            /* Use float for layout */
-        }
-
-        .overlay-content .col-lg-8 {
-            width: 66.6666%;
-            /* Left content column takes 66% */
-        }
-
-        .overlay-content .col-lg-4 {
-            width: 33.3333%;
-            /* Right images column takes 33% */
-            height: auto;
-            /* Set fixed height for the scrollable area */
-
-        }
-
-        @media (max-width: 768px) {
-
-            .overlay-content .col-lg-4,
-            .overlay-content .col-lg-8 {
-                width: 100%;
-                /* Full width in mobile */
-                float: none;
-                /* Clear float */
+            .features, .schedule, .testimonials, .faqs {
+                padding: 50px 20px;
             }
-        }
-
-        .image-scroll {
-            height: auto;
-        }
-
-        .image-scroll img {
-            width: 100%;
-            margin-bottom: 10px;
-            /* Space between images */
-            border-radius: 5px;
-        }
-
-        .related-posts {
-            max-height: 550px;
-            /* Set a max height for scrolling */
-            overflow-y: auto;
-            /* Enable scrolling */
-        }
-
-        .related-posts .post {
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            padding: 10px;
-            margin-bottom: 10px;
-            cursor: pointer;
-        }
-
-        .related-posts .post img {
-            width: 100%;
-            border-radius: 5px;
-        }
-
-        #search-bar {
-            margin-bottom: 15px;
-        }
-
-        #mic-icon {
-            cursor: pointer;
-            color: #555;
-            /* Change color if needed */
-            height: fit-content;
-            padding: 10px;
-
-        }
-
-        #mic-icon:hover {
-            color: #007bff;
-            /* Change hover color */
-
-        }
-/* Main content section */
-.main-content {
-    max-height: 70vh; /* Limit height to 70% of the viewport */
-    overflow-y: auto; /* Add vertical scroll if needed */
-    padding-right: 10px; /* Space for scrollbar */
-    margin-right: -10px; /* Adjust content to avoid layout issues */
-    scrollbar-width: thin; /* Thin scrollbar for modern browsers */
+            .testimonials {
+                background-color: #f8f9fa;
+            }
+            .footer {
+                background-color: #343a40;
+                color: white;
+                padding: 20px;
+                text-align: center;
+            }
+            ul.custom-bullets {
+  list-style-type: none; /* Remove default bullets */
+  padding-left: 40px; /* Space for the custom bullet */
+  color: #343a40; /* Text color */
+  text-align: justify; /* Align text */
 }
 
-.main-content::-webkit-scrollbar {
-    width: 6px; /* Scrollbar width */
-}
-
-.main-content::-webkit-scrollbar-track {
-    background: #f1f1f1; /* Track color */
-}
-
-.main-content::-webkit-scrollbar-thumb {
-    background: #888; /* Thumb color */
-    border-radius: 10px; /* Rounded scrollbar */
-}
-
-.main-content::-webkit-scrollbar-thumb:hover {
-    background: #555; /* Hover effect */
-}
-
-/* Related posts section */
-.related-posts {
-    max-height: 60vh; /* Adjust height for related posts */
-    overflow-y: auto; /* Scrollable related posts */
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-/* Mobile responsiveness */
-@media (max-width: 768px) {
-    .main-content {
-        max-height: 50vh; /* Reduce height on smaller screens */
-    }
-
-    .overlay-content {
-        max-height: 85vh; /* Adjust for smaller viewports */
-        padding: 10px;
-    }
+ul.custom-bullets li {
+  background-image: url("images/landing-bullet-removebg-preview.png"); /* Path to your image */
+  background-repeat: no-repeat;
+  background-size: 16px 16px; /* Adjust size of the bullet */
+  background-position: 0 50%; /* Position the bullet vertically centered */
+  padding-left: 25px; /* Space between bullet and text */
+  margin-top: 10px;
+ 
 }
 
 
-    </style>
-
-</head>
-<!-- MENU START -->
-<script type="text/javascript" src="menu.js"></script>
-<!-- META START -->
-<script type="text/javascript" src="meta.js"></script>
-<body>
-    <div id="no-results-message" style="display: none; text-align: center; margin-top: 20px;">
-        <p>No results found</p>
-    </div>
+        </style>
+    </head>
     
-    <section id="blog" class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-4">Blog</h2>
+<body>
 
-            <!-- Button to toggle the sidebar dropdown at the top -->
-            <button class="btn btn-primary d-lg-none mb-4 w-100" class="btn btn-primary btn-block" type="button"
-                data-bs-toggle="collapse" data-bs-target="#sidebarDropdown" aria-expanded="false"
-                aria-controls="sidebarDropdown">
-                Categories
-            </button>
+<!-- Hero Section -->
+<section class="hero">
+    
+ 
 
-            <!-- Sidebar dropdown for mobile view -->
-            <div class="collapse d-lg-none mb-4 w-100 " id="sidebarDropdown">
+
+    <div class="container md-12">
+        <div class="row">
+          <div class="col-md-7">
+            <h3 style="color: #343a40; font-size: 60px;"> DevOps Course Training with Certificationg</h3>
+            <ul class="custom-bullets" style="color: #343a40; text-align: justify;">
+                <li>DevOps course offered in collaboration with IBM is suitable for individuals seeking to learn DevOps online and succeed</li>
+                <li>Curated by industry experts with over 15 years of experience, this DevOps Course covers tools like Git, Puppet, Jenkins, SVN, Maven, Docker et Assured minimum package of ₹5-25 LPA with the StarX Placement Program</li>
+                <li>Free 6 Months Internship</li>
+                <li>Placement Training Included (Resume Building, Business communication, Interview Preps, Soft Skills)</li>
+              </ul>
+              
+            <strong>Ranked #1 DevOps Training Institute By Deccan Chronicle.</strong><br><br>
+    
+            <a href="#contact" class="cta-button">Enroll Now</a>
+            <a href="#contact" class="cta-button">Enroll Now</a>
+          </div>
+
+          <div class="col-md-5">
+           
+            <div>
+            <img src="assets/images/professional-courses/devops_training.jpg" alt="" width="100%">
+        </div>
+          </div>
+        </div>
+      </div>
+   
+
+</section>
+
+<!-- Key Benefits Section -->
+<section class="features container my-5">
+    <h2 class="text-center">Why Choose Our DevOps Certification?</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <h4>Comprehensive Curriculum</h4>
+            <p>Learn the latest DevOps tools and methodologies.</p>
+        </div>
+        <div class="col-md-4">
+            <h4>Expert Trainers</h4>
+            <p>Get trained by certified professionals with real-world experience.</p>
+        </div>
+        <div class="col-md-4">
+            <h4>Industry-Recognized Certification</h4>
+            <p>Boost your career with globally recognized credentials.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Certification Details Section -->
+<section class="container my-5">
+    <h2 class="text-center">Certification Details</h2>
+    <p class="text-center">Our DevOps certification covers CI/CD, Jenkins, Docker, Kubernetes, and more.</p>
+    <div class="row">
+        <div class="col-md-6">
+            <ul>
+                <li>Duration: 40 Hours</li>
+                <li>Mode: Online/Offline</li>
+                <li>Prerequisites: Basic IT knowledge</li>
+            </ul>
+        </div>
+        <div class="col-md-6">
+            <img src="https://via.placeholder.com/600x400" alt="DevOps Training" class="img-fluid rounded">
+        </div>
+    </div>
+</section>
+
+<!-- Schedule Section -->
+<section class="schedule container my-5">
+    <h2 class="text-center">Upcoming Batches</h2>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Mode</th>
+                <th>Enroll</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>15th January 2025</td>
+                <td>10:00 AM - 2:00 PM</td>
+                <td>Online</td>
+                <td><a href="#contact" class="btn btn-primary">Enroll Now</a></td>
+            </tr>
+            <tr>
+                <td>22nd January 2025</td>
+                <td>6:00 PM - 9:00 PM</td>
+                <td>Offline</td>
+                <td><a href="#contact" class="btn btn-primary">Enroll Now</a></td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<!-- Testimonials Section -->
+<section class="testimonials">
+    <div class="container">
+        <h2 class="text-center mb-4">Student Testimonials</h2>
+        <div class="row">
+            <div class="col-md-4">
                 <div class="card">
                     <div class="card-body">
-                        <h4>Categories</h4>
-                        <ul class="list-group mb-4">
-                            <li class="list-group-item" data-category="all"><a href="#" class="category-link">All</a>
-                            </li>
-                            <li class="list-group-item" data-category="programming"><a href="#"
-                                    class="category-link">Programming</a></li>
-                            <li class="list-group-item" data-category="designing"><a href="#"
-                                    class="category-link">Designing</a></li>
-                            <li class="list-group-item" data-category="web-development"><a href="#"
-                                    class="category-link">Web Development</a></li>
-                        </ul>
-
-                        <h4>Recent Posts</h4>
-                        <ul class="list-group">
-                            <li class="list-group-item"><a href="#">Python Programming</a></li>
-                            <li class="list-group-item"><a href="#">Recent Post 2</a></li>
-                        </ul>
+                        <p class="card-text">"This course transformed my career. Highly recommended!"</p>
+                        <p class="text-muted">- Anjali K.</p>
                     </div>
                 </div>
             </div>
-
-            <div class="row">
-                <div class="col-lg-8">
-
-                    <div class="row" id="blogPosts">
-                        <script>
-                            const blogItems = blog.col1;
-                        
-                            // Create the carousel
-                            let carouselContent = `<div id="blogCarousel" class="carousel slide" data-bs-ride="carousel">
-                                <div class="carousel-inner">`;
-                        
-                            blogItems.forEach((item, index) => {
-                                const activeClass = index === 0 ? "active" : "";
-                                carouselContent += `
-                                    <div class="carousel-item ${activeClass}">
-                                        <div class="row">
-                                            <div class="col-lg-12 mb-4" data-category="${item.category}">
-                                                <div class="card">
-                                                    <img src="assets/images/junior-geeks/${item.image}" class="card-img-top" alt="Blog Post ${index + 1}">
-                                                    <div class="card-body">
-                                                        <h5 class="card-title">${item.title}</h5>
-                                                        <p class="card-text">${item.description}</p>
-                                                        <a href="blog-post${index + 1}.html" class="btn btn-primary">More</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>`;
-                            });
-                        
-                            carouselContent += `
-                                </div>
-                                <button class="carousel-control-prev" type="button" data-bs-target="#blogCarousel" data-bs-slide="prev">
-                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Previous</span>
-                                </button>
-                                <button class="carousel-control-next" type="button" data-bs-target="#blogCarousel" data-bs-slide="next">
-                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Next</span>
-                                </button>
-                            </div>`;
-                        
-                            document.write(carouselContent);
-                        
-                            // Create the rest of the blog posts
-                            blogItems.slice(1).forEach((item, index) => {
-                                const moreTextId = `moreText${index + 1}`;
-                                const readMoreBtnId = `readMoreBtn${index + 1}`;
-                                document.write(`
-                                    <div class="col-md-6 mb-4" data-category="${item.category}">
-                                        <div class="card">
-                                            <img src="assets/images/junior-geeks/${item.image}" class="card-img-top post-image" alt="Blog Post ${index + 2}" onclick="openOverlay('${item.title}', '${item.description}', '${item.description1}', 'assets/images/junior-geeks/${item.image}', '${item.date}')">
-                                            <div class="card-body">
-                                               <span class="input-group-text bg-white border-0 d-flex justify-content-between align-items-center" id="basic-addon1">
-    <div class="d-flex align-items-center me-3"> <!-- Add spacing between elements -->
-        <i class="bi bi-calendar" style="font-size: 1.5rex; color: #6c757d; margin-right: 5px;"></i> <!-- Icon with space -->
-        <p style="font-size: 1.5rex; color: #6c757d; margin: 0;">${item.date}</p>
-    </div>
-    <div class="d-flex align-items-center">
-        <i class="bi bi-person" style="font-size: 2rex; color: #6c757d; margin-right: 5px;"></i> <!-- Icon with space -->
-        <p style="font-size: 1.5rex; color: #6c757d; margin: 0;">A1TI</p>
-    </div>
-</span>
-
-                                                <h5 class="card-title">${item.title}</h5>
-                                                <p class="card-text">
-                                                    ${item.description}
-                                                    <span class="more" id="${moreTextId}" style="display:none;"> ${item.description1}.</span>
-                                                    <span class="read-more" id="${readMoreBtnId}" onclick="toggleReadMore(event, '${moreTextId}', '${readMoreBtnId}')" style="color: #6c757d;">Read More...</span>
-                                                </p>
-<a href="#" class="btn btn-primary" onclick="openOverlay('${item.title}', '${item.description}', '${item.description1}', 'assets/images/junior-geeks/${item.image}', '${item.date}', '${item.description2}')">
-  More Info
-</a>
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#${item.title}">
-  More Info (MODAL)
-</button>
-
-                                            
-                                            
-                                            
-                                               </div>
-                                        </div>
-                                    </div>
-                                `);
-                            });
-                        </script>
-                        
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="card-text">"Excellent training and hands-on projects."</p>
+                        <p class="text-muted">- Ravi T.</p>
                     </div>
                 </div>
-
-                <!-- Sidebar for larger screens -->
-                    <div class="col-lg-4 d-none d-lg-block" id="sidebar">
-                  
-                        <!-- Search Bar with Mic Icon Start -->
-                            <div class="mb-4">
-                                <div class="input-group">
-                                    <input type="text" class="form-control search_bar" placeholder="Search..." id="search-bar" oninput="filterblogpost()">
-                                    <span class="input-group-text voice-icon" id="mic-icon" onclick="startVoiceSearch()">
-                                        <i class="fas fa-microphone"></i>
-                                    </span>
-                                </div>
-                            </div>
-                        
-                        <!-- Course List -->
-                            <ul id="myUL" style="list-style-type: none; padding: 0; margin-top: 20px; display: none; ">
-                                <li style="padding: 10px;">Course 1: JavaScript</li>
-                                <li style="padding: 10px;">Course 2: Docker Training</li>
-                                <li style="padding: 10px;">Course 3: Terraform</li>
-                                <li style="padding: 10px;">Course 4: Ansible Training</li>
-                                <li style="padding: 10px;">Course 5: Kubernetes</li>
-                                <!-- Add more courses as needed -->
-                            </ul>
-                        <!-- Categories -->
-                            <div class="mb-4">
-                                <h4>Categories</h4>
-                                <ul class="list-group">
-                                    <li class="list-group-item" data-category="all"><a href="#" class="category-link">All</a>
-                                    </li>
-                                    <li class="list-group-item" data-category="programming"><a href="#"
-                                            class="category-link">Programming</a></li>
-                                    <li class="list-group-item" data-category="designing"><a href="#"
-                                            class="category-link">Designing</a></li>
-                                    <li class="list-group-item" data-category="web-development"><a href="#"
-                                            class="category-link">Web Development</a></li>
-                                </ul>
-                            </div>
-                        <!-- Recent Post -->
-                            <div class="mb-4">
-                                <h4>Recent Posts</h4>
-                                <ul class="list-group">
-                                    <li class="list-group-item"><a href="#">Recent Post 1</a></li>
-                                    <li class="list-group-item"><a href="#">Recent Post 2</a></li>
-                                </ul>
-                            </div>
-                    </div>
-
             </div>
-        </div>
-    </section>
-
-    
-    <div id="overlay" class="overlay" onclick="closeOverlay(event)">
-        <div class="overlay-content container-fluid" onclick="event.stopPropagation();">
-            <!-- Close Button -->
-            <span class="close" onclick="closeOverlay(event)">&times;</span>
-    
-            <div class="row">
-                <!-- Overlay Title -->
-                <div class="col-12">
-                    <h2 id="overlay-title" class="text-center text-lg-start"></h2>
-                </div><br><br>
-    
-                <!-- Main Content Section -->
-                <div class="col-lg-8 col-md-7 col-12 mb-4 main-content">
-                    <img id="overlay-image" src="" alt="Overlay Image" class="img-fluid image-scroll mx-auto d-block mb-3">
-                    <div class="d-flex align-items-center justify-content-between overlay-meta">
-                        <p id="overlay-date" class="d-flex align-items-center text-muted mb-0">
-                            <i class="bi bi-calendar me-2" style="font-size: 1.5rex; color: #6c757d;"></i>
-                            <span></span> <!-- Date from JSON will go here -->
-                        </p>
-                        <p id="overlay-author" class="d-flex align-items-center text-muted mb-0">
-                            <i class="bi bi-person me-2" style="font-size: 1.5rex; color: #6c757d;"></i>
-                            <span>A1TI</span> <!-- Static Author -->
-                        </p>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="card-text">"The trainers are extremely knowledgeable."</p>
+                        <p class="text-muted">- Suman P.</p>
                     </div>
-                    
-                    <h4 id="overlay-description" class="text-center text-lg-start"></h4>
-                    <p id="description1" class="text-center text-lg-start"></p>
-                    <p id="description2" class="text-center text-lg-start"></p>
-                    
-                </div>
-    
-                <!-- Related Posts Section -->
-                <div class="col-lg-4 col-md-5 col-12 ms-2">
-                    <!-- Search Bar -->
-                    <div class="mb-4">
-                        <div class="input-group">
-                            <input type="text" class="form-control search_bar" placeholder="Search..." id="search-bar" oninput="filterblogpost()">
-                            <button class="btn btn-outline-secondary voice-icon" id="mic-icon" onclick="startVoiceSearch()">
-                                <i class="fas fa-microphone"></i>
-                            </button>
-                        </div>
-                    </div>
-    
-                    <!-- Related Posts Header -->
-                    <h4 class="text-center text-lg-center mb-3">Related Posts</h4>
-    
-                    <!-- Related Posts Container -->
-                    <div id="related-posts" class="related-posts d-flex flex-wrap justify-content-center"></div>
                 </div>
             </div>
         </div>
     </div>
-    
-    <!--------FOOTER STARTS-------->
-    <script type="text/javascript" src="footer.js"></script>
-    <!--------FOOTER ENDS-------->
+</section>
+
+<!-- FAQs Section -->
+<section class="faqs container my-5">
+    <h2 class="text-center">Frequently Asked Questions</h2>
+    <div class="accordion" id="faqAccordion">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="faq1">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1">
+                    What is DevOps?
+                </button>
+            </h2>
+            <div id="collapse1" class="accordion-collapse collapse show">
+                <div class="accordion-body">
+                    DevOps is a set of practices that combine software development and IT operations.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="faq2">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2">
+                    Who should enroll in this course?
+                </button>
+            </h2>
+            <div id="collapse2" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                    IT professionals, developers, and anyone interested in learning DevOps can join.
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="container my-5">
+    <h2 class="text-center mb-4">Contact Us</h2>
+    <form>
+        <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter your name">
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter your email">
+        </div>
+        <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea class="form-control" id="message" rows="3" placeholder="Write your message"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <p>&copy; 2025 A1 Training Institute, Bangalore. All Rights Reserved.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
-<script>
-    // Function to populate related posts in a container (modal/overlay)
-    function populateRelatedPosts(containerId, currentTitle) {
-        const container = document.getElementById(containerId);
-        container.innerHTML = ''; // Clear existing content
-
-        blog.col1.forEach(function (post) {
-            if (post.title !== currentTitle) { // Exclude the current post
-                const safeTitle = post.title.replace(/'/g, "\\'");
-                const safeDescription = post.description.replace(/'/g, "\\'");
-                const safeDescription1 = post.description1.replace(/'/g, "\\'");
-                const safeDescription2 = post.description2.replace(/'/g, "\\'");
-
-                container.innerHTML += `
-                    <div class="post" onclick="openOverlay('${safeTitle}', '${safeDescription}', '${safeDescription1}', 'assets/images/junior-geeks/${post.image}', '${post.date}', '${safeDescription2}')">
-                        <img src="assets/images/junior-geeks/${post.image}" alt="${post.title}" class="post-image">
-                        <div class="d-flex align-items-center">
-                            <p class="bi bi-calendar mt-1.5" style="font-size: 1.5rex; color: #6c757d; margin: 0;">${post.date}</p>
-                            <p style="font-size: 1.5rex; color: #6c757d; margin-left: 170px;">
-                                <i class="bi bi-person" style="font-size: 2rex; color: #6c757d;"></i> A1TI
-                            </p>
-                        </div>
-                        <h5 class="post-title">${post.title}</h5>
-                        <p class="post-description">${post.description}</p>
-                    </div>
-                `;
-            }
-        });
-    }
-
-    // Function to open the overlay and populate related posts
-    function openOverlay(title, description, description1, imageSrc, date, description2) {
-        document.getElementById('overlay-title').innerText = title;
-        document.getElementById('overlay-description').innerText = description;
-        document.getElementById('description1').innerText = description1;
-        document.getElementById('description2').innerText = description2;
-        document.getElementById('overlay-image').src = imageSrc;
-        document.getElementById('overlay-date').querySelector('span').innerText = date;
-
-        // Populate related posts in overlay
-        populateRelatedPosts('related-posts', title);
-
-        // Show the overlay
-        document.getElementById('overlay').style.display = 'block';
-    }
-
-    // Function to open the modal and populate related posts
-    function openModal(title) {
-        const modal = document.getElementById(title);
-        if (modal) {
-            // Populate related posts in the modal
-            populateRelatedPosts('related-posts-container', title);
-
-            // Show the modal (Bootstrap method)
-            const bootstrapModal = new bootstrap.Modal(modal);
-            bootstrapModal.show();
-        }
-    }
-
-    // Function to filter blog posts based on search input
-    document.getElementById('search-bar').addEventListener('input', function () {
-        const searchTerm = this.value.toLowerCase();
-        const blogPosts = document.querySelectorAll('#blogPosts .col-md-6');
-        const noResultsMessage = document.getElementById('no-results-message');
-
-        let resultsFound = false;
-
-        blogPosts.forEach(function (post) {
-            const title = post.querySelector('.card-title').textContent.toLowerCase();
-            const description = post.querySelector('.card-text').textContent.toLowerCase();
-
-            if (title.includes(searchTerm) || description.includes(searchTerm)) {
-                post.style.display = 'block'; // Show matching post
-                resultsFound = true;
-            } else {
-                post.style.display = 'none'; // Hide non-matching post
-            }
-        });
-
-        if (!resultsFound && noResultsMessage) {
-            noResultsMessage.style.display = 'block'; // Show "No results" message
-        } else if (noResultsMessage) {
-            noResultsMessage.style.display = 'none'; // Hide "No results" message
-        }
-    });
-
-    // Section to start voice search
-    function startVoiceSearch() {
-        const icon = document.getElementById('mic-icon');
-        icon.style.color = 'red';
-
-        if ('webkitSpeechRecognition' in window) {
-            const recognition = new webkitSpeechRecognition();
-            recognition.lang = 'en-US';
-            recognition.interimResults = false;
-            recognition.maxAlternatives = 1;
-
-            recognition.start();
-
-            recognition.onresult = function (event) {
-                const transcript = event.results[0][0].transcript.trim().replace(/\.$/, '');
-                document.getElementById('search-bar').value = transcript;
-
-                // Trigger filtering after voice search
-                document.getElementById('search-bar').dispatchEvent(new Event('input'));
-            };
-
-            recognition.onerror = function () {
-                console.error('Speech recognition error');
-                icon.style.color = '#333';
-            };
-
-            recognition.onend = function () {
-                icon.style.color = '#333';
-            };
-        } else {
-            alert('Speech recognition not supported in this browser.');
-        }
-    }
-
-    // Function to close the overlay
-    function closeOverlay(event) {
-        if (event.target === document.getElementById('overlay') || event.target.classList.contains('close')) {
-            document.getElementById('overlay').style.display = 'none';
-        }
-    }
-
-    // Add event listeners to category links for filtering
-    document.querySelectorAll('.category-link').forEach(function (link) {
-        link.addEventListener('click', function (e) {
-            e.preventDefault();
-            const selectedCategory = this.parentElement.getAttribute('data-category');
-            filterPosts(selectedCategory);
-        });
-    });
-
-    // Function to filter blog posts based on category selection
-    function filterPosts(selectedCategory) {
-        const blogPosts = document.querySelectorAll('#blogPosts .col-md-6');
-        const filteredPosts = []; // Store filtered posts
-
-        blogPosts.forEach(function (post) {
-            const postCategory = post.getAttribute('data-category');
-            if (selectedCategory === 'all' || postCategory === selectedCategory) {
-                post.style.display = 'block'; // Show post
-                filteredPosts.push({
-                    title: post.querySelector('.card-title').innerText,
-                    description: post.querySelector('.card-text').innerText,
-                    image: post.querySelector('.card-img-top').getAttribute('src').split('/').pop(),
-                    category: postCategory
-                });
-            } else {
-                post.style.display = 'none'; // Hide post
-            }
-        });
-
-        // Update the carousel with filtered posts
-        updateCarousel(filteredPosts);
-    }
-
-    // Function to update the carousel with filtered posts
-    function updateCarousel(filteredPosts) {
-        // Logic to update the carousel (assuming you have a carousel setup)
-    }
-
-</script>
-<script>
-    // Function to open the modal and populate related posts
-function openModal(title) {
-    const modal = document.getElementById(title);
-    if (modal) {
-        // Populate related posts in the modal
-        populateRelatedPosts('related-posts-container', title);
-
-        // Show the modal (Bootstrap method)
-        const bootstrapModal = new bootstrap.Modal(modal);
-        bootstrapModal.show();
-    }
-}
-
-// Function to populate related posts in a container (modal/overlay)
-function populateRelatedPosts(containerId, currentTitle) {
-    const container = document.getElementById(containerId);
-    container.innerHTML = ''; // Clear existing content
-
-    blog.col1.forEach(function (post) {
-        if (post.title !== currentTitle) { // Exclude the current post
-            const safeTitle = post.title.replace(/'/g, "\\'");
-            const safeDescription = post.description.replace(/'/g, "\\'");
-            const safeDescription1 = post.description1.replace(/'/g, "\\'");
-            const safeDescription2 = post.description2.replace(/'/g, "\\'");
-
-            container.innerHTML += `
-                <div class="post" onclick="openModal('${safeTitle}')">
-                    <img src="assets/images/junior-geeks/${post.image}" alt="${post.title}" class="post-image">
-                    <div class="d-flex align-items-center">
-                        <p class="bi bi-calendar mt-1.5" style="font-size: 1.5rex; color: #6c757d; margin: 0;">${post.date}</p>
-                        <p style="font-size: 1.5rex; color: #6c757d; margin-left: 170px;">
-                            <i class="bi bi-person" style="font-size: 2rex; color: #6c757d;"></i> A1TI
-                        </p>
-                    </div>
-                    <h5 class="post-title">${post.title}</h5>
-                    <p class="post-description">${post.description}</p>
-                </div>
-            `;
-        }
-    });
-}
-
-</script>
-
 </html>
