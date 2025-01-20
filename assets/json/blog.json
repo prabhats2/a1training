@@ -1,62 +1,83 @@
 let blog = {
   "col1": [
     {
-      "image" :"computer_science.png",
-      "title":"Computer Science",
-      "date" :"25/Sep/2024",
-      "description":"A brief description of the blog post goes here.",
-      "description1":" In today’s rapidly evolving tech world, programming skills are not just reserved for developers or computer scientists. They’ve become an essential tool for professionals across industries. Among the vast array of programming languages available, Python has emerged as one of the most popular and versatile choices. Whether you’re a beginner, a data scientist, or someone looking to automate routine tasks, learning Python offers countless benefits.",
-      "category": "all"
+      "image": "computer_science11th.png",
+      "title": "Computer_Science",
+      "date": "25/Sep/2024",
+      "descriptions": "Computer",
+      "description": "A brief description of the blog post goes here.",
+      "description1": "In today’s rapidly evolving tech world, programming skills are not just reserved for developers or computer scientists. They’ve become an essential tool for professionals across industries. Among the vast array of programming languages available, Python has emerged as one of the most popular and versatile choices. Whether you’re a beginner, a data scientist, or someone looking to automate routine tasks, learning Python offers countless benefits.",
+      "description2": "Moreover,Python’s simplicity and readability make it a perfect choice for newcomers to programming, while its extensive libraries and frameworks enable professionals to work on everything from web development to artificial intelligence.",
+      "category": "all "
     },
     {
-      "image" :"photo-shop.png",
-      "title":"Photoshop",
-      "date" :"24/Sep/2024",
-      "description":"Mastering Photoshop: 5 Essential Techniques for Stunning Visuals",
-      "description1":"In today’s digital age, Photoshop remains a powerful tool for graphic designers, photographers, and creatives alike. Whether you’re a beginner or an experienced user, honing your skills can lead to breathtaking results. This post will explore five essential techniques that will elevate your Photoshop game and enhance your visual storytelling.",
-      "category": "designing" 
+      "image": "photo-shop.png",
+      "title": "Photoshop",
+      "date": "24/Sep/2024",
+      "descriptions": "Photoshop",
+      "description": "Mastering Photoshop: 5 Essential Techniques for Stunning Visuals",
+      "description1": "In today’s digital age, Photoshop remains a powerful tool for graphic designers, photographers, and creatives alike. Whether you’re a beginner or an experienced user, honing your skills can lead to breathtaking results. This post will explore five essential techniques that will elevate your Photoshop game and enhance your visual storytelling.",
+      "description2": "By mastering these techniques, you’ll be able to create stunning visuals that not only enhance your creativity but also communicate your ideas with clarity and impact.",
+      "category": ["designing","programming"]
     },
     {
-      "image" :"illustrator.png",
-      "title":"Illustrator",
-      "date" :"23/Sep/2024",
-      "description":" Unlock Your Creativity: 5 Illustrator Techniques for Stunning Designs",
-      "description1":" Adobe Illustrator is the go-to tool for vector graphics, enabling designers to create crisp, scalable art. Whether you're designing logos, illustrations, or infographics, mastering Illustrator can enhance your creative process. In this post, we'll explore five essential techniques that will help you elevate your designs and unleash your creativity. ",
-      "category": "designing" 
-    },
-    {
-      "image" :"canva.png",
-      "title":"Canva",
-      "date" :"22/Sep/2024",
-      "description":"Design Like a Pro: 5 Essential Tips for Mastering Canva",
-      "description1":" Canva has revolutionized graphic design, making it accessible to everyone, regardless of skill level. Whether you’re creating social media graphics, presentations, or marketing materials, mastering Canva can elevate your designs. In this post, we’ll explore five essential tips that will help you unleash your creativity and design like a pro.",
+      "image": "Illustrator.png",
+      "title": "Illustrator",
+      "date": "24/Sep/2024",
+      "descriptions": "Illustrator",
+      "description": "Unlock Your Creativity: 5 Illustrator Techniques for Stunning Designs",
+      "description1": "In today’s digital age, Illustrator has become a staple in the design world, helping professionals create beautiful vector artwork. Whether you're designing logos, illustrations, or icons, Illustrator offers a range of tools to make your creative vision come to life.",
+      "description2": "These five essential techniques will help you unlock new possibilities with Illustrator, pushing the boundaries of your designs and elevating your projects to new heights.",
       "category": "designing"
     },
     {
-      "image" :"cc+.png",
-      "title":"C/C++",
-      "date" :"21/Sep/2024",
-      "description":"A brief description of the blog post goes here.",
-      "description1":" In today’s rapidly evolving tech world, programming skills are not just reserved for developers or computer scientists. They’ve become an essential tool for professionals across industries. Among the vast array of programming languages available, Python has emerged as one of the most popular and versatile choices. Whether you’re a beginner, a data scientist, or someone looking to automate routine tasks, learning Python offers countless benefits.",
+      "image": "canva.png",
+      "title": "Canva",
+      "date": "22/Sep/2024",
+      "descriptions":"Canva",
+      "description": "Design Like a Pro: 5 Essential Tips for Mastering Canva",
+      "description1": "Canva has revolutionized graphic design, making it accessible to everyone, regardless of skill level. Whether you’re creating social media graphics, presentations, or marketing materials, mastering Canva can elevate your designs. In this post, we’ll explore five essential tips that will help you unleash your creativity and design like a pro.",
+      "description2": "With these tips, you’ll learn how to utilize Canva’s powerful tools and templates to produce polished and professional designs quickly and easily.",
+      "category": "designing"
+    },
+    {
+      "image": "database.png",
+      "title": "DataBase",
+      "date": "22/Sep/2024",
+      "descriptions":"Database",
+      "description": "Design Like a Pro: 5 Essential Tips for Mastering Canva",
+      "description1": "Canva has revolutionized graphic design, making it accessible to everyone, regardless of skill level. Whether you’re creating social media graphics, presentations, or marketing materials, mastering Canva can elevate your designs. In this post, we’ll explore five essential tips that will help you unleash your creativity and design like a pro.",
+      "description2": "With these tips, you’ll learn how to utilize Canva’s powerful tools and templates to produce polished and professional designs quickly and easily.",
       "category": "programming"
     },
     {
-      "image" :"game-development.png",
-      "title":"Game Development",
-      "date" :"20/Sep/2024",
-      "description":"Level Up Your Skills: 5 Essential Tips for Aspiring Game Developers",
-      "description1":"Game development is an exciting and dynamic field that combines creativity, technology, and storytelling. Whether you’re interested in designing 2D platformers or immersive 3D worlds, mastering the essentials can set you on the path to success. In this post, we’ll explore five vital tips to help aspiring game developers enhance their skills and bring their game ideas to life.",   
-      "category": "web-development"
+      "image": "ccplus1.png",
+      "title": "c_and_C_plus",
+      "date": "22/Sep/2024",
+      "descriptions":"CandCplus",
+      "description": "Design Like a Pro: 5 Essential Tips for Mastering Canva",
+      "description1": "Canva has revolutionized graphic design, making it accessible to everyone, regardless of skill level. Whether you’re creating social media graphics, presentations, or marketing materials, mastering Canva can elevate your designs. In this post, we’ll explore five essential tips that will help you unleash your creativity and design like a pro.",
+      "description2": "With these tips, you’ll learn how to utilize Canva’s powerful tools and templates to produce polished and professional designs quickly and easily.",
+      "category": ["web-development"],
     },
     {
-      "image" :"python.png",
-      "title":"Python Programming ",
-      "date" :"26/Sep/2024",
-      "description":"Why It’s Important to Learn Python Programming in 2024  ",
-      "description1":" In today’s rapidly evolving tech world, programming skills are not just reserved for developers or computer scientists. They’ve become an essential tool for professionals across industries. Among the vast array of programming languages available, Python has emerged as one of the most popular and versatile choices. Whether you’re a beginner, a data scientist, or someone looking to automate routine tasks, learning Python offers countless benefits.",
+      "image": "corel_draw.png",
+      "title": "Corel_Draw",
+      "date": "22/Sep/2024",
+      "descriptions":"Corel",
+      "description": "Design Like a Pro: 5 Essential Tips for Mastering Canva",
+      "description1": "Canva has revolutionized graphic design, making it accessible to everyone, regardless of skill level. Whether you’re creating social media graphics, presentations, or marketing materials, mastering Canva can elevate your designs. In this post, we’ll explore five essential tips that will help you unleash your creativity and design like a pro.",
+      "description2": "With these tips, you’ll learn how to utilize Canva’s powerful tools and templates to produce polished and professional designs quickly and easily.",
+      "category": "designing"
+    }, {
+      "image": "game-development.png",
+      "title": "Game_Development",
+      "date": "22/Sep/2024",
+      "descriptions":"GameDevelopment",
+      "description": "Design Like a Pro: 5 Essential Tips for Mastering Canva",
+      "description1": "Canva has revolutionized graphic design, making it accessible to everyone, regardless of skill level. Whether you’re creating social media graphics, presentations, or marketing materials, mastering Canva can elevate your designs. In this post, we’ll explore five essential tips that will help you unleash your creativity and design like a pro.",
+      "description2": "With these tips, you’ll learn how to utilize Canva’s powerful tools and templates to produce polished and professional designs quickly and easily.",
       "category": "programming"
-    }
-  
-    
+    },
   ]
-};
+}

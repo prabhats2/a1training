@@ -8,8 +8,8 @@ var courses1 = {
             "download": "course_1",
             "image": "Linux.jpg",
             "description": "Linux_01",
-            "syllabus" : ["assets/syllabus/Linux.pdf"],
-           "syllabus_name":["Linux Syllabus "]  
+            "syllabus" : ["assets/syllabus/Linux.pdf", "assets/syllabus/Linux-syllabus.pdf"],
+           "syllabus_name":["Linux Syllabus ","Linux Syllabus 2nd"]  
         },	
         {
             "course_name": "Shell Scripting",
@@ -19,7 +19,7 @@ var courses1 = {
             "download": "course_1",
             "image": "shell_scripting.jpg",
             "description": "Shell_Scripting",
-            "syllabus" : ["assets/syllabus/#.pdf"],
+            "syllabus" : ["assets/syllabus/Shell-Scripting-Syllabus.pdf"],
            "syllabus_name":["Shell Scripting Syllabus "]	
         },
         {
@@ -573,8 +573,8 @@ var courses1 = {
             "image": "java with selenium.jpg",
             "download": "course_1",
             "description": "Java",
-            "syllabus" : ["assets/syllabus/mean_stack.pdf"],
-           "syllabus_name":["Java With Selenium Syllabus "]	
+            "syllabus" : ["assets/syllabus/mean_stack.pdf", "assets/syllabus/Core_Java_Syllabus.pdf"],
+           "syllabus_name":["Java With Selenium Syllabus " , "Core Java Syllabus "]	
         },
         {
             "course_name": "REST Assured API",

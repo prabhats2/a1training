@@ -1,720 +1,279 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Join the best DevOps training institute in Noida. Gain hands-on experience with CI/CD, Docker, Kubernetes, Jenkins, and more. Enroll today!">
+        <meta name="keywords" content="DevOps training, DevOps certification, best DevOps institute, DevOps course Noida, CI/CD training, Docker, Kubernetes, Jenkins, DevOps Bangalore">
+        <meta name="author" content="A1 Training Institute">
+        <meta property="og:title" content="DevOps Certification Training - A1 Training Institute">
+        <meta property="og:description" content="Master DevOps tools and practices with the best training institute in Noida and Bangalore. Enroll now for hands-on projects and industry-recognized certification.">
+        <meta property="og:url" content="https://yourdomain.com/devops-training-institute.html">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="https://via.placeholder.com/600x400">
+        <meta property="og:locale" content="en_US">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="DevOps Certification Training - A1 Training Institute">
+        <meta name="twitter:description" content="Learn DevOps with hands-on experience at A1 Training Institute. Enroll today for the best DevOps certification course in Noida and Bangalore.">
+        <meta name="twitter:image" content="https://via.placeholder.com/600x400">
+        <title>DevOps Certification Training - A1 Training Institute Bangalore</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+            }
+            .hero {
+                background: url('images/bg-2.png') no-repeat center center/cover;
+                color: white;
+                padding: 100px 20px;
+                height: 600px;
+                text-align: center;
+            }
+            .hero h1 {
+                font-size: 3rem;
+                font-weight: bold;
+            }
+            .hero p {
+                font-size: 1.2rem;
+                margin: 20px 0;
+            }
+            .cta-button {
+                background-color: #007bff;
+                color: white;
+                padding: 15px 30px;
+                font-size: 1.2rem;
+                border: none;
+                border-radius: 5px;
+            }
+            .cta-button:hover {
+                background-color: #0056b3;
+                color: white;
+            }
+            .features, .schedule, .testimonials, .faqs {
+                padding: 50px 20px;
+            }
+            .testimonials {
+                background-color: #f8f9fa;
+            }
+            .footer {
+                background-color: #343a40;
+                color: white;
+                padding: 20px;
+                text-align: center;
+            }
+            ul.custom-bullets {
+  list-style-type: none; /* Remove default bullets */
+  padding-left: 40px; /* Space for the custom bullet */
+  color: #343a40; /* Text color */
+  text-align: justify; /* Align text */
+}
 
-<head>
+ul.custom-bullets li {
+  background-image: url("images/landing-bullet-removebg-preview.png"); /* Path to your image */
+  background-repeat: no-repeat;
+  background-size: 16px 16px; /* Adjust size of the bullet */
+  background-position: 0 50%; /* Position the bullet vertically centered */
+  padding-left: 25px; /* Space between bullet and text */
+  margin-top: 10px;
+ 
+}
 
-  <meta charset="utf-8">
-  <meta name="author" content="Template Mo">
-  <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-  <!-- Latest Bootstrap 5.3.2 CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- jQuery -->
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-
-  <!-- Bootstrap 5.3.2 JS with Popper.js -->
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Fancybox (for lightbox functionality if needed) -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
-
-  <!-- SweetAlert2 JS -->
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <!-- JSON file for professional courses -->
-  <script type="text/javascript" src="assets/json/professional_courses.json"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script> <!-- Bootstrap CSS -->
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Bootstrap Icons for the caret icon -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css">
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
-  <script type="text/javascript" src="meta.js"></script>
-  <script>
-    $(document).ready(function () {
-      $('.gallery-item').fancybox();
-    });
-  </script>
-  <style>
-    .n {
-      overflow: scroll;
-      height: 800px
-    }
-
-    .m {
-      margin-top: 100px;
-      height: 900px;
-    }
-
-    .no-content-message {
-      background-color: #f8d7da;
-      /* Light red background */
-      color: #721c24;
-      /* Dark red text */
-      border: 1px solid #f5c6cb;
-      /* Light red border */
-      padding: 10px;
-      border-radius: 5px;
-      text-align: center;
-      margin-top: 20px;
-      font-weight: bold;
-    }
-
-    .dropbtn {
-      background-color: #dc3b41;
-      color: white;
-      padding: 16px;
-      font-size: 16px;
-      border: none;
-      cursor: pointer;
-    }
-
-    .dropbtn:hover,
-    .dropbtn:focus {
-      background-color: #b73a36;
-    }
-
-    #myInput {
-      box-sizing: border-box;
-      background-image: url('searchicon.png');
-      background-position: 14px 12px;
-      background-repeat: no-repeat;
-      font-size: 16px;
-      padding: 14px 20px 12px 45px;
-      border: none;
-      border-bottom: 1px solid #ddd;
-    }
-
-    #myInput:focus {
-      outline: 3px solid #ddd;
-    }
-
-    .dropdown {
-      position: relative;
-      display: inline-block;
-    }
-
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #f6f6f6;
-      min-width: 230px;
-      border: 1px solid #ddd;
-      z-index: 1;
-      opacity: 0;
-      transform: scaleY(0);
-      transform-origin: top;
-      transition: opacity 0.3s ease, transform 0.3s ease;
-    }
-
-    .dropdown-content.show {
-      display: block;
-      opacity: 1;
-      transform: scaleY(1);
-    }
-
-    .dropdown-content a {
-      color: black;
-      padding: 12px 16px;
-      text-decoration: none;
-      display: block;
-      transition: background-color 0.3s ease;
-    }
-
-    .dropdown-content a:hover {
-      background-color: #ddd;
-    }
-
-    .item {
-      transition: transform 0.5s ease, opacity 0.5s ease;
-      opacity: 1;
-    }
-
-    .item.hidden {
-      opacity: 0;
-      transform: scale(0.8);
-    }
-
-    .item.show {
-      opacity: 1;
-      transform: scale(1);
-    }
-
-    /* Import FontAwesome if you're using it for icons */
-    @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
-
-    /* Keyframes for blinking animation */
-    @keyframes blink {
-      0% {
-        opacity: 1;
-      }
-
-      50% {
-        opacity: 0;
-      }
-
-      100% {
-        opacity: 1;
-      }
-    }
-
-    /* Apply the animation to the icon */
-    .icon {
-      font-size: none;
-      /* Adjust the size of the icon as needed */
-      color: red;
-      /* Set the color to red */
-      animation: blink 1s infinite;
-      /* Adjust the duration and iteration of the animation */
-    }
-  </style>
-
-  <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
-  <!-- Additional CSS Files -->
-  <link rel="stylesheet" href="assets/css/fontawesome.css">
-  <link rel="stylesheet" href="assets/css/templatemo-edu-meeting.css">
-  <link rel="stylesheet" href="assets/css/owl.css">
-  <link rel="stylesheet" href="assets/css/lightbox.css">
-
-  <script type="text/javascript" src="professional_courses.js"></script>
-  <script type="text/javascript" src="contact_us_button.json"></script>
-</head>
-
+        </style>
+    </head>
+    
 <body>
-  <!--menu-->
-  <script type="text/javascript" src="menu.js"></script>
-  <!--menu end-->
 
-  <section class="heading-page header-text" id="top">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <h6>HERE ARE OUR POPULAR PROFESSIONAL COURSE</h6>
-          <h2>Professional Courses</h2>
-          <script src="test.js"></script> <br>
-          <!-- <div class="container my-4">
-            <input type="text" id="searchBar" class="search-bar form-control" placeholder="Search Courses..."
-              onkeyup="filterItems()">
-            <div id="noContentMessage" class="no-content-message" style="display:none;">
-              <p>No content found</p>
-            </div>
-          </div> -->
+<!-- Hero Section -->
+<section class="hero">
+    
+ 
 
-          <div class="dropdown">
-            <button onclick="toggleDropdown()" class="dropbtn">Select Courses</button>
-            <div id="myDropdown" class="dropdown-content">
 
-              <ul id="dropdownList">
-                <li data-filter="*" class="active">All Courses</li>
-                <li data-filter=".programming">Programming</li>
-                <li data-filter=".cloud">Cloud</li>
-                <li data-filter=".devops">DevOps</li>
-                <li data-filter=".data">Data Science & AI</li>
-                <li data-filter=".mobile">Mobile Development</li>
-                <li data-filter=".database">Database</li>
-                <li data-filter=".mis">Advance Excel-BI Tools</li>
-                <li data-filter=".digital">Digital Marketing</li>
-                <li data-filter=".industrial">Industrial Training</li>
-                <li data-filter=".multimedia">Multimedia Animation-Graphics</li>
-                <li data-filter=".software">Software Testing</li>
-                <li data-filter=".project">Project Management</li>
-                <li data-filter=".full">Full Stack Development</li>
-                <li data-filter=".web">Web Designing</li>
+    <div class="container md-12">
+        <div class="row">
+          <div class="col-md-7">
+            <h3 style="color: #343a40; font-size: 60px;"> DevOps Course Training with Certificationg</h3>
+            <ul class="custom-bullets" style="color: #343a40; text-align: justify;">
+                <li>DevOps course offered in collaboration with IBM is suitable for individuals seeking to learn DevOps online and succeed</li>
+                <li>Curated by industry experts with over 15 years of experience, this DevOps Course covers tools like Git, Puppet, Jenkins, SVN, Maven, Docker et Assured minimum package of ₹5-25 LPA with the StarX Placement Program</li>
+                <li>Free 6 Months Internship</li>
+                <li>Placement Training Included (Resume Building, Business communication, Interview Preps, Soft Skills)</li>
               </ul>
-            </div>
+              
+            <strong>Ranked #1 DevOps Training Institute By Deccan Chronicle.</strong><br><br>
+    
+            <a href="#contact" class="cta-button">Enroll Now</a>
+            <a href="#contact" class="cta-button">Enroll Now</a>
+          </div>
+
+          <div class="col-md-5">
+           
+            <div>
+            <img src="assets/images/professional-courses/devops_training.jpg" alt="" width="100%">
+        </div>
           </div>
         </div>
-  </section>
+      </div>
+   
 
-  <section class="meetings-page" id="meetings">
+</section>
+
+<!-- Key Benefits Section -->
+<section class="features container my-5">
+    <h2 class="text-center">Why Choose Our DevOps Certification?</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <h4>Comprehensive Curriculum</h4>
+            <p>Learn the latest DevOps tools and methodologies.</p>
+        </div>
+        <div class="col-md-4">
+            <h4>Expert Trainers</h4>
+            <p>Get trained by certified professionals with real-world experience.</p>
+        </div>
+        <div class="col-md-4">
+            <h4>Industry-Recognized Certification</h4>
+            <p>Boost your career with globally recognized credentials.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Certification Details Section -->
+<section class="container my-5">
+    <h2 class="text-center">Certification Details</h2>
+    <p class="text-center">Our DevOps certification covers CI/CD, Jenkins, Docker, Kubernetes, and more.</p>
+    <div class="row">
+        <div class="col-md-6">
+            <ul>
+                <li>Duration: 40 Hours</li>
+                <li>Mode: Online/Offline</li>
+                <li>Prerequisites: Basic IT knowledge</li>
+            </ul>
+        </div>
+        <div class="col-md-6">
+            <img src="https://via.placeholder.com/600x400" alt="DevOps Training" class="img-fluid rounded">
+        </div>
+    </div>
+</section>
+
+<!-- Schedule Section -->
+<section class="schedule container my-5">
+    <h2 class="text-center">Upcoming Batches</h2>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Mode</th>
+                <th>Enroll</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>15th January 2025</td>
+                <td>10:00 AM - 2:00 PM</td>
+                <td>Online</td>
+                <td><a href="#contact" class="btn btn-primary">Enroll Now</a></td>
+            </tr>
+            <tr>
+                <td>22nd January 2025</td>
+                <td>6:00 PM - 9:00 PM</td>
+                <td>Offline</td>
+                <td><a href="#contact" class="btn btn-primary">Enroll Now</a></td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<!-- Testimonials Section -->
+<section class="testimonials">
     <div class="container">
-      <div class="row">
-        <div class="col-lg-12" data-title="aws" id="aws" class="section ">
-          <div class="row" id="courses-container">
-            <!-- Courses will be dynamically loaded here -->
-            <script>
-              document.addEventListener('DOMContentLoaded', function () {
-                const coursesContainer = document.getElementById('courses-container');
-
-                for (let i = 0; i < courses1.col1.length; i++) {
-                  const courseClass = courses1.col1[i].class.toLowerCase();
-                  const courseName = courses1.col1[i].course_name.toLowerCase();
-                  const courseElement = document.createElement('div');
-
-                  courseElement.classList.add('col-lg-4', 'templatemo-item-col', 'all', courseClass, 'item-container', 'show');
-                  courseElement.setAttribute('data-title', `${courseName} ${courseClass}`);
-
-                  courseElement.innerHTML = `
-                      <div class="meeting-item">
-                        <div class="thumb">
-                          <div class="price ">
-                            <span class="fa fa-cloud-download icon" data-bs-toggle="modal" data-bs-target="#syllabus${i}" style="font-size:23px;color:red"></span>
-                            <div class="modal" id="syllabus${i}">
-                              <div class="modal-dialog">
-                                <div class="modal-content">
-                                  <div class="modal-header">
-                                    <h4 class="modal-title" align="center">${courses1.col1[i].title.replace(/_/g, ' ')}</h4>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                                  </div>
-                                  <div class="modal-body">
-                                    <h2 align="left">Download Syllabus</h2>
-                                    <ul id="pdfList${i}" align="left"></ul>
-                                    <br>
-                                  </div>
-                                  <div class="modal-footer">
-                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <img src="assets/images/professional-courses/${courses1.col1[i].image}" >
-                        </div>
-                        <div class="down-content text-center">
-                          <h4>${courses1.col1[i].course_name}</h4>
-                          <br>
-                          <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#${courses1.col1[i].title}" >
-                            More Info
-                          </button>
-                          <!-- Button to trigger Enroll Now Offcanvas -->
-                                    <button type="button" class="btn btn-primary " data-bs-toggle="offcanvas" 
-                                        data-bs-target="#courseOffcanvas" data-course="${courses.col1[i].title}">
-                                        Contact Us 
-                                    </button>
-
-                        </div>
-                        <div class="modal" id="myModal${i}">
-                          <div class="modal-dialog">
-                            <div class="modal-content">
-                              <div class="modal-header">
-                                <h4 class="modal-title">${courses1.col1[i].course_name}</h4>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                              </div>
-                              <div class="modal-body">
-                                 ${courses1.col1[i].course_name}
-                                 ${courses1.col1[i].descriptionContent}
-                                
-                                
-                              </div>
-                              <div class="modal-footer">
-                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    `;
-
-                  coursesContainer.appendChild(courseElement);
-
-                  // Dynamically populate the PDF list in the modal
-                  const pdfList = document.getElementById(`pdfList${i}`);
-                  courses1.col1[i].syllabus.forEach((syllabus, index) => {
-                    const listItem = document.createElement('li');
-                    const anchor = document.createElement('a');
-                    anchor.href = syllabus;
-                    anchor.textContent = `${courses1.col1[i].syllabus_name[index]} `;
-                    anchor.target = "_blank";
-                    listItem.appendChild(anchor);
-                    pdfList.appendChild(listItem);
-                  });
-                }
-              });
-              function filterItems() {
-                const searchText = document.getElementById('searchBar').value.toLowerCase();
-                const courses = document.querySelectorAll('.item-container');
-                let hasVisibleItem = false;
-
-                courses.forEach(course => {
-                  const title = course.getAttribute('data-title').toLowerCase();
-                  if (title.includes(searchText)) {
-                    course.style.display = '';
-                    hasVisibleItem = true;
-                  } else {
-                    course.style.display = 'none';
-                  }
-                });
-
-                const noContentMessage = document.getElementById('noContentMessage');
-                if (hasVisibleItem) {
-                  noContentMessage.style.opacity = '0';
-                  setTimeout(() => {
-                    noContentMessage.style.display = 'none';
-                  }, 300); // Match this duration with the CSS transition
-                } else {
-                  noContentMessage.style.display = 'block';
-                  setTimeout(() => {
-                    noContentMessage.style.opacity = '1';
-                  }, 10); // Short delay to ensure display is set before fading in
-                }
-              }
-
-            </script>
-            <script>
-              // Check localStorage for the modal to show
-              document.addEventListener("DOMContentLoaded", function () {
-                const modalToShow = localStorage.getItem('modalToShow');
-                if (modalToShow) {
-                  const modalElement = document.getElementById(modalToShow);
-                  if (modalElement) {
-                    const myModal = new bootstrap.Modal(modalElement);
-                    myModal.show();
-                  }
-                  localStorage.removeItem('modalToShow');
-                }
-              });
-            </script>
-
-         <!-- Offcanvas for Enroll Now -->
-<div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="courseOffcanvas"
-aria-labelledby="courseOffcanvasLabel" style="z-index: 1111;">
-<div class="offcanvas-header">
-  <h5 class="offcanvas-title" id="courseOffcanvasLabel">Course Details</h5>
-  <button type="button" class="btn-close btn-light" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-</div>
-<div class="offcanvas-body">
-  <form id="contactform">
-    <div class="mb-3 position-relative">
-      <!-- Label for Course Name -->
-      <label for="courseNameEnroll" class="form-label">Course Name</label> 
-
-      <!-- Input Field with Dropdown Icon -->
-      <div class="input-group">
-        <input type="text" class="form-control" id="courseNameEnroll" name="courseName" readonly>
-        <span class="input-group-text bg-light" style="cursor: pointer;">
-          <i class="bi bi-caret-down-fill"></i> <!-- Dropdown icon -->
-        </span>
-      </div>
-
-      <!-- Dropdown Menu Positioned Above the Input Field -->
-      <select class="form-select position-absolute top-50 start-0 w-100" id="courseSelect"
-        style="opacity: 0; z-index: 1;">
-        <option value="">--Select Course--</option>
-        <script>
-          for (let i = 0; i < courses.col1.length; i++) {
-            // Replace underscores with spaces for display
-            const courseDisplayName = courses.col1[i].course_name.replace(/_/g, ' ');
-            document.write(`<option value="${courses.col1[i].course_name}" data-description="${courses.col1[i].description}">${courseDisplayName}</option>`);
-          }
-        </script>
-      </select>
-    </div>
-
-    <!-- Other Form Fields -->
-    <div class="mb-3">
-      <label for="Name" class="form-label">Name</label>
-      <input type="text" class="form-control" id="Name" name="Name">
-    </div>
-    <div class="mb-3">
-      <label for="e-mail" class="form-label">E-mail</label>
-      <input type="email" class="form-control" id="e-mail" name="e-mail" required>
-    </div>
-    <div class="mb-3">
-      <label for="Mobile" class="form-label">Mobile</label>
-      <input type="number" class="form-control" id="Mobile" name="Mobile" pattern="\d{10}" maxlength="10" required>
-    </div>
-    <div class="mb-3">
-      <label for="message" class="form-label">Message</label>
-      <textarea class="form-control" id="message" name="message" rows="2"></textarea>
-    </div>
-    <button type="submit" class="btn btn-primary">Send</button>
-  </form>
-</div>
-</div>
-            <!-- Offcanvas for More Info -->
-            <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="courseOffcanvas1"
-              aria-labelledby="courseOffcanvasLabel1" style="z-index: 1111;">
-              <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="courseOffcanvasLabel1">More Info</h5>
-                <button type="button" class="btn-close btn-light" data-bs-dismiss="offcanvas"
-                  aria-label="Close"></button>
-              </div>
-              <div class="offcanvas-body">
-                <h1 id="courseTitleMoreInfo" class="mb-3"></h1><br>
-                <h2>Description</h2><br>
-                <h4 id="courseDescriptionMoreInfo"></h4>
-              </div>
+        <h2 class="text-center mb-4">Student Testimonials</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="card-text">"This course transformed my career. Highly recommended!"</p>
+                        <p class="text-muted">- Anjali K.</p>
+                    </div>
+                </div>
             </div>
-            <!-- Script to handle course selection and initialize with the first course -->
-            <script>
-              document.addEventListener('DOMContentLoaded', function () {
-                const courseNameInputEnroll = document.getElementById('courseNameEnroll');
-                const courseSelect = document.getElementById('courseSelect');
-
-                // Select the first course by default if available
-                if (courseSelect.options.length > 1) {  // Ensure there's at least one course to select
-                  const defaultOption = courseSelect.options[1]; // First actual course option
-                  courseSelect.selectedIndex = 1;
-                  courseNameInputEnroll.value = defaultOption.text.replace(/_/g, ' ');
-                }
-
-                // Update course name input on dropdown change
-                courseSelect.addEventListener('change', function () {
-                  const selectedOption = courseSelect.options[courseSelect.selectedIndex];
-                  if (selectedOption.value) {
-                    // Update the input field to display the selected course name without underscores
-                    courseNameInputEnroll.value = selectedOption.textContent.replace(/_/g, ' ');
-                  }
-                });
-              });
-            </script>
-
-            <!-- Script to Handle Course Name and Details Display in Offcanvas -->
-            <script>
-              document.addEventListener('DOMContentLoaded', function () {
-                const courseOffcanvas = document.getElementById('courseOffcanvas');
-                const courseNameInputEnroll = document.getElementById('courseNameEnroll');
-                const courseSelect = document.getElementById('courseSelect');
-
-                const courseTitleMoreInfo = document.getElementById('courseTitleMoreInfo');
-                const courseDescriptionMoreInfo = document.getElementById('courseDescriptionMoreInfo');
-
-                if (courseOffcanvas) {
-                  courseOffcanvas.addEventListener('show.bs.offcanvas', function (event) {
-                    const button = event.relatedTarget;
-                    const courseName = button.getAttribute('data-course');
-                    if (courseNameInputEnroll) {
-                      courseNameInputEnroll.value = courseName.replace(/_/g, ' '); // Display name without underscores
-                    }
-                  });
-                }
-
-                // Update the course name when selecting from the dropdown
-                courseSelect.addEventListener('change', function () {
-                  const selectedOption = courseSelect.options[courseSelect.selectedIndex];
-                  if (selectedOption.value) {
-                    courseNameInputEnroll.value = selectedOption.value.replace(/_/g, ' '); // Display without underscores
-
-                    // Show course details in the More Info section of the offcanvas
-                    if (courseTitleMoreInfo) {
-                      courseTitleMoreInfo.textContent = selectedOption.textContent;
-                    }
-
-                    if (courseDescriptionMoreInfo) {
-                      const courseDescription = selectedOption.getAttribute('data-description');
-                      const descriptionItems = courseDescription ?
-                        courseDescription.split(',').map(item => `<li>${item.trim()}</li>`).join('') : '';
-                      courseDescriptionMoreInfo.innerHTML = `<ul>${descriptionItems}</ul>`;
-                    }
-                  }
-                });
-              });
-            </script>
-
-            <!-- SweetAlert2 JS -->
-            <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-            <script>
-              document.addEventListener('DOMContentLoaded', function () {
-
-                // Handle form submission
-                const form = document.getElementById('contactform');
-                if (form) {
-                  form.addEventListener('submit', function (e) {
-                    e.preventDefault();
-
-                    const scriptURL = 'https://script.google.com/macros/s/AKfycbyzWpZIIAt4ZaXdOXZKWnFoj-REOq7PDbaGYqieIPxJDQhR6B9NLYj_SgSFFtVyGVjj/exec';
-                    const formData = new FormData(this);
-
-                    fetch(scriptURL, { method: 'POST', body: formData })
-                      .then(response => {
-                        Swal.fire({
-                          title: "Thank you!",
-                          text: "Your form is submitted successfully.",
-                          icon: "success",
-                          timer: 1500,
-                          showConfirmButton: false
-                        }).then(() => {
-                          window.location.reload(); // Reload after closing the alert
-                        });
-                      })
-                      .catch(error => {
-                        console.error('Error!', error.message);
-                        Swal.fire({
-                          title: "Oops!",
-                          text: "Something went wrong. Please try again later.",
-                          icon: "error"
-                        });
-                      });
-                  });
-                }
-              });
-              document.getElementById('Mobile').addEventListener('input', function (e) {
-                var x = e.target.value.replace(/\D/g, '');
-                if (x.length > 10) {
-                  x = x.substring(0, 10);
-                }
-                e.target.value = x;
-              });
-
-
-            </script>
-          </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="card-text">"Excellent training and hands-on projects."</p>
+                        <p class="text-muted">- Ravi T.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="card-text">"The trainers are extremely knowledgeable."</p>
+                        <p class="text-muted">- Suman P.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
+</section>
 
-  </section>
-  <!-- Footer -->
-  <script type="text/javascript" src="footer.js"></script>
-  <!-- Footer -->
-  <script>
-    var selectedFilter = ""; // Add this variable to store the selected filter
+<!-- FAQs Section -->
+<section class="faqs container my-5">
+    <h2 class="text-center">Frequently Asked Questions</h2>
+    <div class="accordion" id="faqAccordion">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="faq1">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1">
+                    What is DevOps?
+                </button>
+            </h2>
+            <div id="collapse1" class="accordion-collapse collapse show">
+                <div class="accordion-body">
+                    DevOps is a set of practices that combine software development and IT operations.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="faq2">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2">
+                    Who should enroll in this course?
+                </button>
+            </h2>
+            <div id="collapse2" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                    IT professionals, developers, and anyone interested in learning DevOps can join.
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-    function toggleDropdown() {
-      document.getElementById("myDropdown").classList.toggle("show");
-    }
+<!-- Contact Section -->
+<section id="contact" class="container my-5">
+    <h2 class="text-center mb-4">Contact Us</h2>
+    <form>
+        <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter your name">
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter your email">
+        </div>
+        <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea class="form-control" id="message" rows="3" placeholder="Write your message"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</section>
 
-    function filterFunction() {
-      var input, filter, ul, li, a, i;
-      input = document.getElementById("myInput");
-      filter = input.value.toUpperCase();
-      ul = document.getElementById("myDropdown").getElementsByTagName("ul")[0];
-      li = ul.getElementsByTagName("li");
+<!-- Footer -->
+<footer class="footer">
+    <p>&copy; 2025 A1 Training Institute, Bangalore. All Rights Reserved.</p>
+</footer>
 
-      for (i = 0; i < li.length; i++) {
-        a = li[i];
-        txtValue = a.textContent || a.innerText;
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-          a.style.display = "";
-        } else {
-          a.style.display = "none";
-        }
-      }
-    }
-
-    document.getElementById("myDropdown").addEventListener('click', function (e) {
-      if (e.target.tagName === 'LI') {
-        selectedFilter = e.target.getAttribute('data-filter');
-        applyFilter();
-        document.getElementById("myDropdown").classList.remove("show");
-      }
-    });
-
-    function applyFilter() {
-      var courses = document.querySelectorAll('.templatemo-item-col');
-      courses.forEach(function (course) {
-        if (selectedFilter === '*' || course.classList.contains(selectedFilter.substring(1))) {
-          course.style.display = '';
-        } else {
-          course.style.display = 'none';
-        }
-      });
-    }
-  </script>
-
-  <!-- Scripts -->
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-  <script src="assets/js/isotope.min.js"></script>
-  <script src="assets/js/owl-carousel.js"></script>
-  <script src="assets/js/lightbox.js"></script>
-  <script src="assets/js/tabs.js"></script>
-  <script src="assets/js/isotope.js"></script>
-  <script src="assets/js/video.js"></script>
-  <script src="assets/js/slick-slider.js"></script>
-  <script src="assets/js/custom.js"></script>
-  <script>
-    //according to loftblog tut
-    $('.nav li:first').addClass('active');
-
-    var showSection = function showSection(section, isAnimate) {
-      var
-        direction = section.replace(/#/, ''),
-        reqSection = $('.section').filter('[data-section="' + direction + '"]'),
-        reqSectionPos = reqSection.offset().top - 0;
-
-      if (isAnimate) {
-        $('body, html').animate({
-          scrollTop: reqSectionPos
-        },
-          800);
-      } else {
-        $('body, html').scrollTop(reqSectionPos);
-      }
-
-    };
-
-    var checkSection = function checkSection() {
-      $('.section').each(function () {
-        var
-          $this = $(this),
-          topEdge = $this.offset().top - 80,
-          bottomEdge = topEdge + $this.height(),
-          wScroll = $(window).scrollTop();
-        if (topEdge < wScroll && bottomEdge > wScroll) {
-          var
-            currentId = $this.data('section'),
-            reqLink = $('a').filter('[href*=\\#' + currentId + ']');
-          reqLink.closest('li').addClass('active').
-            siblings().removeClass('active');
-        }
-      });
-    };
-
-    $('.main-menu, .responsive-menu, .scroll-to-section').on('click', 'a', function (e) {
-      e.preventDefault();
-      showSection($(this).attr('href'), true);
-    });
-
-    $(window).scroll(function () {
-      checkSection();
-    });
-
-    document.addEventListener("DOMContentLoaded", function () {
-      const urlParams = new URLSearchParams(window.location.search);
-      const modalName = urlParams.get('modal');
-      if (modalName) {
-        const modalToOpen = new bootstrap.Modal(document.getElementById(modalName + 'Modal'), {
-          keyboard: true
-        });
-        modalToOpen.show();
-      }
-    });
-
-
-    function toggleDropdown() {
-      document.getElementById("myDropdown").classList.toggle("show");
-    }
-
-    function filterFunction() {
-      var input, filter, ul, li, i;
-      input = document.getElementById("myInput");
-      filter = input.value.toUpperCase();
-      ul = document.getElementById("dropdownList");
-      li = ul.getElementsByTagName("li");
-
-      // Add the fade-in class to all items before filtering
-      for (i = 0; i < li.length; i++) {
-        li[i].classList.add("fade-in");
-      }
-
-      // Use a timeout to synchronize with animation
-      setTimeout(() => {
-        // Hide all items initially
-        for (i = 0; i < li.length; i++) {
-          li[i].classList.add("hidden");
-        }
-
-        // Show filtered items
-        for (i = 0; i < li.length; i++) {
-          txtValue = li[i].textContent || li[i].innerText;
-          if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            li[i].classList.remove("hidden");
-          }
-        }
-      }, 300); // Match with CSS transition duration
-
-      // Remove fade-in class after animation
-      setTimeout(() => {
-        let items = ul.getElementsByTagName('li');
-        for (let item of items) {
-          item.classList.remove('fade-in');
-        }
-      }, 600); // Match with animation duration
-    }
-  </script>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
