@@ -8,8 +8,8 @@ var courses1 = {
             "download": "course_1",
             "image": "Linux.jpg",
             "description": "Linux_01",
-            "syllabus" : ["assets/syllabus/Linux.pdf", "assets/syllabus/Linux-syllabus.pdf"],
-           "syllabus_name":["Linux Syllabus ","Linux Syllabus 2nd"]  
+            "syllabus" : [ "assets/syllabus/Linux-syllabus.pdf"],
+           "syllabus_name":["Linux Syllabus "]  
         },	
         {
             "course_name": "Shell Scripting",

@@ -1,279 +1,1399 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Join the best DevOps training institute in Noida. Gain hands-on experience with CI/CD, Docker, Kubernetes, Jenkins, and more. Enroll today!">
-        <meta name="keywords" content="DevOps training, DevOps certification, best DevOps institute, DevOps course Noida, CI/CD training, Docker, Kubernetes, Jenkins, DevOps Bangalore">
-        <meta name="author" content="A1 Training Institute">
-        <meta property="og:title" content="DevOps Certification Training - A1 Training Institute">
-        <meta property="og:description" content="Master DevOps tools and practices with the best training institute in Noida and Bangalore. Enroll now for hands-on projects and industry-recognized certification.">
-        <meta property="og:url" content="https://yourdomain.com/devops-training-institute.html">
-        <meta property="og:type" content="website">
-        <meta property="og:image" content="https://via.placeholder.com/600x400">
-        <meta property="og:locale" content="en_US">
-        <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:title" content="DevOps Certification Training - A1 Training Institute">
-        <meta name="twitter:description" content="Learn DevOps with hands-on experience at A1 Training Institute. Enroll today for the best DevOps certification course in Noida and Bangalore.">
-        <meta name="twitter:image" content="https://via.placeholder.com/600x400">
-        <title>DevOps Certification Training - A1 Training Institute Bangalore</title>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-        <style>
-            body {
-                font-family: Arial, sans-serif;
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Join the best DevOps training institute in Noida. Gain hands-on experience with CI/CD, Docker, Kubernetes, Jenkins, and more. Enroll today!">
+    <meta name="keywords"
+        content="DevOps training, DevOps certification, best DevOps institute, DevOps course Noida, CI/CD training, Docker, Kubernetes, Jenkins, DevOps Bangalore">
+    <meta name="author" content="A1 Training Institute">
+    <meta property="og:title" content="DevOps Certification Training - A1 Training Institute">
+    <meta property="og:description"
+        content="Master DevOps tools and practices with the best training institute in Noida and Bangalore. Enroll now for hands-on projects and industry-recognized certification.">
+    <meta property="og:url" content="https://yourdomain.com/devops-training-institute.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://via.placeholder.com/600x400">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="DevOps Certification Training - A1 Training Institute">
+    <meta name="twitter:description"
+        content="Learn DevOps with hands-on experience at A1 Training Institute. Enroll today for the best DevOps certification course in Noida and Bangalore.">
+    <meta name="twitter:image" content="https://via.placeholder.com/600x400">
+    <title>DevOps Certification Training - A1 Training Institute Bangalore</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- SweetAlert2 JS  ---FORM-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- Hero Section Animation -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <!-- Key Benefits Section animation -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+
+    <style>
+/* Header fade-in animation */
+@keyframes fadeInHeader {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Row fade-in animation */
+@keyframes fadeInRow {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Initial state for elements */
+.schedule-table thead {
+    opacity: 0; /* Start hidden */
+}
+
+.schedule-table tbody tr {
+    opacity: 0; /* Start hidden */
+}
+
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+        /* HERO SECTION*/
+        .hero {
+            background: url('images/4.png') no-repeat center center/cover;
+            color: white;
+            padding: 100px 20px;
+            height: 600px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin: 20px 0;
+        }
+
+        .hero ul {
+            color: #ffffff;
+            text-align: justify;
+            font-size: 18px;
+        }
+
+        .text-green-700 {
+            --tw-text-opacity: 1;
+            color: rgb(21 128 61 / var(--tw-text-opacity));
+        }
+
+        .w-5 {
+            width: 1.25rem;
+            /* Matches 20px */
+        }
+
+        .w-4 {
+            width: 1rem;
+            /* Matches 16px */
+        }
+
+        .h-9 {
+            height: 2.25rem;
+            /* Matches 36px */
+        }
+
+        .inline-flex {
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .bg-green-50 {
+            background-color: #f0fdf4;
+        }
+
+        .border-green-200 {
+            border-color: #bbf7d0;
+        }
+
+        .font-medium {
+            font-weight: 500;
+        }
+
+        .rounded-full {
+            border-radius: 9999px;
+        }
+
+        .lg\:mr-3 {
+            margin-right: 70px;
+        }
+
+        .ml-2 {
+            margin-left: 0.5rem;
+            /* Matches 8px */
+        }
+
+        /* Shared Button Styles */
+        a {
+            text-decoration: none;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            text-align: center;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        /* Download Brochure Button */
+        .btn-download {
+            background-color: #8e44ad;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            box-shadow: 0 4px 8px rgba(142, 68, 173, 0.3);
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+            width: 30%;
+            margin-left: 20px;
+        }
+
+        .btn-download:hover {
+            background-color: #732d91;
+            box-shadow: 0 6px 12px rgba(142, 68, 173, 0.5);
+        }
+
+        .btn-download .icon {
+            width: 16px;
+            height: 16px;
+        }
+
+        /* Course Content Button */
+        .btn-outline {
+            border: 2px solid #8e44ad;
+            color: #ffffff;
+            padding: 10px 20px;
+            background-color: transparent;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            width: 30%;
+            margin-left: 20px;
+        }
+
+        .btn-outline:hover {
+            background-color: #8e44ad;
+            color: #fff;
+        }
+
+        .btn-outline .arrow {
+            width: 18px;
+            height: 18px;
+            transition: transform 0.3s ease;
+        }
+
+        .btn-outline:hover .arrow {
+            transform: translateX(4px);
+        }
+
+        .responsive-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+            width: 100%;
+            max-width: 600px;
+            height: 330px;
+            margin: 20px auto;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .responsive-container img {
+            width: 90%;
+            max-width: 500px;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transform: scale(0.9);
+            opacity: 0;
+            transition: transform 0.6s ease, opacity 0.6s ease, box-shadow 0.6s ease;
+        }
+
+        /* Trigger the animation when the div is in view */
+        .responsive-container:hover img,
+        .responsive-container img.animate {
+            transform: scale(1);
+            opacity: 1;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Optional: Add animation when it enters the viewport */
+        @keyframes popUp {
+            0% {
+                transform: scale(0.8);
+                opacity: 0;
             }
+
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        /* Add the animation when the page loads or image enters view */
+        .responsive-container img.animate {
+            animation: popUp 0.6s ease forwards;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media screen and (max-width: 768px) {
             .hero {
-                background: url('images/bg-2.png') no-repeat center center/cover;
-                color: white;
-                padding: 100px 20px;
-                height: 600px;
+                padding: 80px 15px;
+                height: auto;
                 text-align: center;
+                /* Align all content in the hero section */
             }
+
             .hero h1 {
-                font-size: 3rem;
-                font-weight: bold;
+                font-size: 2rem;
+                /* Adjust font size for medium screens */
             }
+
             .hero p {
-                font-size: 1.2rem;
-                margin: 20px 0;
+                font-size: 1rem;
             }
-            .cta-button {
-                background-color: #007bff;
-                color: white;
-                padding: 15px 30px;
-                font-size: 1.2rem;
-                border: none;
-                border-radius: 5px;
+
+            .btn-download,
+            .btn-outline {
+                width: 45%;
+                /* Adjust button widths for smaller screens */
+                margin-left: 10px;
+                margin-bottom: 15px;
+                /* Add spacing between buttons */
             }
-            .cta-button:hover {
-                background-color: #0056b3;
-                color: white;
+
+            .responsive-container {
+                max-width: 100%;
+                height: auto;
+                margin: 10px;
             }
-            .features, .schedule, .testimonials, .faqs {
-                padding: 50px 20px;
+
+            .responsive-container img {
+                width: 100%;
+                max-width: 100%;
+                height: auto;
+                box-shadow: none;
+                /* Remove shadow for smaller devices */
             }
-            .testimonials {
-                background-color: #f8f9fa;
+
+            .hero .row {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
             }
-            .footer {
-                background-color: #343a40;
-                color: white;
-                padding: 20px;
-                text-align: center;
+
+            .hero .btn-download,
+            .hero .btn-outline {
+                width: 90%;
+                /* Allow buttons to take more width on small screens */
+                margin-bottom: 15px;
             }
-            ul.custom-bullets {
-  list-style-type: none; /* Remove default bullets */
-  padding-left: 40px; /* Space for the custom bullet */
-  color: #343a40; /* Text color */
-  text-align: justify; /* Align text */
+        }
+
+        @media screen and (max-width: 480px) {
+            .hero {
+                padding: 60px 10px;
+                height: auto;
+            }
+
+            .hero h1 {
+                font-size: 1.5rem;
+            }
+
+            .hero p {
+                font-size: 0.9rem;
+            }
+
+            .btn-download,
+            .btn-outline {
+                width: 100%;
+                /* Full width for buttons on very small screens */
+            }
+
+            .responsive-container {
+                margin: 10px;
+            }
+
+            .responsive-container img {
+                width: 100%;
+                height: auto;
+                max-width: 100%;
+            }
+        }
+
+        .cta-button {
+            background-color: #007bff;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .cta-button:hover {
+            background-color: #0056b3;
+            color: white;
+        }
+
+        .features,
+        .schedule,
+        .testimonials,
+        .faqs {
+            padding: 50px 20px;
+        }
+
+        .testimonials {
+            background-color: #f8f9fa;
+        }
+
+        .footer {
+            background-color: #343a40;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+/* BENIFIT SECTION */
+
+.heroz {
+    background: url('images/8.png') no-repeat center center/cover;
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
 }
 
-ul.custom-bullets li {
-  background-image: url("images/landing-bullet-removebg-preview.png"); /* Path to your image */
-  background-repeat: no-repeat;
-  background-size: 16px 16px; /* Adjust size of the bullet */
-  background-position: 0 50%; /* Position the bullet vertically centered */
-  padding-left: 25px; /* Space between bullet and text */
-  margin-top: 10px;
- 
+.heroz h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.benefits-section .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* Space between cards */
+}
+
+.benefits-section .benefit-card {
+    flex: 1;
+    padding: 3px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    background-color: #ffffff;
+    border: 1px solid transparent;
+    background-image: linear-gradient(white, white),
+        linear-gradient(45deg, rgba(250, 43, 250, 0.87), rgb(14, 44, 126), rgb(0, 145, 12));
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    background-size: 200% 200%;
+    animation: snake-border 3s infinite linear;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.benefits-section .benefit-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Typography styles */
+.benefits-section h4 {
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.benefits-section p {
+    color: #555;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .benefits-section .benefit-card {
+        height: auto;
+    }
+}
+
+/* Keyframes for the snake-like border movement */
+@keyframes snake-border {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Animation */
+.float-up {
+    opacity: 0;
+    transform: translateY(120px);
+    transition: all 0.6s ease-out;
+}
+
+.float-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* CERTIFICATION DETAILS*/
+        .heroY {
+            background: url('images/5.png') no-repeat center center/cover;
+            color: white;
+            padding: 100px 20px;
+            height: 600px;
+            text-align: center;
+            height: max-content;
+        }
+
+        .heroY h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        .heroY p {
+            font-size: 1.2rem;
+            margin: 20px 0;
+        }
+
+        .Certification-Details-Section-li {
+            font-size: 30px;
+        }
+
+/* UPCOMING BATCHES */
+        .heroX {
+            background: url('images/4.png') no-repeat center center/cover;
+            color: white;
+            padding: 100px 20px;
+            height: 600px;
+            text-align: center;
+            height: max-content;
+        }
+
+        .heroX h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        .heroX p {
+            font-size: 1.2rem;
+            margin: 20px 0;
+        }
+        .no-border {
+    border: none; /* Remove the table's border */
 }
 
 
-        </style>
-    </head>
-    
+.no-border td {
+    border: none; /* Remove borders from table cells */
+}
+
+
+.no-border thead th {
+    border-bottom: none; /* Remove the border under the header row */
+}
+
+.no-border tbody tr {
+    border: none; /* Remove row borders */
+}
+
+/* TESTIMONIALS STUDENT*/
+        .heroW {
+            background: url('images/3.png') no-repeat center center/cover;
+            color: white;
+            padding: 100px 20px;
+            height: 600px;
+            text-align: center;
+            height: max-content;
+        }
+
+        .heroW h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        .heroW p {
+            font-size: 1.2rem;
+            margin: 20px 0;
+        }
+
+        .card {
+            min-height: 200px;
+            /* Ensures all cards are at least this height */
+            border-radius: 10px;
+            /* Adds rounded corners */
+        }
+
+        .shadow-sm {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            /* Subtle shadow for better visual appeal */
+        }
+
+        .card-body {
+            font-size: 1rem;
+        }
+
+        .card-text {
+            font-style: italic;
+            /* Italic style for reviews */
+        }
+
+        .text-muted {
+            margin-top: 10px;
+            /* Space between the review and the name */
+            font-weight: 500;
+            /* Slightly bold for emphasis */
+        }
+
+        /* FQS Section Styles */
+        .heroV {
+            background: url('images/6.png') no-repeat center center / cover;
+            color: white;
+            padding: 100px 20px;
+            height: auto;
+            text-align: center;
+        }
+
+        .heroV h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
+        .heroV p {
+            font-size: 1.2rem;
+            margin: 20px 0;
+        }
+
+        li, h3 {
+            text-align:justify;
+            font-size:20px;
+        }
+       
+        /* Responsive Accordion */
+        .accordion {
+            background-color: transparent;
+            color: white;
+            border-radius: 8px;
+        }
+
+        .accordion-item {
+            border: none;
+            margin-bottom: 10px;
+        }
+
+        .accordion-button {
+            font-size: 1.2rem;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: rgb(0, 0, 0);
+            border: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .accordion-button:not(.collapsed) {
+            background-color: rgba(255, 255, 255, 0.4);
+            color: rgb(0, 0, 0);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .accordion-body {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: rgb(0, 0, 0);
+            border-radius: 5px;
+            padding: 15px;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .heroV h1 {
+                font-size: 2rem;
+            }
+
+            .heroV p {
+                font-size: 1rem;
+            }
+
+            .accordion-button {
+                font-size: 1rem;
+            }
+        }
+
+        /* CONTACT US */
+        .heroU {
+            background: url('images/7.png') no-repeat center center / cover;
+            color: white;
+            padding: 100px 20px;
+            height: auto;
+            text-align: center;
+        }
+
+        .heroU h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
+        .heroU p {
+            font-size: 1.2rem;
+            margin: 20px 0;
+        }
+
+        /* CONTACT FORM */
+
+        form {
+            background: white;
+            padding: 35px;
+            border-radius: 10px;
+        }
+
+        .form-control {
+            border-radius: 25px;
+            border: 1px solid #e0e0e0;
+            padding: 15px;
+            margin: 15px;
+            background-color: #fafafa;
+        }
+
+        textarea.form-control {
+            height: 150px;
+        }
+
+        button.btn {
+            background-color: #8f4242;
+            border-color: #a52a2a;
+            border-radius: 25px;
+            padding: 10px 30px;
+            font-weight: bold;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        @media (max-width: 767px) {
+            .col-lg-4 {
+                width: 100%;
+                margin-bottom: 15px;
+            }
+        }
+    </style>
+
+
+</head>
+
 <body>
 
-<!-- Hero Section -->
-<section class="hero">
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container md-12">
+            <div class="row">
+                <div class="col-md-7">
+                    <h3
+                        class="animate__animated animate__fadeInLeft"
+                        style="color: #ffffff; font-size: 40px; font-weight: 800; line-height: 1.2; text-transform: uppercase; letter-spacing: 1px; text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); text-align: start;">
+                        Master DevOps with StarAgile’s Comprehensive Training
+                    </h3>
+                    <div class="h-9 lg:mr-3 inline-flex items-center text-sm px-3 rounded-full border border-green-200 bg-green-50 mb-3 animate__animated animate__fadeInLeft" >
+                        <img class="inline w-5 mr-1" src="https://d1qnndbrfkpp2h.cloudfront.net/static-images/placement-assistance-icon1.webp" alt="Placement Assistance Icon">
+                        <span class="font-medium text-green-700">Placement Assistance</span>
+                        <img class="inline w-4 rounded-full ml-2" src="https://d1qnndbrfkpp2h.cloudfront.net/images/svg/info-circle.svg" alt="Info Icon">
+                    </div>
+                    
+                    <ul class="animate__animated animate__fadeInLeft">
+                        <li>DevOps course offered in collaboration with IBM is suitable for individuals seeking to learn
+                            DevOps online and succeed</li>
+                        <li>DevOps course offered in collaboration</li>
+                        <li>DevOps course offered in collaboration with IBM is suitable</li>
+                        <li>DevOps course offered in collaboration with IBM is</li>
+                    </ul>
+                    <strong  style="justify-content: start; color: #ffffff;">
+                        <p class="animate__animated animate__fadeInLeft">Ranked #1 DevOps Training Institute By Deccan Chronicle.</p></strong><br><br>
+
+                    <div style="display: flex; gap: 15px; align-items: center;" class="animate__animated animate__zoomIn">
+                        <!-- Download Brochure Button -->
+                        <a href="#" class="btn-download">
+                            Download Brochure
+                            <i class="fa fa-download" aria-hidden="true"></i>
+                        </a>
+                        <!-- Course Content Button -->
+                        <a href="#" class="btn-outline">
+                            Course Content
+                            <svg xmlns="http://www.w3.org/2000/svg" class="arrow" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-md-5">
+                    <div class="responsive-container animate__animated animate__zoomIn">
+                        <img src="assets/images/professional-courses/devops_training.jpg" alt="DevOps Training">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     
- 
+    <!-- Key Benefits Section -->
+    <section class="my-1 heroz benefits-section">
+        <h2 class="text-center" style="font-weight: 1000; font-size: 30px;">
+            Why Choose Our DevOps Certification?
+        </h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 benefit-card float-up">
+                    <h4>Comprehensive Curriculum</h4>
+                    <p>Our course provides a well-rounded learning experience.</p>
+                    <h4>Comprehensive Curriculum</h4>
+                    <p>Our course provides a well-rounded learning experience.</p>
+                    <h4>Comprehensive Curriculum</h4>
+                    <p>Our course provides a well-rounded learning experience.</p>
+
+                </div>
+
+                <div class="col-md-6 benefit-card float-up">
+                    <h4>Expert Trainers</h4>
+                    <p>Get trained by certified professionals with real-world experience.</p>
+                </div>
+            </div>
 
 
-    <div class="container md-12">
-        <div class="row">
-          <div class="col-md-7">
-            <h3 style="color: #343a40; font-size: 60px;"> DevOps Course Training with Certificationg</h3>
-            <ul class="custom-bullets" style="color: #343a40; text-align: justify;">
-                <li>DevOps course offered in collaboration with IBM is suitable for individuals seeking to learn DevOps online and succeed</li>
-                <li>Curated by industry experts with over 15 years of experience, this DevOps Course covers tools like Git, Puppet, Jenkins, SVN, Maven, Docker et Assured minimum package of ₹5-25 LPA with the StarX Placement Program</li>
-                <li>Free 6 Months Internship</li>
-                <li>Placement Training Included (Resume Building, Business communication, Interview Preps, Soft Skills)</li>
-              </ul>
+            <div class="row mt-3">
+                <div class="col-md-6 benefit-card float-up">
+                    <h4>Hands-On Projects</h4>
+                    <p>Work on real-world DevOps projects to build practical skills.</p>
+                </div>
+
+                <div class="col-md-6 benefit-card float-up">
+                    <h4>Career Support</h4>
+                    <h4>Comprehensive Curriculum</h4>
+                    <p>Our course provides a well-rounded learning experience.</p>
+                    <h4>Comprehensive Curriculum</h4>
+                    <p>Our course provides a well-rounded learning experience.</p>
+                    <h4>Comprehensive Curriculum</h4>
+                    <p>Our course provides a well-rounded learning experience.</p>
+                    <p>Benefit from career guidance and placement support.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Certification Details Section -->   
+    <section class="container-fluid my-1 heroY">
+        <h2 class="certification-title" style="font-weight: 1000; font-size: 30px;">Certification Details</h2>
+        <p class="certification-description" style="font-size: 30px;">
+            Our DevOps certification covers CI/CD, Jenkins, Docker, Kubernetes, and more.
+        </p>
+    
+        <div class="container md-12">
+            <div class="row">
+                <div class="col-md-6" style="text-align: justify;">
+                    <ul class="certification-list Certification-Details-Section-li  ">
+                        <li>Duration: 40 Hours</li>
+                        <li>Mode: Online/Offline</li>
+                        <li>Prerequisites: Basic IT knowledge</li>
+                        <li>Duration: 40 Hours</li>
+                        <li>Mode: Online/Offline</li>
+                        <li>Prerequisites: Basic IT knowledge</li>
+                        <li>Duration: 40 Hours</li>
+                    </ul>
+                </div>
+
               
-            <strong>Ranked #1 DevOps Training Institute By Deccan Chronicle.</strong><br><br>
+                <div class="col-md-6 responsive-container">
+                    <img src="images/CERTIFIED -DEVOPS-CERTIFICATE.png" alt="DevOps Training" class="img-fluid rounded">
+                </div>
+            </div>
+        </div>
+    </section>
     
-            <a href="#contact" class="cta-button">Enroll Now</a>
-            <a href="#contact" class="cta-button">Enroll Now</a>
-          </div>
+    <!-- Schedule Section -->
+    <section class="schedule container-fluid my-1 heroX">
+        <h2 class="schedule-title text-center" style="font-weight: 1000; font-size: 30px;">Upcoming Batches</h2>
+        <div class="container md-12">
+            <div class="row">
+                <div class="col-md-12 bg-white schedule-bg">
+                    <table class="table schedule-table no-border">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Time</th>
+                                <th>Mode</th>
+                                <th>Enroll</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>15th January 2025</td>
+                                <td>10:00 AM - 2:00 PM</td>
+                                <td>Online</td>
+                                <td><a href="#contact" class="btn btn-primary">Enroll Now</a></td>
+                            </tr>
+                            <tr>
+                                <td>15th January 2025</td>
+                                <td>10:00 AM - 2:00 PM</td>
+                                <td>Online</td>
+                                <td><a href="#contact" class="btn btn-primary">Enroll Now</a></td>
+                            </tr>
+                            <tr>
+                                <td>15th January 2025</td>
+                                <td>10:00 AM - 2:00 PM</td>
+                                <td>Online</td>
+                                <td><a href="#contact" class="btn btn-primary">Enroll Now</a></td>
+                            </tr>
+                            <tr>
+                                <td>22nd January 2025</td>
+                                <td>6:00 PM - 9:00 PM</td>
+                                <td>Offline</td>
+                                <td><a href="#contact" class="btn btn-primary">Enroll Now</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+            </div>
+        </div>
+    </section>
 
-          <div class="col-md-5">
-           
-            <div>
-            <img src="assets/images/professional-courses/devops_training.jpg" alt="" width="100%">
+    <!--Student Testimonials Section -->
+    <section class="testimonials heroW">
+        <div class="container">
+            <h2 class="testimonial-title text-center mb-4" style="font-weight: 1000; font-size: 30px;">Student Testimonials</h2>
+    
+            <div id="testimonialCarousel" class="carousel slide testimonial-carousel" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="card shadow-sm h-100 text-center d-flex align-items-center justify-content-center testimonial-card">
+                                    <div class="card-body">
+                                        <p class="card-text">"This course transformed my career. Highly recommended!"</p>
+                                        <p class="text-muted">- Anjali K.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card shadow-sm h-100 text-center d-flex align-items-center justify-content-center testimonial-card">
+                                    <div class="card-body">
+                                        <p class="card-text">"Excellent training and hands-on projects."</p>
+                                        <p class="text-muted">- Ravi T.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card shadow-sm h-100 text-center d-flex align-items-center justify-content-center testimonial-card">
+                                    <div class="card-body">
+                                        <p class="card-text">"The trainers are extremely knowledgeable."</p>
+                                        <p class="text-muted">- Suman P.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="card shadow-sm h-100 text-center d-flex align-items-center justify-content-center testimonial-card">
+                                    <div class="card-body">
+                                        <p class="card-text">"The course content was very relevant."</p>
+                                        <p class="text-muted">- Neha D.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card shadow-sm h-100 text-center d-flex align-items-center justify-content-center testimonial-card">
+                                    <div class="card-body">
+                                        <p class="card-text">"I loved the interactive sessions."</p>
+                                        <p class="text-muted">- Arjun M.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card shadow-sm h-100 text-center d-flex align-items-center justify-content-center testimonial-card">
+                                    <div class="card-body">
+                                        <p class="card-text">"The support team was always helpful."</p>
+                                        <p class="text-muted">- Priya S.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Carousel Controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
         </div>
-          </div>
-        </div>
-      </div>
-   
+    </section>
+    
+    <!-- FAQs Section -->
+    <section class="faqs container-fluid my-1 heroV">
+        <h2 class="faq-title text-center mb-4" style="font-weight: 1000; font-size: 30px;">Frequently Asked Questions</h2>
+    
+        <div class="accordion container" id="faqAccordion">
+            <!-- Q 1 -->
+            <div class="accordion-item faq-item">
+                <h2 class="accordion-header" id="faq1">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1"
+                        aria-expanded="true" aria-controls="collapse1">
+                        <h3></h>What is DevOps?
+                    </button>
+                </h2>
+                <div id="collapse1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                       <h3>DevOps is a set of practices and cultural philosophies that aim to integrate software development (Dev) and IT operations (Ops). It focuses on collaboration, automation, and continuous delivery to improve software quality and speed.</h3>
+                </div>
+                </div>
+            </div>
+    
+            <!-- Q 2 -->
+            <div class="accordion-item faq-item">
+                <h2 class="accordion-header" id="faq2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                        What are the key benefits of implementing DevOps?
+                    </button>
+                </h2>
+                <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>Faster delivery of software updates and features.</li>
+                            <li>Improved collaboration between development and operations teams.</li>
+                            <li>Higher software quality with fewer bugs.</li>
+                            <li>Increased system stability and faster recovery times.</li>
+                            <li>Automation of repetitive tasks to increase efficiency.</li>
+                       </ul>                    
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Q 3 -->
+            <div class="accordion-item faq-item">
+                <h2 class="accordion-header" id="faq3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                        What tools are commonly used in DevOps?
+                    </button>
+                </h2>
+                <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                       <h4>Popular tools include:</h4>
+                            <ul>
+                                <li><strong>Version Control:</strong> Git, GitHub, GitLab.</li>
+                                <li><strong>CI/CD: </strong> Jenkins, CircleCI, GitLab CI/CD.</li>
+                                <li><strong>Containerization:</strong> Docker, Kubernetes.</li>              
+                                <li><strong>Infrastructure as Code:</strong>Terraform, Ansible.</li>
+                                <li><strong>monitoring:</strong> Prometheus, Grafana, Nagios.</li>
+                            </ul>  
+                    </div>
+                </div>
+            </div>
 
-</section>
+            <!-- Q 4 -->
+            <div class="accordion-item faq-item">
+                <h2 class="accordion-header" id="faq4">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                        What is CI/CD in DevOps? 
+                    </button>
+                </h2>
+                <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                    <h3>  Continuous Integration (CI) involves automatically merging code changes into a shared repository and testing them frequently. Continuous Deployment/Delivery (CD) automates the deployment process to ensure quick and reliable software releases.</h3>
+                    </div>
+                </div>
+            </div>
 
-<!-- Key Benefits Section -->
-<section class="features container my-5">
-    <h2 class="text-center">Why Choose Our DevOps Certification?</h2>
-    <div class="row">
-        <div class="col-md-4">
-            <h4>Comprehensive Curriculum</h4>
-            <p>Learn the latest DevOps tools and methodologies.</p>
-        </div>
-        <div class="col-md-4">
-            <h4>Expert Trainers</h4>
-            <p>Get trained by certified professionals with real-world experience.</p>
-        </div>
-        <div class="col-md-4">
-            <h4>Industry-Recognized Certification</h4>
-            <p>Boost your career with globally recognized credentials.</p>
-        </div>
-    </div>
-</section>
+            <!-- Q 5 -->
+            <div class="accordion-item faq-item">
+                <h2 class="accordion-header" id="faq5">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                        What is Infrastructure as Code (IaC)? 
+                    </button>
+                </h2>
+                <div id="collapse5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                       <h3> IaC is a DevOps practice where infrastructure (servers, networks, databases) is managed and provisioned using code rather than manual processes. Tools like Terraform, Ansible, and CloudFormation are commonly used for IaC.   </h3>                 
+                    </div>
+                </div>
+            </div>
 
-<!-- Certification Details Section -->
-<section class="container my-5">
-    <h2 class="text-center">Certification Details</h2>
-    <p class="text-center">Our DevOps certification covers CI/CD, Jenkins, Docker, Kubernetes, and more.</p>
-    <div class="row">
-        <div class="col-md-6">
-            <ul>
-                <li>Duration: 40 Hours</li>
-                <li>Mode: Online/Offline</li>
-                <li>Prerequisites: Basic IT knowledge</li>
-            </ul>
-        </div>
-        <div class="col-md-6">
-            <img src="https://via.placeholder.com/600x400" alt="DevOps Training" class="img-fluid rounded">
-        </div>
-    </div>
-</section>
+             <!-- Q 6 -->
+             <div class="accordion-item faq-item">
+                <h2 class="accordion-header" id="faq6">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
+                        What is the role of automation in DevOps?
+                    </button>
+                </h2>
+                <div id="collapse6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>Streamline repetitive tasks (e.g., testing, deployment).</li>
+                            <li>Reduce human errors.</li>
+                            <li>Increase consistency and efficiency.</li>
+                            <li>Accelerate the delivery pipeline.</li>
+                            
+                       </ul>                    
+                    </div>
+                </div>
+            </div>
 
-<!-- Schedule Section -->
-<section class="schedule container my-5">
-    <h2 class="text-center">Upcoming Batches</h2>
-    <table class="table table-bordered">
-        <thead>
-            <tr>
-                <th>Date</th>
-                <th>Time</th>
-                <th>Mode</th>
-                <th>Enroll</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>15th January 2025</td>
-                <td>10:00 AM - 2:00 PM</td>
-                <td>Online</td>
-                <td><a href="#contact" class="btn btn-primary">Enroll Now</a></td>
-            </tr>
-            <tr>
-                <td>22nd January 2025</td>
-                <td>6:00 PM - 9:00 PM</td>
-                <td>Offline</td>
-                <td><a href="#contact" class="btn btn-primary">Enroll Now</a></td>
-            </tr>
-        </tbody>
-    </table>
-</section>
+            <!-- Q 7 -->
+            <div class="accordion-item faq-item">
+                <h2 class="accordion-header" id="faq7">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
+                       What are microservices, and how do they relate to DevOps? 
+                    </button>
+                </h2>
+                <div id="collapse7" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                       <h3> Microservices are an architectural style where an application is broken into smaller, independent services. DevOps complements microservices by automating the build, deployment, and management of these services, making development more agile.</h3>                    
+                    </div>
+                </div>
+            </div>
+            
+             <!-- Q 8 -->
+             <div class="accordion-item faq-item">
+                <h2 class="accordion-header" id="faq8">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse8" aria-expanded="false" aria-controls="collapse8">
+                        What is the difference between DevOps and Agile?                    </button>
+                </h2>
+                <div id="collapse8" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        <ul>
+                            <li><strong>Agile :</strong>  Focuses on iterative development and collaboration during the software development lifecycle.</li>
+                            <li><strong>Devops:</strong>  Extends Agile principles to include operations, emphasizing automation, deployment, and monitoring.</li>
+                            
+                       </ul>                    
+                    </div>
+                </div>
+            </div>
 
-<!-- Testimonials Section -->
-<section class="testimonials">
-    <div class="container">
-        <h2 class="text-center mb-4">Student Testimonials</h2>
+            <!-- Q 9 -->
+            <div class="accordion-item faq-item">
+                <h2 class="accordion-header" id="faq9">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse9" aria-expanded="false" aria-controls="collapse9">
+                        What challenges are commonly faced when adopting DevOps?
+                    </button>
+                </h2>
+                <div id="collapse9" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        <ul>
+                          <li> Resistance to cultural change within teams. </li>
+                          <li> Lack of skilled personnel or training. </li> 
+                          <li> Difficulty integrating legacy systems with modern tools. </li> 
+                          <li> Overcoming siloed teams and processes. </li> 
+                       </ul>                      </div>
+                </div>
+            </div>
+            
+             <!-- Q 10 -->
+             <div class="accordion-item faq-item">
+                <h2 class="accordion-header" id="faq10">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse10" aria-expanded="false" aria-controls="collapse10">
+                        What is Kubernetes, and why is it important in DevOps?
+                    </button>
+                </h2>
+                <div id="collapse10" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                       <h3> Kubernetes is an open-source container orchestration platform. It automates the deployment, scaling, and management of containerized applications, making it a crucial tool for achieving scalability and resilience in a DevOps environment.      </h3>       
+                    </div>
+                </div>
+            </div>
+
+                       
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="container-fluid my-1 heroU">
+        <h2 class="contact-title text-center mb-4" style="font-weight: 1000; font-size: 30px;">Contact Us</h2>
+        <div class="container contact-form">
+            <form id="contactform">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h2 class="contact-heading">Let's get in touch</h2>
+                    </div>
+                    <div class="col-lg-4">
+                        <fieldset>
+                            <input type="text" name="Name" id="fullname" class="form-control" placeholder="Enter Name"
+                                required>
+                        </fieldset>
+                    </div>
+                    <div class="col-lg-4">
+                        <fieldset>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="YOUR EMAIL..."
+                                required>
+                        </fieldset>
+                    </div>
+                    <div class="col-lg-4">
+                        <fieldset>
+                            <input type="text" name="Subject" id="subject" placeholder="SUBJECT..." required
+                                class="form-control">
+                        </fieldset>
+                    </div>
+                    <div class="col-lg-12">
+                        <fieldset>
+                            <textarea name="Message" class="form-control" id="message" placeholder="YOUR MESSAGE..."
+                                rows="4"></textarea>
+                        </fieldset>
+                    </div>
+                    <div class="col-lg-12">
+                        <fieldset>
+                            <button type="submit" name="submitContact" class="btn btn-primary">Send Mail</button>
+                        </fieldset>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+    
+  
+    <!-- FOOTER -->
+    
+    <!-- Fluid Container -->
+    <div class="container-fluid bg-light py-5">
         <div class="row">
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-body">
-                        <p class="card-text">"This course transformed my career. Highly recommended!"</p>
-                        <p class="text-muted">- Anjali K.</p>
-                    </div>
-                </div>
+            <div class="col-md-6 p-3">
+                <h2>About A1 Training Institute</h2>
+                <p>
+                    Located in the heart of Gautam Buddha Nagar, Uttar Pradesh, **A1 Training Institute** is a premier destination for professional learning and upskilling. 
+                    We specialize in cutting-edge courses including <strong>DevOps, Cloud Computing, Machine Learning, Data Science, and Full Stack Development</strong>. 
+                    Our mission is to empower students and professionals with practical skills and industry-relevant knowledge.
+                </p>
+                <p>
+                    With experienced instructors, hands-on projects, and state-of-the-art infrastructure, A1 Training Institute has helped thousands of learners achieve their career goals. 
+                    Join us to unlock your true potential in the fast-evolving tech landscape.
+                </p>
             </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-body">
-                        <p class="card-text">"Excellent training and hands-on projects."</p>
-                        <p class="text-muted">- Ravi T.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-body">
-                        <p class="card-text">"The trainers are extremely knowledgeable."</p>
-                        <p class="text-muted">- Suman P.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- FAQs Section -->
-<section class="faqs container my-5">
-    <h2 class="text-center">Frequently Asked Questions</h2>
-    <div class="accordion" id="faqAccordion">
-        <div class="accordion-item">
-            <h2 class="accordion-header" id="faq1">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1">
-                    What is DevOps?
-                </button>
-            </h2>
-            <div id="collapse1" class="accordion-collapse collapse show">
-                <div class="accordion-body">
-                    DevOps is a set of practices that combine software development and IT operations.
-                </div>
-            </div>
-        </div>
-        <div class="accordion-item">
-            <h2 class="accordion-header" id="faq2">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2">
-                    Who should enroll in this course?
-                </button>
-            </h2>
-            <div id="collapse2" class="accordion-collapse collapse">
-                <div class="accordion-body">
-                    IT professionals, developers, and anyone interested in learning DevOps can join.
+            <div class="col-md-6 p-3">
+                <h2>Our Location</h2>
+                <!-- Embedded Google Map -->
+                <div class="map-container" style="height: 300px;">
+                    <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24486.400788857407!2d77.4160095!3d28.5215942!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cc1ace1d0021d%3A0x4a817521c4ed4de2!2sA1%20Training(Only%20Coding)-Best%20software%20training%20institute%20in%20Delhi%2Cnoida%20and%20greater%20noida!5e0!3m2!1sen!2sin!4v1699603832561!5m2!1sen!2sin" 
+                        
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
                 </div>
             </div>
         </div>
     </div>
-</section>
 
-<!-- Contact Section -->
-<section id="contact" class="container my-5">
-    <h2 class="text-center mb-4">Contact Us</h2>
-    <form>
-        <div class="mb-3">
-            <label for="name" class="form-label">Name</label>
-            <input type="text" class="form-control" id="name" placeholder="Enter your name">
-        </div>
-        <div class="mb-3">
-            <label for="email" class="form-label">Email</label>
-            <input type="email" class="form-control" id="email" placeholder="Enter your email">
-        </div>
-        <div class="mb-3">
-            <label for="message" class="form-label">Message</label>
-            <textarea class="form-control" id="message" rows="3" placeholder="Write your message"></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
-</section>
-
-<!-- Footer -->
-<footer class="footer">
-    <p>&copy; 2025 A1 Training Institute, Bangalore. All Rights Reserved.</p>
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Footer -->
 </body>
+
 </html>
+<script>
+
+    //CONTACT FORM
+    // Handle form submission
+    const form = document.getElementById('contactform');
+    if (form) {
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbyTdBGvT9D6neYK_8gdaaP9YIvJ5dGKR0F0ZI7YBhiq1oW-ArzRjgh4__gnbdDTHFe5/exec';
+            const formData = new FormData(this);
+
+            fetch(scriptURL, { method: 'POST', body: formData })
+                .then(response => {
+                    Swal.fire({
+                        title: "Thank you!",
+                        text: "Your form is submitted successfully.",
+                        icon: "success",
+                        timer: 1500,
+                        showConfirmButton: false
+                    }).then(() => {
+                        window.location.reload(); // Reload after closing the alert
+                    });
+                })
+                .catch(error => {
+                    console.error('Error!', error.message);
+                    Swal.fire({
+                        title: "Oops!",
+                        text: "Something went wrong. Please try again later.",
+                        icon: "error"
+                    });
+                });
+        });
+    }
+
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const containers = document.querySelectorAll(".responsive-container img");
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("animate");
+                }
+            });
+        });
+
+        containers.forEach((container) => observer.observe(container));
+    });
+
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const elements = document.querySelectorAll(".slide-in");
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = "running";
+                }
+            });
+        }, { threshold: 0.1 });
+
+        elements.forEach((el) => {
+            el.style.animationPlayState = "paused"; // Pause animation initially
+            observer.observe(el);
+        });
+    });
+    document.addEventListener('DOMContentLoaded', () => {
+    const options = {
+        root: null, // Viewport as root
+        rootMargin: '0px',
+        threshold: 0.1, // Trigger when 10% of the element is visible
+    };
+
+    const animationConfig = {
+        // Section-specific classes for animation
+        '.float-up': 'visible',
+        '.certification-title': 'animate__animated animate__fadeInUp',
+        '.certification-description': 'animate__animated animate__fadeInUp',
+        '.certification-list': 'animate__animated animate__fadeInLeft',
+        '.schedule-title': 'animate__animated animate__fadeInUp',
+        '.schedule-table': 'animate__animated animate__fadeInLeft',
+        '.testimonial-title': 'animate__animated animate__fadeInUp',
+        '.testimonial-carousel': 'animate__animated animate__fadeInUp',
+        '.testimonial-card': 'animate__animated animate__fadeIn',
+        '.faq-title': 'animate__animated animate__fadeInUp',
+        '.faq-item:nth-child(even)': 'animate__animated animate__fadeInLeft',
+        '.faq-item:nth-child(odd)': 'animate__animated animate__fadeInRight',
+        '.contact-title': 'animate__animated animate__fadeInUp',
+        '.contact-form': 'animate__animated animate__fadeIn',
+        '.contact-heading': 'animate__animated animate__fadeInUp',
+        'input, textarea, button': 'animate__animated animate__fadeIn',
+    };
+
+    const callback = (entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                const target = entry.target;
+                const animation = animationConfig[target.dataset.animation] || '';
+                animation.split(' ').forEach(cls => target.classList.add(cls));
+            }
+        });
+    };
+
+    const observer = new IntersectionObserver(callback, options);
+
+    // Assign animations to elements and observe
+    Object.keys(animationConfig).forEach((selector) => {
+        document.querySelectorAll(selector).forEach((el) => {
+            el.dataset.animation = selector;
+            observer.observe(el);
+        });
+    });
+});
+
+///table animation upcoming batches 
+document.addEventListener("DOMContentLoaded", () => {
+    const scheduleTable = document.querySelector(".schedule-table"); // Table
+    const tableHeader = document.querySelector(".schedule-table thead"); // Table header
+    const tableRows = document.querySelectorAll(".schedule-table tbody tr"); // Table rows
+
+    // Function to animate the header
+    const animateHeader = () => {
+        return new Promise((resolve) => {
+            if (tableHeader) {
+                tableHeader.style.opacity = "1";
+                tableHeader.style.animation = "fadeInHeader 0.8s ease-out forwards";
+            }
+            setTimeout(resolve, 800); // Wait for header animation to finish
+        });
+    };
+
+    // Function to animate table rows one by one
+    const animateRows = () => {
+        return new Promise((resolve) => {
+            const delayIncrement = 400; // Time between each row's animation
+
+            tableRows.forEach((row, index) => {
+                setTimeout(() => {
+                    row.style.opacity = "1";
+                    row.style.animation = "fadeInRow 0.6s ease-out forwards";
+                }, delayIncrement * index); // Stagger animations
+            });
+
+            const totalDelay = delayIncrement * tableRows.length; // Calculate total animation time
+            setTimeout(resolve, totalDelay);
+        });
+    };
+
+    // Run animations sequentially
+    (async function runAnimations() {
+        await animateHeader(); // First animate header
+        await animateRows(); // Then animate rows
+    })();
+});
+
+</script>
