@@ -1,0 +1,945 @@
+/* DevOps Roadmap Page Styles - Light Color Scheme */
+:root {
+    /* Light Color Palette */
+    --roadmap-primary-color: #3498db;
+    /* Soft Blue */
+    --roadmap-secondary-color: #2ecc71;
+    /* Mint Green */
+    --roadmap-accent-color: #9b59b6;
+    /* Soft Purple */
+
+    /* Neutral Colors */
+    --roadmap-bg-light: #f7f9fc;
+    /* Very Light Blue-Gray */
+    --roadmap-text-dark: #2c3e50;
+    /* Deep Blue-Gray */
+    --roadmap-text-muted: #7f8c8d;
+    /* Soft Gray */
+
+    /* Card Colors */
+    --roadmap-card-bg: #ffffff;
+    /* Pure White */
+    --roadmap-card-border: #e6e9ed;
+    /* Light Gray Border */
+
+    /* Transition */
+    --roadmap-transition: all 0.3s ease;
+
+    /* Update heading colors to black */
+    --roadmap-heading-color: #000000;
+    /* Pure Black */
+}
+
+body {
+    background-color: var(--roadmap-bg-light);
+    color: var(--roadmap-text-dark);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.roadmap-card {
+    position: relative;
+    transition:
+        all 0.3s ease,
+        transform 0.3s ease,
+        opacity 0.3s ease,
+        box-shadow 0.3s ease;
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: var(--roadmap-card-bg);
+    border: 1px solid var(--roadmap-card-border);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+}
+
+.roadmap-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.roadmap-card .card-title {
+    color: var(--roadmap-primary-color);
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.roadmap-card .card-text {
+    color: var(--roadmap-text-muted);
+    margin-bottom: 20px;
+}
+
+.roadmap-card h5.text-primary {
+    color: var(--roadmap-text-dark);
+    font-weight: 600;
+}
+
+.main-heading {
+    color: #1a1a1a;
+    /* Very dark gray, almost black for better readability */
+    font-weight: 900;
+    /* Extra bold */
+    font-size: 2.5rem;
+    /* Larger font size */
+    text-align: center;
+    margin-bottom: 2rem;
+    letter-spacing: -1px;
+    /* Slight letter spacing for cleaner look */
+    line-height: 1.2;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    border-bottom: 3px solid var(--roadmap-primary-color);
+}
+
+.skill-level {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.skill-item {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    user-select: none;
+}
+
+.skill-item:hover {
+    background-color: var(--roadmap-primary-color);
+    color: white;
+    transform: scale(1.05);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.skill-badge {
+    background-color: var(--roadmap-bg-light);
+    color: var(--roadmap-text-dark);
+    border: 1px solid var(--roadmap-card-border);
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    transition: var(--roadmap-transition);
+    display: inline-block;
+    margin: 4px 6px;
+    padding: 6px 12px;
+}
+
+.skill-badge:hover {
+    background-color: var(--roadmap-primary-color);
+    color: white;
+    transform: scale(1.05);
+}
+
+.skill-badge.active {
+    background-color: #007bff !important;
+    color: white !important;
+}
+
+/* Level Specific Styles */
+.beginner-level {
+    background-color: rgba(52, 152, 219, 0.05);
+    /* Light Blue */
+}
+
+.intermediate-level {
+    background-color: rgba(46, 204, 113, 0.05);
+    /* Light Green */
+}
+
+.advanced-level {
+    background-color: rgba(155, 89, 182, 0.05);
+    /* Light Purple */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+
+    /* Container and Grid Adjustments */
+    .container {
+        padding: 0 15px;
+    }
+
+    /* Mobile Responsive Layout */
+    .roadmap-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .roadmap-card-wrapper:first-child {
+        grid-column: 1 / -1;
+        width: 100%;
+    }
+
+    .roadmap-card-wrapper:not(:first-child) {
+        width: 100%;
+        grid-column: auto;
+    }
+
+    /* First card takes full width */
+    .roadmap-card-wrapper:first-child,
+    .roadmap-card-wrapper[style*="grid-column: 1 / -1"] {
+        grid-column: 1 / -1;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* Subsequent cards */
+    .roadmap-card-wrapper:not(:first-child),
+    .roadmap-card-wrapper:not([style*="grid-column: 1 / -1"]) {
+        width: 100%;
+        grid-column: auto;
+    }
+
+    .roadmap-card {
+        width: 100%;
+        margin: 0;
+        display: block;
+    }
+
+    /* Ensure skills and content are full width */
+    .skill-level {
+        justify-content: center;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .skill-badge {
+        margin: 5px;
+    }
+
+    /* Responsive Adjustments for Search Results */
+    .roadmap-container[style*="grid-template-columns: 1fr"] {
+        display: grid;
+        grid-template-columns: 1fr !important;
+        gap: 15px;
+    }
+
+    .roadmap-container[style*="grid-template-columns: 1fr"] .roadmap-card-wrapper[style*="grid-column: 1 / -1"] {
+        grid-column: 1 / -1;
+        width: 100%;
+    }
+
+    .roadmap-container[style*="grid-template-columns: 1fr"] .roadmap-card-wrapper:not([style*="grid-column: 1 / -1"]) {
+        width: 100%;
+        grid-column: auto;
+    }
+}
+
+/* Ultra-Small Devices */
+@media (max-width: 375px) {
+    body {
+        font-size: 12px;
+    }
+
+    .skill-detail-content h3 {
+        font-size: 1.5rem;
+    }
+
+    .skill-badge {
+        padding: 4px 8px;
+        font-size: 10px;
+    }
+}
+
+/* Ensure proper scaling on smaller devices */
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    .main-heading {
+        font-size: 2rem;
+    }
+}
+
+.roadmap-section {
+    background: linear-gradient(135deg,
+            var(--roadmap-bg-light) 0%,
+            color-mix(in srgb, var(--roadmap-bg-light) 90%, white) 100%);
+}
+
+.roadmap-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.roadmap-card-wrapper {
+    display: block;
+    width: 100%;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .roadmap-container {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 0.5rem;
+    }
+}
+
+.roadmap-container .roadmap-card-wrapper {
+    width: 100%;
+    max-width: 100%;
+    transition: all 0.3s ease;
+}
+
+.roadmap-container .roadmap-card-wrapper:not(:first-child) {
+    width: 100%;
+    grid-column: auto;
+}
+
+/* Skill Detail Panel Base Styles */
+.skill-detail-panel {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    transition: all 0.3s ease;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+/* Roadmap Container Layout */
+.roadmap-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+/* Roadmap Card Styles */
+.roadmap-card {
+    position: relative;
+    transition:
+        all 0.3s ease,
+        transform 0.3s ease,
+        opacity 0.3s ease,
+        box-shadow 0.3s ease;
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* Skill Detail Expansion */
+.roadmap-card.expanded {
+    position: relative;
+    z-index: 10;
+    display: grid;
+    grid-template-columns: 1fr 2.5fr;
+    /* Increase right column width */
+    width: 160%;
+    /* More expansion */
+    transform: scale(1.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    gap: 1.5rem;
+}
+
+/* Skill Detail Panel */
+.skill-detail-panel {
+    position: static;
+    width: 100%;
+    height: auto;
+    background-color: white;
+    transition: all 0.3s ease;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    grid-column: 2;
+    /* Place in the right column */
+}
+
+/* Original Card Content */
+.roadmap-card.expanded>*:first-child {
+    grid-column: 1;
+    /* Keep original content in left column */
+}
+
+/* Other Cards when One is Expanded */
+.roadmap-card.dimmed {
+    opacity: 1;
+    /* Full opacity */
+    filter: none;
+    /* No filter */
+    transform: scale(1);
+    /* No scaling */
+}
+
+/* Close Button for Skill Detail */
+.close-skill-detail {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 20;
+}
+
+/* Enhanced Search Container Styles */
+.search-container {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto 30px;
+    perspective: 1000px;
+}
+
+.search-container input {
+    width: 100%;
+    padding: 14px 60px 14px 50px;
+    /* Increased left padding to accommodate icon */
+    border: 2px solid transparent;
+    border-radius: 30px;
+    font-size: 16px;
+    background-color: #f1f3f4;
+    color: #202124;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    outline: none;
+}
+
+/* Search Icon */
+.search-container::before {
+    content: '🔍';
+    position: absolute;
+    left: 20px;
+    /* More left margin */
+    top: 50%;
+    transform: translateY(-50%);
+    color: #9aa0a6;
+    font-size: 20px;
+    pointer-events: none;
+    transition: color 0.3s ease;
+    z-index: 10;
+    /* Ensure icon is above input */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .search-container::before {
+        left: 15px;
+        font-size: 18px;
+    }
+
+    .search-container input {
+        padding: 12px 50px 12px 50px;
+        /* Adjusted for mobile */
+    }
+}
+
+#clearSearch {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #70757a;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 5px 10px;
+    line-height: 1;
+    z-index: 10;
+    opacity: 0;
+    transition: all 0.3s ease;
+    border-radius: 50%;
+    text-decoration: none;
+    outline: none;
+}
+
+#clearSearch:hover {
+    color: #4285f4;
+    transform: translateY(-50%) scale(1.2);
+    background-color: rgba(66, 133, 244, 0.1);
+}
+
+#clearSearch:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #clearSearch {
+        right: 10px;
+        font-size: 22px;
+        padding: 3px 8px;
+    }
+}
+
+.search-container input:focus+#clearSearch,
+.search-container input:not(:placeholder-shown)+#clearSearch {
+    display: block;
+    opacity: 1;
+}
+
+.search-container input:focus::before,
+.search-container input:not(:placeholder-shown)::before {
+    color: #4285f4;
+}
+
+/* New Skill Details Panel */
+.skill-details-panel {
+    position: absolute;
+    width: 300px;
+    max-height: 250px;
+    background-color: white;
+    border: 1px solid var(--roadmap-card-border);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    overflow-y: auto;
+    z-index: 1000;
+    transition: var(--roadmap-transition);
+}
+
+.skill-details-panel .skill-detail-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: var(--roadmap-primary-color);
+}
+
+.skill-details-panel .close-details {
+    color: var(--roadmap-text-muted);
+    opacity: 0.7;
+    transition: var(--roadmap-transition);
+    padding: 2px 6px;
+    line-height: 1;
+}
+
+.skill-details-panel .close-details:hover {
+    opacity: 1;
+    color: var(--roadmap-primary-color);
+    background-color: rgba(52, 152, 219, 0.1);
+}
+
+.skill-wrapper {
+    display: inline-block;
+    margin: 2px;
+    position: static;
+}
+
+.skill-wrapper.has-details {
+    width: 100%;
+    order: -1;
+    /* Ensures this wrapper stays at its original position */
+}
+
+.skill-details-div {
+    display: none;
+    width: 100%;
+    margin: 10px 0;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.skill-details-div.active {
+    display: block;
+    animation: slideDown 0.3s ease-out;
+}
+
+.skill-details-collapse {
+    background: white;
+    border-radius: 8px;
+}
+
+.skill-details-collapse .card {
+    border: 1px solid #e0e0e0;
+    box-shadow: none;
+}
+
+.skill-details-collapse .card-body {
+    padding: 20px;
+}
+
+.skill-details-collapse img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.close-details {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    border-radius: 0.2rem;
+}
+
+.close-details:hover {
+    background-color: #e9ecef;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.skill-details-collapse {
+    width: 100%;
+    transition: all 0.3s ease;
+    animation: slideDown 0.3s ease;
+    background-color: var(--roadmap-bg-light);
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.skill-details-collapse .card {
+    border: none;
+    background-color: rgba(255, 255, 255, 0.5);
+    margin: 0;
+}
+
+.skill-details-collapse .card-body {
+    position: relative;
+    padding: 20px;
+}
+
+.skill-details-collapse .card-title {
+    color: var(--roadmap-text-dark);
+    font-weight: 600;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    padding-right: 40px;
+}
+
+.skill-details-collapse .card-text {
+    color: var(--roadmap-text-muted);
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.close-skill-details {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 6px 12px;
+    font-size: 1.1rem;
+    line-height: 1;
+    border-radius: 4px;
+    background-color: transparent;
+    border: 1px solid var(--roadmap-card-border);
+    color: var(--roadmap-text-muted);
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.close-skill-details:hover {
+    background-color: var(--roadmap-card-border);
+    color: var(--roadmap-text-dark);
+}
+
+/* Level-specific background colors for the collapsible sections */
+.beginner-level .skill-details-collapse {
+    background-color: rgba(52, 152, 219, 0.05);
+}
+
+.intermediate-level .skill-details-collapse {
+    background-color: rgba(46, 204, 113, 0.05);
+}
+
+.advanced-level .skill-details-collapse {
+    background-color: rgba(155, 89, 182, 0.05);
+}
+
+/* ORBIT  AND HERO SECTION*/
+
+
+/* Hero Section */
+.hero {
+    position: relative;
+    padding: 120px 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    min-height: 100vh;
+}
+
+.hero.dark-mode {
+    background: linear-gradient(135deg, var(--darker-bg-dark) 0%, var(--dark-bg-dark) 100%);
+}
+
+.hero-illustration-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-illustration {
+    position: relative;
+    z-index: 1;
+    width: 50%;
+    height: auto;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .hero {
+        min-height: auto;
+        padding: 6rem 1rem;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+        line-height: 1.3;
+    }
+
+    .hero .lead {
+        font-size: 1rem;
+    }
+
+    .hero .badge {
+        display: inline-block;
+        margin: 0 auto 1rem;
+    }
+
+    .hero .d-flex.gap-3 {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem !important;
+    }
+
+    .hero .btn {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+
+    .hero .mt-4 .row {
+        justify-content: center;
+    }
+
+    .hero .counter {
+        font-size: 1.5rem;
+    }
+
+    .hero .rounded-circle {
+        padding: 1.5rem;
+    }
+
+    .hero .fa-2x {
+        font-size: 1.5rem;
+    }
+
+    /* Orbit section mobile styles */
+    .orbit-section {
+        margin: 3rem auto;
+        max-width: 100%;
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .orbit-container {
+        transform: scale(1);
+        margin: 0 auto;
+    }
+
+    .orbit {
+        width: 320px;
+        height: 320px;
+    }
+
+    .orbital-item {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+
+/* Orbit Section Styles */
+/* Orbit Section Styles */
+:root {
+    --orbit-size: 600px;
+    --item-size: 90px;
+    --orbit-speed: 10s;
+    --center-image-size: 400px;
+    --orbit-radius: 220px;
+}
+
+.orbit-section {
+    position: relative;
+    width: var(--orbit-size);
+    height: var(--orbit-size);
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.orbit-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+}
+
+.center-image .hero-illustration {
+    position: absolute;
+    width: var(--center-image-size);
+    height: var(--center-image-size);
+    z-index: 2;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: contain;
+}
+
+.orbit {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+}
+
+.orbital-item {
+    position: absolute;
+    width: var(--item-size);
+    height: var(--item-size);
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    left: 50%;
+    top: 42%;
+    transform: translate(-50%, -50%);
+}
+
+/* Animation */
+@keyframes train-orbit {
+    from {
+        transform: rotate(0deg) translateX(var(--orbit-radius)) rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg) translateX(var(--orbit-radius)) rotate(-360deg);
+    }
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .orbit-section {
+        width: 320px;
+        height: 320px;
+        --orbit-radius: 120px; /* Only reduce orbit radius */
+    }
+
+    .center-image .hero-illustration {
+        width: 200px;
+        height: 200px;
+    }
+
+    .orbital-item {
+        width: 60px;
+        height: 60px;
+    }
+
+    .orbital-logo {
+        width: 70%;
+        height: auto;
+    }
+}
+
+@media (max-width: 576px) {
+    .orbit-section {
+        width: 280px;
+        height: 280px;
+        --orbit-radius: 100px;
+    }
+
+    .center-image .hero-illustration {
+        width: 180px;
+        height: 180px;
+    }
+
+    .orbital-item {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+.orbital-item:hover {
+    transform: scale(1.2) !important;
+    z-index: 3;
+}
+
+.orbital-logo {
+    width: 100%;
+    /* Increased logo size */
+    height: 80px;
+    object-fit: contain;
+    padding: 8px;
+    /* Added padding for better appearance */
+}
+
+
+/* Position the orbital items with train-like animation - updated for 5 items */
+.orbital-item:nth-child(1) {
+    animation: train-orbit var(--orbit-speed) linear infinite;
+}
+
+.orbital-item:nth-child(2) {
+    animation: train-orbit var(--orbit-speed) linear infinite;
+    animation-delay: calc(var(--orbit-speed) / -5);
+}
+
+.orbital-item:nth-child(3) {
+    animation: train-orbit var(--orbit-speed) linear infinite;
+    animation-delay: calc(2 * var(--orbit-speed) / -5);
+}
+
+.orbital-item:nth-child(4) {
+    animation: train-orbit var(--orbit-speed) linear infinite;
+    animation-delay: calc(3 * var(--orbit-speed) / -5);
+}
+
+.orbital-item:nth-child(5) {
+    animation: train-orbit var(--orbit-speed) linear infinite;
+    animation-delay: calc(4 * var(--orbit-speed) / -5);
+}

@@ -131,7 +131,7 @@ var courses1 = {
             "description": "MEAN_Stack01",
             "download": "course_1",
            "interview_pdf" : ["https://amzn.in/d/eeW0gGK", "https://amzn.in/d/76hrmRz", "https://amzn.in/d/4Jzj8A2"],
-           "syllabus" : ["assets/syllabus/mean_stack.pdf"],
+           "syllabus" : [""],
            "syllabus_name":["Mean Stack Syllabus "]	 
 
         },
