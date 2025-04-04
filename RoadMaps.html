@@ -1,0 +1,671 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta name="theme-color" content="#3498db">
+    <!-- TITLE -->
+        <title>DevOps Learning Roadmaps</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+    <!-- CSS -->
+        <link href="assets/css/roadmap.css" rel="stylesheet"> 
+    <!-- CSS END -->
+
+    <!--  MENU -->
+        <script src="menu.js"></script> 
+    <!-- MENU END -->
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-edu-meeting.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/lightbox.css">
+    <!-- Additional CSS Files END -->
+
+    <!-- STYLE -->
+        <style>
+            .roadmap-container {
+                position: relative;
+            }
+            .roadmap-card {
+                transition: all 0.3s ease;
+                position: relative;
+                z-index: 1;
+            }
+            .roadmap-card.dimmed {
+                opacity: 0.3;
+                filter: blur(2px);
+            }
+            .skill-detail-panel {
+                position: absolute;
+                top: 0;
+                width: 400px;
+                height: 100%;
+                background-color: white;
+                box-shadow: 5px 0 15px rgba(0,0,0,0.1);
+                transition: all 0.3s ease;
+                z-index: 10;
+                padding: 20px;
+                opacity: 0;
+                visibility: hidden;
+            }
+            .roadmap-card.expanded .skill-detail-panel {
+                opacity: 1;
+                visibility: visible;
+            }
+            .skill-badge {
+                cursor: pointer;
+                transition: all 0.3s ease;
+                margin: 2px;
+            }
+            .skill-badge:hover {
+                transform: scale(1.05);
+                background-color: #007bff;
+                color: white;
+            }
+            .search-container {
+                max-width: 500px;
+                margin: 0 auto 20px;
+            }
+            .roadmap-card.hidden {
+                display: none;
+            }
+            .mobile-view {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: white;
+                z-index: 1000;
+            }
+            .no-scroll {
+                overflow: hidden;
+            }
+            .skill-details-panel {
+                position: fixed;
+                top: 20%;
+                right: 5%;
+                width: 350px;
+                height: 60%;
+                background-color: white;
+                border: 1px solid #e0e0e0;
+                border-radius: 10px;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+                padding: 20px;
+                overflow-y: auto;
+                z-index: 1000;
+                display: none;
+            }
+            .skill-details-div {
+                width: 100%;
+                transition: all 0.3s ease;
+                animation: fadeIn 0.3s ease;
+            }
+            @keyframes fadeIn {
+                from { opacity: 0; transform: translateY(-10px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+            .skill-details-collapse {
+                width: 100%;
+                transition: all 0.3s ease;
+                animation: slideDown 0.3s ease;
+            }
+            @keyframes slideDown {
+                from { 
+                    opacity: 0; 
+                    max-height: 0;
+                    transform: translateY(-20px);
+                }
+                to { 
+                    opacity: 1; 
+                    max-height: 300px;
+                    transform: translateY(0);
+                }
+            }
+            .beginner-level .skill-badge {
+                cursor: pointer;
+            }
+            .skill-wrapper {
+                display: inline-block;
+                margin: 2px;
+            }
+
+            .skill-level {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 5px;
+                align-items: flex-start;
+            }
+
+            .skill-details-div {
+                width: 100%;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                display: none;
+            }
+
+            .skill-details-div.active {
+                display: block;
+                animation: slideDown 0.3s ease;
+            }
+
+            .no-results-message {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: rgba(255, 255, 255, 0.95);
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0,0,0,0.2);
+        text-align: center;
+        max-width: 300px;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        z-index: 1000;
+    }
+
+    .no-results-message.show {
+        opacity: 1;
+        visibility: visible;
+        animation: bounceIn 0.6s ease;
+    }
+
+    @keyframes bounceIn {
+        0% { transform: translate(-50%, -50%) scale(0.5); }
+        50% { transform: translate(-50%, -50%) scale(1.1); }
+        100% { transform: translate(-50%, -50%) scale(1); }
+    }
+        </style>
+    <!-- STYLE END -->
+    </head>
+
+    <body>
+
+
+        <!-- Hero Section -->
+        
+        <section id="home" class="hero" style="background-image: url('images/Landing-Page/images/hero-bg.svg')">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6" data-aos="fade-right">
+                        <div class="badge bg-light text-primary mb-3 p-2 mt-5">
+                            <i class="fas fa-star me-2"></i>Rated #1 DevOps Training Institute
+                        </div>
+                        <h1 class="display-4 fw-bold text-white mb-4">Master DevOps with Industry Experts</h1>
+                        <p class="lead text-white-50 mb-4">Join our comprehensive DevOps training program and transform your career with hands-on experience in the latest tools and technologies.</p>
+                        <div class="d-flex gap-3">
+                            <button class="btn btn-light btn-lg" onclick="downloadBrochure()">
+                                <i class="fas fa-download me-2"></i>Download Brochure
+                            </button>
+                            <button class="btn btn-outline-light btn-lg" onclick="previewCourse()">
+                                <i class="fas fa-play me-2"></i>Preview Course
+                            </button>
+                        </div>
+                        <div class="mt-4">
+                            <div class="row g-3">
+                                <div class="col-auto">
+                                    <div class="d-flex align-items-center">
+                                        <div class="rounded-circle bg-white p-3 me-3">
+                                            <i class="fas fa-users text-primary fa-2x"></i>
+                                        </div>
+                                        <div class="text-white">
+                                            <h3 class="counter mb-0" data-target="1000">0</h3>
+                                            <small>Students Trained</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-auto">
+                                    <div class="d-flex align-items-center">
+                                        <div class="rounded-circle bg-white p-3 me-3">
+                                            <i class="fas fa-certificate text-primary fa-2x"></i>
+                                        </div>
+                                        <div class="text-white">
+                                            <h3 class="counter mb-0" data-target="50">0</h3>
+                                            <small>Expert Trainers</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-6 bg-d" data-aos="fade-left">
+                        <div class="orbit-section">
+                            <div class="orbit-container">
+                                <!-- Center Image -->
+                                <div class="center-image">
+                                    <img src="images/Landing-Page/images/hero-illustration.svg" alt="DevOps Training" class="hero-illustration img-fluid">
+                                </div>
+                                
+                                <!-- Orbital Items -->
+                                <div class="orbit">
+                                    <!-- 1 image icon -->
+                                    <div class="orbital-item">
+                                        <img src="images/Landing-Page/images/docker-logo.svg" alt="Docker" class="orbital-logo">
+                                    </div>
+                                    <!-- 2 image icon -->
+                                    <div class="orbital-item">
+                                        <img src="images/Landing-Page/images/amazon-web-services.svg" alt="amazon" class="orbital-logo">
+                                    </div>
+                                    <!-- 3 image icon -->
+                                    <div class="orbital-item">
+                                        <img src="images/Landing-Page/images/kubernetes-logo.svg" alt="kun" class="orbital-logo">
+                                    </div>
+                                    <!-- 4 image icon -->
+                                    <div class="orbital-item">
+                                        <img src="images/Landing-Page/images/git-hub-enterprises.svg" alt="github" class="orbital-logo">
+                                    </div>
+                                    <!-- 5 image icon -->
+                                    <div class="orbital-item">
+                                        <img src="images/Landing-Page/images/jenkins.svg" alt="jenkins" class="orbital-logo">
+                                    </div>
+                                    
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="container mt-5 pt-5">
+            <h1 class="main-heading text-center mb-5">Learning Roadmaps</h1>
+            
+            <!-- Search Filter -->
+            <div class="search-container mb-4">
+                <input type="text" id="searchInput" class="form-control" placeholder="Search skills, roadmaps, or levels...">
+                <button id="clearSearch" type="button">&times;</button>
+            </div>
+<!-- Add this HTML right after the search container -->
+<div class="no-results-message">
+    <div class="text-danger mb-3">
+        <i class="fas fa-exclamation-circle fa-3x"></i>
+    </div>
+    <h5 class="mb-3">No Results Found</h5>
+    <p class="text-muted small">Sorry, we couldn't find any matching items.</p>
+    <button class="btn btn-sm btn-primary close-message">OK</button>
+</div>
+
+            <div id="roadmapsContainer" class="row roadmap-container g-4">
+                <!-- Roadmaps will be dynamically inserted here -->
+            </div>
+        </div>
+
+        <script>
+            function createSkillDetailHTML(skill) {
+                return `
+                    <div class="skill-details-div">
+                        <div class="skill-details-collapse">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                        <h5 class="card-title mb-0">${skill.name}</h5>
+                                        <button class="btn btn-sm btn-outline-secondary close-details">&times;</button>
+                                    </div>
+                                    <img src="assets/images/road_map/${skill.image || 'default-img.png'}" 
+                                        alt="${skill.name}" 
+                                        class="img-fluid rounded mb-3">
+                                    <p class="card-text text-muted">${skill.description || 'No description available.'}</p>
+                                    ${skill.resources ? `
+                                        <div class="resources-section mt-3">
+                                            <h6 class="mb-2"></h6>
+                                            <ul class="list-unstyled">
+                                                ${skill.resources.map(resource => `
+                                                    <li><a href="${resource.url}" target="_blank" class="text-primary">${resource.title}</a></li>
+                                                `).join('')}
+                                            </ul>
+                                        </div>
+                                    ` : ''}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }
+
+            function setupSearchFilter(container) {
+                const searchInput = document.getElementById('searchInput');
+                const clearSearchButton = document.getElementById('clearSearch');
+                let searchTimeout;
+
+                // Debounce function to prevent excessive filtering
+                function debounce(func, delay) {
+                    return function() {
+                        const context = this;
+                        const args = arguments;
+                        clearTimeout(searchTimeout);
+                        searchTimeout = setTimeout(() => func.apply(context, args), delay);
+                    };
+                }
+
+                // Function to toggle clear button visibility
+                function toggleClearButton() {
+                    clearSearchButton.style.display = searchInput.value.trim() ? 'block' : 'none';
+                }
+
+                // Initially hide clear button
+                clearSearchButton.style.display = 'none';
+
+                // Debounced search function
+                const performSearch = debounce((searchTerm) => {
+                    // Reset container to original grid layout
+                    container.style.gridTemplateColumns = window.innerWidth <= 768 ? '1fr' : 'repeat(3, 1fr)';
+                    container.style.gap = '1rem';
+
+                    let visibleCardsCount = 0;
+
+                    const roadmapCards = container.querySelectorAll('.roadmap-card-wrapper');
+                    roadmapCards.forEach((card, index) => {
+                        // Check if the card should be shown
+                        const shouldShow = 
+                            // Check roadmap title
+                            card.querySelector('.card-title').textContent.toLowerCase().includes(searchTerm) ||
+                            
+                            // Check levels
+                            [...card.querySelectorAll('.text-primary')].some(levelEl => 
+                                levelEl.textContent.toLowerCase().includes(searchTerm)
+                            ) ||
+                            
+                            // Check skills
+                            [...card.querySelectorAll('.skill-item')].some(skillEl => 
+                                skillEl.textContent.toLowerCase().includes(searchTerm)
+                            );
+                        
+                        // Toggle visibility and track visible cards
+                        if (shouldShow) {
+                            card.style.display = 'block';
+                            visibleCardsCount++;
+
+                            // Mobile layout: first visible card takes full width
+                            if (window.innerWidth <= 768) {
+                                if (visibleCardsCount === 1) {
+                                    card.style.gridColumn = '1 / -1';
+                                    card.style.width = '100%';
+                                } else {
+                                    card.style.gridColumn = 'auto';
+                                    card.style.width = '100%';
+                                }
+                            }
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+
+                    // Highlight matching terms
+                    if (searchTerm) {
+                        highlightSearchTerms(searchTerm);
+                    } else {
+                        removeHighlights();
+                    }
+                }, 250);
+
+                // Highlight search terms in text
+                function highlightSearchTerms(searchTerm) {
+                    const roadmapCards = container.querySelectorAll('.roadmap-card-wrapper');
+                    roadmapCards.forEach(card => {
+                        if (card.style.display !== 'none') {
+                            ['card-title', 'text-primary', 'skill-item'].forEach(className => {
+                                card.querySelectorAll(`.${className}`).forEach(el => {
+                                    const text = el.textContent;
+                                    const highlightedText = text.replace(
+                                        new RegExp(searchTerm, 'gi'), 
+                                        match => `<mark class="search-highlight">${match}</mark>`
+                                    );
+                                    el.innerHTML = highlightedText;
+                                });
+                            });
+                        }
+                    });
+                }
+
+                // Remove highlights
+                function removeHighlights() {
+                    const highlightedElements = container.querySelectorAll('.search-highlight');
+                    highlightedElements.forEach(el => {
+                        el.outerHTML = el.innerHTML;
+                    });
+                }
+
+                // Add event listeners for input and clear button
+                searchInput.addEventListener('input', (e) => {
+                    const searchTerm = e.target.value.toLowerCase().trim();
+                    
+                    // Toggle clear button visibility
+                    toggleClearButton();
+                    
+                    // Perform debounced search
+                    performSearch(searchTerm);
+                });
+
+                // Clear search functionality
+                clearSearchButton.addEventListener('click', () => {
+                    // Reset search input
+                    searchInput.value = '';
+                    
+                    // Hide clear button
+                    clearSearchButton.style.display = 'none';
+                    
+                    // Show all cards
+                    const roadmapCards = container.querySelectorAll('.roadmap-card-wrapper');
+                    roadmapCards.forEach(card => {
+                        card.style.display = 'block';
+                        
+                        // Reset mobile layout
+                        if (window.innerWidth <= 768) {
+                            card.style.gridColumn = 'auto';
+                            card.style.width = '100%';
+                        }
+                    });
+
+                    // Remove any highlights
+                    removeHighlights();
+
+                    // Reset container layout
+                    container.style.gridTemplateColumns = window.innerWidth <= 768 ? '1fr' : 'repeat(3, 1fr)';
+                    
+                    // Focus back on search input
+                    searchInput.focus();
+                });
+
+                // Responsive layout adjustment
+                function adjustMobileLayout() {
+                    const roadmapCards = container.querySelectorAll('.roadmap-card-wrapper');
+                    if (window.innerWidth <= 768) {
+                        // Reset all cards
+                        roadmapCards.forEach((card, index) => {
+                            card.style.display = 'block';
+                            card.style.width = '100%';
+                            
+                            // First card takes full width
+                            if (index === 0) {
+                                card.style.gridColumn = '1 / -1';
+                            } else {
+                                card.style.gridColumn = 'auto';
+                            }
+                        });
+                        
+                        // Set container to single column
+                        container.style.gridTemplateColumns = '1fr';
+                    } else {
+                        // Desktop layout
+                        roadmapCards.forEach((card) => {
+                            card.style.gridColumn = 'auto';
+                            card.style.width = '100%';
+                        });
+                        container.style.gridTemplateColumns = 'repeat(3, 1fr)';
+                    }
+                }
+
+                // Initial layout adjustment
+                adjustMobileLayout();
+
+                // Readjust on window resize
+                window.addEventListener('resize', adjustMobileLayout);
+            }
+
+            function setupSkillDetailInteraction() {
+                document.addEventListener('click', function(e) {
+                    const skillBadge = e.target.closest('.skill-badge');
+                    if (!skillBadge) {
+                        // If clicked outside a skill badge, close all details
+                        document.querySelectorAll('.skill-details-div').forEach(detail => {
+                            detail.remove();
+                        });
+                        document.querySelectorAll('.skill-badge').forEach(badge => {
+                            badge.classList.remove('active');
+                        });
+                        document.querySelectorAll('.skill-wrapper').forEach(wrapper => {
+                            wrapper.classList.remove('has-details');
+                        });
+                        return;
+                    }
+
+                    e.preventDefault();
+                    const skillName = skillBadge.textContent.trim();
+                    const wrapper = skillBadge.closest('.skill-wrapper');
+                    
+                    // Remove any existing open skill details
+                    document.querySelectorAll('.skill-details-div').forEach(detail => {
+                        detail.remove();
+                    });
+                    
+                    // Remove active class from all badges and wrappers
+                    document.querySelectorAll('.skill-badge').forEach(badge => {
+                        badge.classList.remove('active');
+                    });
+                    document.querySelectorAll('.skill-wrapper').forEach(w => {
+                        w.classList.remove('has-details');
+                    });
+                    
+                    // If clicking the same skill that's already open, just close it
+                    if (skillBadge.classList.contains('active')) {
+                        skillBadge.classList.remove('active');
+                        wrapper.classList.remove('has-details');
+                        return;
+                    }
+                    
+                    // Add active class to clicked badge and wrapper
+                    skillBadge.classList.add('active');
+                    wrapper.classList.add('has-details');
+                    
+                    // Create and insert the skill details after the badge
+                    const detailsHTML = createSkillDetailHTML({ 
+                        name: skillName,
+                        description: skillBadge.getAttribute('data-description'),
+                        image: skillBadge.getAttribute('data-image'),
+                        resources: [] // Add resources if available in your data
+                    });
+                    
+                    // Insert the details right after the badge
+                    skillBadge.insertAdjacentHTML('afterend', detailsHTML);
+                    
+                    // Show the details with animation
+                    const newDetails = wrapper.querySelector('.skill-details-div');
+                    requestAnimationFrame(() => {
+                        newDetails.classList.add('active');
+                    });
+
+                    // Add close button functionality
+                    const closeButton = newDetails.querySelector('.close-details');
+                    if (closeButton) {
+                        closeButton.addEventListener('click', () => {
+                            newDetails.remove();
+                            skillBadge.classList.remove('active');
+                            wrapper.classList.remove('has-details');
+                        });
+                    }
+                });
+            }
+
+            document.addEventListener('DOMContentLoaded', async () => {
+                setupSkillDetailInteraction();
+
+                const response = await fetch('assets/json/roadmap.json');
+                const data = await response.json();
+                const container = document.getElementById('roadmapsContainer');
+
+                data.roadmaps.forEach(roadmap => {
+                    const roadmapCard = document.createElement('div');
+                    roadmapCard.className = 'col-md-4 roadmap-card-wrapper';
+                    roadmapCard.innerHTML = `
+                        <div class="card roadmap-card h-100">
+                            <div class="card-body position-relative">
+                                ${roadmap.image ? `<img src="assets/images/road_map/${roadmap.image}" class="img-fluid rounded mb-3">` : ''}
+                                <h3 class="card-title">${roadmap.title}</h3>
+                                <p class="card-text">${roadmap.description}</p>
+                                ${roadmap.levels.map(level => `
+                                    <div class="mb-3 ${level.level.toLowerCase()}-level">
+                                        <h5 class="text-primary">${level.level} Level</h5>
+                                        <div class="skill-level">
+                                            ${level.skills.map(skillName => {
+                                                const skill = typeof skillName === 'string' ? { name: skillName } : skillName;
+                                                return `
+                                                    <div class="skill-wrapper">
+                                                        <span class="skill-badge badge bg-light text-dark skill-item" 
+                                                            data-skill="${skill.name}"
+                                                            data-description="${skill.description || 'No additional details available.'}"
+                                                            data-image="${skill.image || ''}"
+                                                            title="${skill.description || 'No additional details available.'}">
+                                                            ${skill.name}
+                                                        </span>
+                                                    </div>
+                                                `;
+                                            }).join('')}
+                                        </div>
+                                    </div>
+                                `).join('')}
+                            </div>
+                        </div>
+                    `;
+                    container.appendChild(roadmapCard);
+                });
+
+                // Setup search filter
+                setupSearchFilter(container);
+            });
+
+
+            /// Number count in hero section 
+            
+                        document.addEventListener('DOMContentLoaded', function() {
+                            const counters = document.querySelectorAll('.counter');
+                            
+                            const animateCounter = (element, target) => {
+                                let current = 0;
+                                const increment = target / 200; // Adjust speed by changing divider
+                                const updateCounter = () => {
+                                    current += increment;
+                                    if(current < target) {
+                                        element.textContent = Math.ceil(current);
+                                        requestAnimationFrame(updateCounter);
+                                    } else {
+                                        element.textContent = target;
+                                    }
+                                };
+                                requestAnimationFrame(updateCounter);
+                            };
+                        
+                            const observer = new IntersectionObserver((entries) => {
+                                entries.forEach(entry => {
+                                    if(entry.isIntersecting) {
+                                        const target = +entry.target.dataset.target;
+                                        animateCounter(entry.target, target);
+                                        observer.unobserve(entry.target);
+                                    }
+                                });
+                            }, { threshold: 0.5 }); // Start animation when 50% visible
+                        
+                            counters.forEach(counter => {
+                                observer.observe(counter);
+                            });
+                        });
+        </script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
