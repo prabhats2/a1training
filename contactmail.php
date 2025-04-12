@@ -15,6 +15,7 @@ if(isset($_POST['submitContact']))
     $email = $_POST['email'];
     $subject = $_POST['subject'];
     $message = $_POST['message'];
+    $address = $_POST['address'];
 
     
 
@@ -49,6 +50,7 @@ if(isset($_POST['submitContact']))
             <div>Email: '.$email.'</div>
             <div>Subject: '.$subject.'</div>
             <div>Message: '.$message.'</div>
+            <div>Address: '$address'</div>
             
         ';
     
