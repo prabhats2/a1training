@@ -59,15 +59,15 @@ document.write(`
         <li class="has-sub">
           <a href="javascript:void(0)">roadmap</a>
           <ul class="sub-menu">
-            <li><a href="professional-courses.html">Devops</a></li>
-            <li><a href="junior-geeks-coding.html">JavaScript</a></li>
+            <li><a href="RoadMaps.html">Devops</a></li>
+            <li><a href="#.html">FrontEnd</a></li>
 
             <!-- Nested Dropdown inside Sub Menu -->
             <li class="has-sub">
-              <a href="javascript:void(0)">Menu 1</a>
+              <a href="javascript:void(0)">Fullstack</a>
               <ul class="sub-menu">
                 <li class="has-sub">
-                  <a href="javascript:void(0)">Sub 1</a>
+                  <a href="javascript:void(0)">MEAN </a>
 
                   <ul class="sub-menu">
                     <li><a href="#">Sub 1.1</a></li>
@@ -75,15 +75,16 @@ document.write(`
                   </ul>
 
                 </li>
-                <li><a href="#">Sub 2</a></li>
+                <li><a href="#">MERN</a></li>
               </ul>
             </li>
 
             <li class="has-sub">
-              <a href="javascript:void(0)">Menu 2</a>
+              <a href="javascript:void(0)">cloud</a>
               <ul class="sub-menu">
-                <li><a href="#">Sub A</a></li>
-                <li><a href="#">Sub B</a></li>
+                <li><a href="#">AWS</a></li>
+                <li><a href="#">Azure</a></li>
+                <li><a href="#">GCP</a></li>
               </ul>
             </li>
           </ul>
@@ -184,12 +185,28 @@ document.querySelectorAll(".has-sub > a").forEach(menu => {
     if (!submenu || !submenu.classList.contains("sub-menu")) return;
 
     const parentMenu = this.closest("ul");
+
+    // Close all submenus except the current one
     parentMenu.querySelectorAll(".sub-menu").forEach(el => {
-      if (el !== submenu) el.style.display = "none";
+      if (el !== submenu) {
+        el.style.display = "none";
+        el.parentElement.classList.remove("open");
+      }
     });
 
-    submenu.style.display = submenu.style.display === "block" ? "none" : "block";
+    // Toggle the current submenu
+    const isOpen = submenu.style.display === "block";
+    submenu.style.display = isOpen ? "none" : "block";
+    this.parentElement.classList.toggle("open", !isOpen);
   });
 });
+
+// Optional: Prevent menu from closing on touch devices when clicking inside
+document.querySelectorAll(".sub-menu").forEach(sub => {
+  sub.addEventListener("click", e => {
+    e.stopPropagation(); // Stop bubbling up to close the menu
+  });
+});
+
 
  

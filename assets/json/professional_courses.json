@@ -85,8 +85,8 @@ var courses1 = {
             "download": "course_1",
             "image": "terraform.png",
             "description": "Terraform",
-            "syllabus" : ["assets/syllabus/#.pdf"],
-           "syllabus_name":["Terraform Questions & Answes  "]	
+            "syllabus" : ["assets/syllabus/Terraform-Syllabus.pdf"],
+           "syllabus_name":["Terraform Syllabus "]	
         },
         {
             "course_name": "AWS Training",
