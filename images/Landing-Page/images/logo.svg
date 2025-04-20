@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="50" viewBox="0 0 200 50" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background -->
+    <rect width="200" height="50" fill="none"/>
+    
+    <!-- DevOps Text -->
+    <text x="10" y="35" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#8e44ad">
+        Dev<tspan fill="#2ecc71">Ops</tspan>
+    </text>
+    
+    <!-- Infinity Symbol -->
+    <path d="M160 25 C160 15, 170 15, 170 25 C170 35, 160 35, 160 25 M170 25 C170 15, 180 15, 180 25 C180 35, 170 35, 170 25" 
+          stroke="#8e44ad" 
+          stroke-width="3" 
+          fill="none"/>
+          
+    <!-- Gear Icon -->
+    <path d="M140 25 L140 20 L145 18 L145 15 L140 13 L140 8 L145 6 L147 8 L150 6 L155 8 L155 13 L150 15 L150 18 L155 20 L155 25 L150 27 L147 25 L145 27 Z" 
+          fill="#2ecc71"/>
+</svg>

@@ -1,0 +1,578 @@
+{
+    "roadmaps": [
+        {
+            "title": "DevOps Fundamentals Roadmap",
+            "description": "A comprehensive path to mastering DevOps fundamentals and core technologies",
+            "image":"devops-fundamental-roadmap.png",
+            "levels": [
+                {
+                    "level": "Beginner",
+                    "skills": [
+                        {
+                            
+                            "name": "Linux Basics",
+                            "description": "Understand basic cloud computing principles and AWS service models.",
+                            "image": "linux_basics.png"
+                        },
+                        {
+                            "name": "Version Control with Git",
+                            "description": "Learn fundamental AWS services like EC2, S3, and IAM.",
+                            "image": "version_control_with_git.png"
+                        },
+                        {
+                            "name": "Basic Networking Concepts",
+                            "description": "Explore cloud deployment models and service types.",
+                            "image": "basic_networking_concepts.png"
+                        },
+                        {
+                            "name": "Introduction to Cloud Computing",
+                            "description": "Learn to navigate and manage AWS resources.",
+                            "image": "introduction_to_cloud_computing.png"
+                        }
+                        
+                    ]
+                },
+                {
+                    "level": "Intermediate",
+                    "skills": [
+                        {
+                            "name":"Containerization with Docker",
+                            "description": "Master virtual server configuration and management.",
+                            "image": "containerization_with_docker.png"
+                        },
+                        {
+                            "name": "Container Orchestration with Kubernetes",
+                            "description": "Learn object storage and data management techniques.",
+                            "image": "containerization_ orchestration_with_kubernetes.png"
+                        },
+                        {
+                            "name": "Continuous Integration (CI)",
+                            "description": "Learn to configure and manage virtual private clouds.",
+                            "image": "continuous_ci.png"
+                        },
+                        {
+                            "name": "Infrastructure as Code (Terraform)",
+                            "description": "Master identity and access management in AWS.",
+                            "image": "infrastructure_as_code_terraform.png"
+                        }
+                    ]
+                },
+                {
+                    "level": "Advanced",
+                    "skills": [
+                        {
+                            "name":"Advanced Kubernetes Configurations",
+                            "description": "Master virtual server configuration and management.",
+                            "image": "advances_kubernetes_configuration.png"
+                        },
+                        {
+                            "name": "Microservices Architecture",
+                            "description": "Learn object storage and data management techniques.",
+                            "image": "microservices_architecture.png"
+                        },
+                        {
+                            "name": "Advanced CI/CD Pipelines",
+                            "description": "Learn to configure and manage virtual private clouds.",
+                            "image": "advances_ci-cd_pipelines.png"
+                        },
+                        {
+                            "name": "Monitoring and Logging",
+                            "description": "Master identity and access management in AWS.",
+                            "image": "monitoring_and_logging.png"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Cloud Native DevOps Roadmap",
+            "description": "Specialized path for cloud-native DevOps technologies and practices",
+            "image":"cloud_native-devops-roadmap.png",
+            "levels": [
+                {
+                    "level": "Beginner",
+                    "skills": [
+                        {
+                            "name":"Cloud Fundamentals (AWS/Azure/GCP)",
+                            "description":"Cloud fundamentals involve understanding the core concepts and services offered by major cloud platforms like Amazon Web Services (AWS), Microsoft Azure, and Google Cloud Platform (GCP). This includes knowledge of:     <ul> <li><strong>Cloud Computing Models:</strong> <ul> <li>IaaS: Infrastructure-as-a-Service</li> <li>PaaS: Platform-as-a-Service</li> <li>SaaS: Software-as-a-Service</li> </ul> </li> <li><strong>Key Services:</strong> <ul> <li>Compute: Virtual Machines</li> <li>Storage: <ul> <li>AWS S3</li> <li>Azure Blob Storage</li> </ul> </li> <li>Serverless Computing: AWS Lambda</li> <li>Databases: Managed database services</li> <li>Networking: <ul> <li>VPCs</li> <li>Load Balancers</li> </ul> </li> </ul> </li> <li><strong>Core Concepts:</strong> <ul> <li>Scalability</li> <li>Elasticity</li> <li>Pay-as-you-go Pricing</li> <li>Global Infrastructure (Regions/Availability Zones)</li> </ul> </li> <li><strong>Deployment and Management:</strong> <ul> <li>AWS: AWS CloudFormation</li> <li>Azure: Azure Resource Manager</li> <li>GCP: GCP Deployment Manager</li> </ul> </li> <li><strong>Importance:</strong> Understanding these fundamentals is critical for building, deploying, and maintaining scalable and cost-efficient applications in the cloud.</li> </ul>    ",
+                            "image":"cloud-fundamental-aws-gcp-azure.png"
+                        },
+                        {
+                            "name":"Basic Scripting (Bash/Python)",
+                            "description":"Basic scripting skills in Bash (for Linux/macOS) and Python enable automation of repetitive tasks and system management. <ul> <li><strong>Bash:</strong> <ul> <li>Used for writing shell scripts to automate file operations, process management, backups, or environment setups (e.g., cron jobs, log parsing).</li> </ul> </li> <li><strong>Python:</strong> <ul> <li>A versatile language for scripting tasks like data processing, API interactions, or system automation using libraries like os, subprocess, or requests.</li> <li>Scripting simplifies workflows, reduces manual effort, and ensures consistency in tasks such as deployment, monitoring, or configuration management.</li> </ul> </li> </ul> ",
+                            "image":"basic-script.png"
+                        },
+                        {
+                            "name":"Web Services Basics",
+                            "description":"Web services are the backbone of modern applications, enabling communication between systems over the internet. Key concepts include: <ul> <li><strong>APIs:</strong> <ul> <li>RESTful APIs (using HTTP methods like GET/POST)</li> <li>SOAP for structured data exchange</li> </ul> </li> <li><strong>Data formats:</strong> <ul> <li>JSON</li> <li>XML for transmitting data between clients and servers</li> </ul> </li> <li><strong>Authentication/Authorization:</strong> <ul> <li>API keys</li> <li>OAuth 2.0</li> <li>JWT (JSON Web Tokens) to secure access</li> </ul> </li> <li><strong>Tools:</strong> <ul> <li>Postman or curl for testing APIs</li> <li>Frameworks like Flask (Python) or Express (Node.js) for building services</li> </ul> </li> </ul> ",
+                            "image":"web-service-basics.png"
+                        },{
+                            "name":"Basic Security Concepts",
+                            "description":" Security fundamentals focus on protecting systems, data, and users from threats. Core topics include:   <ul> <li><strong>CIA Triad:</strong> <ul> <li>Confidentiality (data privacy)</li> <li>Integrity (data accuracy)</li> <li>Availability (reliable access)</li> </ul> </li> <li><strong>Common threats:</strong> <ul> <li>Malware</li> <li>Phishing</li> <li>DDoS attacks</li> <li>Insider threats</li> </ul> </li> <li><strong>Security practices:</strong> <ul> <li>Encryption (SSL/TLS)</li> <li>Firewalls</li> <li>Access controls (RBAC)</li> <li>Multi-factor authentication (MFA)</li> </ul> </li> <li><strong>Compliance:</strong> <ul> <li>Standards like GDPR, HIPAA, or PCI-DSS for data protection</li> </ul> </li> <li><strong>Cloud security:</strong> <ul> <li>Shared responsibility models</li> <li>IAM (Identity and Access Management)</li> <li>Securing APIs/network configurations</li> </ul> </li> </ul>",
+                            "image":"basic-security-concept.png"
+                        }
+                    ]
+                },
+                {
+                    "level": "Intermediate",
+                    "skills": [
+                        {
+                            "name":"Advanced Cloud Services",
+                            "description":"Advanced Cloud Services refer to the more sophisticated and specialized cloud computing offerings that go beyond basic infrastructure-as-a-service (IaaS) and platform-as-a-service (PaaS). These services cater to more complex workloads, offering increased flexibility, automation, security, and scalability. Here are a few examples: <br> <br> <strong> Cloud AI and Machine Learning Services : </strong> Many cloud providers offer pre-built AI and ML models, as well as the tools to create custom models. These services allow organizations to leverage advanced analytics, data-driven decision-making, and automation without deep expertise in AI/ML. Examples include AWS SageMaker, Azure Machine Learning, and Google AI Platform. These platforms provide tools for training, testing, and deploying machine learning models at scale. <br><br> <strong>Edge Computing : </strong> Edge computing involves processing data closer to where it’s generated (i.e., at the 'edge' of the network), rather than sending it all back to centralized data centers. This reduces latency, minimizes bandwidth usage, and enables faster data processing. Cloud providers offer edge computing services, such as AWS Greengrass and Azure IoT Edge, which enable devices and systems to process and act on data locally in real-time. <br> <br> <strong>Cloud Databases and Managed Services : </strong> Cloud providers offer managed database services that handle the heavy lifting of database administration, including automatic backups, scaling, and patching. Examples include Amazon RDS, Azure SQL Database, and Google Cloud SQL. These services support various database types, from relational to NoSQL databases, and provide high availability and disaster recovery solutions. <br> <br> <strong>Cloud-native Networking and Security Services : </strong> Advanced cloud networking services offer capabilities like content delivery networks (CDNs), virtual private clouds (VPCs), and load balancing for distributed applications. AWS Direct Connect and Azure Virtual WAN enable private, high-speed network connections between on-premises infrastructure and the cloud. Advanced security services, such as AWS Shield and Azure Security Center, help protect cloud infrastructure from attacks and ensure compliance with regulations. <br> <strong>Serverless Computing at Scale : </strong> Serverless computing at an advanced level means utilizing fully managed services that automatically scale depending on the workload. These services allow developers to build applications without worrying about infrastructure management. AWS Lambda, Azure Functions, and Google Cloud Functions are examples of such serverless platforms, which allow for event-driven architectures that can scale seamlessly without manual intervention. <br> <br> <strong>Cloud Automation and DevOps Services</strong> Advanced cloud services also include automation tools that integrate with DevOps pipelines. These tools help teams automatically deploy and manage infrastructure. Examples include AWS CloudFormation, Azure Resource Manager, and Google Cloud Deployment Manager. These services help organizations adopt infrastructure-as-code, automate scaling, and streamline continuous integration/continuous deployment (CI/CD) pipelines. <br> <br> <strong>Cloud Storage and Data Lakes : </strong> Cloud providers offer services for scalable storage solutions and data lakes to support big data analytics. Examples include Amazon S3, Google Cloud Storage, and Azure Blob Storage. Data lakes allow organizations to store structured and unstructured data at scale, providing a centralized repository for analytics and machine learning workloads. <br> <strong>Hybrid Cloud Solutions : </strong> Advanced hybrid cloud services allow businesses to seamlessly integrate on-premises resources with public and private cloud environments. This is beneficial for businesses that need to maintain certain workloads in-house while taking advantage of the cloud for scalability. Examples include Azure Arc, AWS Outposts, and Google Anthos, which enable a unified environment for managing applications across on-premises and cloud infrastructure.",
+                            "image":"advance-cloud-services.png"
+                        },
+                        {
+                            "name":"Serverless Computing",
+                            "description":"Serverless computing allows you to build and run applications without managing the infrastructure. In this model, the cloud provider automatically handles the scaling and provisioning of servers based on demand. You only pay for the actual compute time your code uses, rather than for idle server time. Examples of serverless platforms include AWS Lambda and Azure Functions. This architecture is well-suited for event-driven applications, such as processing data from IoT devices, triggering functions from database changes, or responding to HTTP requests.",
+                            "image":"serverless-computing.png"
+                        },
+                        {
+                            "name":"Cloud Security Best Practices",
+                            "description":"<ul> <li><strong>Data encryption:</strong> Both in transit and at rest.</li> <li><strong>Identity and access management (IAM):</strong> Implementing role-based access control (RBAC), least privilege principles, and multi-factor authentication (MFA) to ensure only authorized users access resources.</li> <li><strong>Regular audits:</strong> Continuously monitor cloud resources for unusual activity and perform periodic security assessments.</li> <li><strong>Backup and disaster recovery:</strong> Ensuring data resilience by creating robust backup plans and disaster recovery strategies.</li> <li><strong>Security automation:</strong> Using tools and scripts to automate security monitoring, vulnerability scanning, and patch management.</li> </ul>",
+                            "image":"cloud-security-best-practise.png"
+                        },{
+                            "name":"Containerization and Orchestration",
+                            "description":"Containerization involves packaging applications and their dependencies into containers, which are isolated environments that can run consistently across different computing environments. Popular container technologies include Docker. Orchestration refers to managing and automating the deployment, scaling, and operation of containerized applications. Kubernetes is the most widely used orchestration tool, helping to manage large-scale deployments, auto-scaling, load balancing, and maintaining system health. Together, containerization and orchestration enable faster development cycles, better resource utilization, and enhanced scalability for cloud-native applications.",
+                            "image":"containerization-and-orchestration.png"
+                        }
+                    ]
+                },
+                {
+                    "level": "Advanced",
+                    "skills": [
+                        {
+                            "name":"Multi-Cloud Strategies",
+                            "description":"",
+                            "image":"multi-cloud-stratgies.png"
+                        },
+                        {
+                            "name":"Advanced Cloud Architecture",
+                            "description":"",
+                            "image":"advance-cloud-architechture.png"
+                        },
+                        {
+                            "name":"Cloud Cost Optimization",
+                            "description":"",
+                            "image":"cloud-cost-optimization.png"
+                        },{
+                            "name":"Enterprise Cloud Governance",
+                            "description":"",
+                            "image":"enterprise-cloud-governance.png"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Site Reliability Engineering (SRE) Roadmap",
+            "description": "Path to becoming a Site Reliability Engineer with focus on system reliability and scalability",
+            "image":"site_reliability_engineering-roadmap.png",
+            "levels": [
+                {
+                    "level": "Beginner",
+                    "skills": [
+                        {
+                            "name":"System Administration",
+                            "description":"",
+                            "image":"system-administration.png"
+                        },
+                        {
+                            "name":"Basic Networking",
+                            "description":"",
+                            "image":"basic-networking.png"
+                        },
+                        {
+                            "name":"Performance Monitoring",
+                            "description":"",
+                            "image":"performance-monitoring.png"
+                        },{
+                            "name":"Incident Response Basics",
+                            "description":"",
+                            "image":"incident-response-basics.png"
+                        }
+                    ]
+                },
+                {
+                    "level": "Intermediate",
+                    "skills": [
+                        {
+                            "name":"Advanced Monitoring Tools",
+                            "description":"",
+                            "image":"advance-monitoring-tools.png"
+                        },
+                        {
+                            "name":"Chaos Engineering",
+                            "description":"",
+                            "image":"chaos-engineering.png"
+                        },
+                        {
+                            "name":"Performance Optimization",
+                            "description":"",
+                            "image":"performance-optimization.png"
+                        },{
+                            "name":"Scalability Principles",
+                            "description":"",
+                            "image":"scalability-principles.png"
+                        }
+                    ]
+                },
+                {
+                    "level": "Advanced",
+                    "skills": [
+                        {
+                            "name":"Complex System Design",
+                            "description":"",
+                            "image":"complex-system-design.png"
+                        },
+                        {
+                            "name":"Advanced Reliability Patterns",
+                            "description":"",
+                            "image":"advance-reliabilty-patterns.png"
+                        },
+                        {
+                            "name":"Global Scale Architecture",
+                            "description":"",
+                            "image":"global-scale-architechture.png"
+                        },{
+                            "name":"Predictive Failure Analysis",
+                            "description":"",
+                            "image":"predictive-failure-analysis.png"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "AWS Cloud Practitioner Roadmap",
+            "description": "Comprehensive path to becoming an AWS Cloud Professional from beginner to advanced",
+            "image":"AWS_cloud_practitioner-roadmap.png",
+            "levels": [
+                {
+                    "level": "Beginner",
+                    "skills": [
+                        {
+                            "name": "AWS Cloud Concepts",
+                            "description": "Understand basic cloud computing principles and AWS service models.",
+                            "image": "aws-cloud-concepts.png"
+                        },
+                        {
+                            "name": "AWS Core Services",
+                            "description": "Learn fundamental AWS services like EC2, S3, and IAM.",
+                            "image": "aws-core-services.png"
+                        },
+                        {
+                            "name": "Cloud Computing Fundamentals",
+                            "description": "Explore cloud deployment models and service types.",
+                            "image": "cloud-computing-fundamentals.png"
+                        },
+                        {
+                            "name": "AWS Management Console",
+                            "description": "Learn to navigate and manage AWS resources.",
+                            "image": "aws-mangement-console.png"
+                        },
+                        {
+                            "name": "Basic Networking in AWS",
+                            "description": "Understand AWS networking fundamentals.",
+                            "image": "basic-networking-in-aws.png"
+                        }
+                    ]
+                },
+                {
+                    "level": "Intermediate",
+                    "skills": [
+                        {
+                            "name": "EC2 Instance Management",
+                            "description": "Master virtual server configuration and management.",
+                            "image": "ec2-instance-management.png"
+                        },
+                        {
+                            "name": "S3 Storage Solutions",
+                            "description": "Learn object storage and data management techniques.",
+                            "image": "s3-storage-solutions.png"
+                        },
+                        {
+                            "name": "VPC Configuration",
+                            "description": "Learn to configure and manage virtual private clouds.",
+                            "image": "vpc-configuration.png"
+                        },
+                        {
+                            "name": "IAM Security",
+                            "description": "Master identity and access management in AWS.",
+                            "image": "iam-security.png"
+                        },
+                        {
+                            "name": "RDS Database Services",
+                            "description": "Learn relational database service management.",
+                            "image": "rds-database-service.png"
+                        },
+                        {
+                            "name": "CloudWatch Monitoring",
+                            "description": "Master monitoring and logging in AWS.",
+                            "image": "cloudwatch-monitoring.png"
+                        }
+                    ]
+                },
+                {
+                    "level": "Advanced",
+                    "skills": [
+                        {
+                            "name": "Advanced Networking",
+                            "description": "Learn advanced networking concepts in AWS.",
+                            "image": "advance-networking.png"
+                        },
+                        {
+                            "name": "Serverless Architecture",
+                            "description": "Master serverless computing in AWS.",
+                            "image": "serverless-architecture.png"
+                        },
+                        {
+                            "name": "Lambda Functions",
+                            "description": "Learn event-driven computing with AWS Lambda.",
+                            "image": "lambda-functions.png"
+                        },
+                        {
+                            "name": "CloudFormation",
+                            "description": "Master infrastructure as code with AWS CloudFormation.",
+                            "image": "cloudformation.png"
+                        },
+                        {
+                            "name": "Advanced Security",
+                            "description": "Learn advanced security practices in AWS.",
+                            "image": "advance-security.png"
+                        },
+                        {
+                            "name": "Multi-Region Deployment",
+                            "description": "Master deploying applications across multiple AWS regions.",
+                            "image": "multi-region-deployment.png"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Python Developer Roadmap",
+            "description": "Complete learning path for Python programming from basics to advanced applications",
+            "image":"python_developer-roadmap.png",
+            "levels": [
+                {
+                    "level": "Beginner",
+                    "skills": [
+                        {
+                            "name": "Python Syntax",
+                            "description": "Learn basic programming constructs and Python language syntax.",
+                            "image": "python-syntax.png"
+                        },
+                        {
+                            "name": "Data Types",
+                            "description": "Understand Python's fundamental data structures and types.",
+                            "image": "data-types.png"
+                        },
+                        {
+                            "name": "Control Structures",
+                            "description": "Learn conditional statements, loops, and functions.",
+                            "image": "control-strucuture.png"
+                        },
+                        {
+                            "name": "Functions",
+                            "description": "Master reusable code blocks in Python.",
+                            "image": "functions.png"
+                        },
+                        {
+                            "name": "Basic OOP",
+                            "description": "Learn object-oriented programming basics in Python.",
+                            "image": "basics-oop.png"
+                        },
+                        {
+                            "name": "Error Handling",
+                            "description": "Master exception handling and debugging techniques.",
+                            "image": "error-handling.png"
+                        }
+                    ]
+                },
+                {
+                    "level": "Intermediate",
+                    "skills": [
+                        {
+                            "name": "Advanced OOP",
+                            "description": "Master object-oriented programming concepts in Python.",
+                            "image": "advanced-oop.png"
+                        },
+                        {
+                            "name": "Decorators",
+                            "description": "Learn advanced function modification techniques.",
+                            "image": "decorators.png"
+                        },
+                        {
+                            "name": "Generators",
+                            "description": "Master lazy iteration and generator functions.",
+                            "image": "generators.png"
+                        },
+                        {
+                            "name": "File Handling",
+                            "description": "Learn to read and write files in Python.",
+                            "image": "file-handling.png"
+                        },
+                        {
+                            "name": "Modules and Packages",
+                            "description": "Master organizing and distributing Python code.",
+                            "image": "modules-and-packages.png"
+                        },
+                        {
+                            "name": "Virtual Environments",
+                            "description": "Learn to manage dependencies and environments.",
+                            "image": "virtual-environments.png"
+                        }
+                    ]
+                },
+                {
+                    "level": "Advanced",
+                    "skills": [
+                        {
+                            "name": "Async Programming",
+                            "description": "Master asynchronous programming in Python.",
+                            "image": "async-programming.png"
+                        },
+                        {
+                            "name": "Metaprogramming",
+                            "description": "Learn advanced code generation and manipulation techniques.",
+                            "image": "metaprogramming.png"
+                        },
+                        {
+                            "name": "Advanced Algorithms",
+                            "description": "Master complex algorithms and data structures.",
+                            "image": "advanced-algorithms.png"
+                        },
+                        {
+                            "name": "Performance Optimization",
+                            "description": "Learn to optimize Python code for performance.",
+                            "image": "performance-optimization.png"
+                        },
+                        {
+                            "name": "Design Patterns",
+                            "description": "Master reusable design patterns in Python.",
+                            "image": "design-patterns.png"
+                        },
+                        {
+                            "name": "Python Internals",
+                            "description": "Learn about Python's internal mechanics and implementation.",
+                            "image": "python-internals.png"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Machine Learning Engineer Roadmap",
+            "description": "Comprehensive journey to become a Machine Learning professional",
+            "image":"machine_learning_roadmap.png",
+            "levels": [
+                {
+                    "level": "Beginner",
+                    "skills": [
+                        {
+                            "name": "Python Fundamentals",
+                            "description": "Build a strong foundation in Python programming for ML.",
+                            "image": "python-fundamentals.png"
+                        },
+                        {
+                            "name": "Mathematics for ML",
+                            "description": "Learn essential mathematical concepts for machine learning.",
+                            "image": "mathematics-for-ml.png"
+                        },
+                        {
+                            "name": "NumPy Basics",
+                            "description": "Master numerical computing in Python.",
+                            "image": "numpy-basics.png"
+                        },
+                        {
+                            "name": "Pandas Data Manipulation",
+                            "description": "Learn data manipulation and analysis with Pandas.",
+                            "image": "pandas-data-manipulations.png"
+                        },
+                        {
+                            "name": "Basic Statistics",
+                            "description": "Understand statistical concepts and measures.",
+                            "image": "basic-statistics.png"
+                        },
+                        {
+                            "name": "Visualization Techniques",
+                            "description": "Master data visualization with popular libraries.",
+                            "image": "visualization-techniques.png"
+                        }
+                    ]
+                },
+                {
+                    "level": "Intermediate",
+                    "skills": [
+                        {
+                            "name": "Scikit-Learn",
+                            "description": "Master machine learning library for Python.",
+                            "image": "scikit-learn.png"
+                        },
+                        {
+                            "name": "Machine Learning Algorithms",
+                            "description": "Learn popular ML algorithms and techniques.",
+                            "image": "machine-learning-algorithms.png"
+                        },
+                        {
+                            "name": "Feature Engineering",
+                            "description": "Learn techniques to prepare and transform data.",
+                            "image": "feature-engineering.png"
+                        },
+                        {
+                            "name": "Model Evaluation",
+                            "description": "Master model evaluation metrics and techniques.",
+                            "image": "modal-evaluation.png"
+                        },
+                        {
+                            "name": "Supervised Learning",
+                            "description": "Learn supervised learning techniques and algorithms.",
+                            "image": "spervised-learning.png"
+                        },
+                        {
+                            "name": "Unsupervised Learning",
+                            "description": "Master unsupervised learning techniques and algorithms.",
+                            "image": "unsupervised-learning.png"
+                        }
+                    ]
+                },
+                {
+                    "level": "Advanced",
+                    "skills": [
+                        {
+                            "name": "Deep Learning",
+                            "description": "Master deep learning concepts and techniques.",
+                            "image": "deep-learning.png"
+                        },
+                        {
+                            "name": "Neural Networks",
+                            "description": "Learn neural network architectures and training techniques.",
+                            "image": "neural-networks.png"
+                        },
+                        {
+                            "name": "TensorFlow/PyTorch",
+                            "description": "Master popular deep learning frameworks.",
+                            "image": "tensor-flow/py-torch.png"
+                        },
+                        {
+                            "name": "Computer Vision",
+                            "description": "Learn computer vision concepts and techniques.",
+                            "image": "computer-vision.png"
+                        },
+                        {
+                            "name": "Natural Language Processing",
+                            "description": "Master NLP concepts and techniques.",
+                            "image": "natural-language-processing.png"
+                        },
+                        {
+                            "name": "Reinforcement Learning",
+                            "description": "Learn reinforcement learning concepts and techniques.",
+                            "image": "reinforcement-learning.png"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+  }
+  
