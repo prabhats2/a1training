@@ -145,6 +145,11 @@ https://templatemo.com/tm-569-edu-meeting
     </div>
     <div class="col-lg-12">
       <fieldset>
+        <textarea name="Address" class="form-control" id="address" placeholder="YOUR Address..." rows="4"></textarea>
+      </fieldset>
+    </div>
+    <div class="col-lg-12">
+      <fieldset>
         <button type="submit" name="submitContact" class="btn btn-primary">Send Mail</button>
       </fieldset>
     </div>

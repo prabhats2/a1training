@@ -132,7 +132,10 @@
                         <label for="message">Message</label>
                         <textarea name="message" id="message" required class="form-control" rows="3"></textarea>
                     </div>
-                    
+                    <div class="mb-3">
+                        <label for="address">Address</label>
+                        <textarea name="address" id="address"  class="form-control" rows="3"></textarea>
+                    </div>
                     <div class="mb-3">
                         <button type="submit" name="submitContact" class="btn btn-primary">Send Mail</button>
                     </div>
