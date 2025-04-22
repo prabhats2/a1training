@@ -11,7 +11,7 @@ var junior ={
             "description": "Python",
             "syllabus": ["assets/syllabus/Python_for_kids.pdf"],
             "syllabus_name": ["Python Syllabus"]
-        },
+        }, 
         {
             "course_name": "Computer Science 11th",
             "class": ["class-11-12"],
@@ -168,6 +168,8 @@ var junior ={
             "syllabus": ["assets/pdf/junior_geeks/Tally.pdf"],
             "syllabus_name": ["Tally Syllabus"]
         },
+        
+       
         {
             "course_name": "Typing",
             "class": ["class-5-8"],
@@ -178,6 +180,7 @@ var junior ={
             "description": "Typing",
             "syllabus": ["assets/pdf/junior_geeks/typing.pdf"],
             "syllabus_name": ["Typing Syllabus"]
-        }
+        },
+       
     ]
 }
