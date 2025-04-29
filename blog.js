@@ -1,9 +1,9 @@
 for (let i = 0; i < blog.col1.length; i++) {
     let descriptionContent = '';
 
-     if (blog.col1[i].descriptions === 'Computer') {
+     if (blog.col1[i].title === 'Computer_Science') {
         descriptionContent = `
-        <span id="Computer">
+        <span id="Computer_Science">
            <div class="content-container">
 
     <h1 class="main-heading">Adobe Illustrator Training at A1 Training Institute</h1>
@@ -49,7 +49,7 @@ for (let i = 0; i < blog.col1.length; i++) {
 
 </div>
         </span>`;
-    } else if (blog.col1[i].descriptions === 'Photoshop') {
+    } else if (blog.col1[i].title === 'Photoshop') {
         descriptionContent = `
         <span id="Photoshop">
          <div class="content-container">
@@ -95,7 +95,7 @@ for (let i = 0; i < blog.col1.length; i++) {
 </div>
 
           </span>`;
-    } else if (blog.col1[i].descriptions === 'Illustrator') {
+    } else if (blog.col1[i].title === 'Illustrator') {
         descriptionContent = `
         <span id="Illustrator">
          <div class="content-container">
@@ -141,7 +141,7 @@ for (let i = 0; i < blog.col1.length; i++) {
 </div>
 
           </span>`;
-    } else if (blog.col1[i].descriptions === 'Canva') {
+    } else if (blog.col1[i].title === 'Canva') {
         descriptionContent = `
         <span id="Canva">
          <div class="content-container">
@@ -187,9 +187,9 @@ for (let i = 0; i < blog.col1.length; i++) {
 </div>
 
           </span>`;
-    } else if (blog.col1[i].descriptions === 'Database') {
+    } else if (blog.col1[i].title === 'DataBase') {
         descriptionContent = `
-        <span id="Database">
+        <span id="DataBase">
          <div class="content-container">
 
     <h1 class="main-heading">Web Development Training at A1 Training Institute</h1>
@@ -233,9 +233,9 @@ for (let i = 0; i < blog.col1.length; i++) {
 </div>
 
           </span>`;
-    } else if (blog.col1[i].descriptions === 'CandCplus') {
+    } else if (blog.col1[i].title === 'c_and_C_plus') {
         descriptionContent = `
-        <span id="CandCplus">
+        <span id="c_and_C_plus">
          <div class="content-container">
 
     <h1 class="main-heading">Web Development Training at A1 Training Institute</h1>
@@ -279,9 +279,9 @@ for (let i = 0; i < blog.col1.length; i++) {
 </div>
 
           </span>`;
-    } else if (blog.col1[i].descriptions === 'Corel') {
+    } else if (blog.col1[i].title === 'Corel_Draw') {
         descriptionContent = `
-        <span id="Corel">
+        <span id="Corel_Draw">
          <div class="content-container">
 
     <h1 class="main-heading">Web Development Training at A1 Training Institute</h1>
@@ -325,9 +325,55 @@ for (let i = 0; i < blog.col1.length; i++) {
 </div>
 
           </span>`;
-    } else if (blog.col1[i].descriptions === 'GameDevelopment') {
+    } else if (blog.col1[i].title === 'Game_Development') {
         descriptionContent = `
-        <span id="GameDevelopment">
+        <span id="Game_Development">
+         <div class="content-container">
+
+    <h1 class="main-heading">Web Development Training at A1 Training Institute</h1>
+
+    <p class="description">Web Development at A1 Training Institute equips students with the essential skills to build and maintain dynamic websites. This course covers both front-end and back-end development, including HTML, CSS, JavaScript, and server-side programming languages such as PHP and Node.js. Participants will learn about responsive design, user experience, and the latest web development frameworks. Through hands-on projects, students will create fully functional websites, gaining practical experience in web design, coding, and deployment. By the end of the course, participants will be prepared to enter the fast-paced world of web development, armed with the tools to create engaging online experiences.</p>
+
+    <ul class="feature-list">
+        <li class="feature-item">&#10003; Comprehensive coverage of front-end and back-end web development technologies</li>
+        <li class="feature-item">&#10003; Hands-on assignments to support theoretical concepts</li>
+        <li class="feature-item">&#10003; Interactive and project-oriented lab sessions on web development</li>
+    </ul>
+
+    <h4 class="sub-heading">We provide the No.1 Web Development training program in Delhi NCR, including Noida Extension and Greater Noida. We offer flexible training options, including classroom and online training. Our training centers are located across Delhi NCR, Noida Extension, and Greater Noida, ensuring convenient access for all students.</h4>
+
+    <div class="button-container">
+        <button class="custom-button"  data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
+        <button class="custom-button">Contact Course Advisor</button>
+    </div>
+
+    <div class="training-container mt-5">
+        <div class="row">
+            <div class="training-col">
+                <h3>40+ Hrs</h3>
+                <p>Hands-On Training</p>
+            </div>
+            <div class="training-col">
+                <h3>2 Live</h3>
+                <p>Projects For Hands-On Learning</p>
+            </div>
+            <div class="training-col">
+                <h3>50 Hrs</h3>
+                <p>Practical Assignments</p>
+            </div>
+            <div class="training-col">
+                <h3>24/7</h3>
+                <p>Lifetime Access To Support Team</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+          </span>`;
+    } else if (blog.col1[i].title === 'Terraform') {
+        descriptionContent = `
+        <span id="Terraform">
          <div class="content-container">
 
     <h1 class="main-heading">Web Development Training at A1 Training Institute</h1>

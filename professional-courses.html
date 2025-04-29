@@ -349,8 +349,6 @@
                 }
               }
 
-            </script>
-            <script>
               // Check localStorage for the modal to show
               document.addEventListener("DOMContentLoaded", function () {
                 const modalToShow = localStorage.getItem('modalToShow');
@@ -538,6 +536,8 @@
                   });
                 }
               });
+
+              
               document.getElementById('Mobile').addEventListener('input', function (e) {
                 var x = e.target.value.replace(/\D/g, '');
                 if (x.length > 10) {

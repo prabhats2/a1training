@@ -8,7 +8,7 @@
     <!-- Keep only one Bootstrap version -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-   
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
@@ -18,11 +18,12 @@
     <script type="text/javascript" src="assets/json/blog.json"></script>
     <script type="text/javascript" src="blog.js"></script>
 
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Bootstrap JS and Popper.js -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
-    
+
     <!-- jQuery (optional) -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
@@ -32,35 +33,34 @@
     <link rel="stylesheet" href="assets/css/owl.css">
     <link rel="stylesheet" href="assets/css/lightbox.css">
     <style>
-
-.post-section {
-    border: 1px solid #ddd;
-    padding: 10px;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-}
-
-.post {
-    padding: 8px;
-    border-bottom: 1px solid #ddd;
-}
-
-.post:last-child {
-    border-bottom: none;
-}
-
+        .post-section {
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+    
+        .post {
+            padding: 8px;
+            border-bottom: 1px solid #ddd;
+        }
+    
+        .post:last-child {
+            border-bottom: none;
+        }
+    
         /* Section Styles */
         #blog {
             padding: 2rem 0;
             background-image: url(assets/images/meetings-bg.jpg);
         }
-
+    
         /* Header Styles */
         #blog h2 {
             font-size: 2.5rem;
             margin-bottom: 1.5rem;
         }
-
+    
         /* Card Styles */
         .card {
             transition: transform 0.3s;
@@ -68,17 +68,17 @@
             overflow: hidden;
             /* Ensure no overflow from cards */
         }
-
+    
         .card:hover {
             transform: scale(1.05);
         }
-
+    
         /* Featured Post Styles */
         #blog .mb-4 img {
             border-radius: 1rem;
             padding: 3px;
         }
-
+    
         #sidebar {
             position: sticky;
             top: 80px;
@@ -92,79 +92,79 @@
             z-index: 1;
             border-radius: 0.9rem;
         }
-
+    
         /* Sidebar Styles */
         .sidebar h4 {
             font-size: 1.5rem;
             margin-bottom: 1rem;
         }
-
+    
         .sidebar .list-group-item {
             background-color: #ffffff;
             border: 0px solid #ddd;
             border-radius: 0.9rem;
             transition: background-color 0.3s;
         }
-
+    
         .sidebar .list-group-item:hover {
             background-color: #e9ecef;
         }
-
+    
         /* Responsive Styles */
         @media (max-width: 768px) {
             #blog h2 {
                 font-size: 2rem;
             }
-
+    
             .card {
                 margin-bottom: 1.5rem;
             }
         }
-
+    
         /* Animation Styles */
         .fade-in {
             animation: fadeIn 0.5s forwards;
         }
-
+    
         .fade-out {
             animation: fadeOut 0.5s forwards;
         }
-
+    
         @keyframes fadeIn {
             from {
                 transform: scale(0.8);
                 opacity: 0;
             }
-
+    
             to {
                 transform: scale(1);
                 opacity: 1;
             }
         }
-
+    
         @keyframes fadeOut {
             from {
                 transform: scale(1);
                 opacity: 1;
             }
-
+    
             to {
                 transform: scale(0.8);
                 opacity: 0;
             }
         }
-
+    
         .fade-out {
             opacity: 0;
             transition: opacity 0.5s ease;
             /* Smooth transition */
         }
-
+    
         #sidebar {
             transition: opacity 0.5s ease;
             /* Smooth transition for visibility */
         }
-
+    
         .post {
             border: 1px solid #ccc;
             border-radius: 5px;
@@ -173,16 +173,16 @@
             /* Adjust margin to minimize space */
             cursor: pointer;
         }
-
+    
         .post-image {
             width: 100%;
             border-radius: 5px;
         }
-
+    
         .post-title {
             margin: 10px 0;
         }
-
+    
         .overlay {
             position: fixed;
             top: 0;
@@ -194,14 +194,14 @@
             z-index: 9999;
             /* Ensure overlay is on top */
         }
-
+    
         .overlay-content {
             background-color: #fff;
             padding: 20px;
             border-radius: 5px;
             width: 80%;
             max-height: 90%;
-
+    
             position: relative;
             margin: 0 auto;
             /* Center overlay content */
@@ -210,13 +210,13 @@
             transform: translateY(-50%);
             /* Adjust to center vertically */
         }
-
+    
         .close {
             cursor: pointer;
             float: right;
             font-size: 20px;
         }
-
+    
         /* Hide overflow to manage line limits */
         .description {
             display: -webkit-box;
@@ -228,41 +228,41 @@
             max-height: 8em;
             /* Control height for 5 lines */
         }
-
+    
         .description.expanded {
             -webkit-line-clamp: unset;
             /* Remove line limit */
             max-height: unset;
             /* Allow full height */
         }
-
+    
         /* Adjust the layout without Flexbox */
         .overlay-content .row {
             margin: 0;
             /* Reset margin */
         }
-
+    
         .overlay-content .col-lg-8,
         .overlay-content .col-lg-4 {
             float: left;
             /* Use float for layout */
         }
-
+    
         .overlay-content .col-lg-8 {
             width: 66.6666%;
             /* Left content column takes 66% */
         }
-
+    
         .overlay-content .col-lg-4 {
             width: 33.3333%;
             /* Right images column takes 33% */
             height: auto;
             /* Set fixed height for the scrollable area */
-
+    
         }
-
+    
         @media (max-width: 768px) {
-
+    
             .overlay-content .col-lg-4,
             .overlay-content .col-lg-8 {
                 width: 100%;
@@ -271,25 +271,25 @@
                 /* Clear float */
             }
         }
-
+    
         .image-scroll {
             height: auto;
         }
-
+    
         .image-scroll img {
             width: 100%;
             margin-bottom: 10px;
             /* Space between images */
             border-radius: 5px;
         }
-
+    
         .related-posts {
             max-height: 550px;
             /* Set a max height for scrolling */
             overflow-y: auto;
             /* Enable scrolling */
         }
-
+    
         .related-posts .post {
             border: 1px solid #ccc;
             border-radius: 5px;
@@ -297,78 +297,91 @@
             margin-bottom: 10px;
             cursor: pointer;
         }
-
+    
         .related-posts .post img {
             width: 100%;
             border-radius: 5px;
         }
-
+    
         #search-bar {
             margin-bottom: 15px;
         }
-
+    
         #mic-icon {
             cursor: pointer;
             color: #555;
             /* Change color if needed */
             height: fit-content;
             padding: 10px;
-
+    
         }
-
+    
         #mic-icon:hover {
             color: #007bff;
             /* Change hover color */
-
+    
         }
-/* Main content section */
-.main-content {
-    max-height: 70vh; /* Limit height to 70% of the viewport */
-    overflow-y: auto; /* Add vertical scroll if needed */
-    padding-right: 10px; /* Space for scrollbar */
-    margin-right: -10px; /* Adjust content to avoid layout issues */
-    scrollbar-width: thin; /* Thin scrollbar for modern browsers */
-}
-
-.main-content::-webkit-scrollbar {
-    width: 6px; /* Scrollbar width */
-}
-
-.main-content::-webkit-scrollbar-track {
-    background: #f1f1f1; /* Track color */
-}
-
-.main-content::-webkit-scrollbar-thumb {
-    background: #888; /* Thumb color */
-    border-radius: 10px; /* Rounded scrollbar */
-}
-
-.main-content::-webkit-scrollbar-thumb:hover {
-    background: #555; /* Hover effect */
-}
-
-/* Related posts section */
-.related-posts {
-    max-height: 60vh; /* Adjust height for related posts */
-    overflow-y: auto; /* Scrollable related posts */
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-/* Mobile responsiveness */
-@media (max-width: 768px) {
-    .main-content {
-        max-height: 50vh; /* Reduce height on smaller screens */
-    }
-
-    .overlay-content {
-        max-height: 85vh; /* Adjust for smaller viewports */
-        padding: 10px;
-    }
-}
-
-
+    
+        /* Main content section */
+        .main-content {
+            max-height: 70vh;
+            /* Limit height to 70% of the viewport */
+            overflow-y: auto;
+            /* Add vertical scroll if needed */
+            padding-right: 10px;
+            /* Space for scrollbar */
+            margin-right: -10px;
+            /* Adjust content to avoid layout issues */
+            scrollbar-width: thin;
+            /* Thin scrollbar for modern browsers */
+        }
+    
+        .main-content::-webkit-scrollbar {
+            width: 6px;
+            /* Scrollbar width */
+        }
+    
+        .main-content::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            /* Track color */
+        }
+    
+        .main-content::-webkit-scrollbar-thumb {
+            background: #888;
+            /* Thumb color */
+            border-radius: 10px;
+            /* Rounded scrollbar */
+        }
+    
+        .main-content::-webkit-scrollbar-thumb:hover {
+            background: #555;
+            /* Hover effect */
+        }
+    
+        /* Related posts section */
+        .related-posts {
+            max-height: 60vh;
+            /* Adjust height for related posts */
+            overflow-y: auto;
+            /* Scrollable related posts */
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+    
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            .main-content {
+                max-height: 50vh;
+                /* Reduce height on smaller screens */
+            }
+    
+            .overlay-content {
+                max-height: 85vh;
+                /* Adjust for smaller viewports */
+                padding: 10px;
+            }
+        }
     </style>
 
 </head>
@@ -376,27 +389,27 @@
 <script type="text/javascript" src="menu.js"></script>
 <!-- META START -->
 <script type="text/javascript" src="meta.js"></script>
+
 <body>
     <div id="no-results-message" style="display: none; text-align: center; margin-top: 20px;">
         <p>No results found</p>
     </div>
-    
+
     <section id="blog" class="py-5">
         <div class="container">
-            <h2 class="text-center mb-4">Blog</h2>
+            <h2 class="text-center mb-5 fw-bold">Blog</h2>
 
-            <!-- Button to toggle the sidebar dropdown at the top -->
-            <button class="btn btn-primary d-lg-none mb-4 w-100" class="btn btn-primary btn-block" type="button"
-                data-bs-toggle="collapse" data-bs-target="#sidebarDropdown" aria-expanded="false"
-                aria-controls="sidebarDropdown">
+            <!-- Toggle Button for Mobile Sidebar -->
+            <button class="btn btn-primary d-lg-none mb-4 w-100" type="button" data-bs-toggle="collapse"
+                data-bs-target="#sidebarDropdown" aria-expanded="false" aria-controls="sidebarDropdown">
                 Categories
             </button>
 
-            <!-- Sidebar dropdown for mobile view ///-->
-            <div class="collapse d-lg-none mb-4 w-100 " id="sidebarDropdown">
+            <!-- Mobile Sidebar Dropdown -->
+            <div class="collapse d-lg-none mb-4" id="sidebarDropdown">
                 <div class="card">
                     <div class="card-body">
-                        <h4>Categories</h4>
+                        <h5 class="mb-3">Categories</h5>
                         <ul class="list-group mb-4">
                             <li class="list-group-item" data-category="all"><a href="#" class="category-link">All</a>
                             </li>
@@ -407,8 +420,7 @@
                             <li class="list-group-item" data-category="web-development"><a href="#"
                                     class="category-link">Web Development</a></li>
                         </ul>
-
-                        <h4>Recent Posts</h4>
+                        <h5 class="mb-3">Recent Posts</h5>
                         <ul class="list-group">
                             <li class="list-group-item"><a href="#">Python Programming</a></li>
                             <li class="list-group-item"><a href="#">Recent Post 2</a></li>
@@ -416,316 +428,204 @@
                     </div>
                 </div>
             </div>
-
+        </div>
+        <!-- Main Blog and Sidebar Layout -->
+        <div class="container">
             <div class="row">
+                <!-- Blog Posts Section -->
                 <div class="col-lg-8">
-
                     <div class="row" id="blogPosts">
-                       <script>
+                        
+                        <!-- JS dynamically injects carousel and blog cards here -->
+                        <script>
 
-    const blogItems = blog.col1;
+                            const blogItems = blog.col1;
 
-    // Select the blog posts container
-    const blogContainer = document.getElementById("blogPosts");
+                            // Select the blog posts container
+                            const blogContainer = document.getElementById("blogPosts");
 
-    // Generate the Carousel
-    let carouselHTML = `
-        <div id="blogCarousel" class="carousel slide mb-4" data-bs-ride="carousel">
-            <div class="carousel-inner">
-    `;
+                            // Generate the Carousel
+                            let carouselHTML = `
+                                    <div id="blogCarousel" class="carousel slide mb-4" data-bs-ride="carousel">
+                                        <div class="carousel-inner">
+                                `;
 
-    blogItems.forEach((item, index) => {
-        const activeClass = index === 0 ? "active" : "";
-        carouselHTML += `
-            <div class="carousel-item ${activeClass}">
-                <div class="row">
-                    <div class="col-lg-12 mb-4" data-category="${item.category}">
-                        <div class="card">
-                            <img src="assets/images/junior-geeks/${item.image}" class="card-img-top" alt="Blog Post ${index + 1}">
+                            blogItems.forEach((item, index) => {
+                                const activeClass = index === 0 ? "active" : "";
+                                carouselHTML += `
+                                        <div class="carousel-item ${activeClass}">
+                                            <div class="row">
+                                                <div class="col-lg-12 mb-4" data-category="${item.category}">
+                                                    <div class="card">
+                                                        <img src="assets/images/junior-geeks/${item.image}" class="card-img-top" alt="Blog Post ${index + 1}">
+                                                        
+                                                        <div class="card-body">
+                                                            <span class="input-group-text bg-white border-0 d-flex justify-content-between align-items-center" id="basic-addon1">
+                                                        <div class="d-flex align-items-center me-3">
+                                                            <i class="bi bi-calendar" style="font-size: 1.5rex; color: #6c757d; margin-right: 5px;"></i>
+                                                            <p style="font-size: 1.5rex; color: #6c757d; margin: 0;">${item.date}</p>
+                                                        </div>
+                                                        <div class="d-flex align-items-center">
+                                                            <i class="bi bi-person" style="font-size: 2rex; color: #6c757d; margin-right: 5px;"></i>
+                                                            <p style="font-size: 1.5rex; color: #6c757d; margin: 0;">A1TI</p>
+                                                        </div>
+                                                    </span>
+                                                            <h5 class="card-title">${item.title.replace(/[^a-zA-Z0-9 ]/g, ' ').replace(/\s+/g, ' ').trim()}</h5>
                             
-                            <div class="card-body">
-                                <span class="input-group-text bg-white border-0 d-flex justify-content-between align-items-center" id="basic-addon1">
-                            <div class="d-flex align-items-center me-3">
-                                <i class="bi bi-calendar" style="font-size: 1.5rex; color: #6c757d; margin-right: 5px;"></i>
-                                <p style="font-size: 1.5rex; color: #6c757d; margin: 0;">${item.date}</p>
-                            </div>
-                            <div class="d-flex align-items-center">
-                                <i class="bi bi-person" style="font-size: 2rex; color: #6c757d; margin-right: 5px;"></i>
-                                <p style="font-size: 1.5rex; color: #6c757d; margin: 0;">A1TI</p>
-                            </div>
-                        </span>
-                                <h5 class="card-title">${item.title.replace(/[^a-zA-Z0-9 ]/g, ' ').replace(/\s+/g, ' ').trim()}</h5>
+                                                            <p class="card-text">${item.description}</p>
+                                                            <a href="blog-post${index + 1}.html" class="btn btn-primary" style="display:none;">More</a>
+                                                            <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#${item.title} ">
+                                                                More Info 
+                                                            </button>
+                            
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    `;
+                            });
 
-                                <p class="card-text">${item.description}</p>
-                                <a href="blog-post${index + 1}.html" class="btn btn-primary" style="display:none;">More</a>
-                                <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#${item.title} ">
-                                    More Info 
-                                </button>
+                            carouselHTML += `
+                                        </div>
+                                        <button class="carousel-control-prev" type="button" data-bs-target="#blogCarousel" data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Previous</span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button" data-bs-target="#blogCarousel" data-bs-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Next</span>
+                                        </button>
+                                    </div>
+                                `;
 
+                            // Generate the Rest of the Blog Posts (Grid)
+                            let gridHTML = "";
+                            blogItems.slice(1).forEach((item, index) => {
+                                const moreTextId = `moreText${index + 1}`;
+                                const readMoreBtnId = `readMoreBtn${index + 1}`;
+                                gridHTML += `
+                                        <div class="col-md-6 mb-4" data-category="${item.category}">
+                                            <div class="card">
+                                                <img src="assets/images/junior-geeks/${item.image}" class="card-img-top post-image" alt="Blog Post ${index + 2}" onclick="openOverlay('${item.title}', '${item.description}', '${item.description1}', 'assets/images/junior-geeks/${item.image}', '${item.date}')">
+                                                <div class="card-body">
+                                                    <span class="input-group-text bg-white border-0 d-flex justify-content-between align-items-center" id="basic-addon1">
+                                                        <div class="d-flex align-items-center me-3">
+                                                            <i class="bi bi-calendar" style="font-size: 1.5rex; color: #6c757d; margin-right: 5px;"></i>
+                                                            <p style="font-size: 1.5rex; color: #6c757d; margin: 0;">${item.date}</p>
+                                                        </div>
+                                                        <div class="d-flex align-items-center">
+                                                            <i class="bi bi-person" style="font-size: 2rex; color: #6c757d; margin-right: 5px;"></i>
+                                                            <p style="font-size: 1.5rex; color: #6c757d; margin: 0;">A1TI</p>
+                                                        </div>
+                                                    </span>
+                                                    <h5 class="card-title">${item.title.replace(/[^a-zA-Z0-9 ]/g, ' ').replace(/\s+/g, ' ').trim()}</h5>
+                            
+                                                    <p class="card-text">
+                                                        ${item.description}
+                                                        <span class="more" id="${moreTextId}" style="display:none;"> ${item.description1}.</span>
+                                                        <span class="read-more" id="${readMoreBtnId}" onclick="toggleReadMore(event, '${moreTextId}', '${readMoreBtnId}')" style="color: #6c757d;">Read More...</span>
+                                                    </p>
+                                                    <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#${item.title} ">
+                                                        More Info 
+                                                    </button><br><br>
+                                                      <!-- Pdf Modal -->
+                                                    <button class="custom-button btn btn-primary" data-bs-toggle="modal" data-bs-target="#syllabus0">
+                                                        PDF
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
 
-                            </div>
+                                        
+                                    `;
+                            });
+                            
+                            // Combine Carousel and Grid and inject into the container
+                            blogContainer.innerHTML = carouselHTML + gridHTML;
+                        </script>
+                      
+                    </div>
+                </div>
+
+                <!-- Sidebar Section (visible on desktop only) -->
+                <div class="col-lg-4 d-none d-lg-block" id="sidebar">
+                    <!-- Search Bar -->
+                    <div class="mb-4">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search..." id="search-bar"
+                                oninput="filterblogpost()">
+                            <span class="input-group-text" id="mic-icon" onclick="startVoiceSearch()">
+                                <i class="fas fa-microphone"></i>
+                            </span>
                         </div>
                     </div>
-                </div>
-            </div>
-        `;
-    });
 
-    carouselHTML += `
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#blogCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#blogCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-    `;
 
-    // Generate the Rest of the Blog Posts (Grid)
-    let gridHTML = "";
-    blogItems.slice(1).forEach((item, index) => {
-        const moreTextId = `moreText${index + 1}`;
-        const readMoreBtnId = `readMoreBtn${index + 1}`;
-        gridHTML += `
-            <div class="col-md-6 mb-4" data-category="${item.category}">
-                <div class="card">
-                    <img src="assets/images/junior-geeks/${item.image}" class="card-img-top post-image" alt="Blog Post ${index + 2}" onclick="openOverlay('${item.title}', '${item.description}', '${item.description1}', 'assets/images/junior-geeks/${item.image}', '${item.date}')">
-                    <div class="card-body">
-                        <span class="input-group-text bg-white border-0 d-flex justify-content-between align-items-center" id="basic-addon1">
-                            <div class="d-flex align-items-center me-3">
-                                <i class="bi bi-calendar" style="font-size: 1.5rex; color: #6c757d; margin-right: 5px;"></i>
-                                <p style="font-size: 1.5rex; color: #6c757d; margin: 0;">${item.date}</p>
-                            </div>
-                            <div class="d-flex align-items-center">
-                                <i class="bi bi-person" style="font-size: 2rex; color: #6c757d; margin-right: 5px;"></i>
-                                <p style="font-size: 1.5rex; color: #6c757d; margin: 0;">A1TI</p>
-                            </div>
-                        </span>
-                        <h5 class="card-title">${item.title.replace(/[^a-zA-Z0-9 ]/g, ' ').replace(/\s+/g, ' ').trim()}</h5>
 
-                        <p class="card-text">
-                            ${item.description}
-                            <span class="more" id="${moreTextId}" style="display:none;"> ${item.description1}.</span>
-                            <span class="read-more" id="${readMoreBtnId}" onclick="toggleReadMore(event, '${moreTextId}', '${readMoreBtnId}')" style="color: #6c757d;">Read More...</span>
-                        </p>
-                        <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#${item.title} ">
-                            More Info 
-                        </button>
-                    </div>
-                </div>
-            </div>
-        `;
-    });
+ 
+                    <!-- Optional Course List -->
+                    <ul id="myUL" class="mb-4" style="list-style-type: none; padding-left: 0; display: none;">
+                        <li class="py-2">Course 1: JavaScript</li>
+                        <li class="py-2">Course 2: Docker Training</li>
+                        <li class="py-2">Course 3: Terraform</li>
+                        <li class="py-2">Course 4: Ansible Training</li>
+                        <li class="py-2">Course 5: Kubernetes</li>
+                    </ul>
 
-    // Combine Carousel and Grid and inject into the container
-    blogContainer.innerHTML = carouselHTML + gridHTML;
-                       </script>
-                    </div>
-                </div>
-
-                <!-- Sidebar for larger screens -->
-                    <div class="col-lg-4 d-none d-lg-block" id="sidebar">
-                  
-                        <!-- Search Bar with Mic Icon Start -->
-                            <div class="mb-4">
-                                <div class="input-group">
-                                    <input type="text" class="form-control search_bar" placeholder="Search..." id="search-bar" oninput="filterblogpost()">
-                                    <span class="input-group-text voice-icon" id="mic-icon" onclick="startVoiceSearch()">
-                                        <i class="fas fa-microphone"></i>
-                                    </span>
-                                </div>
-                            </div>
-                        
-                        <!-- Course List -->
-                            <ul id="myUL" style="list-style-type: none; padding: 0; margin-top: 20px; display: none; ">
-                                <li style="padding: 10px;">Course 1: JavaScript</li>
-                                <li style="padding: 10px;">Course 2: Docker Training</li>
-                                <li style="padding: 10px;">Course 3: Terraform</li>
-                                <li style="padding: 10px;">Course 4: Ansible Training</li>
-                                <li style="padding: 10px;">Course 5: Kubernetes</li>
-                                <!-- Add more courses as needed -->
-                            </ul>
-                        <!-- Categories -->
-                            <div class="mb-4">
-                                <h4>Categories</h4>
-                                <ul class="list-group">
-                                    <li class="list-group-item" data-category="all"><a href="#" class="category-link">All</a>
-                                    </li>
-                                    <li class="list-group-item" data-category="programming"><a href="#"
-                                            class="category-link">Programming</a></li>
-                                    <li class="list-group-item" data-category="designing"><a href="#"
-                                            class="category-link">Designing</a></li>
-                                    <li class="list-group-item" data-category="web-development"><a href="#"
-                                            class="category-link">Web Development</a></li>
-                                </ul>
-                            </div>
-                        <!-- Recent Post -->
-                            <div class="mb-4">
-                                <h4>Recent Posts</h4>
-                                <ul class="list-group">
-                                    <li class="list-group-item"><a href="#">Recent Post 1</a></li>
-                                    <li class="list-group-item"><a href="#">Recent Post 2</a></li>
-                                </ul>
-                            </div>
+                    <!-- Categories -->
+                    <div class="mb-4">
+                        <h5 class="mb-3">Categories</h5>
+                        <ul class="list-group">
+                            <li class="list-group-item" data-category="all"><a href="#" class="category-link">All</a>
+                            </li>
+                            <li class="list-group-item" data-category="programming"><a href="#"
+                                    class="category-link">Programming</a></li>
+                            <li class="list-group-item" data-category="designing"><a href="#"
+                                    class="category-link">Designing</a></li>
+                            <li class="list-group-item" data-category="web-development"><a href="#"
+                                    class="category-link">Web Development</a></li>
+                        </ul>
                     </div>
 
+                    <!-- Recent Posts -->
+                    <div>
+                        <h5 class="mb-3">Recent Posts</h5>
+                        <ul class="list-group">
+                            <li class="list-group-item"><a href="#">Recent Post 1</a></li>
+                            <li class="list-group-item"><a href="#">Recent Post 2</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
             </div>
         </div>
+
     </section>
-
-    
-
+<!-- Modal -->
+<div class="modal fade" id="syllabus0" tabindex="-1" aria-labelledby="syllabusLabel0" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="syllabusLabel0">Syllabus</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Here you can view or download the syllabus for the course.</p>
+          <!-- Optional: Embed a PDF preview or syllabus content -->
+          <iframe src="assets/pdf/Git_Interview_Questions_Answers.pdf" width="100%" height="400px" style="border: none;"></iframe>
+        </div>
+        <div class="modal-footer">
+          <a href="path/to/syllabus0.pdf" class="btn btn-primary" download>Download PDF</a>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
     <!--------FOOTER STARTS-------->
     <script type="text/javascript" src="footer.js"></script>
     <!--------FOOTER ENDS-------->
 </body>
-<script>
-    // Function to populate related posts in a container (modal/overlay)
-    function populateRelatedPosts(containerId, currentTitle) {
-        const container = document.getElementById(containerId);
-        container.innerHTML = ''; // Clear existing content
-
-        blog.col1.forEach(function (post) {
-            if (post.title !== currentTitle) { // Exclude the current post
-                const safeTitle = post.title.replace(/'/g, "\\'");
-                const safeDescription = post.description.replace(/'/g, "\\'");
-                const safeDescription1 = post.description1.replace(/'/g, "\\'");
-                const safeDescription2 = post.description2.replace(/'/g, "\\'");
-
-                container.innerHTML += `
-                    <div class="post" onclick="openOverlay('${safeTitle}', '${safeDescription}', '${safeDescription1}', 'assets/images/junior-geeks/${post.image}', '${post.date}', '${safeDescription2}')">
-                        <img src="assets/images/junior-geeks/${post.image}" alt="${post.title}" class="post-image">
-                        <div class="d-flex align-items-center">
-                            <p class="bi bi-calendar mt-1.5" style="font-size: 1.5rex; color: #6c757d; margin: 0;">${post.date}</p>
-                            <p style="font-size: 1.5rex; color: #6c757d; margin-left: 170px;">
-                                <i class="bi bi-person" style="font-size: 2rex; color: #6c757d;"></i> A1TI
-                            </p>
-                        </div>
-                        <h5 class="post-title">${post.title}</h5>
-                        <p class="post-description">${post.description}</p>
-                    </div>
-                `;
-            }
-        });
-    }
-
-    // Function to filter blog posts based on category selection
-    function filterPosts(selectedCategory) {
-        const blogPosts = document.querySelectorAll('#blogPosts .col-md-6');
-        const filteredPosts = []; // Store filtered posts
-
-        blogPosts.forEach(function (post) {
-            const postCategory = post.getAttribute('data-category');
-            if (selectedCategory === 'all' || postCategory === selectedCategory) {
-                post.style.display = 'block'; // Show post
-                filteredPosts.push({
-                    title: post.querySelector('.card-title').innerText,
-                    description: post.querySelector('.card-text').innerText,
-                    image: post.querySelector('.card-img-top').getAttribute('src').split('/').pop(),
-                    category: postCategory
-                });
-            } else {
-                post.style.display = 'none'; // Hide post
-            }
-        });
-
-        // Update the carousel with filtered posts
-        updateCarousel(filteredPosts);
-    }
-
-    // Function to update the carousel with filtered posts
-    function updateCarousel(filteredPosts) {
-        const carouselContainer = document.getElementById('carousel-inner');
-        carouselContainer.innerHTML = ''; // Clear existing content
-
-        filteredPosts.forEach(function (post, index) {
-            const isActive = index === 0 ? 'active' : '';
-            carouselContainer.innerHTML += `
-                <div class="carousel-item ${isActive}">
-                    <img src="assets/images/junior-geeks/${post.image}" class="d-block w-100" alt="${post.title}">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>${post.title}</h5>
-                        <p>${post.description}</p>
-                    </div>
-                </div>
-            `;
-        });
-    }
-
-    // Add event listeners to category links for filtering
-    document.querySelectorAll('.category-link').forEach(function (link) {
-        link.addEventListener('click', function (e) {
-            e.preventDefault();
-            const selectedCategory = this.parentElement.getAttribute('data-category');
-            filterPosts(selectedCategory);
-        });
-    });
-
-    // Section to start voice search
-    function startVoiceSearch() {
-        const icon = document.getElementById('mic-icon');
-        icon.style.color = 'red';
-
-        if ('webkitSpeechRecognition' in window) {
-            const recognition = new webkitSpeechRecognition();
-            recognition.lang = 'en-US';
-            recognition.interimResults = false;
-            recognition.maxAlternatives = 1;
-
-            recognition.start();
-
-            recognition.onresult = function (event) {
-                const transcript = event.results[0][0].transcript.trim().replace(/\.$/, '');
-                document.getElementById('search-bar').value = transcript;
-
-                // Trigger filtering after voice search
-                document.getElementById('search-bar').dispatchEvent(new Event('input'));
-            };
-
-            recognition.onerror = function () {
-                console.error('Speech recognition error');
-                icon.style.color = '#333';
-            };
-
-            recognition.onend = function () {
-                icon.style.color = '#333';
-            };
-        } else {
-            alert('Speech recognition not supported in this browser.');
-        }
-    }
-
-    // Function to filter blog posts based on search input
-    document.getElementById('search-bar').addEventListener('input', function () {
-        const searchTerm = this.value.toLowerCase();
-        const blogPosts = document.querySelectorAll('#blogPosts .col-md-6');
-        const noResultsMessage = document.getElementById('no-results-message');
-
-        let resultsFound = false;
-
-        blogPosts.forEach(function (post) {
-            const title = post.querySelector('.card-title').textContent.toLowerCase();
-            const description = post.querySelector('.card-text').textContent.toLowerCase();
-
-            if (title.includes(searchTerm) || description.includes(searchTerm)) {
-                post.style.display = 'block'; // Show matching post
-                resultsFound = true;
-            } else {
-                post.style.display = 'none'; // Hide non-matching post
-            }
-        });
-
-        if (!resultsFound && noResultsMessage) {
-            noResultsMessage.style.display = 'block'; // Show "No results" message
-        } else if (noResultsMessage) {
-            noResultsMessage.style.display = 'none'; // Hide "No results" message
-        }
-    });
-</script>
-
 
 
 </html>
