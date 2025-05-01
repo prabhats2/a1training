@@ -76,14 +76,15 @@ for (let i = 0; i < junior.col1.length; i++) {
                             <div id="carousel${i}" class="carousel slide mt-4" data-bs-ride="carousel">
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
-                                        <img src="images/video_crousel/node_js.png" class="d-block w-100" alt="Image 1">
+                                        <img src="images/video_crousel/learn_python.png" class="d-block w-100" alt="Image 1">
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="images/video_crousel/Devops_AWS.png" class="d-block w-100" alt="Image 2">
+                                        <img src="images/video_crousel/python_forkids.png" class="d-block w-100" alt="Image 2">
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="images/video_crousel/college_student.png" class="d-block w-100" alt="Image 3">
+                                        <img src="images/video_crousel/python1.png" class="d-block w-100" alt="Image 2">
                                     </div>
+                                    
                                 </div>
                                 <button class="carousel-control-prev" type="button" data-bs-target="#carousel${i}" data-bs-slide="prev">
                                     <span class="carousel-control-prev-icon"></span>
@@ -118,7 +119,7 @@ for (let i = 0; i < junior.col1.length; i++) {
             <div class="content-container container">
                 <div class="row">
                         <div class="col-md-8">
-                            <h1 class="main-heading">Python Training at A1 Training Institute</h1>
+                            <h1 class="main-heading">Computer Science 11th at A1 Training Institute</h1>
 
                             <div style="max-height: 300px; overflow-y: auto; padding-right: 10px;">
                                 <p class="description">
@@ -186,14 +187,12 @@ for (let i = 0; i < junior.col1.length; i++) {
                             <div id="carousel${i}" class="carousel slide mt-4" data-bs-ride="carousel">
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
-                                        <img src="images/video_crousel/node_js.png" class="d-block w-100" alt="Image 1">
+                                        <img src="images/video_crousel/computer_science1.png" class="d-block w-100" alt="Image 1">
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="images/video_crousel/Devops_AWS.png" class="d-block w-100" alt="Image 2">
+                                        <img src="images/video_crousel/learn_computer11.png" class="d-block w-100" alt="Image 2">
                                     </div>
-                                    <div class="carousel-item">
-                                        <img src="images/video_crousel/college_student.png" class="d-block w-100" alt="Image 3">
-                                    </div>
+                                    
                                 </div>
                                 <button class="carousel-control-prev" type="button" data-bs-target="#carousel${i}" data-bs-slide="prev">
                                     <span class="carousel-control-prev-icon"></span>
@@ -230,7 +229,7 @@ for (let i = 0; i < junior.col1.length; i++) {
 
             <div class="content-container">
 
-                <h1 class="main-heading">Python Training at A1 Training Institute</h1>
+                <h1 class="main-heading">Computer Science 12th at A1 Training Institute</h1>
 
                 <div style="max-height: 300px; overflow-y: auto; padding-right: 10px;">
                     <p class="description">
@@ -297,14 +296,12 @@ for (let i = 0; i < junior.col1.length; i++) {
             <div id="carousel${i}" class="carousel slide mt-4" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="images/video_crousel/node_js.png" class="d-block w-100" alt="Image 1">
+                        <img src="images/video_crousel/computer_science12.png" class="d-block w-100" alt="Image 1">
                     </div>
                     <div class="carousel-item">
-                        <img src="images/video_crousel/Devops_AWS.png" class="d-block w-100" alt="Image 2">
+                        <img src="images/video_crousel/learn_computer12.png" class="d-block w-100" alt="Image 2">
                     </div>
-                    <div class="carousel-item">
-                        <img src="images/video_crousel/college_student.png" class="d-block w-100" alt="Image 3">
-                    </div>
+                
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carousel${i}" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon"></span>
@@ -337,7 +334,7 @@ for (let i = 0; i < junior.col1.length; i++) {
           <div class="content-container container">
                 <div class="row">
                         <div class="col-md-8">
-                            <h1 class="main-heading">Python Training at A1 Training Institute</h1>
+                            <h1 class="main-heading">Web Development at A1 Training Institute</h1>
 
                             <div style="max-height: 300px; overflow-y: auto; padding-right: 10px;">
                                 <p class="description">
@@ -446,7 +443,7 @@ for (let i = 0; i < junior.col1.length; i++) {
         <div class="content-container container">
                 <div class="row">
                         <div class="col-md-8">
-                            <h1 class="main-heading">Python Training at A1 Training Institute</h1>
+                            <h1 class="main-heading">C/C++ Programming at A1 Training Institute</h1>
 
                             <div style="max-height: 300px; overflow-y: auto; padding-right: 10px;">
                                 <p class="description">
@@ -555,7 +552,7 @@ for (let i = 0; i < junior.col1.length; i++) {
           <div class="content-container container">
                 <div class="row">
                         <div class="col-md-8">
-                            <h1 class="main-heading">Python Training at A1 Training Institute</h1>
+                            <h1 class="main-heading">Java Programming at A1 Training Institute</h1>
 
                             <div style="max-height: 300px; overflow-y: auto; padding-right: 10px;">
                                 <p class="description">
@@ -664,7 +661,7 @@ for (let i = 0; i < junior.col1.length; i++) {
         <div class="content-container container">
                 <div class="row">
                         <div class="col-md-8">
-                            <h1 class="main-heading">Python Training at A1 Training Institute</h1>
+                            <h1 class="main-heading">Database Management at A1 Training Institute</h1>
 
                             <div style="max-height: 300px; overflow-y: auto; padding-right: 10px;">
                                 <p class="description">
@@ -773,7 +770,7 @@ for (let i = 0; i < junior.col1.length; i++) {
          <div class="content-container container">
                 <div class="row">
                         <div class="col-md-8">
-                            <h1 class="main-heading">Python Training at A1 Training Institute</h1>
+                            <h1 class="main-heading">Game Development at A1 Training Institute</h1>
 
                             <div style="max-height: 300px; overflow-y: auto; padding-right: 10px;">
                                 <p class="description">
@@ -882,7 +879,7 @@ for (let i = 0; i < junior.col1.length; i++) {
           <div class="content-container container">
                 <div class="row">
                         <div class="col-md-8">
-                            <h1 class="main-heading">Python Training at A1 Training Institute</h1>
+                            <h1 class="main-heading">Canva Designing at A1 Training Institute</h1>
 
                             <div style="max-height: 300px; overflow-y: auto; padding-right: 10px;">
                                 <p class="description">
@@ -991,7 +988,7 @@ for (let i = 0; i < junior.col1.length; i++) {
          <div class="content-container container">
                 <div class="row">
                         <div class="col-md-8">
-                            <h1 class="main-heading">Python Training at A1 Training Institute</h1>
+                            <h1 class="main-heading">Adobe Photoshop at A1 Training Institute</h1>
 
                             <div style="max-height: 300px; overflow-y: auto; padding-right: 10px;">
                                 <p class="description">
@@ -1100,7 +1097,7 @@ for (let i = 0; i < junior.col1.length; i++) {
          <div class="content-container container">
                 <div class="row">
                         <div class="col-md-8">
-                            <h1 class="main-heading">Python Training at A1 Training Institute</h1>
+                            <h1 class="main-heading">Adobe Illustrator at A1 Training Institute</h1>
 
                             <div style="max-height: 300px; overflow-y: auto; padding-right: 10px;">
                                 <p class="description">
@@ -1209,7 +1206,7 @@ for (let i = 0; i < junior.col1.length; i++) {
              <div class="content-container container">
                 <div class="row">
                         <div class="col-md-8">
-                            <h1 class="main-heading">Python Training at A1 Training Institute</h1>
+                            <h1 class="main-heading">Corel Draw at A1 Training Institute</h1>
 
                             <div style="max-height: 300px; overflow-y: auto; padding-right: 10px;">
                                 <p class="description">
@@ -1318,7 +1315,7 @@ for (let i = 0; i < junior.col1.length; i++) {
          <div class="content-container container">
                 <div class="row">
                         <div class="col-md-8">
-                            <h1 class="main-heading">Python Training at A1 Training Institute</h1>
+                            <h1 class="main-heading">MS Office at A1 Training Institute</h1>
 
                             <div style="max-height: 300px; overflow-y: auto; padding-right: 10px;">
                                 <p class="description">
@@ -1427,7 +1424,7 @@ for (let i = 0; i < junior.col1.length; i++) {
           <div class="content-container container">
                 <div class="row">
                         <div class="col-md-8">
-                            <h1 class="main-heading">Python Training at A1 Training Institute</h1>
+                            <h1 class="main-heading">Basic Computer at A1 Training Institute</h1>
 
                             <div style="max-height: 300px; overflow-y: auto; padding-right: 10px;">
                                 <p class="description">
@@ -1536,7 +1533,7 @@ for (let i = 0; i < junior.col1.length; i++) {
         <div class="content-container container">
                 <div class="row">
                         <div class="col-md-8">
-                            <h1 class="main-heading">Python Training at A1 Training Institute</h1>
+                            <h1 class="main-heading">Tally at A1 Training Institute</h1>
 
                             <div style="max-height: 300px; overflow-y: auto; padding-right: 10px;">
                                 <p class="description">
@@ -1645,7 +1642,7 @@ for (let i = 0; i < junior.col1.length; i++) {
           <div class="content-container container">
                 <div class="row">
                         <div class="col-md-8">
-                            <h1 class="main-heading">Python Training at A1 Training Institute</h1>
+                            <h1 class="main-heading">Typing at A1 Training Institute</h1>
 
                             <div style="max-height: 300px; overflow-y: auto; padding-right: 10px;">
                                 <p class="description">
@@ -1751,6 +1748,7 @@ for (let i = 0; i < junior.col1.length; i++) {
     }  
 
    
+    
     
 // Example text with underscores
 let textWithUnderscores = junior.col1[i].title;
