@@ -1,15 +1,6 @@
 let blog = {
   "col1": [
     {
-      "image": "computer_science11th.png",
-      "title": "Computer_Science",
-      "date": "25/Sep/2024",
-      "description": "A brief description of the blog post goes here.",
-      "description1": "In today’s rapidly evolving tech world, programming skills are not just reserved for developers or computer scientists. They’ve become an essential tool for professionals across industries. Among the vast array of programming languages available, Python has emerged as one of the most popular and versatile choices. Whether you’re a beginner, a data scientist, or someone looking to automate routine tasks, learning Python offers countless benefits.",
-      "description2": "Moreover,Python’s simplicity and readability make it a perfect choice for newcomers to programming, while its extensive libraries and frameworks enable professionals to work on everything from web development to artificial intelligence.",
-      "category": "all "
-    },
-    {
       "image": "terraform.png",
       "title": "Terraform",
       "date": "25/Sep/2024",
@@ -17,9 +8,45 @@ let blog = {
       "description1": "In today’s rapidly evolving tech world, programming skills are not just reserved for developers or computer scientists. They’ve become an essential tool for professionals across industries. Among the vast array of programming languages available, Python has emerged as one of the most popular and versatile choices. Whether you’re a beginner, a data scientist, or someone looking to automate routine tasks, learning Python offers countless benefits.",
       "description2": "Moreover,Python’s simplicity and readability make it a perfect choice for newcomers to programming, while its extensive libraries and frameworks enable professionals to work on everything from web development to artificial intelligence.",
       "category": "all ",
-      "syllabus" : ["assets/syllabus/Kubernetes_Cluster_Setup_Guide.pdf" , "assets/syllabus/Kubernetes_Commands_Overview.pdf"  , "assets/syllabus/Kubernetes_Interview_Questions.pdf"  , "assets/syllabus/Kubernetes_Manifest_file.pdf"] ,  
-      "syllabus_name":["Kubemetes Cluster Setup Syllabus " , "Kubernetes Commands Overview Syllabus " , "Kubernetes Interview Questions  ", "Kubernetes Manifest file Syllabus "]	
-   },
+    },
+    {
+      "image": "Python.png",
+      "title": "Python",
+      "date": "25/Sep/2024",
+      "description": "A brief description of the blog post goes here.",
+      "description1": "In today’s rapidly evolving tech world, programming skills are not just reserved for developers or computer scientists. They’ve become an essential tool for professionals across industries. Among the vast array of programming languages available, Python has emerged as one of the most popular and versatile choices. Whether you’re a beginner, a data scientist, or someone looking to automate routine tasks, learning Python offers countless benefits.",
+      "description2": "Moreover,Python’s simplicity and readability make it a perfect choice for newcomers to programming, while its extensive libraries and frameworks enable professionals to work on everything from web development to artificial intelligence.",
+      "category": "all " ,
+      "pdf": "assets/pdf/git.pdf"
+    },
+    {
+      "image": "sbom-vs-Software-chain.png",
+      "title": "SBOM_vs_Software_Chain",
+      "date": "25/Sep/2024",
+      "description": "A brief description of the blog post goes here.",
+      "description1": "In today’s rapidly evolving tech world, programming skills are not just reserved for developers or computer scientists. They’ve become an essential tool for professionals across industries. Among the vast array of programming languages available, Python has emerged as one of the most popular and versatile choices. Whether you’re a beginner, a data scientist, or someone looking to automate routine tasks, learning Python offers countless benefits.",
+      "description2": "Moreover,Python’s simplicity and readability make it a perfect choice for newcomers to programming, while its extensive libraries and frameworks enable professionals to work on everything from web development to artificial intelligence.",
+      "category": "all " 
+    },
+    {
+      "image": "web-vs-application.png",
+      "title": "Web_vs_Application",
+      "date": "25/Sep/2024",
+      "description": "A brief description of the blog post goes here.",
+      "description1": "In today’s rapidly evolving tech world, programming skills are not just reserved for developers or computer scientists. They’ve become an essential tool for professionals across industries. Among the vast array of programming languages available, Python has emerged as one of the most popular and versatile choices. Whether you’re a beginner, a data scientist, or someone looking to automate routine tasks, learning Python offers countless benefits.",
+      "description2": "Moreover,Python’s simplicity and readability make it a perfect choice for newcomers to programming, while its extensive libraries and frameworks enable professionals to work on everything from web development to artificial intelligence.",
+      "category": "all " 
+    },
+    {
+      "image": "computer_science11th.png",
+      "title": "Computer_Science",
+      "date": "25/Sep/2024",
+      "description": "A brief description of the blog post goes here.",
+      "description1": "In today’s rapidly evolving tech world, programming skills are not just reserved for developers or computer scientists. They’ve become an essential tool for professionals across industries. Among the vast array of programming languages available, Python has emerged as one of the most popular and versatile choices. Whether you’re a beginner, a data scientist, or someone looking to automate routine tasks, learning Python offers countless benefits.",
+      "description2": "Moreover,Python’s simplicity and readability make it a perfect choice for newcomers to programming, while its extensive libraries and frameworks enable professionals to work on everything from web development to artificial intelligence.",
+      "category": "all ",
+       "pdf": "assets/pdf/git.pdf"
+    },
     {
       "image": "photo-shop.png",
       "title": "Photoshop",
@@ -27,10 +54,7 @@ let blog = {
       "description": "Mastering Photoshop: 5 Essential Techniques for Stunning Visuals",
       "description1": "In today’s digital age, Photoshop remains a powerful tool for graphic designers, photographers, and creatives alike. Whether you’re a beginner or an experienced user, honing your skills can lead to breathtaking results. This post will explore five essential techniques that will elevate your Photoshop game and enhance your visual storytelling.",
       "description2": "By mastering these techniques, you’ll be able to create stunning visuals that not only enhance your creativity but also communicate your ideas with clarity and impact.",
-      "category": ["designing","programming"],
-      "syllabus" : ["assets/syllabus/Kubernetes_Cluster_Setup_Guide.pdf" , "assets/syllabus/Kubernetes_Commands_Overview.pdf"  , "assets/syllabus/Kubernetes_Interview_Questions.pdf"  , "assets/syllabus/Kubernetes_Manifest_file.pdf"] ,  
-      "syllabus_name":["Kubemetes Cluster Setup Syllabus " , "Kubernetes Commands Overview Syllabus " , "Kubernetes Interview Questions  ", "Kubernetes Manifest file Syllabus "]	
-   
+      "category": ["designing","programming"] 
     },
     {
       "image": "Illustrator.png",

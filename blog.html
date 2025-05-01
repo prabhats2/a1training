@@ -39,28 +39,28 @@
             border-radius: 5px;
             background-color: #f9f9f9;
         }
-    
+
         .post {
             padding: 8px;
             border-bottom: 1px solid #ddd;
         }
-    
+
         .post:last-child {
             border-bottom: none;
         }
-    
+
         /* Section Styles */
         #blog {
             padding: 2rem 0;
             background-image: url(assets/images/meetings-bg.jpg);
         }
-    
+
         /* Header Styles */
         #blog h2 {
             font-size: 2.5rem;
             margin-bottom: 1.5rem;
         }
-    
+
         /* Card Styles */
         .card {
             transition: transform 0.3s;
@@ -68,17 +68,17 @@
             overflow: hidden;
             /* Ensure no overflow from cards */
         }
-    
+
         .card:hover {
             transform: scale(1.05);
         }
-    
+
         /* Featured Post Styles */
         #blog .mb-4 img {
             border-radius: 1rem;
             padding: 3px;
         }
-    
+
         #sidebar {
             position: sticky;
             top: 80px;
@@ -92,79 +92,79 @@
             z-index: 1;
             border-radius: 0.9rem;
         }
-    
+
         /* Sidebar Styles */
         .sidebar h4 {
             font-size: 1.5rem;
             margin-bottom: 1rem;
         }
-    
+
         .sidebar .list-group-item {
             background-color: #ffffff;
             border: 0px solid #ddd;
             border-radius: 0.9rem;
             transition: background-color 0.3s;
         }
-    
+
         .sidebar .list-group-item:hover {
             background-color: #e9ecef;
         }
-    
+
         /* Responsive Styles */
         @media (max-width: 768px) {
             #blog h2 {
                 font-size: 2rem;
             }
-    
+
             .card {
                 margin-bottom: 1.5rem;
             }
         }
-    
+
         /* Animation Styles */
         .fade-in {
             animation: fadeIn 0.5s forwards;
         }
-    
+
         .fade-out {
             animation: fadeOut 0.5s forwards;
         }
-    
+
         @keyframes fadeIn {
             from {
                 transform: scale(0.8);
                 opacity: 0;
             }
-    
+
             to {
                 transform: scale(1);
                 opacity: 1;
             }
         }
-    
+
         @keyframes fadeOut {
             from {
                 transform: scale(1);
                 opacity: 1;
             }
-    
+
             to {
                 transform: scale(0.8);
                 opacity: 0;
             }
         }
-    
+
         .fade-out {
             opacity: 0;
             transition: opacity 0.5s ease;
             /* Smooth transition */
         }
-    
+
         #sidebar {
             transition: opacity 0.5s ease;
             /* Smooth transition for visibility */
         }
-    
+
         .post {
             border: 1px solid #ccc;
             border-radius: 5px;
@@ -173,16 +173,16 @@
             /* Adjust margin to minimize space */
             cursor: pointer;
         }
-    
+
         .post-image {
             width: 100%;
             border-radius: 5px;
         }
-    
+
         .post-title {
             margin: 10px 0;
         }
-    
+
         .overlay {
             position: fixed;
             top: 0;
@@ -194,14 +194,14 @@
             z-index: 9999;
             /* Ensure overlay is on top */
         }
-    
+
         .overlay-content {
             background-color: #fff;
             padding: 20px;
             border-radius: 5px;
             width: 80%;
             max-height: 90%;
-    
+
             position: relative;
             margin: 0 auto;
             /* Center overlay content */
@@ -210,13 +210,13 @@
             transform: translateY(-50%);
             /* Adjust to center vertically */
         }
-    
+
         .close {
             cursor: pointer;
             float: right;
             font-size: 20px;
         }
-    
+
         /* Hide overflow to manage line limits */
         .description {
             display: -webkit-box;
@@ -228,41 +228,41 @@
             max-height: 8em;
             /* Control height for 5 lines */
         }
-    
+
         .description.expanded {
             -webkit-line-clamp: unset;
             /* Remove line limit */
             max-height: unset;
             /* Allow full height */
         }
-    
+
         /* Adjust the layout without Flexbox */
         .overlay-content .row {
             margin: 0;
             /* Reset margin */
         }
-    
+
         .overlay-content .col-lg-8,
         .overlay-content .col-lg-4 {
             float: left;
             /* Use float for layout */
         }
-    
+
         .overlay-content .col-lg-8 {
             width: 66.6666%;
             /* Left content column takes 66% */
         }
-    
+
         .overlay-content .col-lg-4 {
             width: 33.3333%;
             /* Right images column takes 33% */
             height: auto;
             /* Set fixed height for the scrollable area */
-    
+
         }
-    
+
         @media (max-width: 768px) {
-    
+
             .overlay-content .col-lg-4,
             .overlay-content .col-lg-8 {
                 width: 100%;
@@ -271,25 +271,25 @@
                 /* Clear float */
             }
         }
-    
+
         .image-scroll {
             height: auto;
         }
-    
+
         .image-scroll img {
             width: 100%;
             margin-bottom: 10px;
             /* Space between images */
             border-radius: 5px;
         }
-    
+
         .related-posts {
             max-height: 550px;
             /* Set a max height for scrolling */
             overflow-y: auto;
             /* Enable scrolling */
         }
-    
+
         .related-posts .post {
             border: 1px solid #ccc;
             border-radius: 5px;
@@ -297,31 +297,31 @@
             margin-bottom: 10px;
             cursor: pointer;
         }
-    
+
         .related-posts .post img {
             width: 100%;
             border-radius: 5px;
         }
-    
+
         #search-bar {
             margin-bottom: 15px;
         }
-    
+
         #mic-icon {
             cursor: pointer;
             color: #555;
             /* Change color if needed */
             height: fit-content;
             padding: 10px;
-    
+
         }
-    
+
         #mic-icon:hover {
             color: #007bff;
             /* Change hover color */
-    
+
         }
-    
+
         /* Main content section */
         .main-content {
             max-height: 70vh;
@@ -335,29 +335,29 @@
             scrollbar-width: thin;
             /* Thin scrollbar for modern browsers */
         }
-    
+
         .main-content::-webkit-scrollbar {
             width: 6px;
             /* Scrollbar width */
         }
-    
+
         .main-content::-webkit-scrollbar-track {
             background: #f1f1f1;
             /* Track color */
         }
-    
+
         .main-content::-webkit-scrollbar-thumb {
             background: #888;
             /* Thumb color */
             border-radius: 10px;
             /* Rounded scrollbar */
         }
-    
+
         .main-content::-webkit-scrollbar-thumb:hover {
             background: #555;
             /* Hover effect */
         }
-    
+
         /* Related posts section */
         .related-posts {
             max-height: 60vh;
@@ -368,20 +368,40 @@
             flex-wrap: wrap;
             gap: 10px;
         }
-    
+
         /* Mobile responsiveness */
         @media (max-width: 768px) {
             .main-content {
                 max-height: 50vh;
                 /* Reduce height on smaller screens */
             }
-    
+
             .overlay-content {
                 max-height: 85vh;
                 /* Adjust for smaller viewports */
                 padding: 10px;
             }
         }
+
+         /* Ensure iframe is responsive */
+  #zoomTarget {
+    transition: transform 0.3s ease;
+    margin-top: 20px;
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  #pdfViewer {
+    width: 100%;
+    height: 600px;
+    border: none;
+  }
+
+  @media (max-width: 576px) {
+    #pdfViewer {
+      height: 400px; /* Adjust for smaller screens */
+    }
+  }
     </style>
 
 </head>
@@ -435,7 +455,7 @@
                 <!-- Blog Posts Section -->
                 <div class="col-lg-8">
                     <div class="row" id="blogPosts">
-                        
+
                         <!-- JS dynamically injects carousel and blog cards here -->
                         <script>
 
@@ -475,7 +495,7 @@
                                                             <p class="card-text">${item.description}</p>
                                                             <a href="blog-post${index + 1}.html" class="btn btn-primary" style="display:none;">More</a>
                                                             <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#${item.title} ">
-                                                                More Info 
+                                                                Read More
                                                             </button>
                             
                                                         </div>
@@ -506,6 +526,7 @@
                                 const readMoreBtnId = `readMoreBtn${index + 1}`;
                                 gridHTML += `
                                         <div class="col-md-6 mb-4" data-category="${item.category}">
+                                            
                                             <div class="card">
                                                 <img src="assets/images/junior-geeks/${item.image}" class="card-img-top post-image" alt="Blog Post ${index + 2}" onclick="openOverlay('${item.title}', '${item.description}', '${item.description1}', 'assets/images/junior-geeks/${item.image}', '${item.date}')">
                                                 <div class="card-body">
@@ -527,11 +548,7 @@
                                                         <span class="read-more" id="${readMoreBtnId}" onclick="toggleReadMore(event, '${moreTextId}', '${readMoreBtnId}')" style="color: #6c757d;">Read More...</span>
                                                     </p>
                                                     <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#${item.title} ">
-                                                        More Info 
-                                                    </button><br><br>
-                                                      <!-- Pdf Modal -->
-                                                    <button class="custom-button btn btn-primary" data-bs-toggle="modal" data-bs-target="#syllabus0">
-                                                        PDF
+                                                        Read More 
                                                     </button>
                                                 </div>
                                             </div>
@@ -540,11 +557,11 @@
                                         
                                     `;
                             });
-                            
+
                             // Combine Carousel and Grid and inject into the container
                             blogContainer.innerHTML = carouselHTML + gridHTML;
                         </script>
-                      
+
                     </div>
                 </div>
 
@@ -563,7 +580,7 @@
 
 
 
- 
+
                     <!-- Optional Course List -->
                     <ul id="myUL" class="mb-4" style="list-style-type: none; padding-left: 0; display: none;">
                         <li class="py-2">Course 1: JavaScript</li>
@@ -597,35 +614,18 @@
                         </ul>
                     </div>
                 </div>
-                
+
             </div>
         </div>
 
     </section>
-<!-- Modal -->
-<div class="modal fade" id="syllabus0" tabindex="-1" aria-labelledby="syllabusLabel0" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="syllabusLabel0">Syllabus</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <p>Here you can view or download the syllabus for the course.</p>
-          <!-- Optional: Embed a PDF preview or syllabus content -->
-          <iframe src="assets/pdf/Git_Interview_Questions_Answers.pdf" width="100%" height="400px" style="border: none;"></iframe>
-        </div>
-        <div class="modal-footer">
-          <a href="path/to/syllabus0.pdf" class="btn btn-primary" download>Download PDF</a>
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    
+  
     <!--------FOOTER STARTS-------->
     <script type="text/javascript" src="footer.js"></script>
     <!--------FOOTER ENDS-------->
-</body>
+</body> 
+</html>   
 
-
-</html>
