@@ -629,3 +629,45 @@
 </body> 
 </html>   
 
+<script>
+    // Loop through the blog posts
+    blog.col1.forEach((post, i) => {
+      const blogListId = `blogList${i}`;
+      const pdfViewerId = `pdfViewer${i}`;
+  
+      setTimeout(() => {
+        const blogList = document.getElementById(blogListId);
+        const pdfViewer = document.getElementById(pdfViewerId);
+  
+        if (blogList && pdfViewer) {
+          const item = document.createElement('button');
+          item.className = 'list-group-item list-group-item-action';
+          item.innerHTML = `<strong>${post.title}</strong> `;
+            
+          // Hide the item initially
+item.style.display = 'none'; 
+
+          // Append the button to the blog list
+          blogList.appendChild(item);
+  
+          // Automatically open the PDF based on its title
+          if (post.pdf) {
+            pdfViewer.src = post.pdf;
+            pdfViewer.style.display = 'block';
+          }
+  
+          // Click event to open PDF on clicking the title
+          item.onclick = () => {
+            if (post.pdf) {
+              pdfViewer.src = post.pdf;
+              pdfViewer.style.display = 'block';
+            } else {
+              pdfViewer.src = '';
+              pdfViewer.style.display = 'none';
+              alert("No PDF available for this blog post.");
+            }
+          };
+        }
+      }, 0);
+    });
+  </script>

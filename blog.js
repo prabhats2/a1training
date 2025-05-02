@@ -4,25 +4,24 @@ for (let i = 0; i < blog.col1.length; i++) {
      if (blog.col1[i].title === 'Computer_Science') {
         descriptionContent = `
         <span id="Computer_Science">
-           <div class="content-container"> 
-           
-<div id="zoomTarget" class="container-fluid px-2" style="transition: transform 0.3s ease; margin-top: 20px;">
-  <iframe id="pdfViewer" src="" width="100%" style="height: 70vh; border: none;"></iframe>
-</div>
+          <div class="content-container">
+    <div class="container mt-4">
+        <div id="blogList${i}" class="list-group mb-4"></div>
 
-<div class="text-center mt-4">
-  <button class="btn btn-outline-success" onclick="delayedDownload()">
-    Download PDF <i class="fas fa-download"></i>
-  </button>
-</div>
-
-<div id="pdfNotice" class="text-muted mt-3 text-center d-none">
-  Download starts in <span id="countdown">5</span> seconds...
-</div>
+        <div id="zoomTarget${i}" class="mb-3" style="transition: transform 0.3s ease;">
+            <iframe id="pdfViewer${i}" src="" width="100%" style="height: 70vh; border: none;"></iframe>
+        </div>
+    </div>
 
     <h1 class="main-heading">Adobe Illustrator Training at A1 Training Institute</h1>
 
-    <p class="description" >Adobe Illustrator training at A1 Training Institute empowers students to unleash their creativity through vector graphic design. This comprehensive course covers essential tools and techniques for creating stunning illustrations, logos, and complex designs. Participants will learn about typography, color theory, and composition while mastering features like the Pen Tool, shapes, and layers. Through hands-on projects, students will develop a strong portfolio, showcasing their ability to produce professional-quality designs. By the end of the course, participants will have the skills and confidence to use Adobe Illustrator for various applications, from branding to digital artwork.</p>
+    <p class="description">Adobe Illustrator training at A1 Training Institute empowers students to unleash their
+        creativity through vector graphic design. This comprehensive course covers essential tools and techniques for
+        creating stunning illustrations, logos, and complex designs. Participants will learn about typography, color
+        theory, and composition while mastering features like the Pen Tool, shapes, and layers. Through hands-on
+        projects, students will develop a strong portfolio, showcasing their ability to produce professional-quality
+        designs. By the end of the course, participants will have the skills and confidence to use Adobe Illustrator for
+        various applications, from branding to digital artwork.</p>
 
     <ul class="feature-list">
         <li class="feature-item">&#10003; Comprehensive coverage of basic and advanced exercises on Corel Draw</li>
@@ -33,10 +32,14 @@ for (let i = 0; i < blog.col1.length; i++) {
         <li class="feature-item">&#10003; Interactive and project-oriented lab sessions on Photoshop</li>
     </ul>
 
-    <h4 class="sub-heading">We provide the No.1 Illustrator training program in Delhi NCR, including Noida Extension and Greater Noida. We offer various modes of training, including classroom and online training. Our training centers are located throughout Delhi NCR, Noida Extension, and Greater Noida to provide convenient access for all students.</h4>
+    <h4 class="sub-heading">We provide the No.1 Illustrator training program in Delhi NCR, including Noida Extension and
+        Greater Noida. We offer various modes of training, including classroom and online training. Our training centers
+        are located throughout Delhi NCR, Noida Extension, and Greater Noida to provide convenient access for all
+        students.</h4>
 
     <div class="button-container">
-        <button class="custom-button"  data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
+        <button class="custom-button" data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download
+            Syllabus</button>
         <button class="custom-button">Contact Course Advisor</button>
     </div>
 
@@ -63,30 +66,27 @@ for (let i = 0; i < blog.col1.length; i++) {
 
 </div>
         </span>`;
-    } else if (blog.col1[i].title === 'Photoshop') {
+    } else if (blog.col1[i].title === 'Photoshop') {       
         descriptionContent = `
         <span id="Photoshop">
          <div class="content-container">
-  
-          
+    <div class="container mt-4">
+        <div id="blogList${i}" class="list-group mb-4"></div>
 
-<div id="zoomTarget" class="container-fluid px-2" style="transition: transform 0.3s ease; margin-top: 20px;">
-  <iframe id="pdfViewer" src="" width="100%" style="height: 70vh; border: none;"></iframe>
-</div>
-
-<div class="text-center mt-4">
-  <button class="btn btn-outline-success" onclick="delayedDownload()">
-    Download PDF <i class="fas fa-download"></i>
-  </button>
-</div>
-
-<div id="pdfNotice" class="text-muted mt-3 text-center d-none">
-  Download starts in <span id="countdown">5</span> seconds...
-</div>
+        <div id="zoomTarget${i}" class="mb-3" style="transition: transform 0.3s ease;">
+            <iframe id="pdfViewer${i}" src="" width="100%" style="height: 70vh; border: none;"></iframe>
+        </div>
+    </div>
 
     <h1 class="main-heading">Adobe Illustrator Training at A1 Training Institute</h1>
 
-    <p class="description" >Adobe Illustrator training at A1 Training Institute empowers students to unleash their creativity through vector graphic design. This comprehensive course covers essential tools and techniques for creating stunning illustrations, logos, and complex designs. Participants will learn about typography, color theory, and composition while mastering features like the Pen Tool, shapes, and layers. Through hands-on projects, students will develop a strong portfolio, showcasing their ability to produce professional-quality designs. By the end of the course, participants will have the skills and confidence to use Adobe Illustrator for various applications, from branding to digital artwork.</p>
+    <p class="description">Adobe Illustrator training at A1 Training Institute empowers students to unleash their
+        creativity through vector graphic design. This comprehensive course covers essential tools and techniques for
+        creating stunning illustrations, logos, and complex designs. Participants will learn about typography, color
+        theory, and composition while mastering features like the Pen Tool, shapes, and layers. Through hands-on
+        projects, students will develop a strong portfolio, showcasing their ability to produce professional-quality
+        designs. By the end of the course, participants will have the skills and confidence to use Adobe Illustrator for
+        various applications, from branding to digital artwork.</p>
 
     <ul class="feature-list">
         <li class="feature-item">&#10003; Comprehensive coverage of basic and advanced exercises on Corel Draw</li>
@@ -97,10 +97,14 @@ for (let i = 0; i < blog.col1.length; i++) {
         <li class="feature-item">&#10003; Interactive and project-oriented lab sessions on Photoshop</li>
     </ul>
 
-    <h4 class="sub-heading">We provide the No.1 Illustrator training program in Delhi NCR, including Noida Extension and Greater Noida. We offer various modes of training, including classroom and online training. Our training centers are located throughout Delhi NCR, Noida Extension, and Greater Noida to provide convenient access for all students.</h4>
+    <h4 class="sub-heading">We provide the No.1 Illustrator training program in Delhi NCR, including Noida Extension and
+        Greater Noida. We offer various modes of training, including classroom and online training. Our training centers
+        are located throughout Delhi NCR, Noida Extension, and Greater Noida to provide convenient access for all
+        students.</h4>
 
     <div class="button-container">
-        <button class="custom-button"  data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
+        <button class="custom-button" data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download
+            Syllabus</button>
         <button class="custom-button">Contact Course Advisor</button>
     </div>
 
@@ -130,27 +134,24 @@ for (let i = 0; i < blog.col1.length; i++) {
     } else if (blog.col1[i].title === 'Illustrator') {
         descriptionContent = `
         <span id="Illustrator">
-          <div class="content-container">
-  
-          
+         <div class="content-container">
+    <div class="container mt-4">
+        <div id="blogList${i}" class="list-group mb-4"></div>
 
-<div id="zoomTarget" class="container-fluid px-2" style="transition: transform 0.3s ease; margin-top: 20px;">
-  <iframe id="pdfViewer" src="" width="100%" style="height: 70vh; border: none;"></iframe>
-</div>
-
-<div class="text-center mt-4">
-  <button class="btn btn-outline-success" onclick="delayedDownload()">
-    Download PDF <i class="fas fa-download"></i>
-  </button>
-</div>
-
-<div id="pdfNotice" class="text-muted mt-3 text-center d-none">
-  Download starts in <span id="countdown">5</span> seconds...
-</div>
+        <div id="zoomTarget${i}" class="mb-3" style="transition: transform 0.3s ease;">
+            <iframe id="pdfViewer${i}" src="" width="100%" style="height: 70vh; border: none;"></iframe>
+        </div>
+    </div>
 
     <h1 class="main-heading">Adobe Illustrator Training at A1 Training Institute</h1>
 
-    <p class="description" >Adobe Illustrator training at A1 Training Institute empowers students to unleash their creativity through vector graphic design. This comprehensive course covers essential tools and techniques for creating stunning illustrations, logos, and complex designs. Participants will learn about typography, color theory, and composition while mastering features like the Pen Tool, shapes, and layers. Through hands-on projects, students will develop a strong portfolio, showcasing their ability to produce professional-quality designs. By the end of the course, participants will have the skills and confidence to use Adobe Illustrator for various applications, from branding to digital artwork.</p>
+    <p class="description">Adobe Illustrator training at A1 Training Institute empowers students to unleash their
+        creativity through vector graphic design. This comprehensive course covers essential tools and techniques for
+        creating stunning illustrations, logos, and complex designs. Participants will learn about typography, color
+        theory, and composition while mastering features like the Pen Tool, shapes, and layers. Through hands-on
+        projects, students will develop a strong portfolio, showcasing their ability to produce professional-quality
+        designs. By the end of the course, participants will have the skills and confidence to use Adobe Illustrator for
+        various applications, from branding to digital artwork.</p>
 
     <ul class="feature-list">
         <li class="feature-item">&#10003; Comprehensive coverage of basic and advanced exercises on Corel Draw</li>
@@ -161,10 +162,14 @@ for (let i = 0; i < blog.col1.length; i++) {
         <li class="feature-item">&#10003; Interactive and project-oriented lab sessions on Photoshop</li>
     </ul>
 
-    <h4 class="sub-heading">We provide the No.1 Illustrator training program in Delhi NCR, including Noida Extension and Greater Noida. We offer various modes of training, including classroom and online training. Our training centers are located throughout Delhi NCR, Noida Extension, and Greater Noida to provide convenient access for all students.</h4>
+    <h4 class="sub-heading">We provide the No.1 Illustrator training program in Delhi NCR, including Noida Extension and
+        Greater Noida. We offer various modes of training, including classroom and online training. Our training centers
+        are located throughout Delhi NCR, Noida Extension, and Greater Noida to provide convenient access for all
+        students.</h4>
 
     <div class="button-container">
-        <button class="custom-button"  data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
+        <button class="custom-button" data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download
+            Syllabus</button>
         <button class="custom-button">Contact Course Advisor</button>
     </div>
 
@@ -194,27 +199,24 @@ for (let i = 0; i < blog.col1.length; i++) {
     } else if (blog.col1[i].title === 'Canva') {
         descriptionContent = `
         <span id="Canva">
-          <div class="content-container">
-  
-          
+         <div class="content-container">
+    <div class="container mt-4">
+        <div id="blogList${i}" class="list-group mb-4"></div>
 
-<div id="zoomTarget" class="container-fluid px-2" style="transition: transform 0.3s ease; margin-top: 20px;">
-  <iframe id="pdfViewer" src="" width="100%" style="height: 70vh; border: none;"></iframe>
-</div>
-
-<div class="text-center mt-4">
-  <button class="btn btn-outline-success" onclick="delayedDownload()">
-    Download PDF <i class="fas fa-download"></i>
-  </button>
-</div>
-
-<div id="pdfNotice" class="text-muted mt-3 text-center d-none">
-  Download starts in <span id="countdown">5</span> seconds...
-</div>
+        <div id="zoomTarget${i}" class="mb-3" style="transition: transform 0.3s ease;">
+            <iframe id="pdfViewer${i}" src="" width="100%" style="height: 70vh; border: none;"></iframe>
+        </div>
+    </div>
 
     <h1 class="main-heading">Adobe Illustrator Training at A1 Training Institute</h1>
 
-    <p class="description" >Adobe Illustrator training at A1 Training Institute empowers students to unleash their creativity through vector graphic design. This comprehensive course covers essential tools and techniques for creating stunning illustrations, logos, and complex designs. Participants will learn about typography, color theory, and composition while mastering features like the Pen Tool, shapes, and layers. Through hands-on projects, students will develop a strong portfolio, showcasing their ability to produce professional-quality designs. By the end of the course, participants will have the skills and confidence to use Adobe Illustrator for various applications, from branding to digital artwork.</p>
+    <p class="description">Adobe Illustrator training at A1 Training Institute empowers students to unleash their
+        creativity through vector graphic design. This comprehensive course covers essential tools and techniques for
+        creating stunning illustrations, logos, and complex designs. Participants will learn about typography, color
+        theory, and composition while mastering features like the Pen Tool, shapes, and layers. Through hands-on
+        projects, students will develop a strong portfolio, showcasing their ability to produce professional-quality
+        designs. By the end of the course, participants will have the skills and confidence to use Adobe Illustrator for
+        various applications, from branding to digital artwork.</p>
 
     <ul class="feature-list">
         <li class="feature-item">&#10003; Comprehensive coverage of basic and advanced exercises on Corel Draw</li>
@@ -225,10 +227,14 @@ for (let i = 0; i < blog.col1.length; i++) {
         <li class="feature-item">&#10003; Interactive and project-oriented lab sessions on Photoshop</li>
     </ul>
 
-    <h4 class="sub-heading">We provide the No.1 Illustrator training program in Delhi NCR, including Noida Extension and Greater Noida. We offer various modes of training, including classroom and online training. Our training centers are located throughout Delhi NCR, Noida Extension, and Greater Noida to provide convenient access for all students.</h4>
+    <h4 class="sub-heading">We provide the No.1 Illustrator training program in Delhi NCR, including Noida Extension and
+        Greater Noida. We offer various modes of training, including classroom and online training. Our training centers
+        are located throughout Delhi NCR, Noida Extension, and Greater Noida to provide convenient access for all
+        students.</h4>
 
     <div class="button-container">
-        <button class="custom-button"  data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
+        <button class="custom-button" data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download
+            Syllabus</button>
         <button class="custom-button">Contact Course Advisor</button>
     </div>
 
@@ -258,27 +264,24 @@ for (let i = 0; i < blog.col1.length; i++) {
     } else if (blog.col1[i].title === 'DataBase') {
         descriptionContent = `
         <span id="DataBase">
-         <div class="content-container">
-  
-          
+        <div class="content-container">
+    <div class="container mt-4">
+        <div id="blogList${i}" class="list-group mb-4"></div>
 
-<div id="zoomTarget" class="container-fluid px-2" style="transition: transform 0.3s ease; margin-top: 20px;">
-  <iframe id="pdfViewer" src="" width="100%" style="height: 70vh; border: none;"></iframe>
-</div>
-
-<div class="text-center mt-4">
-  <button class="btn btn-outline-success" onclick="delayedDownload()">
-    Download PDF <i class="fas fa-download"></i>
-  </button>
-</div>
-
-<div id="pdfNotice" class="text-muted mt-3 text-center d-none">
-  Download starts in <span id="countdown">5</span> seconds...
-</div>
+        <div id="zoomTarget${i}" class="mb-3" style="transition: transform 0.3s ease;">
+            <iframe id="pdfViewer${i}" src="" width="100%" style="height: 70vh; border: none;"></iframe>
+        </div>
+    </div>
 
     <h1 class="main-heading">Adobe Illustrator Training at A1 Training Institute</h1>
 
-    <p class="description" >Adobe Illustrator training at A1 Training Institute empowers students to unleash their creativity through vector graphic design. This comprehensive course covers essential tools and techniques for creating stunning illustrations, logos, and complex designs. Participants will learn about typography, color theory, and composition while mastering features like the Pen Tool, shapes, and layers. Through hands-on projects, students will develop a strong portfolio, showcasing their ability to produce professional-quality designs. By the end of the course, participants will have the skills and confidence to use Adobe Illustrator for various applications, from branding to digital artwork.</p>
+    <p class="description">Adobe Illustrator training at A1 Training Institute empowers students to unleash their
+        creativity through vector graphic design. This comprehensive course covers essential tools and techniques for
+        creating stunning illustrations, logos, and complex designs. Participants will learn about typography, color
+        theory, and composition while mastering features like the Pen Tool, shapes, and layers. Through hands-on
+        projects, students will develop a strong portfolio, showcasing their ability to produce professional-quality
+        designs. By the end of the course, participants will have the skills and confidence to use Adobe Illustrator for
+        various applications, from branding to digital artwork.</p>
 
     <ul class="feature-list">
         <li class="feature-item">&#10003; Comprehensive coverage of basic and advanced exercises on Corel Draw</li>
@@ -289,10 +292,14 @@ for (let i = 0; i < blog.col1.length; i++) {
         <li class="feature-item">&#10003; Interactive and project-oriented lab sessions on Photoshop</li>
     </ul>
 
-    <h4 class="sub-heading">We provide the No.1 Illustrator training program in Delhi NCR, including Noida Extension and Greater Noida. We offer various modes of training, including classroom and online training. Our training centers are located throughout Delhi NCR, Noida Extension, and Greater Noida to provide convenient access for all students.</h4>
+    <h4 class="sub-heading">We provide the No.1 Illustrator training program in Delhi NCR, including Noida Extension and
+        Greater Noida. We offer various modes of training, including classroom and online training. Our training centers
+        are located throughout Delhi NCR, Noida Extension, and Greater Noida to provide convenient access for all
+        students.</h4>
 
     <div class="button-container">
-        <button class="custom-button"  data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
+        <button class="custom-button" data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download
+            Syllabus</button>
         <button class="custom-button">Contact Course Advisor</button>
     </div>
 
@@ -322,27 +329,24 @@ for (let i = 0; i < blog.col1.length; i++) {
     } else if (blog.col1[i].title === 'c_and_C_plus') {
         descriptionContent = `
         <span id="c_and_C_plus">
-         <div class="content-container">
-  
-          
+        <div class="content-container">
+    <div class="container mt-4">
+        <div id="blogList${i}" class="list-group mb-4"></div>
 
-<div id="zoomTarget" class="container-fluid px-2" style="transition: transform 0.3s ease; margin-top: 20px;">
-  <iframe id="pdfViewer" src="" width="100%" style="height: 70vh; border: none;"></iframe>
-</div>
-
-<div class="text-center mt-4">
-  <button class="btn btn-outline-success" onclick="delayedDownload()">
-    Download PDF <i class="fas fa-download"></i>
-  </button>
-</div>
-
-<div id="pdfNotice" class="text-muted mt-3 text-center d-none">
-  Download starts in <span id="countdown">5</span> seconds...
-</div>
+        <div id="zoomTarget${i}" class="mb-3" style="transition: transform 0.3s ease;">
+            <iframe id="pdfViewer${i}" src="" width="100%" style="height: 70vh; border: none;"></iframe>
+        </div>
+    </div>
 
     <h1 class="main-heading">Adobe Illustrator Training at A1 Training Institute</h1>
 
-    <p class="description" >Adobe Illustrator training at A1 Training Institute empowers students to unleash their creativity through vector graphic design. This comprehensive course covers essential tools and techniques for creating stunning illustrations, logos, and complex designs. Participants will learn about typography, color theory, and composition while mastering features like the Pen Tool, shapes, and layers. Through hands-on projects, students will develop a strong portfolio, showcasing their ability to produce professional-quality designs. By the end of the course, participants will have the skills and confidence to use Adobe Illustrator for various applications, from branding to digital artwork.</p>
+    <p class="description">Adobe Illustrator training at A1 Training Institute empowers students to unleash their
+        creativity through vector graphic design. This comprehensive course covers essential tools and techniques for
+        creating stunning illustrations, logos, and complex designs. Participants will learn about typography, color
+        theory, and composition while mastering features like the Pen Tool, shapes, and layers. Through hands-on
+        projects, students will develop a strong portfolio, showcasing their ability to produce professional-quality
+        designs. By the end of the course, participants will have the skills and confidence to use Adobe Illustrator for
+        various applications, from branding to digital artwork.</p>
 
     <ul class="feature-list">
         <li class="feature-item">&#10003; Comprehensive coverage of basic and advanced exercises on Corel Draw</li>
@@ -353,10 +357,14 @@ for (let i = 0; i < blog.col1.length; i++) {
         <li class="feature-item">&#10003; Interactive and project-oriented lab sessions on Photoshop</li>
     </ul>
 
-    <h4 class="sub-heading">We provide the No.1 Illustrator training program in Delhi NCR, including Noida Extension and Greater Noida. We offer various modes of training, including classroom and online training. Our training centers are located throughout Delhi NCR, Noida Extension, and Greater Noida to provide convenient access for all students.</h4>
+    <h4 class="sub-heading">We provide the No.1 Illustrator training program in Delhi NCR, including Noida Extension and
+        Greater Noida. We offer various modes of training, including classroom and online training. Our training centers
+        are located throughout Delhi NCR, Noida Extension, and Greater Noida to provide convenient access for all
+        students.</h4>
 
     <div class="button-container">
-        <button class="custom-button"  data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
+        <button class="custom-button" data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download
+            Syllabus</button>
         <button class="custom-button">Contact Course Advisor</button>
     </div>
 
@@ -387,26 +395,23 @@ for (let i = 0; i < blog.col1.length; i++) {
         descriptionContent = `
         <span id="Corel_Draw">
          <div class="content-container">
-  
-          
+    <div class="container mt-4">
+        <div id="blogList${i}" class="list-group mb-4"></div>
 
-<div id="zoomTarget" class="container-fluid px-2" style="transition: transform 0.3s ease; margin-top: 20px;">
-  <iframe id="pdfViewer" src="" width="100%" style="height: 70vh; border: none;"></iframe>
-</div>
-
-<div class="text-center mt-4">
-  <button class="btn btn-outline-success" onclick="delayedDownload()">
-    Download PDF <i class="fas fa-download"></i>
-  </button>
-</div>
-
-<div id="pdfNotice" class="text-muted mt-3 text-center d-none">
-  Download starts in <span id="countdown">5</span> seconds...
-</div>
+        <div id="zoomTarget${i}" class="mb-3" style="transition: transform 0.3s ease;">
+            <iframe id="pdfViewer${i}" src="" width="100%" style="height: 70vh; border: none;"></iframe>
+        </div>
+    </div>
 
     <h1 class="main-heading">Adobe Illustrator Training at A1 Training Institute</h1>
 
-    <p class="description" >Adobe Illustrator training at A1 Training Institute empowers students to unleash their creativity through vector graphic design. This comprehensive course covers essential tools and techniques for creating stunning illustrations, logos, and complex designs. Participants will learn about typography, color theory, and composition while mastering features like the Pen Tool, shapes, and layers. Through hands-on projects, students will develop a strong portfolio, showcasing their ability to produce professional-quality designs. By the end of the course, participants will have the skills and confidence to use Adobe Illustrator for various applications, from branding to digital artwork.</p>
+    <p class="description">Adobe Illustrator training at A1 Training Institute empowers students to unleash their
+        creativity through vector graphic design. This comprehensive course covers essential tools and techniques for
+        creating stunning illustrations, logos, and complex designs. Participants will learn about typography, color
+        theory, and composition while mastering features like the Pen Tool, shapes, and layers. Through hands-on
+        projects, students will develop a strong portfolio, showcasing their ability to produce professional-quality
+        designs. By the end of the course, participants will have the skills and confidence to use Adobe Illustrator for
+        various applications, from branding to digital artwork.</p>
 
     <ul class="feature-list">
         <li class="feature-item">&#10003; Comprehensive coverage of basic and advanced exercises on Corel Draw</li>
@@ -417,10 +422,14 @@ for (let i = 0; i < blog.col1.length; i++) {
         <li class="feature-item">&#10003; Interactive and project-oriented lab sessions on Photoshop</li>
     </ul>
 
-    <h4 class="sub-heading">We provide the No.1 Illustrator training program in Delhi NCR, including Noida Extension and Greater Noida. We offer various modes of training, including classroom and online training. Our training centers are located throughout Delhi NCR, Noida Extension, and Greater Noida to provide convenient access for all students.</h4>
+    <h4 class="sub-heading">We provide the No.1 Illustrator training program in Delhi NCR, including Noida Extension and
+        Greater Noida. We offer various modes of training, including classroom and online training. Our training centers
+        are located throughout Delhi NCR, Noida Extension, and Greater Noida to provide convenient access for all
+        students.</h4>
 
     <div class="button-container">
-        <button class="custom-button"  data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
+        <button class="custom-button" data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download
+            Syllabus</button>
         <button class="custom-button">Contact Course Advisor</button>
     </div>
 
@@ -451,21 +460,41 @@ for (let i = 0; i < blog.col1.length; i++) {
         descriptionContent = `
         <span id="Game_Development">
          <div class="content-container">
+    <div class="container mt-4">
+        <div id="blogList${i}" class="list-group mb-4"></div>
 
-    <h1 class="main-heading">Web Development Training at A1 Training Institute</h1>
+        <div id="zoomTarget${i}" class="mb-3" style="transition: transform 0.3s ease;">
+            <iframe id="pdfViewer${i}" src="" width="100%" style="height: 70vh; border: none;"></iframe>
+        </div>
+    </div>
 
-    <p class="description">Web Development at A1 Training Institute equips students with the essential skills to build and maintain dynamic websites. This course covers both front-end and back-end development, including HTML, CSS, JavaScript, and server-side programming languages such as PHP and Node.js. Participants will learn about responsive design, user experience, and the latest web development frameworks. Through hands-on projects, students will create fully functional websites, gaining practical experience in web design, coding, and deployment. By the end of the course, participants will be prepared to enter the fast-paced world of web development, armed with the tools to create engaging online experiences.</p>
+    <h1 class="main-heading">Adobe Illustrator Training at A1 Training Institute</h1>
+
+    <p class="description">Adobe Illustrator training at A1 Training Institute empowers students to unleash their
+        creativity through vector graphic design. This comprehensive course covers essential tools and techniques for
+        creating stunning illustrations, logos, and complex designs. Participants will learn about typography, color
+        theory, and composition while mastering features like the Pen Tool, shapes, and layers. Through hands-on
+        projects, students will develop a strong portfolio, showcasing their ability to produce professional-quality
+        designs. By the end of the course, participants will have the skills and confidence to use Adobe Illustrator for
+        various applications, from branding to digital artwork.</p>
 
     <ul class="feature-list">
-        <li class="feature-item">&#10003; Comprehensive coverage of front-end and back-end web development technologies</li>
+        <li class="feature-item">&#10003; Comprehensive coverage of basic and advanced exercises on Corel Draw</li>
         <li class="feature-item">&#10003; Hands-on assignments to support theoretical concepts</li>
-        <li class="feature-item">&#10003; Interactive and project-oriented lab sessions on web development</li>
+        <li class="feature-item">&#10003; Interactive and project-oriented lab sessions on Corel Draw</li>
+        <li class="feature-item">&#10003; Comprehensive coverage of basic and advanced exercises on Photoshop</li>
+        <li class="feature-item">&#10003; Hands-on assignments to support theoretical concepts</li>
+        <li class="feature-item">&#10003; Interactive and project-oriented lab sessions on Photoshop</li>
     </ul>
 
-    <h4 class="sub-heading">We provide the No.1 Web Development training program in Delhi NCR, including Noida Extension and Greater Noida. We offer flexible training options, including classroom and online training. Our training centers are located across Delhi NCR, Noida Extension, and Greater Noida, ensuring convenient access for all students.</h4>
+    <h4 class="sub-heading">We provide the No.1 Illustrator training program in Delhi NCR, including Noida Extension and
+        Greater Noida. We offer various modes of training, including classroom and online training. Our training centers
+        are located throughout Delhi NCR, Noida Extension, and Greater Noida to provide convenient access for all
+        students.</h4>
 
     <div class="button-container">
-        <button class="custom-button"  data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
+        <button class="custom-button" data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download
+            Syllabus</button>
         <button class="custom-button">Contact Course Advisor</button>
     </div>
 
@@ -491,27 +520,46 @@ for (let i = 0; i < blog.col1.length; i++) {
     </div>
 
 </div>
-
           </span>`;
     } else if (blog.col1[i].title === 'Terraform') {
         descriptionContent = `
         <span id="Terraform">
-         <div class="content-container">
+        <div class="content-container">
+    <div class="container mt-4">
+        <div id="blogList${i}" class="list-group mb-4"></div>
 
-    <h1 class="main-heading">Web Development Training at A1 Training Institute</h1>
+        <div id="zoomTarget${i}" class="mb-3" style="transition: transform 0.3s ease;">
+            <iframe id="pdfViewer${i}" src="" width="100%" style="height: 70vh; border: none;"></iframe>
+        </div>
+    </div>
 
-    <p class="description">Web Development at A1 Training Institute equips students with the essential skills to build and maintain dynamic websites. This course covers both front-end and back-end development, including HTML, CSS, JavaScript, and server-side programming languages such as PHP and Node.js. Participants will learn about responsive design, user experience, and the latest web development frameworks. Through hands-on projects, students will create fully functional websites, gaining practical experience in web design, coding, and deployment. By the end of the course, participants will be prepared to enter the fast-paced world of web development, armed with the tools to create engaging online experiences.</p>
+    <h1 class="main-heading">Adobe Illustrator Training at A1 Training Institute</h1>
+
+    <p class="description">Adobe Illustrator training at A1 Training Institute empowers students to unleash their
+        creativity through vector graphic design. This comprehensive course covers essential tools and techniques for
+        creating stunning illustrations, logos, and complex designs. Participants will learn about typography, color
+        theory, and composition while mastering features like the Pen Tool, shapes, and layers. Through hands-on
+        projects, students will develop a strong portfolio, showcasing their ability to produce professional-quality
+        designs. By the end of the course, participants will have the skills and confidence to use Adobe Illustrator for
+        various applications, from branding to digital artwork.</p>
 
     <ul class="feature-list">
-        <li class="feature-item">&#10003; Comprehensive coverage of front-end and back-end web development technologies</li>
+        <li class="feature-item">&#10003; Comprehensive coverage of basic and advanced exercises on Corel Draw</li>
         <li class="feature-item">&#10003; Hands-on assignments to support theoretical concepts</li>
-        <li class="feature-item">&#10003; Interactive and project-oriented lab sessions on web development</li>
+        <li class="feature-item">&#10003; Interactive and project-oriented lab sessions on Corel Draw</li>
+        <li class="feature-item">&#10003; Comprehensive coverage of basic and advanced exercises on Photoshop</li>
+        <li class="feature-item">&#10003; Hands-on assignments to support theoretical concepts</li>
+        <li class="feature-item">&#10003; Interactive and project-oriented lab sessions on Photoshop</li>
     </ul>
 
-    <h4 class="sub-heading">We provide the No.1 Web Development training program in Delhi NCR, including Noida Extension and Greater Noida. We offer flexible training options, including classroom and online training. Our training centers are located across Delhi NCR, Noida Extension, and Greater Noida, ensuring convenient access for all students.</h4>
+    <h4 class="sub-heading">We provide the No.1 Illustrator training program in Delhi NCR, including Noida Extension and
+        Greater Noida. We offer various modes of training, including classroom and online training. Our training centers
+        are located throughout Delhi NCR, Noida Extension, and Greater Noida to provide convenient access for all
+        students.</h4>
 
     <div class="button-container">
-        <button class="custom-button"  data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
+        <button class="custom-button" data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download
+            Syllabus</button>
         <button class="custom-button">Contact Course Advisor</button>
     </div>
 
@@ -537,27 +585,46 @@ for (let i = 0; i < blog.col1.length; i++) {
     </div>
 
 </div>
-
           </span>`;
     } else if (blog.col1[i].title === 'Python') {
         descriptionContent = `
         <span id="Python">
-         <div class="content-container">
+        <div class="content-container">
+    <div class="container mt-4">
+        <div id="blogList${i}" class="list-group mb-4"></div>
 
-    <h1 class="main-heading">Web Development Training at A1 Training Institute</h1>
+        <div id="zoomTarget${i}" class="mb-3" style="transition: transform 0.3s ease;">
+            <iframe id="pdfViewer${i}" src="" width="100%" style="height: 70vh; border: none;"></iframe>
+        </div>
+    </div>
 
-    <p class="description">Web Development at A1 Training Institute equips students with the essential skills to build and maintain dynamic websites. This course covers both front-end and back-end development, including HTML, CSS, JavaScript, and server-side programming languages such as PHP and Node.js. Participants will learn about responsive design, user experience, and the latest web development frameworks. Through hands-on projects, students will create fully functional websites, gaining practical experience in web design, coding, and deployment. By the end of the course, participants will be prepared to enter the fast-paced world of web development, armed with the tools to create engaging online experiences.</p>
+    <h1 class="main-heading">Adobe Illustrator Training at A1 Training Institute</h1>
+
+    <p class="description">Adobe Illustrator training at A1 Training Institute empowers students to unleash their
+        creativity through vector graphic design. This comprehensive course covers essential tools and techniques for
+        creating stunning illustrations, logos, and complex designs. Participants will learn about typography, color
+        theory, and composition while mastering features like the Pen Tool, shapes, and layers. Through hands-on
+        projects, students will develop a strong portfolio, showcasing their ability to produce professional-quality
+        designs. By the end of the course, participants will have the skills and confidence to use Adobe Illustrator for
+        various applications, from branding to digital artwork.</p>
 
     <ul class="feature-list">
-        <li class="feature-item">&#10003; Comprehensive coverage of front-end and back-end web development technologies</li>
+        <li class="feature-item">&#10003; Comprehensive coverage of basic and advanced exercises on Corel Draw</li>
         <li class="feature-item">&#10003; Hands-on assignments to support theoretical concepts</li>
-        <li class="feature-item">&#10003; Interactive and project-oriented lab sessions on web development</li>
+        <li class="feature-item">&#10003; Interactive and project-oriented lab sessions on Corel Draw</li>
+        <li class="feature-item">&#10003; Comprehensive coverage of basic and advanced exercises on Photoshop</li>
+        <li class="feature-item">&#10003; Hands-on assignments to support theoretical concepts</li>
+        <li class="feature-item">&#10003; Interactive and project-oriented lab sessions on Photoshop</li>
     </ul>
 
-    <h4 class="sub-heading">We provide the No.1 Web Development training program in Delhi NCR, including Noida Extension and Greater Noida. We offer flexible training options, including classroom and online training. Our training centers are located across Delhi NCR, Noida Extension, and Greater Noida, ensuring convenient access for all students.</h4>
+    <h4 class="sub-heading">We provide the No.1 Illustrator training program in Delhi NCR, including Noida Extension and
+        Greater Noida. We offer various modes of training, including classroom and online training. Our training centers
+        are located throughout Delhi NCR, Noida Extension, and Greater Noida to provide convenient access for all
+        students.</h4>
 
     <div class="button-container">
-        <button class="custom-button"  data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
+        <button class="custom-button" data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download
+            Syllabus</button>
         <button class="custom-button">Contact Course Advisor</button>
     </div>
 
@@ -583,27 +650,46 @@ for (let i = 0; i < blog.col1.length; i++) {
     </div>
 
 </div>
-
           </span>`;
     } else if (blog.col1[i].title === 'SBOM_vs_Software_Chain') {
         descriptionContent = `
         <span id="SBOM_vs_Software_Chain">
-         <div class="content-container">
+        <div class="content-container">
+    <div class="container mt-4">
+        <div id="blogList${i}" class="list-group mb-4"></div>
 
-    <h1 class="main-heading">Web Development Training at A1 Training Institute</h1>
+        <div id="zoomTarget${i}" class="mb-3" style="transition: transform 0.3s ease;">
+            <iframe id="pdfViewer${i}" src="" width="100%" style="height: 70vh; border: none;"></iframe>
+        </div>
+    </div>
 
-    <p class="description">Web Development at A1 Training Institute equips students with the essential skills to build and maintain dynamic websites. This course covers both front-end and back-end development, including HTML, CSS, JavaScript, and server-side programming languages such as PHP and Node.js. Participants will learn about responsive design, user experience, and the latest web development frameworks. Through hands-on projects, students will create fully functional websites, gaining practical experience in web design, coding, and deployment. By the end of the course, participants will be prepared to enter the fast-paced world of web development, armed with the tools to create engaging online experiences.</p>
+    <h1 class="main-heading">Adobe Illustrator Training at A1 Training Institute</h1>
+
+    <p class="description">Adobe Illustrator training at A1 Training Institute empowers students to unleash their
+        creativity through vector graphic design. This comprehensive course covers essential tools and techniques for
+        creating stunning illustrations, logos, and complex designs. Participants will learn about typography, color
+        theory, and composition while mastering features like the Pen Tool, shapes, and layers. Through hands-on
+        projects, students will develop a strong portfolio, showcasing their ability to produce professional-quality
+        designs. By the end of the course, participants will have the skills and confidence to use Adobe Illustrator for
+        various applications, from branding to digital artwork.</p>
 
     <ul class="feature-list">
-        <li class="feature-item">&#10003; Comprehensive coverage of front-end and back-end web development technologies</li>
+        <li class="feature-item">&#10003; Comprehensive coverage of basic and advanced exercises on Corel Draw</li>
         <li class="feature-item">&#10003; Hands-on assignments to support theoretical concepts</li>
-        <li class="feature-item">&#10003; Interactive and project-oriented lab sessions on web development</li>
+        <li class="feature-item">&#10003; Interactive and project-oriented lab sessions on Corel Draw</li>
+        <li class="feature-item">&#10003; Comprehensive coverage of basic and advanced exercises on Photoshop</li>
+        <li class="feature-item">&#10003; Hands-on assignments to support theoretical concepts</li>
+        <li class="feature-item">&#10003; Interactive and project-oriented lab sessions on Photoshop</li>
     </ul>
 
-    <h4 class="sub-heading">We provide the No.1 Web Development training program in Delhi NCR, including Noida Extension and Greater Noida. We offer flexible training options, including classroom and online training. Our training centers are located across Delhi NCR, Noida Extension, and Greater Noida, ensuring convenient access for all students.</h4>
+    <h4 class="sub-heading">We provide the No.1 Illustrator training program in Delhi NCR, including Noida Extension and
+        Greater Noida. We offer various modes of training, including classroom and online training. Our training centers
+        are located throughout Delhi NCR, Noida Extension, and Greater Noida to provide convenient access for all
+        students.</h4>
 
     <div class="button-container">
-        <button class="custom-button"  data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
+        <button class="custom-button" data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download
+            Syllabus</button>
         <button class="custom-button">Contact Course Advisor</button>
     </div>
 
@@ -629,27 +715,46 @@ for (let i = 0; i < blog.col1.length; i++) {
     </div>
 
 </div>
-
           </span>`;
-    } else if (blog.col1[i].title === 'Web_vs_Application') {
+    } else if (blog.col1[i].title === 'Web_Server_vs_Application') {
         descriptionContent = `
-        <span id="Web_vs_Application">
-         <div class="content-container">
+        <span id="Web_Server_vs_Application">
+        <div class="content-container">
+    <div class="container mt-4">
+        <div id="blogList${i}" class="list-group mb-4"></div>
 
-    <h1 class="main-heading">Web Development Training at A1 Training Institute</h1>
+        <div id="zoomTarget${i}" class="mb-3" style="transition: transform 0.3s ease;">
+            <iframe id="pdfViewer${i}" src="" width="100%" style="height: 70vh; border: none;"></iframe>
+        </div>
+    </div>
 
-    <p class="description">Web Development at A1 Training Institute equips students with the essential skills to build and maintain dynamic websites. This course covers both front-end and back-end development, including HTML, CSS, JavaScript, and server-side programming languages such as PHP and Node.js. Participants will learn about responsive design, user experience, and the latest web development frameworks. Through hands-on projects, students will create fully functional websites, gaining practical experience in web design, coding, and deployment. By the end of the course, participants will be prepared to enter the fast-paced world of web development, armed with the tools to create engaging online experiences.</p>
+    <h1 class="main-heading">Adobe Illustrator Training at A1 Training Institute</h1>
+
+    <p class="description">Adobe Illustrator training at A1 Training Institute empowers students to unleash their
+        creativity through vector graphic design. This comprehensive course covers essential tools and techniques for
+        creating stunning illustrations, logos, and complex designs. Participants will learn about typography, color
+        theory, and composition while mastering features like the Pen Tool, shapes, and layers. Through hands-on
+        projects, students will develop a strong portfolio, showcasing their ability to produce professional-quality
+        designs. By the end of the course, participants will have the skills and confidence to use Adobe Illustrator for
+        various applications, from branding to digital artwork.</p>
 
     <ul class="feature-list">
-        <li class="feature-item">&#10003; Comprehensive coverage of front-end and back-end web development technologies</li>
+        <li class="feature-item">&#10003; Comprehensive coverage of basic and advanced exercises on Corel Draw</li>
         <li class="feature-item">&#10003; Hands-on assignments to support theoretical concepts</li>
-        <li class="feature-item">&#10003; Interactive and project-oriented lab sessions on web development</li>
+        <li class="feature-item">&#10003; Interactive and project-oriented lab sessions on Corel Draw</li>
+        <li class="feature-item">&#10003; Comprehensive coverage of basic and advanced exercises on Photoshop</li>
+        <li class="feature-item">&#10003; Hands-on assignments to support theoretical concepts</li>
+        <li class="feature-item">&#10003; Interactive and project-oriented lab sessions on Photoshop</li>
     </ul>
 
-    <h4 class="sub-heading">We provide the No.1 Web Development training program in Delhi NCR, including Noida Extension and Greater Noida. We offer flexible training options, including classroom and online training. Our training centers are located across Delhi NCR, Noida Extension, and Greater Noida, ensuring convenient access for all students.</h4>
+    <h4 class="sub-heading">We provide the No.1 Illustrator training program in Delhi NCR, including Noida Extension and
+        Greater Noida. We offer various modes of training, including classroom and online training. Our training centers
+        are located throughout Delhi NCR, Noida Extension, and Greater Noida to provide convenient access for all
+        students.</h4>
 
     <div class="button-container">
-        <button class="custom-button"  data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download Syllabus</button>
+        <button class="custom-button" data-bs-toggle="modal" data-bs-target="#syllabus${i}">View / Download
+            Syllabus</button>
         <button class="custom-button">Contact Course Advisor</button>
     </div>
 
@@ -675,7 +780,6 @@ for (let i = 0; i < blog.col1.length; i++) {
     </div>
 
 </div>
-
           </span>`;
     } 
 
@@ -966,95 +1070,7 @@ mediaQuery.addEventListener('change', handleMediaQueryChange);
 // Initial check on page load
 handleMediaQueryChange(mediaQuery);
 
+
+//PDF SCRIPT START 
+
  
-  //PDF SCRIPT
-    let currentPDF = 'assets/pdf/git.pdf';
-    let zoomed = false;
-  
-    function openPDF(path) {
-      currentPDF = path;
-      document.getElementById('pdfViewer').src = path;
-    }
-  
-    function toggleZoom() {
-      const zoomTarget = document.getElementById("zoomTarget");
-      zoomTarget.style.transform = zoomed ? "scale(1)" : "scale(1.3)";
-      zoomed = !zoomed;
-    }
-    function delayedDownload() {
-        if (!currentPDF) {
-          alert("Please click on a PDF title to view it first.");
-          return;
-        }
-      
-        let counter = 5;
-        const countdownEl = document.getElementById("countdown");
-        const notice = document.getElementById("pdfNotice");
-      
-        notice.classList.remove("d-none");
-        countdownEl.textContent = counter;
-      
-        const interval = setInterval(() => {
-          counter--;
-          if (counter <= 0) {
-            clearInterval(interval);
-            notice.classList.add("d-none");
-      
-            const a = document.createElement("a");
-            a.href = currentPDF;
-            a.download = currentPDF.split("/").pop();
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-          } else {
-            countdownEl.textContent = counter;
-          }
-        }, 1000);
-      }
-      
-    // Auto-load PDF and reset zoom on modal show/hide
-    document.addEventListener('readystatechange', () => {
-      const modalEl = document.getElementById('syllabus0');
-      if (modalEl) {
-        modalEl.addEventListener('shown.bs.modal', () => {
-          openPDF(currentPDF);
-        });
-  
-        modalEl.addEventListener('hidden.bs.modal', () => {
-          zoomed = false;
-          document.getElementById("zoomTarget").style.transform = "scale(1)";
-          document.getElementById("pdfViewer").src = ""; // Optional: unload PDF
-          document.getElementById("pdfNotice").style.display = "none";
-        });
-      }
-    });
-
-    document.addEventListener('DOMContentLoaded', () => {
-        openPDF('assets/pdf/git.pdf');
-      });
-
-      document.addEventListener('DOMContentLoaded', () => {
-        setTimeout(() => {
-          openPDF('assets/pdf/git.pdf');
-        }, 300); // wait a bit to ensure iframe is mounted
-      });
-      
-  //PDF SCRIPT END
-      
-
-  document.addEventListener('input', function (e) {
-    if (e.target.classList.contains('blog-search-input')) {
-      const searchValue = e.target.value.toLowerCase();
-      const modal = e.target.closest('.modal');
-      const cards = modal.querySelectorAll('.course-card');
-
-      cards.forEach(card => {
-        const title = card.querySelector('.course-title').innerText.toLowerCase();
-        if (title.includes(searchValue)) {
-          card.style.display = 'block';
-        } else {
-          card.style.display = 'none';
-        }
-      });
-    }
-  });

@@ -1,0 +1,33 @@
+  {
+    "col1": [
+      {
+        "image": "terraform.png",
+        "title": "Terraform",
+        "date": "25/Sep/2024",
+        "description": "A brief description of the blog post goes here.",
+        "description1": "In today’s rapidly evolving tech world...",
+        "description2": "Moreover,Python’s simplicity and readability...",
+        "category": "all"
+      },
+      {
+        "image": "Python.png",
+        "title": "Python",
+        "date": "25/Sep/2024",
+        "description": "A brief description of the blog post goes here.",
+        "description1": "In today’s rapidly evolving tech world...",
+        "description2": "Moreover,Python’s simplicity and readability...",
+        "category": "all",
+        "pdf": "assets/pdf/git.pdf"
+      },
+      {
+        "image": "game-development.png",
+        "title": "Game_Development",
+        "date": "22/Sep/2024",
+        "description": "Design Like a Pro...",
+        "description1": "Canva has revolutionized graphic design...",
+        "description2": "With these tips...",
+        "category": "programming"
+      }
+    ]
+  };
+  
